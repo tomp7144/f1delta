@@ -1,0 +1,66 @@
+/* ============================================================
+   F1 DELTA — data
+   ============================================================ */
+
+const TEAMS = {
+  ferrari:  { name: "Ferrari",       color: "var(--ferrari)",  dark: false },
+  mercedes: { name: "Mercedes",      color: "var(--mercedes)", dark: false },
+  redbull:  { name: "Red Bull",      color: "var(--redbull)",  dark: true  },
+  mclaren:  { name: "McLaren",       color: "var(--mclaren)",  dark: false },
+  aston:    { name: "Aston Martin",  color: "var(--aston)",    dark: false },
+};
+
+// Live timing tower — starting grid order (Canadian GP)
+const TOWER_INIT = [
+  { code: "NOR", team: "mclaren",  compound: "S", gap: 0,    leader: true  },
+  { code: "LEC", team: "ferrari",  compound: "M", gap: 3.2,  leader: false },
+  { code: "VER", team: "redbull",  compound: "M", gap: 7.8,  leader: false },
+  { code: "ANT", team: "mercedes", compound: "H", gap: 12.1, leader: false },
+  { code: "HAM", team: "ferrari",  compound: "S", gap: 15.4, leader: false },
+  { code: "PIA", team: "mclaren",  compound: "M", gap: 19.0, leader: false },
+];
+
+// Fantasy picks
+const PICKS = [
+  { id: "nor", name: "Lando Norris",     team: "mclaren",  note: "Circuit historian \u00b7 3 wins here", price: 32.5, form: 94,  dir: "up",   value: false, proj: 71, hist: [0.6,0.8,0.7,0.9,0.85,1] },
+  { id: "lec", name: "Charles Leclerc",  team: "ferrari",  note: "Strong at street circuits",          price: 28.1, form: 88,  dir: "up",   value: false, proj: 64, hist: [0.5,0.7,0.6,0.75,0.9,0.88] },
+  { id: "pia", name: "Oscar Piastri",    team: "mclaren",  note: "Qualifying pace leader",             price: 26.8, form: 85,  dir: "up",   value: false, proj: 61, hist: [0.55,0.6,0.72,0.78,0.8,0.85] },
+  { id: "ver", name: "Max Verstappen",   team: "redbull",  note: "Historically strong here",           price: 30.0, form: 79,  dir: "flat", value: false, proj: 66, hist: [0.9,0.85,0.7,0.72,0.78,0.79] },
+  { id: "rus", name: "George Russell",   team: "mercedes", note: "Consistent points finisher",         price: 21.4, form: 76,  dir: "up",   value: false, proj: 52, hist: [0.5,0.55,0.6,0.65,0.7,0.76] },
+  { id: "ham", name: "Lewis Hamilton",   team: "ferrari",  note: "Seven-time champ \u00b7 street craft", price: 24.5, form: 68,  dir: "down", value: false, proj: 48, hist: [0.85,0.8,0.7,0.65,0.6,0.68] },
+  { id: "ant", name: "Kimi Antonelli",   team: "mercedes", note: "Value pick this round",              price: 18.2, form: 71,  dir: "flat", value: true,  proj: 45, hist: [0.4,0.5,0.55,0.6,0.68,0.71] },
+  { id: "alo", name: "Fernando Alonso",  team: "aston",    note: "Wildcard upside",                    price: 14.6, form: 62,  dir: "down", value: true,  proj: 38, hist: [0.7,0.62,0.55,0.5,0.58,0.62] },
+];
+
+const FANTASY_BUDGET = 100.0;
+const DEFAULT_SELECTED = ["nor", "lec", "ant", "alo"];
+const DEFAULT_CAPTAIN = "nor";
+
+const HISTORY_CARDS = [
+  {
+    kicker: "Regulation Eras",
+    title: "Every rule change & who won the chaos",
+    body: "Eleven major resets since 1950. See who capitalized — and who got crushed — every single time the rulebook was rewritten.",
+    stat: "1950 \u2192 2026",
+    accent: "var(--ferrari)",
+  },
+  {
+    kicker: "Dynasty Tracker",
+    title: "How boring does F1 actually get?",
+    body: "Every champion colored by team. The dominant eras are more lopsided than memory tells you — the data is unforgiving.",
+    stat: "75 seasons",
+    accent: "var(--mercedes)",
+  },
+  {
+    kicker: "Team Orders",
+    title: "When Ferrari told Barrichello to move over",
+    body: "Every documented team order on record — and whether any of it actually changed where a championship landed.",
+    stat: "7 incidents",
+    accent: "var(--gold)",
+  },
+];
+
+Object.assign(window, {
+  TEAMS, TOWER_INIT, PICKS, FANTASY_BUDGET,
+  DEFAULT_SELECTED, DEFAULT_CAPTAIN, HISTORY_CARDS,
+});
