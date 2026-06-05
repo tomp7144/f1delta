@@ -1,108 +1,96 @@
 /* ============================================================
-   F1 DELTA — live timing tower (the hero)
+   F1 DELTA — live timing tower (Static Finishing Order with Toggle)
    ============================================================ */
 
-function fmtGap(g) {
-  return "+" + g.toFixed(1);
-}
+function TimingTower() {
+  const [drivers, setDrivers] = useState(() => TOWER_INIT);
+  const [expanded, setExpanded] = useState(false); // The toggle state
 
-function TimingTower({ speed = 1, paused = false }) {
-  // each driver carries a pseudo race-time delta `t`; display sorts by t
-  const [drivers, setDrivers] = useState(() =>
-    TOWER_INIT.map((d) => ({ ...d, t: d.gap }))
-  );
-  const [lap, setLap] = useState(48);
-  const total = 70;
-  const [flash, setFlash] = useState({}); // code -> true
-  const rowRefs = useRef({});
-  const prevTops = useRef({});
-  // Re-seed when real data loads
-useEffect(() => {
-  const handler = (e) => {
-    const data = e.detail.tower;
-    if (data && data.length >= 4) {
-      setDrivers(data.map((d) => ({ ...d, t: d.gap })));
-    }
-  };
-  window.addEventListener("f1data:updated", handler);
-  return () => window.removeEventListener("f1data:updated", handler);
-}, []);
-
-  // ---- FLIP: animate reorder (offsetTop is scroll-independent) ----
-  React.useLayoutEffect(() => {
-    const tops = {};
-    Object.entries(rowRefs.current).forEach(([code, el]) => {
-      if (el) tops[code] = el.offsetTop;
-    });
-    Object.entries(tops).forEach(([code, top]) => {
-      const prev = prevTops.current[code];
-      const el = rowRefs.current[code];
-      if (el && prev != null && Math.abs(prev - top) > 1) {
-        el.style.transition = "none";
-        el.style.transform = `translateY(${prev - top}px)`;
-        el.classList.add("swapping");
-        requestAnimationFrame(() => {
-          requestAnimationFrame(() => {
-            el.style.transition = "";
-            el.style.transform = "";
-            setTimeout(() => el.classList.remove("swapping"), 600);
-          });
-        });
+  // Listen for the real data and set it directly
+  useEffect(() => {
+    const handler = (e) => {
+      const data = e.detail.tower;
+      if (data && data.length >= 4) {
+        setDrivers(data);
       }
-    });
-    prevTops.current = tops;
-  });
+    };
+    window.addEventListener("f1data:updated", handler);
+    return () => window.removeEventListener("f1data:updated", handler);
+  }, []);
 
-  const sorted = [...drivers].sort((a, b) => a.t - b.t);
-  const minT = sorted[0].t;
+  // Control what is actually rendered
+  const displayedDrivers = expanded ? drivers : drivers.slice(0, 6);
 
   return (
     <div className="tower">
       <div className="tower-head">
         <div className="sess">
           Canadian GP <span className="mono">·</span>{" "}
-          <span className="lap num">LAP {String(lap).padStart(2, "0")} / {total}</span>
+          <span className="lap num">FINAL RESULTS</span>
         </div>
         <div className="status">
-          <span className="dot"></span>
-          {lap >= total ? "FINISH" : "RACE"}
+          <span className="dot" style={{ background: "var(--text-faint)" }}></span>
+          FINISHED
         </div>
       </div>
       <div className="tower-rows">
-        {sorted.map((d, i) => {
+        {displayedDrivers.map((d, i) => {
           const team = TEAMS[d.team];
           const isLeader = i === 0;
-          const gap = d.t - minT;
+          
+          let gapDisplay = "LEADER";
+          if (!isLeader) {
+            gapDisplay = typeof d.gap === "number" ? `+${d.gap.toFixed(1)}` : d.gap;
+          }
+
           return (
             <div
               key={d.code}
-              ref={(el) => (rowRefs.current[d.code] = el)}
               className={"trow" + (isLeader ? " is-leader" : "")}
-              style={{ "--tc": team.color }}
+              style={{ "--tc": team?.color || "var(--text-faint)" }}
             >
               <div className="teambar"></div>
               <div className="pos num">{i + 1}</div>
               <div className="ident">
                 <span className="code">{d.code}</span>
-                <span className="team">{team.name}</span>
+                <span className="team">{team?.name || "Independent"}</span>
               </div>
-              <div className={"gap" + (isLeader ? " leader" : "") + (flash[d.code] ? " tickflash" : "")}>
+              <div className={"gap" + (isLeader ? " leader" : "")}>
                 {isLeader ? (
-                  "LEADER"
+                  gapDisplay
                 ) : (
                   <>
                     <DeltaMark size={9} color="var(--text-faint)" stroke />
-                    <span>{fmtGap(gap)}</span>
+                    <span>{gapDisplay}</span>
                   </>
                 )}
               </div>
-              <div className="compound" style={{ "--tc": team.color }}>
-                {d.compound}
+              <div className="compound" style={{ "--tc": team?.color || "var(--text-faint)" }}>
+                {d.compound || "M"}
               </div>
             </div>
           );
         })}
       </div>
+      
+      {/* The Expand/Collapse Button */}
+      {drivers.length > 6 && (
+        <button 
+          className="tower-expand-btn"
+          onClick={() => setExpanded(!expanded)}
+          style={{
+            width: "100%", padding: "10px", background: "rgba(255,255,255,0.03)",
+            border: "none", borderTop: "1px solid rgba(255,255,255,0.05)",
+            color: "var(--text-faint)", cursor: "pointer", 
+            fontSize: "10px", fontWeight: "600", letterSpacing: "0.1em",
+            textTransform: "uppercase", transition: "background 0.2s"
+          }}
+          onMouseOver={(e) => e.target.style.background = "rgba(255,255,255,0.08)"}
+          onMouseOut={(e) => e.target.style.background = "rgba(255,255,255,0.03)"}
+        >
+          {expanded ? "COLLAPSE TOWER" : `VIEW FULL GRID (${drivers.length})`}
+        </button>
+      )}
     </div>
   );
 }
