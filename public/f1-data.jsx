@@ -60,15 +60,17 @@ async function fetchLatestRaceData() {
 
     // 2. Get final positions
     const posRes = await fetch(
-      `https://api.openf1.org/v1/position?session_key=${key}&order_by=position`
+      `https://api.openf1.org/v1/position?session_key=${key}`
     );
     if (!posRes.ok) throw new Error("position fetch failed");
     const positions = await posRes.json();
 
-    // Deduplicate — keep only the last position entry per driver
+    // Deduplicate — keep only the last position entry per driver (positions are time-ordered, last = final)
     const latestPos = {};
     positions.forEach(p => {
-      latestPos[p.driver_number] = p;
+      if (!latestPos[p.driver_number] || p.date > latestPos[p.driver_number].date) {
+        latestPos[p.driver_number] = p;
+      }
     });
     const sorted = Object.values(latestPos).sort((a, b) => a.position - b.position);
 
