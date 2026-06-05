@@ -61,7 +61,7 @@ function guessTeam(name) {
 // ---- Fetch latest race results from OpenF1 ----
 async function fetchLatestRaceData() {
   try {
-    const res = await fetch("https://api.jolpi.ca/ergast/f1/2026/current/last/results/?format=json");
+    const res = await fetch("https://api.jolpi.ca/ergast/f1/2026/5/results/?format=json");
     if (!res.ok) throw new Error(`jolpica ${res.status}`);
     const data = await res.json();
     const results = data.MRData.RaceTable.Races[0].Results;
