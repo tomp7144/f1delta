@@ -1,0 +1,15 @@
+# F1 DELTA — Netlify config
+# Functions live OUTSIDE public/ (public/ is served verbatim by Astro,
+# so anything in it is downloadable source — never put secrets there).
+
+[build]
+  functions = "netlify/functions"
+
+[functions]
+  node_bundler = "esbuild"
+
+# The app fetches Jolpica (api.jolpi.ca) directly — it sends CORS headers,
+# so there's no proxy in the request path and no redirect rules are needed.
+# The payment functions declare their own paths (/api/create-checkout,
+# /api/verify-session, /api/check-access, /api/stripe-webhook) via
+# `export const config = { path: ... }`.

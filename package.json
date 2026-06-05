@@ -12,6 +12,8 @@
     "astro": "astro"
   },
   "dependencies": {
-    "astro": "^6.4.4"
+    "@netlify/blobs": "^10.7.9",
+    "astro": "^6.4.4",
+    "stripe": "^22.2.0"
   }
 }
