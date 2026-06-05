@@ -68,17 +68,32 @@ async function fetchLatestRaceData() {
     const data = await res.json();
     const results = data.MRData.RaceTable.Races[0].Results;
     const raceName = data.MRData.RaceTable.Races[0].raceName;
+    
+    // 1. Get the total laps completed by the race winner
+    const winnerLaps = parseInt(results[0].laps, 10);
 
     const fullGrid = results.map((r, i) => {
       let displayGap = "";
 
       if (i === 0) {
         displayGap = 0; // The Leader
-      } else if (r.status && (r.status.includes("Lap") || r.status !== "Finished")) {
-        // If they are lapped or retired, status contains the exact classification string
-        displayGap = r.status;
+      } else if (r.status && r.status !== "Finished") {
+        
+        // 2. Intercept any status that mentions "Lap" or "Lapped"
+        if (r.status.toLowerCase().includes("lap")) {
+          const lapsDown = winnerLaps - parseInt(r.laps, 10);
+          
+          // Failsafe just in case math returns 0
+          const finalLaps = lapsDown > 0 ? lapsDown : 1; 
+          displayGap = `+${finalLaps} LAP${finalLaps > 1 ? "S" : ""}`;
+          
+        } else {
+          // Retirements, DNS, Gearbox, etc.
+          displayGap = r.status;
+        }
+        
       } else {
-        // Lead lap finishers get their standard time gap
+        // Lead lap finishers
         displayGap = r.Time?.time || `+${(i * 5.0).toFixed(3)}s`;
       }
 
