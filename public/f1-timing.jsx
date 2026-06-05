@@ -37,6 +37,13 @@ function TimingTower() {
         {displayedDrivers.map((d, i) => {
           const team = TEAMS[d.team];
           const isLeader = i === 0;
+          const TIRE_COLORS = {
+            S: "#FF3333", // Soft (Red)
+            M: "#FFD12E", // Medium (Yellow)
+            H: "#FFFFFF", // Hard (White)
+            I: "#43A047", // Inter (Green)
+            W: "#0072CE"  // Wet (Blue)
+          };
           
           let gapDisplay = "LEADER";
           if (!isLeader) {
@@ -65,8 +72,8 @@ function TimingTower() {
                   </>
                 )}
               </div>
-              <div className="compound" style={{ "--tc": team?.color || "var(--text-faint)" }}>
-                {d.compound || "M"}
+              <div className="compound" style={{ "--tc": TIRE_COLORS[d.compound || "M"] }}>
+               {d.compound || "M"}
               </div>
             </div>
           );

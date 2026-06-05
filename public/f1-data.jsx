@@ -3,16 +3,16 @@
    ============================================================ */
 
 const TEAMS = {
-  ferrari:    { name: "Ferrari",      color: "var(--ferrari)",   dark: false },
-  mercedes:   { name: "Mercedes",     color: "var(--mercedes)",  dark: false },
-  redbull:    { name: "Red Bull",     color: "var(--redbull)",   dark: true  },
-  mclaren:    { name: "McLaren",      color: "var(--mclaren)",   dark: false },
-  aston:      { name: "Aston Martin", color: "var(--aston)",     dark: false },
-  williams:   { name: "Williams",     color: "var(--williams)",  dark: false },
-  alpine:     { name: "Alpine",       color: "var(--alpine)",    dark: false },
-  haas:       { name: "Haas",         color: "var(--haas)",      dark: false },
-  kick:       { name: "Kick Sauber",  color: "var(--kick)",      dark: false },
-  rb:         { name: "RB",           color: "var(--rb)",        dark: false },
+  ferrari:    { name: "Ferrari",      color: "#E8002D", dark: false },
+  mercedes:   { name: "Mercedes",     color: "#27F4D2", dark: false },
+  redbull:    { name: "Red Bull",     color: "#3671C6", dark: true  },
+  mclaren:    { name: "McLaren",      color: "#FF8000", dark: false },
+  aston:      { name: "Aston Martin", color: "#229971", dark: false },
+  williams:   { name: "Williams",     color: "#64C4FF", dark: false },
+  alpine:     { name: "Alpine",       color: "#FF87BC", dark: false }, // Pink Alpine 
+  haas:       { name: "Haas",         color: "#FFFFFF", dark: false },
+  kick:       { name: "Kick Sauber",  color: "#52E252", dark: false },
+  rb:         { name: "RB",           color: "#6692FF", dark: false },
 };
 
 const DRIVER_TEAMS = {
