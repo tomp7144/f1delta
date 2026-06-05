@@ -125,6 +125,7 @@ function TimingTower() {
 
 function StandingsTower() {
   const [standings, setStandings] = useState([]);
+  const [expanded, setExpanded] = useState(false); // The toggle state
 
   useEffect(() => {
     const handler = (e) => setStandings(e.detail);
@@ -134,6 +135,9 @@ function StandingsTower() {
 
   if (standings.length === 0) return null;
 
+  // Show top 5 when collapsed, full grid when expanded
+  const displayedStandings = expanded ? standings : standings.slice(0, 5);
+
   return (
     <div className="tower" style={{ marginTop: "20px" }}>
       <div className="tower-head">
@@ -142,7 +146,7 @@ function StandingsTower() {
         </div>
       </div>
       <div className="tower-rows">
-        {standings.slice(0, 10).map((s) => {
+        {displayedStandings.map((s) => {
           const teamColor = TEAMS[s.team]?.color || "var(--text-faint)";
           return (
             <div key={s.code} className="trow" style={{ "--tc": teamColor }}>
@@ -158,14 +162,29 @@ function StandingsTower() {
           );
         })}
       </div>
+      
+      {/* Expand/Collapse Button */}
+      {standings.length > 5 && (
+        <button 
+          className="tower-expand-btn"
+          onClick={() => setExpanded(!expanded)}
+          style={{
+            width: "100%", padding: "10px", background: "rgba(255,255,255,0.03)",
+            border: "none", borderTop: "1px solid rgba(255,255,255,0.05)",
+            color: "var(--text-faint)", cursor: "pointer", 
+            fontSize: "10px", fontWeight: "600", letterSpacing: "0.1em",
+            textTransform: "uppercase", transition: "background 0.2s"
+          }}
+          onMouseOver={(e) => e.target.style.background = "rgba(255,255,255,0.08)"}
+          onMouseOut={(e) => e.target.style.background = "rgba(255,255,255,0.03)"}
+        >
+          {expanded ? "COLLAPSE STANDINGS" : `VIEW FULL CHAMPIONSHIP (${standings.length})`}
+        </button>
+      )}
     </div>
   );
 }
 function UpgradesModule() {
-  const upgrades = window.WEEKEND_UPGRADES || [];
-
-  if (upgrades.length === 0) return null;
-
   return (
     <div className="tower" style={{ marginTop: "20px", border: "1px solid var(--redbull)", background: "rgba(255,0,0,0.05)" }}>
       <div className="tower-head" style={{ borderBottom: "1px solid rgba(255,0,0,0.2)" }}>
@@ -173,24 +192,37 @@ function UpgradesModule() {
           PRO <span className="mono">·</span> <span className="lap">WEEKEND UPGRADES</span>
         </div>
       </div>
-      <div style={{ padding: "10px" }}>
-        {upgrades.map((u, i) => {
-          const teamColor = TEAMS[u.team]?.color || "var(--text-faint)";
-          return (
-            <div key={i} style={{ marginBottom: "12px", borderLeft: `3px solid ${teamColor}`, paddingLeft: "10px" }}>
-              <div style={{ fontSize: "12px", fontWeight: "bold", textTransform: "uppercase", color: "var(--text-bright)" }}>
-                {TEAMS[u.team]?.name || u.team}
-              </div>
-              <div style={{ fontSize: "11px", color: "var(--text-faint)", marginTop: "4px" }}>
-                <span style={{ color: "var(--text-base)" }}>Parts:</span> {u.parts.join(", ")} <br/>
-                <span style={{ color: "var(--text-base)" }}>Focus:</span> {u.focus} <br/>
-                <span style={{ color: u.impact === "High" ? "var(--green)" : "var(--text-faint)" }}>
-                  Impact: {u.impact}
-                </span>
-              </div>
-            </div>
-          );
-        })}
+      
+      <div style={{ padding: "20px 15px", textAlign: "center" }}>
+        <div style={{ fontSize: "14px", fontWeight: "bold", color: "var(--text-bright)", marginBottom: "8px" }}>
+          Who brought upgrades this weekend?
+        </div>
+        <div style={{ fontSize: "12px", color: "var(--text-faint)", marginBottom: "18px", lineHeight: "1.4" }}>
+          Floor bodies, sidepod inlets, and front wings. See the exact parts and downforce impact for every constructor before setting your fantasy lineup.
+        </div>
+        
+        {/* The Teaser CTA */}
+        <button 
+          onClick={() => window.location.href = "/pro-upgrades"} // This routes to the new page
+          style={{
+            padding: "12px 20px",
+            background: "var(--ferrari)",
+            color: "#fff",
+            border: "none",
+            borderRadius: "4px",
+            cursor: "pointer",
+            fontSize: "11px",
+            fontWeight: "bold",
+            letterSpacing: "0.1em",
+            textTransform: "uppercase",
+            width: "100%",
+            transition: "opacity 0.2s"
+          }}
+          onMouseOver={(e) => e.target.style.opacity = "0.8"}
+          onMouseOut={(e) => e.target.style.opacity = "1"}
+        >
+          UNLOCK UPGRADE DATA
+        </button>
       </div>
     </div>
   );
