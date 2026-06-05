@@ -90,6 +90,9 @@ function TimingTower() {
                   </>
                 )}
               </div>
+              <div className="points num" style={{ color: d.points > 0 ? "var(--green)" : "var(--text-faint)" }}>
+                {d.points > 0 ? `+${d.points}` : "0"}
+              </div>
               <div className="compound" style={{ "--tc": TIRE_COLORS[d.compound || "M"] }}>
                {d.compound || "M"}
               </div>

@@ -59,7 +59,7 @@ function guessTeam(name) {
 }
 
 // ---- Fetch latest race results from Jolpi ----
-// ---- Fetch Dual-Source Data (Jolpi for Order, OpenF1 for Timing) ----
+// ---- Fetch Data (Jolpi for Order and timing) ----
 // ---- Fetch latest race results strictly from Jolpi ----
 async function fetchLatestRaceData() {
   try {
@@ -103,6 +103,7 @@ async function fetchLatestRaceData() {
         compound: "M",
         gap: displayGap,
         leader: i === 0,
+        points: r.points // NEW: Grab official points awarded
       };
     });
 
@@ -173,3 +174,37 @@ Object.assign(window, {
   TEAMS, TOWER_INIT, TOWER_FALLBACK, PICKS, FANTASY_BUDGET,
   DEFAULT_SELECTED, DEFAULT_CAPTAIN, HISTORY_CARDS,
 });
+async function fetchDriverStandings() {
+  try {
+    const res = await fetch("https://api.jolpi.ca/ergast/f1/2026/driverStandings.json");
+    if (!res.ok) throw new Error("Standings fetch failed");
+    const data = await res.json();
+    
+    // Ergast buries the standings deep in the JSON tree
+    const standingsList = data.MRData.StandingsTable.StandingsLists[0].DriverStandings;
+    
+    const formattedStandings = standingsList.map(s => ({
+      pos: s.position,
+      points: s.points,
+      code: s.Driver.code,
+      team: guessTeam(s.Constructors[0]?.name)
+    }));
+    
+    // Fire an event just like we did for the timing tower
+    window.dispatchEvent(new CustomEvent("f1standings:updated", { detail: formattedStandings }));
+    return formattedStandings;
+  } catch (err) {
+    console.error(err);
+  }
+}
+
+// Kick off the fetch in the background
+fetchDriverStandings();
+// Manually update this on Thursdays before a race weekend
+const WEEKEND_UPGRADES = [
+  { team: "mclaren", parts: ["Front Wing", "Floor Body"], impact: "High", focus: "Downforce" },
+  { team: "ferrari", parts: ["Sidepod Inlets"], impact: "Medium", focus: "Cooling" },
+  { team: "redbull", parts: ["None"], impact: "None", focus: "N/A" }
+];
+
+window.WEEKEND_UPGRADES = WEEKEND_UPGRADES;
