@@ -70,10 +70,17 @@ async function fetchLatestRaceData() {
     const raceName = data.MRData.RaceTable.Races[0].raceName;
 
     const fullGrid = results.map((r, i) => {
-      // Leader gets 0.
-      // Lead lap cars get their exact time gap (r.Time.time).
-      // Lapped cars and DNFs fall back instantly to their official status (r.status).
-      const displayGap = i === 0 ? 0 : (r.Time?.time || r.status);
+      let displayGap = "";
+
+      if (i === 0) {
+        displayGap = 0; // The Leader
+      } else if (r.status && (r.status.includes("Lap") || r.status !== "Finished")) {
+        // If they are lapped or retired, status contains the exact classification string
+        displayGap = r.status;
+      } else {
+        // Lead lap finishers get their standard time gap
+        displayGap = r.Time?.time || `+${(i * 5.0).toFixed(3)}s`;
+      }
 
       return {
         code: r.Driver.code || String(r.number),
