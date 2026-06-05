@@ -46,8 +46,21 @@ function TimingTower() {
           };
           
           let gapDisplay = "LEADER";
+          let showDelta = true;
+          
           if (!isLeader) {
-            gapDisplay = typeof d.gap === "number" ? `+${d.gap.toFixed(1)}` : d.gap;
+            gapDisplay = typeof d.gap === "number" ? `+${d.gap.toFixed(3)}` : String(d.gap);
+            
+            // If the gap contains any letters (Lap, Retired, DNS), it's a classification string
+            if (/[a-zA-Z]/.test(gapDisplay)) {
+              showDelta = false; // Hide the triangle icon for clean text
+              gapDisplay = gapDisplay.toUpperCase();
+              
+              // Force a '+' sign if it says "LAP" but the API forgot it
+              if (gapDisplay.includes("LAP") && !gapDisplay.startsWith("+")) {
+                gapDisplay = "+" + gapDisplay;
+              }
+            }
           }
 
           return (
@@ -67,8 +80,13 @@ function TimingTower() {
                   gapDisplay
                 ) : (
                   <>
-                    <DeltaMark size={9} color="var(--text-faint)" stroke />
-                    <span>{gapDisplay}</span>
+                    {showDelta && <DeltaMark size={9} color="var(--text-faint)" stroke />}
+                    <span style={{ 
+                      fontWeight: showDelta ? "normal" : "600",
+                      letterSpacing: showDelta ? "normal" : "0.05em" 
+                    }}>
+                      {gapDisplay}
+                    </span>
                   </>
                 )}
               </div>
