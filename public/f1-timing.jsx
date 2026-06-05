@@ -53,59 +53,6 @@ useEffect(() => {
     prevTops.current = tops;
   });
 
-  // ---- gap ticking + occasional swaps ----
-  useEffect(() => {
-    if (paused) return;
-    const iv = setInterval(() => {
-      setDrivers((prev) => {
-        const next = prev.map((d) => ({ ...d }));
-        const sorted = [...next].sort((a, b) => a.t - b.t);
-        sorted.forEach((d, i) => {
-          if (i === 0) {
-            // leader edges forward slightly
-            d.t += (Math.random() - 0.55) * 0.25 * speed;
-          } else {
-            // random walk with mild pull toward field spread
-            const target = i * 4.2;
-            const pull = (target - (d.t - sorted[0].t)) * 0.04;
-            d.t += (Math.random() - 0.5) * 1.1 * speed + pull * speed;
-          }
-        });
-        // occasional bigger lunge to force an overtake
-        if (Math.random() < 0.32 && sorted.length > 2) {
-          const i = 1 + Math.floor(Math.random() * (sorted.length - 1));
-          sorted[i].t -= (3 + Math.random() * 4) * speed;
-        }
-        return next;
-      });
-      // flash a couple of random rows
-      setFlash(() => {
-        const codes = TOWER_INIT.map((d) => d.code);
-        const pick = {};
-        codes.forEach((c) => { if (Math.random() < 0.5) pick[c] = true; });
-        return pick;
-      });
-      setTimeout(() => setFlash({}), 480);
-    }, Math.max(700, 1500 / speed));
-    return () => clearInterval(iv);
-  }, [speed, paused]);
-
-  // ---- lap advance ----
-  useEffect(() => {
-    if (paused) return;
-    const iv = setInterval(() => {
-      setLap((l) => {
-        if (l >= total) {
-          // new race start — re-spread the field
-          setDrivers(TOWER_INIT.map((d) => ({ ...d, t: d.gap })));
-          return 1;
-        }
-        return l + 1;
-      });
-    }, Math.max(1600, 4600 / speed));
-    return () => clearInterval(iv);
-  }, [speed, paused]);
-
   const sorted = [...drivers].sort((a, b) => a.t - b.t);
   const minT = sorted[0].t;
 
