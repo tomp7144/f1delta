@@ -50,12 +50,12 @@ async function fetchLatestRaceData() {
   try {
     // 1. Get latest race session
     const sessRes = await fetch(
-      "https://api.openf1.org/v1/sessions?session_type=Race&order_by=-date_start&limit=1"
+      "https://api.openf1.org/v1/sessions?session_type=Race&year=2026"
     );
     if (!sessRes.ok) throw new Error("session fetch failed");
     const sessions = await sessRes.json();
     if (!sessions.length) throw new Error("no sessions");
-    const session = sessions[0];
+    const session = sessions[sessions.length - 1];
     const key = session.session_key;
 
     // 2. Get final positions
