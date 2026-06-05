@@ -62,7 +62,7 @@ function guessTeam(name) {
 async function fetchLatestRaceData() {
   try {
     // 1. Latest race session for 2026
-    const sessRes = await fetch("/api/sessions?session_type=Race&year=2026");
+    const sessRes = await fetch("/api/openf1/sessions?session_type=Race&year=2026");
     if (!sessRes.ok) throw new Error(`sessions ${sessRes.status}`);
     const sessions = await sessRes.json();
     if (!sessions.length) throw new Error("no 2026 race sessions yet");
@@ -73,9 +73,9 @@ async function fetchLatestRaceData() {
     // 2. session_result — has position + gap_to_leader in one shot
     //    Also fetch drivers for name_acronym + team_name
     const [resultRes, drvRes, stintRes] = await Promise.all([
-      fetch(`/api.openf1.org/v1/session_result?session_key=${key}`),
-      fetch(`/api.openf1.org/v1/drivers?session_key=${key}`),
-      fetch(`/api.openf1.org/v1/stints?session_key=${key}`),
+      fetch(`/api/openf1/session_result?session_key=${key}`),
+      fetch(`/api/openf1/drivers?session_key=${key}`),
+      fetch(`/api/openf1/stints?session_key=${key}`),
     ]);
 
     if (!resultRes.ok) throw new Error(`session_result ${resultRes.status}`);
