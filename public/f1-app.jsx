@@ -45,7 +45,14 @@ function App() {
             <div className="hero-eyebrow">
               <Eyebrow>Formula 1 — Data &amp; History</Eyebrow>
             </div>
+            
+            {/* Main timing tower */}
             <TimingTower speed={t.liveSpeed} paused={t.livePaused} />
+            
+            {/* Championship Standings & Pro Upgrades stacked directly below */}
+            <StandingsTower />
+            <UpgradesModule />
+            
             <div className="rise"><Reveal /></div>
             <DeltaBar />
           </div>
