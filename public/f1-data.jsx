@@ -15,7 +15,6 @@ const TEAMS = {
   rb:         { name: "RB",           color: "var(--rb)",        dark: false },
 };
 
-// Driver code → team mapping
 const DRIVER_TEAMS = {
   NOR: "mclaren",  PIA: "mclaren",
   LEC: "ferrari",  HAM: "ferrari",
@@ -29,132 +28,126 @@ const DRIVER_TEAMS = {
   TSU: "rb",       HAD: "rb",
 };
 
-// Fallback static data (Canadian GP)
-const TOWER_FALLBACK = [
-  { code: "NOR", team: "mclaren",  compound: "S", gap: 0,    leader: true  },
-  { code: "LEC", team: "ferrari",  compound: "M", gap: 3.2,  leader: false },
-  { code: "VER", team: "redbull",  compound: "M", gap: 7.8,  leader: false },
-  { code: "ANT", team: "mercedes", compound: "H", gap: 12.1, leader: false },
-  { code: "HAM", team: "ferrari",  compound: "S", gap: 15.4, leader: false },
-  { code: "PIA", team: "mclaren",  compound: "M", gap: 19.0, leader: false },
-];
-
-// Compound abbreviation map
 const COMPOUND_MAP = {
   SOFT: "S", MEDIUM: "M", HARD: "H",
   INTERMEDIATE: "I", WET: "W",
 };
 
-// ---- Fetch latest race data from OpenF1 ----
+// Fallback: Canadian GP 2026
+const TOWER_FALLBACK = [
+  { code: "ANT", team: "mercedes", compound: "H", gap: 0,    leader: true  },
+  { code: "NOR", team: "mclaren",  compound: "S", gap: 2.0,  leader: false },
+  { code: "LEC", team: "ferrari",  compound: "M", gap: 3.9,  leader: false },
+  { code: "VER", team: "redbull",  compound: "M", gap: 9.6,  leader: false },
+  { code: "PIA", team: "mclaren",  compound: "M", gap: 12.0, leader: false },
+  { code: "HAM", team: "ferrari",  compound: "S", gap: 17.6, leader: false },
+];
+
+function guessTeam(name) {
+  if (!name) return "rb";
+  const n = name.toLowerCase();
+  if (n.includes("mclaren"))              return "mclaren";
+  if (n.includes("ferrari"))              return "ferrari";
+  if (n.includes("red bull"))             return "redbull";
+  if (n.includes("mercedes"))             return "mercedes";
+  if (n.includes("aston"))                return "aston";
+  if (n.includes("williams"))             return "williams";
+  if (n.includes("alpine"))               return "alpine";
+  if (n.includes("haas"))                 return "haas";
+  if (n.includes("sauber") || n.includes("kick")) return "kick";
+  return "rb";
+}
+
+// ---- Fetch latest race results from OpenF1 ----
 async function fetchLatestRaceData() {
   try {
-    // 1. Get latest race session
+    // 1. Latest race session for 2026
     const sessRes = await fetch(
       "https://api.openf1.org/v1/sessions?session_type=Race&year=2026"
     );
-    if (!sessRes.ok) throw new Error("session fetch failed");
+    if (!sessRes.ok) throw new Error(`sessions ${sessRes.status}`);
     const sessions = await sessRes.json();
-    if (!sessions.length) throw new Error("no sessions");
-    const session = sessions[sessions.length - 1];
+    if (!sessions.length) throw new Error("no 2026 race sessions yet");
+    const session = sessions[sessions.length - 1]; // last = most recent
     const key = session.session_key;
+    console.log(`[F1Delta] Session: ${session.location} (key ${key})`);
 
-    // 2. Get positions + intervals + drivers + stints in parallel
-    const [posRes, intRes, drvRes, stintRes] = await Promise.all([
-      fetch(`https://api.openf1.org/v1/position?session_key=${key}`),
-      fetch(`https://api.openf1.org/v1/intervals?session_key=${key}`),
+    // 2. session_result — has position + gap_to_leader in one shot
+    //    Also fetch drivers for name_acronym + team_name
+    const [resultRes, drvRes, stintRes] = await Promise.all([
+      fetch(`https://api.openf1.org/v1/session_result?session_key=${key}`),
       fetch(`https://api.openf1.org/v1/drivers?session_key=${key}`),
       fetch(`https://api.openf1.org/v1/stints?session_key=${key}`),
     ]);
 
-    if (!posRes.ok) throw new Error("position fetch failed");
-    const positions = await posRes.json();
+    if (!resultRes.ok) throw new Error(`session_result ${resultRes.status}`);
+    const results = await resultRes.json();
+    if (!results.length) throw new Error("no session_result data");
 
-    // Deduplicate — keep only the last position entry per driver
-    const latestPos = {};
-    positions.forEach(p => {
-      if (!latestPos[p.driver_number] || p.date > latestPos[p.driver_number].date) {
-        latestPos[p.driver_number] = p;
-      }
-    });
-    const sorted = Object.values(latestPos).sort((a, b) => a.position - b.position);
+    // Sort by position
+    const sorted = [...results].sort((a, b) => a.position - b.position);
 
-    // Driver map
+    // Driver map: number → { name_acronym, team_name }
     const drivers = drvRes.ok ? await drvRes.json() : [];
     const driverMap = {};
     drivers.forEach(d => { driverMap[d.driver_number] = d; });
 
-    // Intervals — latest gap_to_leader per driver
-    const allIntervals = intRes.ok ? await intRes.json() : [];
-    const latestInt = {};
-    allIntervals.forEach(iv => {
-      if (!latestInt[iv.driver_number] || iv.date > latestInt[iv.driver_number].date) {
-        latestInt[iv.driver_number] = iv;
-      }
-    });
-
-    // Stints — last compound per driver
+    // Last compound per driver
     const stints = stintRes.ok ? await stintRes.json() : [];
     const lastStint = {};
     stints.forEach(s => {
-      if (!lastStint[s.driver_number] || s.stint_number > lastStint[s.driver_number].stint_number) {
+      if (!lastStint[s.driver_number] ||
+          s.stint_number > lastStint[s.driver_number].stint_number) {
         lastStint[s.driver_number] = s;
       }
     });
 
-    // 3. Build TOWER_INIT from real data (top 6)
-    const top6 = sorted.slice(0, 6);
-    const towerData = top6.map((p, i) => {
-      const drv = driverMap[p.driver_number] || {};
-      const code = drv.name_acronym || String(p.driver_number);
-      const teamName = (drv.team_name || "").toLowerCase().replace(/\s+/g, "");
-      const team = DRIVER_TEAMS[code] || guessTeam(teamName);
-      const stint = lastStint[p.driver_number];
+    // 3. Build tower rows (top 6, skip DNFs if possible)
+    const finishers = sorted.filter(r => !r.dnf && !r.dns && !r.dsq);
+    const top6 = (finishers.length >= 4 ? finishers : sorted).slice(0, 6);
+
+    const towerData = top6.map((r, i) => {
+      const drv      = driverMap[r.driver_number] || {};
+      const code     = drv.name_acronym || String(r.driver_number);
+      const team     = DRIVER_TEAMS[code] || guessTeam(drv.team_name);
+      const stint    = lastStint[r.driver_number];
       const compound = stint ? (COMPOUND_MAP[stint.compound] || "M") : "M";
 
-      // Real gap from intervals; fall back to estimated spread if missing
+      // gap_to_leader: numeric seconds, "+N LAP(S)" string, or 0 for leader
       let gap = 0;
       if (i > 0) {
-        const iv = latestInt[p.driver_number];
-        const raw = iv?.gap_to_leader ?? null;
-        gap = raw !== null
-          ? parseFloat(String(raw).replace("+", "")) || (i * 4)
-          : i * 4;
+        const raw = r.gap_to_leader;
+        if (typeof raw === "number") {
+          gap = raw;
+        } else if (typeof raw === "string" && raw.includes("LAP")) {
+          gap = raw; // keep "+1 LAP" as string — tower can display it
+        } else {
+          gap = parseFloat(raw) || i * 5;
+        }
       }
 
       return { code, team, compound, gap, leader: i === 0 };
     });
 
-    // Update session label
     window.CURRENT_SESSION = {
       name: session.circuit_short_name || session.location || "Latest Race",
       round: session.round_number || "—",
     };
 
+    console.log("[F1Delta] Loaded:", towerData.map(d => d.code).join(" "));
     return towerData;
+
   } catch (err) {
-    console.warn("OpenF1 fetch failed, using fallback data:", err.message);
+    console.warn("[F1Delta] fetch failed, using fallback:", err.message);
     return null;
   }
 }
 
-function guessTeam(name) {
-  if (name.includes("mclaren")) return "mclaren";
-  if (name.includes("ferrari")) return "ferrari";
-  if (name.includes("red") || name.includes("bull")) return "redbull";
-  if (name.includes("mercedes")) return "mercedes";
-  if (name.includes("aston")) return "aston";
-  if (name.includes("williams")) return "williams";
-  if (name.includes("alpine")) return "alpine";
-  if (name.includes("haas")) return "haas";
-  if (name.includes("sauber") || name.includes("kick")) return "kick";
-  return "rb";
-}
-
-// Start with fallback, then replace with real data when it arrives
+// Start with fallback immediately so the tower renders
 let TOWER_INIT = [...TOWER_FALLBACK];
 window.CURRENT_SESSION = { name: "Canadian GP", round: "9" };
 
-// Fetch in background — timing tower will pick up new data on next render cycle
+// Fetch real data in background; fire event so tower can re-seed
 fetchLatestRaceData().then(data => {
   if (data && data.length >= 4) {
     TOWER_INIT = data;
@@ -165,40 +158,40 @@ fetchLatestRaceData().then(data => {
 
 // Fantasy picks
 const PICKS = [
-  { id: "nor", name: "Lando Norris",     team: "mclaren",  note: "Circuit historian · 3 wins here", price: 32.5, form: 94,  dir: "up",   value: false, proj: 71, hist: [0.6,0.8,0.7,0.9,0.85,1] },
-  { id: "lec", name: "Charles Leclerc",  team: "ferrari",  note: "Strong at street circuits",         price: 28.1, form: 88,  dir: "up",   value: false, proj: 64, hist: [0.5,0.7,0.6,0.75,0.9,0.88] },
-  { id: "pia", name: "Oscar Piastri",    team: "mclaren",  note: "Qualifying pace leader",            price: 26.8, form: 85,  dir: "up",   value: false, proj: 61, hist: [0.55,0.6,0.72,0.78,0.8,0.85] },
-  { id: "ver", name: "Max Verstappen",   team: "redbull",  note: "Historically strong here",          price: 30.0, form: 79,  dir: "flat", value: false, proj: 66, hist: [0.9,0.85,0.7,0.72,0.78,0.79] },
-  { id: "rus", name: "George Russell",   team: "mercedes", note: "Consistent points finisher",        price: 21.4, form: 76,  dir: "up",   value: false, proj: 52, hist: [0.5,0.55,0.6,0.65,0.7,0.76] },
-  { id: "ham", name: "Lewis Hamilton",   team: "ferrari",  note: "Seven-time champ · street craft",   price: 24.5, form: 68,  dir: "down", value: false, proj: 48, hist: [0.85,0.8,0.7,0.65,0.6,0.68] },
-  { id: "ant", name: "Kimi Antonelli",   team: "mercedes", note: "Value pick this round",             price: 18.2, form: 71,  dir: "flat", value: true,  proj: 45, hist: [0.4,0.5,0.55,0.6,0.68,0.71] },
-  { id: "alo", name: "Fernando Alonso",  team: "aston",    note: "Wildcard upside",                   price: 14.6, form: 62,  dir: "down", value: true,  proj: 38, hist: [0.7,0.62,0.55,0.5,0.58,0.62] },
+  { id: "nor", name: "Lando Norris",    team: "mclaren",  note: "Circuit historian · 3 wins here", price: 32.5, form: 94,  dir: "up",   value: false, proj: 71, hist: [0.6,0.8,0.7,0.9,0.85,1] },
+  { id: "lec", name: "Charles Leclerc", team: "ferrari",  note: "Strong at street circuits",        price: 28.1, form: 88,  dir: "up",   value: false, proj: 64, hist: [0.5,0.7,0.6,0.75,0.9,0.88] },
+  { id: "pia", name: "Oscar Piastri",   team: "mclaren",  note: "Qualifying pace leader",           price: 26.8, form: 85,  dir: "up",   value: false, proj: 61, hist: [0.55,0.6,0.72,0.78,0.8,0.85] },
+  { id: "ver", name: "Max Verstappen",  team: "redbull",  note: "Historically strong here",         price: 30.0, form: 79,  dir: "flat", value: false, proj: 66, hist: [0.9,0.85,0.7,0.72,0.78,0.79] },
+  { id: "rus", name: "George Russell",  team: "mercedes", note: "Consistent points finisher",       price: 21.4, form: 76,  dir: "up",   value: false, proj: 52, hist: [0.5,0.55,0.6,0.65,0.7,0.76] },
+  { id: "ham", name: "Lewis Hamilton",  team: "ferrari",  note: "Seven-time champ · street craft",  price: 24.5, form: 68,  dir: "down", value: false, proj: 48, hist: [0.85,0.8,0.7,0.65,0.6,0.68] },
+  { id: "ant", name: "Kimi Antonelli",  team: "mercedes", note: "Value pick this round",            price: 18.2, form: 71,  dir: "flat", value: true,  proj: 45, hist: [0.4,0.5,0.55,0.6,0.68,0.71] },
+  { id: "alo", name: "Fernando Alonso", team: "aston",    note: "Wildcard upside",                  price: 14.6, form: 62,  dir: "down", value: true,  proj: 38, hist: [0.7,0.62,0.55,0.5,0.58,0.62] },
 ];
 
-const FANTASY_BUDGET = 100.0;
+const FANTASY_BUDGET  = 100.0;
 const DEFAULT_SELECTED = ["nor", "lec", "ant", "alo"];
-const DEFAULT_CAPTAIN = "nor";
+const DEFAULT_CAPTAIN  = "nor";
 
 const HISTORY_CARDS = [
   {
     kicker: "Regulation Eras",
-    title: "Every rule change & who won the chaos",
-    body: "Eleven major resets since 1950. See who capitalized — and who got crushed — every single time the rulebook was rewritten.",
-    stat: "1950 → 2026",
+    title:  "Every rule change & who won the chaos",
+    body:   "Eleven major resets since 1950. See who capitalized — and who got crushed — every single time the rulebook was rewritten.",
+    stat:   "1950 → 2026",
     accent: "var(--ferrari)",
   },
   {
     kicker: "Dynasty Tracker",
-    title: "How boring does F1 actually get?",
-    body: "Every champion colored by team. The dominant eras are more lopsided than memory tells you — the data is unforgiving.",
-    stat: "75 seasons",
+    title:  "How boring does F1 actually get?",
+    body:   "Every champion colored by team. The dominant eras are more lopsided than memory tells you — the data is unforgiving.",
+    stat:   "75 seasons",
     accent: "var(--mercedes)",
   },
   {
     kicker: "Team Orders",
-    title: "When Ferrari told Barrichello to move over",
-    body: "Every documented team order on record — and whether any of it actually changed where a championship landed.",
-    stat: "7 incidents",
+    title:  "When Ferrari told Barrichello to move over",
+    body:   "Every documented team order on record — and whether any of it actually changed where a championship landed.",
+    stat:   "7 incidents",
     accent: "var(--gold)",
   },
 ];
