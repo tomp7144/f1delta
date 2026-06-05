@@ -16,6 +16,17 @@ function TimingTower({ speed = 1, paused = false }) {
   const [flash, setFlash] = useState({}); // code -> true
   const rowRefs = useRef({});
   const prevTops = useRef({});
+  // Re-seed when real data loads
+useEffect(() => {
+  const handler = (e) => {
+    const data = e.detail.tower;
+    if (data && data.length >= 4) {
+      setDrivers(data.map((d) => ({ ...d, t: d.gap })));
+    }
+  };
+  window.addEventListener("f1data:updated", handler);
+  return () => window.removeEventListener("f1data:updated", handler);
+}, []);
 
   // ---- FLIP: animate reorder (offsetTop is scroll-independent) ----
   React.useLayoutEffect(() => {
