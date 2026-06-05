@@ -1,5 +1,5 @@
 /* ============================================================
-   F1 DELTA — data
+   F1 DELTA — data (Full Grid Processing)
    ============================================================ */
 
 const TEAMS = {
@@ -58,7 +58,7 @@ function guessTeam(name) {
   return "rb";
 }
 
-// ---- Fetch latest race results from OpenF1 ----
+// ---- Fetch latest race results from Jolpi ----
 async function fetchLatestRaceData() {
   try {
     const res = await fetch("https://api.jolpi.ca/ergast/f1/2026/5/results/?format=json");
@@ -67,17 +67,19 @@ async function fetchLatestRaceData() {
     const results = data.MRData.RaceTable.Races[0].Results;
     const raceName = data.MRData.RaceTable.Races[0].raceName;
 
-    const top6 = results.slice(0, 6).map((r, i) => ({
-      code: r.Driver.code,
+    // Map over EVERY result entry instead of slicing down to 6
+    const fullGrid = results.map((r, i) => ({
+      code: r.Driver.code || String(r.number),
       team: DRIVER_TEAMS[r.Driver.code] || guessTeam(r.Constructor.name),
-      compound: "M",
-      gap: i === 0 ? 0 : parseFloat(r.Time?.time || r.gap || i * 5) || i * 5,
+      compound: "M", // Jolpi/Ergast doesn't natively supply compound data, default to Medium
+      // Pass the actual string gap from Jolpi ("+1.234", "+1 Lap") or fallback smoothly
+      gap: i === 0 ? 0 : (r.Time?.time || r.status || `+${i * 5.0}s`),
       leader: i === 0,
     }));
 
     window.CURRENT_SESSION = { name: raceName, round: data.MRData.RaceTable.round };
-    console.log("[F1Delta] Loaded:", top6.map(d => d.code).join(" "));
-    return top6;
+    console.log("[F1Delta] Loaded whole grid:", fullGrid.map(d => d.code).join(" "));
+    return fullGrid;
   } catch (err) {
     console.warn("[F1Delta] fetch failed, using fallback:", err.message);
     return null;
