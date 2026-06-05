@@ -61,80 +61,23 @@ function guessTeam(name) {
 // ---- Fetch latest race results from OpenF1 ----
 async function fetchLatestRaceData() {
   try {
-    // 1. Latest race session for 2026
-    const sessRes = await fetch("/api/openf1/sessions?session_type=Race&year=2026");
-    if (!sessRes.ok) throw new Error(`sessions ${sessRes.status}`);
-    const sessions = await sessRes.json();
-    if (!sessions.length) throw new Error("no 2026 race sessions yet");
-    const session = sessions[sessions.length - 1]; // last = most recent
-    const key = session.session_key;
-    console.log(`[F1Delta] Session: ${session.location} (key ${key})`);
+    const res = await fetch("https://api.jolpi.ca/ergast/f1/2026/current/last/results/?format=json");
+    if (!res.ok) throw new Error(`jolpica ${res.status}`);
+    const data = await res.json();
+    const results = data.MRData.RaceTable.Races[0].Results;
+    const raceName = data.MRData.RaceTable.Races[0].raceName;
 
-    // 2. session_result — has position + gap_to_leader in one shot
-    //    Also fetch drivers for name_acronym + team_name
-    const [resultRes, drvRes, stintRes] = await Promise.all([
-      fetch(`/api/openf1/session_result?session_key=${key}`),
-      fetch(`/api/openf1/drivers?session_key=${key}`),
-      fetch(`/api/openf1/stints?session_key=${key}`),
-    ]);
+    const top6 = results.slice(0, 6).map((r, i) => ({
+      code: r.Driver.code,
+      team: DRIVER_TEAMS[r.Driver.code] || guessTeam(r.Constructor.name),
+      compound: "M",
+      gap: i === 0 ? 0 : parseFloat(r.Time?.time || r.gap || i * 5) || i * 5,
+      leader: i === 0,
+    }));
 
-    if (!resultRes.ok) throw new Error(`session_result ${resultRes.status}`);
-    const results = await resultRes.json();
-    if (!results.length) throw new Error("no session_result data");
-
-    // Sort by position
-    const sorted = [...results].sort((a, b) => a.position - b.position);
-
-    // Driver map: number → { name_acronym, team_name }
-    const drivers = drvRes.ok ? await drvRes.json() : [];
-    const driverMap = {};
-    drivers.forEach(d => { driverMap[d.driver_number] = d; });
-
-    // Last compound per driver
-    const stints = stintRes.ok ? await stintRes.json() : [];
-    const lastStint = {};
-    stints.forEach(s => {
-      if (!lastStint[s.driver_number] ||
-          s.stint_number > lastStint[s.driver_number].stint_number) {
-        lastStint[s.driver_number] = s;
-      }
-    });
-
-    // 3. Build tower rows (top 6, skip DNFs if possible)
-    const finishers = sorted.filter(r => !r.dnf && !r.dns && !r.dsq);
-    const top6 = (finishers.length >= 4 ? finishers : sorted).slice(0, 6);
-
-    const towerData = top6.map((r, i) => {
-      const drv      = driverMap[r.driver_number] || {};
-      const code     = drv.name_acronym || String(r.driver_number);
-      const team     = DRIVER_TEAMS[code] || guessTeam(drv.team_name);
-      const stint    = lastStint[r.driver_number];
-      const compound = stint ? (COMPOUND_MAP[stint.compound] || "M") : "M";
-
-      // gap_to_leader: numeric seconds, "+N LAP(S)" string, or 0 for leader
-      let gap = 0;
-      if (i > 0) {
-        const raw = r.gap_to_leader;
-        if (typeof raw === "number") {
-          gap = raw;
-        } else if (typeof raw === "string" && raw.includes("LAP")) {
-          gap = raw; // keep "+1 LAP" as string — tower can display it
-        } else {
-          gap = parseFloat(raw) || i * 5;
-        }
-      }
-
-      return { code, team, compound, gap, leader: i === 0 };
-    });
-
-    window.CURRENT_SESSION = {
-      name: session.circuit_short_name || session.location || "Latest Race",
-      round: session.round_number || "—",
-    };
-
-    console.log("[F1Delta] Loaded:", towerData.map(d => d.code).join(" "));
-    return towerData;
-
+    window.CURRENT_SESSION = { name: raceName, round: data.MRData.RaceTable.round };
+    console.log("[F1Delta] Loaded:", top6.map(d => d.code).join(" "));
+    return top6;
   } catch (err) {
     console.warn("[F1Delta] fetch failed, using fallback:", err.message);
     return null;
