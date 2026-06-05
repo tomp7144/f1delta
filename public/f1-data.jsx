@@ -73,7 +73,8 @@ async function fetchLatestRaceData() {
     let timingMap = {};
     try {
       // session_key=latest pulls the most recent session data
-      const openf1Res = await fetch("/api/intervals?session_key=latest");
+      // New
+const openf1Res = await fetch("https://api.allorigins.win/raw?url=" + encodeURIComponent("https://api.openf1.org/v1/intervals?session_key=latest"));
       if (openf1Res.ok) {
         const intervals = await openf1Res.json();
         // OpenF1 returns a massive stream of every interval update. 
