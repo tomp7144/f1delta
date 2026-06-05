@@ -1,5 +1,5 @@
 /* ============================================================
-   F1 DELTA — data (Full Grid Processing)
+   F1 DELTA — data (Full Grid & Standings Processing)
    ============================================================ */
 
 const TEAMS = {
@@ -9,7 +9,7 @@ const TEAMS = {
   mclaren:    { name: "McLaren",      color: "#FF8000", dark: false },
   aston:      { name: "Aston Martin", color: "#229971", dark: false },
   williams:   { name: "Williams",     color: "#64C4FF", dark: false },
-  alpine:     { name: "Alpine",       color: "#FF87BC", dark: false }, // Pink Alpine 
+  alpine:     { name: "Alpine",       color: "#FF87BC", dark: false }, 
   haas:       { name: "Haas",         color: "#FFFFFF", dark: false },
   kick:       { name: "Kick Sauber",  color: "#52E252", dark: false },
   rb:         { name: "RB",           color: "#6692FF", dark: false },
@@ -58,9 +58,7 @@ function guessTeam(name) {
   return "rb";
 }
 
-// ---- Fetch latest race results from Jolpi ----
-// ---- Fetch Data (Jolpi for Order and timing) ----
-// ---- Fetch latest race results strictly from Jolpi ----
+// ---- FETCH LATEST RACE DATA (Jolpi Results Tower) ----
 async function fetchLatestRaceData() {
   try {
     const res = await fetch("https://api.jolpi.ca/ergast/f1/2026/5/results/?format=json");
@@ -69,31 +67,22 @@ async function fetchLatestRaceData() {
     const results = data.MRData.RaceTable.Races[0].Results;
     const raceName = data.MRData.RaceTable.Races[0].raceName;
     
-    // 1. Get the total laps completed by the race winner
     const winnerLaps = parseInt(results[0].laps, 10);
 
     const fullGrid = results.map((r, i) => {
       let displayGap = "";
 
       if (i === 0) {
-        displayGap = 0; // The Leader
+        displayGap = 0; 
       } else if (r.status && r.status !== "Finished") {
-        
-        // 2. Intercept any status that mentions "Lap" or "Lapped"
         if (r.status.toLowerCase().includes("lap")) {
           const lapsDown = winnerLaps - parseInt(r.laps, 10);
-          
-          // Failsafe just in case math returns 0
           const finalLaps = lapsDown > 0 ? lapsDown : 1; 
           displayGap = `+${finalLaps} LAP${finalLaps > 1 ? "S" : ""}`;
-          
         } else {
-          // Retirements, DNS, Gearbox, etc.
           displayGap = r.status;
         }
-        
       } else {
-        // Lead lap finishers
         displayGap = r.Time?.time || `+${(i * 5.0).toFixed(3)}s`;
       }
 
@@ -103,7 +92,7 @@ async function fetchLatestRaceData() {
         compound: "M",
         gap: displayGap,
         leader: i === 0,
-        points: r.points // NEW: Grab official points awarded
+        points: parseInt(r.points, 10) || 0
       };
     });
 
@@ -112,25 +101,43 @@ async function fetchLatestRaceData() {
     return fullGrid;
     
   } catch (err) {
-    console.warn("[F1Delta] fetch failed, using fallback:", err.message);
+    console.warn("[F1Delta] Race fetch failed, using fallback:", err.message);
     return null;
   }
 }
 
-// Start with fallback immediately so the tower renders
-let TOWER_INIT = [...TOWER_FALLBACK];
-window.CURRENT_SESSION = { name: "Canadian GP", round: "9" };
-
-// Fetch real data in background; fire event so tower can re-seed
-fetchLatestRaceData().then(data => {
-  if (data && data.length >= 4) {
-    TOWER_INIT = data;
-    window.TOWER_INIT = data;
-    window.dispatchEvent(new CustomEvent("f1data:updated", { detail: { tower: data } }));
+// ---- FETCH CHAMPIONSHIP STANDINGS ----
+async function fetchDriverStandings() {
+  try {
+    const res = await fetch("https://api.jolpi.ca/ergast/f1/2026/driverStandings.json");
+    if (!res.ok) throw new Error("Standings fetch failed");
+    const data = await res.json();
+    
+    const standingsList = data.MRData.StandingsTable.StandingsLists[0].DriverStandings;
+    
+    const formattedStandings = standingsList.map(s => ({
+      pos: s.position,
+      points: s.points,
+      code: s.Driver.code,
+      team: guessTeam(s.Constructors[0]?.name)
+    }));
+    
+    window.dispatchEvent(new CustomEvent("f1standings:updated", { detail: formattedStandings }));
+    return formattedStandings;
+  } catch (err) {
+    console.warn("[F1Delta] Standings fetch failed:", err.message);
+    return null;
   }
-});
+}
 
-// Fantasy picks
+// ---- WEEKEND UPGRADES (MANUAL THURSDAY UPDATE) ----
+const WEEKEND_UPGRADES = [
+  { team: "mclaren", parts: ["Front Wing", "Floor Body"], impact: "High", focus: "Downforce" },
+  { team: "ferrari", parts: ["Sidepod Inlets"], impact: "Medium", focus: "Cooling" },
+  { team: "redbull", parts: ["None"], impact: "None", focus: "N/A" }
+];
+
+// ---- FANTASY DATA ----
 const PICKS = [
   { id: "nor", name: "Lando Norris",    team: "mclaren",  note: "Circuit historian · 3 wins here", price: 32.5, form: 94,  dir: "up",   value: false, proj: 71, hist: [0.6,0.8,0.7,0.9,0.85,1] },
   { id: "lec", name: "Charles Leclerc", team: "ferrari",  note: "Strong at street circuits",        price: 28.1, form: 88,  dir: "up",   value: false, proj: 64, hist: [0.5,0.7,0.6,0.75,0.9,0.88] },
@@ -146,6 +153,7 @@ const FANTASY_BUDGET  = 100.0;
 const DEFAULT_SELECTED = ["nor", "lec", "ant", "alo"];
 const DEFAULT_CAPTAIN  = "nor";
 
+// ---- HISTORY DATA ----
 const HISTORY_CARDS = [
   {
     kicker: "Regulation Eras",
@@ -170,41 +178,23 @@ const HISTORY_CARDS = [
   },
 ];
 
+// ---- INITIALIZATION & EXECUTION ----
+let TOWER_INIT = [...TOWER_FALLBACK];
+window.CURRENT_SESSION = { name: "Canadian GP", round: "9" };
+
+// Trigger background data fetches
+fetchLatestRaceData().then(data => {
+  if (data && data.length >= 4) {
+    TOWER_INIT = data;
+    window.TOWER_INIT = data;
+    window.dispatchEvent(new CustomEvent("f1data:updated", { detail: { tower: data } }));
+  }
+});
+
+fetchDriverStandings();
+
+// Global Window Exports
 Object.assign(window, {
   TEAMS, TOWER_INIT, TOWER_FALLBACK, PICKS, FANTASY_BUDGET,
-  DEFAULT_SELECTED, DEFAULT_CAPTAIN, HISTORY_CARDS,
+  DEFAULT_SELECTED, DEFAULT_CAPTAIN, HISTORY_CARDS, WEEKEND_UPGRADES
 });
-async function fetchDriverStandings() {
-  try {
-    const res = await fetch("https://api.jolpi.ca/ergast/f1/2026/driverStandings.json");
-    if (!res.ok) throw new Error("Standings fetch failed");
-    const data = await res.json();
-    
-    // Ergast buries the standings deep in the JSON tree
-    const standingsList = data.MRData.StandingsTable.StandingsLists[0].DriverStandings;
-    
-    const formattedStandings = standingsList.map(s => ({
-      pos: s.position,
-      points: s.points,
-      code: s.Driver.code,
-      team: guessTeam(s.Constructors[0]?.name)
-    }));
-    
-    // Fire an event just like we did for the timing tower
-    window.dispatchEvent(new CustomEvent("f1standings:updated", { detail: formattedStandings }));
-    return formattedStandings;
-  } catch (err) {
-    console.error(err);
-  }
-}
-
-// Kick off the fetch in the background
-fetchDriverStandings();
-// Manually update this on Thursdays before a race weekend
-const WEEKEND_UPGRADES = [
-  { team: "mclaren", parts: ["Front Wing", "Floor Body"], impact: "High", focus: "Downforce" },
-  { team: "ferrari", parts: ["Sidepod Inlets"], impact: "Medium", focus: "Cooling" },
-  { team: "redbull", parts: ["None"], impact: "None", focus: "N/A" }
-];
-
-window.WEEKEND_UPGRADES = WEEKEND_UPGRADES;

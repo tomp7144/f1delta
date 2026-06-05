@@ -123,4 +123,76 @@ function TimingTower() {
   );
 }
 
-Object.assign(window, { TimingTower });
+function StandingsTower() {
+  const [standings, setStandings] = useState([]);
+
+  useEffect(() => {
+    const handler = (e) => setStandings(e.detail);
+    window.addEventListener("f1standings:updated", handler);
+    return () => window.removeEventListener("f1standings:updated", handler);
+  }, []);
+
+  if (standings.length === 0) return null;
+
+  return (
+    <div className="tower" style={{ marginTop: "20px" }}>
+      <div className="tower-head">
+        <div className="sess">
+          2026 WDC <span className="mono">·</span> <span className="lap num">LIVE STANDINGS</span>
+        </div>
+      </div>
+      <div className="tower-rows">
+        {standings.slice(0, 10).map((s) => {
+          const teamColor = TEAMS[s.team]?.color || "var(--text-faint)";
+          return (
+            <div key={s.code} className="trow" style={{ "--tc": teamColor }}>
+              <div className="teambar"></div>
+              <div className="pos num">{s.pos}</div>
+              <div className="ident">
+                <span className="code">{s.code}</span>
+              </div>
+              <div className="gap num" style={{ color: "var(--text-bright)" }}>
+                {s.points} PTS
+              </div>
+            </div>
+          );
+        })}
+      </div>
+    </div>
+  );
+}
+function UpgradesModule() {
+  const upgrades = window.WEEKEND_UPGRADES || [];
+
+  if (upgrades.length === 0) return null;
+
+  return (
+    <div className="tower" style={{ marginTop: "20px", border: "1px solid var(--redbull)", background: "rgba(255,0,0,0.05)" }}>
+      <div className="tower-head" style={{ borderBottom: "1px solid rgba(255,0,0,0.2)" }}>
+        <div className="sess" style={{ color: "var(--ferrari)" }}>
+          PRO <span className="mono">·</span> <span className="lap">WEEKEND UPGRADES</span>
+        </div>
+      </div>
+      <div style={{ padding: "10px" }}>
+        {upgrades.map((u, i) => {
+          const teamColor = TEAMS[u.team]?.color || "var(--text-faint)";
+          return (
+            <div key={i} style={{ marginBottom: "12px", borderLeft: `3px solid ${teamColor}`, paddingLeft: "10px" }}>
+              <div style={{ fontSize: "12px", fontWeight: "bold", textTransform: "uppercase", color: "var(--text-bright)" }}>
+                {TEAMS[u.team]?.name || u.team}
+              </div>
+              <div style={{ fontSize: "11px", color: "var(--text-faint)", marginTop: "4px" }}>
+                <span style={{ color: "var(--text-base)" }}>Parts:</span> {u.parts.join(", ")} <br/>
+                <span style={{ color: "var(--text-base)" }}>Focus:</span> {u.focus} <br/>
+                <span style={{ color: u.impact === "High" ? "var(--green)" : "var(--text-faint)" }}>
+                  Impact: {u.impact}
+                </span>
+              </div>
+            </div>
+          );
+        })}
+      </div>
+    </div>
+  );
+}
+Object.assign(window, { TimingTower, StandingsTower, UpgradesModule });
