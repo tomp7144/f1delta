@@ -60,56 +60,32 @@ function guessTeam(name) {
 
 // ---- Fetch latest race results from Jolpi ----
 // ---- Fetch Dual-Source Data (Jolpi for Order, OpenF1 for Timing) ----
+// ---- Fetch latest race results strictly from Jolpi ----
 async function fetchLatestRaceData() {
   try {
-    // 1. Get the official finishing order from Jolpi
-    const jolpiRes = await fetch("https://api.jolpi.ca/ergast/f1/2026/5/results/?format=json");
-    if (!jolpiRes.ok) throw new Error(`jolpica ${jolpiRes.status}`);
-    const data = await jolpiRes.json();
+    const res = await fetch("https://api.jolpi.ca/ergast/f1/2026/5/results/?format=json");
+    if (!res.ok) throw new Error(`jolpica ${res.status}`);
+    const data = await res.json();
     const results = data.MRData.RaceTable.Races[0].Results;
     const raceName = data.MRData.RaceTable.Races[0].raceName;
 
-    // 2. Fetch the real timing telemetry from OpenF1 via your Netlify proxy
-    let timingMap = {};
-    try {
-      // session_key=latest pulls the most recent session data
-      // New
-const openf1Res = await fetch("https://api.allorigins.win/raw?url=" + encodeURIComponent("https://api.openf1.org/v1/intervals?session_key=latest"));
-      if (openf1Res.ok) {
-        const intervals = await openf1Res.json();
-        // OpenF1 returns a massive stream of every interval update. 
-        // We loop through and overwrite so we only keep the absolute latest gap per driver.
-        intervals.forEach(int => {
-          timingMap[int.driver_number] = int.gap_to_leader;
-        });
-        console.log("[F1Delta] OpenF1 telemetry synced successfully.");
-      }
-    } catch (e) {
-      console.warn("[F1Delta] OpenF1 timing failed, falling back to Jolpi gaps.");
-    }
-
-    // 3. Merge the pristine OpenF1 timing into the Jolpi grid order
     const fullGrid = results.map((r, i) => {
-      const driverNum = parseInt(r.number);
-      
-      // Look for OpenF1 data first, fallback to Jolpi's messy strings if OpenF1 is down
-      let realGap = i === 0 ? 0 : (timingMap[driverNum] || r.Time?.time || r.status || `+${i * 5.0}s`);
-
-      // If OpenF1 gave us a raw number (e.g. 10.768), format it cleanly for the UI
-      if (typeof realGap === "number" && i !== 0) {
-        realGap = `+${realGap.toFixed(3)}`;
-      }
+      // Leader gets 0.
+      // Lead lap cars get their exact time gap (r.Time.time).
+      // Lapped cars and DNFs fall back instantly to their official status (r.status).
+      const displayGap = i === 0 ? 0 : (r.Time?.time || r.status);
 
       return {
         code: r.Driver.code || String(r.number),
         team: DRIVER_TEAMS[r.Driver.code] || guessTeam(r.Constructor.name),
         compound: "M",
-        gap: realGap,
+        gap: displayGap,
         leader: i === 0,
       };
     });
 
     window.CURRENT_SESSION = { name: raceName, round: data.MRData.RaceTable.round };
+    console.log("[F1Delta] Loaded Jolpi grid cleanly.");
     return fullGrid;
     
   } catch (err) {
