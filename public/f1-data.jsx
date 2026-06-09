@@ -15,6 +15,9 @@ const TEAMS = {
   rb:         { name: "RB",           color: "#6692FF", dark: false },
 };
 
+// NOTE: DRIVER_TEAMS is no longer used by the tower (team now comes live from the
+// baked race file). Kept only so nothing else that might reference it breaks; safe
+// to delete once you've confirmed it's unused elsewhere.
 const DRIVER_TEAMS = {
   NOR: "mclaren",  PIA: "mclaren",
   LEC: "ferrari",  HAM: "ferrari",
@@ -33,7 +36,7 @@ const COMPOUND_MAP = {
   INTERMEDIATE: "I", WET: "W",
 };
 
-// Fallback: Canadian GP 2026
+// Fallback: Canadian GP 2026 (offline safety net — matches CURRENT_SESSION default below)
 const TOWER_FALLBACK = [
   { code: "ANT", team: "mercedes", compound: "H", gap: 0,    leader: true  },
   { code: "NOR", team: "mclaren",  compound: "S", gap: 2.0,  leader: false },
@@ -58,55 +61,66 @@ function guessTeam(name) {
   return "rb";
 }
 
-// ---- FETCH LATEST RACE DATA (Jolpi Results Tower) ----
+// Map an OpenF1 team_name -> our internal slug. Known teams reuse existing slugs
+// (so their established colours are kept); genuinely new 2026 teams get their own.
+const NAME_TO_SLUG = [
+  ["mercedes", "mercedes"], ["ferrari", "ferrari"], ["red bull", "redbull"],
+  ["mclaren", "mclaren"],   ["aston", "aston"],     ["williams", "williams"],
+  ["alpine", "alpine"],     ["haas", "haas"],
+  ["racing bulls", "rb"],   ["rb", "rb"],
+  ["audi", "audi"], ["sauber", "audi"], ["kick", "audi"], // Sauber/Kick -> Audi (2026)
+  ["cadillac", "cadillac"],                               // new entry (2026)
+];
+
+function teamSlug(teamName) {
+  const n = (teamName || "").toLowerCase();
+  for (const [needle, slug] of NAME_TO_SLUG) if (n.includes(needle)) return slug;
+  return n.replace(/[^a-z0-9]+/g, "") || "unknown"; // stable fallback slug
+}
+
+// Make sure TEAMS has an entry for this slug. Known teams are left exactly as they
+// are (no colour shift); only brand-new teams get added, using the live colour.
+function ensureTeam(slug, teamName, teamColour) {
+  if (!TEAMS[slug]) {
+    TEAMS[slug] = { name: teamName || slug, color: teamColour || "#888888", dark: false };
+  }
+}
+
+// ---- FETCH LATEST RACE DATA (baked OpenF1 file, served from /public) ----
+// Reads the static file produced by bake-latest.mjs. No third-party call at runtime.
+// Returns the SAME row shape the tower already renders: {code, team, compound, gap, leader, points}.
 async function fetchLatestRaceData() {
   try {
-    const res = await fetch("https://api.jolpi.ca/ergast/f1/2026/5/results/?format=json");
-    if (!res.ok) throw new Error(`jolpica ${res.status}`);
-    const data = await res.json();
-    const results = data.MRData.RaceTable.Races[0].Results;
-    const raceName = data.MRData.RaceTable.Races[0].raceName;
-    
-    const winnerLaps = parseInt(results[0].laps, 10);
+    const res = await fetch("/latest-race.json");
+    if (!res.ok) throw new Error(`latest-race ${res.status}`);
+    const { session, tower } = await res.json();
 
-    const fullGrid = results.map((r, i) => {
-      let displayGap = "";
-
-      if (i === 0) {
-        displayGap = 0; 
-      } else if (r.status && r.status !== "Finished") {
-        if (r.status.toLowerCase().includes("lap")) {
-          const lapsDown = winnerLaps - parseInt(r.laps, 10);
-          const finalLaps = lapsDown > 0 ? lapsDown : 1; 
-          displayGap = `+${finalLaps} LAP${finalLaps > 1 ? "S" : ""}`;
-        } else {
-          displayGap = r.status;
-        }
-      } else {
-        displayGap = r.Time?.time || `+${(i * 5.0).toFixed(3)}s`;
-      }
-
+    const fullGrid = tower.map((r) => {
+      const slug = teamSlug(r.teamName);
+      ensureTeam(slug, r.teamName, r.teamColour);
       return {
-        code: r.Driver.code || String(r.number),
-        team: DRIVER_TEAMS[r.Driver.code] || guessTeam(r.Constructor.name),
-        compound: "M",
-        gap: displayGap,
-        leader: i === 0,
-        points: parseInt(r.points, 10) || 0
+        code: r.code,
+        team: slug,
+        compound: r.compound || "M", // real compound comes from OpenF1 stints (cosmetic; TODO)
+        gap: r.leader ? 0 : r.gap,    // leader = numeric 0, like before
+        leader: !!r.leader,
+        points: r.points ?? 0,
       };
     });
 
-    window.CURRENT_SESSION = { name: raceName, round: data.MRData.RaceTable.round };
-    console.log("[F1Delta] Loaded Jolpi grid cleanly.");
+    window.CURRENT_SESSION = { name: session.name, round: session.round };
+    console.log(`[F1Delta] Loaded ${session.name} (round ${session.round}) from baked file.`);
     return fullGrid;
-    
+
   } catch (err) {
-    console.warn("[F1Delta] Race fetch failed, using fallback:", err.message);
+    console.warn("[F1Delta] latest-race load failed, using fallback:", err.message);
     return null;
   }
 }
 
 // ---- FETCH CHAMPIONSHIP STANDINGS ----
+// NOTE: still a live Jolpica call — so it inherits Jolpica's lag and is the last
+// runtime third-party dependency on the homepage. Next candidate to bake.
 async function fetchDriverStandings() {
   try {
     const res = await fetch("https://api.jolpi.ca/ergast/f1/2026/driverStandings.json");
