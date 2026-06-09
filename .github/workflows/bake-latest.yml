@@ -1,0 +1,40 @@
+name: Bake latest race
+
+# Runs itself — you never touch this.
+on:
+  schedule:
+    # Every 3 hours. Cron is UTC. Frequent enough to catch a race result the
+    # day it lands; cheap enough to ignore. (GitHub Actions free tier covers it.)
+    - cron: "0 */3 * * *"
+  workflow_dispatch: {}   # also lets you trigger a run by hand from the Actions tab
+
+# allow the action to commit the refreshed file back to the repo
+permissions:
+  contents: write
+
+jobs:
+  bake:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Check out repo
+        uses: actions/checkout@v4
+
+      - name: Set up Node
+        uses: actions/setup-node@v4
+        with:
+          node-version: "20"
+
+      - name: Bake latest race from OpenF1
+        run: node bake-latest.mjs
+
+      - name: Commit if the race changed
+        run: |
+          git config user.name  "f1delta-bot"
+          git config user.email "bot@users.noreply.github.com"
+          git add public/latest-race.json
+          if git diff --staged --quiet; then
+            echo "No change — same race still latest. Nothing to commit."
+          else
+            git commit -m "Auto-bake latest race [skip ci]"
+            git push
+          fi
