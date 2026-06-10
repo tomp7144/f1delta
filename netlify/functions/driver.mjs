@@ -1,26 +1,25 @@
 /* ============================================================
    F1 DELTA — gated driver-data endpoint   (Netlify Functions v2)
-   GET /api/driver?d=max_verstappen
+   GET /api/driver?d=max_verstappen   → ONE driver (Pro-gated)
+   GET /api/driver?list=1             → the index (PUBLIC teaser)
 
-   The ONLY door to data/drivers/*.json — those files are NOT in
-   public/, so they never reach the CDN. Bundled at deploy via
-   netlify.toml:   included_files = ["data/drivers/**"]
+   data/drivers/*.json are NOT in public/, so they never reach the
+   CDN. Bundled at deploy via netlify.toml:
+       included_files = ["data/drivers/**"]
 
-   Auth reuses the SAME lib/access.mjs as check-access.mjs — one
-   source of truth. Access decision mirrors check-access's token
-   path exactly: valid signed token + (admin OR live-active sub).
+   Auth reuses lib/access.mjs — same gate as check-access.mjs.
    ============================================================ */
 import { readFile } from "node:fs/promises";
 import path from "node:path";
 import { verifyToken, isAdmin, readSub, isActive } from "./lib/access.mjs";
 
 const DRIVERS_DIR = path.join(process.cwd(), "data", "drivers");
-const SLUG_RE = /^[a-z0-9_]{1,64}$/; // slug == driverId; blocks traversal
+const SLUG_RE = /^[a-z0-9_-]{1,64}$/; // slug == driverId; allows _ AND - ; blocks traversal
 
-function json(status, body) {
+function json(status, body, cache = "private, no-store") {
   return new Response(JSON.stringify(body), {
     status,
-    headers: { "content-type": "application/json", "cache-control": "private, no-store" },
+    headers: { "content-type": "application/json", "cache-control": cache },
   });
 }
 
@@ -29,20 +28,37 @@ function bearer(req) {
   return a.startsWith("Bearer ") ? a.slice(7).trim() : "";
 }
 
-// Same gate as check-access.mjs (token path), via the shared lib.
 async function hasAccess(req) {
-  const payload = verifyToken(bearer(req)); // null if missing/forged/expired
+  const payload = verifyToken(bearer(req));
   if (!payload || !payload.email) return false;
-  if (isAdmin(payload.email)) return true;   // ADMIN_EMAILS passthrough
+  if (isAdmin(payload.email)) return true;
   const sub = await readSub(payload.email);
-  return isActive(sub);                       // live status, not just signature
+  return isActive(sub);
 }
 
 export default async (req) => {
   if (req.method !== "GET") return json(405, { error: "method_not_allowed" });
+
+  const params = new URL(req.url).searchParams;
+
+  // PUBLIC: the index (names + light stats only — not the Pro value).
+  // Drives the funnel: anyone can browse, individual pages stay gated.
+  if (params.get("list") === "1") {
+    try {
+      const raw = await readFile(path.join(DRIVERS_DIR, "index.json"), "utf8");
+      return new Response(raw, {
+        status: 200,
+        headers: { "content-type": "application/json", "cache-control": "public, max-age=3600" },
+      });
+    } catch {
+      return json(500, { error: "index_unavailable" });
+    }
+  }
+
+  // GATED: a single driver's full record (career + H2H).
   if (!(await hasAccess(req))) return json(401, { error: "locked" });
 
-  const slug = (new URL(req.url).searchParams.get("d") || "").toLowerCase();
+  const slug = (params.get("d") || "").toLowerCase();
   if (!SLUG_RE.test(slug)) return json(400, { error: "bad_slug" });
 
   try {
