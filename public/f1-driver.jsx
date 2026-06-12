@@ -1,300 +1,318 @@
 /* ============================================================
-   F1 DELTA — driver page (gated)
-   Renders into #root. Reads ONE driver from the gated function
-   /.netlify/functions/driver?d=<driverId>. Access state comes from
-   window.F1Access (same as f1-pro.jsx). Requires f1-shared.jsx first
-   (Logo / DeltaMark / Eyebrow + the shared React hook declarations).
-
-   URL: /driver?d=max_verstappen   (slug == driverId)
+   F1 DELTA — driver page (split-tier, light reference template)
+   Renders into #root. Public page: free facts for everyone,
+   Pro teammate H2H behind a fade gate. Tier is decided by the
+   server (/api/driver?d=) from the token; this file reacts to
+   data.pro. Standalone light styling — does not use the dark
+   site CSS. Self-contained (own hooks, own chrome).
    ============================================================ */
+const { useState, useEffect } = React;
 
-/* Cosmetic team accents — fallback to a neutral line when unknown.
-   Not the source of truth for colours; purely visual on career rows. */
-const TEAM_AC = {
-  ferrari: "var(--ferrari)", mclaren: "var(--mclaren)", mercedes: "var(--mercedes)",
-  red_bull: "#3671C6", williams: "#37BEDD", aston_martin: "#229971",
-  alpine: "#0093CC", haas: "#B6BABD", sauber: "#52E252", rb: "#6692FF",
-  toro_rosso: "#469BFF", racing_point: "#F596C8", renault: "#FFF500",
+const TEAM = {
+  red_bull:"#3671C6", toro_rosso:"#4562FF", rb:"#6692FF", ferrari:"#E8002D",
+  mclaren:"#FF8000", mercedes:"#27F4D2", williams:"#64C4FF", aston_martin:"#229971",
+  alpine:"#0093CC", haas:"#B6BABD", sauber:"#52E252", renault:"#FFF500",
+  racing_point:"#F596C8", force_india:"#F596C8", lotus_f1:"#FFB800", brawn:"#B8FD6E",
 };
-const acFor = (id) => TEAM_AC[id] || "var(--text-faint)";
+const ac = (id) => TEAM[id] || "#9aa0ab";
+const fmt = (n) => (n % 1 === 0 ? String(n) : n.toFixed(1));
 
-/* ---- driver data fetch -------------------------------------------
-   Sends the same token f1-access.js stores in localStorage
-   ("f1delta_token") as a Bearer header. The /api/driver function
-   verifies it via the shared lib/access.mjs, same as check-access. */
-const TOKEN_KEY = "f1delta_token"; // must match f1-access.js
-function readToken() {
-  try { return localStorage.getItem(TOKEN_KEY) || ""; } catch (e) { return ""; }
-}
+const TOKEN_KEY = "f1delta_token"; // matches f1-access.js
+function readToken() { try { return localStorage.getItem(TOKEN_KEY) || ""; } catch (e) { return ""; } }
+
 async function fetchDriver(slug) {
   const token = readToken();
   const headers = token ? { authorization: `Bearer ${token}` } : {};
   const res = await fetch(`/api/driver?d=${encodeURIComponent(slug)}`, { headers });
-  if (res.status === 401) { const e = new Error("locked"); e.locked = true; throw e; }
-  if (!res.ok) throw new Error(`fetch_failed_${res.status}`);
+  if (res.status === 404) { const e = new Error("nf"); e.code = 404; throw e; }
+  if (res.status === 400) { const e = new Error("bad"); e.code = 400; throw e; }
+  if (!res.ok) throw new Error("fail");
   return res.json();
 }
 
-function DriverStyles() {
+function Styles() {
   return (
     <style>{`
-      .dp-wrap { padding-top:clamp(24px,4vw,46px); }
+      :root{--bg:#f4f4f1;--surface:#fff;--ink:#15171c;--dim:#5b606b;--faint:#9398a3;--line:#e4e4de;--line2:#eeeee9;--red:#e10600;--champ:#fbf5e3;--champ-edge:#c9a227;--disp:"Barlow Condensed",system-ui,sans-serif;--body:"Inter",system-ui,sans-serif;--mono:"JetBrains Mono",ui-monospace,monospace;}
+      .dp *{box-sizing:border-box}
+      .dp{background:var(--bg);color:var(--ink);font-family:var(--body);-webkit-font-smoothing:antialiased;line-height:1.4;min-height:100vh}
+      .dp a{color:inherit;text-decoration:none}
+      .dp .wrap{max-width:760px;margin:0 auto;padding:0 12px}
+      .dp table{width:100%;border-collapse:collapse;font-variant-numeric:tabular-nums}
 
-      /* hero */
-      .dp-hero { display:flex; align-items:flex-end; gap:clamp(16px,2.4vw,28px); flex-wrap:wrap; }
-      .dp-code { font-family:var(--disp); font-weight:700; font-size:clamp(40px,7vw,86px); line-height:.8; letter-spacing:.02em; color:var(--ferrari); }
-      .dp-name h1 { font-family:var(--disp); font-weight:700; font-size:clamp(30px,4.4vw,58px); line-height:.92; letter-spacing:-.01em; color:var(--text); }
-      .dp-name .sub { font-family:var(--mono); font-size:12px; letter-spacing:.1em; text-transform:uppercase; color:var(--text-dim); margin-top:9px; }
+      .dp .top{border-bottom:1px solid var(--line);background:var(--surface)}
+      .dp .top .wrap{display:flex;align-items:center;justify-content:space-between;height:48px}
+      .dp .brand{display:flex;align-items:center;gap:6px;font-family:var(--disp);font-weight:700;font-size:18px;letter-spacing:.02em}
+      .dp .brand .d{color:var(--red)}
+      .dp .topnav{display:flex;gap:16px;font-family:var(--mono);font-size:11px;letter-spacing:.08em;text-transform:uppercase;color:var(--dim)}
+      .dp .topnav a.on{color:var(--ink);font-weight:700}
 
-      .dp-totals { display:grid; grid-template-columns:repeat(6,minmax(0,1fr)); gap:1px; background:var(--line); border:1px solid var(--line); border-radius:4px; overflow:hidden; margin-top:clamp(22px,3vw,32px); }
-      @media (max-width:680px){ .dp-totals { grid-template-columns:repeat(3,1fr); } }
-      .dp-stat { background:var(--surface); padding:15px 14px; }
-      .dp-stat .v { font-family:var(--disp); font-weight:700; font-size:clamp(22px,2.4vw,30px); color:var(--text); line-height:1; }
-      .dp-stat .v.gold { color:var(--gold); }
-      .dp-stat .k { font-family:var(--mono); font-size:10px; letter-spacing:.14em; text-transform:uppercase; color:var(--text-faint); margin-top:7px; }
+      .dp .id{background:var(--surface);border-bottom:1px solid var(--line)}
+      .dp .id .wrap{padding:16px 12px 14px}
+      .dp .id-row{display:flex;align-items:baseline;gap:12px;flex-wrap:wrap}
+      .dp .id .code{font-family:var(--disp);font-weight:700;font-size:34px;line-height:1;color:var(--red)}
+      .dp .id h1{font-family:var(--disp);font-weight:700;font-size:34px;line-height:1;letter-spacing:-.01em}
+      .dp .id .meta{font-family:var(--mono);font-size:11px;color:var(--dim);margin-top:8px}
+      .dp .id .meta b{color:var(--ink)}
+      .dp .totals{display:flex;flex-wrap:wrap;margin-top:14px;border:1px solid var(--line);border-radius:5px;overflow:hidden;background:var(--surface)}
+      .dp .totals .t{flex:1 1 0;min-width:62px;padding:9px 10px;border-right:1px solid var(--line2)}
+      .dp .totals .t:last-child{border-right:0}
+      .dp .totals .v{font-family:var(--disp);font-weight:700;font-size:22px;line-height:1}
+      .dp .totals .v.g{color:var(--champ-edge)}
+      .dp .totals .k{font-family:var(--mono);font-size:9px;letter-spacing:.12em;text-transform:uppercase;color:var(--faint);margin-top:4px}
 
-      .dp-sec { margin-top:clamp(40px,6vw,72px); }
-      .dp-sec .sec-head { display:flex; align-items:center; gap:12px; margin-bottom:clamp(14px,2vw,20px); }
-      .dp-sec .sec-head .label { display:flex; align-items:center; gap:9px; font-family:var(--disp); font-weight:700; font-size:18px; letter-spacing:.05em; text-transform:uppercase; color:var(--text); }
+      .dp section{margin-top:18px}
+      .dp .sec-h{display:flex;align-items:baseline;justify-content:space-between;padding:0 2px 7px}
+      .dp .sec-h h2{font-family:var(--disp);font-weight:700;font-size:15px;letter-spacing:.06em;text-transform:uppercase}
+      .dp .sec-h .hint{font-family:var(--mono);font-size:10px;color:var(--faint)}
+      .dp .sec-h .protag{font-family:var(--mono);font-size:9px;letter-spacing:.12em;text-transform:uppercase;color:var(--red);border:1px solid var(--red);border-radius:3px;padding:2px 6px}
+      .dp .card{background:var(--surface);border:1px solid var(--line);border-radius:6px;overflow:hidden}
 
-      /* career table */
-      .dp-tbl { width:100%; border-collapse:collapse; font-family:var(--mono); font-size:13px; }
-      .dp-tbl th { text-align:right; font-weight:500; font-size:10px; letter-spacing:.13em; text-transform:uppercase; color:var(--text-faint); padding:9px 10px; border-bottom:1px solid var(--line); }
-      .dp-tbl th.l, .dp-tbl td.l { text-align:left; }
-      .dp-tbl td { text-align:right; padding:11px 10px; border-bottom:1px solid var(--line); color:var(--text-dim); white-space:nowrap; }
-      .dp-tbl tr:hover td { background:rgba(255,255,255,.02); }
-      .dp-tbl td.yr { color:var(--text); font-weight:600; }
-      .dp-tbl td.team { color:var(--text); }
-      .dp-tbl td.team .dot { display:inline-block; width:8px; height:8px; border-radius:2px; margin-right:8px; vertical-align:middle; background:var(--ac,var(--text-faint)); }
-      .dp-tbl td.team .more { color:var(--text-faint); font-size:11px; }
-      .dp-tbl td.wdc .p { color:var(--text); }
-      .dp-tbl td.wdc .p.champ { color:var(--gold); font-weight:700; }
-      .dp-tbl td.hl { color:var(--text); font-weight:600; }
+      .dp thead th{font-family:var(--mono);font-size:9.5px;font-weight:500;letter-spacing:.08em;text-transform:uppercase;color:var(--faint);text-align:right;padding:9px 8px;border-bottom:1px solid var(--line);white-space:nowrap;cursor:pointer;user-select:none}
+      .dp thead th.l{text-align:left}
+      .dp thead th:hover{color:var(--dim)}
+      .dp thead th.s{color:var(--ink)}
+      .dp tbody td{font-family:var(--mono);font-size:12.5px;padding:9px 8px;border-bottom:1px solid var(--line2);text-align:right;color:var(--dim);white-space:nowrap}
+      .dp tbody tr:last-child td{border-bottom:0}
+      .dp tbody tr:hover td{background:#faf9f6}
+      .dp td.yr{text-align:left;color:var(--ink);font-weight:500}
+      .dp td.tm{text-align:left;font-family:var(--body);font-size:13px;color:var(--ink);max-width:0;overflow:hidden;text-overflow:ellipsis}
+      .dp td.tm a:hover{color:var(--red)}
+      .dp td.tm .dot{display:inline-block;width:8px;height:8px;border-radius:2px;margin-right:7px;vertical-align:middle}
+      .dp td.tm .alt{color:var(--faint);font-size:11px}
+      .dp td.n.strong,.dp td.n.hot{color:var(--ink);font-weight:600}
+      .dp td.wdc{color:var(--ink)}
+      .dp td.wdc.t{color:var(--champ-edge);font-weight:700}
+      .dp tr.champ td{background:var(--champ)}
+      .dp tr.champ td.yr{box-shadow:inset 3px 0 0 var(--champ-edge)}
 
-      /* H2H tiles */
-      .dp-h2h { display:grid; grid-template-columns:repeat(2,1fr); gap:clamp(12px,1.6vw,18px); }
-      @media (max-width:760px){ .dp-h2h { grid-template-columns:1fr; } }
-      .h2h { border:1px solid var(--line); border-radius:4px; background:linear-gradient(180deg,var(--surface) 0%,var(--bg-2) 100%); padding:clamp(16px,2vw,20px); }
-      .h2h-top { display:flex; align-items:baseline; justify-content:space-between; gap:12px; margin-bottom:16px; }
-      .h2h-top .nm { font-family:var(--disp); font-weight:700; font-size:19px; color:var(--text); letter-spacing:.01em; }
-      .h2h-top .yrs { font-family:var(--mono); font-size:10.5px; letter-spacing:.1em; text-transform:uppercase; color:var(--text-faint); }
+      .dp td.who{text-align:left;font-family:var(--body);font-size:13px;color:var(--ink);line-height:1.25;max-width:0;overflow:hidden}
+      .dp td.who a{font-weight:600}
+      .dp td.who a:hover{color:var(--red)}
+      .dp td.who .ys{display:block;font-family:var(--mono);font-size:10px;color:var(--faint);margin-top:2px}
+      .dp td.h2{text-align:left;min-width:74px}
+      .dp td.h2 .sc{font-size:12.5px;color:var(--dim)}
+      .dp td.h2 .sc b{color:var(--ink);font-weight:700}
+      .dp td.h2 .bar{display:block;height:4px;border-radius:2px;background:var(--line);margin-top:5px;overflow:hidden;max-width:70px}
+      .dp td.h2 .bar i{display:block;height:100%;background:var(--red);opacity:.78}
+      .dp td.pts{min-width:64px}
+      .dp td.pts b{color:var(--ink);font-weight:700;font-size:12.5px}
+      .dp td.pts .vs{display:block;color:var(--faint);font-size:11px;margin-top:2px}
+      .dp td.pts .vs::before{content:"vs "}
 
-      .h2h-row { margin-bottom:14px; }
-      .h2h-row .lab { display:flex; align-items:baseline; justify-content:space-between; font-family:var(--mono); font-size:10px; letter-spacing:.13em; text-transform:uppercase; color:var(--text-faint); margin-bottom:6px; }
-      .h2h-row .lab .score { color:var(--text); font-size:13px; letter-spacing:.02em; }
-      .h2h-row .lab .score b { color:var(--ferrari); }
-      .h2h-bar { display:flex; height:9px; border-radius:2px; overflow:hidden; background:var(--surface-2); }
-      .h2h-bar .me { background:var(--ferrari); }
-      .h2h-bar .them { background:var(--text-faint); opacity:.5; }
+      .dp .adslot{margin-top:18px;height:96px;border:1px dashed var(--line);border-radius:6px;background:repeating-linear-gradient(45deg,#fff,#fff 10px,#fbfbf9 10px,#fbfbf9 20px);display:flex;align-items:center;justify-content:center}
+      .dp .adslot span{font-family:var(--mono);font-size:10px;letter-spacing:.18em;text-transform:uppercase;color:var(--faint)}
 
-      .h2h-pts { display:flex; align-items:center; justify-content:space-between; margin-top:16px; padding-top:13px; border-top:1px solid var(--line); font-family:var(--mono); font-size:11px; letter-spacing:.06em; color:var(--text-faint); }
-      .h2h-pts .pv { font-family:var(--disp); font-weight:700; font-size:17px; letter-spacing:0; }
-      .h2h-pts .pv.me { color:var(--text); }
-      .h2h-pts .pv.them { color:var(--text-dim); }
+      .dp .gatewrap{position:relative}
+      .dp .gatecard{max-height:240px;overflow:hidden}
+      .dp .gate{position:absolute;left:0;right:0;bottom:0;top:84px;background:linear-gradient(180deg,rgba(244,244,241,0) 0%,rgba(244,244,241,.82) 42%,var(--bg) 70%);display:flex;flex-direction:column;align-items:center;justify-content:flex-end;text-align:center;padding:0 14px 18px}
+      .dp .gpanel{background:var(--surface);border:1px solid var(--line);border-radius:9px;box-shadow:0 16px 38px -16px rgba(0,0,0,.30);padding:15px 22px 17px;max-width:340px;width:100%;display:flex;flex-direction:column;align-items:center}
+      .dp .gate .lock{font-family:var(--mono);font-size:9px;letter-spacing:.16em;text-transform:uppercase;color:var(--red);margin-bottom:7px}
+      .dp .gate h3{font-family:var(--disp);font-weight:700;font-size:21px;letter-spacing:.01em;line-height:1}
+      .dp .gate p{font-family:var(--body);font-size:12px;color:var(--dim);margin-top:6px;max-width:34ch}
+      .dp .gate .go{margin-top:12px;display:inline-flex;align-items:center;gap:8px;font-family:var(--disp);font-weight:700;font-size:15px;letter-spacing:.02em;color:#fff;background:var(--red);border:0;border-radius:4px;padding:11px 20px;cursor:pointer}
+      .dp .gate .fine{font-family:var(--mono);font-size:10px;color:var(--faint);margin-top:9px}
+      .dp .sk{display:inline-block;height:10px;border-radius:3px;background:var(--line2)}
 
-      .dp-load { padding:clamp(80px,16vh,180px) 0; text-align:center; font-family:var(--mono); font-size:12px; letter-spacing:.26em; text-transform:uppercase; color:var(--text-faint); }
-      .dp-err { padding:clamp(60px,12vh,140px) 0; text-align:center; }
-      .dp-err p { font-family:var(--mono); font-size:13px; letter-spacing:.04em; color:var(--text-dim); }
-      .dp-err .btn { margin-top:20px; }
+      .dp .state{padding:clamp(70px,16vh,170px) 0;text-align:center;font-family:var(--mono);font-size:12px;letter-spacing:.16em;text-transform:uppercase;color:var(--faint)}
+      .dp .foot{font-family:var(--mono);font-size:10px;color:var(--faint);text-align:center;padding:24px 0 32px}
+      .dp .foot b{color:var(--dim)}
+      @media (min-width:560px){.dp .id .code,.dp .id h1{font-size:42px}.dp tbody td{font-size:13px;padding:10px 11px}.dp thead th{padding:10px 11px}}
     `}</style>
   );
 }
 
-const fmt = (n) => (n % 1 === 0 ? String(n) : n.toFixed(1));
+function TopBar() {
+  return (
+    <div className="top"><div className="wrap">
+      <a className="brand" href="/">F1<svg className="d" width="11" height="10" viewBox="0 0 100 86"><path d="M50 4 L97 82 L3 82 Z" fill="currentColor"/></svg>DELTA</a>
+      <nav className="topnav"><a href="/drivers" className="on">Drivers</a><a href="/#top">Teams</a><a href="/pro">Pro</a></nav>
+    </div></div>
+  );
+}
 
-function DriverHero({ d }) {
-  const champs = d.career.filter((s) => s.wdcFinish === 1).length;
-  const t = d.totals;
+function Identity({ d }) {
+  const titles = d.career.filter((s) => s.wdcFinish === 1).length;
+  const active = d.lastSeason >= 2026;
   const stats = [
-    ["Races", t.races, false], ["Wins", t.wins, false], ["Podiums", t.podiums, false],
-    ["Poles", t.poles, false], ["Points", fmt(t.points), false],
-    ["Titles", champs, champs > 0],
+    ["Starts", d.totals.races, false], ["Wins", d.totals.wins, false], ["Podiums", d.totals.podiums, false],
+    ["Poles", d.totals.poles, false], ["Titles", titles, titles > 0], ["Points", fmt(d.totals.points), false],
   ];
   return (
-    <div className="dp-hero rise">
-      <div className="dp-code">{d.code}</div>
-      <div className="dp-name">
-        <h1>{d.name}</h1>
-        <div className="sub">{d.firstSeason}–{d.lastSeason}</div>
-      </div>
-      <div className="dp-totals" style={{ flexBasis: "100%" }}>
-        {stats.map(([k, v, gold]) => (
-          <div className="dp-stat" key={k}>
-            <div className={"v" + (gold ? " gold" : "")}>{v}</div>
-            <div className="k">{k}</div>
-          </div>
+    <div className="id"><div className="wrap">
+      <div className="id-row"><span className="code">{d.code || "—"}</span><h1>{d.name}</h1></div>
+      <div className="meta">{d.firstSeason}{active ? "–present" : `–${d.lastSeason}`}</div>
+      <div className="totals">
+        {stats.map(([k, v, g]) => (
+          <div className="t" key={k}><div className={"v" + (g ? " g" : "")}>{v}</div><div className="k">{k}</div></div>
         ))}
       </div>
-    </div>
+    </div></div>
   );
 }
+
+const CAREER_COLS = [
+  { k: "season", label: "Season", cls: "l" }, { k: "team", label: "Team", cls: "l" },
+  { k: "races", label: "R" }, { k: "wins", label: "Win" }, { k: "podiums", label: "Pod" },
+  { k: "poles", label: "Pole" }, { k: "points", label: "Pts" }, { k: "wdc", label: "WDC" },
+];
 
 function CareerTable({ d }) {
+  const [sort, setSort] = useState({ k: "season", asc: true });
+  function click(k) {
+    const numeric = k !== "season" && k !== "team";
+    setSort((s) => (s.k === k ? { k, asc: !s.asc } : { k, asc: !numeric }));
+  }
+  const rows = [...d.career].sort((a, b) => {
+    const { k, asc } = sort;
+    if (k === "team") { const r = a.primaryTeam.localeCompare(b.primaryTeam); return asc ? r : -r; }
+    const map = { season: "season", races: "races", wins: "wins", podiums: "podiums", poles: "poles", points: "points", wdc: "wdcFinish" };
+    return asc ? a[map[k]] - b[map[k]] : b[map[k]] - a[map[k]];
+  });
   return (
-    <div className="dp-sec rise">
-      <div className="sec-head"><span className="label"><DeltaMark size={16} /> Career</span></div>
-      <div style={{ overflowX: "auto" }}>
-        <table className="dp-tbl">
-          <thead>
-            <tr>
-              <th className="l">Season</th><th className="l">Team</th>
-              <th>R</th><th>Win</th><th>Pod</th><th>Pole</th><th>Pts</th><th>WDC</th>
-            </tr>
-          </thead>
-          <tbody>
-            {d.career.map((s) => {
-              const others = s.teams.filter((x) => x.constructorId !== s.primaryTeamId);
-              return (
-                <tr key={s.season}>
-                  <td className="l yr">{s.season}</td>
-                  <td className="l team">
-                    <span className="dot" style={{ "--ac": acFor(s.primaryTeamId) }} />
-                    {s.primaryTeam}
-                    {others.length ? <span className="more"> +{others.map((o) => o.constructor).join(", ")}</span> : null}
-                  </td>
-                  <td>{s.races}</td>
-                  <td className={s.wins ? "hl" : ""}>{s.wins}</td>
-                  <td>{s.podiums}</td>
-                  <td>{s.poles}</td>
-                  <td className="hl">{fmt(s.points)}</td>
-                  <td className="wdc"><span className={"p" + (s.wdcFinish === 1 ? " champ" : "")}>P{s.wdcFinish}</span></td>
-                </tr>
-              );
-            })}
-          </tbody>
-        </table>
-      </div>
-    </div>
+    <section>
+      <div className="sec-h"><h2>Season by season</h2><span className="hint">tap a header to sort</span></div>
+      <div className="card"><table>
+        <thead><tr>
+          {CAREER_COLS.map((c) => (
+            <th key={c.k} className={(c.cls || "") + (sort.k === c.k ? " s" : "")} onClick={() => click(c.k)}>{c.label}</th>
+          ))}
+        </tr></thead>
+        <tbody>
+          {rows.map((s) => {
+            const champ = s.wdcFinish === 1;
+            const others = s.teams.filter((t) => t.constructorId !== s.primaryTeamId).map((t) => t.constructor);
+            return (
+              <tr key={s.season} className={champ ? "champ" : ""}>
+                <td className="yr">{s.season}</td>
+                <td className="tm"><span className="dot" style={{ background: ac(s.primaryTeamId) }} /><a href="#">{s.primaryTeam}</a>{others.length ? <span className="alt"> +{others.join(", ")}</span> : null}</td>
+                <td className="n">{s.races}</td>
+                <td className={"n" + (s.wins ? " hot" : "")}>{s.wins}</td>
+                <td className="n">{s.podiums}</td>
+                <td className="n">{s.poles}</td>
+                <td className="n strong">{fmt(s.points)}</td>
+                <td className={"wdc" + (champ ? " t" : "")}>P{s.wdcFinish}</td>
+              </tr>
+            );
+          })}
+        </tbody>
+      </table></div>
+    </section>
   );
 }
 
-function bar(me, them) {
-  const tot = me + them;
-  const p = tot ? (me / tot) * 100 : 50;
-  return { me: p, them: 100 - p };
+function yrRange(ys) {
+  if (!ys || !ys.length) return "";
+  return ys.length === 1 ? `'${String(ys[0]).slice(2)}` : `'${String(Math.min(...ys)).slice(2)}–'${String(Math.max(...ys)).slice(2)}`;
 }
-
-function H2HTile({ d, t }) {
+function H2HRow({ code, t }) {
   const a = t.aggregate;
-  const yrs = t.seasonsShared;
-  const range = yrs.length === 1 ? `${yrs[0]}` : `${Math.min(...yrs)}–${Math.max(...yrs)}`;
-  const q = bar(a.qualiAhead, a.qualiBehind);
-  const r = bar(a.raceAhead, a.raceBehind);
+  const qp = a.qualiAhead + a.qualiBehind ? Math.round(a.qualiAhead / (a.qualiAhead + a.qualiBehind) * 100) : 50;
+  const rp = a.raceAhead + a.raceBehind ? Math.round(a.raceAhead / (a.raceAhead + a.raceBehind) * 100) : 50;
   return (
-    <div className="h2h">
-      <div className="h2h-top">
-        <span className="nm">{d.code} vs {t.teammate}</span>
-        <span className="yrs">{range} · {a.races} races</span>
-      </div>
-
-      <div className="h2h-row">
-        <div className="lab"><span>Qualifying · both ran</span><span className="score"><b>{a.qualiAhead}</b>–{a.qualiBehind}</span></div>
-        <div className="h2h-bar"><span className="me" style={{ width: q.me + "%" }} /><span className="them" style={{ width: q.them + "%" }} /></div>
-      </div>
-
-      <div className="h2h-row">
-        <div className="lab"><span>Race · both classified</span><span className="score"><b>{a.raceAhead}</b>–{a.raceBehind}</span></div>
-        <div className="h2h-bar"><span className="me" style={{ width: r.me + "%" }} /><span className="them" style={{ width: r.them + "%" }} /></div>
-      </div>
-
-      <div className="h2h-pts">
-        <span><span className="pv me">{fmt(a.pointsSelf)}</span> {d.code}</span>
-        <span>pts</span>
-        <span>{t.teammate.split(" ").slice(-1)[0]} <span className="pv them">{fmt(a.pointsMate)}</span></span>
-      </div>
-    </div>
+    <tr>
+      <td className="who"><a href={`/driver?d=${t.teammateId}`}>{t.teammate}</a><span className="ys">{yrRange(t.seasonsShared)} · {a.races}r</span></td>
+      <td className="h2"><span className="sc"><b>{a.qualiAhead}</b>–{a.qualiBehind}</span><span className="bar"><i style={{ width: qp + "%" }} /></span></td>
+      <td className="h2"><span className="sc"><b>{a.raceAhead}</b>–{a.raceBehind}</span><span className="bar"><i style={{ width: rp + "%" }} /></span></td>
+      <td className="pts"><b>{fmt(a.pointsSelf)}</b><span className="vs">{fmt(a.pointsMate)}</span></td>
+    </tr>
   );
 }
+function H2HHead() {
+  return <thead><tr><th className="l">Teammate</th><th className="l">Qualifying</th><th className="l">Race</th><th className="l">Points</th></tr></thead>;
+}
 
-function TeammateH2H({ d }) {
+function H2HPro({ d }) {
   const sorted = [...d.teammates].sort((a, b) => b.aggregate.races - a.aggregate.races);
   return (
-    <div className="dp-sec rise">
-      <div className="sec-head"><span className="label"><DeltaMark size={16} color="var(--gold)" /> Head-to-head</span></div>
-      <div className="dp-h2h">
-        {sorted.map((t) => <H2HTile key={t.teammateId} d={d} t={t} />)}
-      </div>
-    </div>
+    <section>
+      <div className="sec-h"><h2>Teammates, head to head</h2><span className="hint">most races first</span></div>
+      <div className="card"><table><H2HHead />
+        <tbody>{sorted.map((t) => <H2HRow key={t.teammateId} code={d.code} t={t} />)}</tbody>
+      </table></div>
+    </section>
   );
 }
 
-function DriverHeader() {
+function GhostRow() {
+  const w = () => 40 + Math.floor(Math.random() * 40);
   return (
-    <header className="site-head" id="top">
-      <div className="wrap">
-        <Logo />
-        <nav className="nav">
-          <a href="/#history">History</a>
-          <a href="/#eras">Eras</a>
-          <a href="/pro">Pro</a>
-        </nav>
+    <tr>
+      <td className="who"><span className="sk" style={{ width: w() + "px" }} /></td>
+      <td className="h2"><span className="sk" style={{ width: "44px" }} /></td>
+      <td className="h2"><span className="sk" style={{ width: "40px" }} /></td>
+      <td className="pts"><span className="sk" style={{ width: "48px" }} /></td>
+    </tr>
+  );
+}
+
+function H2HGate({ d }) {
+  const teaser = d.teammateTeaser;
+  const more = Math.max(0, (d.teammateCount || 1) - 1);
+  return (
+    <section>
+      <div className="sec-h"><h2>Teammates, head to head</h2><span className="protag">Pro</span></div>
+      <div className="gatewrap">
+        <div className="card gatecard"><table><H2HHead />
+          <tbody>
+            {teaser ? <H2HRow code={d.code} t={teaser} /> : null}
+            <GhostRow /><GhostRow /><GhostRow /><GhostRow />
+          </tbody>
+        </table></div>
+        <div className="gate">
+          <div className="gpanel">
+            <div className="lock">🔒 {more} more teammate{more === 1 ? "" : "s"}</div>
+            <h3>Unlock more with Pro</h3>
+            <p>Every teammate battle, race engineer, and salary — for all drivers.</p>
+            <a className="go" href="/pro">Go Pro · $9/mo →</a>
+            <div className="fine">cancel anytime</div>
+          </div>
+        </div>
       </div>
-    </header>
+    </section>
   );
 }
 
 function DriverPage() {
-  const [state, setState] = useState({ status: "checking", data: null });
+  const [st, setSt] = useState({ s: "loading", d: null });
 
   useEffect(() => {
     let alive = true;
     (async () => {
       try {
-        if (window.F1Access && window.F1Access.ready) await window.F1Access.ready;
-        const acc = window.F1Access ? await window.F1Access.check() : { active: false };
-        if (!alive) return;
-        if (!acc || !acc.active) { setState({ status: "locked", data: null }); return; }
-
+        if (window.F1Access && window.F1Access.ready) { try { await window.F1Access.ready; } catch (e) {} }
         const slug = (new URLSearchParams(location.search).get("d") || "").toLowerCase();
-        if (!slug) { setState({ status: "noslug", data: null }); return; }
-
-        const data = await fetchDriver(slug);
-        if (alive) setState({ status: "ready", data });
+        if (!slug) { if (alive) setSt({ s: "noslug", d: null }); return; }
+        const d = await fetchDriver(slug);
+        if (alive) setSt({ s: "ready", d });
       } catch (e) {
-        if (!alive) return;
-        setState({ status: e.locked ? "locked" : "error", data: null });
+        if (alive) setSt({ s: e.code === 404 ? "notfound" : "error", d: null });
       }
     })();
     return () => { alive = false; };
   }, []);
 
-  useEffect(() => {
-    if (state.status !== "ready") return;
-    document.body.classList.add("js-anim");
-    const io = new IntersectionObserver(
-      (es) => es.forEach((e) => { if (e.isIntersecting) { e.target.classList.add("in"); io.unobserve(e.target); } }),
-      { threshold: 0.12, rootMargin: "0px 0px -8% 0px" }
-    );
-    document.querySelectorAll(".rise").forEach((el) => io.observe(el));
-    return () => io.disconnect();
-  }, [state.status]);
-
+  const { s, d } = st;
   return (
-    <>
-      <DriverStyles />
-      <DriverHeader />
-      <main>
-        {state.status === "checking" && <div className="dp-load">Verifying access…</div>}
-        {state.status === "locked" && (
-          <div className="dp-err"><div className="wrap"><p>This is a Pro feature.</p><a className="btn btn-primary" href="/pro">Unlock Pro <span className="arr">→</span></a></div></div>
-        )}
-        {state.status === "noslug" && (
-          <div className="dp-err"><div className="wrap"><p>No driver selected.</p></div></div>
-        )}
-        {state.status === "error" && (
-          <div className="dp-err"><div className="wrap"><p>Couldn't load that driver.</p></div></div>
-        )}
-        {state.status === "ready" && (
-          <section className="block"><div className="wrap dp-wrap">
-            <Eyebrow>Driver Profile</Eyebrow>
-            <DriverHero d={state.data} />
-            <CareerTable d={state.data} />
-            <TeammateH2H d={state.data} />
-            <div className="delta-bar rise" style={{ marginTop: "clamp(40px,6vw,72px)" }}><span/><span/><span/><span/><span/></div>
-          </div></section>
-        )}
-      </main>
-    </>
+    <div className="dp">
+      <Styles />
+      <TopBar />
+      {s === "loading" && <div className="state">Loading…</div>}
+      {s === "noslug" && <div className="state">No driver selected</div>}
+      {s === "notfound" && <div className="state">Driver not found</div>}
+      {s === "error" && <div className="state">Couldn’t load this driver — refresh to retry</div>}
+      {s === "ready" && d && (
+        <>
+          <Identity d={d} />
+          <div className="wrap">
+            <CareerTable d={d} />
+            {!d.pro && <div className="adslot"><span>Advertisement</span></div>}
+            {d.pro ? <H2HPro d={d} /> : <H2HGate d={d} />}
+            <div className="foot">F1 <b>Δ</b> DELTA · data via F1DB · unofficial</div>
+          </div>
+        </>
+      )}
+    </div>
   );
 }
 
