@@ -19,6 +19,7 @@ window.F1_GRID = {
   "VER": "max-verstappen",
   "HUL": "nico-hulkenberg",
   "BEA": "oliver-bearman",
+  "PIA": "oscar-piastri",
   "GAS": "pierre-gasly",
   "PER": "sergio-perez",
   "BOT": "valtteri-bottas"
