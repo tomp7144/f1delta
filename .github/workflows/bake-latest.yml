@@ -27,11 +27,15 @@ jobs:
       - name: Bake latest race from OpenF1
         run: node bake-latest.mjs
 
+      - name: Bake standings + grid map
+        run: node bake-standings.mjs && node gen-grid-map.mjs
+
       - name: Commit if the race changed
         run: |
           git config user.name  "f1delta-bot"
           git config user.email "bot@users.noreply.github.com"
-          git add public/latest-race.json
+          git add public/latest-race.json  public/standings.json public/grid-map.js
+
           if git diff --staged --quiet; then
             echo "No change — same race still latest. Nothing to commit."
           else

@@ -1,0 +1,138 @@
+{
+  "season": "2026",
+  "standings": [
+    {
+      "pos": 1,
+      "code": "ANT",
+      "points": 156,
+      "team": "Mercedes"
+    },
+    {
+      "pos": 2,
+      "code": "HAM",
+      "points": 90,
+      "team": "Ferrari"
+    },
+    {
+      "pos": 3,
+      "code": "RUS",
+      "points": 88,
+      "team": "Mercedes"
+    },
+    {
+      "pos": 4,
+      "code": "LEC",
+      "points": 75,
+      "team": "Ferrari"
+    },
+    {
+      "pos": 5,
+      "code": "PIA",
+      "points": 58,
+      "team": "McLaren"
+    },
+    {
+      "pos": 6,
+      "code": "NOR",
+      "points": 58,
+      "team": "McLaren"
+    },
+    {
+      "pos": 7,
+      "code": "VER",
+      "points": 43,
+      "team": "Red Bull"
+    },
+    {
+      "pos": 8,
+      "code": "GAS",
+      "points": 35,
+      "team": "Alpine F1 Team"
+    },
+    {
+      "pos": 9,
+      "code": "HAD",
+      "points": 26,
+      "team": "Red Bull"
+    },
+    {
+      "pos": 10,
+      "code": "LAW",
+      "points": 24,
+      "team": "RB F1 Team"
+    },
+    {
+      "pos": 11,
+      "code": "BEA",
+      "points": 18,
+      "team": "Haas F1 Team"
+    },
+    {
+      "pos": 12,
+      "code": "COL",
+      "points": 15,
+      "team": "Alpine F1 Team"
+    },
+    {
+      "pos": 13,
+      "code": "LIN",
+      "points": 11,
+      "team": "RB F1 Team"
+    },
+    {
+      "pos": 14,
+      "code": "SAI",
+      "points": 6,
+      "team": "Williams"
+    },
+    {
+      "pos": 15,
+      "code": "ALB",
+      "points": 5,
+      "team": "Williams"
+    },
+    {
+      "pos": 16,
+      "code": "OCO",
+      "points": 3,
+      "team": "Haas F1 Team"
+    },
+    {
+      "pos": 17,
+      "code": "BOR",
+      "points": 2,
+      "team": "Audi"
+    },
+    {
+      "pos": 18,
+      "code": "ALO",
+      "points": 1,
+      "team": "Aston Martin"
+    },
+    {
+      "pos": 19,
+      "code": "HUL",
+      "points": 0,
+      "team": "Audi"
+    },
+    {
+      "pos": 20,
+      "code": "BOT",
+      "points": 0,
+      "team": "Cadillac F1 Team"
+    },
+    {
+      "pos": 21,
+      "code": "PER",
+      "points": 0,
+      "team": "Cadillac F1 Team"
+    },
+    {
+      "pos": 22,
+      "code": "STR",
+      "points": 0,
+      "team": "Aston Martin"
+    }
+  ],
+  "baked": "2026-06-13T11:39:51.675Z"
+}
