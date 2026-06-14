@@ -58,25 +58,25 @@
     {
       "pos": 10,
       "code": "LAW",
-      "points": 26,
+      "points": 28,
       "team": "RB F1 Team"
     },
     {
       "pos": 11,
-      "code": "COL",
-      "points": 19,
-      "team": "Alpine F1 Team"
-    },
-    {
-      "pos": 12,
       "code": "BEA",
       "points": 18,
       "team": "Haas F1 Team"
     },
     {
+      "pos": 12,
+      "code": "COL",
+      "points": 16,
+      "team": "Alpine F1 Team"
+    },
+    {
       "pos": 13,
       "code": "LIN",
-      "points": 12,
+      "points": 13,
       "team": "RB F1 Team"
     },
     {
@@ -134,5 +134,5 @@
       "team": "Aston Martin"
     }
   ],
-  "baked": "2026-06-14T19:28:15.231Z"
+  "baked": "2026-06-14T22:11:01.501Z"
 }
