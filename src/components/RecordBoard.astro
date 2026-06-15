@@ -1,0 +1,91 @@
+---
+// RecordBoard.astro — renders one board as STATIC HTML (all rows in the markup,
+// crawlable). f1-records.js progressively adds column sorting; the table is fully
+// usable with JS disabled. Light reference-desk theme.
+const { board } = Astro.props;
+const { meta, columns, rows } = board;
+const entityLabel = columns[0];                 // "Driver" | "Constructor"
+const valueLabel = columns[1];
+const contextLabel = columns[2] || null;        // "Season" | "Grand Prix" | "Circuit" | "Raw" | null
+const isDriver = entityLabel === "Driver";
+// Drivers live at /driver?d=<id>. Constructors have no page yet (team pages =
+// roadmap #1), so their names render as plain text until that ships.
+const hrefFor = (id) => (isDriver ? `/driver?d=${id}` : null);
+const isRate = meta.scope === "rate";
+
+function flag(a2) {
+  if (!a2 || a2.length !== 2) return "";
+  const A = 0x1f1e6, base = 65;
+  return String.fromCodePoint(...[...a2.toUpperCase()].map((c) => A + (c.charCodeAt(0) - base))) + " ";
+}
+const fmt = (v) => (isRate ? v.toFixed(2) + "%" : typeof v === "number" ? v.toLocaleString("en-US") : v);
+---
+
+<section class="rec">
+  <a class="back" href="/records">← All records</a>
+  <h1>{meta.title}</h1>
+  {meta.blurb && <p class="blurb">{meta.blurb}</p>}
+
+  <div class="card">
+    <table data-record-table>
+      <thead>
+        <tr>
+          <th class="num" data-sort="rank" data-type="num" aria-sort="ascending">#</th>
+          <th data-sort="name" data-type="text">{entityLabel}</th>
+          <th class="num" data-sort="value" data-type="num">{valueLabel}</th>
+          {contextLabel && <th data-sort="context" data-type="text">{contextLabel}</th>}
+        </tr>
+      </thead>
+      <tbody>
+        {rows.map((r) => (
+          <tr class={r.rank === 1 ? "leader" : undefined}
+              data-rank={r.rank} data-name={r.name} data-value={r.value} data-context={r.context ?? ""}>
+            <td class="num sub">{r.rank}</td>
+            <td>
+              {hrefFor(r.id)
+                ? <a class="ent" href={hrefFor(r.id)}>{r.name}</a>
+                : <span class="ent">{r.name}</span>}
+              {r.nat && <span class="nat">{flag(r.nat.a2)}{r.nat.code || r.nat.id}</span>}
+            </td>
+            <td class="num val">{fmt(r.value)}</td>
+            {contextLabel && <td class="ctx">{r.context ?? "—"}</td>}
+          </tr>
+        ))}
+      </tbody>
+    </table>
+  </div>
+
+  {meta.methodology && (
+    <p class="method">{meta.methodology}{meta.updated ? `  ·  Updated ${meta.updated}.` : ""}</p>
+  )}
+
+  {/* free-tier ad slot — one fixed slot below content, never mid-table */}
+  <div id="records-ad-slot" data-ad-slot></div>
+</section>
+
+<style>
+  .rec { max-width: 720px; margin: 0 auto; padding: 28px 20px;
+    font-family: system-ui, -apple-system, "Segoe UI", Roboto, sans-serif; color: #16161a; }
+  .back { color: #6b6b70; font-size: 13px; text-decoration: none; }
+  .rec h1 { font-size: 26px; font-weight: 700; margin: 10px 0 4px; letter-spacing: -.01em; }
+  .blurb { color: #6b6b70; margin: 0 0 18px; font-size: 15px; }
+  .card { background: #fff; border: 1px solid #e4e4df; border-radius: 8px; overflow: hidden; }
+  table { width: 100%; border-collapse: collapse; font-size: 15px; }
+  th { text-align: left; padding: 8px 12px; font-size: 12px; font-weight: 600; color: #6b6b70;
+    text-transform: uppercase; letter-spacing: .04em; border-bottom: 2px solid #e4e4df;
+    cursor: pointer; user-select: none; white-space: nowrap; }
+  th:focus-visible { outline: 2px solid #e10600; outline-offset: -2px; }
+  th[aria-sort="ascending"]::after { content: " \25B2"; }
+  th[aria-sort="descending"]::after { content: " \25BC"; }
+  td { padding: 8px 12px; border-bottom: 1px solid #e4e4df; }
+  .num { text-align: right; font-variant-numeric: tabular-nums; font-feature-settings: "tnum"; }
+  .sub { color: #6b6b70; font-size: 13px; }
+  .val { font-weight: 600; }
+  .ent { color: #16161a; text-decoration: none; font-weight: 500; }
+  .ent:hover { text-decoration: underline; }
+  .nat { color: #6b6b70; font-size: 12px; margin-left: 8px; white-space: nowrap; }
+  .ctx { color: #6b6b70; font-size: 14px; }
+  tr.leader { background: #fbf3d0; }
+  tr.leader .ent { font-weight: 700; }
+  .method { color: #6b6b70; font-size: 12.5px; margin: 12px 2px 0; line-height: 1.5; }
+</style>

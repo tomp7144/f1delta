@@ -1,0 +1,58 @@
+---
+// RecordsHub.astro — the /records directory, fully static. Groups boards by
+// entity -> scope from index.json.
+const { index } = Astro.props;
+
+const SCOPE_ORDER = ["career", "season", "grand-prix", "circuit", "rate", "streak"];
+const SCOPE_LABEL = {
+  career: "All-Time", season: "Single Season", "grand-prix": "At a Grand Prix",
+  circuit: "At a Circuit", rate: "Rates", streak: "Streaks",
+};
+const boardUrl = (b) => `/records/${b.entity}/${b.slug.replace("-by-", "/by-")}`;
+
+const groups = {};
+for (const b of index.boards) {
+  (groups[b.entity] ??= {});
+  (groups[b.entity][b.scope] ??= []).push(b);
+}
+const entities = ["drivers", "constructors"].filter((e) => groups[e]);
+---
+
+<section class="hub">
+  <h1>F1 Records</h1>
+  <p class="lede">All-time leaderboards across every era, 1950&ndash;present.</p>
+
+  {entities.map((entity) => (
+    <div class="ent-block">
+      <h2>{entity === "drivers" ? "Drivers" : "Constructors"}</h2>
+      {SCOPE_ORDER.filter((s) => groups[entity][s]).map((scope) => (
+        <div class="scope">
+          <div class="scope-label">{SCOPE_LABEL[scope]}</div>
+          <div class="chips">
+            {groups[entity][scope].map((b) => (
+              <a class="chip" href={boardUrl(b)}>{b.title.replace(/ \u2014 .*/, "")}</a>
+            ))}
+          </div>
+        </div>
+      ))}
+    </div>
+  ))}
+
+  <div id="records-ad-slot" data-ad-slot></div>
+</section>
+
+<style>
+  .hub { max-width: 760px; margin: 0 auto; padding: 28px 20px;
+    font-family: system-ui, -apple-system, "Segoe UI", Roboto, sans-serif; color: #16161a; }
+  .hub h1 { font-size: 28px; font-weight: 700; margin: 0 0 4px; letter-spacing: -.01em; }
+  .lede { color: #6b6b70; margin: 0 0 8px; font-size: 15px; }
+  .ent-block { margin-top: 24px; }
+  .ent-block h2 { font-size: 20px; font-weight: 700; margin: 0 0 2px;
+    border-left: 3px solid #e10600; padding-left: 10px; }
+  .scope-label { font-size: 13px; font-weight: 600; color: #6b6b70; text-transform: uppercase;
+    letter-spacing: .05em; margin: 20px 0 8px; }
+  .chips { display: flex; flex-wrap: wrap; gap: 8px; }
+  .chip { background: #fff; border: 1px solid #e4e4df; border-radius: 6px; padding: 8px 12px;
+    font-size: 14px; color: #16161a; text-decoration: none; }
+  .chip:hover { border-color: #16161a; }
+</style>

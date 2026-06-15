@@ -4,6 +4,7 @@
 
 function TimingTower() {
   const [drivers, setDrivers] = useState(() => TOWER_INIT);
+  const [session, setSession] = useState(() => window.CURRENT_SESSION || { name: "—" });
   const [expanded, setExpanded] = useState(false); // The toggle state
 
   // Listen for the real data and set it directly
@@ -12,6 +13,7 @@ function TimingTower() {
       const data = e.detail.tower;
       if (data && data.length >= 4) {
         setDrivers(data);
+        if (window.CURRENT_SESSION) setSession(window.CURRENT_SESSION); // update the title too
       }
     };
     window.addEventListener("f1data:updated", handler);
@@ -25,7 +27,7 @@ function TimingTower() {
     <div className="tower">
       <div className="tower-head">
         <div className="sess">
-          Canadian GP <span className="mono">·</span>{" "}
+          {session.name} <span className="mono">·</span>{" "}
           <span className="lap num">FINAL RESULTS</span>
         </div>
         <div className="status">

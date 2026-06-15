@@ -5,6 +5,14 @@
    Exposes window.F1Access for the Pro page and the Subscribe box.
    ============================================================ */
 (function () {
+  // ----------------------------------------------------------
+  // PRO-DISABLED   <-- grep "PRO-DISABLED" to find every payment kill-switch
+  // PAYMENTS KILL-SWITCH. While false, nobody can start checkout —
+  // every Subscribe / Upgrade button becomes a harmless "coming soon".
+  // TO RE-ENABLE PRO: set PRO_ENABLED = true. That is the only required change.
+  // ----------------------------------------------------------
+  var PRO_ENABLED = false; // PRO-DISABLED
+
   var TOKEN_KEY = "f1delta_token";
 
   function getToken() {
@@ -51,6 +59,10 @@
 
   // Kick off Stripe Checkout. Redirects the browser to Stripe's page.
   async function subscribe(email) {
+    if (!PRO_ENABLED) { // PRO-DISABLED
+      alert("F1 Delta Pro isn't open yet — it's launching soon. Thanks for the interest!");
+      return;
+    }
     var res = await fetch("/api/create-checkout", {
       method: "POST",
       headers: { "content-type": "application/json" },
@@ -79,6 +91,7 @@
   var ready = consumeCheckoutReturn();
 
   window.F1Access = {
+    enabled: PRO_ENABLED, // buttons can read this to show "Coming Soon" while false
     ready: ready,      // await F1Access.ready before the first check() on /pro
     check: check,
     subscribe: subscribe,
