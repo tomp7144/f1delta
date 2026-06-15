@@ -1,0 +1,43 @@
+---
+// src/pages/records/[...path].astro
+// One catch-all generates the hub (/records) + every board page, all STATIC HTML.
+// Adapt the <head> to your layout. The only client JS is /f1-records.js (sorting).
+import fs from "node:fs";
+import path from "node:path";
+import RecordBoard from "../../components/RecordBoard.astro";
+import RecordsHub from "../../components/RecordsHub.astro";
+
+export const prerender = true;
+
+export function getStaticPaths() {
+  const REC = path.resolve("./data/records");
+  const index = JSON.parse(fs.readFileSync(path.join(REC, "index.json"), "utf8"));
+  const paths = [{ params: { path: undefined }, props: { kind: "hub", data: index } }];
+  for (const b of index.boards) {
+    const file = JSON.parse(fs.readFileSync(path.join(REC, b.entity, `${b.slug}.json`), "utf8"));
+    const url = `${b.entity}/${b.slug.replace("-by-", "/by-")}`; // wins-by-season -> drivers/wins/by-season
+    paths.push({ params: { path: url }, props: { kind: "board", data: file } });
+  }
+  return paths;
+}
+
+const { kind, data } = Astro.props;
+const title = kind === "hub" ? "F1 Records — All-Time Leaderboards | f1delta" : `${data.meta.title} | f1delta`;
+const desc = kind === "hub" ? "Every all-time F1 record, 1950–present." : data.meta.blurb;
+const canonical = `https://f1delta.com/records/${Astro.params.path ?? ""}`;
+---
+
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>{title}</title>
+    <meta name="description" content={desc} />
+    <link rel="canonical" href={canonical} />
+  </head>
+  <body style="margin:0;background:#f4f4f1">
+    {kind === "hub" ? <RecordsHub index={data} /> : <RecordBoard board={data} />}
+    <script src="/f1-records.js" defer></script>
+  </body>
+</html>
