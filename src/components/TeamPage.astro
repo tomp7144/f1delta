@@ -1,0 +1,144 @@
+---
+// TeamPage.astro — one constructor's page, fully static. Totals strip, season-by-
+// season table, and the full driver lineup. Sorting via the shared /f1-records.js
+// (tables tagged data-record-table). Light reference-desk theme.
+const { team } = Astro.props;
+const { name, fullName, nat, span, totals, seasons, drivers } = team;
+
+function flag(a2) {
+  if (!a2 || a2.length !== 2) return "";
+  const A = 0x1f1e6, base = 65;
+  return String.fromCodePoint(...[...a2.toUpperCase()].map((c) => A + (c.charCodeAt(0) - base))) + " ";
+}
+const fmt = (n) => (typeof n === "number" ? n.toLocaleString("en-US") : n);
+const years = span.first ? (span.first === span.last ? `${span.first}` : `${span.first}\u2013${span.last}`) : "";
+const driverYears = (d) => (d.first == null ? "—" : d.first === d.last ? `${d.first}` : `${d.first}\u2013${d.last}`);
+
+const STATS = [
+  ["Championships", totals.championships],
+  ["Wins", totals.wins],
+  ["Podiums", totals.podiums],
+  ["Poles", totals.poles],
+  ["Points", totals.points],
+  ["Entries", totals.entries],
+];
+---
+
+<section class="team">
+  <a class="back" href="/teams">← All teams</a>
+  <h1>{name}</h1>
+  <p class="sub">
+    {nat && <span class="nat">{flag(nat.a2)}{nat.code || nat.id}</span>}
+    {years && <span class="dot">·</span>}{years}
+    {fullName && fullName !== name && <span class="full"> · {fullName}</span>}
+  </p>
+
+  <div class="stats">
+    {STATS.map(([label, v]) => (
+      <div class="stat">
+        <div class="stat-v">{fmt(v)}</div>
+        <div class="stat-l">{label}</div>
+      </div>
+    ))}
+  </div>
+
+  <h2>Season by season</h2>
+  <div class="card">
+    <table data-record-table>
+      <thead>
+        <tr>
+          <th data-sort="year" data-type="num" aria-sort="descending">Year</th>
+          <th class="num" data-sort="pos" data-type="num">Champ</th>
+          <th class="num" data-sort="wins" data-type="num">Wins</th>
+          <th class="num" data-sort="podiums" data-type="num">Podiums</th>
+          <th class="num" data-sort="poles" data-type="num">Poles</th>
+          <th class="num" data-sort="points" data-type="num">Points</th>
+        </tr>
+      </thead>
+      <tbody>
+        {seasons.map((s) => (
+          <tr class={s.pos === 1 ? "champ" : undefined}
+              data-year={s.year} data-pos={s.pos ?? 9999} data-wins={s.wins}
+              data-podiums={s.podiums} data-poles={s.poles} data-points={s.points}>
+            <td>{s.year}</td>
+            <td class="num">{s.pos == null ? "—" : s.pos}</td>
+            <td class="num">{s.wins}</td>
+            <td class="num">{s.podiums}</td>
+            <td class="num">{s.poles}</td>
+            <td class="num val">{fmt(s.points)}</td>
+          </tr>
+        ))}
+      </tbody>
+    </table>
+  </div>
+
+  <h2>Drivers <span class="count">({drivers.length})</span></h2>
+  <div class="card">
+    <table data-record-table>
+      <thead>
+        <tr>
+          <th data-sort="name" data-type="text">Driver</th>
+          <th data-sort="first" data-type="num">Years</th>
+          <th class="num" data-sort="races" data-type="num" aria-sort="descending">Races</th>
+          <th class="num" data-sort="wins" data-type="num">Wins</th>
+          <th class="num" data-sort="podiums" data-type="num">Podiums</th>
+          <th class="num" data-sort="points" data-type="num">Points</th>
+        </tr>
+      </thead>
+      <tbody>
+        {drivers.map((d) => (
+          <tr data-name={d.name} data-first={d.first ?? 0} data-races={d.races}
+              data-wins={d.wins} data-podiums={d.podiums} data-points={d.points}>
+            <td>
+              <a class="ent" href={`/driver?d=${d.id}`}>{d.name}</a>
+              {d.nat && <span class="nat">{flag(d.nat.a2)}{d.nat.code || d.nat.id}</span>}
+            </td>
+            <td class="yrs">{driverYears(d)}</td>
+            <td class="num">{d.races}</td>
+            <td class="num">{d.wins}</td>
+            <td class="num">{d.podiums}</td>
+            <td class="num val">{fmt(d.points)}</td>
+          </tr>
+        ))}
+      </tbody>
+    </table>
+  </div>
+
+  <div id="team-ad-slot" data-ad-slot></div>
+</section>
+
+<style>
+  .team { max-width: 760px; margin: 0 auto; padding: 28px 20px;
+    font-family: system-ui, -apple-system, "Segoe UI", Roboto, sans-serif; color: #16161a; }
+  .back { color: #6b6b70; font-size: 13px; text-decoration: none; }
+  .team h1 { font-size: 30px; font-weight: 700; margin: 10px 0 2px; letter-spacing: -.02em; }
+  .sub { color: #6b6b70; margin: 0 0 20px; font-size: 14px; }
+  .sub .nat { font-size: 13px; }
+  .sub .dot { margin: 0 8px; }
+  .sub .full { color: #9a9a9e; }
+  .stats { display: grid; grid-template-columns: repeat(6, 1fr); gap: 1px;
+    background: #e4e4df; border: 1px solid #e4e4df; border-radius: 8px; overflow: hidden; margin-bottom: 28px; }
+  .stat { background: #fff; padding: 14px 10px; text-align: center; }
+  .stat-v { font-size: 22px; font-weight: 700; font-variant-numeric: tabular-nums; }
+  .stat-l { font-size: 11px; color: #6b6b70; text-transform: uppercase; letter-spacing: .04em; margin-top: 2px; }
+  .team h2 { font-size: 18px; font-weight: 700; margin: 24px 0 10px;
+    border-left: 3px solid #e10600; padding-left: 10px; }
+  .team h2 .count { color: #9a9a9e; font-weight: 500; font-size: 15px; }
+  .card { background: #fff; border: 1px solid #e4e4df; border-radius: 8px; overflow: hidden; }
+  table { width: 100%; border-collapse: collapse; font-size: 14px; }
+  th { text-align: left; padding: 8px 12px; font-size: 11px; font-weight: 600; color: #6b6b70;
+    text-transform: uppercase; letter-spacing: .04em; border-bottom: 2px solid #e4e4df;
+    cursor: pointer; user-select: none; white-space: nowrap; }
+  th:focus-visible { outline: 2px solid #e10600; outline-offset: -2px; }
+  th[aria-sort="ascending"]::after { content: " \25B2"; }
+  th[aria-sort="descending"]::after { content: " \25BC"; }
+  td { padding: 8px 12px; border-bottom: 1px solid #e4e4df; }
+  .num { text-align: right; font-variant-numeric: tabular-nums; font-feature-settings: "tnum"; }
+  .val { font-weight: 600; }
+  .yrs { color: #6b6b70; font-variant-numeric: tabular-nums; }
+  .ent { color: #16161a; text-decoration: none; font-weight: 500; }
+  .ent:hover { text-decoration: underline; }
+  .nat { color: #6b6b70; font-size: 12px; margin-left: 8px; white-space: nowrap; }
+  tr.champ { background: #fbf3d0; }
+  @media (max-width: 560px) { .stats { grid-template-columns: repeat(3, 1fr); } }
+</style>

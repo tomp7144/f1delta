@@ -8,9 +8,8 @@ const entityLabel = columns[0];                 // "Driver" | "Constructor"
 const valueLabel = columns[1];
 const contextLabel = columns[2] || null;        // "Season" | "Grand Prix" | "Circuit" | "Raw" | null
 const isDriver = entityLabel === "Driver";
-// Drivers live at /driver?d=<id>. Constructors have no page yet (team pages =
-// roadmap #1), so their names render as plain text until that ships.
-const hrefFor = (id) => (isDriver ? `/driver?d=${id}` : null);
+// Drivers -> /driver?d=<id>; constructors -> /teams/<id> (now that team pages exist).
+const hrefFor = (id) => (isDriver ? `/driver?d=${id}` : `/teams/${id}`);
 const isRate = meta.scope === "rate";
 
 function flag(a2) {

@@ -12,8 +12,8 @@
     function sortBy(th) {
       var key = th.getAttribute("data-sort");
       var type = th.getAttribute("data-type") || "text";
-      // toggle if same column; new column defaults: value -> desc, others -> asc
-      var dir = state.key === key ? -state.dir : key === "value" ? -1 : 1;
+      // toggle if same column; new column defaults: numeric -> desc, text -> asc
+      var dir = state.key === key ? -state.dir : type === "num" ? -1 : 1;
       state = { key: key, dir: dir };
 
       var rows = Array.prototype.slice.call(tbody.rows);
