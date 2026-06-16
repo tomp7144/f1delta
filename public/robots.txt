@@ -1,0 +1,5 @@
+User-agent: *
+Allow: /
+
+Sitemap: https://f1delta.com/sitemap-index.xml
+Sitemap: https://f1delta.com/sitemap-drivers.xml
