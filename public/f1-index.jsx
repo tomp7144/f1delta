@@ -50,9 +50,13 @@ function IndexStyles() {
 
       .ix-empty{padding:48px;text-align:center;font-size:13px;color:#9a9a9e}
       .ix-load{padding:80px;text-align:center;font-size:12px;letter-spacing:.12em;text-transform:uppercase;color:#9a9a9e}
-      .ix-foot{font-size:12px;color:#9a9a9e;text-align:center;padding:24px 0 32px}
-      .ix-foot-sep{color:#c4c4c9}
-      .ix-foot-link{color:#6b6b70;text-decoration:none}.ix-foot-link:hover{color:#16161a;text-decoration:underline}
+      .ix-foot{font-size:12px;color:#9a9a9e;text-align:center;padding:20px 0 28px}
+
+      .ix-callout{display:flex;align-items:center;justify-content:space-between;gap:12px;background:#fff;border:1px solid #e4e4df;border-left:3px solid #e10600;border-radius:6px;padding:12px 16px;margin-bottom:18px;text-decoration:none;color:#16161a}
+      .ix-callout:hover{border-color:#c4c4c9;border-left-color:#e10600}
+      .ix-callout .cl-title{font-weight:600;font-size:14px}
+      .ix-callout .cl-sub{font-size:12px;color:#6b6b70;margin-top:2px}
+      .ix-callout .cl-arr{color:#e10600;font-size:14px;flex:0 0 auto}
     `}</style>
   );
 }
@@ -134,6 +138,13 @@ function IndexPage() {
         <h1>Every driver. <span className="accent">Every era.</span></h1>
         <p className="lede">Career records and teammate head-to-heads for {drivers ? drivers.length : "…"} drivers, 1950 to today. Pick one to open the full breakdown.</p>
 
+        <a className="ix-callout" href="/drivers/never-started">
+          <span>
+            <span className="cl-title">Close But No Cigar</span>
+            <span className="cl-sub">123 drivers entered a Grand Prix but never started one →</span>
+          </span>
+        </a>
+
         {err && <div className="ix-empty">Couldn't load the archive. Refresh to try again.</div>}
         {!drivers && !err && <div className="ix-load">Loading the grid…</div>}
 
@@ -165,11 +176,7 @@ function IndexPage() {
             }
           </>
         )}
-        <div className="ix-foot">
-          F1 Δ DELTA · data via F1DB · unofficial
-          <span className="ix-foot-sep"> · </span>
-          <a href="/drivers/never-started" className="ix-foot-link">123 drivers who never started →</a>
-        </div>
+        <div className="ix-foot">F1 Δ DELTA · data via F1DB · unofficial</div>
       </div>
     </div>
   );
