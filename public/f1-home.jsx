@@ -110,7 +110,7 @@ function TopBar() {
   return (
     <div className="top"><div className="wrap">
       <a className="brand" href="/">F1<svg className="d" width="11" height="10" viewBox="0 0 100 86"><path d="M50 4 L97 82 L3 82 Z" fill="currentColor"/></svg>DELTA</a>
-      <nav className="topnav"><a href="/drivers">Drivers</a><a href="#standings">Standings</a><a href="/pro">Pro</a></nav>
+      <nav className="topnav"><a href="/drivers">Drivers</a><a href="#standings">Standings</a><a href="/records">Records</a><a href="/teams">Teams</a><a href="/pro">Pro</a></nav>
     </div></div>
   );
 }
@@ -211,9 +211,13 @@ function LinkCards() {
         <span><span className="lt">All drivers</span><span className="ls">Every driver, 1950–now</span></span>
         <span className="arr">→</span>
       </a>
-      <a className="lk soon" href="#">
-        <span><span className="lt">Teams</span><span className="ls">Constructor history & records</span></span>
-        <span className="tag">Soon</span>
+      <a className="lk" href="/records">
+        <span><span className="lt">Records</span><span className="ls">All-time leaderboards, 1950–now</span></span>
+        <span className="arr">→</span>
+      </a>
+      <a className="lk" href="/teams">
+        <span><span className="lt">Teams</span><span className="ls">Constructor history &amp; records</span></span>
+        <span className="arr">→</span>
       </a>
       <a className="lk soon" href="#">
         <span><span className="lt">History &amp; eras</span><span className="ls">Champions, dynasties, rule resets</span></span>
