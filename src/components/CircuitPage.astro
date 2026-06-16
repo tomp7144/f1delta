@@ -1,7 +1,9 @@
 ---
 import SiteNav from "./SiteNav.astro";
-const { gp } = Astro.props;
-const { stats, runningsList, circuits } = gp;
+const { circuit } = Astro.props;
+const { stats, runningsList, layouts, grandsPrix } = circuit;
+const multiLayout = layouts.length > 1;
+const multiGP = grandsPrix.length > 1;
 
 function flag(a2: string | null | undefined) {
   if (!a2 || a2.length !== 2) return "";
@@ -9,53 +11,57 @@ function flag(a2: string | null | undefined) {
   return String.fromCodePoint(...([...a2.toUpperCase()].map((c) => A + (c.charCodeAt(0) - base)))) + " ";
 }
 
-const activeSpan = gp.firstYear === gp.lastYear
-  ? `${gp.firstYear}`
-  : `${gp.firstYear}–${gp.lastYear}`;
-
-// Ordered unique circuits with names for linking
-const circuitList: { id: string; name: string }[] = [];
-const seenCircuits = new Set<string>();
-for (const r of runningsList) {
-  if (r.circuitId && !seenCircuits.has(r.circuitId)) {
-    seenCircuits.add(r.circuitId);
-    circuitList.push({ id: r.circuitId, name: r.circuit });
-  }
-}
+const typeLabel = circuit.type === "STREET" ? "Street circuit" : "Race circuit";
+const dirLabel  = circuit.direction === "ANTICLOCKWISE" ? "Anticlockwise" : "Clockwise";
+const activeSpan = circuit.runningsList[0]?.year === circuit.runningsList[circuit.runningsList.length - 1]?.year
+  ? `${circuit.runningsList[0]?.year}`
+  : `${circuit.runningsList[0]?.year}–${circuit.runningsList[circuit.runningsList.length - 1]?.year}`;
 ---
 
-<SiteNav current="gps" />
+<SiteNav current="circuits" />
 <section class="page">
 
   <div class="hero">
     <div class="hero-meta">
-      {gp.country && <span class="country">{flag(gp.country.a2)}{gp.country.name}</span>}
-      <span class="span">{activeSpan} · {gp.runnings} runnings</span>
+      {circuit.country && <span class="country">{flag(circuit.country.a2)}{circuit.placeName ?? circuit.country.name}</span>}
+      <span class="span">{activeSpan} · {circuit.totalRacesHeld} races</span>
     </div>
-    <h1>{gp.name}</h1>
-    <p class="circuits-note">
-      {circuitList.length === 1 ? "Circuit: " : `Held at ${circuitList.length} circuits: `}
-      {circuitList.map((c, i) => (
-        <>
-          <a class="circ-link" href={`/circuits/${c.id}`}>{c.name}</a>
-          {i < circuitList.length - 1 && <span class="circ-sep"> · </span>}
-        </>
-      ))}
-    </p>
+    <h1>{circuit.fullName}</h1>
+    {circuit.previousNames && circuit.previousNames.length > 0 && (
+      <p class="prev-names">Previously: {circuit.previousNames.join(" · ")}</p>
+    )}
+    <div class="profile-chips">
+      <span class="chip">{typeLabel}</span>
+      <span class="chip">{dirLabel}</span>
+      <span class="chip">{circuit.length?.toFixed(3)} km</span>
+      <span class="chip">{circuit.turns} turns</span>
+    </div>
   </div>
 
+  {/* GPs held here — always shown, links to GP pages */}
+  <div class="gps-held">
+    <span class="gps-label">{grandsPrix.length === 1 ? "Grand Prix" : "Grands Prix hosted"}</span>
+    {grandsPrix.map((gp, i) => (
+      <>
+        <a class="gp-link" href={`/grands-prix/${gp.id}`}>{gp.name}</a>
+        {i < grandsPrix.length - 1 && <span class="gp-sep"> · </span>}
+      </>
+    ))}
+  </div>
+
+  {/* Stat callouts */}
   <div class="callouts">
     {stats.mostWinsDriver && (
       <div class="callout">
         <span class="cl-label">Most wins</span>
-        <span class="cl-value">{stats.mostWinsDriver.name}</span>
+        <a class="cl-value cl-link" href={`/driver?d=${stats.mostWinsDriver.id}`}>{stats.mostWinsDriver.name}</a>
         <span class="cl-sub">{stats.mostWinsDriver.wins}×</span>
       </div>
     )}
     {stats.mostPolesDriver && (
       <div class="callout">
         <span class="cl-label">Most poles</span>
-        <span class="cl-value">{stats.mostPolesDriver.name}</span>
+        <a class="cl-value cl-link" href={`/driver?d=${stats.mostPolesDriver.id}`}>{stats.mostPolesDriver.name}</a>
         <span class="cl-sub">{stats.mostPolesDriver.poles}×</span>
       </div>
     )}
@@ -64,13 +70,6 @@ for (const r of runningsList) {
         <span class="cl-label">Top constructor</span>
         <a class="cl-value cl-link" href={`/teams/${stats.mostWinsConstructor.id}`}>{stats.mostWinsConstructor.name}</a>
         <span class="cl-sub">{stats.mostWinsConstructor.wins} wins</span>
-      </div>
-    )}
-    {stats.biggestMargin && (
-      <div class="callout">
-        <span class="cl-label">Biggest margin</span>
-        <span class="cl-value">{stats.biggestMargin.text}</span>
-        <span class="cl-sub">{stats.biggestMargin.winner}, {stats.biggestMargin.year}</span>
       </div>
     )}
     {stats.champDeciders > 0 && (
@@ -89,12 +88,42 @@ for (const r of runningsList) {
     )}
   </div>
 
+  {/* Layout history — only when multiple layouts exist */}
+  {multiLayout && (
+    <div class="layouts-section">
+      <h2 class="section-title">Layout History</h2>
+      <div class="card">
+        <table>
+          <thead>
+            <tr>
+              <th>Configuration</th>
+              <th class="num">Length (km)</th>
+              <th class="num">Turns</th>
+              <th>Status</th>
+            </tr>
+          </thead>
+          <tbody>
+            {layouts.map((l) => (
+              <tr class:list={[{ "current-layout": l.effective }]}>
+                <td class="layout-id">{l.id}</td>
+                <td class="num">{l.length?.toFixed(3) ?? "—"}</td>
+                <td class="num">{l.turns ?? "—"}</td>
+                <td class="layout-status">{l.effective ? <strong>Current</strong> : "Historical"}</td>
+              </tr>
+            ))}
+          </tbody>
+        </table>
+      </div>
+    </div>
+  )}
+
+  {/* Per-running table */}
   <div class="card">
     <table data-record-table>
       <thead>
         <tr>
           <th data-sort="year" data-type="num" aria-sort="descending">Year</th>
-          {circuits.length > 1 && <th data-sort="circuit" data-type="text">Circuit</th>}
+          {multiGP && <th data-sort="grandprix" data-type="text">Grand Prix</th>}
           <th data-sort="winner" data-type="text">Winner</th>
           <th data-sort="constructor" data-type="text">Constructor</th>
           <th data-sort="pole" data-type="text">Pole</th>
@@ -107,7 +136,7 @@ for (const r of runningsList) {
         {[...runningsList].reverse().map((r) => (
           <tr
             data-year={r.year}
-            data-circuit={r.circuit}
+            data-grandprix={r.grandPrix}
             data-winner={r.winner ?? ""}
             data-constructor={r.constructor ?? ""}
             data-pole={r.pole ?? ""}
@@ -122,7 +151,11 @@ for (const r of runningsList) {
               {r.wdcDecider && <span class="badge wdc" title="WDC title decided here">WDC</span>}
               {r.wccDecider && <span class="badge wcc" title="WCC title decided here">WCC</span>}
             </td>
-            {circuits.length > 1 && <td class="circ">{r.circuit}</td>}
+            {multiGP && (
+              <td>
+                <a class="gp-cell" href={`/grands-prix/${r.grandPrixId}`}>{r.grandPrix}</a>
+              </td>
+            )}
             <td>
               {r.winnerId
                 ? <a class="drv" href={`/driver?d=${r.winnerId}`}>{r.winner}</a>
@@ -142,6 +175,7 @@ for (const r of runningsList) {
               {r.fastestLapId
                 ? <a class="drv" href={`/driver?d=${r.fastestLapId}`}>{r.fastestLap}</a>
                 : <span class="muted">{r.fastestLap ?? "—"}</span>}
+              {r.fastestLapTime && <span class="fl-time"> {r.fastestLapTime}</span>}
             </td>
             <td class="num margin">{r.winningMarginText ?? "—"}</td>
             <td class="num muted">{r.laps ?? "—"}</td>
@@ -160,18 +194,29 @@ for (const r of runningsList) {
     font-family: system-ui, -apple-system, "Segoe UI", Roboto, sans-serif; color: #16161a;
   }
 
-  .hero { margin-bottom: 20px; }
+  .hero { margin-bottom: 14px; }
   .hero-meta { display: flex; align-items: center; gap: 12px; font-size: 13px; color: #6b6b70; margin-bottom: 6px; }
   .country { font-weight: 500; }
   .page h1 { font-size: clamp(22px, 4vw, 32px); font-weight: 700; margin: 0 0 6px; letter-spacing: -.01em; }
-  .circuits-note { font-size: 13px; color: #6b6b70; margin: 0; }
-  .circ-link { color: #6b6b70; text-decoration: none; font-weight: 500; }
-  .circ-link:hover { color: #16161a; text-decoration: underline; }
-  .circ-sep { color: #c4c4c9; }
+  .prev-names { font-size: 12px; color: #9a9a9e; margin: 0 0 8px; }
+  .profile-chips { display: flex; flex-wrap: wrap; gap: 6px; }
+  .chip {
+    font-size: 12px; font-weight: 500; padding: 3px 9px;
+    background: #fff; border: 1px solid #e4e4df; border-radius: 4px; color: #6b6b70;
+  }
+
+  .gps-held {
+    display: flex; align-items: baseline; flex-wrap: wrap; gap: 4px;
+    font-size: 13px; margin: 14px 0 18px;
+  }
+  .gps-label { color: #6b6b70; font-weight: 600; text-transform: uppercase;
+    font-size: 10px; letter-spacing: .06em; margin-right: 4px; }
+  .gp-link { color: #16161a; text-decoration: none; font-weight: 500; }
+  .gp-link:hover { text-decoration: underline; }
+  .gp-sep { color: #c4c4c9; }
 
   .callouts {
-    display: grid;
-    grid-template-columns: repeat(auto-fill, minmax(160px, 1fr));
+    display: grid; grid-template-columns: repeat(auto-fill, minmax(160px, 1fr));
     gap: 8px; margin-bottom: 20px;
   }
   .callout {
@@ -184,29 +229,40 @@ for (const r of runningsList) {
   .cl-link  { text-decoration: none; color: #16161a; }
   .cl-link:hover { text-decoration: underline; }
 
-  .card { background: #fff; border: 1px solid #e4e4df; border-radius: 8px; overflow: hidden; }
+  .layouts-section { margin-bottom: 20px; }
+  .section-title { font-size: 13px; font-weight: 600; color: #6b6b70; text-transform: uppercase;
+    letter-spacing: .06em; margin: 0 0 8px; }
+
+  .card { background: #fff; border: 1px solid #e4e4df; border-radius: 8px; overflow: hidden; margin-bottom: 20px; }
+  .card:last-of-type { margin-bottom: 0; }
   table { width: 100%; border-collapse: collapse; font-size: 13px; }
   th {
     text-align: left; padding: 7px 10px; font-size: 10px; font-weight: 600;
     color: #6b6b70; text-transform: uppercase; letter-spacing: .04em;
     border-bottom: 2px solid #e4e4df; cursor: pointer; user-select: none; white-space: nowrap;
   }
+  .layouts-section th { cursor: default; }
   th:focus-visible { outline: 2px solid #e10600; outline-offset: -2px; }
   th[aria-sort="ascending"]::after  { content: " \25B2"; }
   th[aria-sort="descending"]::after { content: " \25BC"; }
   td { padding: 7px 10px; border-bottom: 1px solid #e4e4df; }
   tr:last-child td { border-bottom: none; }
   .champ-row td { background: #fbf3d0; }
+  .current-layout td { background: #f4f4f1; }
 
   .num    { text-align: right; font-variant-numeric: tabular-nums; font-feature-settings: "tnum"; }
   .yr     { font-weight: 600; white-space: nowrap; }
-  .circ   { color: #6b6b70; font-size: 12px; }
   .margin { color: #6b6b70; }
   .muted  { color: #6b6b70; }
   .drv    { color: #16161a; text-decoration: none; }
   .drv:hover { text-decoration: underline; }
   .team   { color: #6b6b70; text-decoration: none; font-size: 12px; }
   .team:hover { color: #16161a; text-decoration: underline; }
+  .gp-cell { color: #6b6b70; text-decoration: none; font-size: 12px; }
+  .gp-cell:hover { color: #16161a; text-decoration: underline; }
+  .layout-id { font-family: monospace; font-size: 12px; color: #6b6b70; }
+  .layout-status { font-size: 12px; color: #6b6b70; }
+  .fl-time { font-size: 11px; color: #9a9a9e; font-variant-numeric: tabular-nums; }
 
   .badge {
     display: inline-block; font-size: 9px; font-weight: 700; padding: 1px 4px;
@@ -216,9 +272,7 @@ for (const r of runningsList) {
   .wdc { background: #e10600; color: #fff; }
   .wcc { background: #16161a; color: #fff; }
 
-  .foot {
-    font-size: 12px; color: #9a9a9e; text-align: center; padding: 20px 0 8px;
-  }
+  .foot { font-size: 12px; color: #9a9a9e; text-align: center; padding: 20px 0 8px; }
   .foot a { color: #9a9a9e; }
   .foot a:hover { color: #16161a; }
 </style>

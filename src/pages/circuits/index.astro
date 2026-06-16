@@ -1,0 +1,23 @@
+---
+export const prerender = true;
+import fs from "node:fs";
+import path from "node:path";
+import CircuitsHub from "../../components/CircuitsHub.astro";
+
+const index = JSON.parse(fs.readFileSync(path.resolve("./data/circuits/index.json"), "utf8"));
+---
+
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>F1 Circuits — Every Track in Championship History | f1delta</title>
+    <meta name="description" content="Every circuit that has hosted a Formula 1 World Championship race — track profiles, race records, and history from 1950 to today." />
+    <link rel="canonical" href="https://f1delta.com/circuits" />
+  </head>
+  <body style="margin:0;background:#f4f4f1">
+    <CircuitsHub index={index} />
+    <script src="/f1-records.js" defer></script>
+  </body>
+</html>
