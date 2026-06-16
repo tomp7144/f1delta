@@ -126,7 +126,7 @@ function TopBar() {
   return (
     <div className="top"><div className="wrap">
       <a className="brand" href="/">F1<svg className="d" width="11" height="10" viewBox="0 0 100 86"><path d="M50 4 L97 82 L3 82 Z" fill="currentColor"/></svg>DELTA</a>
-      <nav className="topnav"><a href="/drivers" className="on">Drivers</a><a href="/#top">Teams</a><a href="/pro">Pro</a></nav>
+      <nav className="topnav"><a href="/drivers" className="on">Drivers</a><a href="/#standings">Standings</a><a href="/records">Records</a><a href="/teams">Teams</a><a href="/pro">Pro</a></nav>
     </div></div>
   );
 }
