@@ -49,7 +49,13 @@ const fmt = (v) => (isRate ? v.toFixed(2) + "%" : typeof v === "number" ? v.toLo
               {r.nat && <span class="nat">{flag(r.nat.a2)}{r.nat.code || r.nat.id}</span>}
             </td>
             <td class="num val">{fmt(r.value)}</td>
-            {contextLabel && <td class="ctx">{r.context ?? "—"}</td>}
+            {contextLabel && (
+              <td class="ctx">
+                {r.contextId
+                  ? <a class="ctx-link" href={`/grands-prix/${r.contextId}`}>{r.context ?? "—"}</a>
+                  : (r.context ?? "—")}
+              </td>
+            )}
           </tr>
         ))}
       </tbody>
@@ -86,6 +92,8 @@ const fmt = (v) => (isRate ? v.toFixed(2) + "%" : typeof v === "number" ? v.toLo
   .ent:hover { text-decoration: underline; }
   .nat { color: #6b6b70; font-size: 12px; margin-left: 8px; white-space: nowrap; }
   .ctx { color: #6b6b70; font-size: 14px; }
+  .ctx-link { color: #6b6b70; text-decoration: none; }
+  .ctx-link:hover { color: #16161a; text-decoration: underline; }
   tr.leader { background: #fbf3d0; }
   tr.leader .ent { font-weight: 700; }
   .method { color: #6b6b70; font-size: 12.5px; margin: 12px 2px 0; line-height: 1.5; }

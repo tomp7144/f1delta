@@ -244,7 +244,9 @@ async function main() {
         if (!m) continue;
         let bestVenue = null, bestVal = 0;
         for (const [venueId, n] of byVenue) if (n > bestVal) { bestVal = n; bestVenue = venueId; }
-        rows.push(nameRow(m, bestVal, vb.nameMap.get(bestVenue) ?? bestVenue));
+        const row = nameRow(m, bestVal, vb.nameMap.get(bestVenue) ?? bestVenue);
+        if (vb.scope === "grand-prix" && bestVenue) row.contextId = bestVenue;
+        rows.push(row);
       }
       rows.sort((a, b) => b.value - a.value);
       await writeBoard({
