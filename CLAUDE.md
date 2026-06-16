@@ -21,7 +21,7 @@ Default to pattern 1. Reach for pattern 2 only when something must be gated or p
 
 ## Data pipeline
 
-- **F1DB** (CC BY 4.0, self-hosted) is the canonical archive, unzipped as json-splitted files in `data/f1db/`. The goal is build-time-only third-party data; two runtime Jolpica calls remain as known exceptions being migrated (see below).
+- **F1DB** (CC BY 4.0, self-hosted) is the canonical archive, unzipped as json-splitted files in `data/f1db/`. The goal is build-time-only third-party data; there are no remaining runtime third-party calls.
 - `derive-*.mjs` scripts at repo root read `data/f1db/`, compute, and write `data/<entity>/` (e.g. `derive-records.mjs` → `data/records/`, `derive-teams.mjs` → `data/teams/`). They are pure, no network, and idempotent. Re-run them after pulling a newer F1DB release.
 - F1DB precomputes career and per-season totals on the entity/season objects — use those (they already handle subtleties like a 1–2 finish counting as one constructor win). Only per-Grand-Prix / per-circuit / streak figures need a manual pass over race results.
 - A **GitHub Actions cron (every 3h)** bakes the latest completed race from OpenF1 and commits `public/latest-race.json` to `main`. Expect the remote to move under you.
@@ -47,5 +47,5 @@ Light reference-desk aesthetic. Background `#f4f4f1`, ink `#16161a`, muted text 
 ## Hard-won gotchas
 
 - OpenF1's free tier only covers *completed* race results; current-season/live data is paid. Don't build runtime features assuming the free tier exposes more.
-- Jolpica is still called at runtime in two places being migrated to F1DB: the `/drivers` archive index (`/api/driver?list=1`) and the WDC standings panel on the homepage. Don't add new Jolpica runtime calls; help remove the existing ones when touching those areas.
+- There are no remaining runtime third-party calls. The WDC standings are baked by `bake-standings.mjs` (Jolpica, cron-time) into `public/standings.json`; the latest race result is baked by `bake-latest.mjs` (OpenF1, cron-time) into `public/latest-race.json`. Don't add new runtime calls to external APIs.
 - F1DB IDs use both hyphens and underscores (`adrian-sutil`, `max_verstappen`). Any slug regex must allow both.
