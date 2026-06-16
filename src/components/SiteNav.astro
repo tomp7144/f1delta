@@ -4,6 +4,7 @@ const { current } = Astro.props;
 <nav class="site-nav">
   <a class="wordmark" href="/">f1delta</a>
   <a href="/drivers" aria-current={current === "drivers" ? "page" : undefined}>Drivers</a>
+  <a href="/grands-prix" aria-current={current === "gps" ? "page" : undefined}>GPs</a>
   <a href="/records" aria-current={current === "records" ? "page" : undefined}>Records</a>
   <a href="/teams" aria-current={current === "teams" ? "page" : undefined}>Teams</a>
 </nav>

@@ -1,0 +1,207 @@
+---
+import SiteNav from "./SiteNav.astro";
+const { gp } = Astro.props;
+const { stats, runningsList, circuits } = gp;
+
+function flag(a2: string | null | undefined) {
+  if (!a2 || a2.length !== 2) return "";
+  const A = 0x1f1e6, base = 65;
+  return String.fromCodePoint(...([...a2.toUpperCase()].map((c) => A + (c.charCodeAt(0) - base)))) + " ";
+}
+
+const activeSpan = gp.firstYear === gp.lastYear
+  ? `${gp.firstYear}`
+  : `${gp.firstYear}–${gp.lastYear}`;
+---
+
+<SiteNav current="gps" />
+<section class="page">
+
+  <div class="hero">
+    <div class="hero-meta">
+      {gp.country && <span class="country">{flag(gp.country.a2)}{gp.country.name}</span>}
+      <span class="span">{activeSpan} · {gp.runnings} runnings</span>
+    </div>
+    <h1>{gp.name}</h1>
+    {circuits.length > 1 && (
+      <p class="circuits-note">
+        Held at {circuits.length} circuits · most recently {runningsList[runningsList.length - 1]?.circuit ?? "—"}
+      </p>
+    )}
+  </div>
+
+  <div class="callouts">
+    {stats.mostWinsDriver && (
+      <div class="callout">
+        <span class="cl-label">Most wins</span>
+        <span class="cl-value">{stats.mostWinsDriver.name}</span>
+        <span class="cl-sub">{stats.mostWinsDriver.wins}×</span>
+      </div>
+    )}
+    {stats.mostPolesDriver && (
+      <div class="callout">
+        <span class="cl-label">Most poles</span>
+        <span class="cl-value">{stats.mostPolesDriver.name}</span>
+        <span class="cl-sub">{stats.mostPolesDriver.poles}×</span>
+      </div>
+    )}
+    {stats.mostWinsConstructor && (
+      <div class="callout">
+        <span class="cl-label">Top constructor</span>
+        <a class="cl-value cl-link" href={`/teams/${stats.mostWinsConstructor.id}`}>{stats.mostWinsConstructor.name}</a>
+        <span class="cl-sub">{stats.mostWinsConstructor.wins} wins</span>
+      </div>
+    )}
+    {stats.biggestMargin && (
+      <div class="callout">
+        <span class="cl-label">Biggest margin</span>
+        <span class="cl-value">{stats.biggestMargin.text}</span>
+        <span class="cl-sub">{stats.biggestMargin.winner}, {stats.biggestMargin.year}</span>
+      </div>
+    )}
+    {stats.champDeciders > 0 && (
+      <div class="callout">
+        <span class="cl-label">Title deciders</span>
+        <span class="cl-value">{stats.champDeciders}</span>
+        <span class="cl-sub">championships decided here</span>
+      </div>
+    )}
+    {stats.grandSlams > 0 && (
+      <div class="callout">
+        <span class="cl-label">Grand Slams</span>
+        <span class="cl-value">{stats.grandSlams}</span>
+        <span class="cl-sub">pole · win · lead every lap · fastest</span>
+      </div>
+    )}
+  </div>
+
+  <div class="card">
+    <table data-record-table>
+      <thead>
+        <tr>
+          <th data-sort="year" data-type="num" aria-sort="descending">Year</th>
+          {circuits.length > 1 && <th data-sort="circuit" data-type="text">Circuit</th>}
+          <th data-sort="winner" data-type="text">Winner</th>
+          <th data-sort="constructor" data-type="text">Constructor</th>
+          <th data-sort="pole" data-type="text">Pole</th>
+          <th data-sort="fastestlap" data-type="text">Fastest Lap</th>
+          <th class="num" data-sort="margin" data-type="num">Margin</th>
+          <th class="num" data-sort="laps" data-type="num">Laps</th>
+        </tr>
+      </thead>
+      <tbody>
+        {[...runningsList].reverse().map((r) => (
+          <tr
+            data-year={r.year}
+            data-circuit={r.circuit}
+            data-winner={r.winner ?? ""}
+            data-constructor={r.constructor ?? ""}
+            data-pole={r.pole ?? ""}
+            data-fastestlap={r.fastestLap ?? ""}
+            data-margin={r.winningMarginMs ?? 9_999_999}
+            data-laps={r.laps ?? 0}
+            class:list={[{ "champ-row": r.champDecider }]}
+          >
+            <td class="yr">
+              {r.year}
+              {r.grandSlam && <span class="badge gs" title="Grand Slam">GS</span>}
+              {r.wdcDecider && <span class="badge wdc" title="WDC title decided here">WDC</span>}
+              {r.wccDecider && <span class="badge wcc" title="WCC title decided here">WCC</span>}
+            </td>
+            {circuits.length > 1 && <td class="circ">{r.circuit}</td>}
+            <td>
+              {r.winnerId
+                ? <a class="drv" href={`/driver?d=${r.winnerId}`}>{r.winner}</a>
+                : <span class="muted">{r.winner ?? "—"}</span>}
+            </td>
+            <td>
+              {r.constructorId
+                ? <a class="team" href={`/teams/${r.constructorId}`}>{r.constructor}</a>
+                : <span class="muted">{r.constructor ?? "—"}</span>}
+            </td>
+            <td>
+              {r.poleId
+                ? <a class="drv" href={`/driver?d=${r.poleId}`}>{r.pole}</a>
+                : <span class="muted">{r.pole ?? "—"}</span>}
+            </td>
+            <td>
+              {r.fastestLapId
+                ? <a class="drv" href={`/driver?d=${r.fastestLapId}`}>{r.fastestLap}</a>
+                : <span class="muted">{r.fastestLap ?? "—"}</span>}
+            </td>
+            <td class="num margin">{r.winningMarginText ?? "—"}</td>
+            <td class="num muted">{r.laps ?? "—"}</td>
+          </tr>
+        ))}
+      </tbody>
+    </table>
+  </div>
+
+  <p class="foot">Data: <a href="https://github.com/f1db/f1db">F1DB</a> (CC BY 4.0) · f1delta unofficial</p>
+</section>
+
+<style>
+  .page {
+    max-width: 960px; margin: 0 auto; padding: 28px 20px;
+    font-family: system-ui, -apple-system, "Segoe UI", Roboto, sans-serif; color: #16161a;
+  }
+
+  .hero { margin-bottom: 20px; }
+  .hero-meta { display: flex; align-items: center; gap: 12px; font-size: 13px; color: #6b6b70; margin-bottom: 6px; }
+  .country { font-weight: 500; }
+  .page h1 { font-size: clamp(22px, 4vw, 32px); font-weight: 700; margin: 0 0 6px; letter-spacing: -.01em; }
+  .circuits-note { font-size: 13px; color: #6b6b70; margin: 0; }
+
+  .callouts {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(160px, 1fr));
+    gap: 8px; margin-bottom: 20px;
+  }
+  .callout {
+    background: #fff; border: 1px solid #e4e4df; border-radius: 6px;
+    padding: 10px 12px; display: flex; flex-direction: column; gap: 2px;
+  }
+  .cl-label { font-size: 10px; text-transform: uppercase; letter-spacing: .06em; color: #6b6b70; font-weight: 600; }
+  .cl-value { font-size: 15px; font-weight: 700; line-height: 1.2; color: #16161a; }
+  .cl-sub   { font-size: 12px; color: #6b6b70; }
+  .cl-link  { text-decoration: none; color: #16161a; }
+  .cl-link:hover { text-decoration: underline; }
+
+  .card { background: #fff; border: 1px solid #e4e4df; border-radius: 8px; overflow: hidden; }
+  table { width: 100%; border-collapse: collapse; font-size: 13px; }
+  th {
+    text-align: left; padding: 7px 10px; font-size: 10px; font-weight: 600;
+    color: #6b6b70; text-transform: uppercase; letter-spacing: .04em;
+    border-bottom: 2px solid #e4e4df; cursor: pointer; user-select: none; white-space: nowrap;
+  }
+  th:focus-visible { outline: 2px solid #e10600; outline-offset: -2px; }
+  th[aria-sort="ascending"]::after  { content: " \25B2"; }
+  th[aria-sort="descending"]::after { content: " \25BC"; }
+  td { padding: 7px 10px; border-bottom: 1px solid #e4e4df; }
+  tr:last-child td { border-bottom: none; }
+  .champ-row td { background: #fbf3d0; }
+
+  .num    { text-align: right; font-variant-numeric: tabular-nums; font-feature-settings: "tnum"; }
+  .yr     { font-weight: 600; white-space: nowrap; }
+  .circ   { color: #6b6b70; font-size: 12px; }
+  .margin { color: #6b6b70; }
+  .muted  { color: #6b6b70; }
+  .drv    { color: #16161a; text-decoration: none; }
+  .drv:hover { text-decoration: underline; }
+  .team   { color: #6b6b70; text-decoration: none; font-size: 12px; }
+  .team:hover { color: #16161a; text-decoration: underline; }
+
+  .badge {
+    display: inline-block; font-size: 9px; font-weight: 700; padding: 1px 4px;
+    border-radius: 2px; margin-left: 4px; letter-spacing: .04em; vertical-align: middle;
+  }
+  .gs  { background: #fbf3d0; color: #7a5c00; }
+  .wdc { background: #e10600; color: #fff; }
+  .wcc { background: #16161a; color: #fff; }
+
+  .foot {
+    font-size: 12px; color: #9a9a9e; text-align: center; padding: 20px 0 8px;
+  }
+  .foot a { color: #9a9a9e; }
+  .foot a:hover { color: #16161a; }
+</style>

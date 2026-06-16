@@ -1,0 +1,33 @@
+---
+export const prerender = true;
+import fs from "node:fs";
+import path from "node:path";
+import GrandPrixPage from "../../components/GrandPrixPage.astro";
+
+export function getStaticPaths() {
+  const DIR = path.resolve("./data/grands-prix");
+  const index = JSON.parse(fs.readFileSync(path.join(DIR, "index.json"), "utf8"));
+  return index.grandsPrix.map((gp) => ({
+    params: { id: gp.id },
+    props: { gp: JSON.parse(fs.readFileSync(path.join(DIR, `${gp.id}.json`), "utf8")) },
+  }));
+}
+
+const { gp } = Astro.props;
+const desc = `${gp.name}: all-time winners, poles, fastest laps and records across ${gp.runnings} runnings from ${gp.firstYear} to ${gp.lastYear}.`;
+---
+
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>{gp.name} — All-Time Records | f1delta</title>
+    <meta name="description" content={desc} />
+    <link rel="canonical" href={`https://f1delta.com/grands-prix/${gp.id}`} />
+  </head>
+  <body style="margin:0;background:#f4f4f1">
+    <GrandPrixPage gp={gp} />
+    <script src="/f1-records.js" defer></script>
+  </body>
+</html>
