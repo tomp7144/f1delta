@@ -51,6 +51,8 @@ function IndexStyles() {
       .ix-empty{padding:48px;text-align:center;font-size:13px;color:#9a9a9e}
       .ix-load{padding:80px;text-align:center;font-size:12px;letter-spacing:.12em;text-transform:uppercase;color:#9a9a9e}
       .ix-foot{font-size:12px;color:#9a9a9e;text-align:center;padding:24px 0 32px}
+      .ix-foot-sep{color:#c4c4c9}
+      .ix-foot-link{color:#6b6b70;text-decoration:none}.ix-foot-link:hover{color:#16161a;text-decoration:underline}
     `}</style>
   );
 }
@@ -163,7 +165,11 @@ function IndexPage() {
             }
           </>
         )}
-        <div className="ix-foot">F1 Δ DELTA · data via F1DB · unofficial</div>
+        <div className="ix-foot">
+          F1 Δ DELTA · data via F1DB · unofficial
+          <span className="ix-foot-sep"> · </span>
+          <a href="/drivers/never-started" className="ix-foot-link">123 drivers who never started →</a>
+        </div>
       </div>
     </div>
   );

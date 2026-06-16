@@ -2,6 +2,8 @@
 
 f1delta.com is an F1 statistics & history reference site (think Baseball-Reference for F1), aimed at the Drive-to-Survive audience who want historical context. Dense, light-themed, fast, evergreen. Free tier is the SEO funnel; a Pro tier ($9/mo) is planned for relationship/intel data but is currently switched off.
 
+**Data principle: no data is wasted, but no dataset is scattered.** If F1DB has it, there's an interesting way to present it — but each dataset earns one well-curated home, not thin pages generated for coverage. Depth over breadth.
+
 **Owner works solo, commits to `main` himself via terminal, and reviews every diff before it lands.** Make surgical, minimal-diff changes. Don't scaffold speculatively or rewrite working files. When in doubt about intent, ask before building.
 
 ## Stack

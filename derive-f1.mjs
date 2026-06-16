@@ -39,11 +39,13 @@ const OUT_DIR  = path.resolve("./data/drivers");
 // F1DB "json-splitted" filenames. If `ls data/f1db` shows different names,
 // fix them here (one place). These match the F1DB v2026.x splitted release.
 const FILES = {
-  drivers:        "f1db-drivers.json",
-  seasonsDrivers: "f1db-seasons-drivers.json",
-  constructors:   "f1db-constructors.json",
-  raceResults:    "f1db-races-race-results.json",
-  qualiResults:   "f1db-races-qualifying-results.json",
+  drivers:         "f1db-drivers.json",
+  seasonsDrivers:  "f1db-seasons-drivers.json",
+  constructors:    "f1db-constructors.json",
+  raceResults:     "f1db-races-race-results.json",
+  qualiResults:    "f1db-races-qualifying-results.json",
+  countries:       "f1db-countries.json",
+  entrantsDrivers: "f1db-seasons-entrants-drivers.json",
 };
 
 const round1 = (n) => Math.round((n + Number.EPSILON) * 10) / 10;
@@ -81,12 +83,14 @@ function newSeasonH2H(year) {
 }
 
 async function main() {
-  const [drvArr, seasonsDrv, constructors, raceRes, qualiRes] = await Promise.all([
+  const [drvArr, seasonsDrv, constructors, raceRes, qualiRes, countriesArr, entrantsDrv] = await Promise.all([
     loadJSON(FILES.drivers),
     loadJSON(FILES.seasonsDrivers),
     loadJSON(FILES.constructors),
     loadJSON(FILES.raceResults),
     loadJSON(FILES.qualiResults),
+    loadJSON(FILES.countries),
+    loadJSON(FILES.entrantsDrivers),
   ]);
 
   // driverId -> meta + lifetime totals (precomputed by F1DB)
@@ -113,6 +117,14 @@ async function main() {
   const teamName = new Map();
   for (const c of constructors) teamName.set(c.id, c.name);
 
+  // countryId -> demonym (e.g. "united-kingdom" -> "British")
+  const countryDemonym = new Map();
+  for (const c of countriesArr) if (c.demonym) countryDemonym.set(c.id, c.demonym);
+
+  // driverId -> entrant rows (for teams of test/reserve drivers + year ranges)
+  const entrantsByDriver = new Map();
+  for (const e of entrantsDrv) get(entrantsByDriver, e.driverId, () => []).push(e);
+
   // per-season career rows, read straight from F1DB: driverId -> Map(year -> row)
   const careerByDriver = new Map();
   for (const s of seasonsDrv) {
@@ -137,10 +149,12 @@ async function main() {
     get(qualiByRace, q.raceId, () => new Map()).set(q.driverId, q.positionNumber);
   }
 
-  // bucket race results by race, and tally per-season team participation
-  const resultsByRace = new Map(); // raceId -> [rows]
+  // bucket race results by race and by driver; tally per-season team participation
+  const resultsByRace = new Map();   // raceId -> [rows]
+  const resultsByDriver = new Map(); // driverId -> [rows] (used for never-started reason)
   for (const r of raceRes) {
     get(resultsByRace, r.raceId, () => []).push(r);
+    get(resultsByDriver, r.driverId, () => []).push(r);
     const cs = careerByDriver.get(r.driverId)?.get(r.year);
     if (cs) cs._teamRaces.set(r.constructorId, (cs._teamRaces.get(r.constructorId) ?? 0) + 1);
   }
@@ -272,7 +286,60 @@ async function main() {
     JSON.stringify({ count: index.length, drivers: index, updated: new Date().toISOString() })
   );
 
+  // ---- never-started.json ----
+  // Drivers with totalRaceStarts === 0: test/reserve drivers and those who DNQ'd, DNS'd, etc.
+  const neverStarted = [];
+  for (const drv of drvArr) {
+    if ((drv.totalRaceStarts ?? 0) > 0) continue;
+
+    // year range from seasons-drivers (all 123 are present there)
+    const yearMap = careerByDriver.get(drv.id);
+    const years = yearMap ? [...yearMap.keys()].sort((a, b) => a - b) : [];
+    const firstYear = years[0] ?? null;
+    const lastYear = years[years.length - 1] ?? null;
+
+    // teams from entrants file (covers test-only and race-entering drivers)
+    const entrants = entrantsByDriver.get(drv.id) ?? [];
+    const teamsSeen = new Map();
+    for (const e of entrants) {
+      if (!teamsSeen.has(e.constructorId))
+        teamsSeen.set(e.constructorId, teamName.get(e.constructorId) ?? e.constructorId);
+    }
+    const teams = [...teamsSeen.values()];
+
+    // reason from race results positionText
+    const results = resultsByDriver.get(drv.id) ?? [];
+    let reason;
+    if (results.length === 0) {
+      reason = "Reserve/Test";
+    } else {
+      const texts = new Set(results.map((r) => r.positionText));
+      if (texts.has("DNPQ"))      reason = "DNPQ";
+      else if (texts.has("DNQ"))  reason = "DNQ";
+      else if (texts.has("DNS"))  reason = "DNS";
+      else                        reason = [...texts][0] ?? "Unknown";
+    }
+
+    neverStarted.push({
+      id: drv.id,
+      name: drv.name,
+      nat: countryDemonym.get(drv.nationalityCountryId) ?? drv.nationalityCountryId ?? null,
+      firstYear,
+      lastYear,
+      entries: drv.totalRaceEntries ?? 0,
+      bestGrid: drv.bestStartingGridPosition ?? null,
+      teams,
+      reason,
+    });
+  }
+  neverStarted.sort((a, b) => a.name.localeCompare(b.name));
+  await writeFile(
+    path.join(OUT_DIR, "never-started.json"),
+    JSON.stringify({ count: neverStarted.length, drivers: neverStarted })
+  );
+
   console.log(`Derived ${index.length} drivers from F1DB -> ${OUT_DIR}`);
+  console.log(`Never-started: ${neverStarted.length} drivers -> ${OUT_DIR}/never-started.json`);
 }
 
 main();

@@ -1,0 +1,152 @@
+---
+export const prerender = true;
+import fs from "node:fs";
+import path from "node:path";
+import SiteNav from "../../components/SiteNav.astro";
+
+const { drivers } = JSON.parse(
+  fs.readFileSync(path.resolve("./data/drivers/never-started.json"), "utf8")
+);
+
+const reasonLabel: Record<string, string> = {
+  "DNQ":          "DNQ",
+  "DNPQ":         "DNPQ",
+  "DNS":          "DNS",
+  "DNP":          "DNP",
+  "Reserve/Test": "Test/Reserve",
+};
+
+const reasonDesc: Record<string, string> = {
+  "DNQ":          "Failed to qualify",
+  "DNPQ":         "Failed pre-qualifying (1988–93)",
+  "DNS":          "Withdrew after reaching grid",
+  "DNP":          "Did not practice",
+  "Reserve/Test": "Listed as reserve or test driver only",
+};
+
+const active = (d: { firstYear: number | null; lastYear: number | null }) =>
+  d.firstYear == null ? "—"
+  : d.firstYear === d.lastYear ? `${d.firstYear}`
+  : `${d.firstYear}–${d.lastYear}`;
+---
+
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Close But No Cigar — 123 Drivers Who Never Started | f1delta</title>
+    <meta name="description" content="123 drivers who appear in the F1 World Championship records — as reserve drivers, DNS withdrawals, or failed qualifiers — but never took a race start." />
+    <link rel="canonical" href="https://f1delta.com/drivers/never-started" />
+  </head>
+  <body style="margin:0;background:#f4f4f1">
+    <SiteNav current="drivers" />
+
+    <section class="hub">
+      <h1>Close But No Cigar</h1>
+      <p class="lede">
+        123 drivers in the F1 World Championship records who never made a race start —
+        reserve and test drivers, those who failed to qualify, and those who withdrew
+        before the lights went out.
+      </p>
+
+      <div class="legend">
+        {Object.entries(reasonDesc).map(([code, desc]) => (
+          <span class="leg-item"><span class={`badge r-${code.toLowerCase().replace("/","-")}`}>{reasonLabel[code]}</span> {desc}</span>
+        ))}
+      </div>
+
+      <div class="card">
+        <table data-record-table>
+          <thead>
+            <tr>
+              <th data-sort="name" data-type="text">Driver</th>
+              <th data-sort="nat" data-type="text">Nat</th>
+              <th data-sort="firstyear" data-type="num">Years</th>
+              <th class="num" data-sort="entries" data-type="num" aria-sort="descending">Entries</th>
+              <th class="num" data-sort="bestgrid" data-type="num">Best Grid</th>
+              <th data-sort="teams" data-type="text">Teams</th>
+              <th data-sort="reason" data-type="text">Outcome</th>
+            </tr>
+          </thead>
+          <tbody>
+            {drivers.map((d) => (
+              <tr
+                data-name={d.name}
+                data-nat={d.nat ?? ""}
+                data-firstyear={d.firstYear ?? 0}
+                data-entries={d.entries}
+                data-bestgrid={d.bestGrid ?? 9999}
+                data-teams={d.teams.join(", ")}
+                data-reason={d.reason}
+              >
+                <td class="drv">{d.name}</td>
+                <td class="nat">{d.nat ?? "—"}</td>
+                <td class="yrs">{active(d)}</td>
+                <td class="num">{d.entries || "—"}</td>
+                <td class="num">{d.bestGrid ?? "—"}</td>
+                <td class="teams">{d.teams.join(", ")}</td>
+                <td><span class={`badge r-${d.reason.toLowerCase().replace("/","-")}`}>{reasonLabel[d.reason] ?? d.reason}</span></td>
+              </tr>
+            ))}
+          </tbody>
+        </table>
+      </div>
+
+      <p class="foot">Data: <a href="https://github.com/f1db/f1db">F1DB</a> (CC BY 4.0) · f1delta unofficial</p>
+    </section>
+
+    <script src="/f1-records.js" defer></script>
+
+    <style>
+      .hub {
+        max-width: 760px; margin: 0 auto; padding: 28px 20px;
+        font-family: system-ui, -apple-system, "Segoe UI", Roboto, sans-serif;
+        color: #16161a;
+      }
+      .hub h1 { font-size: 28px; font-weight: 700; margin: 0 0 4px; letter-spacing: -.01em; }
+      .lede { color: #6b6b70; margin: 0 0 14px; font-size: 15px; line-height: 1.5; }
+
+      .legend {
+        display: flex; flex-wrap: wrap; gap: 8px 16px;
+        font-size: 12px; color: #6b6b70; margin-bottom: 18px;
+      }
+      .leg-item { display: flex; align-items: center; gap: 6px; }
+
+      .badge {
+        display: inline-block; font-size: 11px; font-weight: 600;
+        padding: 2px 7px; border-radius: 3px; letter-spacing: .03em;
+        white-space: nowrap;
+      }
+      .r-dnq          { background: #fff3cd; color: #7a5c00; }
+      .r-dnpq         { background: #fde8e8; color: #9b1212; }
+      .r-dns          { background: #e8f0fe; color: #1a4b9b; }
+      .r-dnp          { background: #f0f0f0; color: #555; }
+      .r-test-reserve { background: #f0f0f0; color: #555; }
+
+      .card { background: #fff; border: 1px solid #e4e4df; border-radius: 8px; overflow: hidden; }
+      table { width: 100%; border-collapse: collapse; font-size: 14px; }
+      th {
+        text-align: left; padding: 8px 12px; font-size: 11px; font-weight: 600;
+        color: #6b6b70; text-transform: uppercase; letter-spacing: .04em;
+        border-bottom: 2px solid #e4e4df; cursor: pointer; user-select: none;
+        white-space: nowrap;
+      }
+      th:focus-visible { outline: 2px solid #e10600; outline-offset: -2px; }
+      th[aria-sort="ascending"]::after  { content: " \25B2"; }
+      th[aria-sort="descending"]::after { content: " \25BC"; }
+      td { padding: 8px 12px; border-bottom: 1px solid #e4e4df; }
+      .num  { text-align: right; font-variant-numeric: tabular-nums; font-feature-settings: "tnum"; }
+      .yrs  { color: #6b6b70; font-variant-numeric: tabular-nums; white-space: nowrap; }
+      .nat  { color: #6b6b70; font-size: 13px; }
+      .drv  { font-weight: 500; }
+      .teams { color: #6b6b70; font-size: 13px; }
+      .foot {
+        font-size: 12px; color: #9a9a9e; text-align: center;
+        padding: 20px 0 8px;
+      }
+      .foot a { color: #9a9a9e; }
+      .foot a:hover { color: #16161a; }
+    </style>
+  </body>
+</html>
