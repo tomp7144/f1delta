@@ -181,11 +181,11 @@ function CareerTable({ d }) {
         <tbody>
           {rows.map((s) => {
             const champ = s.wdcFinish === 1;
-            const others = s.teams.filter((t) => t.constructorId !== s.primaryTeamId).map((t) => t.constructor);
+            const others = s.teams.filter((t) => t.constructorId !== s.primaryTeamId);
             return (
               <tr key={s.season} className={champ ? "champ" : ""}>
                 <td className="yr">{s.season}</td>
-                <td className="tm"><span className="dot" style={{ background: ac(s.primaryTeamId) }} /><a href="#">{s.primaryTeam}</a>{others.length ? <span className="alt"> +{others.join(", ")}</span> : null}</td>
+                <td className="tm"><span className="dot" style={{ background: ac(s.primaryTeamId) }} /><a href={"/teams/" + s.primaryTeamId}>{s.primaryTeam}</a>{others.length ? <span className="alt"> +{others.map((t, i) => <span key={t.constructorId}>{i > 0 ? ", " : ""}<a href={"/teams/" + t.constructorId}>{t.constructor}</a></span>)}</span> : null}</td>
                 <td className="n">{s.races}</td>
                 <td className={"n" + (s.wins ? " hot" : "")}>{s.wins}</td>
                 <td className="n">{s.podiums}</td>
