@@ -2,6 +2,7 @@
 // TeamPage.astro — one constructor's page, fully static. Totals strip, season-by-
 // season table, and the full driver lineup. Sorting via the shared /f1-records.js
 // (tables tagged data-record-table). Light reference-desk theme.
+import SiteNav from "./SiteNav.astro";
 const { team } = Astro.props;
 const { name, fullName, nat, span, totals, seasons, drivers } = team;
 
@@ -24,6 +25,7 @@ const STATS = [
 ];
 ---
 
+<SiteNav current="teams" />
 <section class="team">
   <a class="back" href="/teams">← All teams</a>
   <h1>{name}</h1>
