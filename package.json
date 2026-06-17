@@ -10,7 +10,7 @@
     "build": "astro build",
     "preview": "astro preview",
     "astro": "astro",
-    "derive": "node derive-f1.mjs && node derive-records.mjs && node derive-teams.mjs && node derive-gps.mjs && node derive-circuits.mjs",
+    "derive": "node derive-f1.mjs && node derive-records.mjs && node derive-teams.mjs && node derive-gps.mjs && node derive-circuits.mjs && node derive-engineers.mjs",
     "refresh": "npm run derive && node bake-latest.mjs"
   },
   "dependencies": {
