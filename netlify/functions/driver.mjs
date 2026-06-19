@@ -16,8 +16,19 @@ import { readFile } from "node:fs/promises";
 import path from "node:path";
 import { verifyToken, isAdmin, readSub, isActive } from "./lib/access.mjs";
 
-const DRIVERS_DIR = path.join(process.cwd(), "data", "drivers");
+const DRIVERS_DIR   = path.join(process.cwd(), "data", "drivers");
+const ENG_BY_DRIVER = path.join(process.cwd(), "data", "engineers", "by-driver.json");
 const SLUG_RE = /^[a-z0-9_-]{1,64}$/;
+
+let _engineerMap; // lazy-loaded once per function instance
+async function engineerForDriver(slug) {
+  if (!_engineerMap) {
+    try { _engineerMap = JSON.parse(await readFile(ENG_BY_DRIVER, "utf8")); }
+    catch { _engineerMap = {}; }
+  }
+  // by-driver.json keys use hyphens; API slugs may use underscores — try both
+  return _engineerMap[slug] ?? _engineerMap[slug.replace(/_/g, "-")] ?? null;
+}
 
 function json(status, body, cache = "private, no-store") {
   return new Response(JSON.stringify(body), {
@@ -81,12 +92,12 @@ export default async (req) => {
     return json(404, { error: "not_found" });
   }
 
-  const pro = await hasAccess(req);
+  const [pro, engineer] = await Promise.all([hasAccess(req), engineerForDriver(slug)]);
   // NOTE: both tiers kept private for now to avoid any shared-cache
   // cross-tier mixup. Public caching of the free tier is a later
   // optimization (verify Netlify Vary behavior first).
-  if (pro) return json(200, { ...full, pro: true });
-  return json(200, freeView(full));
+  if (pro) return json(200, { ...full, pro: true, engineer });
+  return json(200, { ...freeView(full), engineer });
 };
 
 export const config = { path: "/api/driver" };

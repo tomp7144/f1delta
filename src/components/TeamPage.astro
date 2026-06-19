@@ -3,17 +3,17 @@
 // season table, and the full driver lineup. Sorting via the shared /f1-records.js
 // (tables tagged data-record-table). Light reference-desk theme.
 import SiteNav from "./SiteNav.astro";
-const { team } = Astro.props;
+const { team, engineers = [] } = Astro.props;
 const { name, fullName, nat, span, totals, seasons, drivers } = team;
 
-function flag(a2) {
+function flag(a2: string) {
   if (!a2 || a2.length !== 2) return "";
   const A = 0x1f1e6, base = 65;
   return String.fromCodePoint(...[...a2.toUpperCase()].map((c) => A + (c.charCodeAt(0) - base))) + " ";
 }
-const fmt = (n) => (typeof n === "number" ? n.toLocaleString("en-US") : n);
+const fmt = (n: number) => (typeof n === "number" ? n.toLocaleString("en-US") : n);
 const years = span.first ? (span.first === span.last ? `${span.first}` : `${span.first}\u2013${span.last}`) : "";
-const driverYears = (d) => (d.first == null ? "—" : d.first === d.last ? `${d.first}` : `${d.first}\u2013${d.last}`);
+const driverYears = (d: any) => (d.first == null ? "—" : d.first === d.last ? `${d.first}` : `${d.first}\u2013${d.last}`);
 
 const STATS = [
   ["Championships", totals.championships],
@@ -58,7 +58,7 @@ const STATS = [
         </tr>
       </thead>
       <tbody>
-        {seasons.map((s) => (
+        {seasons.map((s: any) => (
           <tr class={s.pos === 1 ? "champ" : undefined}
               data-year={s.year} data-pos={s.pos ?? 9999} data-wins={s.wins}
               data-podiums={s.podiums} data-poles={s.poles} data-points={s.points}>
@@ -88,7 +88,7 @@ const STATS = [
         </tr>
       </thead>
       <tbody>
-        {drivers.map((d) => (
+        {drivers.map((d: any) => (
           <tr data-name={d.name} data-first={d.first ?? 0} data-races={d.races}
               data-wins={d.wins} data-podiums={d.podiums} data-points={d.points}>
             <td>
@@ -105,6 +105,35 @@ const STATS = [
       </tbody>
     </table>
   </div>
+
+  {engineers.length > 0 && (
+    <>
+      <h2>Race engineers <span class="count">({engineers.length})</span></h2>
+      <div class="card">
+        <table>
+          <thead>
+            <tr>
+              <th>Engineer</th>
+              <th>Driver</th>
+              <th>Years</th>
+            </tr>
+          </thead>
+          <tbody>
+            {engineers.map((e: any) => (
+              <tr class={e.toYear === null ? "cur-eng" : undefined}>
+                <td>
+                  <a class="ent" href={`/engineers/${e.engineerId}`}>{e.engineerName}</a>
+                  {e.engineerAka && <span class="nat">"{e.engineerAka}"</span>}
+                </td>
+                <td><a class="dim-link" href={`/driver?d=${e.driverId}`}>{e.driverName}</a></td>
+                <td class="yrs">{e.fromYear === e.toYear ? e.fromYear : e.toYear === null ? `${e.fromYear}–present` : `${e.fromYear}–${e.toYear}`}</td>
+              </tr>
+            ))}
+          </tbody>
+        </table>
+      </div>
+    </>
+  )}
 
   <div id="team-ad-slot" data-ad-slot></div>
 </section>
@@ -142,5 +171,8 @@ const STATS = [
   .ent:hover { text-decoration: underline; }
   .nat { color: #6b6b70; font-size: 12px; margin-left: 8px; white-space: nowrap; }
   tr.champ { background: #fbf3d0; }
+  tr.cur-eng td { background: #fbf3d0; }
+  .dim-link { color: #6b6b70; text-decoration: none; }
+  .dim-link:hover { color: #16161a; text-decoration: underline; }
   @media (max-width: 560px) { .stats { grid-template-columns: repeat(3, 1fr); } }
 </style>

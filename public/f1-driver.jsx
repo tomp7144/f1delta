@@ -118,6 +118,17 @@ function Styles() {
       .dp .foot{font-family:var(--mono);font-size:10px;color:var(--faint);text-align:center;padding:24px 0 32px}
       .dp .foot b{color:var(--dim)}
       @media (min-width:560px){.dp .id .code,.dp .id h1{font-size:42px}.dp tbody td{font-size:13px;padding:10px 11px}.dp thead th{padding:10px 11px}}
+      .dp .eng-card{padding:12px 14px}
+      .dp .eng-cur{border-left:3px solid var(--red);padding-left:10px;margin-bottom:2px}
+      .dp .eng-name{font-family:var(--body);font-size:13px;color:var(--ink);font-weight:600}
+      .dp .eng-name:hover{color:var(--red)}
+      .dp .eng-meta{font-family:var(--mono);font-size:11px;color:var(--dim);display:block;margin-top:2px}
+      .dp .eng-meta a{color:var(--dim)}
+      .dp .eng-meta a:hover{color:var(--ink)}
+      .dp .eng-note{font-family:var(--body);font-size:12px;color:var(--faint);font-style:italic;display:block;margin-top:5px}
+      .dp .eng-past{margin-top:10px;border-top:1px solid var(--line);padding-top:8px}
+      .dp .eng-past-row{padding:5px 0;border-bottom:1px solid var(--line2)}
+      .dp .eng-past-row:last-child{border-bottom:none}
     `}</style>
   );
 }
@@ -126,7 +137,7 @@ function TopBar() {
   return (
     <div className="top"><div className="wrap">
       <a className="brand" href="/">F1<svg className="d" width="11" height="10" viewBox="0 0 100 86"><path d="M50 4 L97 82 L3 82 Z" fill="currentColor"/></svg>DELTA</a>
-      <nav className="topnav"><a href="/drivers" className="on">Drivers</a><a href="/#standings">Standings</a><a href="/records">Records</a><a href="/teams">Teams</a><a href="/pro">Pro</a></nav>
+      <nav className="topnav"><a href="/drivers" className="on">Drivers</a><a href="/#standings">Standings</a><a href="/records">Records</a><a href="/teams">Teams</a><a href="/engineers">Engineers</a><a href="/pro">Pro</a></nav>
     </div></div>
   );
 }
@@ -246,6 +257,45 @@ function GhostRow() {
   );
 }
 
+function EngineerSection({ engineer }) {
+  if (!engineer) return null;
+  const { current, past } = engineer;
+  if (!current && (!past || past.length === 0)) return null;
+  return (
+    <section>
+      <div className="sec-h"><h2>Race engineer</h2></div>
+      <div className="card eng-card">
+        {current && (
+          <div className="eng-cur">
+            <a className="eng-name" href={`/engineers/${current.engineerId}`}>
+              {current.engineerName}{current.engineerAka ? ` “${current.engineerAka}”` : ""}
+            </a>
+            <span className="eng-meta">
+              <a href={`/teams/${current.teamId}`}>{current.teamName}</a>{" · since "}{current.fromYear}
+            </span>
+            {current.notes && <span className="eng-note">{current.notes}</span>}
+          </div>
+        )}
+        {past && past.length > 0 && (
+          <div className="eng-past">
+            {past.map((p, i) => (
+              <div className="eng-past-row" key={i}>
+                <a className="eng-name" href={`/engineers/${p.engineerId}`}>
+                  {p.engineerName}{p.engineerAka ? ` “${p.engineerAka}”` : ""}
+                </a>
+                <span className="eng-meta">
+                  <a href={`/teams/${p.teamId}`}>{p.teamName}</a>
+                  {" · "}{p.fromYear === p.toYear ? p.fromYear : `${p.fromYear}–${p.toYear}`}
+                </span>
+              </div>
+            ))}
+          </div>
+        )}
+      </div>
+    </section>
+  );
+}
+
 function H2HGate({ d }) {
   const teaser = d.teammateTeaser;
   const more = Math.max(0, (d.teammateCount || 1) - 1);
@@ -306,6 +356,7 @@ function DriverPage() {
           <Identity d={d} />
           <div className="wrap">
             <CareerTable d={d} />
+            <EngineerSection engineer={d.engineer} />
             {!d.pro && <div className="adslot"><span>Advertisement</span></div>}
             {d.pro ? <H2HPro d={d} /> : <H2HGate d={d} />}
             <div className="foot">F1 <b>Δ</b> DELTA · data via F1DB · unofficial</div>

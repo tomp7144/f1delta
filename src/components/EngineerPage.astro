@@ -1,0 +1,128 @@
+---
+// EngineerPage.astro — one engineer's career timeline. Fully static, sortable table.
+import SiteNav from "./SiteNav.astro";
+const { eng } = Astro.props;
+const { id, name, aka, status, pairings } = eng;
+
+// Newest-first for the career table
+const sorted = [...pairings].sort((a, b) => (b.fromYear ?? 0) - (a.fromYear ?? 0));
+const current = pairings.find((p) => p.toYear === null) ?? null;
+
+function yrs(p: { fromYear: number | null; toYear: number | null }) {
+  if (p.fromYear == null) return "—";
+  if (p.toYear === null) return `${p.fromYear}–present`;
+  if (p.fromYear === p.toYear) return String(p.fromYear);
+  return `${p.fromYear}–${p.toYear}`;
+}
+
+const statusLabel: Record<string, string> = { active: "Active", retired: "Retired", unknown: "" };
+const statusClass: Record<string, string> = { active: "st-active", retired: "st-retired", unknown: "st-unknown" };
+---
+
+<SiteNav current="engineers" />
+<section class="eng">
+  <a class="back" href="/engineers">← All engineers</a>
+
+  <div class="header">
+    <h1>{name}{aka && <span class="aka"> "{aka}"</span>}</h1>
+    {status && status !== "unknown" && (
+      <span class={`status ${statusClass[status] ?? ""}`}>{statusLabel[status] ?? status}</span>
+    )}
+  </div>
+
+  {current && (
+    <div class="current-card">
+      <span class="cur-label">Current</span>
+      <span class="cur-body">
+        <a class="cur-driver" href={`/driver?d=${current.driverId}`}>{current.driverName}</a>
+        {" · "}
+        <a class="cur-team" href={`/teams/${current.teamId}`}>{current.teamName}</a>
+        {" · since "}
+        <span class="cur-year">{current.fromYear}</span>
+      </span>
+    </div>
+  )}
+
+  <h2>Career timeline <span class="count">({pairings.length})</span></h2>
+  <div class="card">
+    <table data-record-table>
+      <thead>
+        <tr>
+          <th data-sort="driver" data-type="text">Driver</th>
+          <th data-sort="team" data-type="text">Team</th>
+          <th data-sort="from" data-type="num" aria-sort="descending">Years</th>
+        </tr>
+      </thead>
+      <tbody>
+        {sorted.map((p) => {
+          const isCurrent = p.toYear === null;
+          return (
+            <>
+              <tr class={isCurrent ? "cur-row" : undefined}
+                  data-driver={p.driverName} data-team={p.teamName} data-from={p.fromYear ?? 0}>
+                <td><a class="ent" href={`/driver?d=${p.driverId}`}>{p.driverName}</a></td>
+                <td><a class="team-link" href={`/teams/${p.teamId}`}>{p.teamName}</a></td>
+                <td class="yrs">{yrs(p)}</td>
+              </tr>
+              {p.notes && (
+                <tr class={isCurrent ? "cur-row note-row" : "note-row"}>
+                  <td colspan="3" class="note">{p.notes}</td>
+                </tr>
+              )}
+            </>
+          );
+        })}
+      </tbody>
+    </table>
+  </div>
+</section>
+
+<style>
+  .eng { max-width: 760px; margin: 0 auto; padding: 28px 20px;
+    font-family: system-ui, -apple-system, "Segoe UI", Roboto, sans-serif; color: #16161a; }
+  .back { color: #6b6b70; font-size: 13px; text-decoration: none; }
+  .back:hover { color: #16161a; }
+
+  .header { display: flex; align-items: baseline; gap: 12px; margin: 10px 0 6px; flex-wrap: wrap; }
+  .eng h1 { font-size: 30px; font-weight: 700; margin: 0; letter-spacing: -.02em; }
+  .aka { color: #6b6b70; font-style: italic; font-weight: 400; font-size: 22px; }
+  .status { font-size: 11px; font-weight: 600; text-transform: uppercase; letter-spacing: .06em;
+    padding: 3px 8px; border-radius: 4px; }
+  .st-active  { background: #e8f5ec; color: #2a7a3b; }
+  .st-retired { background: #f0f0f0; color: #6b6b70; }
+  .st-unknown { background: #f5f5f5; color: #9a9a9e; }
+
+  .current-card { background: #fff; border: 1px solid #e4e4df; border-left: 3px solid #e10600;
+    border-radius: 6px; padding: 12px 16px; margin: 16px 0 24px; font-size: 14px; }
+  .cur-label { font-size: 10px; font-weight: 700; text-transform: uppercase; letter-spacing: .08em;
+    color: #e10600; margin-right: 10px; }
+  .cur-driver { color: #16161a; font-weight: 600; text-decoration: none; }
+  .cur-driver:hover { text-decoration: underline; }
+  .cur-team { color: #6b6b70; text-decoration: none; }
+  .cur-team:hover { color: #16161a; text-decoration: underline; }
+  .cur-year { font-variant-numeric: tabular-nums; font-weight: 600; }
+
+  .eng h2 { font-size: 18px; font-weight: 700; margin: 0 0 10px;
+    border-left: 3px solid #e10600; padding-left: 10px; }
+  .count { color: #9a9a9e; font-weight: 500; font-size: 15px; }
+
+  .card { background: #fff; border: 1px solid #e4e4df; border-radius: 8px; overflow: hidden; }
+  table { width: 100%; border-collapse: collapse; font-size: 14px; }
+  th { text-align: left; padding: 8px 12px; font-size: 11px; font-weight: 600; color: #6b6b70;
+    text-transform: uppercase; letter-spacing: .04em; border-bottom: 2px solid #e4e4df;
+    cursor: pointer; user-select: none; white-space: nowrap; }
+  th:focus-visible { outline: 2px solid #e10600; outline-offset: -2px; }
+  th[aria-sort="ascending"]::after  { content: " \25B2"; }
+  th[aria-sort="descending"]::after { content: " \25BC"; }
+  td { padding: 8px 12px; border-bottom: 1px solid #e4e4df; vertical-align: top; }
+
+  .ent { color: #16161a; text-decoration: none; font-weight: 500; }
+  .ent:hover { text-decoration: underline; }
+  .team-link { color: #6b6b70; text-decoration: none; }
+  .team-link:hover { color: #16161a; text-decoration: underline; }
+  .yrs { color: #6b6b70; font-variant-numeric: tabular-nums; white-space: nowrap; }
+
+  tr.cur-row td { background: #fbf3d0; }
+  .note-row td { border-top: none; }
+  .note { font-size: 12px; color: #6b6b70; font-style: italic; padding-top: 2px; padding-bottom: 10px; }
+</style>

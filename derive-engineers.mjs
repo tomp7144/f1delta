@@ -107,6 +107,7 @@ async function main() {
         ? (driverName.get(currentPairing.driverId) ?? currentPairing.driverId)
         : null,
       currentTeamId:     currentPairing?.teamId ?? null,
+      currentFromYear:   currentPairing?.fromYear ?? null,
     });
 
     // Reverse-lookup: contribute to by-driver map
@@ -141,6 +142,27 @@ async function main() {
   // Write by-driver reverse lookup
   const byDriverObj = Object.fromEntries(byDriver.entries());
   await writeFile(path.join(OUT_DIR, "by-driver.json"), JSON.stringify(byDriverObj));
+
+  // Write by-team reverse lookup: teamId -> [{ engineerId, engineerName, engineerAka, driverId, driverName, fromYear, toYear, notes }]
+  const byTeam = new Map();
+  for (const eng of source) {
+    for (const p of eng.pairings) {
+      if (!byTeam.has(p.teamId)) byTeam.set(p.teamId, []);
+      byTeam.get(p.teamId).push({
+        engineerId:   eng.id,
+        engineerName: eng.name,
+        engineerAka:  eng.aka ?? null,
+        driverId:     p.driverId,
+        driverName:   driverName.get(p.driverId) ?? p.driverId,
+        fromYear:     p.fromYear,
+        toYear:       p.toYear ?? null,
+        notes:        p.notes ?? null,
+      });
+    }
+  }
+  // Sort each team's list newest-first
+  for (const list of byTeam.values()) list.sort((a, b) => (b.fromYear ?? 0) - (a.fromYear ?? 0));
+  await writeFile(path.join(OUT_DIR, "by-team.json"), JSON.stringify(Object.fromEntries(byTeam.entries())));
 
   console.log(`Derived ${indexList.length} engineer file(s) -> ${OUT_DIR}`);
   if (warnings.length) console.warn(`⚠️  ${warnings.length} validation warning(s) — see above.`);
