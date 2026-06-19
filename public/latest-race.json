@@ -1,6 +1,6 @@
 {
   "session": {
-    "name": "Barcelona Grand Prix",
+    "name": "Spain GP",
     "country": "Spain",
     "round": 7,
     "date": "2026-06-14",
@@ -274,5 +274,5 @@
       "dnf": true
     }
   ],
-  "baked": "2026-06-18T22:56:32.298Z"
+  "baked": "2026-06-19T04:23:28.650Z"
 }
