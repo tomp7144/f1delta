@@ -1,11 +1,28 @@
 ---
-// src/pages/engineers/index.astro — the /engineers index. Static.
+// src/pages/engineers/index.astro — /engineers hub, static. Now reads data/people/engineers.json.
 export const prerender = true;
 import fs from "node:fs";
 import path from "node:path";
 import EngineersHub from "../../components/EngineersHub.astro";
 
-const index = JSON.parse(fs.readFileSync(path.resolve("./data/engineers/index.json"), "utf8"));
+const PEOPLE_DIR = path.resolve("./data/people");
+const engData = JSON.parse(fs.readFileSync(path.join(PEOPLE_DIR, "engineers.json"), "utf8"));
+
+// Enrich each summary with current-pairing info (not stored in the view file).
+const engineers = engData.people.map((e: any) => {
+  const full = JSON.parse(fs.readFileSync(path.join(PEOPLE_DIR, `${e.id}.json`), "utf8"));
+  const reRoles = full.roles.filter((r: any) => r.type === "race-engineer");
+  const current = reRoles.find((r: any) => r.toYear === null) ?? null;
+  return {
+    ...e,
+    pairingsCount:     reRoles.length,
+    currentDriverId:   current?.driverId   ?? null,
+    currentDriverName: current?.driverName ?? null,
+    currentTeamId:     current?.teamId     ?? null,
+    currentTeamName:   current?.teamName   ?? null,
+    currentFromYear:   current?.fromYear   ?? null,
+  };
+});
 ---
 
 <!doctype html>
@@ -18,7 +35,7 @@ const index = JSON.parse(fs.readFileSync(path.resolve("./data/engineers/index.js
     <link rel="canonical" href="https://f1delta.com/engineers" />
   </head>
   <body style="margin:0;background:#f4f4f1">
-    <EngineersHub index={index} />
+    <EngineersHub engineers={engineers} />
     <script src="/f1-records.js" defer></script>
   </body>
 </html>

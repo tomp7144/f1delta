@@ -1,8 +1,7 @@
 ---
 // EngineersHub.astro — the /engineers index, fully static + sortable via /f1-records.js.
 import SiteNav from "./SiteNav.astro";
-const { index } = Astro.props;
-const engineers = index.engineers;
+const { engineers } = Astro.props;
 ---
 
 <SiteNav current="engineers" />
@@ -22,12 +21,12 @@ const engineers = index.engineers;
         </tr>
       </thead>
       <tbody>
-        {engineers.map((e) => (
+        {engineers.map((e: any) => (
           <tr data-name={e.name} data-driver={e.currentDriverName ?? ""}
               data-team={e.currentTeamId ?? ""} data-since={e.currentFromYear ?? 0}
               data-pairings={e.pairingsCount}>
             <td>
-              <a class="ent" href={`/engineers/${e.id}`}>{e.name}</a>
+              <a class="ent" href={`/people/${e.id}`}>{e.name}</a>
               {e.aka && <span class="aka">"{e.aka}"</span>}
             </td>
             <td>{e.currentDriverName
@@ -35,7 +34,7 @@ const engineers = index.engineers;
               : <span class="muted">—</span>}
             </td>
             <td>{e.currentTeamId
-              ? <a class="dim-link" href={`/teams/${e.currentTeamId}`}>{e.currentTeamId.replace(/-/g, ' ').replace(/\b\w/g, (c) => c.toUpperCase())}</a>
+              ? <a class="dim-link" href={`/teams/${e.currentTeamId}`}>{e.currentTeamName ?? e.currentTeamId}</a>
               : <span class="muted">—</span>}
             </td>
             <td class="num">{e.currentFromYear ?? "—"}</td>
