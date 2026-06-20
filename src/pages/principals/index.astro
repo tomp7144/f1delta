@@ -1,0 +1,40 @@
+---
+// src/pages/principals/index.astro — /principals hub. Static.
+export const prerender = true;
+import fs from "node:fs";
+import path from "node:path";
+import PeopleHub from "../../components/PeopleHub.astro";
+
+const PEOPLE_DIR = path.resolve("./data/people");
+const data = JSON.parse(fs.readFileSync(path.join(PEOPLE_DIR, "principals.json"), "utf8"));
+
+// Enrich each summary with their team(s) and last year (for display).
+const people = data.people.map((p: any) => {
+  const full = JSON.parse(fs.readFileSync(path.join(PEOPLE_DIR, `${p.id}.json`), "utf8"));
+  const tpRoles = full.roles.filter((r: any) => r.type === "team-principal");
+  const teams   = [...new Set(tpRoles.map((r: any) => r.teamName as string))];
+  const lastYear = tpRoles.every((r: any) => r.toYear === null) ? null
+    : Math.max(...tpRoles.map((r: any) => r.toYear ?? 0).filter((y: number) => y > 0));
+  return { ...p, teams, lastYear };
+});
+---
+
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>F1 Team Principals | f1delta</title>
+    <meta name="description" content="Every Formula 1 team principal — current and historical, across all constructors." />
+    <link rel="canonical" href="https://f1delta.com/principals" />
+  </head>
+  <body style="margin:0;background:#f4f4f1">
+    <PeopleHub
+      people={people}
+      title="Team Principals"
+      lede="Every Formula 1 team principal — current and historical."
+      navCurrent="principals"
+    />
+    <script src="/f1-records.js" defer></script>
+  </body>
+</html>

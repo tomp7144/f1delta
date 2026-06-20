@@ -1,0 +1,41 @@
+{
+  "id": "bryan-bozzi",
+  "name": "Bryan Bozzi",
+  "aka": null,
+  "status": "active",
+  "engineerLabel": "active",
+  "roleTypes": [
+    "race-engineer"
+  ],
+  "isDriverEntity": false,
+  "totals": {
+    "seasons": 3,
+    "drivers": 1,
+    "races": 54,
+    "wins": 3,
+    "podiums": 22,
+    "poles": 4,
+    "championships": 0
+  },
+  "roles": [
+    {
+      "type": "race-engineer",
+      "teamId": "ferrari",
+      "teamName": "Ferrari",
+      "fromYear": 2024,
+      "toYear": null,
+      "notes": "Promoted from performance engineer after Xavier Marcos Padros departed (mid-2024).",
+      "driverId": "charles-leclerc",
+      "driverName": "Charles Leclerc",
+      "stats": {
+        "races": 54,
+        "wins": 3,
+        "podiums": 22,
+        "poles": 4,
+        "championships": 0,
+        "dataWarning": "Role may not have been exclusively race engineer — see notes."
+      }
+    }
+  ],
+  "updated": "2026-06-20"
+}

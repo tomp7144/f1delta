@@ -1,0 +1,39 @@
+---
+// src/pages/people/[id].astro — canonical person page (race engineers, team principals, technical directors).
+export const prerender = true;
+import fs from "node:fs";
+import path from "node:path";
+import PersonPage from "../../components/PersonPage.astro";
+
+export function getStaticPaths() {
+  const DIR = path.resolve("./data/people");
+  const index = JSON.parse(fs.readFileSync(path.join(DIR, "index.json"), "utf8"));
+  return index.people.map((p: any) => ({
+    params: { id: p.id },
+    props: { person: JSON.parse(fs.readFileSync(path.join(DIR, `${p.id}.json`), "utf8")) },
+  }));
+}
+
+const { person } = Astro.props;
+const displayName = person.aka ? `${person.name} ("${person.aka}")` : person.name;
+const isEngineer  = person.roleTypes.includes("race-engineer");
+const isTP        = person.roleTypes.includes("team-principal");
+const titleRole   = isEngineer ? "Race Engineer" : isTP ? "Team Principal" : "Technical Director";
+const title = `${person.name} — F1 ${titleRole} | f1delta`;
+const desc = `${displayName}: full F1 career history across all roles.`;
+---
+
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>{title}</title>
+    <meta name="description" content={desc} />
+    <link rel="canonical" href={`https://f1delta.com/people/${person.id}`} />
+  </head>
+  <body style="margin:0;background:#f4f4f1">
+    <PersonPage person={person} />
+    <script src="/f1-records.js" defer></script>
+  </body>
+</html>

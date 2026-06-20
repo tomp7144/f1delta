@@ -1,0 +1,40 @@
+{
+  "id": "stuart-barlow",
+  "name": "Stuart Barlow",
+  "aka": null,
+  "status": "active",
+  "engineerLabel": "active",
+  "roleTypes": [
+    "race-engineer"
+  ],
+  "isDriverEntity": false,
+  "totals": {
+    "seasons": 2,
+    "drivers": 1,
+    "races": 24,
+    "wins": 0,
+    "podiums": 0,
+    "poles": 0,
+    "championships": 0
+  },
+  "roles": [
+    {
+      "type": "race-engineer",
+      "teamId": "alpine",
+      "teamName": "Alpine",
+      "fromYear": 2025,
+      "toYear": null,
+      "notes": "Promoted to the role early in the 2025 season.",
+      "driverId": "franco-colapinto",
+      "driverName": "Franco Colapinto",
+      "stats": {
+        "races": 24,
+        "wins": 0,
+        "podiums": 0,
+        "poles": 0,
+        "championships": 0
+      }
+    }
+  ],
+  "updated": "2026-06-20"
+}

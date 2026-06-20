@@ -1,0 +1,31 @@
+{
+  "id": "frank-williams",
+  "name": "Frank Williams",
+  "aka": null,
+  "status": "former",
+  "engineerLabel": null,
+  "roleTypes": [
+    "team-principal"
+  ],
+  "isDriverEntity": false,
+  "totals": {
+    "seasons": 0,
+    "drivers": 0,
+    "races": 0,
+    "wins": 0,
+    "podiums": 0,
+    "poles": 0,
+    "championships": 0
+  },
+  "roles": [
+    {
+      "type": "team-principal",
+      "teamId": "williams",
+      "teamName": "Williams",
+      "fromYear": 1977,
+      "toYear": 2020,
+      "notes": "Claire Williams ran day-to-day as Deputy 2013–2020."
+    }
+  ],
+  "updated": "2026-06-20"
+}

@@ -1,0 +1,30 @@
+{
+  "id": "bob-bell",
+  "name": "Bob Bell",
+  "aka": null,
+  "status": "former",
+  "engineerLabel": null,
+  "roleTypes": [
+    "technical-director"
+  ],
+  "isDriverEntity": false,
+  "totals": {
+    "seasons": 0,
+    "drivers": 0,
+    "races": 0,
+    "wins": 0,
+    "podiums": 0,
+    "poles": 0,
+    "championships": 0
+  },
+  "roles": [
+    {
+      "type": "technical-director",
+      "teamId": "mercedes",
+      "teamName": "Mercedes",
+      "fromYear": 2010,
+      "toYear": 2013
+    }
+  ],
+  "updated": "2026-06-20"
+}

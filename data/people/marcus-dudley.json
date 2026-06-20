@@ -1,0 +1,40 @@
+{
+  "id": "marcus-dudley",
+  "name": "Marcus Dudley",
+  "aka": null,
+  "status": "active",
+  "engineerLabel": "active",
+  "roleTypes": [
+    "race-engineer"
+  ],
+  "isDriverEntity": false,
+  "totals": {
+    "seasons": 4,
+    "drivers": 1,
+    "races": 76,
+    "wins": 5,
+    "podiums": 17,
+    "poles": 8,
+    "championships": 0
+  },
+  "roles": [
+    {
+      "type": "race-engineer",
+      "teamId": "mercedes",
+      "teamName": "Mercedes",
+      "fromYear": 2023,
+      "toYear": null,
+      "notes": "Took over after Russell's first season at the team.",
+      "driverId": "george-russell",
+      "driverName": "George Russell",
+      "stats": {
+        "races": 76,
+        "wins": 5,
+        "podiums": 17,
+        "poles": 8,
+        "championships": 0
+      }
+    }
+  ],
+  "updated": "2026-06-20"
+}

@@ -1,0 +1,38 @@
+{
+  "id": "adrian-newey",
+  "name": "Adrian Newey",
+  "aka": null,
+  "status": "former",
+  "engineerLabel": null,
+  "roleTypes": [
+    "technical-director"
+  ],
+  "isDriverEntity": false,
+  "totals": {
+    "seasons": 0,
+    "drivers": 0,
+    "races": 0,
+    "wins": 0,
+    "podiums": 0,
+    "poles": 0,
+    "championships": 0
+  },
+  "roles": [
+    {
+      "type": "technical-director",
+      "teamId": "mclaren",
+      "teamName": "McLaren",
+      "fromYear": 1997,
+      "toYear": 2005
+    },
+    {
+      "type": "technical-director",
+      "teamId": "red-bull",
+      "teamName": "Red Bull",
+      "fromYear": 2006,
+      "toYear": 2024,
+      "title": "Chief Technical Officer"
+    }
+  ],
+  "updated": "2026-06-20"
+}

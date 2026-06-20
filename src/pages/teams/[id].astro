@@ -8,15 +8,15 @@ import TeamPage from "../../components/TeamPage.astro";
 export function getStaticPaths() {
   const DIR = path.resolve("./data/teams");
   const index = JSON.parse(fs.readFileSync(path.join(DIR, "index.json"), "utf8"));
-  const engByTeamPath = path.resolve("./data/engineers/by-team.json");
-  const engByTeam = fs.existsSync(engByTeamPath)
+  const engByTeamPath = path.resolve("./data/people/by-team.json");
+  const engByTeam: Record<string, any[]> = fs.existsSync(engByTeamPath)
     ? JSON.parse(fs.readFileSync(engByTeamPath, "utf8"))
     : {};
   return index.teams.map((t: any) => ({
     params: { id: t.id },
     props: {
       team: JSON.parse(fs.readFileSync(path.join(DIR, `${t.id}.json`), "utf8")),
-      engineers: engByTeam[t.id] ?? [],
+      engineers: (engByTeam[t.id] ?? []).filter((e: any) => e.type === "race-engineer"),
     },
   }));
 }

@@ -1,0 +1,31 @@
+{
+  "id": "marco-mattiacci",
+  "name": "Marco Mattiacci",
+  "aka": null,
+  "status": "former",
+  "engineerLabel": null,
+  "roleTypes": [
+    "team-principal"
+  ],
+  "isDriverEntity": false,
+  "totals": {
+    "seasons": 0,
+    "drivers": 0,
+    "races": 0,
+    "wins": 0,
+    "podiums": 0,
+    "poles": 0,
+    "championships": 0
+  },
+  "roles": [
+    {
+      "type": "team-principal",
+      "teamId": "ferrari",
+      "teamName": "Ferrari",
+      "fromYear": 2014,
+      "toYear": 2014,
+      "notes": "Mid-season tenure (April–November)."
+    }
+  ],
+  "updated": "2026-06-20"
+}

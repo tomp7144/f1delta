@@ -1,0 +1,41 @@
+{
+  "id": "alexandre-iliopoulos",
+  "name": "Alexandre Iliopoulos",
+  "aka": null,
+  "status": "active",
+  "engineerLabel": "active",
+  "roleTypes": [
+    "race-engineer"
+  ],
+  "isDriverEntity": false,
+  "totals": {
+    "seasons": 1,
+    "drivers": 1,
+    "races": 6,
+    "wins": 0,
+    "podiums": 0,
+    "poles": 0,
+    "championships": 0
+  },
+  "roles": [
+    {
+      "type": "race-engineer",
+      "teamId": "racing-bulls",
+      "teamName": "Racing Bulls",
+      "fromYear": 2026,
+      "toYear": null,
+      "notes": "Replaced Ernesto Desidero ahead of the 2026 season.",
+      "driverId": "liam-lawson",
+      "driverName": "Liam Lawson",
+      "stats": {
+        "races": 6,
+        "wins": 0,
+        "podiums": 0,
+        "poles": 0,
+        "championships": 0,
+        "dataWarning": "Role may not have been exclusively race engineer — see notes."
+      }
+    }
+  ],
+  "updated": "2026-06-20"
+}

@@ -1,0 +1,31 @@
+{
+  "id": "rob-marshall",
+  "name": "Rob Marshall",
+  "aka": null,
+  "status": "active",
+  "engineerLabel": null,
+  "roleTypes": [
+    "technical-director"
+  ],
+  "isDriverEntity": false,
+  "totals": {
+    "seasons": 0,
+    "drivers": 0,
+    "races": 0,
+    "wins": 0,
+    "podiums": 0,
+    "poles": 0,
+    "championships": 0
+  },
+  "roles": [
+    {
+      "type": "technical-director",
+      "teamId": "mclaren",
+      "teamName": "McLaren",
+      "fromYear": 2024,
+      "toYear": null,
+      "notes": "Split three-prong technical exec (with Peter Prodromou + a third member unnamed in source)."
+    }
+  ],
+  "updated": "2026-06-20"
+}

@@ -1,0 +1,73 @@
+{
+  "id": "peter-bonnington",
+  "name": "Peter Bonnington",
+  "aka": "Bono",
+  "status": "active",
+  "engineerLabel": "active",
+  "roleTypes": [
+    "race-engineer"
+  ],
+  "isDriverEntity": false,
+  "totals": {
+    "seasons": 16,
+    "drivers": 3,
+    "races": 315,
+    "wins": 89,
+    "podiums": 163,
+    "poles": 82,
+    "championships": 6
+  },
+  "roles": [
+    {
+      "type": "race-engineer",
+      "teamId": "mercedes",
+      "teamName": "Mercedes",
+      "fromYear": 2011,
+      "toYear": 2012,
+      "driverId": "michael-schumacher",
+      "driverName": "Michael Schumacher",
+      "stats": {
+        "races": 39,
+        "wins": 0,
+        "podiums": 1,
+        "poles": 0,
+        "championships": 0
+      }
+    },
+    {
+      "type": "race-engineer",
+      "teamId": "mercedes",
+      "teamName": "Mercedes",
+      "fromYear": 2013,
+      "toYear": 2024,
+      "notes": "Engineered Hamilton through six of his seven titles — one of the most storied pairings in F1.",
+      "driverId": "lewis-hamilton",
+      "driverName": "Lewis Hamilton",
+      "stats": {
+        "races": 246,
+        "wins": 84,
+        "podiums": 153,
+        "poles": 78,
+        "championships": 6
+      }
+    },
+    {
+      "type": "race-engineer",
+      "teamId": "mercedes",
+      "teamName": "Mercedes",
+      "fromYear": 2025,
+      "toYear": null,
+      "notes": "Took over Antonelli's car after over a decade with Hamilton.",
+      "driverId": "kimi-antonelli",
+      "driverName": "Kimi Antonelli",
+      "stats": {
+        "races": 30,
+        "wins": 5,
+        "podiums": 9,
+        "poles": 4,
+        "championships": 0
+      }
+    }
+  ],
+  "updated": "2026-06-20"
+}

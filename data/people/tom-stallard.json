@@ -1,0 +1,104 @@
+{
+  "id": "tom-stallard",
+  "name": "Tom Stallard",
+  "aka": null,
+  "status": "active",
+  "engineerLabel": "active",
+  "roleTypes": [
+    "race-engineer"
+  ],
+  "isDriverEntity": false,
+  "totals": {
+    "seasons": 13,
+    "drivers": 5,
+    "races": 258,
+    "wins": 10,
+    "podiums": 32,
+    "poles": 6,
+    "championships": 0
+  },
+  "roles": [
+    {
+      "type": "race-engineer",
+      "teamId": "mclaren",
+      "teamName": "McLaren",
+      "fromYear": 2014,
+      "toYear": 2016,
+      "driverId": "jenson-button",
+      "driverName": "Jenson Button",
+      "stats": {
+        "races": 59,
+        "wins": 0,
+        "podiums": 1,
+        "poles": 0,
+        "championships": 0
+      }
+    },
+    {
+      "type": "race-engineer",
+      "teamId": "mclaren",
+      "teamName": "McLaren",
+      "fromYear": 2017,
+      "toYear": 2018,
+      "driverId": "stoffel-vandoorne",
+      "driverName": "Stoffel Vandoorne",
+      "stats": {
+        "races": 41,
+        "wins": 0,
+        "podiums": 0,
+        "poles": 0,
+        "championships": 0
+      }
+    },
+    {
+      "type": "race-engineer",
+      "teamId": "mclaren",
+      "teamName": "McLaren",
+      "fromYear": 2019,
+      "toYear": 2020,
+      "driverId": "carlos-sainz-jr",
+      "driverName": "Carlos Sainz Jr.",
+      "stats": {
+        "races": 38,
+        "wins": 0,
+        "podiums": 2,
+        "poles": 0,
+        "championships": 0
+      }
+    },
+    {
+      "type": "race-engineer",
+      "teamId": "mclaren",
+      "teamName": "McLaren",
+      "fromYear": 2021,
+      "toYear": 2022,
+      "driverId": "daniel-ricciardo",
+      "driverName": "Daniel Ricciardo",
+      "stats": {
+        "races": 44,
+        "wins": 1,
+        "podiums": 1,
+        "poles": 0,
+        "championships": 0
+      }
+    },
+    {
+      "type": "race-engineer",
+      "teamId": "mclaren",
+      "teamName": "McLaren",
+      "fromYear": 2023,
+      "toYear": null,
+      "notes": "Known for a calm, measured communication style.",
+      "driverId": "oscar-piastri",
+      "driverName": "Oscar Piastri",
+      "stats": {
+        "races": 76,
+        "wins": 9,
+        "podiums": 28,
+        "poles": 6,
+        "championships": 0
+      }
+    }
+  ],
+  "updated": "2026-06-20"
+}

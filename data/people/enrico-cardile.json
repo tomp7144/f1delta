@@ -1,0 +1,30 @@
+{
+  "id": "enrico-cardile",
+  "name": "Enrico Cardile",
+  "aka": null,
+  "status": "former",
+  "engineerLabel": null,
+  "roleTypes": [
+    "technical-director"
+  ],
+  "isDriverEntity": false,
+  "totals": {
+    "seasons": 0,
+    "drivers": 0,
+    "races": 0,
+    "wins": 0,
+    "podiums": 0,
+    "poles": 0,
+    "championships": 0
+  },
+  "roles": [
+    {
+      "type": "technical-director",
+      "teamId": "ferrari",
+      "teamName": "Ferrari",
+      "fromYear": 2021,
+      "toYear": 2024
+    }
+  ],
+  "updated": "2026-06-20"
+}

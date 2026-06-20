@@ -1,0 +1,40 @@
+---
+// src/pages/technical-directors/index.astro — /technical-directors hub. Static.
+export const prerender = true;
+import fs from "node:fs";
+import path from "node:path";
+import PeopleHub from "../../components/PeopleHub.astro";
+
+const PEOPLE_DIR = path.resolve("./data/people");
+const data = JSON.parse(fs.readFileSync(path.join(PEOPLE_DIR, "technical-directors.json"), "utf8"));
+
+// Enrich each summary with their team(s) and last year (for display).
+const people = data.people.map((p: any) => {
+  const full = JSON.parse(fs.readFileSync(path.join(PEOPLE_DIR, `${p.id}.json`), "utf8"));
+  const tdRoles = full.roles.filter((r: any) => r.type === "technical-director");
+  const teams   = [...new Set(tdRoles.map((r: any) => r.teamName as string))];
+  const lastYear = tdRoles.every((r: any) => r.toYear === null) ? null
+    : Math.max(...tdRoles.map((r: any) => r.toYear ?? 0).filter((y: number) => y > 0));
+  return { ...p, teams, lastYear };
+});
+---
+
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>F1 Technical Directors | f1delta</title>
+    <meta name="description" content="Every Formula 1 technical director — current and historical, across all constructors." />
+    <link rel="canonical" href="https://f1delta.com/technical-directors" />
+  </head>
+  <body style="margin:0;background:#f4f4f1">
+    <PeopleHub
+      people={people}
+      title="Technical Directors"
+      lede="The engineers who shaped F1 car design — current and historical."
+      navCurrent="technical-directors"
+    />
+    <script src="/f1-records.js" defer></script>
+  </body>
+</html>

@@ -1,0 +1,1294 @@
+[
+  {
+    "id": "adrian-newey",
+    "name": "Adrian Newey",
+    "aka": null,
+    "roles": [
+      {
+        "type": "technical-director",
+        "teamId": "mclaren",
+        "fromYear": 1997,
+        "toYear": 2005
+      },
+      {
+        "type": "technical-director",
+        "teamId": "red-bull",
+        "fromYear": 2006,
+        "toYear": 2024,
+        "title": "Chief Technical Officer"
+      }
+    ]
+  },
+  {
+    "id": "aldo-costa",
+    "name": "Aldo Costa",
+    "aka": null,
+    "roles": [
+      {
+        "type": "technical-director",
+        "teamId": "ferrari",
+        "fromYear": 2007,
+        "toYear": 2011
+      }
+    ]
+  },
+  {
+    "id": "alexandre-iliopoulos",
+    "name": "Alexandre Iliopoulos",
+    "aka": null,
+    "roles": [
+      {
+        "type": "race-engineer",
+        "teamId": "racing-bulls",
+        "driverId": "liam-lawson",
+        "fromYear": 2026,
+        "toYear": null,
+        "notes": "Replaced Ernesto Desidero ahead of the 2026 season."
+      }
+    ]
+  },
+  {
+    "id": "alfred-neubauer",
+    "name": "Alfred Neubauer",
+    "aka": null,
+    "roles": [
+      {
+        "type": "team-principal",
+        "teamId": "mercedes",
+        "fromYear": 1954,
+        "toYear": 1955,
+        "notes": "Historic works era (pre-modern Mercedes)."
+      }
+    ]
+  },
+  {
+    "id": "andrea-stella",
+    "name": "Andrea Stella",
+    "aka": null,
+    "roles": [
+      {
+        "type": "race-engineer",
+        "teamId": "ferrari",
+        "driverId": "michael-schumacher",
+        "fromYear": 2002,
+        "toYear": 2006,
+        "notes": "Performance engineer under Chris Dyer during Schumacher's title run."
+      },
+      {
+        "type": "race-engineer",
+        "teamId": "ferrari",
+        "driverId": "kimi-raikkonen",
+        "fromYear": 2007,
+        "toYear": 2009
+      },
+      {
+        "type": "race-engineer",
+        "teamId": "ferrari",
+        "driverId": "fernando-alonso",
+        "fromYear": 2010,
+        "toYear": 2014
+      },
+      {
+        "type": "race-engineer",
+        "teamId": "mclaren",
+        "driverId": "fernando-alonso",
+        "fromYear": 2015,
+        "toYear": 2017,
+        "notes": "Followed Alonso to McLaren. Now McLaren Team Principal — may merge with the principals dataset later."
+      },
+      {
+        "type": "team-principal",
+        "teamId": "mclaren",
+        "fromYear": 2023,
+        "toYear": null
+      }
+    ]
+  },
+  {
+    "id": "andreas-seidl",
+    "name": "Andreas Seidl",
+    "aka": null,
+    "roles": [
+      {
+        "type": "team-principal",
+        "teamId": "mclaren",
+        "fromYear": 2019,
+        "toYear": 2022
+      }
+    ]
+  },
+  {
+    "id": "andrew-vizard",
+    "name": "Andrew Vizard",
+    "aka": null,
+    "roles": [
+      {
+        "type": "race-engineer",
+        "teamId": "aston-martin",
+        "driverId": "fernando-alonso",
+        "fromYear": 2025,
+        "toYear": null,
+        "notes": "Moved over from Lance Stroll's side of the garage."
+      }
+    ]
+  },
+  {
+    "id": "bob-bell",
+    "name": "Bob Bell",
+    "aka": null,
+    "roles": [
+      {
+        "type": "technical-director",
+        "teamId": "mercedes",
+        "fromYear": 2010,
+        "toYear": 2013
+      }
+    ]
+  },
+  {
+    "id": "bruce-mclaren",
+    "name": "Bruce McLaren",
+    "aka": null,
+    "roles": [
+      {
+        "type": "team-principal",
+        "teamId": "mclaren",
+        "fromYear": 1963,
+        "toYear": 1970,
+        "notes": "RECONCILE: also an F1DB driver + constructor — id must match his driver slug."
+      }
+    ]
+  },
+  {
+    "id": "bryan-bozzi",
+    "name": "Bryan Bozzi",
+    "aka": null,
+    "roles": [
+      {
+        "type": "race-engineer",
+        "teamId": "ferrari",
+        "driverId": "charles-leclerc",
+        "fromYear": 2024,
+        "toYear": null,
+        "notes": "Promoted from performance engineer after Xavier Marcos Padros departed (mid-2024)."
+      }
+    ]
+  },
+  {
+    "id": "carlo-pasetti",
+    "name": "Carlo Pasetti",
+    "aka": null,
+    "roles": [
+      {
+        "type": "race-engineer",
+        "teamId": "cadillac",
+        "driverId": "sergio-perez",
+        "fromYear": 2026,
+        "toYear": null,
+        "notes": "Reunited with Pérez upon Cadillac's entry."
+      }
+    ]
+  },
+  {
+    "id": "carlo-santi",
+    "name": "Carlo Santi",
+    "aka": null,
+    "roles": [
+      {
+        "type": "race-engineer",
+        "teamId": "ferrari",
+        "driverId": "lewis-hamilton",
+        "fromYear": 2026,
+        "toYear": null,
+        "notes": "Stepped in for Riccardo Adami; reportedly staying long-term. Hamilton calls him his \"Italian Bono.\""
+      }
+    ]
+  },
+  {
+    "id": "cesare-fiorio",
+    "name": "Cesare Fiorio",
+    "aka": null,
+    "roles": [
+      {
+        "type": "team-principal",
+        "teamId": "ferrari",
+        "fromYear": 1989,
+        "toYear": 1991
+      }
+    ]
+  },
+  {
+    "id": "christian-horner",
+    "name": "Christian Horner",
+    "aka": null,
+    "roles": [
+      {
+        "type": "team-principal",
+        "teamId": "red-bull",
+        "fromYear": 2005,
+        "toYear": 2025,
+        "notes": "Dismissed July 2025."
+      }
+    ]
+  },
+  {
+    "id": "enrico-cardile",
+    "name": "Enrico Cardile",
+    "aka": null,
+    "roles": [
+      {
+        "type": "technical-director",
+        "teamId": "ferrari",
+        "fromYear": 2021,
+        "toYear": 2024
+      }
+    ]
+  },
+  {
+    "id": "eric-boullier",
+    "name": "Eric Boullier",
+    "aka": null,
+    "roles": [
+      {
+        "type": "team-principal",
+        "teamId": "mclaren",
+        "fromYear": 2014,
+        "toYear": 2018,
+        "title": "Racing Director"
+      }
+    ]
+  },
+  {
+    "id": "francois-xavier-demaison",
+    "name": "François-Xavier Demaison",
+    "aka": null,
+    "roles": [
+      {
+        "type": "technical-director",
+        "teamId": "williams",
+        "fromYear": 2021,
+        "toYear": 2022
+      }
+    ]
+  },
+  {
+    "id": "frank-williams",
+    "name": "Frank Williams",
+    "aka": null,
+    "roles": [
+      {
+        "type": "team-principal",
+        "teamId": "williams",
+        "fromYear": 1977,
+        "toYear": 2020,
+        "notes": "Claire Williams ran day-to-day as Deputy 2013–2020."
+      }
+    ]
+  },
+  {
+    "id": "frederic-vasseur",
+    "name": "Frédéric Vasseur",
+    "aka": null,
+    "roles": [
+      {
+        "type": "team-principal",
+        "teamId": "ferrari",
+        "fromYear": 2023,
+        "toYear": null
+      }
+    ]
+  },
+  {
+    "id": "gaetan-jego",
+    "name": "Gaëtan Jego",
+    "aka": null,
+    "roles": [
+      {
+        "type": "race-engineer",
+        "teamId": "williams",
+        "driverId": "carlos-sainz-jr",
+        "fromYear": 2026,
+        "toYear": null
+      }
+    ]
+  },
+  {
+    "id": "gary-gannon",
+    "name": "Gary Gannon",
+    "aka": null,
+    "roles": [
+      {
+        "type": "race-engineer",
+        "teamId": "aston-martin",
+        "driverId": "lance-stroll",
+        "fromYear": 2020,
+        "toYear": null,
+        "notes": "One of the longest-running current pairings; together since the Racing Point era. (Start year approximate — confirm.)"
+      }
+    ]
+  },
+  {
+    "id": "gianpiero-lambiase",
+    "name": "Gianpiero Lambiase",
+    "aka": "GP",
+    "roles": [
+      {
+        "type": "race-engineer",
+        "teamId": "force-india",
+        "driverId": "giancarlo-fisichella",
+        "fromYear": 2008,
+        "toYear": 2009
+      },
+      {
+        "type": "race-engineer",
+        "teamId": "force-india",
+        "driverId": "vitantonio-liuzzi",
+        "fromYear": 2010,
+        "toYear": 2010
+      },
+      {
+        "type": "race-engineer",
+        "teamId": "force-india",
+        "driverId": "paul-di-resta",
+        "fromYear": 2011,
+        "toYear": 2013
+      },
+      {
+        "type": "race-engineer",
+        "teamId": "force-india",
+        "driverId": "sergio-perez",
+        "fromYear": 2014,
+        "toYear": 2014
+      },
+      {
+        "type": "race-engineer",
+        "teamId": "red-bull",
+        "driverId": "daniil-kvyat",
+        "fromYear": 2015,
+        "toYear": 2015
+      },
+      {
+        "type": "race-engineer",
+        "teamId": "red-bull",
+        "driverId": "max-verstappen",
+        "fromYear": 2016,
+        "toYear": null,
+        "notes": "Famously known as \"GP\" on the radio."
+      }
+    ]
+  },
+  {
+    "id": "gordon-coppuck",
+    "name": "Gordon Coppuck",
+    "aka": null,
+    "roles": [
+      {
+        "type": "technical-director",
+        "teamId": "mclaren",
+        "fromYear": 1972,
+        "toYear": 1979
+      }
+    ]
+  },
+  {
+    "id": "gordon-murray",
+    "name": "Gordon Murray",
+    "aka": null,
+    "roles": [
+      {
+        "type": "technical-director",
+        "teamId": "mclaren",
+        "fromYear": 1987,
+        "toYear": 1991
+      }
+    ]
+  },
+  {
+    "id": "harvey-postlethwaite",
+    "name": "Harvey Postlethwaite",
+    "aka": null,
+    "roles": [
+      {
+        "type": "technical-director",
+        "teamId": "ferrari",
+        "fromYear": 1981,
+        "toYear": 1987,
+        "confidence": "moderate",
+        "notes": "Exact title overlap uncertain."
+      },
+      {
+        "type": "technical-director",
+        "teamId": "ferrari",
+        "fromYear": 1992,
+        "toYear": 1993,
+        "confidence": "moderate"
+      }
+    ]
+  },
+  {
+    "id": "james-allison",
+    "name": "James Allison",
+    "aka": null,
+    "roles": [
+      {
+        "type": "technical-director",
+        "teamId": "ferrari",
+        "fromYear": 2013,
+        "toYear": 2016
+      },
+      {
+        "type": "technical-director",
+        "teamId": "mercedes",
+        "fromYear": 2017,
+        "toYear": 2021
+      },
+      {
+        "type": "technical-director",
+        "teamId": "mercedes",
+        "fromYear": 2023,
+        "toYear": null
+      }
+    ]
+  },
+  {
+    "id": "james-key",
+    "name": "James Key",
+    "aka": null,
+    "roles": [
+      {
+        "type": "technical-director",
+        "teamId": "mclaren",
+        "fromYear": 2019,
+        "toYear": 2023
+      }
+    ]
+  },
+  {
+    "id": "james-urwin",
+    "name": "James Urwin",
+    "aka": null,
+    "roles": [
+      {
+        "type": "race-engineer",
+        "teamId": "williams",
+        "driverId": "alexander-albon",
+        "fromYear": 2022,
+        "toYear": null,
+        "notes": "Longest current partnership at Williams."
+      }
+    ]
+  },
+  {
+    "id": "james-vowles",
+    "name": "James Vowles",
+    "aka": null,
+    "roles": [
+      {
+        "type": "team-principal",
+        "teamId": "williams",
+        "fromYear": 2023,
+        "toYear": null
+      }
+    ]
+  },
+  {
+    "id": "jean-todt",
+    "name": "Jean Todt",
+    "aka": null,
+    "roles": [
+      {
+        "type": "team-principal",
+        "teamId": "ferrari",
+        "fromYear": 1993,
+        "toYear": 2007
+      }
+    ]
+  },
+  {
+    "id": "jock-clear",
+    "name": "Jock Clear",
+    "aka": null,
+    "roles": [
+      {
+        "type": "race-engineer",
+        "teamId": "williams",
+        "driverId": "david-coulthard",
+        "fromYear": 1995,
+        "toYear": 1995
+      },
+      {
+        "type": "race-engineer",
+        "teamId": "williams",
+        "driverId": "jacques-villeneuve",
+        "fromYear": 1996,
+        "toYear": 1998,
+        "notes": "Won the 1997 World Championship together."
+      },
+      {
+        "type": "race-engineer",
+        "teamId": "bar",
+        "driverId": "jacques-villeneuve",
+        "fromYear": 1999,
+        "toYear": 2003,
+        "notes": "Followed Villeneuve to the new BAR team."
+      },
+      {
+        "type": "race-engineer",
+        "teamId": "bar",
+        "driverId": "takuma-sato",
+        "fromYear": 2004,
+        "toYear": 2005
+      },
+      {
+        "type": "race-engineer",
+        "teamId": "honda",
+        "driverId": "rubens-barrichello",
+        "fromYear": 2006,
+        "toYear": 2008
+      },
+      {
+        "type": "race-engineer",
+        "teamId": "brawn",
+        "driverId": "rubens-barrichello",
+        "fromYear": 2009,
+        "toYear": 2009,
+        "notes": "Stayed through the Honda → Brawn transition."
+      },
+      {
+        "type": "race-engineer",
+        "teamId": "mercedes",
+        "driverId": "michael-schumacher",
+        "fromYear": 2010,
+        "toYear": 2010
+      },
+      {
+        "type": "race-engineer",
+        "teamId": "ferrari",
+        "driverId": "charles-leclerc",
+        "fromYear": 2019,
+        "toYear": 2022,
+        "notes": "Operated as a hybrid driver coach / race engineer."
+      }
+    ]
+  },
+  {
+    "id": "john-barnard",
+    "name": "John Barnard",
+    "aka": null,
+    "roles": [
+      {
+        "type": "technical-director",
+        "teamId": "mclaren",
+        "fromYear": 1980,
+        "toYear": 1986
+      },
+      {
+        "type": "technical-director",
+        "teamId": "ferrari",
+        "fromYear": 1988,
+        "toYear": 1989,
+        "notes": "Chief Designer acting as technical head."
+      },
+      {
+        "type": "technical-director",
+        "teamId": "ferrari",
+        "fromYear": 1993,
+        "toYear": 1997
+      }
+    ]
+  },
+  {
+    "id": "john-howard",
+    "name": "John Howard",
+    "aka": null,
+    "roles": [
+      {
+        "type": "race-engineer",
+        "teamId": "cadillac",
+        "driverId": "valtteri-bottas",
+        "fromYear": 2026,
+        "toYear": null,
+        "notes": "Left Alpine (formerly Gasly's engineer) to join Cadillac."
+      }
+    ]
+  },
+  {
+    "id": "jose-manuel-lopez",
+    "name": "Jose Manuel López",
+    "aka": null,
+    "roles": [
+      {
+        "type": "race-engineer",
+        "teamId": "audi",
+        "driverId": "gabriel-bortoleto",
+        "fromYear": 2026,
+        "toYear": null
+      }
+    ]
+  },
+  {
+    "id": "josh-peckett",
+    "name": "Josh Peckett",
+    "aka": null,
+    "roles": [
+      {
+        "type": "race-engineer",
+        "teamId": "alpine",
+        "driverId": "pierre-gasly",
+        "fromYear": 2026,
+        "toYear": null,
+        "notes": "Shuffled across the garage from Ocon's former side."
+      }
+    ]
+  },
+  {
+    "id": "jost-capito",
+    "name": "Jost Capito",
+    "aka": null,
+    "roles": [
+      {
+        "type": "team-principal",
+        "teamId": "williams",
+        "fromYear": 2021,
+        "toYear": 2022
+      }
+    ]
+  },
+  {
+    "id": "laura-muller",
+    "name": "Laura Müller",
+    "aka": null,
+    "roles": [
+      {
+        "type": "race-engineer",
+        "teamId": "haas",
+        "driverId": "esteban-ocon",
+        "fromYear": 2025,
+        "toYear": null,
+        "notes": "F1's first full-time female race engineer."
+      }
+    ]
+  },
+  {
+    "id": "laurent-mekies",
+    "name": "Laurent Mekies",
+    "aka": null,
+    "roles": [
+      {
+        "type": "team-principal",
+        "teamId": "red-bull",
+        "fromYear": 2025,
+        "toYear": null,
+        "notes": "Replaced Horner mid-2025."
+      }
+    ]
+  },
+  {
+    "id": "loic-serra",
+    "name": "Loïc Serra",
+    "aka": null,
+    "roles": [
+      {
+        "type": "technical-director",
+        "teamId": "ferrari",
+        "fromYear": 2025,
+        "toYear": null
+      }
+    ]
+  },
+  {
+    "id": "luca-di-montezemolo",
+    "name": "Luca di Montezemolo",
+    "aka": null,
+    "roles": [
+      {
+        "type": "team-principal",
+        "teamId": "ferrari",
+        "fromYear": 1974,
+        "toYear": 1975
+      }
+    ]
+  },
+  {
+    "id": "marco-mattiacci",
+    "name": "Marco Mattiacci",
+    "aka": null,
+    "roles": [
+      {
+        "type": "team-principal",
+        "teamId": "ferrari",
+        "fromYear": 2014,
+        "toYear": 2014,
+        "notes": "Mid-season tenure (April–November)."
+      }
+    ]
+  },
+  {
+    "id": "marco-piccinini",
+    "name": "Marco Piccinini",
+    "aka": null,
+    "roles": [
+      {
+        "type": "team-principal",
+        "teamId": "ferrari",
+        "fromYear": 1978,
+        "toYear": 1988
+      }
+    ]
+  },
+  {
+    "id": "marcus-dudley",
+    "name": "Marcus Dudley",
+    "aka": null,
+    "roles": [
+      {
+        "type": "race-engineer",
+        "teamId": "mercedes",
+        "driverId": "george-russell",
+        "fromYear": 2023,
+        "toYear": null,
+        "notes": "Took over after Russell's first season at the team."
+      }
+    ]
+  },
+  {
+    "id": "mark-smith",
+    "name": "Mark Smith",
+    "aka": null,
+    "roles": [
+      {
+        "type": "technical-director",
+        "teamId": "red-bull",
+        "fromYear": 2005,
+        "toYear": 2005,
+        "confidence": "moderate",
+        "notes": "Transition year from Jaguar."
+      }
+    ]
+  },
+  {
+    "id": "martin-whitmarsh",
+    "name": "Martin Whitmarsh",
+    "aka": null,
+    "roles": [
+      {
+        "type": "team-principal",
+        "teamId": "mclaren",
+        "fromYear": 2009,
+        "toYear": 2013
+      }
+    ]
+  },
+  {
+    "id": "mattia-binotto",
+    "name": "Mattia Binotto",
+    "aka": null,
+    "roles": [
+      {
+        "type": "technical-director",
+        "teamId": "ferrari",
+        "fromYear": 2016,
+        "toYear": 2018
+      },
+      {
+        "type": "team-principal",
+        "teamId": "ferrari",
+        "fromYear": 2019,
+        "toYear": 2022
+      }
+    ]
+  },
+  {
+    "id": "maurizio-arrivabene",
+    "name": "Maurizio Arrivabene",
+    "aka": null,
+    "roles": [
+      {
+        "type": "team-principal",
+        "teamId": "ferrari",
+        "fromYear": 2015,
+        "toYear": 2018
+      }
+    ]
+  },
+  {
+    "id": "mauro-forghieri",
+    "name": "Mauro Forghieri",
+    "aka": null,
+    "roles": [
+      {
+        "type": "technical-director",
+        "teamId": "ferrari",
+        "fromYear": 1963,
+        "toYear": 1987,
+        "notes": "Dominated Ferrari's early engineering eras."
+      }
+    ]
+  },
+  {
+    "id": "mike-coughlan",
+    "name": "Mike Coughlan",
+    "aka": null,
+    "roles": [
+      {
+        "type": "technical-director",
+        "teamId": "williams",
+        "fromYear": 2011,
+        "toYear": 2013
+      }
+    ]
+  },
+  {
+    "id": "mike-elliott",
+    "name": "Mike Elliott",
+    "aka": null,
+    "roles": [
+      {
+        "type": "technical-director",
+        "teamId": "mercedes",
+        "fromYear": 2021,
+        "toYear": 2023
+      }
+    ]
+  },
+  {
+    "id": "paddy-lowe",
+    "name": "Paddy Lowe",
+    "aka": null,
+    "roles": [
+      {
+        "type": "technical-director",
+        "teamId": "mclaren",
+        "fromYear": 2005,
+        "toYear": 2013
+      },
+      {
+        "type": "technical-director",
+        "teamId": "mercedes",
+        "fromYear": 2013,
+        "toYear": 2017
+      },
+      {
+        "type": "technical-director",
+        "teamId": "williams",
+        "fromYear": 2017,
+        "toYear": 2019
+      }
+    ]
+  },
+  {
+    "id": "pat-fry",
+    "name": "Pat Fry",
+    "aka": null,
+    "roles": [
+      {
+        "type": "technical-director",
+        "teamId": "ferrari",
+        "fromYear": 2011,
+        "toYear": 2014
+      },
+      {
+        "type": "technical-director",
+        "teamId": "williams",
+        "fromYear": 2023,
+        "toYear": null
+      }
+    ]
+  },
+  {
+    "id": "pat-symonds",
+    "name": "Pat Symonds",
+    "aka": null,
+    "roles": [
+      {
+        "type": "technical-director",
+        "teamId": "williams",
+        "fromYear": 2013,
+        "toYear": 2016
+      }
+    ]
+  },
+  {
+    "id": "patrick-head",
+    "name": "Patrick Head",
+    "aka": null,
+    "roles": [
+      {
+        "type": "technical-director",
+        "teamId": "williams",
+        "fromYear": 1977,
+        "toYear": 2004
+      }
+    ]
+  },
+  {
+    "id": "peter-bonnington",
+    "name": "Peter Bonnington",
+    "aka": "Bono",
+    "roles": [
+      {
+        "type": "race-engineer",
+        "teamId": "mercedes",
+        "driverId": "michael-schumacher",
+        "fromYear": 2011,
+        "toYear": 2012
+      },
+      {
+        "type": "race-engineer",
+        "teamId": "mercedes",
+        "driverId": "lewis-hamilton",
+        "fromYear": 2013,
+        "toYear": 2024,
+        "notes": "Engineered Hamilton through six of his seven titles — one of the most storied pairings in F1."
+      },
+      {
+        "type": "race-engineer",
+        "teamId": "mercedes",
+        "driverId": "kimi-antonelli",
+        "fromYear": 2025,
+        "toYear": null,
+        "notes": "Took over Antonelli's car after over a decade with Hamilton."
+      }
+    ]
+  },
+  {
+    "id": "peter-prodromou",
+    "name": "Peter Prodromou",
+    "aka": null,
+    "roles": [
+      {
+        "type": "technical-director",
+        "teamId": "mclaren",
+        "fromYear": 2024,
+        "toYear": null,
+        "notes": "Split three-prong technical exec (with Rob Marshall + a third member unnamed in source)."
+      }
+    ]
+  },
+  {
+    "id": "pierre-hamelin",
+    "name": "Pierre Hamelin",
+    "aka": null,
+    "roles": [
+      {
+        "type": "race-engineer",
+        "teamId": "racing-bulls",
+        "driverId": "arvid-lindblad",
+        "fromYear": 2026,
+        "toYear": null,
+        "notes": "Has engineered several Red Bull-affiliated drivers, including Gasly and Ricciardo."
+      }
+    ]
+  },
+  {
+    "id": "pierre-wache",
+    "name": "Pierre Waché",
+    "aka": null,
+    "roles": [
+      {
+        "type": "technical-director",
+        "teamId": "red-bull",
+        "fromYear": 2018,
+        "toYear": null,
+        "notes": "Operated under Newey, then took full control."
+      }
+    ]
+  },
+  {
+    "id": "riccardo-adami",
+    "name": "Riccardo Adami",
+    "aka": null,
+    "roles": [
+      {
+        "type": "race-engineer",
+        "teamId": "toro-rosso",
+        "driverId": "sebastian-vettel",
+        "fromYear": 2008,
+        "toYear": 2008
+      },
+      {
+        "type": "race-engineer",
+        "teamId": "toro-rosso",
+        "driverId": "sebastien-buemi",
+        "fromYear": 2009,
+        "toYear": 2011
+      },
+      {
+        "type": "race-engineer",
+        "teamId": "toro-rosso",
+        "driverId": "daniel-ricciardo",
+        "fromYear": 2012,
+        "toYear": 2012
+      },
+      {
+        "type": "race-engineer",
+        "teamId": "ferrari",
+        "driverId": "sebastian-vettel",
+        "fromYear": 2015,
+        "toYear": 2020,
+        "notes": "Reunited with Vettel at Ferrari — \"Sebastian, this is Riccardo.\""
+      },
+      {
+        "type": "race-engineer",
+        "teamId": "ferrari",
+        "driverId": "carlos-sainz-jr",
+        "fromYear": 2021,
+        "toYear": 2024
+      }
+    ]
+  },
+  {
+    "id": "richard-wood",
+    "name": "Richard Wood",
+    "aka": null,
+    "roles": [
+      {
+        "type": "race-engineer",
+        "teamId": "red-bull",
+        "driverId": "isack-hadjar",
+        "fromYear": 2026,
+        "toYear": null,
+        "notes": "Previously engineered Yuki Tsunoda."
+      }
+    ]
+  },
+  {
+    "id": "rob-marshall",
+    "name": "Rob Marshall",
+    "aka": null,
+    "roles": [
+      {
+        "type": "technical-director",
+        "teamId": "mclaren",
+        "fromYear": 2024,
+        "toYear": null,
+        "notes": "Split three-prong technical exec (with Peter Prodromou + a third member unnamed in source)."
+      }
+    ]
+  },
+  {
+    "id": "ron-dennis",
+    "name": "Ron Dennis",
+    "aka": null,
+    "roles": [
+      {
+        "type": "team-principal",
+        "teamId": "mclaren",
+        "fromYear": 1981,
+        "toYear": 2009
+      }
+    ]
+  },
+  {
+    "id": "ronan-ohare",
+    "name": "Ronan O'Hare",
+    "aka": null,
+    "roles": [
+      {
+        "type": "race-engineer",
+        "teamId": "haas",
+        "driverId": "oliver-bearman",
+        "fromYear": 2026,
+        "toYear": null
+      }
+    ]
+  },
+  {
+    "id": "ross-brawn",
+    "name": "Ross Brawn",
+    "aka": null,
+    "roles": [
+      {
+        "type": "technical-director",
+        "teamId": "ferrari",
+        "fromYear": 1997,
+        "toYear": 2006
+      },
+      {
+        "type": "team-principal",
+        "teamId": "mercedes",
+        "fromYear": 2010,
+        "toYear": 2013
+      }
+    ]
+  },
+  {
+    "id": "rudolf-uhlenhaut",
+    "name": "Rudolf Uhlenhaut",
+    "aka": null,
+    "roles": [
+      {
+        "type": "technical-director",
+        "teamId": "mercedes",
+        "fromYear": 1954,
+        "toYear": 1955,
+        "notes": "Historic works era (pre-modern Mercedes)."
+      }
+    ]
+  },
+  {
+    "id": "sam-michael",
+    "name": "Sam Michael",
+    "aka": null,
+    "roles": [
+      {
+        "type": "technical-director",
+        "teamId": "williams",
+        "fromYear": 2004,
+        "toYear": 2011
+      }
+    ]
+  },
+  {
+    "id": "simon-roberts",
+    "name": "Simon Roberts",
+    "aka": null,
+    "roles": [
+      {
+        "type": "team-principal",
+        "teamId": "williams",
+        "fromYear": 2020,
+        "toYear": 2021
+      }
+    ]
+  },
+  {
+    "id": "stefano-domenicali",
+    "name": "Stefano Domenicali",
+    "aka": null,
+    "roles": [
+      {
+        "type": "team-principal",
+        "teamId": "ferrari",
+        "fromYear": 2008,
+        "toYear": 2014
+      }
+    ]
+  },
+  {
+    "id": "steven-petrik",
+    "name": "Steven Petrik",
+    "aka": null,
+    "roles": [
+      {
+        "type": "race-engineer",
+        "teamId": "audi",
+        "driverId": "nico-hulkenberg",
+        "fromYear": 2026,
+        "toYear": null
+      }
+    ]
+  },
+  {
+    "id": "stuart-barlow",
+    "name": "Stuart Barlow",
+    "aka": null,
+    "roles": [
+      {
+        "type": "race-engineer",
+        "teamId": "alpine",
+        "driverId": "franco-colapinto",
+        "fromYear": 2025,
+        "toYear": null,
+        "notes": "Promoted to the role early in the 2025 season."
+      }
+    ]
+  },
+  {
+    "id": "teddy-mayer",
+    "name": "Teddy Mayer",
+    "aka": null,
+    "roles": [
+      {
+        "type": "team-principal",
+        "teamId": "mclaren",
+        "fromYear": 1970,
+        "toYear": 1980
+      }
+    ]
+  },
+  {
+    "id": "tim-goss",
+    "name": "Tim Goss",
+    "aka": null,
+    "roles": [
+      {
+        "type": "technical-director",
+        "teamId": "mclaren",
+        "fromYear": 2014,
+        "toYear": 2018
+      }
+    ]
+  },
+  {
+    "id": "tom-stallard",
+    "name": "Tom Stallard",
+    "aka": null,
+    "roles": [
+      {
+        "type": "race-engineer",
+        "teamId": "mclaren",
+        "driverId": "jenson-button",
+        "fromYear": 2014,
+        "toYear": 2016
+      },
+      {
+        "type": "race-engineer",
+        "teamId": "mclaren",
+        "driverId": "stoffel-vandoorne",
+        "fromYear": 2017,
+        "toYear": 2018
+      },
+      {
+        "type": "race-engineer",
+        "teamId": "mclaren",
+        "driverId": "carlos-sainz-jr",
+        "fromYear": 2019,
+        "toYear": 2020
+      },
+      {
+        "type": "race-engineer",
+        "teamId": "mclaren",
+        "driverId": "daniel-ricciardo",
+        "fromYear": 2021,
+        "toYear": 2022
+      },
+      {
+        "type": "race-engineer",
+        "teamId": "mclaren",
+        "driverId": "oscar-piastri",
+        "fromYear": 2023,
+        "toYear": null,
+        "notes": "Known for a calm, measured communication style."
+      }
+    ]
+  },
+  {
+    "id": "toto-wolff",
+    "name": "Toto Wolff",
+    "aka": null,
+    "roles": [
+      {
+        "type": "team-principal",
+        "teamId": "mercedes",
+        "fromYear": 2013,
+        "toYear": null
+      }
+    ]
+  },
+  {
+    "id": "will-joseph",
+    "name": "Will Joseph",
+    "aka": null,
+    "roles": [
+      {
+        "type": "race-engineer",
+        "teamId": "mclaren",
+        "driverId": "lando-norris",
+        "fromYear": 2019,
+        "toYear": null,
+        "notes": "Together since Norris's F1 debut."
+      }
+    ]
+  }
+]

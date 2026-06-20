@@ -1,0 +1,40 @@
+{
+  "id": "will-joseph",
+  "name": "Will Joseph",
+  "aka": null,
+  "status": "active",
+  "engineerLabel": "active",
+  "roleTypes": [
+    "race-engineer"
+  ],
+  "isDriverEntity": false,
+  "totals": {
+    "seasons": 8,
+    "drivers": 1,
+    "races": 158,
+    "wins": 11,
+    "podiums": 45,
+    "poles": 16,
+    "championships": 1
+  },
+  "roles": [
+    {
+      "type": "race-engineer",
+      "teamId": "mclaren",
+      "teamName": "McLaren",
+      "fromYear": 2019,
+      "toYear": null,
+      "notes": "Together since Norris's F1 debut.",
+      "driverId": "lando-norris",
+      "driverName": "Lando Norris",
+      "stats": {
+        "races": 158,
+        "wins": 11,
+        "podiums": 45,
+        "poles": 16,
+        "championships": 1
+      }
+    }
+  ],
+  "updated": "2026-06-20"
+}

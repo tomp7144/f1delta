@@ -1,0 +1,539 @@
+{
+  "count": 28,
+  "people": [
+    {
+      "id": "adrian-newey",
+      "name": "Adrian Newey",
+      "aka": null,
+      "status": "former",
+      "roleTypes": [
+        "technical-director"
+      ],
+      "firstYear": 1997,
+      "totals": {
+        "seasons": 0,
+        "drivers": 0,
+        "races": 0,
+        "wins": 0,
+        "podiums": 0,
+        "poles": 0,
+        "championships": 0
+      }
+    },
+    {
+      "id": "aldo-costa",
+      "name": "Aldo Costa",
+      "aka": null,
+      "status": "former",
+      "roleTypes": [
+        "technical-director"
+      ],
+      "firstYear": 2007,
+      "totals": {
+        "seasons": 0,
+        "drivers": 0,
+        "races": 0,
+        "wins": 0,
+        "podiums": 0,
+        "poles": 0,
+        "championships": 0
+      }
+    },
+    {
+      "id": "bob-bell",
+      "name": "Bob Bell",
+      "aka": null,
+      "status": "former",
+      "roleTypes": [
+        "technical-director"
+      ],
+      "firstYear": 2010,
+      "totals": {
+        "seasons": 0,
+        "drivers": 0,
+        "races": 0,
+        "wins": 0,
+        "podiums": 0,
+        "poles": 0,
+        "championships": 0
+      }
+    },
+    {
+      "id": "enrico-cardile",
+      "name": "Enrico Cardile",
+      "aka": null,
+      "status": "former",
+      "roleTypes": [
+        "technical-director"
+      ],
+      "firstYear": 2021,
+      "totals": {
+        "seasons": 0,
+        "drivers": 0,
+        "races": 0,
+        "wins": 0,
+        "podiums": 0,
+        "poles": 0,
+        "championships": 0
+      }
+    },
+    {
+      "id": "francois-xavier-demaison",
+      "name": "François-Xavier Demaison",
+      "aka": null,
+      "status": "former",
+      "roleTypes": [
+        "technical-director"
+      ],
+      "firstYear": 2021,
+      "totals": {
+        "seasons": 0,
+        "drivers": 0,
+        "races": 0,
+        "wins": 0,
+        "podiums": 0,
+        "poles": 0,
+        "championships": 0
+      }
+    },
+    {
+      "id": "gordon-coppuck",
+      "name": "Gordon Coppuck",
+      "aka": null,
+      "status": "former",
+      "roleTypes": [
+        "technical-director"
+      ],
+      "firstYear": 1972,
+      "totals": {
+        "seasons": 0,
+        "drivers": 0,
+        "races": 0,
+        "wins": 0,
+        "podiums": 0,
+        "poles": 0,
+        "championships": 0
+      }
+    },
+    {
+      "id": "gordon-murray",
+      "name": "Gordon Murray",
+      "aka": null,
+      "status": "former",
+      "roleTypes": [
+        "technical-director"
+      ],
+      "firstYear": 1987,
+      "totals": {
+        "seasons": 0,
+        "drivers": 0,
+        "races": 0,
+        "wins": 0,
+        "podiums": 0,
+        "poles": 0,
+        "championships": 0
+      }
+    },
+    {
+      "id": "harvey-postlethwaite",
+      "name": "Harvey Postlethwaite",
+      "aka": null,
+      "status": "former",
+      "roleTypes": [
+        "technical-director"
+      ],
+      "firstYear": 1981,
+      "totals": {
+        "seasons": 0,
+        "drivers": 0,
+        "races": 0,
+        "wins": 0,
+        "podiums": 0,
+        "poles": 0,
+        "championships": 0
+      }
+    },
+    {
+      "id": "james-allison",
+      "name": "James Allison",
+      "aka": null,
+      "status": "active",
+      "roleTypes": [
+        "technical-director"
+      ],
+      "firstYear": 2013,
+      "totals": {
+        "seasons": 0,
+        "drivers": 0,
+        "races": 0,
+        "wins": 0,
+        "podiums": 0,
+        "poles": 0,
+        "championships": 0
+      }
+    },
+    {
+      "id": "james-key",
+      "name": "James Key",
+      "aka": null,
+      "status": "former",
+      "roleTypes": [
+        "technical-director"
+      ],
+      "firstYear": 2019,
+      "totals": {
+        "seasons": 0,
+        "drivers": 0,
+        "races": 0,
+        "wins": 0,
+        "podiums": 0,
+        "poles": 0,
+        "championships": 0
+      }
+    },
+    {
+      "id": "john-barnard",
+      "name": "John Barnard",
+      "aka": null,
+      "status": "former",
+      "roleTypes": [
+        "technical-director"
+      ],
+      "firstYear": 1980,
+      "totals": {
+        "seasons": 0,
+        "drivers": 0,
+        "races": 0,
+        "wins": 0,
+        "podiums": 0,
+        "poles": 0,
+        "championships": 0
+      }
+    },
+    {
+      "id": "loic-serra",
+      "name": "Loïc Serra",
+      "aka": null,
+      "status": "active",
+      "roleTypes": [
+        "technical-director"
+      ],
+      "firstYear": 2025,
+      "totals": {
+        "seasons": 0,
+        "drivers": 0,
+        "races": 0,
+        "wins": 0,
+        "podiums": 0,
+        "poles": 0,
+        "championships": 0
+      }
+    },
+    {
+      "id": "mark-smith",
+      "name": "Mark Smith",
+      "aka": null,
+      "status": "former",
+      "roleTypes": [
+        "technical-director"
+      ],
+      "firstYear": 2005,
+      "totals": {
+        "seasons": 0,
+        "drivers": 0,
+        "races": 0,
+        "wins": 0,
+        "podiums": 0,
+        "poles": 0,
+        "championships": 0
+      }
+    },
+    {
+      "id": "mattia-binotto",
+      "name": "Mattia Binotto",
+      "aka": null,
+      "status": "former",
+      "roleTypes": [
+        "technical-director",
+        "team-principal"
+      ],
+      "firstYear": 2016,
+      "totals": {
+        "seasons": 0,
+        "drivers": 0,
+        "races": 0,
+        "wins": 0,
+        "podiums": 0,
+        "poles": 0,
+        "championships": 0
+      }
+    },
+    {
+      "id": "mauro-forghieri",
+      "name": "Mauro Forghieri",
+      "aka": null,
+      "status": "former",
+      "roleTypes": [
+        "technical-director"
+      ],
+      "firstYear": 1963,
+      "totals": {
+        "seasons": 0,
+        "drivers": 0,
+        "races": 0,
+        "wins": 0,
+        "podiums": 0,
+        "poles": 0,
+        "championships": 0
+      }
+    },
+    {
+      "id": "mike-coughlan",
+      "name": "Mike Coughlan",
+      "aka": null,
+      "status": "former",
+      "roleTypes": [
+        "technical-director"
+      ],
+      "firstYear": 2011,
+      "totals": {
+        "seasons": 0,
+        "drivers": 0,
+        "races": 0,
+        "wins": 0,
+        "podiums": 0,
+        "poles": 0,
+        "championships": 0
+      }
+    },
+    {
+      "id": "mike-elliott",
+      "name": "Mike Elliott",
+      "aka": null,
+      "status": "former",
+      "roleTypes": [
+        "technical-director"
+      ],
+      "firstYear": 2021,
+      "totals": {
+        "seasons": 0,
+        "drivers": 0,
+        "races": 0,
+        "wins": 0,
+        "podiums": 0,
+        "poles": 0,
+        "championships": 0
+      }
+    },
+    {
+      "id": "paddy-lowe",
+      "name": "Paddy Lowe",
+      "aka": null,
+      "status": "former",
+      "roleTypes": [
+        "technical-director"
+      ],
+      "firstYear": 2005,
+      "totals": {
+        "seasons": 0,
+        "drivers": 0,
+        "races": 0,
+        "wins": 0,
+        "podiums": 0,
+        "poles": 0,
+        "championships": 0
+      }
+    },
+    {
+      "id": "pat-fry",
+      "name": "Pat Fry",
+      "aka": null,
+      "status": "active",
+      "roleTypes": [
+        "technical-director"
+      ],
+      "firstYear": 2011,
+      "totals": {
+        "seasons": 0,
+        "drivers": 0,
+        "races": 0,
+        "wins": 0,
+        "podiums": 0,
+        "poles": 0,
+        "championships": 0
+      }
+    },
+    {
+      "id": "pat-symonds",
+      "name": "Pat Symonds",
+      "aka": null,
+      "status": "former",
+      "roleTypes": [
+        "technical-director"
+      ],
+      "firstYear": 2013,
+      "totals": {
+        "seasons": 0,
+        "drivers": 0,
+        "races": 0,
+        "wins": 0,
+        "podiums": 0,
+        "poles": 0,
+        "championships": 0
+      }
+    },
+    {
+      "id": "patrick-head",
+      "name": "Patrick Head",
+      "aka": null,
+      "status": "former",
+      "roleTypes": [
+        "technical-director"
+      ],
+      "firstYear": 1977,
+      "totals": {
+        "seasons": 0,
+        "drivers": 0,
+        "races": 0,
+        "wins": 0,
+        "podiums": 0,
+        "poles": 0,
+        "championships": 0
+      }
+    },
+    {
+      "id": "peter-prodromou",
+      "name": "Peter Prodromou",
+      "aka": null,
+      "status": "active",
+      "roleTypes": [
+        "technical-director"
+      ],
+      "firstYear": 2024,
+      "totals": {
+        "seasons": 0,
+        "drivers": 0,
+        "races": 0,
+        "wins": 0,
+        "podiums": 0,
+        "poles": 0,
+        "championships": 0
+      }
+    },
+    {
+      "id": "pierre-wache",
+      "name": "Pierre Waché",
+      "aka": null,
+      "status": "active",
+      "roleTypes": [
+        "technical-director"
+      ],
+      "firstYear": 2018,
+      "totals": {
+        "seasons": 0,
+        "drivers": 0,
+        "races": 0,
+        "wins": 0,
+        "podiums": 0,
+        "poles": 0,
+        "championships": 0
+      }
+    },
+    {
+      "id": "rob-marshall",
+      "name": "Rob Marshall",
+      "aka": null,
+      "status": "active",
+      "roleTypes": [
+        "technical-director"
+      ],
+      "firstYear": 2024,
+      "totals": {
+        "seasons": 0,
+        "drivers": 0,
+        "races": 0,
+        "wins": 0,
+        "podiums": 0,
+        "poles": 0,
+        "championships": 0
+      }
+    },
+    {
+      "id": "ross-brawn",
+      "name": "Ross Brawn",
+      "aka": null,
+      "status": "former",
+      "roleTypes": [
+        "technical-director",
+        "team-principal"
+      ],
+      "firstYear": 1997,
+      "totals": {
+        "seasons": 0,
+        "drivers": 0,
+        "races": 0,
+        "wins": 0,
+        "podiums": 0,
+        "poles": 0,
+        "championships": 0
+      }
+    },
+    {
+      "id": "rudolf-uhlenhaut",
+      "name": "Rudolf Uhlenhaut",
+      "aka": null,
+      "status": "former",
+      "roleTypes": [
+        "technical-director"
+      ],
+      "firstYear": 1954,
+      "totals": {
+        "seasons": 0,
+        "drivers": 0,
+        "races": 0,
+        "wins": 0,
+        "podiums": 0,
+        "poles": 0,
+        "championships": 0
+      }
+    },
+    {
+      "id": "sam-michael",
+      "name": "Sam Michael",
+      "aka": null,
+      "status": "former",
+      "roleTypes": [
+        "technical-director"
+      ],
+      "firstYear": 2004,
+      "totals": {
+        "seasons": 0,
+        "drivers": 0,
+        "races": 0,
+        "wins": 0,
+        "podiums": 0,
+        "poles": 0,
+        "championships": 0
+      }
+    },
+    {
+      "id": "tim-goss",
+      "name": "Tim Goss",
+      "aka": null,
+      "status": "former",
+      "roleTypes": [
+        "technical-director"
+      ],
+      "firstYear": 2014,
+      "totals": {
+        "seasons": 0,
+        "drivers": 0,
+        "races": 0,
+        "wins": 0,
+        "podiums": 0,
+        "poles": 0,
+        "championships": 0
+      }
+    }
+  ]
+}

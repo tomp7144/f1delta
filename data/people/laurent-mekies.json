@@ -1,0 +1,31 @@
+{
+  "id": "laurent-mekies",
+  "name": "Laurent Mekies",
+  "aka": null,
+  "status": "active",
+  "engineerLabel": null,
+  "roleTypes": [
+    "team-principal"
+  ],
+  "isDriverEntity": false,
+  "totals": {
+    "seasons": 0,
+    "drivers": 0,
+    "races": 0,
+    "wins": 0,
+    "podiums": 0,
+    "poles": 0,
+    "championships": 0
+  },
+  "roles": [
+    {
+      "type": "team-principal",
+      "teamId": "red-bull",
+      "teamName": "Red Bull",
+      "fromYear": 2025,
+      "toYear": null,
+      "notes": "Replaced Horner mid-2025."
+    }
+  ],
+  "updated": "2026-06-20"
+}

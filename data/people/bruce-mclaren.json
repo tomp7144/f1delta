@@ -1,0 +1,31 @@
+{
+  "id": "bruce-mclaren",
+  "name": "Bruce McLaren",
+  "aka": null,
+  "status": "former",
+  "engineerLabel": null,
+  "roleTypes": [
+    "team-principal"
+  ],
+  "isDriverEntity": true,
+  "totals": {
+    "seasons": 0,
+    "drivers": 0,
+    "races": 0,
+    "wins": 0,
+    "podiums": 0,
+    "poles": 0,
+    "championships": 0
+  },
+  "roles": [
+    {
+      "type": "team-principal",
+      "teamId": "mclaren",
+      "teamName": "McLaren",
+      "fromYear": 1963,
+      "toYear": 1970,
+      "notes": "RECONCILE: also an F1DB driver + constructor — id must match his driver slug."
+    }
+  ],
+  "updated": "2026-06-20"
+}

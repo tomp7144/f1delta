@@ -1,0 +1,39 @@
+{
+  "id": "ronan-ohare",
+  "name": "Ronan O'Hare",
+  "aka": null,
+  "status": "active",
+  "engineerLabel": "active",
+  "roleTypes": [
+    "race-engineer"
+  ],
+  "isDriverEntity": false,
+  "totals": {
+    "seasons": 1,
+    "drivers": 1,
+    "races": 6,
+    "wins": 0,
+    "podiums": 0,
+    "poles": 0,
+    "championships": 0
+  },
+  "roles": [
+    {
+      "type": "race-engineer",
+      "teamId": "haas",
+      "teamName": "Haas",
+      "fromYear": 2026,
+      "toYear": null,
+      "driverId": "oliver-bearman",
+      "driverName": "Oliver Bearman",
+      "stats": {
+        "races": 6,
+        "wins": 0,
+        "podiums": 0,
+        "poles": 0,
+        "championships": 0
+      }
+    }
+  ],
+  "updated": "2026-06-20"
+}

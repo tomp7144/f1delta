@@ -1,0 +1,31 @@
+{
+  "id": "rudolf-uhlenhaut",
+  "name": "Rudolf Uhlenhaut",
+  "aka": null,
+  "status": "former",
+  "engineerLabel": null,
+  "roleTypes": [
+    "technical-director"
+  ],
+  "isDriverEntity": false,
+  "totals": {
+    "seasons": 0,
+    "drivers": 0,
+    "races": 0,
+    "wins": 0,
+    "podiums": 0,
+    "poles": 0,
+    "championships": 0
+  },
+  "roles": [
+    {
+      "type": "technical-director",
+      "teamId": "mercedes",
+      "teamName": "Mercedes",
+      "fromYear": 1954,
+      "toYear": 1955,
+      "notes": "Historic works era (pre-modern Mercedes)."
+    }
+  ],
+  "updated": "2026-06-20"
+}

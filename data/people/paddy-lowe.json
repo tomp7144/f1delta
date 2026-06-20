@@ -1,0 +1,44 @@
+{
+  "id": "paddy-lowe",
+  "name": "Paddy Lowe",
+  "aka": null,
+  "status": "former",
+  "engineerLabel": null,
+  "roleTypes": [
+    "technical-director"
+  ],
+  "isDriverEntity": false,
+  "totals": {
+    "seasons": 0,
+    "drivers": 0,
+    "races": 0,
+    "wins": 0,
+    "podiums": 0,
+    "poles": 0,
+    "championships": 0
+  },
+  "roles": [
+    {
+      "type": "technical-director",
+      "teamId": "mclaren",
+      "teamName": "McLaren",
+      "fromYear": 2005,
+      "toYear": 2013
+    },
+    {
+      "type": "technical-director",
+      "teamId": "mercedes",
+      "teamName": "Mercedes",
+      "fromYear": 2013,
+      "toYear": 2017
+    },
+    {
+      "type": "technical-director",
+      "teamId": "williams",
+      "teamName": "Williams",
+      "fromYear": 2017,
+      "toYear": 2019
+    }
+  ],
+  "updated": "2026-06-20"
+}
