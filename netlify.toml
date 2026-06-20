@@ -7,7 +7,12 @@
 
 [functions]
   node_bundler = "esbuild"
-  included_files = ["data/drivers/**", "data/engineers/**"]
+  included_files = ["data/drivers/**", "data/people/**"]
+
+[[redirects]]
+  from   = "/engineers/:id"
+  to     = "/people/:id"
+  status = 301
 
 # The app fetches Jolpica (api.jolpi.ca) directly — it sends CORS headers,
 # so there's no proxy in the request path and no redirect rules are needed.

@@ -122,8 +122,7 @@ const STATS = [
             {engineers.map((e: any) => (
               <tr class={e.toYear === null ? "cur-eng" : undefined}>
                 <td>
-                  <a class="ent" href={`/engineers/${e.engineerId}`}>{e.engineerName}</a>
-                  {e.engineerAka && <span class="nat">"{e.engineerAka}"</span>}
+                  <a class="ent" href={`/people/${e.personId}`}>{e.personName}</a>
                 </td>
                 <td><a class="dim-link" href={`/driver?d=${e.driverId}`}>{e.driverName}</a></td>
                 <td class="yrs">{e.fromYear === e.toYear ? e.fromYear : e.toYear === null ? `${e.fromYear}–present` : `${e.fromYear}–${e.toYear}`}</td>

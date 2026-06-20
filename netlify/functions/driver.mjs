@@ -17,17 +17,17 @@ import path from "node:path";
 import { verifyToken, isAdmin, readSub, isActive } from "./lib/access.mjs";
 
 const DRIVERS_DIR   = path.join(process.cwd(), "data", "drivers");
-const ENG_BY_DRIVER = path.join(process.cwd(), "data", "engineers", "by-driver.json");
+const PEOPLE_BY_DRIVER = path.join(process.cwd(), "data", "people", "by-driver.json");
 const SLUG_RE = /^[a-z0-9_-]{1,64}$/;
 
-let _engineerMap; // lazy-loaded once per function instance
+let _personMap; // lazy-loaded once per function instance
 async function engineerForDriver(slug) {
-  if (!_engineerMap) {
-    try { _engineerMap = JSON.parse(await readFile(ENG_BY_DRIVER, "utf8")); }
-    catch { _engineerMap = {}; }
+  if (!_personMap) {
+    try { _personMap = JSON.parse(await readFile(PEOPLE_BY_DRIVER, "utf8")); }
+    catch { _personMap = {}; }
   }
   // by-driver.json keys use hyphens; API slugs may use underscores — try both
-  return _engineerMap[slug] ?? _engineerMap[slug.replace(/_/g, "-")] ?? null;
+  return _personMap[slug] ?? _personMap[slug.replace(/_/g, "-")] ?? null;
 }
 
 function json(status, body, cache = "private, no-store") {

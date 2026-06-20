@@ -266,22 +266,22 @@ function EngineerSection({ engineer }) {
       <div className="sec-h"><h2>Race engineer</h2></div>
       <div className="card eng-card">
         {current && (
-          <div className="eng-cur">
-            <a className="eng-name" href={`/engineers/${current.engineerId}`}>
-              {current.engineerName}{current.engineerAka ? ` “${current.engineerAka}”` : ""}
+          <div className=”eng-cur”>
+            <a className=”eng-name” href={`/people/${current.personId}`}>
+              {current.personName}{current.aka ? ` “${current.aka}”` : “”}
             </a>
-            <span className="eng-meta">
-              <a href={`/teams/${current.teamId}`}>{current.teamName}</a>{" · since "}{current.fromYear}
+            <span className=”eng-meta”>
+              <a href={`/teams/${current.teamId}`}>{current.teamName}</a>{“ · since “}{current.fromYear}
             </span>
-            {current.notes && <span className="eng-note">{current.notes}</span>}
+            {current.notes && <span className=”eng-note”>{current.notes}</span>}
           </div>
         )}
         {past && past.length > 0 && (
-          <div className="eng-past">
+          <div className=”eng-past”>
             {past.map((p, i) => (
-              <div className="eng-past-row" key={i}>
-                <a className="eng-name" href={`/engineers/${p.engineerId}`}>
-                  {p.engineerName}{p.engineerAka ? ` “${p.engineerAka}”` : ""}
+              <div className=”eng-past-row” key={i}>
+                <a className=”eng-name” href={`/people/${p.personId}`}>
+                  {p.personName}{p.aka ? ` “${p.aka}”` : “”}
                 </a>
                 <span className="eng-meta">
                   <a href={`/teams/${p.teamId}`}>{p.teamName}</a>
