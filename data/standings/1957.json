@@ -1,1 +1,213 @@
-{"season":1957,"drivers":[{"pos":1,"driverId":"fangio","code":null,"driver":"Juan Fangio","points":40,"wins":4,"constructorIds":["maserati"]},{"pos":2,"driverId":"moss","code":null,"driver":"Stirling Moss","points":25,"wins":3,"constructorIds":["maserati","vanwall"]},{"pos":3,"driverId":"musso","code":null,"driver":"Luigi Musso","points":16,"wins":0,"constructorIds":["ferrari"]},{"pos":4,"driverId":"hawthorn","code":null,"driver":"Mike Hawthorn","points":13,"wins":0,"constructorIds":["ferrari"]},{"pos":5,"driverId":"brooks","code":null,"driver":"Tony Brooks","points":11,"wins":1,"constructorIds":["vanwall"]},{"pos":6,"driverId":"gregory","code":null,"driver":"Masten Gregory","points":10,"wins":0,"constructorIds":["maserati"]},{"pos":7,"driverId":"schell","code":null,"driver":"Harry Schell","points":10,"wins":0,"constructorIds":["maserati"]},{"pos":8,"driverId":"hanks","code":null,"driver":"Sam Hanks","points":8,"wins":1,"constructorIds":["epperly"]},{"pos":9,"driverId":"collins","code":null,"driver":"Peter Collins","points":8,"wins":0,"constructorIds":["ferrari"]},{"pos":10,"driverId":"rathmann","code":null,"driver":"Jim Rathmann","points":7,"wins":0,"constructorIds":["epperly"]},{"pos":11,"driverId":"behra","code":null,"driver":"Jean Behra","points":6,"wins":0,"constructorIds":["maserati"]},{"pos":12,"driverId":"lewis-evans","code":null,"driver":"Stuart Lewis-Evans","points":5,"wins":0,"constructorIds":["connaught","vanwall"]},{"pos":13,"driverId":"trintignant","code":null,"driver":"Maurice Trintignant","points":5,"wins":0,"constructorIds":["ferrari"]},{"pos":14,"driverId":"trips","code":null,"driver":"Wolfgang von Trips","points":4,"wins":0,"constructorIds":["ferrari"]},{"pos":15,"driverId":"menditeguy","code":null,"driver":"Carlos Menditeguy","points":4,"wins":0,"constructorIds":["maserati"]},{"pos":16,"driverId":"bryan","code":null,"driver":"Jimmy Bryan","points":4,"wins":0,"constructorIds":["kuzma"]},{"pos":17,"driverId":"paul_russo","code":null,"driver":"Paul Russo","points":3,"wins":0,"constructorIds":["kurtis_kraft"]},{"pos":18,"driverId":"salvadori","code":null,"driver":"Roy Salvadori","points":2,"wins":0,"constructorIds":["brm","vanwall","cooper"]},{"pos":19,"driverId":"linden","code":null,"driver":"Andy Linden","points":2,"wins":0,"constructorIds":["kurtis_kraft"]},{"pos":20,"driverId":"scarlatti","code":null,"driver":"Giorgio Scarlatti","points":1,"wins":0,"constructorIds":["maserati"]},{"pos":21,"driverId":"gonzalez","code":null,"driver":"José Froilán González","points":1,"wins":0,"constructorIds":["ferrari"]},{"pos":22,"driverId":"portago","code":null,"driver":"Alfonso de Portago","points":1,"wins":0,"constructorIds":["ferrari"]},{"pos":null,"driverId":"jack_brabham","code":null,"driver":"Jack Brabham","points":0,"wins":0,"constructorIds":["cooper"]},{"pos":null,"driverId":"perdisa","code":null,"driver":"Cesare Perdisa","points":0,"wins":0,"constructorIds":["ferrari"]},{"pos":null,"driverId":"boyd","code":null,"driver":"Johnny Boyd","points":0,"wins":0,"constructorIds":["kurtis_kraft"]},{"pos":null,"driverId":"gerard","code":null,"driver":"Bob Gerard","points":0,"wins":0,"constructorIds":["cooper"]},{"pos":null,"driverId":"bonnier","code":null,"driver":"Jo Bonnier","points":0,"wins":0,"constructorIds":["maserati"]},{"pos":null,"driverId":"teague","code":null,"driver":"Marshall Teague","points":0,"wins":0,"constructorIds":["kurtis_kraft"]},{"pos":null,"driverId":"macdowel","code":null,"driver":"Mike MacDowel","points":0,"wins":0,"constructorIds":["cooper"]},{"pos":null,"driverId":"bueb","code":null,"driver":"Ivor Bueb","points":0,"wins":0,"constructorIds":["connaught","maserati"]},{"pos":null,"driverId":"connor","code":null,"driver":"Pat O'Connor","points":0,"wins":0,"constructorIds":["kurtis_kraft"]},{"pos":null,"driverId":"godia","code":null,"driver":"Paco Godia","points":0,"wins":0,"constructorIds":["maserati"]},{"pos":null,"driverId":"tomaso","code":null,"driver":"Alessandro de Tomaso","points":0,"wins":0,"constructorIds":["ferrari"]},{"pos":null,"driverId":"veith","code":null,"driver":"Bob Veith","points":0,"wins":0,"constructorIds":["phillips"]},{"pos":null,"driverId":"gould","code":null,"driver":"Horace Gould","points":0,"wins":0,"constructorIds":["maserati"]},{"pos":null,"driverId":"piotti","code":null,"driver":"Luigi Piotti","points":0,"wins":0,"constructorIds":["maserati"]},{"pos":null,"driverId":"hartley","code":null,"driver":"Gene Hartley","points":0,"wins":0,"constructorIds":["lesovsky"]},{"pos":null,"driverId":"halford","code":null,"driver":"Bruce Halford","points":0,"wins":0,"constructorIds":["maserati"]},{"pos":null,"driverId":"turner","code":null,"driver":"Jack Turner","points":0,"wins":0,"constructorIds":["kurtis_kraft"]},{"pos":null,"driverId":"simon","code":null,"driver":"André Simon","points":0,"wins":0,"constructorIds":["maserati"]},{"pos":null,"driverId":"volonterio","code":null,"driver":"Ottorino Volonterio","points":0,"wins":0,"constructorIds":["maserati"]},{"pos":null,"driverId":"thomson","code":null,"driver":"Johnny Thomson","points":0,"wins":0,"constructorIds":["kuzma"]},{"pos":null,"driverId":"barth","code":null,"driver":"Edgar Barth","points":0,"wins":0,"constructorIds":["porsche"]},{"pos":null,"driverId":"christie","code":null,"driver":"Bob Christie","points":0,"wins":0,"constructorIds":["kurtis_kraft"]},{"pos":null,"driverId":"naylor","code":null,"driver":"Brian Naylor","points":0,"wins":0,"constructorIds":["cooper"]},{"pos":null,"driverId":"weyant","code":null,"driver":"Chuck Weyant","points":0,"wins":0,"constructorIds":["kuzma"]},{"pos":null,"driverId":"beaufort","code":null,"driver":"Carel Godin de Beaufort","points":0,"wins":0,"constructorIds":["porsche"]},{"pos":null,"driverId":"bettenhausen","code":null,"driver":"Tony Bettenhausen","points":0,"wins":0,"constructorIds":["kurtis_kraft"]},{"pos":null,"driverId":"marsh","code":null,"driver":"Tony Marsh","points":0,"wins":0,"constructorIds":["cooper"]},{"pos":null,"driverId":"parsons","code":null,"driver":"Johnnie Parsons","points":0,"wins":0,"constructorIds":["kurtis_kraft"]},{"pos":null,"driverId":"freeland","code":null,"driver":"Don Freeland","points":0,"wins":0,"constructorIds":["kurtis_kraft"]},{"pos":null,"driverId":"flockhart","code":null,"driver":"Ron Flockhart","points":0,"wins":0,"constructorIds":["brm"]},{"pos":null,"driverId":"castellotti","code":null,"driver":"Eugenio Castellotti","points":0,"wins":0,"constructorIds":["ferrari"]},{"pos":null,"driverId":"mackay-fraser","code":null,"driver":"Herbert MacKay-Fraser","points":0,"wins":0,"constructorIds":["brm"]},{"pos":null,"driverId":"fairman","code":null,"driver":"Jack Fairman","points":0,"wins":0,"constructorIds":["brm"]},{"pos":null,"driverId":"leston","code":null,"driver":"Les Leston","points":0,"wins":0,"constructorIds":["cooper","brm"]},{"pos":null,"driverId":"herrmann","code":null,"driver":"Hans Herrmann","points":0,"wins":0,"constructorIds":["maserati"]},{"pos":null,"driverId":"maglioli","code":null,"driver":"Umberto Maglioli","points":0,"wins":0,"constructorIds":["porsche"]},{"pos":null,"driverId":"reece","code":null,"driver":"Jimmy Reece","points":0,"wins":0,"constructorIds":["kurtis_kraft"]},{"pos":null,"driverId":"edmunds","code":null,"driver":"Don Edmunds","points":0,"wins":0,"constructorIds":["kurtis_kraft"]},{"pos":null,"driverId":"tolan","code":null,"driver":"Johnnie Tolan","points":0,"wins":0,"constructorIds":["kurtis_kraft"]},{"pos":null,"driverId":"herman","code":null,"driver":"Al Herman","points":0,"wins":0,"constructorIds":["dunn"]},{"pos":null,"driverId":"agabashian","code":null,"driver":"Fred Agabashian","points":0,"wins":0,"constructorIds":["kurtis_kraft"]},{"pos":null,"driverId":"england","code":null,"driver":"Paul England","points":0,"wins":0,"constructorIds":["cooper"]},{"pos":null,"driverId":"sachs","code":null,"driver":"Eddie Sachs","points":0,"wins":0,"constructorIds":["kuzma"]},{"pos":null,"driverId":"gibson","code":null,"driver":"Dick Gibson","points":0,"wins":0,"constructorIds":["cooper"]},{"pos":null,"driverId":"magill","code":null,"driver":"Mike Magill","points":0,"wins":0,"constructorIds":["kurtis_kraft"]},{"pos":null,"driverId":"johnson","code":null,"driver":"Eddie Johnson","points":0,"wins":0,"constructorIds":["kurtis_kraft"]},{"pos":null,"driverId":"cheesbourg","code":null,"driver":"Bill Cheesbourg","points":0,"wins":0,"constructorIds":["kurtis_kraft"]},{"pos":null,"driverId":"keller","code":null,"driver":"Al Keller","points":0,"wins":0,"constructorIds":["kurtis_kraft"]},{"pos":null,"driverId":"daywalt","code":null,"driver":"Jimmy Daywalt","points":0,"wins":0,"constructorIds":["kurtis_kraft"]},{"pos":null,"driverId":"elisian","code":null,"driver":"Ed Elisian","points":0,"wins":0,"constructorIds":["kurtis_kraft"]},{"pos":null,"driverId":"ward","code":null,"driver":"Rodger Ward","points":0,"wins":0,"constructorIds":["lesovsky"]},{"pos":null,"driverId":"ruttman","code":null,"driver":"Troy Ruttman","points":0,"wins":0,"constructorIds":["watson"]},{"pos":null,"driverId":"russo","code":null,"driver":"Eddie Russo","points":0,"wins":0,"constructorIds":["kurtis_kraft"]},{"pos":null,"driverId":"george","code":null,"driver":"Elmer George","points":0,"wins":0,"constructorIds":["kurtis_kraft"]}],"constructors":[]}
+{
+  "year": 1957,
+  "wccExists": false,
+  "wdcChampion": {
+    "driverId": "juan-manuel-fangio",
+    "name": "Juan Manuel Fangio",
+    "code": "FAN"
+  },
+  "wccChampion": null,
+  "wdc": [
+    {
+      "position": 1,
+      "driverId": "juan-manuel-fangio",
+      "name": "Juan Manuel Fangio",
+      "code": "FAN",
+      "points": 46,
+      "teamId": "maserati",
+      "team": "Maserati"
+    },
+    {
+      "position": 2,
+      "driverId": "stirling-moss",
+      "name": "Stirling Moss",
+      "code": "MOS",
+      "points": 25,
+      "teamId": "vanwall",
+      "team": "Vanwall"
+    },
+    {
+      "position": 3,
+      "driverId": "luigi-musso",
+      "name": "Luigi Musso",
+      "code": "MUS",
+      "points": 16,
+      "teamId": "ferrari",
+      "team": "Ferrari"
+    },
+    {
+      "position": 4,
+      "driverId": "mike-hawthorn",
+      "name": "Mike Hawthorn",
+      "code": "HAW",
+      "points": 13,
+      "teamId": "ferrari",
+      "team": "Ferrari"
+    },
+    {
+      "position": 5,
+      "driverId": "tony-brooks",
+      "name": "Tony Brooks",
+      "code": "BRO",
+      "points": 11,
+      "teamId": "vanwall",
+      "team": "Vanwall"
+    },
+    {
+      "position": 6,
+      "driverId": "masten-gregory",
+      "name": "Masten Gregory",
+      "code": "GRE",
+      "points": 10,
+      "teamId": "maserati",
+      "team": "Maserati"
+    },
+    {
+      "position": 7,
+      "driverId": "harry-schell",
+      "name": "Harry Schell",
+      "code": "SCH",
+      "points": 10,
+      "teamId": "maserati",
+      "team": "Maserati"
+    },
+    {
+      "position": 8,
+      "driverId": "sam-hanks",
+      "name": "Sam Hanks",
+      "code": "HAN",
+      "points": 8,
+      "teamId": "epperly",
+      "team": "Epperly"
+    },
+    {
+      "position": 9,
+      "driverId": "peter-collins",
+      "name": "Peter Collins",
+      "code": "COL",
+      "points": 8,
+      "teamId": "ferrari",
+      "team": "Ferrari"
+    },
+    {
+      "position": 10,
+      "driverId": "jim-rathmann",
+      "name": "Jim Rathmann",
+      "code": "RAT",
+      "points": 7,
+      "teamId": "epperly",
+      "team": "Epperly"
+    },
+    {
+      "position": 11,
+      "driverId": "jean-behra",
+      "name": "Jean Behra",
+      "code": "BEH",
+      "points": 6,
+      "teamId": "maserati",
+      "team": "Maserati"
+    },
+    {
+      "position": 12,
+      "driverId": "maurice-trintignant",
+      "name": "Maurice Trintignant",
+      "code": "TRI",
+      "points": 5,
+      "teamId": "ferrari",
+      "team": "Ferrari"
+    },
+    {
+      "position": 12,
+      "driverId": "stuart-lewis-evans",
+      "name": "Stuart Lewis-Evans",
+      "code": "LEW",
+      "points": 5,
+      "teamId": "vanwall",
+      "team": "Vanwall"
+    },
+    {
+      "position": 14,
+      "driverId": "carlos-menditeguy",
+      "name": "Carlos Menditéguy",
+      "code": "MEN",
+      "points": 4,
+      "teamId": "maserati",
+      "team": "Maserati"
+    },
+    {
+      "position": 14,
+      "driverId": "jimmy-bryan",
+      "name": "Jimmy Bryan",
+      "code": "BRY",
+      "points": 4,
+      "teamId": "kuzma",
+      "team": "Kuzma"
+    },
+    {
+      "position": 14,
+      "driverId": "wolfgang-von-trips",
+      "name": "Wolfgang von Trips",
+      "code": "VON",
+      "points": 4,
+      "teamId": "ferrari",
+      "team": "Ferrari"
+    },
+    {
+      "position": 17,
+      "driverId": "paul-russo",
+      "name": "Paul Russo",
+      "code": "RUS",
+      "points": 3,
+      "teamId": "kurtis-kraft",
+      "team": "Kurtis Kraft"
+    },
+    {
+      "position": 18,
+      "driverId": "andy-linden",
+      "name": "Andy Linden",
+      "code": "LIN",
+      "points": 2,
+      "teamId": "kurtis-kraft",
+      "team": "Kurtis Kraft"
+    },
+    {
+      "position": 18,
+      "driverId": "roy-salvadori",
+      "name": "Roy Salvadori",
+      "code": "SAL",
+      "points": 2,
+      "teamId": "cooper",
+      "team": "Cooper"
+    },
+    {
+      "position": 20,
+      "driverId": "alfonso-de-portago",
+      "name": "Alfonso de Portago",
+      "code": "DEP",
+      "points": 1,
+      "teamId": "ferrari",
+      "team": "Ferrari"
+    },
+    {
+      "position": 20,
+      "driverId": "giorgio-scarlatti",
+      "name": "Giorgio Scarlatti",
+      "code": "SCA",
+      "points": 1,
+      "teamId": "maserati",
+      "team": "Maserati"
+    },
+    {
+      "position": 20,
+      "driverId": "jose-froilan-gonzalez",
+      "name": "José Froilán González",
+      "code": "GON",
+      "points": 1,
+      "teamId": "ferrari",
+      "team": "Ferrari"
+    }
+  ],
+  "wcc": null,
+  "notes": null,
+  "updated": "2026-06-21"
+}

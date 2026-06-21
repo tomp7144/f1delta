@@ -1,1 +1,321 @@
-{"season":1994,"drivers":[{"pos":1,"driverId":"michael_schumacher","code":"MSC","driver":"Michael Schumacher","points":92,"wins":8,"constructorIds":["benetton"]},{"pos":2,"driverId":"damon_hill","code":null,"driver":"Damon Hill","points":91,"wins":6,"constructorIds":["williams"]},{"pos":3,"driverId":"berger","code":null,"driver":"Gerhard Berger","points":41,"wins":1,"constructorIds":["ferrari"]},{"pos":4,"driverId":"hakkinen","code":null,"driver":"Mika Häkkinen","points":26,"wins":0,"constructorIds":["mclaren"]},{"pos":5,"driverId":"alesi","code":null,"driver":"Jean Alesi","points":24,"wins":0,"constructorIds":["ferrari"]},{"pos":6,"driverId":"barrichello","code":"BAR","driver":"Rubens Barrichello","points":19,"wins":0,"constructorIds":["jordan"]},{"pos":7,"driverId":"brundle","code":null,"driver":"Martin Brundle","points":16,"wins":0,"constructorIds":["mclaren"]},{"pos":8,"driverId":"coulthard","code":"COU","driver":"David Coulthard","points":14,"wins":0,"constructorIds":["williams"]},{"pos":9,"driverId":"mansell","code":null,"driver":"Nigel Mansell","points":13,"wins":1,"constructorIds":["williams"]},{"pos":10,"driverId":"verstappen","code":null,"driver":"Jos Verstappen","points":10,"wins":0,"constructorIds":["benetton"]},{"pos":11,"driverId":"panis","code":null,"driver":"Olivier Panis","points":9,"wins":0,"constructorIds":["ligier"]},{"pos":12,"driverId":"blundell","code":null,"driver":"Mark Blundell","points":8,"wins":0,"constructorIds":["tyrrell"]},{"pos":13,"driverId":"frentzen","code":null,"driver":"Heinz-Harald Frentzen","points":7,"wins":0,"constructorIds":["sauber"]},{"pos":14,"driverId":"larini","code":null,"driver":"Nicola Larini","points":6,"wins":0,"constructorIds":["ferrari"]},{"pos":15,"driverId":"fittipaldi","code":null,"driver":"Christian Fittipaldi","points":6,"wins":0,"constructorIds":["footwork"]},{"pos":16,"driverId":"irvine","code":null,"driver":"Eddie Irvine","points":6,"wins":0,"constructorIds":["jordan"]},{"pos":17,"driverId":"katayama","code":null,"driver":"Ukyo Katayama","points":5,"wins":0,"constructorIds":["tyrrell"]},{"pos":18,"driverId":"bernard","code":null,"driver":"Éric Bernard","points":4,"wins":0,"constructorIds":["ligier","team_lotus"]},{"pos":19,"driverId":"wendlinger","code":null,"driver":"Karl Wendlinger","points":4,"wins":0,"constructorIds":["sauber"]},{"pos":20,"driverId":"cesaris","code":null,"driver":"Andrea de Cesaris","points":4,"wins":0,"constructorIds":["jordan","sauber"]},{"pos":21,"driverId":"martini","code":null,"driver":"Pierluigi Martini","points":4,"wins":0,"constructorIds":["minardi"]},{"pos":22,"driverId":"morbidelli","code":null,"driver":"Gianni Morbidelli","points":3,"wins":0,"constructorIds":["footwork"]},{"pos":23,"driverId":"comas","code":null,"driver":"Érik Comas","points":2,"wins":0,"constructorIds":["larrousse"]},{"pos":24,"driverId":"lehto","code":null,"driver":"Jyrki Järvilehto","points":1,"wins":0,"constructorIds":["benetton","sauber"]},{"pos":25,"driverId":"alboreto","code":null,"driver":"Michele Alboreto","points":1,"wins":0,"constructorIds":["minardi"]},{"pos":null,"driverId":"herbert","code":null,"driver":"Johnny Herbert","points":0,"wins":0,"constructorIds":["team_lotus","ligier","benetton"]},{"pos":null,"driverId":"beretta","code":null,"driver":"Olivier Beretta","points":0,"wins":0,"constructorIds":["larrousse"]},{"pos":null,"driverId":"lamy","code":null,"driver":"Pedro Lamy","points":0,"wins":0,"constructorIds":["team_lotus"]},{"pos":null,"driverId":"gounon","code":null,"driver":"Jean-Marc Gounon","points":0,"wins":0,"constructorIds":["simtek"]},{"pos":null,"driverId":"zanardi","code":null,"driver":"Alessandro Zanardi","points":0,"wins":0,"constructorIds":["team_lotus"]},{"pos":null,"driverId":"brabham","code":null,"driver":"David Brabham","points":0,"wins":0,"constructorIds":["simtek"]},{"pos":null,"driverId":"salo","code":null,"driver":"Mika Salo","points":0,"wins":0,"constructorIds":["team_lotus"]},{"pos":null,"driverId":"lagorce","code":null,"driver":"Franck Lagorce","points":0,"wins":0,"constructorIds":["ligier"]},{"pos":null,"driverId":"ratzenberger","code":null,"driver":"Roland Ratzenberger","points":0,"wins":0,"constructorIds":["simtek"]},{"pos":null,"driverId":"dalmas","code":null,"driver":"Yannick Dalmas","points":0,"wins":0,"constructorIds":["larrousse"]},{"pos":null,"driverId":"adams","code":null,"driver":"Philippe Adams","points":0,"wins":0,"constructorIds":["team_lotus"]},{"pos":null,"driverId":"schiattarella","code":null,"driver":"Domenico Schiattarella","points":0,"wins":0,"constructorIds":["simtek"]},{"pos":null,"driverId":"senna","code":null,"driver":"Ayrton Senna","points":0,"wins":0,"constructorIds":["williams"]},{"pos":null,"driverId":"belmondo","code":null,"driver":"Paul Belmondo","points":0,"wins":0,"constructorIds":["pacific"]},{"pos":null,"driverId":"gachot","code":null,"driver":"Bertrand Gachot","points":0,"wins":0,"constructorIds":["pacific"]},{"pos":null,"driverId":"deletraz","code":null,"driver":"Jean-Denis Délétraz","points":0,"wins":0,"constructorIds":["larrousse"]},{"pos":null,"driverId":"suzuki","code":null,"driver":"Aguri Suzuki","points":0,"wins":0,"constructorIds":["jordan"]},{"pos":null,"driverId":"alliot","code":null,"driver":"Philippe Alliot","points":0,"wins":0,"constructorIds":["mclaren","larrousse"]},{"pos":null,"driverId":"noda","code":null,"driver":"Hideki Noda","points":0,"wins":0,"constructorIds":["larrousse"]},{"pos":null,"driverId":"inoue","code":null,"driver":"Taki Inoue","points":0,"wins":0,"constructorIds":["simtek"]},{"pos":null,"driverId":"montermini","code":null,"driver":"Andrea Montermini","points":0,"wins":0,"constructorIds":["simtek"]}],"constructors":[{"pos":1,"constructorId":"williams","constructor":"Williams","points":118,"wins":7},{"pos":2,"constructorId":"benetton","constructor":"Benetton","points":103,"wins":8},{"pos":3,"constructorId":"ferrari","constructor":"Ferrari","points":71,"wins":1},{"pos":4,"constructorId":"mclaren","constructor":"McLaren","points":42,"wins":0},{"pos":5,"constructorId":"jordan","constructor":"Jordan","points":28,"wins":0},{"pos":6,"constructorId":"ligier","constructor":"Ligier","points":13,"wins":0},{"pos":7,"constructorId":"tyrrell","constructor":"Tyrrell","points":13,"wins":0},{"pos":8,"constructorId":"sauber","constructor":"Sauber","points":12,"wins":0},{"pos":9,"constructorId":"footwork","constructor":"Footwork","points":9,"wins":0},{"pos":10,"constructorId":"minardi","constructor":"Minardi","points":5,"wins":0},{"pos":11,"constructorId":"larrousse","constructor":"Larrousse","points":2,"wins":0},{"pos":null,"constructorId":"team_lotus","constructor":"Team Lotus","points":0,"wins":0},{"pos":null,"constructorId":"simtek","constructor":"Simtek","points":0,"wins":0},{"pos":null,"constructorId":"pacific","constructor":"Pacific","points":0,"wins":0}]}
+{
+  "year": 1994,
+  "wccExists": true,
+  "wdcChampion": {
+    "driverId": "michael-schumacher",
+    "name": "Michael Schumacher",
+    "code": "MSC"
+  },
+  "wccChampion": {
+    "constructorId": "williams",
+    "name": "Williams"
+  },
+  "wdc": [
+    {
+      "position": 1,
+      "driverId": "michael-schumacher",
+      "name": "Michael Schumacher",
+      "code": "MSC",
+      "points": 92,
+      "teamId": "benetton",
+      "team": "Benetton"
+    },
+    {
+      "position": 2,
+      "driverId": "damon-hill",
+      "name": "Damon Hill",
+      "code": "HIL",
+      "points": 91,
+      "teamId": "williams",
+      "team": "Williams"
+    },
+    {
+      "position": 3,
+      "driverId": "gerhard-berger",
+      "name": "Gerhard Berger",
+      "code": "BER",
+      "points": 41,
+      "teamId": "ferrari",
+      "team": "Ferrari"
+    },
+    {
+      "position": 4,
+      "driverId": "mika-hakkinen",
+      "name": "Mika Häkkinen",
+      "code": "HAK",
+      "points": 26,
+      "teamId": "mclaren",
+      "team": "McLaren"
+    },
+    {
+      "position": 5,
+      "driverId": "jean-alesi",
+      "name": "Jean Alesi",
+      "code": "ALE",
+      "points": 24,
+      "teamId": "ferrari",
+      "team": "Ferrari"
+    },
+    {
+      "position": 6,
+      "driverId": "rubens-barrichello",
+      "name": "Rubens Barrichello",
+      "code": "BAR",
+      "points": 19,
+      "teamId": "jordan",
+      "team": "Jordan"
+    },
+    {
+      "position": 7,
+      "driverId": "martin-brundle",
+      "name": "Martin Brundle",
+      "code": "BRU",
+      "points": 16,
+      "teamId": "mclaren",
+      "team": "McLaren"
+    },
+    {
+      "position": 8,
+      "driverId": "david-coulthard",
+      "name": "David Coulthard",
+      "code": "COU",
+      "points": 14,
+      "teamId": "williams",
+      "team": "Williams"
+    },
+    {
+      "position": 9,
+      "driverId": "nigel-mansell",
+      "name": "Nigel Mansell",
+      "code": "MAN",
+      "points": 13,
+      "teamId": "williams",
+      "team": "Williams"
+    },
+    {
+      "position": 10,
+      "driverId": "jos-verstappen",
+      "name": "Jos Verstappen",
+      "code": "VER",
+      "points": 10,
+      "teamId": "benetton",
+      "team": "Benetton"
+    },
+    {
+      "position": 11,
+      "driverId": "olivier-panis",
+      "name": "Olivier Panis",
+      "code": "PAN",
+      "points": 9,
+      "teamId": "ligier",
+      "team": "Ligier"
+    },
+    {
+      "position": 12,
+      "driverId": "mark-blundell",
+      "name": "Mark Blundell",
+      "code": "BLU",
+      "points": 8,
+      "teamId": "tyrrell",
+      "team": "Tyrrell"
+    },
+    {
+      "position": 13,
+      "driverId": "heinz-harald-frentzen",
+      "name": "Heinz-Harald Frentzen",
+      "code": "FRE",
+      "points": 7,
+      "teamId": "sauber",
+      "team": "Sauber"
+    },
+    {
+      "position": 14,
+      "driverId": "nicola-larini",
+      "name": "Nicola Larini",
+      "code": "LAR",
+      "points": 6,
+      "teamId": "ferrari",
+      "team": "Ferrari"
+    },
+    {
+      "position": 15,
+      "driverId": "christian-fittipaldi",
+      "name": "Christian Fittipaldi",
+      "code": "FIT",
+      "points": 6,
+      "teamId": "footwork",
+      "team": "Footwork"
+    },
+    {
+      "position": 16,
+      "driverId": "eddie-irvine",
+      "name": "Eddie Irvine",
+      "code": "IRV",
+      "points": 6,
+      "teamId": "jordan",
+      "team": "Jordan"
+    },
+    {
+      "position": 17,
+      "driverId": "ukyo-katayama",
+      "name": "Ukyo Katayama",
+      "code": "KAT",
+      "points": 5,
+      "teamId": "tyrrell",
+      "team": "Tyrrell"
+    },
+    {
+      "position": 18,
+      "driverId": "eric-bernard",
+      "name": "Éric Bernard",
+      "code": "BER",
+      "points": 4,
+      "teamId": "ligier",
+      "team": "Ligier"
+    },
+    {
+      "position": 19,
+      "driverId": "andrea-de-cesaris",
+      "name": "Andrea de Cesaris",
+      "code": "DEC",
+      "points": 4,
+      "teamId": "sauber",
+      "team": "Sauber"
+    },
+    {
+      "position": 19,
+      "driverId": "karl-wendlinger",
+      "name": "Karl Wendlinger",
+      "code": "WEN",
+      "points": 4,
+      "teamId": "sauber",
+      "team": "Sauber"
+    },
+    {
+      "position": 21,
+      "driverId": "pierluigi-martini",
+      "name": "Pierluigi Martini",
+      "code": "MAR",
+      "points": 4,
+      "teamId": "minardi",
+      "team": "Minardi"
+    },
+    {
+      "position": 22,
+      "driverId": "gianni-morbidelli",
+      "name": "Gianni Morbidelli",
+      "code": "MOR",
+      "points": 3,
+      "teamId": "footwork",
+      "team": "Footwork"
+    },
+    {
+      "position": 23,
+      "driverId": "erik-comas",
+      "name": "Érik Comas",
+      "code": "COM",
+      "points": 2,
+      "teamId": "larrousse",
+      "team": "Larrousse"
+    },
+    {
+      "position": 24,
+      "driverId": "jj-lehto",
+      "name": "JJ Lehto",
+      "code": "JAR",
+      "points": 1,
+      "teamId": "benetton",
+      "team": "Benetton"
+    },
+    {
+      "position": 24,
+      "driverId": "michele-alboreto",
+      "name": "Michele Alboreto",
+      "code": "ALB",
+      "points": 1,
+      "teamId": "minardi",
+      "team": "Minardi"
+    }
+  ],
+  "wcc": [
+    {
+      "position": 1,
+      "constructorId": "williams",
+      "name": "Williams",
+      "points": 118,
+      "championshipWon": true
+    },
+    {
+      "position": 2,
+      "constructorId": "benetton",
+      "name": "Benetton",
+      "points": 103,
+      "championshipWon": false
+    },
+    {
+      "position": 3,
+      "constructorId": "ferrari",
+      "name": "Ferrari",
+      "points": 71,
+      "championshipWon": false
+    },
+    {
+      "position": 4,
+      "constructorId": "mclaren",
+      "name": "McLaren",
+      "points": 42,
+      "championshipWon": false
+    },
+    {
+      "position": 5,
+      "constructorId": "jordan",
+      "name": "Jordan",
+      "points": 28,
+      "championshipWon": false
+    },
+    {
+      "position": 6,
+      "constructorId": "ligier",
+      "name": "Ligier",
+      "points": 13,
+      "championshipWon": false
+    },
+    {
+      "position": 7,
+      "constructorId": "tyrrell",
+      "name": "Tyrrell",
+      "points": 13,
+      "championshipWon": false
+    },
+    {
+      "position": 8,
+      "constructorId": "sauber",
+      "name": "Sauber",
+      "points": 12,
+      "championshipWon": false
+    },
+    {
+      "position": 9,
+      "constructorId": "footwork",
+      "name": "Footwork",
+      "points": 9,
+      "championshipWon": false
+    },
+    {
+      "position": 10,
+      "constructorId": "minardi",
+      "name": "Minardi",
+      "points": 5,
+      "championshipWon": false
+    },
+    {
+      "position": 11,
+      "constructorId": "larrousse",
+      "name": "Larrousse",
+      "points": 2,
+      "championshipWon": false
+    }
+  ],
+  "notes": null,
+  "updated": "2026-06-21"
+}

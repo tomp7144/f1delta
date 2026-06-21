@@ -1,1 +1,314 @@
-{"season":2004,"drivers":[{"pos":1,"driverId":"michael_schumacher","code":"MSC","driver":"Michael Schumacher","points":148,"wins":13,"constructorIds":["ferrari"]},{"pos":2,"driverId":"barrichello","code":"BAR","driver":"Rubens Barrichello","points":114,"wins":2,"constructorIds":["ferrari"]},{"pos":3,"driverId":"button","code":"BUT","driver":"Jenson Button","points":85,"wins":0,"constructorIds":["bar"]},{"pos":4,"driverId":"alonso","code":"ALO","driver":"Fernando Alonso","points":59,"wins":0,"constructorIds":["renault"]},{"pos":5,"driverId":"montoya","code":"MON","driver":"Juan Pablo Montoya","points":58,"wins":1,"constructorIds":["williams"]},{"pos":6,"driverId":"trulli","code":"TRU","driver":"Jarno Trulli","points":46,"wins":1,"constructorIds":["renault","toyota"]},{"pos":7,"driverId":"raikkonen","code":"RAI","driver":"Kimi Räikkönen","points":45,"wins":1,"constructorIds":["mclaren"]},{"pos":8,"driverId":"sato","code":"SAT","driver":"Takuma Sato","points":34,"wins":0,"constructorIds":["bar"]},{"pos":9,"driverId":"ralf_schumacher","code":"SCH","driver":"Ralf Schumacher","points":24,"wins":0,"constructorIds":["williams"]},{"pos":10,"driverId":"coulthard","code":"COU","driver":"David Coulthard","points":24,"wins":0,"constructorIds":["mclaren"]},{"pos":11,"driverId":"fisichella","code":"FIS","driver":"Giancarlo Fisichella","points":22,"wins":0,"constructorIds":["sauber"]},{"pos":12,"driverId":"massa","code":"MAS","driver":"Felipe Massa","points":12,"wins":0,"constructorIds":["sauber"]},{"pos":13,"driverId":"webber","code":"WEB","driver":"Mark Webber","points":7,"wins":0,"constructorIds":["jaguar"]},{"pos":14,"driverId":"panis","code":null,"driver":"Olivier Panis","points":6,"wins":0,"constructorIds":["toyota"]},{"pos":15,"driverId":"pizzonia","code":"PIZ","driver":"Antônio Pizzonia","points":6,"wins":0,"constructorIds":["williams"]},{"pos":16,"driverId":"klien","code":"KLI","driver":"Christian Klien","points":3,"wins":0,"constructorIds":["jaguar"]},{"pos":17,"driverId":"matta","code":null,"driver":"Cristiano da Matta","points":3,"wins":0,"constructorIds":["toyota"]},{"pos":18,"driverId":"heidfeld","code":"HEI","driver":"Nick Heidfeld","points":3,"wins":0,"constructorIds":["jordan"]},{"pos":19,"driverId":"glock","code":"GLO","driver":"Timo Glock","points":2,"wins":0,"constructorIds":["jordan"]},{"pos":20,"driverId":"baumgartner","code":null,"driver":"Zsolt Baumgartner","points":1,"wins":0,"constructorIds":["minardi"]},{"pos":21,"driverId":"villeneuve","code":"VIL","driver":"Jacques Villeneuve","points":0,"wins":0,"constructorIds":["renault"]},{"pos":22,"driverId":"zonta","code":"ZON","driver":"Ricardo Zonta","points":0,"wins":0,"constructorIds":["toyota"]},{"pos":23,"driverId":"gene","code":null,"driver":"Marc Gené","points":0,"wins":0,"constructorIds":["williams"]},{"pos":24,"driverId":"pantano","code":null,"driver":"Giorgio Pantano","points":0,"wins":0,"constructorIds":["jordan"]},{"pos":25,"driverId":"bruni","code":null,"driver":"Gianmaria Bruni","points":0,"wins":0,"constructorIds":["minardi"]}],"constructors":[{"pos":1,"constructorId":"ferrari","constructor":"Ferrari","points":262,"wins":15},{"pos":2,"constructorId":"bar","constructor":"BAR","points":119,"wins":0},{"pos":3,"constructorId":"renault","constructor":"Renault","points":105,"wins":1},{"pos":4,"constructorId":"williams","constructor":"Williams","points":88,"wins":1},{"pos":5,"constructorId":"mclaren","constructor":"McLaren","points":69,"wins":1},{"pos":6,"constructorId":"sauber","constructor":"Sauber","points":34,"wins":0},{"pos":7,"constructorId":"jaguar","constructor":"Jaguar","points":10,"wins":0},{"pos":8,"constructorId":"toyota","constructor":"Toyota","points":9,"wins":0},{"pos":9,"constructorId":"jordan","constructor":"Jordan","points":5,"wins":0},{"pos":10,"constructorId":"minardi","constructor":"Minardi","points":1,"wins":0}]}
+{
+  "year": 2004,
+  "wccExists": true,
+  "wdcChampion": {
+    "driverId": "michael-schumacher",
+    "name": "Michael Schumacher",
+    "code": "MSC"
+  },
+  "wccChampion": {
+    "constructorId": "ferrari",
+    "name": "Ferrari"
+  },
+  "wdc": [
+    {
+      "position": 1,
+      "driverId": "michael-schumacher",
+      "name": "Michael Schumacher",
+      "code": "MSC",
+      "points": 148,
+      "teamId": "ferrari",
+      "team": "Ferrari"
+    },
+    {
+      "position": 2,
+      "driverId": "rubens-barrichello",
+      "name": "Rubens Barrichello",
+      "code": "BAR",
+      "points": 114,
+      "teamId": "ferrari",
+      "team": "Ferrari"
+    },
+    {
+      "position": 3,
+      "driverId": "jenson-button",
+      "name": "Jenson Button",
+      "code": "BUT",
+      "points": 85,
+      "teamId": "bar",
+      "team": "BAR"
+    },
+    {
+      "position": 4,
+      "driverId": "fernando-alonso",
+      "name": "Fernando Alonso",
+      "code": "ALO",
+      "points": 59,
+      "teamId": "renault",
+      "team": "Renault"
+    },
+    {
+      "position": 5,
+      "driverId": "juan-pablo-montoya",
+      "name": "Juan Pablo Montoya",
+      "code": "MOY",
+      "points": 58,
+      "teamId": "williams",
+      "team": "Williams"
+    },
+    {
+      "position": 6,
+      "driverId": "jarno-trulli",
+      "name": "Jarno Trulli",
+      "code": "TRU",
+      "points": 46,
+      "teamId": "renault",
+      "team": "Renault"
+    },
+    {
+      "position": 7,
+      "driverId": "kimi-raikkonen",
+      "name": "Kimi Räikkönen",
+      "code": "RAI",
+      "points": 45,
+      "teamId": "mclaren",
+      "team": "McLaren"
+    },
+    {
+      "position": 8,
+      "driverId": "takuma-sato",
+      "name": "Takuma Sato",
+      "code": "SAT",
+      "points": 34,
+      "teamId": "bar",
+      "team": "BAR"
+    },
+    {
+      "position": 9,
+      "driverId": "ralf-schumacher",
+      "name": "Ralf Schumacher",
+      "code": "RSC",
+      "points": 24,
+      "teamId": "williams",
+      "team": "Williams"
+    },
+    {
+      "position": 10,
+      "driverId": "david-coulthard",
+      "name": "David Coulthard",
+      "code": "COU",
+      "points": 24,
+      "teamId": "mclaren",
+      "team": "McLaren"
+    },
+    {
+      "position": 11,
+      "driverId": "giancarlo-fisichella",
+      "name": "Giancarlo Fisichella",
+      "code": "FIS",
+      "points": 22,
+      "teamId": "sauber",
+      "team": "Sauber"
+    },
+    {
+      "position": 12,
+      "driverId": "felipe-massa",
+      "name": "Felipe Massa",
+      "code": "MAS",
+      "points": 12,
+      "teamId": "sauber",
+      "team": "Sauber"
+    },
+    {
+      "position": 13,
+      "driverId": "mark-webber",
+      "name": "Mark Webber",
+      "code": "WEB",
+      "points": 7,
+      "teamId": "jaguar",
+      "team": "Jaguar"
+    },
+    {
+      "position": 14,
+      "driverId": "olivier-panis",
+      "name": "Olivier Panis",
+      "code": "PAN",
+      "points": 6,
+      "teamId": "toyota",
+      "team": "Toyota"
+    },
+    {
+      "position": 15,
+      "driverId": "antonio-pizzonia",
+      "name": "Antônio Pizzonia",
+      "code": "PIZ",
+      "points": 6,
+      "teamId": "williams",
+      "team": "Williams"
+    },
+    {
+      "position": 16,
+      "driverId": "christian-klien",
+      "name": "Christian Klien",
+      "code": "KLI",
+      "points": 3,
+      "teamId": "jaguar",
+      "team": "Jaguar"
+    },
+    {
+      "position": 17,
+      "driverId": "cristiano-da-matta",
+      "name": "Cristiano da Matta",
+      "code": "DAM",
+      "points": 3,
+      "teamId": "toyota",
+      "team": "Toyota"
+    },
+    {
+      "position": 18,
+      "driverId": "nick-heidfeld",
+      "name": "Nick Heidfeld",
+      "code": "HEI",
+      "points": 3,
+      "teamId": "jordan",
+      "team": "Jordan"
+    },
+    {
+      "position": 19,
+      "driverId": "timo-glock",
+      "name": "Timo Glock",
+      "code": "GLO",
+      "points": 2,
+      "teamId": "jordan",
+      "team": "Jordan"
+    },
+    {
+      "position": 20,
+      "driverId": "zsolt-baumgartner",
+      "name": "Zsolt Baumgartner",
+      "code": "BAU",
+      "points": 1,
+      "teamId": "minardi",
+      "team": "Minardi"
+    },
+    {
+      "position": 21,
+      "driverId": "jacques-villeneuve",
+      "name": "Jacques Villeneuve",
+      "code": "VIL",
+      "points": 0,
+      "teamId": "renault",
+      "team": "Renault"
+    },
+    {
+      "position": 22,
+      "driverId": "ricardo-zonta",
+      "name": "Ricardo Zonta",
+      "code": "ZON",
+      "points": 0,
+      "teamId": "toyota",
+      "team": "Toyota"
+    },
+    {
+      "position": 23,
+      "driverId": "marc-gene",
+      "name": "Marc Gené",
+      "code": "GEN",
+      "points": 0,
+      "teamId": "williams",
+      "team": "Williams"
+    },
+    {
+      "position": 24,
+      "driverId": "giorgio-pantano",
+      "name": "Giorgio Pantano",
+      "code": "PAN",
+      "points": 0,
+      "teamId": "jordan",
+      "team": "Jordan"
+    },
+    {
+      "position": 25,
+      "driverId": "gianmaria-bruni",
+      "name": "Gianmaria Bruni",
+      "code": "BRU",
+      "points": 0,
+      "teamId": "minardi",
+      "team": "Minardi"
+    }
+  ],
+  "wcc": [
+    {
+      "position": 1,
+      "constructorId": "ferrari",
+      "name": "Ferrari",
+      "points": 262,
+      "championshipWon": true
+    },
+    {
+      "position": 2,
+      "constructorId": "bar",
+      "name": "BAR",
+      "points": 119,
+      "championshipWon": false
+    },
+    {
+      "position": 3,
+      "constructorId": "renault",
+      "name": "Renault",
+      "points": 105,
+      "championshipWon": false
+    },
+    {
+      "position": 4,
+      "constructorId": "williams",
+      "name": "Williams",
+      "points": 88,
+      "championshipWon": false
+    },
+    {
+      "position": 5,
+      "constructorId": "mclaren",
+      "name": "McLaren",
+      "points": 69,
+      "championshipWon": false
+    },
+    {
+      "position": 6,
+      "constructorId": "sauber",
+      "name": "Sauber",
+      "points": 34,
+      "championshipWon": false
+    },
+    {
+      "position": 7,
+      "constructorId": "jaguar",
+      "name": "Jaguar",
+      "points": 10,
+      "championshipWon": false
+    },
+    {
+      "position": 8,
+      "constructorId": "toyota",
+      "name": "Toyota",
+      "points": 9,
+      "championshipWon": false
+    },
+    {
+      "position": 9,
+      "constructorId": "jordan",
+      "name": "Jordan",
+      "points": 5,
+      "championshipWon": false
+    },
+    {
+      "position": 10,
+      "constructorId": "minardi",
+      "name": "Minardi",
+      "points": 1,
+      "championshipWon": false
+    }
+  ],
+  "notes": null,
+  "updated": "2026-06-21"
+}

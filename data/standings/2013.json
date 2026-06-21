@@ -1,1 +1,303 @@
-{"season":2013,"drivers":[{"pos":1,"driverId":"vettel","code":"VET","driver":"Sebastian Vettel","points":397,"wins":13,"constructorIds":["red_bull"]},{"pos":2,"driverId":"alonso","code":"ALO","driver":"Fernando Alonso","points":242,"wins":2,"constructorIds":["ferrari"]},{"pos":3,"driverId":"webber","code":"WEB","driver":"Mark Webber","points":199,"wins":0,"constructorIds":["red_bull"]},{"pos":4,"driverId":"hamilton","code":"HAM","driver":"Lewis Hamilton","points":189,"wins":1,"constructorIds":["mercedes"]},{"pos":5,"driverId":"raikkonen","code":"RAI","driver":"Kimi Räikkönen","points":183,"wins":1,"constructorIds":["lotus_f1"]},{"pos":6,"driverId":"rosberg","code":"ROS","driver":"Nico Rosberg","points":171,"wins":2,"constructorIds":["mercedes"]},{"pos":7,"driverId":"grosjean","code":"GRO","driver":"Romain Grosjean","points":132,"wins":0,"constructorIds":["lotus_f1"]},{"pos":8,"driverId":"massa","code":"MAS","driver":"Felipe Massa","points":112,"wins":0,"constructorIds":["ferrari"]},{"pos":9,"driverId":"button","code":"BUT","driver":"Jenson Button","points":73,"wins":0,"constructorIds":["mclaren"]},{"pos":10,"driverId":"hulkenberg","code":"HUL","driver":"Nico Hülkenberg","points":51,"wins":0,"constructorIds":["sauber"]},{"pos":11,"driverId":"perez","code":"PER","driver":"Sergio Pérez","points":49,"wins":0,"constructorIds":["mclaren"]},{"pos":12,"driverId":"resta","code":"DIR","driver":"Paul di Resta","points":48,"wins":0,"constructorIds":["force_india"]},{"pos":13,"driverId":"sutil","code":"SUT","driver":"Adrian Sutil","points":29,"wins":0,"constructorIds":["force_india"]},{"pos":14,"driverId":"ricciardo","code":"RIC","driver":"Daniel Ricciardo","points":20,"wins":0,"constructorIds":["toro_rosso"]},{"pos":15,"driverId":"vergne","code":"VER","driver":"Jean-Éric Vergne","points":13,"wins":0,"constructorIds":["toro_rosso"]},{"pos":16,"driverId":"gutierrez","code":"GUT","driver":"Esteban Gutiérrez","points":6,"wins":0,"constructorIds":["sauber"]},{"pos":17,"driverId":"bottas","code":"BOT","driver":"Valtteri Bottas","points":4,"wins":0,"constructorIds":["williams"]},{"pos":18,"driverId":"maldonado","code":"MAL","driver":"Pastor Maldonado","points":1,"wins":0,"constructorIds":["williams"]},{"pos":19,"driverId":"jules_bianchi","code":"BIA","driver":"Jules Bianchi","points":0,"wins":0,"constructorIds":["marussia"]},{"pos":20,"driverId":"pic","code":"PIC","driver":"Charles Pic","points":0,"wins":0,"constructorIds":["caterham"]},{"pos":21,"driverId":"garde","code":"VDG","driver":"Giedo van der Garde","points":0,"wins":0,"constructorIds":["caterham"]},{"pos":22,"driverId":"kovalainen","code":"KOV","driver":"Heikki Kovalainen","points":0,"wins":0,"constructorIds":["lotus_f1"]},{"pos":23,"driverId":"chilton","code":"CHI","driver":"Max Chilton","points":0,"wins":0,"constructorIds":["marussia"]}],"constructors":[{"pos":1,"constructorId":"red_bull","constructor":"Red Bull","points":596,"wins":13},{"pos":2,"constructorId":"mercedes","constructor":"Mercedes","points":360,"wins":3},{"pos":3,"constructorId":"ferrari","constructor":"Ferrari","points":354,"wins":2},{"pos":4,"constructorId":"lotus_f1","constructor":"Lotus F1","points":315,"wins":1},{"pos":5,"constructorId":"mclaren","constructor":"McLaren","points":122,"wins":0},{"pos":6,"constructorId":"force_india","constructor":"Force India","points":77,"wins":0},{"pos":7,"constructorId":"sauber","constructor":"Sauber","points":57,"wins":0},{"pos":8,"constructorId":"toro_rosso","constructor":"Toro Rosso","points":33,"wins":0},{"pos":9,"constructorId":"williams","constructor":"Williams","points":5,"wins":0},{"pos":10,"constructorId":"marussia","constructor":"Marussia","points":0,"wins":0},{"pos":11,"constructorId":"caterham","constructor":"Caterham","points":0,"wins":0}]}
+{
+  "year": 2013,
+  "wccExists": true,
+  "wdcChampion": {
+    "driverId": "sebastian-vettel",
+    "name": "Sebastian Vettel",
+    "code": "VET"
+  },
+  "wccChampion": {
+    "constructorId": "red-bull",
+    "name": "Red Bull"
+  },
+  "wdc": [
+    {
+      "position": 1,
+      "driverId": "sebastian-vettel",
+      "name": "Sebastian Vettel",
+      "code": "VET",
+      "points": 397,
+      "teamId": "red-bull",
+      "team": "Red Bull"
+    },
+    {
+      "position": 2,
+      "driverId": "fernando-alonso",
+      "name": "Fernando Alonso",
+      "code": "ALO",
+      "points": 242,
+      "teamId": "ferrari",
+      "team": "Ferrari"
+    },
+    {
+      "position": 3,
+      "driverId": "mark-webber",
+      "name": "Mark Webber",
+      "code": "WEB",
+      "points": 199,
+      "teamId": "red-bull",
+      "team": "Red Bull"
+    },
+    {
+      "position": 4,
+      "driverId": "lewis-hamilton",
+      "name": "Lewis Hamilton",
+      "code": "HAM",
+      "points": 189,
+      "teamId": "mercedes",
+      "team": "Mercedes"
+    },
+    {
+      "position": 5,
+      "driverId": "kimi-raikkonen",
+      "name": "Kimi Räikkönen",
+      "code": "RAI",
+      "points": 183,
+      "teamId": "lotus-f1",
+      "team": "Lotus"
+    },
+    {
+      "position": 6,
+      "driverId": "nico-rosberg",
+      "name": "Nico Rosberg",
+      "code": "ROS",
+      "points": 171,
+      "teamId": "mercedes",
+      "team": "Mercedes"
+    },
+    {
+      "position": 7,
+      "driverId": "romain-grosjean",
+      "name": "Romain Grosjean",
+      "code": "GRO",
+      "points": 132,
+      "teamId": "lotus-f1",
+      "team": "Lotus"
+    },
+    {
+      "position": 8,
+      "driverId": "felipe-massa",
+      "name": "Felipe Massa",
+      "code": "MAS",
+      "points": 112,
+      "teamId": "ferrari",
+      "team": "Ferrari"
+    },
+    {
+      "position": 9,
+      "driverId": "jenson-button",
+      "name": "Jenson Button",
+      "code": "BUT",
+      "points": 73,
+      "teamId": "mclaren",
+      "team": "McLaren"
+    },
+    {
+      "position": 10,
+      "driverId": "nico-hulkenberg",
+      "name": "Nico Hülkenberg",
+      "code": "HUL",
+      "points": 51,
+      "teamId": "sauber",
+      "team": "Sauber"
+    },
+    {
+      "position": 11,
+      "driverId": "sergio-perez",
+      "name": "Sergio Pérez",
+      "code": "PER",
+      "points": 49,
+      "teamId": "mclaren",
+      "team": "McLaren"
+    },
+    {
+      "position": 12,
+      "driverId": "paul-di-resta",
+      "name": "Paul di Resta",
+      "code": "DIR",
+      "points": 48,
+      "teamId": "force-india",
+      "team": "Force India"
+    },
+    {
+      "position": 13,
+      "driverId": "adrian-sutil",
+      "name": "Adrian Sutil",
+      "code": "SUT",
+      "points": 29,
+      "teamId": "force-india",
+      "team": "Force India"
+    },
+    {
+      "position": 14,
+      "driverId": "daniel-ricciardo",
+      "name": "Daniel Ricciardo",
+      "code": "RIC",
+      "points": 20,
+      "teamId": "toro-rosso",
+      "team": "Toro Rosso"
+    },
+    {
+      "position": 15,
+      "driverId": "jean-eric-vergne",
+      "name": "Jean-Éric Vergne",
+      "code": "VER",
+      "points": 13,
+      "teamId": "toro-rosso",
+      "team": "Toro Rosso"
+    },
+    {
+      "position": 16,
+      "driverId": "esteban-gutierrez",
+      "name": "Esteban Gutiérrez",
+      "code": "GUT",
+      "points": 6,
+      "teamId": "sauber",
+      "team": "Sauber"
+    },
+    {
+      "position": 17,
+      "driverId": "valtteri-bottas",
+      "name": "Valtteri Bottas",
+      "code": "BOT",
+      "points": 4,
+      "teamId": "williams",
+      "team": "Williams"
+    },
+    {
+      "position": 18,
+      "driverId": "pastor-maldonado",
+      "name": "Pastor Maldonado",
+      "code": "MAL",
+      "points": 1,
+      "teamId": "williams",
+      "team": "Williams"
+    },
+    {
+      "position": 19,
+      "driverId": "jules-bianchi",
+      "name": "Jules Bianchi",
+      "code": "BIA",
+      "points": 0,
+      "teamId": "marussia",
+      "team": "Marussia"
+    },
+    {
+      "position": 20,
+      "driverId": "charles-pic",
+      "name": "Charles Pic",
+      "code": "PIC",
+      "points": 0,
+      "teamId": "caterham",
+      "team": "Caterham"
+    },
+    {
+      "position": 21,
+      "driverId": "heikki-kovalainen",
+      "name": "Heikki Kovalainen",
+      "code": "KOV",
+      "points": 0,
+      "teamId": "lotus-f1",
+      "team": "Lotus"
+    },
+    {
+      "position": 22,
+      "driverId": "giedo-van-der-garde",
+      "name": "Giedo van der Garde",
+      "code": "VDG",
+      "points": 0,
+      "teamId": "caterham",
+      "team": "Caterham"
+    },
+    {
+      "position": 23,
+      "driverId": "max-chilton",
+      "name": "Max Chilton",
+      "code": "CHI",
+      "points": 0,
+      "teamId": "marussia",
+      "team": "Marussia"
+    }
+  ],
+  "wcc": [
+    {
+      "position": 1,
+      "constructorId": "red-bull",
+      "name": "Red Bull",
+      "points": 596,
+      "championshipWon": true
+    },
+    {
+      "position": 2,
+      "constructorId": "mercedes",
+      "name": "Mercedes",
+      "points": 360,
+      "championshipWon": false
+    },
+    {
+      "position": 3,
+      "constructorId": "ferrari",
+      "name": "Ferrari",
+      "points": 354,
+      "championshipWon": false
+    },
+    {
+      "position": 4,
+      "constructorId": "lotus-f1",
+      "name": "Lotus",
+      "points": 315,
+      "championshipWon": false
+    },
+    {
+      "position": 5,
+      "constructorId": "mclaren",
+      "name": "McLaren",
+      "points": 122,
+      "championshipWon": false
+    },
+    {
+      "position": 6,
+      "constructorId": "force-india",
+      "name": "Force India",
+      "points": 77,
+      "championshipWon": false
+    },
+    {
+      "position": 7,
+      "constructorId": "sauber",
+      "name": "Sauber",
+      "points": 57,
+      "championshipWon": false
+    },
+    {
+      "position": 8,
+      "constructorId": "toro-rosso",
+      "name": "Toro Rosso",
+      "points": 33,
+      "championshipWon": false
+    },
+    {
+      "position": 9,
+      "constructorId": "williams",
+      "name": "Williams",
+      "points": 5,
+      "championshipWon": false
+    },
+    {
+      "position": 10,
+      "constructorId": "marussia",
+      "name": "Marussia",
+      "points": 0,
+      "championshipWon": false
+    },
+    {
+      "position": 11,
+      "constructorId": "caterham",
+      "name": "Caterham",
+      "points": 0,
+      "championshipWon": false
+    }
+  ],
+  "notes": null,
+  "updated": "2026-06-21"
+}

@@ -1,1 +1,218 @@
-{"season":1959,"drivers":[{"pos":1,"driverId":"jack_brabham","code":null,"driver":"Jack Brabham","points":31,"wins":2,"constructorIds":["cooper-climax"]},{"pos":2,"driverId":"brooks","code":null,"driver":"Tony Brooks","points":27,"wins":2,"constructorIds":["ferrari","vanwall"]},{"pos":3,"driverId":"moss","code":null,"driver":"Stirling Moss","points":25.5,"wins":2,"constructorIds":["cooper-climax","brm"]},{"pos":4,"driverId":"phil_hill","code":null,"driver":"Phil Hill","points":20,"wins":0,"constructorIds":["ferrari"]},{"pos":5,"driverId":"trintignant","code":null,"driver":"Maurice Trintignant","points":19,"wins":0,"constructorIds":["cooper-climax"]},{"pos":6,"driverId":"mclaren","code":null,"driver":"Bruce McLaren","points":16.5,"wins":1,"constructorIds":["cooper-climax"]},{"pos":7,"driverId":"gurney","code":null,"driver":"Dan Gurney","points":13,"wins":0,"constructorIds":["ferrari"]},{"pos":8,"driverId":"bonnier","code":null,"driver":"Jo Bonnier","points":10,"wins":1,"constructorIds":["brm"]},{"pos":9,"driverId":"gregory","code":null,"driver":"Masten Gregory","points":10,"wins":0,"constructorIds":["cooper-climax"]},{"pos":10,"driverId":"ward","code":null,"driver":"Rodger Ward","points":8,"wins":1,"constructorIds":["watson","kurtis_kraft"]},{"pos":11,"driverId":"rathmann","code":null,"driver":"Jim Rathmann","points":6,"wins":0,"constructorIds":["watson"]},{"pos":12,"driverId":"thomson","code":null,"driver":"Johnny Thomson","points":5,"wins":0,"constructorIds":["lesovsky"]},{"pos":13,"driverId":"schell","code":null,"driver":"Harry Schell","points":5,"wins":0,"constructorIds":["brm","cooper-climax"]},{"pos":14,"driverId":"ireland","code":null,"driver":"Innes Ireland","points":5,"wins":0,"constructorIds":["team_lotus"]},{"pos":15,"driverId":"gendebien","code":null,"driver":"Olivier Gendebien","points":3,"wins":0,"constructorIds":["ferrari"]},{"pos":16,"driverId":"bettenhausen","code":null,"driver":"Tony Bettenhausen","points":3,"wins":0,"constructorIds":["epperly"]},{"pos":17,"driverId":"allison","code":null,"driver":"Cliff Allison","points":2,"wins":0,"constructorIds":["ferrari"]},{"pos":18,"driverId":"behra","code":null,"driver":"Jean Behra","points":2,"wins":0,"constructorIds":["ferrari"]},{"pos":19,"driverId":"goldsmith","code":null,"driver":"Paul Goldsmith","points":2,"wins":0,"constructorIds":["epperly"]},{"pos":null,"driverId":"salvadori","code":null,"driver":"Roy Salvadori","points":0,"wins":0,"constructorIds":["cooper-maserati","aston_martin"]},{"pos":null,"driverId":"flockhart","code":null,"driver":"Ron Flockhart","points":0,"wins":0,"constructorIds":["brm"]},{"pos":null,"driverId":"burgess","code":null,"driver":"Ian Burgess","points":0,"wins":0,"constructorIds":["cooper-maserati"]},{"pos":null,"driverId":"trips","code":null,"driver":"Wolfgang von Trips","points":0,"wins":0,"constructorIds":["porsche","ferrari"]},{"pos":null,"driverId":"boyd","code":null,"driver":"Johnny Boyd","points":0,"wins":0,"constructorIds":["epperly"]},{"pos":null,"driverId":"hill","code":null,"driver":"Graham Hill","points":0,"wins":0,"constructorIds":["team_lotus"]},{"pos":null,"driverId":"darter","code":null,"driver":"Duane Carter","points":0,"wins":0,"constructorIds":["kurtis_kraft"]},{"pos":null,"driverId":"blanchard","code":null,"driver":"Harry Blanchard","points":0,"wins":0,"constructorIds":["porsche"]},{"pos":null,"driverId":"shelby","code":null,"driver":"Carroll Shelby","points":0,"wins":0,"constructorIds":["aston_martin"]},{"pos":null,"driverId":"scarlatti","code":null,"driver":"Giorgio Scarlatti","points":0,"wins":0,"constructorIds":["maserati","cooper-climax"]},{"pos":null,"driverId":"stacey","code":null,"driver":"Alan Stacey","points":0,"wins":0,"constructorIds":["team_lotus"]},{"pos":null,"driverId":"johnson","code":null,"driver":"Eddie Johnson","points":0,"wins":0,"constructorIds":["kurtis_kraft"]},{"pos":null,"driverId":"beaufort","code":null,"driver":"Carel Godin de Beaufort","points":0,"wins":0,"constructorIds":["porsche","maserati"]},{"pos":null,"driverId":"paul_russo","code":null,"driver":"Paul Russo","points":0,"wins":0,"constructorIds":["kurtis_kraft"]},{"pos":null,"driverId":"orey","code":null,"driver":"Fritz d'Orey","points":0,"wins":0,"constructorIds":["maserati","tec-mec"]},{"pos":null,"driverId":"foyt","code":null,"driver":"Anthony Foyt","points":0,"wins":0,"constructorIds":["kuzma"]},{"pos":null,"driverId":"bristow","code":null,"driver":"Chris Bristow","points":0,"wins":0,"constructorIds":["cooper-borgward"]},{"pos":null,"driverId":"cabral","code":null,"driver":"Mário de Araújo Cabral","points":0,"wins":0,"constructorIds":["cooper-maserati"]},{"pos":null,"driverId":"davis","code":null,"driver":"Colin Davis","points":0,"wins":0,"constructorIds":["cooper-maserati"]},{"pos":null,"driverId":"hartley","code":null,"driver":"Gene Hartley","points":0,"wins":0,"constructorIds":["kuzma"]},{"pos":null,"driverId":"henry_taylor","code":null,"driver":"Henry Taylor","points":0,"wins":0,"constructorIds":["cooper-climax"]},{"pos":null,"driverId":"veith","code":null,"driver":"Bob Veith","points":0,"wins":0,"constructorIds":["moore"]},{"pos":null,"driverId":"ashdown","code":null,"driver":"Peter Ashdown","points":0,"wins":0,"constructorIds":["cooper-climax"]},{"pos":null,"driverId":"herman","code":null,"driver":"Al Herman","points":0,"wins":0,"constructorIds":["dunn"]},{"pos":null,"driverId":"bueb","code":null,"driver":"Ivor Bueb","points":0,"wins":0,"constructorIds":["cooper-climax","cooper-borgward"]},{"pos":null,"driverId":"daywalt","code":null,"driver":"Jimmy Daywalt","points":0,"wins":0,"constructorIds":["kurtis_kraft"]},{"pos":null,"driverId":"arnold","code":null,"driver":"Chuck Arnold","points":0,"wins":0,"constructorIds":["kurtis_kraft"]},{"pos":null,"driverId":"cabianca","code":null,"driver":"Giulio Cabianca","points":0,"wins":0,"constructorIds":["maserati"]},{"pos":null,"driverId":"mcwithey","code":null,"driver":"Jim McWithey","points":0,"wins":0,"constructorIds":["kurtis_kraft"]},{"pos":null,"driverId":"herrmann","code":null,"driver":"Hans Herrmann","points":0,"wins":0,"constructorIds":["cooper-maserati","brm"]},{"pos":null,"driverId":"tomaso","code":null,"driver":"Alessandro de Tomaso","points":0,"wins":0,"constructorIds":["cooper-osca"]},{"pos":null,"driverId":"halford","code":null,"driver":"Bruce Halford","points":0,"wins":0,"constructorIds":["team_lotus"]},{"pos":null,"driverId":"constantine","code":null,"driver":"George Constantine","points":0,"wins":0,"constructorIds":["cooper-borgward"]},{"pos":null,"driverId":"fairman","code":null,"driver":"Jack Fairman","points":0,"wins":0,"constructorIds":["cooper-climax","cooper-maserati"]},{"pos":null,"driverId":"sachs","code":null,"driver":"Eddie Sachs","points":0,"wins":0,"constructorIds":["kuzma"]},{"pos":null,"driverId":"keller","code":null,"driver":"Al Keller","points":0,"wins":0,"constructorIds":["kuzma"]},{"pos":null,"driverId":"said","code":null,"driver":"Bob Said","points":0,"wins":0,"constructorIds":["connaught"]},{"pos":null,"driverId":"flaherty","code":null,"driver":"Pat Flaherty","points":0,"wins":0,"constructorIds":["watson"]},{"pos":null,"driverId":"cade","code":null,"driver":"Phil Cade","points":0,"wins":0,"constructorIds":["maserati"]},{"pos":null,"driverId":"dick_rathmann","code":null,"driver":"Dick Rathmann","points":0,"wins":0,"constructorIds":["watson"]},{"pos":null,"driverId":"cheesbourg","code":null,"driver":"Bill Cheesbourg","points":0,"wins":0,"constructorIds":["kuzma"]},{"pos":null,"driverId":"piper","code":null,"driver":"David Piper","points":0,"wins":0,"constructorIds":["team_lotus"]},{"pos":null,"driverId":"freeland","code":null,"driver":"Don Freeland","points":0,"wins":0,"constructorIds":["kurtis_kraft"]},{"pos":null,"driverId":"fontes","code":null,"driver":"Azdrubal Fontes","points":0,"wins":0,"constructorIds":["maserati"]},{"pos":null,"driverId":"naylor","code":null,"driver":"Brian Naylor","points":0,"wins":0,"constructorIds":["jbw"]},{"pos":null,"driverId":"ray_crawford","code":null,"driver":"Ray Crawford","points":0,"wins":0,"constructorIds":["elder"]},{"pos":null,"driverId":"mike_taylor","code":null,"driver":"Mike Taylor","points":0,"wins":0,"constructorIds":["cooper-climax"]},{"pos":null,"driverId":"branson","code":null,"driver":"Don Branson","points":0,"wins":0,"constructorIds":["phillips"]},{"pos":null,"driverId":"christie","code":null,"driver":"Bob Christie","points":0,"wins":0,"constructorIds":["kurtis_kraft"]},{"pos":null,"driverId":"grim","code":null,"driver":"Bobby Grim","points":0,"wins":0,"constructorIds":["kurtis_kraft"]},{"pos":null,"driverId":"turner","code":null,"driver":"Jack Turner","points":0,"wins":0,"constructorIds":["vhristensen"]},{"pos":null,"driverId":"weyant","code":null,"driver":"Chuck Weyant","points":0,"wins":0,"constructorIds":["kurtis_kraft"]},{"pos":null,"driverId":"larson","code":null,"driver":"Jud Larson","points":0,"wins":0,"constructorIds":["kurtis_kraft"]},{"pos":null,"driverId":"magill","code":null,"driver":"Mike Magill","points":0,"wins":0,"constructorIds":["sutton"]},{"pos":null,"driverId":"amick","code":null,"driver":"Red Amick","points":0,"wins":0,"constructorIds":["kurtis_kraft"]},{"pos":null,"driverId":"sutton","code":null,"driver":"Len Sutton","points":0,"wins":0,"constructorIds":["lesovsky"]},{"pos":null,"driverId":"bryan","code":null,"driver":"Jimmy Bryan","points":0,"wins":0,"constructorIds":["epperly"]}],"constructors":[{"pos":1,"constructorId":"cooper-climax","constructor":"Cooper-Climax","points":40,"wins":5},{"pos":2,"constructorId":"ferrari","constructor":"Ferrari","points":32,"wins":2},{"pos":3,"constructorId":"brm","constructor":"BRM","points":18,"wins":1},{"pos":4,"constructorId":"team_lotus","constructor":"Team Lotus","points":5,"wins":0},{"pos":null,"constructorId":"cooper-maserati","constructor":"Cooper-Maserati","points":0,"wins":0},{"pos":null,"constructorId":"aston_martin","constructor":"Aston Martin","points":0,"wins":0},{"pos":null,"constructorId":"porsche","constructor":"Porsche","points":0,"wins":0},{"pos":null,"constructorId":"maserati","constructor":"Maserati","points":0,"wins":0},{"pos":null,"constructorId":"cooper-borgward","constructor":"Cooper-Borgward","points":0,"wins":0},{"pos":null,"constructorId":"kurtis_kraft","constructor":"Kurtis Kraft","points":0,"wins":0},{"pos":null,"constructorId":"cooper-osca","constructor":"Cooper-OSCA","points":0,"wins":0},{"pos":null,"constructorId":"tec-mec","constructor":"Tec-Mec","points":0,"wins":0},{"pos":null,"constructorId":"connaught","constructor":"Connaught","points":0,"wins":0},{"pos":null,"constructorId":"jbw","constructor":"JBW","points":0,"wins":0},{"pos":null,"constructorId":"vanwall","constructor":"Vanwall","points":0,"wins":0}]}
+{
+  "year": 1959,
+  "wccExists": true,
+  "wdcChampion": {
+    "driverId": "jack-brabham",
+    "name": "Jack Brabham",
+    "code": "BRA"
+  },
+  "wccChampion": {
+    "constructorId": "cooper",
+    "name": "Cooper"
+  },
+  "wdc": [
+    {
+      "position": 1,
+      "driverId": "jack-brabham",
+      "name": "Jack Brabham",
+      "code": "BRA",
+      "points": 34,
+      "teamId": "cooper",
+      "team": "Cooper"
+    },
+    {
+      "position": 2,
+      "driverId": "tony-brooks",
+      "name": "Tony Brooks",
+      "code": "BRO",
+      "points": 27,
+      "teamId": "ferrari",
+      "team": "Ferrari"
+    },
+    {
+      "position": 3,
+      "driverId": "stirling-moss",
+      "name": "Stirling Moss",
+      "code": "MOS",
+      "points": 25.5,
+      "teamId": "cooper",
+      "team": "Cooper"
+    },
+    {
+      "position": 4,
+      "driverId": "phil-hill",
+      "name": "Phil Hill",
+      "code": "HIL",
+      "points": 20,
+      "teamId": "ferrari",
+      "team": "Ferrari"
+    },
+    {
+      "position": 5,
+      "driverId": "maurice-trintignant",
+      "name": "Maurice Trintignant",
+      "code": "TRI",
+      "points": 19,
+      "teamId": "cooper",
+      "team": "Cooper"
+    },
+    {
+      "position": 6,
+      "driverId": "bruce-mclaren",
+      "name": "Bruce McLaren",
+      "code": "MCL",
+      "points": 16.5,
+      "teamId": "cooper",
+      "team": "Cooper"
+    },
+    {
+      "position": 7,
+      "driverId": "dan-gurney",
+      "name": "Dan Gurney",
+      "code": "GUR",
+      "points": 13,
+      "teamId": "ferrari",
+      "team": "Ferrari"
+    },
+    {
+      "position": 8,
+      "driverId": "jo-bonnier",
+      "name": "Jo Bonnier",
+      "code": "BON",
+      "points": 10,
+      "teamId": "brm",
+      "team": "BRM"
+    },
+    {
+      "position": 9,
+      "driverId": "masten-gregory",
+      "name": "Masten Gregory",
+      "code": "GRE",
+      "points": 10,
+      "teamId": "cooper",
+      "team": "Cooper"
+    },
+    {
+      "position": 10,
+      "driverId": "rodger-ward",
+      "name": "Rodger Ward",
+      "code": "WAR",
+      "points": 8,
+      "teamId": "watson",
+      "team": "Watson"
+    },
+    {
+      "position": 11,
+      "driverId": "jim-rathmann",
+      "name": "Jim Rathmann",
+      "code": "RAT",
+      "points": 6,
+      "teamId": "watson",
+      "team": "Watson"
+    },
+    {
+      "position": 12,
+      "driverId": "johnny-thomson",
+      "name": "Johnny Thomson",
+      "code": "THO",
+      "points": 5,
+      "teamId": "lesovsky",
+      "team": "Lesovsky"
+    },
+    {
+      "position": 13,
+      "driverId": "harry-schell",
+      "name": "Harry Schell",
+      "code": "SCH",
+      "points": 5,
+      "teamId": "brm",
+      "team": "BRM"
+    },
+    {
+      "position": 13,
+      "driverId": "innes-ireland",
+      "name": "Innes Ireland",
+      "code": "IRE",
+      "points": 5,
+      "teamId": "lotus",
+      "team": "Lotus"
+    },
+    {
+      "position": 15,
+      "driverId": "olivier-gendebien",
+      "name": "Olivier Gendebien",
+      "code": "GEN",
+      "points": 3,
+      "teamId": "ferrari",
+      "team": "Ferrari"
+    },
+    {
+      "position": 15,
+      "driverId": "tony-bettenhausen",
+      "name": "Tony Bettenhausen",
+      "code": "BET",
+      "points": 3,
+      "teamId": "epperly",
+      "team": "Epperly"
+    },
+    {
+      "position": 17,
+      "driverId": "cliff-allison",
+      "name": "Cliff Allison",
+      "code": "ALL",
+      "points": 2,
+      "teamId": "ferrari",
+      "team": "Ferrari"
+    },
+    {
+      "position": 17,
+      "driverId": "jean-behra",
+      "name": "Jean Behra",
+      "code": "BEH",
+      "points": 2,
+      "teamId": "ferrari",
+      "team": "Ferrari"
+    },
+    {
+      "position": 17,
+      "driverId": "paul-goldsmith",
+      "name": "Paul Goldsmith",
+      "code": "GOL",
+      "points": 2,
+      "teamId": "epperly",
+      "team": "Epperly"
+    }
+  ],
+  "wcc": [
+    {
+      "position": 1,
+      "constructorId": "cooper",
+      "name": "Cooper",
+      "points": 40,
+      "championshipWon": true
+    },
+    {
+      "position": 2,
+      "constructorId": "ferrari",
+      "name": "Ferrari",
+      "points": 32,
+      "championshipWon": false
+    },
+    {
+      "position": 3,
+      "constructorId": "brm",
+      "name": "BRM",
+      "points": 18,
+      "championshipWon": false
+    },
+    {
+      "position": 4,
+      "constructorId": "lotus",
+      "name": "Lotus",
+      "points": 5,
+      "championshipWon": false
+    }
+  ],
+  "notes": null,
+  "updated": "2026-06-21"
+}

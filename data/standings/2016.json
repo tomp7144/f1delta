@@ -1,1 +1,312 @@
-{"season":2016,"drivers":[{"pos":1,"driverId":"rosberg","code":"ROS","driver":"Nico Rosberg","points":385,"wins":9,"constructorIds":["mercedes"]},{"pos":2,"driverId":"hamilton","code":"HAM","driver":"Lewis Hamilton","points":380,"wins":10,"constructorIds":["mercedes"]},{"pos":3,"driverId":"ricciardo","code":"RIC","driver":"Daniel Ricciardo","points":256,"wins":1,"constructorIds":["red_bull"]},{"pos":4,"driverId":"vettel","code":"VET","driver":"Sebastian Vettel","points":212,"wins":0,"constructorIds":["ferrari"]},{"pos":5,"driverId":"max_verstappen","code":"VER","driver":"Max Verstappen","points":204,"wins":1,"constructorIds":["toro_rosso","red_bull"]},{"pos":6,"driverId":"raikkonen","code":"RAI","driver":"Kimi Räikkönen","points":186,"wins":0,"constructorIds":["ferrari"]},{"pos":7,"driverId":"perez","code":"PER","driver":"Sergio Pérez","points":101,"wins":0,"constructorIds":["force_india"]},{"pos":8,"driverId":"bottas","code":"BOT","driver":"Valtteri Bottas","points":85,"wins":0,"constructorIds":["williams"]},{"pos":9,"driverId":"hulkenberg","code":"HUL","driver":"Nico Hülkenberg","points":72,"wins":0,"constructorIds":["force_india"]},{"pos":10,"driverId":"alonso","code":"ALO","driver":"Fernando Alonso","points":54,"wins":0,"constructorIds":["mclaren"]},{"pos":11,"driverId":"massa","code":"MAS","driver":"Felipe Massa","points":53,"wins":0,"constructorIds":["williams"]},{"pos":12,"driverId":"sainz","code":"SAI","driver":"Carlos Sainz","points":46,"wins":0,"constructorIds":["toro_rosso"]},{"pos":13,"driverId":"grosjean","code":"GRO","driver":"Romain Grosjean","points":29,"wins":0,"constructorIds":["haas"]},{"pos":14,"driverId":"kvyat","code":"KVY","driver":"Daniil Kvyat","points":25,"wins":0,"constructorIds":["red_bull","toro_rosso"]},{"pos":15,"driverId":"button","code":"BUT","driver":"Jenson Button","points":21,"wins":0,"constructorIds":["mclaren"]},{"pos":16,"driverId":"kevin_magnussen","code":"MAG","driver":"Kevin Magnussen","points":7,"wins":0,"constructorIds":["renault"]},{"pos":17,"driverId":"nasr","code":"NAS","driver":"Felipe Nasr","points":2,"wins":0,"constructorIds":["sauber"]},{"pos":18,"driverId":"jolyon_palmer","code":"PAL","driver":"Jolyon Palmer","points":1,"wins":0,"constructorIds":["renault"]},{"pos":19,"driverId":"wehrlein","code":"WEH","driver":"Pascal Wehrlein","points":1,"wins":0,"constructorIds":["manor"]},{"pos":20,"driverId":"vandoorne","code":"VAN","driver":"Stoffel Vandoorne","points":1,"wins":0,"constructorIds":["mclaren"]},{"pos":21,"driverId":"gutierrez","code":"GUT","driver":"Esteban Gutiérrez","points":0,"wins":0,"constructorIds":["haas"]},{"pos":22,"driverId":"ericsson","code":"ERI","driver":"Marcus Ericsson","points":0,"wins":0,"constructorIds":["sauber"]},{"pos":23,"driverId":"ocon","code":"OCO","driver":"Esteban Ocon","points":0,"wins":0,"constructorIds":["manor"]},{"pos":24,"driverId":"haryanto","code":"HAR","driver":"Rio Haryanto","points":0,"wins":0,"constructorIds":["manor"]}],"constructors":[{"pos":1,"constructorId":"mercedes","constructor":"Mercedes","points":765,"wins":19},{"pos":2,"constructorId":"red_bull","constructor":"Red Bull","points":468,"wins":2},{"pos":3,"constructorId":"ferrari","constructor":"Ferrari","points":398,"wins":0},{"pos":4,"constructorId":"force_india","constructor":"Force India","points":173,"wins":0},{"pos":5,"constructorId":"williams","constructor":"Williams","points":138,"wins":0},{"pos":6,"constructorId":"mclaren","constructor":"McLaren","points":76,"wins":0},{"pos":7,"constructorId":"toro_rosso","constructor":"Toro Rosso","points":63,"wins":0},{"pos":8,"constructorId":"haas","constructor":"Haas F1 Team","points":29,"wins":0},{"pos":9,"constructorId":"renault","constructor":"Renault","points":8,"wins":0},{"pos":10,"constructorId":"sauber","constructor":"Sauber","points":2,"wins":0},{"pos":11,"constructorId":"manor","constructor":"Manor Marussia","points":1,"wins":0}]}
+{
+  "year": 2016,
+  "wccExists": true,
+  "wdcChampion": {
+    "driverId": "nico-rosberg",
+    "name": "Nico Rosberg",
+    "code": "ROS"
+  },
+  "wccChampion": {
+    "constructorId": "mercedes",
+    "name": "Mercedes"
+  },
+  "wdc": [
+    {
+      "position": 1,
+      "driverId": "nico-rosberg",
+      "name": "Nico Rosberg",
+      "code": "ROS",
+      "points": 385,
+      "teamId": "mercedes",
+      "team": "Mercedes"
+    },
+    {
+      "position": 2,
+      "driverId": "lewis-hamilton",
+      "name": "Lewis Hamilton",
+      "code": "HAM",
+      "points": 380,
+      "teamId": "mercedes",
+      "team": "Mercedes"
+    },
+    {
+      "position": 3,
+      "driverId": "daniel-ricciardo",
+      "name": "Daniel Ricciardo",
+      "code": "RIC",
+      "points": 256,
+      "teamId": "red-bull",
+      "team": "Red Bull"
+    },
+    {
+      "position": 4,
+      "driverId": "sebastian-vettel",
+      "name": "Sebastian Vettel",
+      "code": "VET",
+      "points": 212,
+      "teamId": "ferrari",
+      "team": "Ferrari"
+    },
+    {
+      "position": 5,
+      "driverId": "max-verstappen",
+      "name": "Max Verstappen",
+      "code": "VER",
+      "points": 204,
+      "teamId": "red-bull",
+      "team": "Red Bull"
+    },
+    {
+      "position": 6,
+      "driverId": "kimi-raikkonen",
+      "name": "Kimi Räikkönen",
+      "code": "RAI",
+      "points": 186,
+      "teamId": "ferrari",
+      "team": "Ferrari"
+    },
+    {
+      "position": 7,
+      "driverId": "sergio-perez",
+      "name": "Sergio Pérez",
+      "code": "PER",
+      "points": 101,
+      "teamId": "force-india",
+      "team": "Force India"
+    },
+    {
+      "position": 8,
+      "driverId": "valtteri-bottas",
+      "name": "Valtteri Bottas",
+      "code": "BOT",
+      "points": 85,
+      "teamId": "williams",
+      "team": "Williams"
+    },
+    {
+      "position": 9,
+      "driverId": "nico-hulkenberg",
+      "name": "Nico Hülkenberg",
+      "code": "HUL",
+      "points": 72,
+      "teamId": "force-india",
+      "team": "Force India"
+    },
+    {
+      "position": 10,
+      "driverId": "fernando-alonso",
+      "name": "Fernando Alonso",
+      "code": "ALO",
+      "points": 54,
+      "teamId": "mclaren",
+      "team": "McLaren"
+    },
+    {
+      "position": 11,
+      "driverId": "felipe-massa",
+      "name": "Felipe Massa",
+      "code": "MAS",
+      "points": 53,
+      "teamId": "williams",
+      "team": "Williams"
+    },
+    {
+      "position": 12,
+      "driverId": "carlos-sainz-jr",
+      "name": "Carlos Sainz Jr.",
+      "code": "SAI",
+      "points": 46,
+      "teamId": "toro-rosso",
+      "team": "Toro Rosso"
+    },
+    {
+      "position": 13,
+      "driverId": "romain-grosjean",
+      "name": "Romain Grosjean",
+      "code": "GRO",
+      "points": 29,
+      "teamId": "haas",
+      "team": "Haas"
+    },
+    {
+      "position": 14,
+      "driverId": "daniil-kvyat",
+      "name": "Daniil Kvyat",
+      "code": "KVY",
+      "points": 25,
+      "teamId": "toro-rosso",
+      "team": "Toro Rosso"
+    },
+    {
+      "position": 15,
+      "driverId": "jenson-button",
+      "name": "Jenson Button",
+      "code": "BUT",
+      "points": 21,
+      "teamId": "mclaren",
+      "team": "McLaren"
+    },
+    {
+      "position": 16,
+      "driverId": "kevin-magnussen",
+      "name": "Kevin Magnussen",
+      "code": "MAG",
+      "points": 7,
+      "teamId": "renault",
+      "team": "Renault"
+    },
+    {
+      "position": 17,
+      "driverId": "felipe-nasr",
+      "name": "Felipe Nasr",
+      "code": "NAS",
+      "points": 2,
+      "teamId": "sauber",
+      "team": "Sauber"
+    },
+    {
+      "position": 18,
+      "driverId": "jolyon-palmer",
+      "name": "Jolyon Palmer",
+      "code": "PAL",
+      "points": 1,
+      "teamId": "renault",
+      "team": "Renault"
+    },
+    {
+      "position": 19,
+      "driverId": "pascal-wehrlein",
+      "name": "Pascal Wehrlein",
+      "code": "WEH",
+      "points": 1,
+      "teamId": "manor",
+      "team": "Manor"
+    },
+    {
+      "position": 20,
+      "driverId": "stoffel-vandoorne",
+      "name": "Stoffel Vandoorne",
+      "code": "VAN",
+      "points": 1,
+      "teamId": "mclaren",
+      "team": "McLaren"
+    },
+    {
+      "position": 21,
+      "driverId": "esteban-gutierrez",
+      "name": "Esteban Gutiérrez",
+      "code": "GUT",
+      "points": 0,
+      "teamId": "haas",
+      "team": "Haas"
+    },
+    {
+      "position": 22,
+      "driverId": "marcus-ericsson",
+      "name": "Marcus Ericsson",
+      "code": "ERI",
+      "points": 0,
+      "teamId": "sauber",
+      "team": "Sauber"
+    },
+    {
+      "position": 23,
+      "driverId": "esteban-ocon",
+      "name": "Esteban Ocon",
+      "code": "OCO",
+      "points": 0,
+      "teamId": "manor",
+      "team": "Manor"
+    },
+    {
+      "position": 24,
+      "driverId": "rio-haryanto",
+      "name": "Rio Haryanto",
+      "code": "HAR",
+      "points": 0,
+      "teamId": "manor",
+      "team": "Manor"
+    }
+  ],
+  "wcc": [
+    {
+      "position": 1,
+      "constructorId": "mercedes",
+      "name": "Mercedes",
+      "points": 765,
+      "championshipWon": true
+    },
+    {
+      "position": 2,
+      "constructorId": "red-bull",
+      "name": "Red Bull",
+      "points": 468,
+      "championshipWon": false
+    },
+    {
+      "position": 3,
+      "constructorId": "ferrari",
+      "name": "Ferrari",
+      "points": 398,
+      "championshipWon": false
+    },
+    {
+      "position": 4,
+      "constructorId": "force-india",
+      "name": "Force India",
+      "points": 173,
+      "championshipWon": false
+    },
+    {
+      "position": 5,
+      "constructorId": "williams",
+      "name": "Williams",
+      "points": 138,
+      "championshipWon": false
+    },
+    {
+      "position": 6,
+      "constructorId": "mclaren",
+      "name": "McLaren",
+      "points": 76,
+      "championshipWon": false
+    },
+    {
+      "position": 7,
+      "constructorId": "toro-rosso",
+      "name": "Toro Rosso",
+      "points": 63,
+      "championshipWon": false
+    },
+    {
+      "position": 8,
+      "constructorId": "haas",
+      "name": "Haas",
+      "points": 29,
+      "championshipWon": false
+    },
+    {
+      "position": 9,
+      "constructorId": "renault",
+      "name": "Renault",
+      "points": 8,
+      "championshipWon": false
+    },
+    {
+      "position": 10,
+      "constructorId": "sauber",
+      "name": "Sauber",
+      "points": 2,
+      "championshipWon": false
+    },
+    {
+      "position": 11,
+      "constructorId": "manor",
+      "name": "Manor",
+      "points": 1,
+      "championshipWon": false
+    }
+  ],
+  "notes": null,
+  "updated": "2026-06-21"
+}

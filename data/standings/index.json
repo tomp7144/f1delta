@@ -1,0 +1,1057 @@
+{
+  "count": 77,
+  "updated": "2026-06-21",
+  "seasons": [
+    {
+      "year": 2026,
+      "wdcChampion": {
+        "driverId": "kimi-antonelli",
+        "name": "Kimi Antonelli",
+        "code": "ANT"
+      },
+      "wccChampion": null,
+      "driverCount": 22,
+      "hasNotes": false
+    },
+    {
+      "year": 2025,
+      "wdcChampion": {
+        "driverId": "lando-norris",
+        "name": "Lando Norris",
+        "code": "NOR"
+      },
+      "wccChampion": {
+        "constructorId": "mclaren",
+        "name": "McLaren"
+      },
+      "driverCount": 21,
+      "hasNotes": false
+    },
+    {
+      "year": 2024,
+      "wdcChampion": {
+        "driverId": "max-verstappen",
+        "name": "Max Verstappen",
+        "code": "VER"
+      },
+      "wccChampion": {
+        "constructorId": "mclaren",
+        "name": "McLaren"
+      },
+      "driverCount": 24,
+      "hasNotes": false
+    },
+    {
+      "year": 2023,
+      "wdcChampion": {
+        "driverId": "max-verstappen",
+        "name": "Max Verstappen",
+        "code": "VER"
+      },
+      "wccChampion": {
+        "constructorId": "red-bull",
+        "name": "Red Bull"
+      },
+      "driverCount": 22,
+      "hasNotes": false
+    },
+    {
+      "year": 2022,
+      "wdcChampion": {
+        "driverId": "max-verstappen",
+        "name": "Max Verstappen",
+        "code": "VER"
+      },
+      "wccChampion": {
+        "constructorId": "red-bull",
+        "name": "Red Bull"
+      },
+      "driverCount": 22,
+      "hasNotes": false
+    },
+    {
+      "year": 2021,
+      "wdcChampion": {
+        "driverId": "max-verstappen",
+        "name": "Max Verstappen",
+        "code": "VER"
+      },
+      "wccChampion": {
+        "constructorId": "mercedes",
+        "name": "Mercedes"
+      },
+      "driverCount": 21,
+      "hasNotes": false
+    },
+    {
+      "year": 2020,
+      "wdcChampion": {
+        "driverId": "lewis-hamilton",
+        "name": "Lewis Hamilton",
+        "code": "HAM"
+      },
+      "wccChampion": {
+        "constructorId": "mercedes",
+        "name": "Mercedes"
+      },
+      "driverCount": 23,
+      "hasNotes": false
+    },
+    {
+      "year": 2019,
+      "wdcChampion": {
+        "driverId": "lewis-hamilton",
+        "name": "Lewis Hamilton",
+        "code": "HAM"
+      },
+      "wccChampion": {
+        "constructorId": "mercedes",
+        "name": "Mercedes"
+      },
+      "driverCount": 20,
+      "hasNotes": false
+    },
+    {
+      "year": 2018,
+      "wdcChampion": {
+        "driverId": "lewis-hamilton",
+        "name": "Lewis Hamilton",
+        "code": "HAM"
+      },
+      "wccChampion": {
+        "constructorId": "mercedes",
+        "name": "Mercedes"
+      },
+      "driverCount": 20,
+      "hasNotes": false
+    },
+    {
+      "year": 2017,
+      "wdcChampion": {
+        "driverId": "lewis-hamilton",
+        "name": "Lewis Hamilton",
+        "code": "HAM"
+      },
+      "wccChampion": {
+        "constructorId": "mercedes",
+        "name": "Mercedes"
+      },
+      "driverCount": 23,
+      "hasNotes": false
+    },
+    {
+      "year": 2016,
+      "wdcChampion": {
+        "driverId": "nico-rosberg",
+        "name": "Nico Rosberg",
+        "code": "ROS"
+      },
+      "wccChampion": {
+        "constructorId": "mercedes",
+        "name": "Mercedes"
+      },
+      "driverCount": 24,
+      "hasNotes": false
+    },
+    {
+      "year": 2015,
+      "wdcChampion": {
+        "driverId": "lewis-hamilton",
+        "name": "Lewis Hamilton",
+        "code": "HAM"
+      },
+      "wccChampion": {
+        "constructorId": "mercedes",
+        "name": "Mercedes"
+      },
+      "driverCount": 21,
+      "hasNotes": false
+    },
+    {
+      "year": 2014,
+      "wdcChampion": {
+        "driverId": "lewis-hamilton",
+        "name": "Lewis Hamilton",
+        "code": "HAM"
+      },
+      "wccChampion": {
+        "constructorId": "mercedes",
+        "name": "Mercedes"
+      },
+      "driverCount": 23,
+      "hasNotes": false
+    },
+    {
+      "year": 2013,
+      "wdcChampion": {
+        "driverId": "sebastian-vettel",
+        "name": "Sebastian Vettel",
+        "code": "VET"
+      },
+      "wccChampion": {
+        "constructorId": "red-bull",
+        "name": "Red Bull"
+      },
+      "driverCount": 23,
+      "hasNotes": false
+    },
+    {
+      "year": 2012,
+      "wdcChampion": {
+        "driverId": "sebastian-vettel",
+        "name": "Sebastian Vettel",
+        "code": "VET"
+      },
+      "wccChampion": {
+        "constructorId": "red-bull",
+        "name": "Red Bull"
+      },
+      "driverCount": 25,
+      "hasNotes": false
+    },
+    {
+      "year": 2011,
+      "wdcChampion": {
+        "driverId": "sebastian-vettel",
+        "name": "Sebastian Vettel",
+        "code": "VET"
+      },
+      "wccChampion": {
+        "constructorId": "red-bull",
+        "name": "Red Bull"
+      },
+      "driverCount": 28,
+      "hasNotes": false
+    },
+    {
+      "year": 2010,
+      "wdcChampion": {
+        "driverId": "sebastian-vettel",
+        "name": "Sebastian Vettel",
+        "code": "VET"
+      },
+      "wccChampion": {
+        "constructorId": "red-bull",
+        "name": "Red Bull"
+      },
+      "driverCount": 27,
+      "hasNotes": false
+    },
+    {
+      "year": 2009,
+      "wdcChampion": {
+        "driverId": "jenson-button",
+        "name": "Jenson Button",
+        "code": "BUT"
+      },
+      "wccChampion": {
+        "constructorId": "brawn",
+        "name": "Brawn"
+      },
+      "driverCount": 25,
+      "hasNotes": false
+    },
+    {
+      "year": 2008,
+      "wdcChampion": {
+        "driverId": "lewis-hamilton",
+        "name": "Lewis Hamilton",
+        "code": "HAM"
+      },
+      "wccChampion": {
+        "constructorId": "ferrari",
+        "name": "Ferrari"
+      },
+      "driverCount": 22,
+      "hasNotes": false
+    },
+    {
+      "year": 2007,
+      "wdcChampion": {
+        "driverId": "kimi-raikkonen",
+        "name": "Kimi Räikkönen",
+        "code": "RAI"
+      },
+      "wccChampion": {
+        "constructorId": "ferrari",
+        "name": "Ferrari"
+      },
+      "driverCount": 25,
+      "hasNotes": false
+    },
+    {
+      "year": 2006,
+      "wdcChampion": {
+        "driverId": "fernando-alonso",
+        "name": "Fernando Alonso",
+        "code": "ALO"
+      },
+      "wccChampion": {
+        "constructorId": "renault",
+        "name": "Renault"
+      },
+      "driverCount": 27,
+      "hasNotes": false
+    },
+    {
+      "year": 2005,
+      "wdcChampion": {
+        "driverId": "fernando-alonso",
+        "name": "Fernando Alonso",
+        "code": "ALO"
+      },
+      "wccChampion": {
+        "constructorId": "renault",
+        "name": "Renault"
+      },
+      "driverCount": 25,
+      "hasNotes": false
+    },
+    {
+      "year": 2004,
+      "wdcChampion": {
+        "driverId": "michael-schumacher",
+        "name": "Michael Schumacher",
+        "code": "MSC"
+      },
+      "wccChampion": {
+        "constructorId": "ferrari",
+        "name": "Ferrari"
+      },
+      "driverCount": 25,
+      "hasNotes": false
+    },
+    {
+      "year": 2003,
+      "wdcChampion": {
+        "driverId": "michael-schumacher",
+        "name": "Michael Schumacher",
+        "code": "MSC"
+      },
+      "wccChampion": {
+        "constructorId": "ferrari",
+        "name": "Ferrari"
+      },
+      "driverCount": 24,
+      "hasNotes": false
+    },
+    {
+      "year": 2002,
+      "wdcChampion": {
+        "driverId": "michael-schumacher",
+        "name": "Michael Schumacher",
+        "code": "MSC"
+      },
+      "wccChampion": {
+        "constructorId": "ferrari",
+        "name": "Ferrari"
+      },
+      "driverCount": 22,
+      "hasNotes": false
+    },
+    {
+      "year": 2001,
+      "wdcChampion": {
+        "driverId": "michael-schumacher",
+        "name": "Michael Schumacher",
+        "code": "MSC"
+      },
+      "wccChampion": {
+        "constructorId": "ferrari",
+        "name": "Ferrari"
+      },
+      "driverCount": 26,
+      "hasNotes": false
+    },
+    {
+      "year": 2000,
+      "wdcChampion": {
+        "driverId": "michael-schumacher",
+        "name": "Michael Schumacher",
+        "code": "MSC"
+      },
+      "wccChampion": {
+        "constructorId": "ferrari",
+        "name": "Ferrari"
+      },
+      "driverCount": 23,
+      "hasNotes": false
+    },
+    {
+      "year": 1999,
+      "wdcChampion": {
+        "driverId": "mika-hakkinen",
+        "name": "Mika Häkkinen",
+        "code": "HAK"
+      },
+      "wccChampion": {
+        "constructorId": "ferrari",
+        "name": "Ferrari"
+      },
+      "driverCount": 18,
+      "hasNotes": false
+    },
+    {
+      "year": 1998,
+      "wdcChampion": {
+        "driverId": "mika-hakkinen",
+        "name": "Mika Häkkinen",
+        "code": "HAK"
+      },
+      "wccChampion": {
+        "constructorId": "mclaren",
+        "name": "McLaren"
+      },
+      "driverCount": 17,
+      "hasNotes": false
+    },
+    {
+      "year": 1997,
+      "wdcChampion": {
+        "driverId": "jacques-villeneuve",
+        "name": "Jacques Villeneuve",
+        "code": "VIL"
+      },
+      "wccChampion": {
+        "constructorId": "williams",
+        "name": "Williams"
+      },
+      "driverCount": 19,
+      "hasNotes": false
+    },
+    {
+      "year": 1996,
+      "wdcChampion": {
+        "driverId": "damon-hill",
+        "name": "Damon Hill",
+        "code": "HIL"
+      },
+      "wccChampion": {
+        "constructorId": "williams",
+        "name": "Williams"
+      },
+      "driverCount": 16,
+      "hasNotes": false
+    },
+    {
+      "year": 1995,
+      "wdcChampion": {
+        "driverId": "michael-schumacher",
+        "name": "Michael Schumacher",
+        "code": "MSC"
+      },
+      "wccChampion": {
+        "constructorId": "benetton",
+        "name": "Benetton"
+      },
+      "driverCount": 18,
+      "hasNotes": false
+    },
+    {
+      "year": 1994,
+      "wdcChampion": {
+        "driverId": "michael-schumacher",
+        "name": "Michael Schumacher",
+        "code": "MSC"
+      },
+      "wccChampion": {
+        "constructorId": "williams",
+        "name": "Williams"
+      },
+      "driverCount": 25,
+      "hasNotes": false
+    },
+    {
+      "year": 1993,
+      "wdcChampion": {
+        "driverId": "alain-prost",
+        "name": "Alain Prost",
+        "code": "PRO"
+      },
+      "wccChampion": {
+        "constructorId": "williams",
+        "name": "Williams"
+      },
+      "driverCount": 22,
+      "hasNotes": false
+    },
+    {
+      "year": 1992,
+      "wdcChampion": {
+        "driverId": "nigel-mansell",
+        "name": "Nigel Mansell",
+        "code": "MAN"
+      },
+      "wccChampion": {
+        "constructorId": "williams",
+        "name": "Williams"
+      },
+      "driverCount": 19,
+      "hasNotes": false
+    },
+    {
+      "year": 1991,
+      "wdcChampion": {
+        "driverId": "ayrton-senna",
+        "name": "Ayrton Senna",
+        "code": "SEN"
+      },
+      "wccChampion": {
+        "constructorId": "mclaren",
+        "name": "McLaren"
+      },
+      "driverCount": 24,
+      "hasNotes": false
+    },
+    {
+      "year": 1990,
+      "wdcChampion": {
+        "driverId": "ayrton-senna",
+        "name": "Ayrton Senna",
+        "code": "SEN"
+      },
+      "wccChampion": {
+        "constructorId": "mclaren",
+        "name": "McLaren"
+      },
+      "driverCount": 18,
+      "hasNotes": false
+    },
+    {
+      "year": 1989,
+      "wdcChampion": {
+        "driverId": "alain-prost",
+        "name": "Alain Prost",
+        "code": "PRO"
+      },
+      "wccChampion": {
+        "constructorId": "mclaren",
+        "name": "McLaren"
+      },
+      "driverCount": 29,
+      "hasNotes": false
+    },
+    {
+      "year": 1988,
+      "wdcChampion": {
+        "driverId": "ayrton-senna",
+        "name": "Ayrton Senna",
+        "code": "SEN"
+      },
+      "wccChampion": {
+        "constructorId": "mclaren",
+        "name": "McLaren"
+      },
+      "driverCount": 17,
+      "hasNotes": false
+    },
+    {
+      "year": 1987,
+      "wdcChampion": {
+        "driverId": "nelson-piquet",
+        "name": "Nelson Piquet",
+        "code": "PIQ"
+      },
+      "wccChampion": {
+        "constructorId": "williams",
+        "name": "Williams"
+      },
+      "driverCount": 21,
+      "hasNotes": false
+    },
+    {
+      "year": 1986,
+      "wdcChampion": {
+        "driverId": "alain-prost",
+        "name": "Alain Prost",
+        "code": "PRO"
+      },
+      "wccChampion": {
+        "constructorId": "williams",
+        "name": "Williams"
+      },
+      "driverCount": 19,
+      "hasNotes": false
+    },
+    {
+      "year": 1985,
+      "wdcChampion": {
+        "driverId": "alain-prost",
+        "name": "Alain Prost",
+        "code": "PRO"
+      },
+      "wccChampion": {
+        "constructorId": "mclaren",
+        "name": "McLaren"
+      },
+      "driverCount": 20,
+      "hasNotes": false
+    },
+    {
+      "year": 1984,
+      "wdcChampion": {
+        "driverId": "niki-lauda",
+        "name": "Niki Lauda",
+        "code": "LAU"
+      },
+      "wccChampion": {
+        "constructorId": "mclaren",
+        "name": "McLaren"
+      },
+      "driverCount": 20,
+      "hasNotes": false
+    },
+    {
+      "year": 1983,
+      "wdcChampion": {
+        "driverId": "nelson-piquet",
+        "name": "Nelson Piquet",
+        "code": "PIQ"
+      },
+      "wccChampion": {
+        "constructorId": "ferrari",
+        "name": "Ferrari"
+      },
+      "driverCount": 20,
+      "hasNotes": false
+    },
+    {
+      "year": 1982,
+      "wdcChampion": {
+        "driverId": "keke-rosberg",
+        "name": "Keke Rosberg",
+        "code": "ROS"
+      },
+      "wccChampion": {
+        "constructorId": "ferrari",
+        "name": "Ferrari"
+      },
+      "driverCount": 26,
+      "hasNotes": false
+    },
+    {
+      "year": 1981,
+      "wdcChampion": {
+        "driverId": "nelson-piquet",
+        "name": "Nelson Piquet",
+        "code": "PIQ"
+      },
+      "wccChampion": {
+        "constructorId": "williams",
+        "name": "Williams"
+      },
+      "driverCount": 21,
+      "hasNotes": false
+    },
+    {
+      "year": 1980,
+      "wdcChampion": {
+        "driverId": "alan-jones",
+        "name": "Alan Jones",
+        "code": "JON"
+      },
+      "wccChampion": {
+        "constructorId": "williams",
+        "name": "Williams"
+      },
+      "driverCount": 21,
+      "hasNotes": false
+    },
+    {
+      "year": 1979,
+      "wdcChampion": {
+        "driverId": "jody-scheckter",
+        "name": "Jody Scheckter",
+        "code": "SCH"
+      },
+      "wccChampion": {
+        "constructorId": "ferrari",
+        "name": "Ferrari"
+      },
+      "driverCount": 21,
+      "hasNotes": false
+    },
+    {
+      "year": 1978,
+      "wdcChampion": {
+        "driverId": "mario-andretti",
+        "name": "Mario Andretti",
+        "code": "AND"
+      },
+      "wccChampion": {
+        "constructorId": "lotus",
+        "name": "Lotus"
+      },
+      "driverCount": 21,
+      "hasNotes": false
+    },
+    {
+      "year": 1977,
+      "wdcChampion": {
+        "driverId": "niki-lauda",
+        "name": "Niki Lauda",
+        "code": "LAU"
+      },
+      "wccChampion": {
+        "constructorId": "ferrari",
+        "name": "Ferrari"
+      },
+      "driverCount": 21,
+      "hasNotes": false
+    },
+    {
+      "year": 1976,
+      "wdcChampion": {
+        "driverId": "james-hunt",
+        "name": "James Hunt",
+        "code": "HUN"
+      },
+      "wccChampion": {
+        "constructorId": "ferrari",
+        "name": "Ferrari"
+      },
+      "driverCount": 20,
+      "hasNotes": false
+    },
+    {
+      "year": 1975,
+      "wdcChampion": {
+        "driverId": "niki-lauda",
+        "name": "Niki Lauda",
+        "code": "LAU"
+      },
+      "wccChampion": {
+        "constructorId": "ferrari",
+        "name": "Ferrari"
+      },
+      "driverCount": 21,
+      "hasNotes": false
+    },
+    {
+      "year": 1974,
+      "wdcChampion": {
+        "driverId": "emerson-fittipaldi",
+        "name": "Emerson Fittipaldi",
+        "code": "FIT"
+      },
+      "wccChampion": {
+        "constructorId": "mclaren",
+        "name": "McLaren"
+      },
+      "driverCount": 20,
+      "hasNotes": false
+    },
+    {
+      "year": 1973,
+      "wdcChampion": {
+        "driverId": "jackie-stewart",
+        "name": "Jackie Stewart",
+        "code": "STE"
+      },
+      "wccChampion": {
+        "constructorId": "lotus",
+        "name": "Lotus"
+      },
+      "driverCount": 21,
+      "hasNotes": false
+    },
+    {
+      "year": 1972,
+      "wdcChampion": {
+        "driverId": "emerson-fittipaldi",
+        "name": "Emerson Fittipaldi",
+        "code": "FIT"
+      },
+      "wccChampion": {
+        "constructorId": "lotus",
+        "name": "Lotus"
+      },
+      "driverCount": 21,
+      "hasNotes": false
+    },
+    {
+      "year": 1971,
+      "wdcChampion": {
+        "driverId": "jackie-stewart",
+        "name": "Jackie Stewart",
+        "code": "STE"
+      },
+      "wccChampion": {
+        "constructorId": "tyrrell",
+        "name": "Tyrrell"
+      },
+      "driverCount": 22,
+      "hasNotes": false
+    },
+    {
+      "year": 1970,
+      "wdcChampion": {
+        "driverId": "jochen-rindt",
+        "name": "Jochen Rindt",
+        "code": "RIN"
+      },
+      "wccChampion": {
+        "constructorId": "lotus",
+        "name": "Lotus"
+      },
+      "driverCount": 25,
+      "hasNotes": false
+    },
+    {
+      "year": 1969,
+      "wdcChampion": {
+        "driverId": "jackie-stewart",
+        "name": "Jackie Stewart",
+        "code": "STE"
+      },
+      "wccChampion": {
+        "constructorId": "matra",
+        "name": "Matra"
+      },
+      "driverCount": 18,
+      "hasNotes": false
+    },
+    {
+      "year": 1968,
+      "wdcChampion": {
+        "driverId": "graham-hill",
+        "name": "Graham Hill",
+        "code": "HIL"
+      },
+      "wccChampion": {
+        "constructorId": "lotus",
+        "name": "Lotus"
+      },
+      "driverCount": 24,
+      "hasNotes": false
+    },
+    {
+      "year": 1967,
+      "wdcChampion": {
+        "driverId": "denny-hulme",
+        "name": "Denny Hulme",
+        "code": "HUL"
+      },
+      "wccChampion": {
+        "constructorId": "brabham",
+        "name": "Brabham"
+      },
+      "driverCount": 21,
+      "hasNotes": false
+    },
+    {
+      "year": 1966,
+      "wdcChampion": {
+        "driverId": "jack-brabham",
+        "name": "Jack Brabham",
+        "code": "BRA"
+      },
+      "wccChampion": {
+        "constructorId": "brabham",
+        "name": "Brabham"
+      },
+      "driverCount": 20,
+      "hasNotes": false
+    },
+    {
+      "year": 1965,
+      "wdcChampion": {
+        "driverId": "jim-clark",
+        "name": "Jim Clark",
+        "code": "CLA"
+      },
+      "wccChampion": {
+        "constructorId": "lotus",
+        "name": "Lotus"
+      },
+      "driverCount": 16,
+      "hasNotes": false
+    },
+    {
+      "year": 1964,
+      "wdcChampion": {
+        "driverId": "john-surtees",
+        "name": "John Surtees",
+        "code": "SUR"
+      },
+      "wccChampion": {
+        "constructorId": "ferrari",
+        "name": "Ferrari"
+      },
+      "driverCount": 22,
+      "hasNotes": false
+    },
+    {
+      "year": 1963,
+      "wdcChampion": {
+        "driverId": "jim-clark",
+        "name": "Jim Clark",
+        "code": "CLA"
+      },
+      "wccChampion": {
+        "constructorId": "lotus",
+        "name": "Lotus"
+      },
+      "driverCount": 17,
+      "hasNotes": false
+    },
+    {
+      "year": 1962,
+      "wdcChampion": {
+        "driverId": "graham-hill",
+        "name": "Graham Hill",
+        "code": "HIL"
+      },
+      "wccChampion": {
+        "constructorId": "brm",
+        "name": "BRM"
+      },
+      "driverCount": 19,
+      "hasNotes": false
+    },
+    {
+      "year": 1961,
+      "wdcChampion": {
+        "driverId": "phil-hill",
+        "name": "Phil Hill",
+        "code": "HIL"
+      },
+      "wccChampion": {
+        "constructorId": "ferrari",
+        "name": "Ferrari"
+      },
+      "driverCount": 17,
+      "hasNotes": false
+    },
+    {
+      "year": 1960,
+      "wdcChampion": {
+        "driverId": "jack-brabham",
+        "name": "Jack Brabham",
+        "code": "BRA"
+      },
+      "wccChampion": {
+        "constructorId": "cooper",
+        "name": "Cooper"
+      },
+      "driverCount": 27,
+      "hasNotes": false
+    },
+    {
+      "year": 1959,
+      "wdcChampion": {
+        "driverId": "jack-brabham",
+        "name": "Jack Brabham",
+        "code": "BRA"
+      },
+      "wccChampion": {
+        "constructorId": "cooper",
+        "name": "Cooper"
+      },
+      "driverCount": 19,
+      "hasNotes": false
+    },
+    {
+      "year": 1958,
+      "wdcChampion": {
+        "driverId": "mike-hawthorn",
+        "name": "Mike Hawthorn",
+        "code": "HAW"
+      },
+      "wccChampion": {
+        "constructorId": "vanwall",
+        "name": "Vanwall"
+      },
+      "driverCount": 21,
+      "hasNotes": false
+    },
+    {
+      "year": 1957,
+      "wdcChampion": {
+        "driverId": "juan-manuel-fangio",
+        "name": "Juan Manuel Fangio",
+        "code": "FAN"
+      },
+      "wccChampion": null,
+      "driverCount": 22,
+      "hasNotes": false
+    },
+    {
+      "year": 1956,
+      "wdcChampion": {
+        "driverId": "juan-manuel-fangio",
+        "name": "Juan Manuel Fangio",
+        "code": "FAN"
+      },
+      "wccChampion": null,
+      "driverCount": 27,
+      "hasNotes": false
+    },
+    {
+      "year": 1955,
+      "wdcChampion": {
+        "driverId": "juan-manuel-fangio",
+        "name": "Juan Manuel Fangio",
+        "code": "FAN"
+      },
+      "wccChampion": null,
+      "driverCount": 25,
+      "hasNotes": false
+    },
+    {
+      "year": 1954,
+      "wdcChampion": {
+        "driverId": "juan-manuel-fangio",
+        "name": "Juan Manuel Fangio",
+        "code": "FAN"
+      },
+      "wccChampion": null,
+      "driverCount": 26,
+      "hasNotes": false
+    },
+    {
+      "year": 1953,
+      "wdcChampion": {
+        "driverId": "alberto-ascari",
+        "name": "Alberto Ascari",
+        "code": "ASC"
+      },
+      "wccChampion": null,
+      "driverCount": 19,
+      "hasNotes": false
+    },
+    {
+      "year": 1952,
+      "wdcChampion": {
+        "driverId": "alberto-ascari",
+        "name": "Alberto Ascari",
+        "code": "ASC"
+      },
+      "wccChampion": null,
+      "driverCount": 22,
+      "hasNotes": false
+    },
+    {
+      "year": 1951,
+      "wdcChampion": {
+        "driverId": "juan-manuel-fangio",
+        "name": "Juan Manuel Fangio",
+        "code": "FAN"
+      },
+      "wccChampion": null,
+      "driverCount": 19,
+      "hasNotes": false
+    },
+    {
+      "year": 1950,
+      "wdcChampion": {
+        "driverId": "nino-farina",
+        "name": "Nino Farina",
+        "code": "FAR"
+      },
+      "wccChampion": null,
+      "driverCount": 22,
+      "hasNotes": false
+    }
+  ]
+}

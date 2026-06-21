@@ -1,1 +1,330 @@
-{"season":2001,"drivers":[{"pos":1,"driverId":"michael_schumacher","code":"MSC","driver":"Michael Schumacher","points":123,"wins":9,"constructorIds":["ferrari"]},{"pos":2,"driverId":"coulthard","code":"COU","driver":"David Coulthard","points":65,"wins":2,"constructorIds":["mclaren"]},{"pos":3,"driverId":"barrichello","code":"BAR","driver":"Rubens Barrichello","points":56,"wins":0,"constructorIds":["ferrari"]},{"pos":4,"driverId":"ralf_schumacher","code":"SCH","driver":"Ralf Schumacher","points":49,"wins":3,"constructorIds":["williams"]},{"pos":5,"driverId":"hakkinen","code":null,"driver":"Mika Häkkinen","points":37,"wins":2,"constructorIds":["mclaren"]},{"pos":6,"driverId":"montoya","code":"MON","driver":"Juan Pablo Montoya","points":31,"wins":1,"constructorIds":["williams"]},{"pos":7,"driverId":"villeneuve","code":"VIL","driver":"Jacques Villeneuve","points":12,"wins":0,"constructorIds":["bar"]},{"pos":8,"driverId":"heidfeld","code":"HEI","driver":"Nick Heidfeld","points":12,"wins":0,"constructorIds":["sauber"]},{"pos":9,"driverId":"trulli","code":"TRU","driver":"Jarno Trulli","points":12,"wins":0,"constructorIds":["jordan"]},{"pos":10,"driverId":"raikkonen","code":"RAI","driver":"Kimi Räikkönen","points":9,"wins":0,"constructorIds":["sauber"]},{"pos":11,"driverId":"fisichella","code":"FIS","driver":"Giancarlo Fisichella","points":8,"wins":0,"constructorIds":["benetton"]},{"pos":12,"driverId":"irvine","code":null,"driver":"Eddie Irvine","points":6,"wins":0,"constructorIds":["jaguar"]},{"pos":13,"driverId":"frentzen","code":null,"driver":"Heinz-Harald Frentzen","points":6,"wins":0,"constructorIds":["jordan","prost"]},{"pos":14,"driverId":"panis","code":null,"driver":"Olivier Panis","points":5,"wins":0,"constructorIds":["bar"]},{"pos":15,"driverId":"alesi","code":null,"driver":"Jean Alesi","points":5,"wins":0,"constructorIds":["prost","jordan"]},{"pos":16,"driverId":"rosa","code":"DLR","driver":"Pedro de la Rosa","points":3,"wins":0,"constructorIds":["jaguar"]},{"pos":17,"driverId":"button","code":"BUT","driver":"Jenson Button","points":2,"wins":0,"constructorIds":["benetton"]},{"pos":18,"driverId":"verstappen","code":null,"driver":"Jos Verstappen","points":1,"wins":0,"constructorIds":["arrows"]},{"pos":null,"driverId":"zonta","code":"ZON","driver":"Ricardo Zonta","points":0,"wins":0,"constructorIds":["jordan"]},{"pos":null,"driverId":"burti","code":null,"driver":"Luciano Burti","points":0,"wins":0,"constructorIds":["jaguar","prost"]},{"pos":null,"driverId":"bernoldi","code":null,"driver":"Enrique Bernoldi","points":0,"wins":0,"constructorIds":["arrows"]},{"pos":null,"driverId":"marques","code":null,"driver":"Tarso Marques","points":0,"wins":0,"constructorIds":["minardi"]},{"pos":null,"driverId":"alonso","code":"ALO","driver":"Fernando Alonso","points":0,"wins":0,"constructorIds":["minardi"]},{"pos":null,"driverId":"enge","code":null,"driver":"Tomáš Enge","points":0,"wins":0,"constructorIds":["prost"]},{"pos":null,"driverId":"mazzacane","code":null,"driver":"Gastón Mazzacane","points":0,"wins":0,"constructorIds":["prost"]},{"pos":null,"driverId":"yoong","code":null,"driver":"Alex Yoong","points":0,"wins":0,"constructorIds":["minardi"]}],"constructors":[{"pos":1,"constructorId":"ferrari","constructor":"Ferrari","points":179,"wins":9},{"pos":2,"constructorId":"mclaren","constructor":"McLaren","points":102,"wins":4},{"pos":3,"constructorId":"williams","constructor":"Williams","points":80,"wins":4},{"pos":4,"constructorId":"sauber","constructor":"Sauber","points":21,"wins":0},{"pos":5,"constructorId":"jordan","constructor":"Jordan","points":19,"wins":0},{"pos":6,"constructorId":"bar","constructor":"BAR","points":17,"wins":0},{"pos":7,"constructorId":"benetton","constructor":"Benetton","points":10,"wins":0},{"pos":8,"constructorId":"jaguar","constructor":"Jaguar","points":9,"wins":0},{"pos":9,"constructorId":"prost","constructor":"Prost","points":4,"wins":0},{"pos":10,"constructorId":"arrows","constructor":"Arrows","points":1,"wins":0},{"pos":null,"constructorId":"minardi","constructor":"Minardi","points":0,"wins":0}]}
+{
+  "year": 2001,
+  "wccExists": true,
+  "wdcChampion": {
+    "driverId": "michael-schumacher",
+    "name": "Michael Schumacher",
+    "code": "MSC"
+  },
+  "wccChampion": {
+    "constructorId": "ferrari",
+    "name": "Ferrari"
+  },
+  "wdc": [
+    {
+      "position": 1,
+      "driverId": "michael-schumacher",
+      "name": "Michael Schumacher",
+      "code": "MSC",
+      "points": 123,
+      "teamId": "ferrari",
+      "team": "Ferrari"
+    },
+    {
+      "position": 2,
+      "driverId": "david-coulthard",
+      "name": "David Coulthard",
+      "code": "COU",
+      "points": 65,
+      "teamId": "mclaren",
+      "team": "McLaren"
+    },
+    {
+      "position": 3,
+      "driverId": "rubens-barrichello",
+      "name": "Rubens Barrichello",
+      "code": "BAR",
+      "points": 56,
+      "teamId": "ferrari",
+      "team": "Ferrari"
+    },
+    {
+      "position": 4,
+      "driverId": "ralf-schumacher",
+      "name": "Ralf Schumacher",
+      "code": "RSC",
+      "points": 49,
+      "teamId": "williams",
+      "team": "Williams"
+    },
+    {
+      "position": 5,
+      "driverId": "mika-hakkinen",
+      "name": "Mika Häkkinen",
+      "code": "HAK",
+      "points": 37,
+      "teamId": "mclaren",
+      "team": "McLaren"
+    },
+    {
+      "position": 6,
+      "driverId": "juan-pablo-montoya",
+      "name": "Juan Pablo Montoya",
+      "code": "MOY",
+      "points": 31,
+      "teamId": "williams",
+      "team": "Williams"
+    },
+    {
+      "position": 7,
+      "driverId": "jacques-villeneuve",
+      "name": "Jacques Villeneuve",
+      "code": "VIL",
+      "points": 12,
+      "teamId": "bar",
+      "team": "BAR"
+    },
+    {
+      "position": 8,
+      "driverId": "nick-heidfeld",
+      "name": "Nick Heidfeld",
+      "code": "HEI",
+      "points": 12,
+      "teamId": "sauber",
+      "team": "Sauber"
+    },
+    {
+      "position": 9,
+      "driverId": "jarno-trulli",
+      "name": "Jarno Trulli",
+      "code": "TRU",
+      "points": 12,
+      "teamId": "jordan",
+      "team": "Jordan"
+    },
+    {
+      "position": 10,
+      "driverId": "kimi-raikkonen",
+      "name": "Kimi Räikkönen",
+      "code": "RAI",
+      "points": 9,
+      "teamId": "sauber",
+      "team": "Sauber"
+    },
+    {
+      "position": 11,
+      "driverId": "giancarlo-fisichella",
+      "name": "Giancarlo Fisichella",
+      "code": "FIS",
+      "points": 8,
+      "teamId": "benetton",
+      "team": "Benetton"
+    },
+    {
+      "position": 12,
+      "driverId": "eddie-irvine",
+      "name": "Eddie Irvine",
+      "code": "IRV",
+      "points": 6,
+      "teamId": "jaguar",
+      "team": "Jaguar"
+    },
+    {
+      "position": 13,
+      "driverId": "heinz-harald-frentzen",
+      "name": "Heinz-Harald Frentzen",
+      "code": "FRE",
+      "points": 6,
+      "teamId": "jordan",
+      "team": "Jordan"
+    },
+    {
+      "position": 14,
+      "driverId": "olivier-panis",
+      "name": "Olivier Panis",
+      "code": "PAN",
+      "points": 5,
+      "teamId": "bar",
+      "team": "BAR"
+    },
+    {
+      "position": 15,
+      "driverId": "jean-alesi",
+      "name": "Jean Alesi",
+      "code": "ALE",
+      "points": 5,
+      "teamId": "prost",
+      "team": "Prost"
+    },
+    {
+      "position": 16,
+      "driverId": "pedro-de-la-rosa",
+      "name": "Pedro de la Rosa",
+      "code": "DLR",
+      "points": 3,
+      "teamId": "jaguar",
+      "team": "Jaguar"
+    },
+    {
+      "position": 17,
+      "driverId": "jenson-button",
+      "name": "Jenson Button",
+      "code": "BUT",
+      "points": 2,
+      "teamId": "benetton",
+      "team": "Benetton"
+    },
+    {
+      "position": 18,
+      "driverId": "jos-verstappen",
+      "name": "Jos Verstappen",
+      "code": "VER",
+      "points": 1,
+      "teamId": "arrows",
+      "team": "Arrows"
+    },
+    {
+      "position": 19,
+      "driverId": "ricardo-zonta",
+      "name": "Ricardo Zonta",
+      "code": "ZON",
+      "points": 0,
+      "teamId": "jordan",
+      "team": "Jordan"
+    },
+    {
+      "position": 20,
+      "driverId": "luciano-burti",
+      "name": "Luciano Burti",
+      "code": "BUR",
+      "points": 0,
+      "teamId": "prost",
+      "team": "Prost"
+    },
+    {
+      "position": 21,
+      "driverId": "enrique-bernoldi",
+      "name": "Enrique Bernoldi",
+      "code": "BER",
+      "points": 0,
+      "teamId": "arrows",
+      "team": "Arrows"
+    },
+    {
+      "position": 22,
+      "driverId": "tarso-marques",
+      "name": "Tarso Marques",
+      "code": "MAR",
+      "points": 0,
+      "teamId": "minardi",
+      "team": "Minardi"
+    },
+    {
+      "position": 23,
+      "driverId": "fernando-alonso",
+      "name": "Fernando Alonso",
+      "code": "ALO",
+      "points": 0,
+      "teamId": "minardi",
+      "team": "Minardi"
+    },
+    {
+      "position": 24,
+      "driverId": "tomas-enge",
+      "name": "Tomáš Enge",
+      "code": "ENG",
+      "points": 0,
+      "teamId": "prost",
+      "team": "Prost"
+    },
+    {
+      "position": 25,
+      "driverId": "gaston-mazzacane",
+      "name": "Gastón Mazzacane",
+      "code": "MAZ",
+      "points": 0,
+      "teamId": "prost",
+      "team": "Prost"
+    },
+    {
+      "position": 26,
+      "driverId": "alex-yoong",
+      "name": "Alex Yoong",
+      "code": "YOO",
+      "points": 0,
+      "teamId": "minardi",
+      "team": "Minardi"
+    }
+  ],
+  "wcc": [
+    {
+      "position": 1,
+      "constructorId": "ferrari",
+      "name": "Ferrari",
+      "points": 179,
+      "championshipWon": true
+    },
+    {
+      "position": 2,
+      "constructorId": "mclaren",
+      "name": "McLaren",
+      "points": 102,
+      "championshipWon": false
+    },
+    {
+      "position": 3,
+      "constructorId": "williams",
+      "name": "Williams",
+      "points": 80,
+      "championshipWon": false
+    },
+    {
+      "position": 4,
+      "constructorId": "sauber",
+      "name": "Sauber",
+      "points": 21,
+      "championshipWon": false
+    },
+    {
+      "position": 5,
+      "constructorId": "jordan",
+      "name": "Jordan",
+      "points": 19,
+      "championshipWon": false
+    },
+    {
+      "position": 6,
+      "constructorId": "bar",
+      "name": "BAR",
+      "points": 17,
+      "championshipWon": false
+    },
+    {
+      "position": 7,
+      "constructorId": "benetton",
+      "name": "Benetton",
+      "points": 10,
+      "championshipWon": false
+    },
+    {
+      "position": 8,
+      "constructorId": "jaguar",
+      "name": "Jaguar",
+      "points": 9,
+      "championshipWon": false
+    },
+    {
+      "position": 9,
+      "constructorId": "prost",
+      "name": "Prost",
+      "points": 4,
+      "championshipWon": false
+    },
+    {
+      "position": 10,
+      "constructorId": "arrows",
+      "name": "Arrows",
+      "points": 1,
+      "championshipWon": false
+    },
+    {
+      "position": 11,
+      "constructorId": "minardi",
+      "name": "Minardi",
+      "points": 0,
+      "championshipWon": false
+    }
+  ],
+  "notes": null,
+  "updated": "2026-06-21"
+}
