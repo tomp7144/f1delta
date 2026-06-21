@@ -203,6 +203,15 @@ function fmtPts(n: number | undefined): string {
       });
 
       updateCount();
+
+      // Pin thead below the sticky controls bar (height varies with wrap on narrow screens)
+      var controlsEl = document.querySelector(".controls");
+      var theadEl = table.tHead;
+      function pinThead() {
+        if (controlsEl && theadEl) theadEl.style.top = controlsEl.offsetHeight + "px";
+      }
+      pinThead();
+      window.addEventListener("resize", pinThead);
     })();
     </script>
 
@@ -234,10 +243,10 @@ function fmtPts(n: number | undefined): string {
       .count-row { font-size: 12px; color: #6b6b70; margin: 0 0 6px;
         font-variant-numeric: tabular-nums; }
 
-      .card { background: #fff; border: 1px solid #e4e4df; border-radius: 8px; overflow: hidden; }
+      .card { background: #fff; border: 1px solid #e4e4df; border-radius: 8px; overflow: clip; }
 
       table { width: 100%; border-collapse: collapse; font-size: 13px; }
-      thead { position: sticky; top: 48px; z-index: 4; }
+      thead { position: sticky; top: 0; z-index: 4; }
       th { background: #fff; text-align: right; padding: 8px 10px;
         font-size: 11px; font-weight: 600; color: #6b6b70;
         text-transform: uppercase; letter-spacing: .04em;
