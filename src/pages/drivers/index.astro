@@ -1,0 +1,270 @@
+---
+export const prerender = true;
+import fs from "node:fs";
+import path from "node:path";
+import SiteNav from "../../components/SiteNav.astro";
+
+const raw = JSON.parse(fs.readFileSync(path.resolve("./data/drivers/index.json"), "utf8"));
+const drivers = (raw.drivers ?? []).slice().sort((a: any, b: any) => (b.races ?? 0) - (a.races ?? 0));
+const total = drivers.length;
+
+function fmtYears(first: number | undefined, last: number | undefined): string {
+  if (first == null) return "";
+  return first === last ? String(first) : `${first}–${last}`;
+}
+function fmtPts(n: number | undefined): string {
+  if (n == null) return "";
+  return n % 1 === 0 ? String(n) : n.toFixed(1);
+}
+---
+
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>F1 Drivers — All {total} | f1delta</title>
+    <meta name="description" content={`Career records for all ${total} Formula 1 drivers, 1950 to today — races, wins, podiums, poles, championships, and points.`} />
+    <link rel="canonical" href="https://f1delta.com/drivers" />
+  </head>
+  <body style="margin:0;background:#f4f4f1">
+    <SiteNav current="drivers" />
+    <div class="hub">
+      <h1>Drivers</h1>
+      <p class="lede">Career records for all {total} Formula 1 drivers, 1950&ndash;present.</p>
+
+      <div class="controls">
+        <input id="driver-search" class="search" type="text"
+          placeholder="Search by name or code…" autocomplete="off" spellcheck="false" />
+        <div class="filters">
+          <button id="filter-champions" class="filt" type="button">Champions only</button>
+          <button id="filter-winners"   class="filt" type="button">Race winners</button>
+          <button id="filter-active"    class="filt" type="button">Active (2025+)</button>
+        </div>
+      </div>
+      <div class="count-row">
+        <span id="driver-count">Showing {total} of {total}</span>
+      </div>
+
+      <div class="card">
+        <table data-driver-table>
+          <thead>
+            <tr>
+              <th class="l" data-sort="name"          data-type="text" tabindex="0">Driver</th>
+              <th class="l" data-sort="first"         data-type="num"  tabindex="0">Years</th>
+              <th           data-sort="races"         data-type="num"  tabindex="0" aria-sort="descending">Races</th>
+              <th           data-sort="wins"          data-type="num"  tabindex="0">Wins</th>
+              <th           data-sort="podiums"       data-type="num"  tabindex="0">Pods</th>
+              <th           data-sort="poles"         data-type="num"  tabindex="0">Poles</th>
+              <th           data-sort="championships" data-type="num"  tabindex="0">Titles</th>
+              <th           data-sort="points"        data-type="num"  tabindex="0">Points</th>
+            </tr>
+          </thead>
+          <tbody>
+            {drivers.map((d: any) => (
+              <tr
+                data-name={d.name}
+                data-code={d.code ?? ""}
+                data-first={d.firstSeason ?? 0}
+                data-races={d.races ?? 0}
+                data-wins={d.wins ?? 0}
+                data-podiums={d.podiums ?? 0}
+                data-poles={d.poles ?? 0}
+                data-championships={d.championships ?? 0}
+                data-points={d.points ?? 0}
+                data-last={d.lastSeason ?? 0}
+                class={(d.championships ?? 0) > 0 ? "champ" : ""}
+              >
+                <td class="drv">
+                  <a href={`/driver?d=${encodeURIComponent(d.driverId)}`}>{d.name}</a>
+                  {d.code && <span class="code">{d.code}</span>}
+                </td>
+                <td class="yr">{fmtYears(d.firstSeason, d.lastSeason)}</td>
+                <td class="n">{d.races ?? ""}</td>
+                <td class="n">{d.wins ?? ""}</td>
+                <td class="n">{d.podiums ?? ""}</td>
+                <td class="n">{d.poles ?? ""}</td>
+                <td class="n">{(d.championships ?? 0) > 0 ? d.championships : ""}</td>
+                <td class="n">{fmtPts(d.points)}</td>
+              </tr>
+            ))}
+          </tbody>
+        </table>
+      </div>
+    </div>
+
+    <script is:inline>
+    (function () {
+      var table = document.querySelector("[data-driver-table]");
+      if (!table) return;
+      var tbody = table.tBodies[0];
+      var countEl = document.getElementById("driver-count");
+      var searchEl = document.getElementById("driver-search");
+      var total = tbody.rows.length;
+
+      var sortKey = "races";
+      var sortDir = -1; // -1 = desc, 1 = asc
+
+      var filters = { champions: false, winners: false, active: false };
+
+      function rowVisible(r) {
+        return r.style.display !== "none";
+      }
+
+      function updateCount() {
+        var n = 0;
+        var rows = tbody.rows;
+        for (var i = 0; i < rows.length; i++) {
+          if (rowVisible(rows[i])) n++;
+        }
+        if (countEl) countEl.textContent = "Showing " + n + " of " + total;
+      }
+
+      function applyFilters() {
+        var q = searchEl ? searchEl.value.trim().toLowerCase() : "";
+        var rows = tbody.rows;
+        for (var i = 0; i < rows.length; i++) {
+          var r = rows[i];
+          var show = true;
+          if (q) {
+            var name = (r.getAttribute("data-name") || "").toLowerCase();
+            var code = (r.getAttribute("data-code") || "").toLowerCase();
+            if (!name.includes(q) && !code.includes(q)) show = false;
+          }
+          if (show && filters.champions && +r.getAttribute("data-championships") === 0) show = false;
+          if (show && filters.winners   && +r.getAttribute("data-wins")          === 0) show = false;
+          if (show && filters.active    && +r.getAttribute("data-last")          < 2025) show = false;
+          r.style.display = show ? "" : "none";
+        }
+        updateCount();
+      }
+
+      function sortBy(key, type) {
+        if (sortKey === key) {
+          sortDir = -sortDir;
+        } else {
+          sortKey = key;
+          sortDir = type === "text" ? 1 : -1;
+        }
+
+        var rows = Array.prototype.slice.call(tbody.rows);
+        rows.sort(function (a, b) {
+          var av = a.getAttribute("data-" + key) || "";
+          var bv = b.getAttribute("data-" + key) || "";
+          if (type === "num") {
+            av = parseFloat(av) || 0;
+            bv = parseFloat(bv) || 0;
+          } else {
+            av = av.toLowerCase();
+            bv = bv.toLowerCase();
+          }
+          if (av < bv) return -sortDir;
+          if (av > bv) return sortDir;
+          return 0;
+        });
+
+        var frag = document.createDocumentFragment();
+        rows.forEach(function (r) { frag.appendChild(r); });
+        tbody.appendChild(frag);
+
+        var heads = table.tHead.rows[0].cells;
+        for (var i = 0; i < heads.length; i++) heads[i].removeAttribute("aria-sort");
+        var active = table.querySelector('[data-sort="' + key + '"]');
+        if (active) active.setAttribute("aria-sort", sortDir === 1 ? "ascending" : "descending");
+
+        applyFilters();
+      }
+
+      // Wire sort headers
+      var heads = table.querySelectorAll("th[data-sort]");
+      for (var i = 0; i < heads.length; i++) {
+        (function (th) {
+          th.addEventListener("click", function () {
+            sortBy(th.getAttribute("data-sort"), th.getAttribute("data-type") || "text");
+          });
+          th.addEventListener("keydown", function (e) {
+            if (e.key === "Enter" || e.key === " ") { e.preventDefault(); sortBy(th.getAttribute("data-sort"), th.getAttribute("data-type") || "text"); }
+          });
+        })(heads[i]);
+      }
+
+      // Wire search
+      if (searchEl) searchEl.addEventListener("input", applyFilters);
+
+      // Wire filter buttons
+      ["champions", "winners", "active"].forEach(function (f) {
+        var btn = document.getElementById("filter-" + f);
+        if (!btn) return;
+        btn.addEventListener("click", function () {
+          filters[f] = !filters[f];
+          btn.classList.toggle("on", filters[f]);
+          applyFilters();
+        });
+      });
+
+      updateCount();
+    })();
+    </script>
+
+    <style>
+      .hub {
+        max-width: 760px; margin: 0 auto; padding: 28px 20px;
+        font-family: system-ui, -apple-system, "Segoe UI", Roboto, sans-serif;
+        color: #16161a;
+      }
+      .hub h1 { font-size: 28px; font-weight: 700; margin: 0 0 4px; letter-spacing: -.01em; }
+      .lede { color: #6b6b70; margin: 0 0 16px; font-size: 15px; }
+
+      .controls { display: flex; gap: 8px; flex-wrap: wrap; align-items: center;
+        position: sticky; top: 0; z-index: 5;
+        background: #f4f4f1; padding: 8px 0; border-bottom: 1px solid #e4e4df;
+        margin-bottom: 6px; }
+      .search { flex: 1 1 200px; font-family: inherit; font-size: 14px; color: #16161a;
+        background: #fff; border: 1px solid #e4e4df; border-radius: 5px;
+        padding: 8px 12px; outline: none; transition: border-color .14s; }
+      .search:focus { border-color: #16161a; }
+      .search::placeholder { color: #9a9a9e; }
+      .filters { display: flex; gap: 4px; flex-wrap: wrap; }
+      .filt { font-family: inherit; font-size: 12px; color: #6b6b70;
+        background: #fff; border: 1px solid #e4e4df; border-radius: 4px;
+        padding: 7px 11px; cursor: pointer; transition: .12s; white-space: nowrap; }
+      .filt:hover { color: #16161a; }
+      .filt.on { color: #16161a; font-weight: 600; border-color: #16161a; }
+
+      .count-row { font-size: 12px; color: #6b6b70; margin: 0 0 6px;
+        font-variant-numeric: tabular-nums; }
+
+      .card { background: #fff; border: 1px solid #e4e4df; border-radius: 8px; overflow: hidden; }
+
+      table { width: 100%; border-collapse: collapse; font-size: 13px; }
+      thead { position: sticky; top: 48px; z-index: 4; }
+      th { background: #fff; text-align: right; padding: 8px 10px;
+        font-size: 11px; font-weight: 600; color: #6b6b70;
+        text-transform: uppercase; letter-spacing: .04em;
+        border-bottom: 2px solid #e4e4df;
+        cursor: pointer; user-select: none; white-space: nowrap; }
+      th:focus-visible { outline: 2px solid #e10600; outline-offset: -2px; }
+      th.l { text-align: left; }
+      th[aria-sort="ascending"]::after  { content: " \25B2"; font-size: 8px; color: #e10600; }
+      th[aria-sort="descending"]::after { content: " \25BC"; font-size: 8px; color: #e10600; }
+      td { padding: 7px 10px; border-bottom: 1px solid #e4e4df; }
+      tr:last-child td { border-bottom: none; }
+      tr.champ td { background: #fbf3d0; }
+      tr:hover td { background: #faf9f6; }
+      tr.champ:hover td { background: #f5ecbf; }
+
+      td.drv { text-align: left; }
+      td.drv a { color: #16161a; text-decoration: none; font-weight: 500; }
+      td.drv a:hover { text-decoration: underline; }
+      .code { font-family: ui-monospace, "JetBrains Mono", monospace;
+        font-size: 10px; color: #9a9a9e; margin-left: 7px;
+        letter-spacing: .04em; }
+      tr.champ .code { color: #b8962e; }
+
+      td.yr { text-align: left; color: #6b6b70; font-size: 12px;
+        font-variant-numeric: tabular-nums; white-space: nowrap; }
+      td.n { text-align: right; font-variant-numeric: tabular-nums;
+        font-feature-settings: "tnum"; color: #6b6b70; white-space: nowrap; }
+    </style>
+  </body>
+</html>
