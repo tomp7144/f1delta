@@ -277,6 +277,8 @@ async function main() {
       driverId, code: info.code, name: info.name,
       firstSeason: out.firstSeason, lastSeason: out.lastSeason,
       races: info.totals.races ?? 0, wins: info.totals.wins ?? 0,
+      podiums: info.totals.podiums ?? 0, poles: info.totals.poles ?? 0,
+      championships: info.totals.championships ?? 0, points: info.totals.points ?? 0,
     });
   }
 
