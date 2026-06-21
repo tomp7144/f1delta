@@ -31,12 +31,12 @@ const current = navKey(pathname);
     {description && <meta name="description" content={description} />}
     {canonical && <link rel="canonical" href={canonical} />}
     <slot name="head" />
-    <script defer src="https://static.cloudflareinsights.com/beacon.min.js" data-cf-beacon='{"token":"231dcb0acef2461c8d76032d94a31207"}'></script>
+    <script is:inline defer src="https://static.cloudflareinsights.com/beacon.min.js" data-cf-beacon='{"token":"231dcb0acef2461c8d76032d94a31207"}'></script>
   </head>
   <body style="margin:0;background:#f4f4f1">
     <nav class="site-nav">
       <div class="nav-inner">
-        <a class="wordmark" href="/">f1delta</a>
+        <a class="wordmark" href="/">F1<svg class="wm-tri" aria-hidden="true" width="11" height="10" viewBox="0 0 100 86"><path d="M50 4 L97 82 L3 82 Z" fill="currentColor"/></svg>delta</a>
         <button class="hamburger" id="nav-hamburger" aria-label="Toggle menu" aria-expanded="false" aria-controls="nav-links">&#9776;</button>
         <div class="nav-links" id="nav-links">
           <a href="/drivers" aria-current={current === "drivers" ? "page" : undefined}>Drivers</a>
@@ -71,9 +71,11 @@ const current = navKey(pathname);
     display: flex; align-items: center; position: relative;
   }
   .wordmark {
-    font-size: 15px; font-weight: 700; color: #e10600; text-decoration: none;
-    padding: 12px 18px 12px 0; flex-shrink: 0;
+    display: flex; align-items: center; gap: 5px;
+    font-size: 15px; font-weight: 700; color: #16161a; text-decoration: none;
+    padding: 12px 18px 12px 0; flex-shrink: 0; letter-spacing: .02em;
   }
+  .wm-tri { color: #e10600; flex-shrink: 0; }
 
   .nav-links {
     display: flex; align-items: center; gap: 0; flex: 1;

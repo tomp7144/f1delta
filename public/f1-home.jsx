@@ -36,13 +36,34 @@ function Styles() {
       .hm .wrap{max-width:760px;margin:0 auto;padding:0 12px}
       .hm table{width:100%;border-collapse:collapse;font-variant-numeric:tabular-nums}
 
-      .hm .top{border-bottom:1px solid var(--line);background:var(--surface)}
+      .hm .top{border-bottom:1px solid var(--line);background:var(--surface);position:relative}
       .hm .top .wrap{display:flex;align-items:center;justify-content:space-between;height:48px}
-      .hm .brand{display:flex;align-items:center;gap:6px;font-family:var(--disp);font-weight:700;font-size:18px;letter-spacing:.02em}
+      .hm .brand{display:flex;align-items:center;gap:5px;font-family:var(--disp);font-weight:700;font-size:18px;letter-spacing:.02em}
       .hm .brand .d{color:var(--red)}
-      .hm .topnav{display:flex;gap:15px;font-family:var(--mono);font-size:11px;letter-spacing:.08em;text-transform:uppercase;color:var(--dim)}
-      .hm .topnav a:hover{color:var(--ink)}
-      .hm .topnav a.on{color:var(--ink);font-weight:700}
+      .hm .topnav{display:flex;align-items:center;gap:0;font-family:var(--body);font-size:14px;color:var(--dim)}
+      .hm .topnav>a{padding:12px 10px;white-space:nowrap;text-decoration:none;color:var(--dim)}
+      .hm .topnav>a:hover{color:var(--ink)}
+      .hm .hbg{display:none;background:none;border:none;font-size:20px;color:var(--dim);cursor:pointer;padding:10px 0 10px 12px;line-height:1}
+      .hm .hbg:hover{color:var(--ink)}
+      .hm .drop{position:relative}
+      .hm .drop-btn{font-family:inherit;font-size:14px;color:var(--dim);background:none;border:none;cursor:pointer;padding:12px 10px;display:flex;align-items:center;gap:4px;white-space:nowrap}
+      .hm .drop-btn:hover{color:var(--ink)}
+      .hm .drop-caret{font-size:8px}
+      .hm .drop-panel{display:none;position:absolute;top:100%;left:0;background:var(--surface);border:1px solid var(--line);border-radius:6px;box-shadow:0 4px 12px rgba(0,0,0,.08);min-width:172px;z-index:100;padding:4px 0}
+      .hm .drop-panel a{display:block;font-size:13px;color:var(--dim);padding:8px 14px;white-space:nowrap;text-decoration:none}
+      .hm .drop-panel a:hover{color:var(--ink);background:var(--bg)}
+      .hm .drop:hover .drop-panel,.hm .drop.open .drop-panel{display:block}
+      @media(max-width:620px){
+        .hm .hbg{display:block}
+        .hm .topnav{display:none;flex-direction:column;align-items:stretch;position:absolute;top:100%;left:0;right:0;background:var(--surface);border-bottom:1px solid var(--line);z-index:200;padding:6px 0}
+        .hm .topnav.open{display:flex}
+        .hm .topnav>a{padding:10px 20px;font-size:15px}
+        .hm .drop{width:100%}
+        .hm .drop-btn{width:100%;padding:10px 20px;font-size:13px;font-weight:600;text-transform:uppercase;letter-spacing:.05em;color:var(--faint);pointer-events:none;cursor:default;justify-content:flex-start}
+        .hm .drop-caret{display:none}
+        .hm .drop-panel{display:block;position:static;box-shadow:none;border:none;border-radius:0;padding:0;min-width:0;background:transparent}
+        .hm .drop-panel a{padding:9px 20px 9px 32px;font-size:15px}
+      }
 
       .hm .hero{background:var(--surface);border-bottom:1px solid var(--line)}
       .hm .hero .wrap{padding:clamp(26px,5vw,46px) 12px clamp(22px,4vw,34px)}
@@ -107,10 +128,32 @@ function Styles() {
 }
 
 function TopBar() {
+  const [menuOpen, setMenuOpen] = useState(false);
+  const [dropOpen, setDropOpen] = useState(false);
   return (
     <div className="top"><div className="wrap">
       <a className="brand" href="/">F1<svg className="d" width="11" height="10" viewBox="0 0 100 86"><path d="M50 4 L97 82 L3 82 Z" fill="currentColor"/></svg>DELTA</a>
-      <nav className="topnav"><a href="/drivers">Drivers</a><a href="#standings">Standings</a><a href="/grands-prix">GPs</a><a href="/circuits">Circuits</a><a href="/records">Records</a><a href="/teams">Teams</a><a href="/pro">Pro</a></nav>
+      <button className="hbg" aria-label="Toggle menu" aria-expanded={menuOpen} onClick={() => setMenuOpen(!menuOpen)}>&#9776;</button>
+      <nav className={"topnav" + (menuOpen ? " open" : "")}>
+        <a href="/drivers">Drivers</a>
+        <a href="/teams">Teams</a>
+        <div className={"drop" + (dropOpen ? " open" : "")}
+          onMouseEnter={() => setDropOpen(true)}
+          onMouseLeave={() => setDropOpen(false)}>
+          <button className="drop-btn" onClick={() => { if (window.innerWidth <= 620) setDropOpen(!dropOpen); }}>
+            People <span className="drop-caret">&#9660;</span>
+          </button>
+          <div className="drop-panel">
+            <a href="/engineers">Engineers</a>
+            <a href="/principals">Team Principals</a>
+            <a href="/technical-directors">Technical Directors</a>
+          </div>
+        </div>
+        <a href="/standings">Seasons</a>
+        <a href="/grands-prix">GPs</a>
+        <a href="/circuits">Circuits</a>
+        <a href="/records">Records</a>
+      </nav>
     </div></div>
   );
 }
