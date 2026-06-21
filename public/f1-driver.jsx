@@ -258,30 +258,30 @@ function GhostRow() {
 }
 
 function EngineerSection({ engineer }) {
-  if (!engineer) return null;
-  const { current, past } = engineer;
-  if (!current && (!past || past.length === 0)) return null;
+  const current = engineer?.current ?? null;
+  const past = Array.isArray(engineer?.past) ? engineer.past : [];
+  if (!current && past.length === 0) return null;
   return (
     <section>
       <div className="sec-h"><h2>Race engineer</h2></div>
       <div className="card eng-card">
         {current && (
-          <div className=”eng-cur”>
-            <a className=”eng-name” href={`/people/${current.personId}`}>
-              {current.personName}{current.aka ? ` “${current.aka}”` : “”}
+          <div className="eng-cur">
+            <a className="eng-name" href={`/people/${current.personId}`}>
+              {current.personName}{current.aka ? ` "${current.aka}"` : ""}
             </a>
-            <span className=”eng-meta”>
-              <a href={`/teams/${current.teamId}`}>{current.teamName}</a>{“ · since “}{current.fromYear}
+            <span className="eng-meta">
+              <a href={`/teams/${current.teamId}`}>{current.teamName}</a>{" · since "}{current.fromYear}
             </span>
-            {current.notes && <span className=”eng-note”>{current.notes}</span>}
+            {current.notes && <span className="eng-note">{current.notes}</span>}
           </div>
         )}
-        {past && past.length > 0 && (
-          <div className=”eng-past”>
+        {past.length > 0 && (
+          <div className="eng-past">
             {past.map((p, i) => (
-              <div className=”eng-past-row” key={i}>
-                <a className=”eng-name” href={`/people/${p.personId}`}>
-                  {p.personName}{p.aka ? ` “${p.aka}”` : “”}
+              <div className="eng-past-row" key={i}>
+                <a className="eng-name" href={`/people/${p.personId}`}>
+                  {p.personName}{p.aka ? ` "${p.aka}"` : ""}
                 </a>
                 <span className="eng-meta">
                   <a href={`/teams/${p.teamId}`}>{p.teamName}</a>
