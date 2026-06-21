@@ -253,6 +253,64 @@
     }
   ],
   "wcc": null,
+  "races": [
+    {
+      "round": 1,
+      "grandPrixId": "argentina",
+      "name": "Argentine GP",
+      "winnerId": "luigi-musso",
+      "winner": "Luigi Musso"
+    },
+    {
+      "round": 2,
+      "grandPrixId": "monaco",
+      "name": "Monaco GP",
+      "winnerId": "stirling-moss",
+      "winner": "Stirling Moss"
+    },
+    {
+      "round": 3,
+      "grandPrixId": "indianapolis",
+      "name": "Indy 500",
+      "winnerId": "pat-flaherty",
+      "winner": "Pat Flaherty"
+    },
+    {
+      "round": 4,
+      "grandPrixId": "belgium",
+      "name": "Belgian GP",
+      "winnerId": "peter-collins",
+      "winner": "Peter Collins"
+    },
+    {
+      "round": 5,
+      "grandPrixId": "france",
+      "name": "French GP",
+      "winnerId": "peter-collins",
+      "winner": "Peter Collins"
+    },
+    {
+      "round": 6,
+      "grandPrixId": "great-britain",
+      "name": "British GP",
+      "winnerId": "juan-manuel-fangio",
+      "winner": "Juan Manuel Fangio"
+    },
+    {
+      "round": 7,
+      "grandPrixId": "germany",
+      "name": "German GP",
+      "winnerId": "juan-manuel-fangio",
+      "winner": "Juan Manuel Fangio"
+    },
+    {
+      "round": 8,
+      "grandPrixId": "italy",
+      "name": "Italian GP",
+      "winnerId": "stirling-moss",
+      "winner": "Stirling Moss"
+    }
+  ],
   "notes": null,
   "updated": "2026-06-21"
 }

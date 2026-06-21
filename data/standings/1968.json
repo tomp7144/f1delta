@@ -300,6 +300,92 @@
       "championshipWon": false
     }
   ],
+  "races": [
+    {
+      "round": 1,
+      "grandPrixId": "south-africa",
+      "name": "South African GP",
+      "winnerId": "jim-clark",
+      "winner": "Jim Clark"
+    },
+    {
+      "round": 2,
+      "grandPrixId": "spain",
+      "name": "Spanish GP",
+      "winnerId": "graham-hill",
+      "winner": "Graham Hill"
+    },
+    {
+      "round": 3,
+      "grandPrixId": "monaco",
+      "name": "Monaco GP",
+      "winnerId": "graham-hill",
+      "winner": "Graham Hill"
+    },
+    {
+      "round": 4,
+      "grandPrixId": "belgium",
+      "name": "Belgian GP",
+      "winnerId": "bruce-mclaren",
+      "winner": "Bruce McLaren"
+    },
+    {
+      "round": 5,
+      "grandPrixId": "netherlands",
+      "name": "Dutch GP",
+      "winnerId": "jackie-stewart",
+      "winner": "Jackie Stewart"
+    },
+    {
+      "round": 6,
+      "grandPrixId": "france",
+      "name": "French GP",
+      "winnerId": "jacky-ickx",
+      "winner": "Jacky Ickx"
+    },
+    {
+      "round": 7,
+      "grandPrixId": "great-britain",
+      "name": "British GP",
+      "winnerId": "jo-siffert",
+      "winner": "Jo Siffert"
+    },
+    {
+      "round": 8,
+      "grandPrixId": "germany",
+      "name": "German GP",
+      "winnerId": "jackie-stewart",
+      "winner": "Jackie Stewart"
+    },
+    {
+      "round": 9,
+      "grandPrixId": "italy",
+      "name": "Italian GP",
+      "winnerId": "denny-hulme",
+      "winner": "Denny Hulme"
+    },
+    {
+      "round": 10,
+      "grandPrixId": "canada",
+      "name": "Canadian GP",
+      "winnerId": "denny-hulme",
+      "winner": "Denny Hulme"
+    },
+    {
+      "round": 11,
+      "grandPrixId": "united-states",
+      "name": "United States GP",
+      "winnerId": "jackie-stewart",
+      "winner": "Jackie Stewart"
+    },
+    {
+      "round": 12,
+      "grandPrixId": "mexico",
+      "name": "Mexican GP",
+      "winnerId": "graham-hill",
+      "winner": "Graham Hill"
+    }
+  ],
   "notes": null,
   "updated": "2026-06-21"
 }

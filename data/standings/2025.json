@@ -273,6 +273,176 @@
       "championshipWon": false
     }
   ],
+  "races": [
+    {
+      "round": 1,
+      "grandPrixId": "australia",
+      "name": "Australian GP",
+      "winnerId": "lando-norris",
+      "winner": "Lando Norris"
+    },
+    {
+      "round": 2,
+      "grandPrixId": "china",
+      "name": "Chinese GP",
+      "winnerId": "oscar-piastri",
+      "winner": "Oscar Piastri"
+    },
+    {
+      "round": 3,
+      "grandPrixId": "japan",
+      "name": "Japanese GP",
+      "winnerId": "max-verstappen",
+      "winner": "Max Verstappen"
+    },
+    {
+      "round": 4,
+      "grandPrixId": "bahrain",
+      "name": "Bahrain GP",
+      "winnerId": "oscar-piastri",
+      "winner": "Oscar Piastri"
+    },
+    {
+      "round": 5,
+      "grandPrixId": "saudi-arabia",
+      "name": "Saudi Arabian GP",
+      "winnerId": "oscar-piastri",
+      "winner": "Oscar Piastri"
+    },
+    {
+      "round": 6,
+      "grandPrixId": "miami",
+      "name": "Miami GP",
+      "winnerId": "oscar-piastri",
+      "winner": "Oscar Piastri"
+    },
+    {
+      "round": 7,
+      "grandPrixId": "emilia-romagna",
+      "name": "Emilia Romagna GP",
+      "winnerId": "max-verstappen",
+      "winner": "Max Verstappen"
+    },
+    {
+      "round": 8,
+      "grandPrixId": "monaco",
+      "name": "Monaco GP",
+      "winnerId": "lando-norris",
+      "winner": "Lando Norris"
+    },
+    {
+      "round": 9,
+      "grandPrixId": "spain",
+      "name": "Spanish GP",
+      "winnerId": "oscar-piastri",
+      "winner": "Oscar Piastri"
+    },
+    {
+      "round": 10,
+      "grandPrixId": "canada",
+      "name": "Canadian GP",
+      "winnerId": "george-russell",
+      "winner": "George Russell"
+    },
+    {
+      "round": 11,
+      "grandPrixId": "austria",
+      "name": "Austrian GP",
+      "winnerId": "lando-norris",
+      "winner": "Lando Norris"
+    },
+    {
+      "round": 12,
+      "grandPrixId": "great-britain",
+      "name": "British GP",
+      "winnerId": "lando-norris",
+      "winner": "Lando Norris"
+    },
+    {
+      "round": 13,
+      "grandPrixId": "belgium",
+      "name": "Belgian GP",
+      "winnerId": "oscar-piastri",
+      "winner": "Oscar Piastri"
+    },
+    {
+      "round": 14,
+      "grandPrixId": "hungary",
+      "name": "Hungarian GP",
+      "winnerId": "lando-norris",
+      "winner": "Lando Norris"
+    },
+    {
+      "round": 15,
+      "grandPrixId": "netherlands",
+      "name": "Dutch GP",
+      "winnerId": "oscar-piastri",
+      "winner": "Oscar Piastri"
+    },
+    {
+      "round": 16,
+      "grandPrixId": "italy",
+      "name": "Italian GP",
+      "winnerId": "max-verstappen",
+      "winner": "Max Verstappen"
+    },
+    {
+      "round": 17,
+      "grandPrixId": "azerbaijan",
+      "name": "Azerbaijan GP",
+      "winnerId": "max-verstappen",
+      "winner": "Max Verstappen"
+    },
+    {
+      "round": 18,
+      "grandPrixId": "singapore",
+      "name": "Singapore GP",
+      "winnerId": "george-russell",
+      "winner": "George Russell"
+    },
+    {
+      "round": 19,
+      "grandPrixId": "united-states",
+      "name": "United States GP",
+      "winnerId": "max-verstappen",
+      "winner": "Max Verstappen"
+    },
+    {
+      "round": 20,
+      "grandPrixId": "mexico",
+      "name": "Mexican GP",
+      "winnerId": "lando-norris",
+      "winner": "Lando Norris"
+    },
+    {
+      "round": 21,
+      "grandPrixId": "sao-paulo",
+      "name": "São Paulo GP",
+      "winnerId": "lando-norris",
+      "winner": "Lando Norris"
+    },
+    {
+      "round": 22,
+      "grandPrixId": "las-vegas",
+      "name": "Las Vegas GP",
+      "winnerId": "max-verstappen",
+      "winner": "Max Verstappen"
+    },
+    {
+      "round": 23,
+      "grandPrixId": "qatar",
+      "name": "Qatar GP",
+      "winnerId": "max-verstappen",
+      "winner": "Max Verstappen"
+    },
+    {
+      "round": 24,
+      "grandPrixId": "abu-dhabi",
+      "name": "Abu Dhabi GP",
+      "winnerId": "max-verstappen",
+      "winner": "Max Verstappen"
+    }
+  ],
   "notes": null,
   "updated": "2026-06-21"
 }

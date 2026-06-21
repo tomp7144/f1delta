@@ -208,6 +208,64 @@
     }
   ],
   "wcc": null,
+  "races": [
+    {
+      "round": 1,
+      "grandPrixId": "switzerland",
+      "name": "Swiss GP",
+      "winnerId": "piero-taruffi",
+      "winner": "Piero Taruffi"
+    },
+    {
+      "round": 2,
+      "grandPrixId": "indianapolis",
+      "name": "Indy 500",
+      "winnerId": "troy-ruttman",
+      "winner": "Troy Ruttman"
+    },
+    {
+      "round": 3,
+      "grandPrixId": "belgium",
+      "name": "Belgian GP",
+      "winnerId": "alberto-ascari",
+      "winner": "Alberto Ascari"
+    },
+    {
+      "round": 4,
+      "grandPrixId": "france",
+      "name": "French GP",
+      "winnerId": "alberto-ascari",
+      "winner": "Alberto Ascari"
+    },
+    {
+      "round": 5,
+      "grandPrixId": "great-britain",
+      "name": "British GP",
+      "winnerId": "alberto-ascari",
+      "winner": "Alberto Ascari"
+    },
+    {
+      "round": 6,
+      "grandPrixId": "germany",
+      "name": "German GP",
+      "winnerId": "alberto-ascari",
+      "winner": "Alberto Ascari"
+    },
+    {
+      "round": 7,
+      "grandPrixId": "netherlands",
+      "name": "Dutch GP",
+      "winnerId": "alberto-ascari",
+      "winner": "Alberto Ascari"
+    },
+    {
+      "round": 8,
+      "grandPrixId": "italy",
+      "name": "Italian GP",
+      "winnerId": "alberto-ascari",
+      "winner": "Alberto Ascari"
+    }
+  ],
   "notes": null,
   "updated": "2026-06-21"
 }

@@ -298,6 +298,127 @@
       "championshipWon": false
     }
   ],
+  "races": [
+    {
+      "round": 1,
+      "grandPrixId": "australia",
+      "name": "Australian GP",
+      "winnerId": "michael-schumacher",
+      "winner": "Michael Schumacher"
+    },
+    {
+      "round": 2,
+      "grandPrixId": "brazil",
+      "name": "Brazilian GP",
+      "winnerId": "michael-schumacher",
+      "winner": "Michael Schumacher"
+    },
+    {
+      "round": 3,
+      "grandPrixId": "san-marino",
+      "name": "San Marino GP",
+      "winnerId": "michael-schumacher",
+      "winner": "Michael Schumacher"
+    },
+    {
+      "round": 4,
+      "grandPrixId": "great-britain",
+      "name": "British GP",
+      "winnerId": "david-coulthard",
+      "winner": "David Coulthard"
+    },
+    {
+      "round": 5,
+      "grandPrixId": "spain",
+      "name": "Spanish GP",
+      "winnerId": "mika-hakkinen",
+      "winner": "Mika Häkkinen"
+    },
+    {
+      "round": 6,
+      "grandPrixId": "europe",
+      "name": "European GP",
+      "winnerId": "michael-schumacher",
+      "winner": "Michael Schumacher"
+    },
+    {
+      "round": 7,
+      "grandPrixId": "monaco",
+      "name": "Monaco GP",
+      "winnerId": "david-coulthard",
+      "winner": "David Coulthard"
+    },
+    {
+      "round": 8,
+      "grandPrixId": "canada",
+      "name": "Canadian GP",
+      "winnerId": "michael-schumacher",
+      "winner": "Michael Schumacher"
+    },
+    {
+      "round": 9,
+      "grandPrixId": "france",
+      "name": "French GP",
+      "winnerId": "david-coulthard",
+      "winner": "David Coulthard"
+    },
+    {
+      "round": 10,
+      "grandPrixId": "austria",
+      "name": "Austrian GP",
+      "winnerId": "mika-hakkinen",
+      "winner": "Mika Häkkinen"
+    },
+    {
+      "round": 11,
+      "grandPrixId": "germany",
+      "name": "German GP",
+      "winnerId": "rubens-barrichello",
+      "winner": "Rubens Barrichello"
+    },
+    {
+      "round": 12,
+      "grandPrixId": "hungary",
+      "name": "Hungarian GP",
+      "winnerId": "mika-hakkinen",
+      "winner": "Mika Häkkinen"
+    },
+    {
+      "round": 13,
+      "grandPrixId": "belgium",
+      "name": "Belgian GP",
+      "winnerId": "mika-hakkinen",
+      "winner": "Mika Häkkinen"
+    },
+    {
+      "round": 14,
+      "grandPrixId": "italy",
+      "name": "Italian GP",
+      "winnerId": "michael-schumacher",
+      "winner": "Michael Schumacher"
+    },
+    {
+      "round": 15,
+      "grandPrixId": "united-states",
+      "name": "United States GP",
+      "winnerId": "michael-schumacher",
+      "winner": "Michael Schumacher"
+    },
+    {
+      "round": 16,
+      "grandPrixId": "japan",
+      "name": "Japanese GP",
+      "winnerId": "michael-schumacher",
+      "winner": "Michael Schumacher"
+    },
+    {
+      "round": 17,
+      "grandPrixId": "malaysia",
+      "name": "Malaysian GP",
+      "winnerId": "michael-schumacher",
+      "winner": "Michael Schumacher"
+    }
+  ],
   "notes": null,
   "updated": "2026-06-21"
 }

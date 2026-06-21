@@ -316,6 +316,127 @@
       "championshipWon": false
     }
   ],
+  "races": [
+    {
+      "round": 1,
+      "grandPrixId": "australia",
+      "name": "Australian GP",
+      "winnerId": "kimi-raikkonen",
+      "winner": "Kimi Räikkönen"
+    },
+    {
+      "round": 2,
+      "grandPrixId": "malaysia",
+      "name": "Malaysian GP",
+      "winnerId": "fernando-alonso",
+      "winner": "Fernando Alonso"
+    },
+    {
+      "round": 3,
+      "grandPrixId": "bahrain",
+      "name": "Bahrain GP",
+      "winnerId": "felipe-massa",
+      "winner": "Felipe Massa"
+    },
+    {
+      "round": 4,
+      "grandPrixId": "spain",
+      "name": "Spanish GP",
+      "winnerId": "felipe-massa",
+      "winner": "Felipe Massa"
+    },
+    {
+      "round": 5,
+      "grandPrixId": "monaco",
+      "name": "Monaco GP",
+      "winnerId": "fernando-alonso",
+      "winner": "Fernando Alonso"
+    },
+    {
+      "round": 6,
+      "grandPrixId": "canada",
+      "name": "Canadian GP",
+      "winnerId": "lewis-hamilton",
+      "winner": "Lewis Hamilton"
+    },
+    {
+      "round": 7,
+      "grandPrixId": "united-states",
+      "name": "United States GP",
+      "winnerId": "lewis-hamilton",
+      "winner": "Lewis Hamilton"
+    },
+    {
+      "round": 8,
+      "grandPrixId": "france",
+      "name": "French GP",
+      "winnerId": "kimi-raikkonen",
+      "winner": "Kimi Räikkönen"
+    },
+    {
+      "round": 9,
+      "grandPrixId": "great-britain",
+      "name": "British GP",
+      "winnerId": "kimi-raikkonen",
+      "winner": "Kimi Räikkönen"
+    },
+    {
+      "round": 10,
+      "grandPrixId": "europe",
+      "name": "European GP",
+      "winnerId": "fernando-alonso",
+      "winner": "Fernando Alonso"
+    },
+    {
+      "round": 11,
+      "grandPrixId": "hungary",
+      "name": "Hungarian GP",
+      "winnerId": "lewis-hamilton",
+      "winner": "Lewis Hamilton"
+    },
+    {
+      "round": 12,
+      "grandPrixId": "turkey",
+      "name": "Turkish GP",
+      "winnerId": "felipe-massa",
+      "winner": "Felipe Massa"
+    },
+    {
+      "round": 13,
+      "grandPrixId": "italy",
+      "name": "Italian GP",
+      "winnerId": "fernando-alonso",
+      "winner": "Fernando Alonso"
+    },
+    {
+      "round": 14,
+      "grandPrixId": "belgium",
+      "name": "Belgian GP",
+      "winnerId": "kimi-raikkonen",
+      "winner": "Kimi Räikkönen"
+    },
+    {
+      "round": 15,
+      "grandPrixId": "japan",
+      "name": "Japanese GP",
+      "winnerId": "lewis-hamilton",
+      "winner": "Lewis Hamilton"
+    },
+    {
+      "round": 16,
+      "grandPrixId": "china",
+      "name": "Chinese GP",
+      "winnerId": "kimi-raikkonen",
+      "winner": "Kimi Räikkönen"
+    },
+    {
+      "round": 17,
+      "grandPrixId": "brazil",
+      "name": "Brazilian GP",
+      "winnerId": "kimi-raikkonen",
+      "winner": "Kimi Räikkönen"
+    }
+  ],
   "notes": null,
   "updated": "2026-06-21"
 }

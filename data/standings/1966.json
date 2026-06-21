@@ -278,6 +278,71 @@
       "championshipWon": false
     }
   ],
+  "races": [
+    {
+      "round": 1,
+      "grandPrixId": "monaco",
+      "name": "Monaco GP",
+      "winnerId": "jackie-stewart",
+      "winner": "Jackie Stewart"
+    },
+    {
+      "round": 2,
+      "grandPrixId": "belgium",
+      "name": "Belgian GP",
+      "winnerId": "john-surtees",
+      "winner": "John Surtees"
+    },
+    {
+      "round": 3,
+      "grandPrixId": "france",
+      "name": "French GP",
+      "winnerId": "jack-brabham",
+      "winner": "Jack Brabham"
+    },
+    {
+      "round": 4,
+      "grandPrixId": "great-britain",
+      "name": "British GP",
+      "winnerId": "jack-brabham",
+      "winner": "Jack Brabham"
+    },
+    {
+      "round": 5,
+      "grandPrixId": "netherlands",
+      "name": "Dutch GP",
+      "winnerId": "jack-brabham",
+      "winner": "Jack Brabham"
+    },
+    {
+      "round": 6,
+      "grandPrixId": "germany",
+      "name": "German GP",
+      "winnerId": "jack-brabham",
+      "winner": "Jack Brabham"
+    },
+    {
+      "round": 7,
+      "grandPrixId": "italy",
+      "name": "Italian GP",
+      "winnerId": "ludovico-scarfiotti",
+      "winner": "Ludovico Scarfiotti"
+    },
+    {
+      "round": 8,
+      "grandPrixId": "united-states",
+      "name": "United States GP",
+      "winnerId": "jim-clark",
+      "winner": "Jim Clark"
+    },
+    {
+      "round": 9,
+      "grandPrixId": "mexico",
+      "name": "Mexican GP",
+      "winnerId": "john-surtees",
+      "winner": "John Surtees"
+    }
+  ],
   "notes": null,
   "updated": "2026-06-21"
 }

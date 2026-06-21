@@ -387,6 +387,120 @@
       "championshipWon": false
     }
   ],
+  "races": [
+    {
+      "round": 1,
+      "grandPrixId": "brazil",
+      "name": "Brazilian GP",
+      "winnerId": "nigel-mansell",
+      "winner": "Nigel Mansell"
+    },
+    {
+      "round": 2,
+      "grandPrixId": "san-marino",
+      "name": "San Marino GP",
+      "winnerId": "ayrton-senna",
+      "winner": "Ayrton Senna"
+    },
+    {
+      "round": 3,
+      "grandPrixId": "monaco",
+      "name": "Monaco GP",
+      "winnerId": "ayrton-senna",
+      "winner": "Ayrton Senna"
+    },
+    {
+      "round": 4,
+      "grandPrixId": "mexico",
+      "name": "Mexican GP",
+      "winnerId": "ayrton-senna",
+      "winner": "Ayrton Senna"
+    },
+    {
+      "round": 5,
+      "grandPrixId": "united-states",
+      "name": "United States GP",
+      "winnerId": "alain-prost",
+      "winner": "Alain Prost"
+    },
+    {
+      "round": 6,
+      "grandPrixId": "canada",
+      "name": "Canadian GP",
+      "winnerId": "thierry-boutsen",
+      "winner": "Thierry Boutsen"
+    },
+    {
+      "round": 7,
+      "grandPrixId": "france",
+      "name": "French GP",
+      "winnerId": "alain-prost",
+      "winner": "Alain Prost"
+    },
+    {
+      "round": 8,
+      "grandPrixId": "great-britain",
+      "name": "British GP",
+      "winnerId": "alain-prost",
+      "winner": "Alain Prost"
+    },
+    {
+      "round": 9,
+      "grandPrixId": "germany",
+      "name": "German GP",
+      "winnerId": "ayrton-senna",
+      "winner": "Ayrton Senna"
+    },
+    {
+      "round": 10,
+      "grandPrixId": "hungary",
+      "name": "Hungarian GP",
+      "winnerId": "nigel-mansell",
+      "winner": "Nigel Mansell"
+    },
+    {
+      "round": 11,
+      "grandPrixId": "belgium",
+      "name": "Belgian GP",
+      "winnerId": "ayrton-senna",
+      "winner": "Ayrton Senna"
+    },
+    {
+      "round": 12,
+      "grandPrixId": "italy",
+      "name": "Italian GP",
+      "winnerId": "alain-prost",
+      "winner": "Alain Prost"
+    },
+    {
+      "round": 13,
+      "grandPrixId": "portugal",
+      "name": "Portuguese GP",
+      "winnerId": "gerhard-berger",
+      "winner": "Gerhard Berger"
+    },
+    {
+      "round": 14,
+      "grandPrixId": "spain",
+      "name": "Spanish GP",
+      "winnerId": "ayrton-senna",
+      "winner": "Ayrton Senna"
+    },
+    {
+      "round": 15,
+      "grandPrixId": "japan",
+      "name": "Japanese GP",
+      "winnerId": "alessandro-nannini",
+      "winner": "Alessandro Nannini"
+    },
+    {
+      "round": 16,
+      "grandPrixId": "australia",
+      "name": "Australian GP",
+      "winnerId": "thierry-boutsen",
+      "winner": "Thierry Boutsen"
+    }
+  ],
   "notes": null,
   "updated": "2026-06-21"
 }

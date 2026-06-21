@@ -213,6 +213,71 @@
       "championshipWon": false
     }
   ],
+  "races": [
+    {
+      "round": 1,
+      "grandPrixId": "monaco",
+      "name": "Monaco GP",
+      "winnerId": "jack-brabham",
+      "winner": "Jack Brabham"
+    },
+    {
+      "round": 2,
+      "grandPrixId": "indianapolis",
+      "name": "Indy 500",
+      "winnerId": "rodger-ward",
+      "winner": "Rodger Ward"
+    },
+    {
+      "round": 3,
+      "grandPrixId": "netherlands",
+      "name": "Dutch GP",
+      "winnerId": "jo-bonnier",
+      "winner": "Jo Bonnier"
+    },
+    {
+      "round": 4,
+      "grandPrixId": "france",
+      "name": "French GP",
+      "winnerId": "tony-brooks",
+      "winner": "Tony Brooks"
+    },
+    {
+      "round": 5,
+      "grandPrixId": "great-britain",
+      "name": "British GP",
+      "winnerId": "jack-brabham",
+      "winner": "Jack Brabham"
+    },
+    {
+      "round": 6,
+      "grandPrixId": "germany",
+      "name": "German GP",
+      "winnerId": "tony-brooks",
+      "winner": "Tony Brooks"
+    },
+    {
+      "round": 7,
+      "grandPrixId": "portugal",
+      "name": "Portuguese GP",
+      "winnerId": "stirling-moss",
+      "winner": "Stirling Moss"
+    },
+    {
+      "round": 8,
+      "grandPrixId": "italy",
+      "name": "Italian GP",
+      "winnerId": "stirling-moss",
+      "winner": "Stirling Moss"
+    },
+    {
+      "round": 9,
+      "grandPrixId": "united-states",
+      "name": "United States GP",
+      "winnerId": "bruce-mclaren",
+      "winner": "Bruce McLaren"
+    }
+  ],
   "notes": null,
   "updated": "2026-06-21"
 }

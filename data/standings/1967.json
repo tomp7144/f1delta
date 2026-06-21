@@ -280,6 +280,85 @@
       "championshipWon": false
     }
   ],
+  "races": [
+    {
+      "round": 1,
+      "grandPrixId": "south-africa",
+      "name": "South African GP",
+      "winnerId": "pedro-rodriguez",
+      "winner": "Pedro Rodríguez"
+    },
+    {
+      "round": 2,
+      "grandPrixId": "monaco",
+      "name": "Monaco GP",
+      "winnerId": "denny-hulme",
+      "winner": "Denny Hulme"
+    },
+    {
+      "round": 3,
+      "grandPrixId": "netherlands",
+      "name": "Dutch GP",
+      "winnerId": "jim-clark",
+      "winner": "Jim Clark"
+    },
+    {
+      "round": 4,
+      "grandPrixId": "belgium",
+      "name": "Belgian GP",
+      "winnerId": "dan-gurney",
+      "winner": "Dan Gurney"
+    },
+    {
+      "round": 5,
+      "grandPrixId": "france",
+      "name": "French GP",
+      "winnerId": "jack-brabham",
+      "winner": "Jack Brabham"
+    },
+    {
+      "round": 6,
+      "grandPrixId": "great-britain",
+      "name": "British GP",
+      "winnerId": "jim-clark",
+      "winner": "Jim Clark"
+    },
+    {
+      "round": 7,
+      "grandPrixId": "germany",
+      "name": "German GP",
+      "winnerId": "denny-hulme",
+      "winner": "Denny Hulme"
+    },
+    {
+      "round": 8,
+      "grandPrixId": "canada",
+      "name": "Canadian GP",
+      "winnerId": "jack-brabham",
+      "winner": "Jack Brabham"
+    },
+    {
+      "round": 9,
+      "grandPrixId": "italy",
+      "name": "Italian GP",
+      "winnerId": "john-surtees",
+      "winner": "John Surtees"
+    },
+    {
+      "round": 10,
+      "grandPrixId": "united-states",
+      "name": "United States GP",
+      "winnerId": "jim-clark",
+      "winner": "Jim Clark"
+    },
+    {
+      "round": 11,
+      "grandPrixId": "mexico",
+      "name": "Mexican GP",
+      "winnerId": "jim-clark",
+      "winner": "Jim Clark"
+    }
+  ],
   "notes": null,
   "updated": "2026-06-21"
 }

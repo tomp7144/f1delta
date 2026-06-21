@@ -286,6 +286,162 @@
       "championshipWon": false
     }
   ],
+  "races": [
+    {
+      "round": 1,
+      "grandPrixId": "australia",
+      "name": "Australian GP",
+      "winnerId": "george-russell",
+      "winner": "George Russell"
+    },
+    {
+      "round": 2,
+      "grandPrixId": "china",
+      "name": "Chinese GP",
+      "winnerId": "kimi-antonelli",
+      "winner": "Kimi Antonelli"
+    },
+    {
+      "round": 3,
+      "grandPrixId": "japan",
+      "name": "Japanese GP",
+      "winnerId": "kimi-antonelli",
+      "winner": "Kimi Antonelli"
+    },
+    {
+      "round": 4,
+      "grandPrixId": "miami",
+      "name": "Miami GP",
+      "winnerId": "kimi-antonelli",
+      "winner": "Kimi Antonelli"
+    },
+    {
+      "round": 5,
+      "grandPrixId": "canada",
+      "name": "Canadian GP",
+      "winnerId": "kimi-antonelli",
+      "winner": "Kimi Antonelli"
+    },
+    {
+      "round": 6,
+      "grandPrixId": "monaco",
+      "name": "Monaco GP",
+      "winnerId": "kimi-antonelli",
+      "winner": "Kimi Antonelli"
+    },
+    {
+      "round": 7,
+      "grandPrixId": "barcelona-catalunya",
+      "name": "Barcelona-Catalunya GP",
+      "winnerId": null,
+      "winner": null
+    },
+    {
+      "round": 8,
+      "grandPrixId": "austria",
+      "name": "Austrian GP",
+      "winnerId": null,
+      "winner": null
+    },
+    {
+      "round": 9,
+      "grandPrixId": "great-britain",
+      "name": "British GP",
+      "winnerId": null,
+      "winner": null
+    },
+    {
+      "round": 10,
+      "grandPrixId": "belgium",
+      "name": "Belgian GP",
+      "winnerId": null,
+      "winner": null
+    },
+    {
+      "round": 11,
+      "grandPrixId": "hungary",
+      "name": "Hungarian GP",
+      "winnerId": null,
+      "winner": null
+    },
+    {
+      "round": 12,
+      "grandPrixId": "netherlands",
+      "name": "Dutch GP",
+      "winnerId": null,
+      "winner": null
+    },
+    {
+      "round": 13,
+      "grandPrixId": "italy",
+      "name": "Italian GP",
+      "winnerId": null,
+      "winner": null
+    },
+    {
+      "round": 14,
+      "grandPrixId": "spain",
+      "name": "Spanish GP",
+      "winnerId": null,
+      "winner": null
+    },
+    {
+      "round": 15,
+      "grandPrixId": "azerbaijan",
+      "name": "Azerbaijan GP",
+      "winnerId": null,
+      "winner": null
+    },
+    {
+      "round": 16,
+      "grandPrixId": "singapore",
+      "name": "Singapore GP",
+      "winnerId": null,
+      "winner": null
+    },
+    {
+      "round": 17,
+      "grandPrixId": "united-states",
+      "name": "United States GP",
+      "winnerId": null,
+      "winner": null
+    },
+    {
+      "round": 18,
+      "grandPrixId": "mexico",
+      "name": "Mexican GP",
+      "winnerId": null,
+      "winner": null
+    },
+    {
+      "round": 19,
+      "grandPrixId": "sao-paulo",
+      "name": "São Paulo GP",
+      "winnerId": null,
+      "winner": null
+    },
+    {
+      "round": 20,
+      "grandPrixId": "las-vegas",
+      "name": "Las Vegas GP",
+      "winnerId": null,
+      "winner": null
+    },
+    {
+      "round": 21,
+      "grandPrixId": "qatar",
+      "name": "Qatar GP",
+      "winnerId": null,
+      "winner": null
+    },
+    {
+      "round": 22,
+      "grandPrixId": "abu-dhabi",
+      "name": "Abu Dhabi GP",
+      "winnerId": null,
+      "winner": null
+    }
+  ],
   "notes": null,
   "updated": "2026-06-21"
 }

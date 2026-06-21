@@ -300,6 +300,176 @@
       "championshipWon": false
     }
   ],
+  "races": [
+    {
+      "round": 1,
+      "grandPrixId": "bahrain",
+      "name": "Bahrain GP",
+      "winnerId": "max-verstappen",
+      "winner": "Max Verstappen"
+    },
+    {
+      "round": 2,
+      "grandPrixId": "saudi-arabia",
+      "name": "Saudi Arabian GP",
+      "winnerId": "max-verstappen",
+      "winner": "Max Verstappen"
+    },
+    {
+      "round": 3,
+      "grandPrixId": "australia",
+      "name": "Australian GP",
+      "winnerId": "carlos-sainz-jr",
+      "winner": "Carlos Sainz Jr."
+    },
+    {
+      "round": 4,
+      "grandPrixId": "japan",
+      "name": "Japanese GP",
+      "winnerId": "max-verstappen",
+      "winner": "Max Verstappen"
+    },
+    {
+      "round": 5,
+      "grandPrixId": "china",
+      "name": "Chinese GP",
+      "winnerId": "max-verstappen",
+      "winner": "Max Verstappen"
+    },
+    {
+      "round": 6,
+      "grandPrixId": "miami",
+      "name": "Miami GP",
+      "winnerId": "lando-norris",
+      "winner": "Lando Norris"
+    },
+    {
+      "round": 7,
+      "grandPrixId": "emilia-romagna",
+      "name": "Emilia Romagna GP",
+      "winnerId": "max-verstappen",
+      "winner": "Max Verstappen"
+    },
+    {
+      "round": 8,
+      "grandPrixId": "monaco",
+      "name": "Monaco GP",
+      "winnerId": "charles-leclerc",
+      "winner": "Charles Leclerc"
+    },
+    {
+      "round": 9,
+      "grandPrixId": "canada",
+      "name": "Canadian GP",
+      "winnerId": "max-verstappen",
+      "winner": "Max Verstappen"
+    },
+    {
+      "round": 10,
+      "grandPrixId": "spain",
+      "name": "Spanish GP",
+      "winnerId": "max-verstappen",
+      "winner": "Max Verstappen"
+    },
+    {
+      "round": 11,
+      "grandPrixId": "austria",
+      "name": "Austrian GP",
+      "winnerId": "george-russell",
+      "winner": "George Russell"
+    },
+    {
+      "round": 12,
+      "grandPrixId": "great-britain",
+      "name": "British GP",
+      "winnerId": "lewis-hamilton",
+      "winner": "Lewis Hamilton"
+    },
+    {
+      "round": 13,
+      "grandPrixId": "hungary",
+      "name": "Hungarian GP",
+      "winnerId": "oscar-piastri",
+      "winner": "Oscar Piastri"
+    },
+    {
+      "round": 14,
+      "grandPrixId": "belgium",
+      "name": "Belgian GP",
+      "winnerId": "lewis-hamilton",
+      "winner": "Lewis Hamilton"
+    },
+    {
+      "round": 15,
+      "grandPrixId": "netherlands",
+      "name": "Dutch GP",
+      "winnerId": "lando-norris",
+      "winner": "Lando Norris"
+    },
+    {
+      "round": 16,
+      "grandPrixId": "italy",
+      "name": "Italian GP",
+      "winnerId": "charles-leclerc",
+      "winner": "Charles Leclerc"
+    },
+    {
+      "round": 17,
+      "grandPrixId": "azerbaijan",
+      "name": "Azerbaijan GP",
+      "winnerId": "oscar-piastri",
+      "winner": "Oscar Piastri"
+    },
+    {
+      "round": 18,
+      "grandPrixId": "singapore",
+      "name": "Singapore GP",
+      "winnerId": "lando-norris",
+      "winner": "Lando Norris"
+    },
+    {
+      "round": 19,
+      "grandPrixId": "united-states",
+      "name": "United States GP",
+      "winnerId": "charles-leclerc",
+      "winner": "Charles Leclerc"
+    },
+    {
+      "round": 20,
+      "grandPrixId": "mexico",
+      "name": "Mexican GP",
+      "winnerId": "carlos-sainz-jr",
+      "winner": "Carlos Sainz Jr."
+    },
+    {
+      "round": 21,
+      "grandPrixId": "sao-paulo",
+      "name": "São Paulo GP",
+      "winnerId": "max-verstappen",
+      "winner": "Max Verstappen"
+    },
+    {
+      "round": 22,
+      "grandPrixId": "las-vegas",
+      "name": "Las Vegas GP",
+      "winnerId": "george-russell",
+      "winner": "George Russell"
+    },
+    {
+      "round": 23,
+      "grandPrixId": "qatar",
+      "name": "Qatar GP",
+      "winnerId": "max-verstappen",
+      "winner": "Max Verstappen"
+    },
+    {
+      "round": 24,
+      "grandPrixId": "abu-dhabi",
+      "name": "Abu Dhabi GP",
+      "winnerId": "lando-norris",
+      "winner": "Lando Norris"
+    }
+  ],
   "notes": null,
   "updated": "2026-06-21"
 }

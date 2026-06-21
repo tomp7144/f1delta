@@ -295,6 +295,99 @@
       "championshipWon": false
     }
   ],
+  "races": [
+    {
+      "round": 1,
+      "grandPrixId": "south-africa",
+      "name": "South African GP",
+      "winnerId": "jack-brabham",
+      "winner": "Jack Brabham"
+    },
+    {
+      "round": 2,
+      "grandPrixId": "spain",
+      "name": "Spanish GP",
+      "winnerId": "jackie-stewart",
+      "winner": "Jackie Stewart"
+    },
+    {
+      "round": 3,
+      "grandPrixId": "monaco",
+      "name": "Monaco GP",
+      "winnerId": "jochen-rindt",
+      "winner": "Jochen Rindt"
+    },
+    {
+      "round": 4,
+      "grandPrixId": "belgium",
+      "name": "Belgian GP",
+      "winnerId": "pedro-rodriguez",
+      "winner": "Pedro Rodríguez"
+    },
+    {
+      "round": 5,
+      "grandPrixId": "netherlands",
+      "name": "Dutch GP",
+      "winnerId": "jochen-rindt",
+      "winner": "Jochen Rindt"
+    },
+    {
+      "round": 6,
+      "grandPrixId": "france",
+      "name": "French GP",
+      "winnerId": "jochen-rindt",
+      "winner": "Jochen Rindt"
+    },
+    {
+      "round": 7,
+      "grandPrixId": "great-britain",
+      "name": "British GP",
+      "winnerId": "jochen-rindt",
+      "winner": "Jochen Rindt"
+    },
+    {
+      "round": 8,
+      "grandPrixId": "germany",
+      "name": "German GP",
+      "winnerId": "jochen-rindt",
+      "winner": "Jochen Rindt"
+    },
+    {
+      "round": 9,
+      "grandPrixId": "austria",
+      "name": "Austrian GP",
+      "winnerId": "jacky-ickx",
+      "winner": "Jacky Ickx"
+    },
+    {
+      "round": 10,
+      "grandPrixId": "italy",
+      "name": "Italian GP",
+      "winnerId": "clay-regazzoni",
+      "winner": "Clay Regazzoni"
+    },
+    {
+      "round": 11,
+      "grandPrixId": "canada",
+      "name": "Canadian GP",
+      "winnerId": "jacky-ickx",
+      "winner": "Jacky Ickx"
+    },
+    {
+      "round": 12,
+      "grandPrixId": "united-states",
+      "name": "United States GP",
+      "winnerId": "emerson-fittipaldi",
+      "winner": "Emerson Fittipaldi"
+    },
+    {
+      "round": 13,
+      "grandPrixId": "mexico",
+      "name": "Mexican GP",
+      "winnerId": "jacky-ickx",
+      "winner": "Jacky Ickx"
+    }
+  ],
   "notes": null,
   "updated": "2026-06-21"
 }

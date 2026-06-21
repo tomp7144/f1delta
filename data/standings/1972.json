@@ -266,6 +266,92 @@
       "championshipWon": false
     }
   ],
+  "races": [
+    {
+      "round": 1,
+      "grandPrixId": "argentina",
+      "name": "Argentine GP",
+      "winnerId": "jackie-stewart",
+      "winner": "Jackie Stewart"
+    },
+    {
+      "round": 2,
+      "grandPrixId": "south-africa",
+      "name": "South African GP",
+      "winnerId": "denny-hulme",
+      "winner": "Denny Hulme"
+    },
+    {
+      "round": 3,
+      "grandPrixId": "spain",
+      "name": "Spanish GP",
+      "winnerId": "emerson-fittipaldi",
+      "winner": "Emerson Fittipaldi"
+    },
+    {
+      "round": 4,
+      "grandPrixId": "monaco",
+      "name": "Monaco GP",
+      "winnerId": "jean-pierre-beltoise",
+      "winner": "Jean-Pierre Beltoise"
+    },
+    {
+      "round": 5,
+      "grandPrixId": "belgium",
+      "name": "Belgian GP",
+      "winnerId": "emerson-fittipaldi",
+      "winner": "Emerson Fittipaldi"
+    },
+    {
+      "round": 6,
+      "grandPrixId": "france",
+      "name": "French GP",
+      "winnerId": "jackie-stewart",
+      "winner": "Jackie Stewart"
+    },
+    {
+      "round": 7,
+      "grandPrixId": "great-britain",
+      "name": "British GP",
+      "winnerId": "emerson-fittipaldi",
+      "winner": "Emerson Fittipaldi"
+    },
+    {
+      "round": 8,
+      "grandPrixId": "germany",
+      "name": "German GP",
+      "winnerId": "jacky-ickx",
+      "winner": "Jacky Ickx"
+    },
+    {
+      "round": 9,
+      "grandPrixId": "austria",
+      "name": "Austrian GP",
+      "winnerId": "emerson-fittipaldi",
+      "winner": "Emerson Fittipaldi"
+    },
+    {
+      "round": 10,
+      "grandPrixId": "italy",
+      "name": "Italian GP",
+      "winnerId": "emerson-fittipaldi",
+      "winner": "Emerson Fittipaldi"
+    },
+    {
+      "round": 11,
+      "grandPrixId": "canada",
+      "name": "Canadian GP",
+      "winnerId": "jackie-stewart",
+      "winner": "Jackie Stewart"
+    },
+    {
+      "round": 12,
+      "grandPrixId": "united-states",
+      "name": "United States GP",
+      "winnerId": "jackie-stewart",
+      "winner": "Jackie Stewart"
+    }
+  ],
   "notes": null,
   "updated": "2026-06-21"
 }

@@ -181,6 +181,64 @@
     }
   ],
   "wcc": null,
+  "races": [
+    {
+      "round": 1,
+      "grandPrixId": "switzerland",
+      "name": "Swiss GP",
+      "winnerId": "juan-manuel-fangio",
+      "winner": "Juan Manuel Fangio"
+    },
+    {
+      "round": 2,
+      "grandPrixId": "indianapolis",
+      "name": "Indy 500",
+      "winnerId": "lee-wallard",
+      "winner": "Lee Wallard"
+    },
+    {
+      "round": 3,
+      "grandPrixId": "belgium",
+      "name": "Belgian GP",
+      "winnerId": "nino-farina",
+      "winner": "Nino Farina"
+    },
+    {
+      "round": 4,
+      "grandPrixId": "france",
+      "name": "French GP",
+      "winnerId": "luigi-fagioli",
+      "winner": "Luigi Fagioli"
+    },
+    {
+      "round": 5,
+      "grandPrixId": "great-britain",
+      "name": "British GP",
+      "winnerId": "jose-froilan-gonzalez",
+      "winner": "José Froilán González"
+    },
+    {
+      "round": 6,
+      "grandPrixId": "germany",
+      "name": "German GP",
+      "winnerId": "alberto-ascari",
+      "winner": "Alberto Ascari"
+    },
+    {
+      "round": 7,
+      "grandPrixId": "italy",
+      "name": "Italian GP",
+      "winnerId": "alberto-ascari",
+      "winner": "Alberto Ascari"
+    },
+    {
+      "round": 8,
+      "grandPrixId": "spain",
+      "name": "Spanish GP",
+      "winnerId": "juan-manuel-fangio",
+      "winner": "Juan Manuel Fangio"
+    }
+  ],
   "notes": null,
   "updated": "2026-06-21"
 }

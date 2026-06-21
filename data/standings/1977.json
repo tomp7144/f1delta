@@ -287,6 +287,127 @@
       "championshipWon": false
     }
   ],
+  "races": [
+    {
+      "round": 1,
+      "grandPrixId": "argentina",
+      "name": "Argentine GP",
+      "winnerId": "jody-scheckter",
+      "winner": "Jody Scheckter"
+    },
+    {
+      "round": 2,
+      "grandPrixId": "brazil",
+      "name": "Brazilian GP",
+      "winnerId": "carlos-reutemann",
+      "winner": "Carlos Reutemann"
+    },
+    {
+      "round": 3,
+      "grandPrixId": "south-africa",
+      "name": "South African GP",
+      "winnerId": "niki-lauda",
+      "winner": "Niki Lauda"
+    },
+    {
+      "round": 4,
+      "grandPrixId": "united-states-west",
+      "name": "United States GP West",
+      "winnerId": "mario-andretti",
+      "winner": "Mario Andretti"
+    },
+    {
+      "round": 5,
+      "grandPrixId": "spain",
+      "name": "Spanish GP",
+      "winnerId": "mario-andretti",
+      "winner": "Mario Andretti"
+    },
+    {
+      "round": 6,
+      "grandPrixId": "monaco",
+      "name": "Monaco GP",
+      "winnerId": "jody-scheckter",
+      "winner": "Jody Scheckter"
+    },
+    {
+      "round": 7,
+      "grandPrixId": "belgium",
+      "name": "Belgian GP",
+      "winnerId": "gunnar-nilsson",
+      "winner": "Gunnar Nilsson"
+    },
+    {
+      "round": 8,
+      "grandPrixId": "sweden",
+      "name": "Swedish GP",
+      "winnerId": "jacques-laffite",
+      "winner": "Jacques Laffite"
+    },
+    {
+      "round": 9,
+      "grandPrixId": "france",
+      "name": "French GP",
+      "winnerId": "mario-andretti",
+      "winner": "Mario Andretti"
+    },
+    {
+      "round": 10,
+      "grandPrixId": "great-britain",
+      "name": "British GP",
+      "winnerId": "james-hunt",
+      "winner": "James Hunt"
+    },
+    {
+      "round": 11,
+      "grandPrixId": "germany",
+      "name": "German GP",
+      "winnerId": "niki-lauda",
+      "winner": "Niki Lauda"
+    },
+    {
+      "round": 12,
+      "grandPrixId": "austria",
+      "name": "Austrian GP",
+      "winnerId": "alan-jones",
+      "winner": "Alan Jones"
+    },
+    {
+      "round": 13,
+      "grandPrixId": "netherlands",
+      "name": "Dutch GP",
+      "winnerId": "niki-lauda",
+      "winner": "Niki Lauda"
+    },
+    {
+      "round": 14,
+      "grandPrixId": "italy",
+      "name": "Italian GP",
+      "winnerId": "mario-andretti",
+      "winner": "Mario Andretti"
+    },
+    {
+      "round": 15,
+      "grandPrixId": "united-states",
+      "name": "United States GP",
+      "winnerId": "james-hunt",
+      "winner": "James Hunt"
+    },
+    {
+      "round": 16,
+      "grandPrixId": "canada",
+      "name": "Canadian GP",
+      "winnerId": "jody-scheckter",
+      "winner": "Jody Scheckter"
+    },
+    {
+      "round": 17,
+      "grandPrixId": "japan",
+      "name": "Japanese GP",
+      "winnerId": "james-hunt",
+      "winner": "James Hunt"
+    }
+  ],
   "notes": null,
   "updated": "2026-06-21"
 }

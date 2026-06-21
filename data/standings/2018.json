@@ -271,6 +271,155 @@
       "championshipWon": false
     }
   ],
+  "races": [
+    {
+      "round": 1,
+      "grandPrixId": "australia",
+      "name": "Australian GP",
+      "winnerId": "sebastian-vettel",
+      "winner": "Sebastian Vettel"
+    },
+    {
+      "round": 2,
+      "grandPrixId": "bahrain",
+      "name": "Bahrain GP",
+      "winnerId": "sebastian-vettel",
+      "winner": "Sebastian Vettel"
+    },
+    {
+      "round": 3,
+      "grandPrixId": "china",
+      "name": "Chinese GP",
+      "winnerId": "daniel-ricciardo",
+      "winner": "Daniel Ricciardo"
+    },
+    {
+      "round": 4,
+      "grandPrixId": "azerbaijan",
+      "name": "Azerbaijan GP",
+      "winnerId": "lewis-hamilton",
+      "winner": "Lewis Hamilton"
+    },
+    {
+      "round": 5,
+      "grandPrixId": "spain",
+      "name": "Spanish GP",
+      "winnerId": "lewis-hamilton",
+      "winner": "Lewis Hamilton"
+    },
+    {
+      "round": 6,
+      "grandPrixId": "monaco",
+      "name": "Monaco GP",
+      "winnerId": "daniel-ricciardo",
+      "winner": "Daniel Ricciardo"
+    },
+    {
+      "round": 7,
+      "grandPrixId": "canada",
+      "name": "Canadian GP",
+      "winnerId": "sebastian-vettel",
+      "winner": "Sebastian Vettel"
+    },
+    {
+      "round": 8,
+      "grandPrixId": "france",
+      "name": "French GP",
+      "winnerId": "lewis-hamilton",
+      "winner": "Lewis Hamilton"
+    },
+    {
+      "round": 9,
+      "grandPrixId": "austria",
+      "name": "Austrian GP",
+      "winnerId": "max-verstappen",
+      "winner": "Max Verstappen"
+    },
+    {
+      "round": 10,
+      "grandPrixId": "great-britain",
+      "name": "British GP",
+      "winnerId": "sebastian-vettel",
+      "winner": "Sebastian Vettel"
+    },
+    {
+      "round": 11,
+      "grandPrixId": "germany",
+      "name": "German GP",
+      "winnerId": "lewis-hamilton",
+      "winner": "Lewis Hamilton"
+    },
+    {
+      "round": 12,
+      "grandPrixId": "hungary",
+      "name": "Hungarian GP",
+      "winnerId": "lewis-hamilton",
+      "winner": "Lewis Hamilton"
+    },
+    {
+      "round": 13,
+      "grandPrixId": "belgium",
+      "name": "Belgian GP",
+      "winnerId": "sebastian-vettel",
+      "winner": "Sebastian Vettel"
+    },
+    {
+      "round": 14,
+      "grandPrixId": "italy",
+      "name": "Italian GP",
+      "winnerId": "lewis-hamilton",
+      "winner": "Lewis Hamilton"
+    },
+    {
+      "round": 15,
+      "grandPrixId": "singapore",
+      "name": "Singapore GP",
+      "winnerId": "lewis-hamilton",
+      "winner": "Lewis Hamilton"
+    },
+    {
+      "round": 16,
+      "grandPrixId": "russia",
+      "name": "Russian GP",
+      "winnerId": "lewis-hamilton",
+      "winner": "Lewis Hamilton"
+    },
+    {
+      "round": 17,
+      "grandPrixId": "japan",
+      "name": "Japanese GP",
+      "winnerId": "lewis-hamilton",
+      "winner": "Lewis Hamilton"
+    },
+    {
+      "round": 18,
+      "grandPrixId": "united-states",
+      "name": "United States GP",
+      "winnerId": "kimi-raikkonen",
+      "winner": "Kimi Räikkönen"
+    },
+    {
+      "round": 19,
+      "grandPrixId": "mexico",
+      "name": "Mexican GP",
+      "winnerId": "max-verstappen",
+      "winner": "Max Verstappen"
+    },
+    {
+      "round": 20,
+      "grandPrixId": "brazil",
+      "name": "Brazilian GP",
+      "winnerId": "lewis-hamilton",
+      "winner": "Lewis Hamilton"
+    },
+    {
+      "round": 21,
+      "grandPrixId": "abu-dhabi",
+      "name": "Abu Dhabi GP",
+      "winnerId": "lewis-hamilton",
+      "winner": "Lewis Hamilton"
+    }
+  ],
   "notes": null,
   "updated": "2026-06-21"
 }

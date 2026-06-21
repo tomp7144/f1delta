@@ -291,6 +291,127 @@
       "championshipWon": false
     }
   ],
+  "races": [
+    {
+      "round": 1,
+      "grandPrixId": "austria",
+      "name": "Austrian GP",
+      "winnerId": "valtteri-bottas",
+      "winner": "Valtteri Bottas"
+    },
+    {
+      "round": 2,
+      "grandPrixId": "styria",
+      "name": "Styrian GP",
+      "winnerId": "lewis-hamilton",
+      "winner": "Lewis Hamilton"
+    },
+    {
+      "round": 3,
+      "grandPrixId": "hungary",
+      "name": "Hungarian GP",
+      "winnerId": "lewis-hamilton",
+      "winner": "Lewis Hamilton"
+    },
+    {
+      "round": 4,
+      "grandPrixId": "great-britain",
+      "name": "British GP",
+      "winnerId": "lewis-hamilton",
+      "winner": "Lewis Hamilton"
+    },
+    {
+      "round": 5,
+      "grandPrixId": "70th-anniversary",
+      "name": "70th Anniversary GP",
+      "winnerId": "max-verstappen",
+      "winner": "Max Verstappen"
+    },
+    {
+      "round": 6,
+      "grandPrixId": "spain",
+      "name": "Spanish GP",
+      "winnerId": "lewis-hamilton",
+      "winner": "Lewis Hamilton"
+    },
+    {
+      "round": 7,
+      "grandPrixId": "belgium",
+      "name": "Belgian GP",
+      "winnerId": "lewis-hamilton",
+      "winner": "Lewis Hamilton"
+    },
+    {
+      "round": 8,
+      "grandPrixId": "italy",
+      "name": "Italian GP",
+      "winnerId": "pierre-gasly",
+      "winner": "Pierre Gasly"
+    },
+    {
+      "round": 9,
+      "grandPrixId": "tuscany",
+      "name": "Tuscan GP",
+      "winnerId": "lewis-hamilton",
+      "winner": "Lewis Hamilton"
+    },
+    {
+      "round": 10,
+      "grandPrixId": "russia",
+      "name": "Russian GP",
+      "winnerId": "valtteri-bottas",
+      "winner": "Valtteri Bottas"
+    },
+    {
+      "round": 11,
+      "grandPrixId": "eifel",
+      "name": "Eifel GP",
+      "winnerId": "lewis-hamilton",
+      "winner": "Lewis Hamilton"
+    },
+    {
+      "round": 12,
+      "grandPrixId": "portugal",
+      "name": "Portuguese GP",
+      "winnerId": "lewis-hamilton",
+      "winner": "Lewis Hamilton"
+    },
+    {
+      "round": 13,
+      "grandPrixId": "emilia-romagna",
+      "name": "Emilia Romagna GP",
+      "winnerId": "lewis-hamilton",
+      "winner": "Lewis Hamilton"
+    },
+    {
+      "round": 14,
+      "grandPrixId": "turkey",
+      "name": "Turkish GP",
+      "winnerId": "lewis-hamilton",
+      "winner": "Lewis Hamilton"
+    },
+    {
+      "round": 15,
+      "grandPrixId": "bahrain",
+      "name": "Bahrain GP",
+      "winnerId": "lewis-hamilton",
+      "winner": "Lewis Hamilton"
+    },
+    {
+      "round": 16,
+      "grandPrixId": "sakhir",
+      "name": "Sakhir GP",
+      "winnerId": "sergio-perez",
+      "winner": "Sergio Pérez"
+    },
+    {
+      "round": 17,
+      "grandPrixId": "abu-dhabi",
+      "name": "Abu Dhabi GP",
+      "winnerId": "max-verstappen",
+      "winner": "Max Verstappen"
+    }
+  ],
   "notes": null,
   "updated": "2026-06-21"
 }

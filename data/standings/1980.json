@@ -280,6 +280,106 @@
       "championshipWon": false
     }
   ],
+  "races": [
+    {
+      "round": 1,
+      "grandPrixId": "argentina",
+      "name": "Argentine GP",
+      "winnerId": "alan-jones",
+      "winner": "Alan Jones"
+    },
+    {
+      "round": 2,
+      "grandPrixId": "brazil",
+      "name": "Brazilian GP",
+      "winnerId": "rene-arnoux",
+      "winner": "René Arnoux"
+    },
+    {
+      "round": 3,
+      "grandPrixId": "south-africa",
+      "name": "South African GP",
+      "winnerId": "rene-arnoux",
+      "winner": "René Arnoux"
+    },
+    {
+      "round": 4,
+      "grandPrixId": "united-states-west",
+      "name": "United States GP West",
+      "winnerId": "nelson-piquet",
+      "winner": "Nelson Piquet"
+    },
+    {
+      "round": 5,
+      "grandPrixId": "belgium",
+      "name": "Belgian GP",
+      "winnerId": "didier-pironi",
+      "winner": "Didier Pironi"
+    },
+    {
+      "round": 6,
+      "grandPrixId": "monaco",
+      "name": "Monaco GP",
+      "winnerId": "carlos-reutemann",
+      "winner": "Carlos Reutemann"
+    },
+    {
+      "round": 7,
+      "grandPrixId": "france",
+      "name": "French GP",
+      "winnerId": "alan-jones",
+      "winner": "Alan Jones"
+    },
+    {
+      "round": 8,
+      "grandPrixId": "great-britain",
+      "name": "British GP",
+      "winnerId": "alan-jones",
+      "winner": "Alan Jones"
+    },
+    {
+      "round": 9,
+      "grandPrixId": "germany",
+      "name": "German GP",
+      "winnerId": "jacques-laffite",
+      "winner": "Jacques Laffite"
+    },
+    {
+      "round": 10,
+      "grandPrixId": "austria",
+      "name": "Austrian GP",
+      "winnerId": "jean-pierre-jabouille",
+      "winner": "Jean-Pierre Jabouille"
+    },
+    {
+      "round": 11,
+      "grandPrixId": "netherlands",
+      "name": "Dutch GP",
+      "winnerId": "nelson-piquet",
+      "winner": "Nelson Piquet"
+    },
+    {
+      "round": 12,
+      "grandPrixId": "italy",
+      "name": "Italian GP",
+      "winnerId": "nelson-piquet",
+      "winner": "Nelson Piquet"
+    },
+    {
+      "round": 13,
+      "grandPrixId": "canada",
+      "name": "Canadian GP",
+      "winnerId": "alan-jones",
+      "winner": "Alan Jones"
+    },
+    {
+      "round": 14,
+      "grandPrixId": "united-states",
+      "name": "United States GP",
+      "winnerId": "alan-jones",
+      "winner": "Alan Jones"
+    }
+  ],
   "notes": null,
   "updated": "2026-06-21"
 }

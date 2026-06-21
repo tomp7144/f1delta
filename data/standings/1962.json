@@ -241,6 +241,71 @@
       "championshipWon": false
     }
   ],
+  "races": [
+    {
+      "round": 1,
+      "grandPrixId": "netherlands",
+      "name": "Dutch GP",
+      "winnerId": "graham-hill",
+      "winner": "Graham Hill"
+    },
+    {
+      "round": 2,
+      "grandPrixId": "monaco",
+      "name": "Monaco GP",
+      "winnerId": "bruce-mclaren",
+      "winner": "Bruce McLaren"
+    },
+    {
+      "round": 3,
+      "grandPrixId": "belgium",
+      "name": "Belgian GP",
+      "winnerId": "jim-clark",
+      "winner": "Jim Clark"
+    },
+    {
+      "round": 4,
+      "grandPrixId": "france",
+      "name": "French GP",
+      "winnerId": "dan-gurney",
+      "winner": "Dan Gurney"
+    },
+    {
+      "round": 5,
+      "grandPrixId": "great-britain",
+      "name": "British GP",
+      "winnerId": "jim-clark",
+      "winner": "Jim Clark"
+    },
+    {
+      "round": 6,
+      "grandPrixId": "germany",
+      "name": "German GP",
+      "winnerId": "graham-hill",
+      "winner": "Graham Hill"
+    },
+    {
+      "round": 7,
+      "grandPrixId": "italy",
+      "name": "Italian GP",
+      "winnerId": "graham-hill",
+      "winner": "Graham Hill"
+    },
+    {
+      "round": 8,
+      "grandPrixId": "united-states",
+      "name": "United States GP",
+      "winnerId": "jim-clark",
+      "winner": "Jim Clark"
+    },
+    {
+      "round": 9,
+      "grandPrixId": "south-africa",
+      "name": "South African GP",
+      "winnerId": "graham-hill",
+      "winner": "Graham Hill"
+    }
+  ],
   "notes": null,
   "updated": "2026-06-21"
 }

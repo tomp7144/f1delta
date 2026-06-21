@@ -306,6 +306,78 @@
       "championshipWon": false
     }
   ],
+  "races": [
+    {
+      "round": 1,
+      "grandPrixId": "argentina",
+      "name": "Argentine GP",
+      "winnerId": "bruce-mclaren",
+      "winner": "Bruce McLaren"
+    },
+    {
+      "round": 2,
+      "grandPrixId": "monaco",
+      "name": "Monaco GP",
+      "winnerId": "stirling-moss",
+      "winner": "Stirling Moss"
+    },
+    {
+      "round": 3,
+      "grandPrixId": "indianapolis",
+      "name": "Indy 500",
+      "winnerId": "jim-rathmann",
+      "winner": "Jim Rathmann"
+    },
+    {
+      "round": 4,
+      "grandPrixId": "netherlands",
+      "name": "Dutch GP",
+      "winnerId": "jack-brabham",
+      "winner": "Jack Brabham"
+    },
+    {
+      "round": 5,
+      "grandPrixId": "belgium",
+      "name": "Belgian GP",
+      "winnerId": "jack-brabham",
+      "winner": "Jack Brabham"
+    },
+    {
+      "round": 6,
+      "grandPrixId": "france",
+      "name": "French GP",
+      "winnerId": "jack-brabham",
+      "winner": "Jack Brabham"
+    },
+    {
+      "round": 7,
+      "grandPrixId": "great-britain",
+      "name": "British GP",
+      "winnerId": "jack-brabham",
+      "winner": "Jack Brabham"
+    },
+    {
+      "round": 8,
+      "grandPrixId": "portugal",
+      "name": "Portuguese GP",
+      "winnerId": "jack-brabham",
+      "winner": "Jack Brabham"
+    },
+    {
+      "round": 9,
+      "grandPrixId": "italy",
+      "name": "Italian GP",
+      "winnerId": "phil-hill",
+      "winner": "Phil Hill"
+    },
+    {
+      "round": 10,
+      "grandPrixId": "united-states",
+      "name": "United States GP",
+      "winnerId": "stirling-moss",
+      "winner": "Stirling Moss"
+    }
+  ],
   "notes": null,
   "updated": "2026-06-21"
 }

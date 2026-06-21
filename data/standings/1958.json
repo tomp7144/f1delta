@@ -245,6 +245,85 @@
       "championshipWon": false
     }
   ],
+  "races": [
+    {
+      "round": 1,
+      "grandPrixId": "argentina",
+      "name": "Argentine GP",
+      "winnerId": "stirling-moss",
+      "winner": "Stirling Moss"
+    },
+    {
+      "round": 2,
+      "grandPrixId": "monaco",
+      "name": "Monaco GP",
+      "winnerId": "maurice-trintignant",
+      "winner": "Maurice Trintignant"
+    },
+    {
+      "round": 3,
+      "grandPrixId": "netherlands",
+      "name": "Dutch GP",
+      "winnerId": "stirling-moss",
+      "winner": "Stirling Moss"
+    },
+    {
+      "round": 4,
+      "grandPrixId": "indianapolis",
+      "name": "Indy 500",
+      "winnerId": "jimmy-bryan",
+      "winner": "Jimmy Bryan"
+    },
+    {
+      "round": 5,
+      "grandPrixId": "belgium",
+      "name": "Belgian GP",
+      "winnerId": "tony-brooks",
+      "winner": "Tony Brooks"
+    },
+    {
+      "round": 6,
+      "grandPrixId": "france",
+      "name": "French GP",
+      "winnerId": "mike-hawthorn",
+      "winner": "Mike Hawthorn"
+    },
+    {
+      "round": 7,
+      "grandPrixId": "great-britain",
+      "name": "British GP",
+      "winnerId": "peter-collins",
+      "winner": "Peter Collins"
+    },
+    {
+      "round": 8,
+      "grandPrixId": "germany",
+      "name": "German GP",
+      "winnerId": "tony-brooks",
+      "winner": "Tony Brooks"
+    },
+    {
+      "round": 9,
+      "grandPrixId": "portugal",
+      "name": "Portuguese GP",
+      "winnerId": "stirling-moss",
+      "winner": "Stirling Moss"
+    },
+    {
+      "round": 10,
+      "grandPrixId": "italy",
+      "name": "Italian GP",
+      "winnerId": "tony-brooks",
+      "winner": "Tony Brooks"
+    },
+    {
+      "round": 11,
+      "grandPrixId": "morocco",
+      "name": "Moroccan GP",
+      "winnerId": "stirling-moss",
+      "winner": "Stirling Moss"
+    }
+  ],
   "notes": null,
   "updated": "2026-06-21"
 }

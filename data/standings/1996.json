@@ -221,6 +221,120 @@
       "championshipWon": false
     }
   ],
+  "races": [
+    {
+      "round": 1,
+      "grandPrixId": "australia",
+      "name": "Australian GP",
+      "winnerId": "damon-hill",
+      "winner": "Damon Hill"
+    },
+    {
+      "round": 2,
+      "grandPrixId": "brazil",
+      "name": "Brazilian GP",
+      "winnerId": "damon-hill",
+      "winner": "Damon Hill"
+    },
+    {
+      "round": 3,
+      "grandPrixId": "argentina",
+      "name": "Argentine GP",
+      "winnerId": "damon-hill",
+      "winner": "Damon Hill"
+    },
+    {
+      "round": 4,
+      "grandPrixId": "europe",
+      "name": "European GP",
+      "winnerId": "jacques-villeneuve",
+      "winner": "Jacques Villeneuve"
+    },
+    {
+      "round": 5,
+      "grandPrixId": "san-marino",
+      "name": "San Marino GP",
+      "winnerId": "damon-hill",
+      "winner": "Damon Hill"
+    },
+    {
+      "round": 6,
+      "grandPrixId": "monaco",
+      "name": "Monaco GP",
+      "winnerId": "olivier-panis",
+      "winner": "Olivier Panis"
+    },
+    {
+      "round": 7,
+      "grandPrixId": "spain",
+      "name": "Spanish GP",
+      "winnerId": "michael-schumacher",
+      "winner": "Michael Schumacher"
+    },
+    {
+      "round": 8,
+      "grandPrixId": "canada",
+      "name": "Canadian GP",
+      "winnerId": "damon-hill",
+      "winner": "Damon Hill"
+    },
+    {
+      "round": 9,
+      "grandPrixId": "france",
+      "name": "French GP",
+      "winnerId": "damon-hill",
+      "winner": "Damon Hill"
+    },
+    {
+      "round": 10,
+      "grandPrixId": "great-britain",
+      "name": "British GP",
+      "winnerId": "jacques-villeneuve",
+      "winner": "Jacques Villeneuve"
+    },
+    {
+      "round": 11,
+      "grandPrixId": "germany",
+      "name": "German GP",
+      "winnerId": "damon-hill",
+      "winner": "Damon Hill"
+    },
+    {
+      "round": 12,
+      "grandPrixId": "hungary",
+      "name": "Hungarian GP",
+      "winnerId": "jacques-villeneuve",
+      "winner": "Jacques Villeneuve"
+    },
+    {
+      "round": 13,
+      "grandPrixId": "belgium",
+      "name": "Belgian GP",
+      "winnerId": "michael-schumacher",
+      "winner": "Michael Schumacher"
+    },
+    {
+      "round": 14,
+      "grandPrixId": "italy",
+      "name": "Italian GP",
+      "winnerId": "michael-schumacher",
+      "winner": "Michael Schumacher"
+    },
+    {
+      "round": 15,
+      "grandPrixId": "portugal",
+      "name": "Portuguese GP",
+      "winnerId": "jacques-villeneuve",
+      "winner": "Jacques Villeneuve"
+    },
+    {
+      "round": 16,
+      "grandPrixId": "japan",
+      "name": "Japanese GP",
+      "winnerId": "damon-hill",
+      "winner": "Damon Hill"
+    }
+  ],
   "notes": null,
   "updated": "2026-06-21"
 }

@@ -244,6 +244,71 @@
     }
   ],
   "wcc": null,
+  "races": [
+    {
+      "round": 1,
+      "grandPrixId": "argentina",
+      "name": "Argentine GP",
+      "winnerId": "juan-manuel-fangio",
+      "winner": "Juan Manuel Fangio"
+    },
+    {
+      "round": 2,
+      "grandPrixId": "indianapolis",
+      "name": "Indy 500",
+      "winnerId": "bill-vukovich",
+      "winner": "Bill Vukovich"
+    },
+    {
+      "round": 3,
+      "grandPrixId": "belgium",
+      "name": "Belgian GP",
+      "winnerId": "juan-manuel-fangio",
+      "winner": "Juan Manuel Fangio"
+    },
+    {
+      "round": 4,
+      "grandPrixId": "france",
+      "name": "French GP",
+      "winnerId": "juan-manuel-fangio",
+      "winner": "Juan Manuel Fangio"
+    },
+    {
+      "round": 5,
+      "grandPrixId": "great-britain",
+      "name": "British GP",
+      "winnerId": "jose-froilan-gonzalez",
+      "winner": "José Froilán González"
+    },
+    {
+      "round": 6,
+      "grandPrixId": "germany",
+      "name": "German GP",
+      "winnerId": "juan-manuel-fangio",
+      "winner": "Juan Manuel Fangio"
+    },
+    {
+      "round": 7,
+      "grandPrixId": "switzerland",
+      "name": "Swiss GP",
+      "winnerId": "juan-manuel-fangio",
+      "winner": "Juan Manuel Fangio"
+    },
+    {
+      "round": 8,
+      "grandPrixId": "italy",
+      "name": "Italian GP",
+      "winnerId": "juan-manuel-fangio",
+      "winner": "Juan Manuel Fangio"
+    },
+    {
+      "round": 9,
+      "grandPrixId": "spain",
+      "name": "Spanish GP",
+      "winnerId": "mike-hawthorn",
+      "winner": "Mike Hawthorn"
+    }
+  ],
   "notes": null,
   "updated": "2026-06-21"
 }

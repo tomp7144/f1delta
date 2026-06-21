@@ -294,6 +294,106 @@
       "championshipWon": false
     }
   ],
+  "races": [
+    {
+      "round": 1,
+      "grandPrixId": "argentina",
+      "name": "Argentine GP",
+      "winnerId": "emerson-fittipaldi",
+      "winner": "Emerson Fittipaldi"
+    },
+    {
+      "round": 2,
+      "grandPrixId": "brazil",
+      "name": "Brazilian GP",
+      "winnerId": "carlos-pace",
+      "winner": "Carlos Pace"
+    },
+    {
+      "round": 3,
+      "grandPrixId": "south-africa",
+      "name": "South African GP",
+      "winnerId": "jody-scheckter",
+      "winner": "Jody Scheckter"
+    },
+    {
+      "round": 4,
+      "grandPrixId": "spain",
+      "name": "Spanish GP",
+      "winnerId": "jochen-mass",
+      "winner": "Jochen Mass"
+    },
+    {
+      "round": 5,
+      "grandPrixId": "monaco",
+      "name": "Monaco GP",
+      "winnerId": "niki-lauda",
+      "winner": "Niki Lauda"
+    },
+    {
+      "round": 6,
+      "grandPrixId": "belgium",
+      "name": "Belgian GP",
+      "winnerId": "niki-lauda",
+      "winner": "Niki Lauda"
+    },
+    {
+      "round": 7,
+      "grandPrixId": "sweden",
+      "name": "Swedish GP",
+      "winnerId": "niki-lauda",
+      "winner": "Niki Lauda"
+    },
+    {
+      "round": 8,
+      "grandPrixId": "netherlands",
+      "name": "Dutch GP",
+      "winnerId": "james-hunt",
+      "winner": "James Hunt"
+    },
+    {
+      "round": 9,
+      "grandPrixId": "france",
+      "name": "French GP",
+      "winnerId": "niki-lauda",
+      "winner": "Niki Lauda"
+    },
+    {
+      "round": 10,
+      "grandPrixId": "great-britain",
+      "name": "British GP",
+      "winnerId": "emerson-fittipaldi",
+      "winner": "Emerson Fittipaldi"
+    },
+    {
+      "round": 11,
+      "grandPrixId": "germany",
+      "name": "German GP",
+      "winnerId": "carlos-reutemann",
+      "winner": "Carlos Reutemann"
+    },
+    {
+      "round": 12,
+      "grandPrixId": "austria",
+      "name": "Austrian GP",
+      "winnerId": "vittorio-brambilla",
+      "winner": "Vittorio Brambilla"
+    },
+    {
+      "round": 13,
+      "grandPrixId": "italy",
+      "name": "Italian GP",
+      "winnerId": "clay-regazzoni",
+      "winner": "Clay Regazzoni"
+    },
+    {
+      "round": 14,
+      "grandPrixId": "united-states",
+      "name": "United States GP",
+      "winnerId": "niki-lauda",
+      "winner": "Niki Lauda"
+    }
+  ],
   "notes": null,
   "updated": "2026-06-21"
 }

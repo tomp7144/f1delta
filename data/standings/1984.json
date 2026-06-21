@@ -285,6 +285,120 @@
       "championshipWon": false
     }
   ],
+  "races": [
+    {
+      "round": 1,
+      "grandPrixId": "brazil",
+      "name": "Brazilian GP",
+      "winnerId": "alain-prost",
+      "winner": "Alain Prost"
+    },
+    {
+      "round": 2,
+      "grandPrixId": "south-africa",
+      "name": "South African GP",
+      "winnerId": "niki-lauda",
+      "winner": "Niki Lauda"
+    },
+    {
+      "round": 3,
+      "grandPrixId": "belgium",
+      "name": "Belgian GP",
+      "winnerId": "michele-alboreto",
+      "winner": "Michele Alboreto"
+    },
+    {
+      "round": 4,
+      "grandPrixId": "san-marino",
+      "name": "San Marino GP",
+      "winnerId": "alain-prost",
+      "winner": "Alain Prost"
+    },
+    {
+      "round": 5,
+      "grandPrixId": "france",
+      "name": "French GP",
+      "winnerId": "niki-lauda",
+      "winner": "Niki Lauda"
+    },
+    {
+      "round": 6,
+      "grandPrixId": "monaco",
+      "name": "Monaco GP",
+      "winnerId": "alain-prost",
+      "winner": "Alain Prost"
+    },
+    {
+      "round": 7,
+      "grandPrixId": "canada",
+      "name": "Canadian GP",
+      "winnerId": "nelson-piquet",
+      "winner": "Nelson Piquet"
+    },
+    {
+      "round": 8,
+      "grandPrixId": "detroit",
+      "name": "Detroit GP",
+      "winnerId": "nelson-piquet",
+      "winner": "Nelson Piquet"
+    },
+    {
+      "round": 9,
+      "grandPrixId": "dallas",
+      "name": "Dallas GP",
+      "winnerId": "keke-rosberg",
+      "winner": "Keke Rosberg"
+    },
+    {
+      "round": 10,
+      "grandPrixId": "great-britain",
+      "name": "British GP",
+      "winnerId": "niki-lauda",
+      "winner": "Niki Lauda"
+    },
+    {
+      "round": 11,
+      "grandPrixId": "germany",
+      "name": "German GP",
+      "winnerId": "alain-prost",
+      "winner": "Alain Prost"
+    },
+    {
+      "round": 12,
+      "grandPrixId": "austria",
+      "name": "Austrian GP",
+      "winnerId": "niki-lauda",
+      "winner": "Niki Lauda"
+    },
+    {
+      "round": 13,
+      "grandPrixId": "netherlands",
+      "name": "Dutch GP",
+      "winnerId": "alain-prost",
+      "winner": "Alain Prost"
+    },
+    {
+      "round": 14,
+      "grandPrixId": "italy",
+      "name": "Italian GP",
+      "winnerId": "niki-lauda",
+      "winner": "Niki Lauda"
+    },
+    {
+      "round": 15,
+      "grandPrixId": "europe",
+      "name": "European GP",
+      "winnerId": "alain-prost",
+      "winner": "Alain Prost"
+    },
+    {
+      "round": 16,
+      "grandPrixId": "portugal",
+      "name": "Portuguese GP",
+      "winnerId": "alain-prost",
+      "winner": "Alain Prost"
+    }
+  ],
   "notes": null,
   "updated": "2026-06-21"
 }

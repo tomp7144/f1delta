@@ -202,6 +202,64 @@
       "championshipWon": false
     }
   ],
+  "races": [
+    {
+      "round": 1,
+      "grandPrixId": "monaco",
+      "name": "Monaco GP",
+      "winnerId": "stirling-moss",
+      "winner": "Stirling Moss"
+    },
+    {
+      "round": 2,
+      "grandPrixId": "netherlands",
+      "name": "Dutch GP",
+      "winnerId": "wolfgang-von-trips",
+      "winner": "Wolfgang von Trips"
+    },
+    {
+      "round": 3,
+      "grandPrixId": "belgium",
+      "name": "Belgian GP",
+      "winnerId": "phil-hill",
+      "winner": "Phil Hill"
+    },
+    {
+      "round": 4,
+      "grandPrixId": "france",
+      "name": "French GP",
+      "winnerId": "giancarlo-baghetti",
+      "winner": "Giancarlo Baghetti"
+    },
+    {
+      "round": 5,
+      "grandPrixId": "great-britain",
+      "name": "British GP",
+      "winnerId": "wolfgang-von-trips",
+      "winner": "Wolfgang von Trips"
+    },
+    {
+      "round": 6,
+      "grandPrixId": "germany",
+      "name": "German GP",
+      "winnerId": "stirling-moss",
+      "winner": "Stirling Moss"
+    },
+    {
+      "round": 7,
+      "grandPrixId": "italy",
+      "name": "Italian GP",
+      "winnerId": "phil-hill",
+      "winner": "Phil Hill"
+    },
+    {
+      "round": 8,
+      "grandPrixId": "united-states",
+      "name": "United States GP",
+      "winnerId": "innes-ireland",
+      "winner": "Innes Ireland"
+    }
+  ],
   "notes": null,
   "updated": "2026-06-21"
 }

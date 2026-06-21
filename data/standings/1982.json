@@ -346,6 +346,120 @@
       "championshipWon": false
     }
   ],
+  "races": [
+    {
+      "round": 1,
+      "grandPrixId": "south-africa",
+      "name": "South African GP",
+      "winnerId": "alain-prost",
+      "winner": "Alain Prost"
+    },
+    {
+      "round": 2,
+      "grandPrixId": "brazil",
+      "name": "Brazilian GP",
+      "winnerId": "alain-prost",
+      "winner": "Alain Prost"
+    },
+    {
+      "round": 3,
+      "grandPrixId": "united-states-west",
+      "name": "United States GP West",
+      "winnerId": "niki-lauda",
+      "winner": "Niki Lauda"
+    },
+    {
+      "round": 4,
+      "grandPrixId": "san-marino",
+      "name": "San Marino GP",
+      "winnerId": "didier-pironi",
+      "winner": "Didier Pironi"
+    },
+    {
+      "round": 5,
+      "grandPrixId": "belgium",
+      "name": "Belgian GP",
+      "winnerId": "john-watson",
+      "winner": "John Watson"
+    },
+    {
+      "round": 6,
+      "grandPrixId": "monaco",
+      "name": "Monaco GP",
+      "winnerId": "riccardo-patrese",
+      "winner": "Riccardo Patrese"
+    },
+    {
+      "round": 7,
+      "grandPrixId": "detroit",
+      "name": "Detroit GP",
+      "winnerId": "john-watson",
+      "winner": "John Watson"
+    },
+    {
+      "round": 8,
+      "grandPrixId": "canada",
+      "name": "Canadian GP",
+      "winnerId": "nelson-piquet",
+      "winner": "Nelson Piquet"
+    },
+    {
+      "round": 9,
+      "grandPrixId": "netherlands",
+      "name": "Dutch GP",
+      "winnerId": "didier-pironi",
+      "winner": "Didier Pironi"
+    },
+    {
+      "round": 10,
+      "grandPrixId": "great-britain",
+      "name": "British GP",
+      "winnerId": "niki-lauda",
+      "winner": "Niki Lauda"
+    },
+    {
+      "round": 11,
+      "grandPrixId": "france",
+      "name": "French GP",
+      "winnerId": "rene-arnoux",
+      "winner": "René Arnoux"
+    },
+    {
+      "round": 12,
+      "grandPrixId": "germany",
+      "name": "German GP",
+      "winnerId": "patrick-tambay",
+      "winner": "Patrick Tambay"
+    },
+    {
+      "round": 13,
+      "grandPrixId": "austria",
+      "name": "Austrian GP",
+      "winnerId": "elio-de-angelis",
+      "winner": "Elio de Angelis"
+    },
+    {
+      "round": 14,
+      "grandPrixId": "switzerland",
+      "name": "Swiss GP",
+      "winnerId": "keke-rosberg",
+      "winner": "Keke Rosberg"
+    },
+    {
+      "round": 15,
+      "grandPrixId": "italy",
+      "name": "Italian GP",
+      "winnerId": "rene-arnoux",
+      "winner": "René Arnoux"
+    },
+    {
+      "round": 16,
+      "grandPrixId": "caesars-palace",
+      "name": "Caesars Palace GP",
+      "winnerId": "michele-alboreto",
+      "winner": "Michele Alboreto"
+    }
+  ],
   "notes": null,
   "updated": "2026-06-21"
 }

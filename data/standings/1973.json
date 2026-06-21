@@ -280,6 +280,113 @@
       "championshipWon": false
     }
   ],
+  "races": [
+    {
+      "round": 1,
+      "grandPrixId": "argentina",
+      "name": "Argentine GP",
+      "winnerId": "emerson-fittipaldi",
+      "winner": "Emerson Fittipaldi"
+    },
+    {
+      "round": 2,
+      "grandPrixId": "brazil",
+      "name": "Brazilian GP",
+      "winnerId": "emerson-fittipaldi",
+      "winner": "Emerson Fittipaldi"
+    },
+    {
+      "round": 3,
+      "grandPrixId": "south-africa",
+      "name": "South African GP",
+      "winnerId": "jackie-stewart",
+      "winner": "Jackie Stewart"
+    },
+    {
+      "round": 4,
+      "grandPrixId": "spain",
+      "name": "Spanish GP",
+      "winnerId": "emerson-fittipaldi",
+      "winner": "Emerson Fittipaldi"
+    },
+    {
+      "round": 5,
+      "grandPrixId": "belgium",
+      "name": "Belgian GP",
+      "winnerId": "jackie-stewart",
+      "winner": "Jackie Stewart"
+    },
+    {
+      "round": 6,
+      "grandPrixId": "monaco",
+      "name": "Monaco GP",
+      "winnerId": "jackie-stewart",
+      "winner": "Jackie Stewart"
+    },
+    {
+      "round": 7,
+      "grandPrixId": "sweden",
+      "name": "Swedish GP",
+      "winnerId": "denny-hulme",
+      "winner": "Denny Hulme"
+    },
+    {
+      "round": 8,
+      "grandPrixId": "france",
+      "name": "French GP",
+      "winnerId": "ronnie-peterson",
+      "winner": "Ronnie Peterson"
+    },
+    {
+      "round": 9,
+      "grandPrixId": "great-britain",
+      "name": "British GP",
+      "winnerId": "peter-revson",
+      "winner": "Peter Revson"
+    },
+    {
+      "round": 10,
+      "grandPrixId": "netherlands",
+      "name": "Dutch GP",
+      "winnerId": "jackie-stewart",
+      "winner": "Jackie Stewart"
+    },
+    {
+      "round": 11,
+      "grandPrixId": "germany",
+      "name": "German GP",
+      "winnerId": "jackie-stewart",
+      "winner": "Jackie Stewart"
+    },
+    {
+      "round": 12,
+      "grandPrixId": "austria",
+      "name": "Austrian GP",
+      "winnerId": "ronnie-peterson",
+      "winner": "Ronnie Peterson"
+    },
+    {
+      "round": 13,
+      "grandPrixId": "italy",
+      "name": "Italian GP",
+      "winnerId": "ronnie-peterson",
+      "winner": "Ronnie Peterson"
+    },
+    {
+      "round": 14,
+      "grandPrixId": "canada",
+      "name": "Canadian GP",
+      "winnerId": "peter-revson",
+      "winner": "Peter Revson"
+    },
+    {
+      "round": 15,
+      "grandPrixId": "united-states",
+      "name": "United States GP",
+      "winnerId": "ronnie-peterson",
+      "winner": "Ronnie Peterson"
+    }
+  ],
   "notes": null,
   "updated": "2026-06-21"
 }

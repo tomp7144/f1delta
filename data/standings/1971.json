@@ -275,6 +275,85 @@
       "championshipWon": false
     }
   ],
+  "races": [
+    {
+      "round": 1,
+      "grandPrixId": "south-africa",
+      "name": "South African GP",
+      "winnerId": "mario-andretti",
+      "winner": "Mario Andretti"
+    },
+    {
+      "round": 2,
+      "grandPrixId": "spain",
+      "name": "Spanish GP",
+      "winnerId": "jackie-stewart",
+      "winner": "Jackie Stewart"
+    },
+    {
+      "round": 3,
+      "grandPrixId": "monaco",
+      "name": "Monaco GP",
+      "winnerId": "jackie-stewart",
+      "winner": "Jackie Stewart"
+    },
+    {
+      "round": 4,
+      "grandPrixId": "netherlands",
+      "name": "Dutch GP",
+      "winnerId": "jacky-ickx",
+      "winner": "Jacky Ickx"
+    },
+    {
+      "round": 5,
+      "grandPrixId": "france",
+      "name": "French GP",
+      "winnerId": "jackie-stewart",
+      "winner": "Jackie Stewart"
+    },
+    {
+      "round": 6,
+      "grandPrixId": "great-britain",
+      "name": "British GP",
+      "winnerId": "jackie-stewart",
+      "winner": "Jackie Stewart"
+    },
+    {
+      "round": 7,
+      "grandPrixId": "germany",
+      "name": "German GP",
+      "winnerId": "jackie-stewart",
+      "winner": "Jackie Stewart"
+    },
+    {
+      "round": 8,
+      "grandPrixId": "austria",
+      "name": "Austrian GP",
+      "winnerId": "jo-siffert",
+      "winner": "Jo Siffert"
+    },
+    {
+      "round": 9,
+      "grandPrixId": "italy",
+      "name": "Italian GP",
+      "winnerId": "peter-gethin",
+      "winner": "Peter Gethin"
+    },
+    {
+      "round": 10,
+      "grandPrixId": "canada",
+      "name": "Canadian GP",
+      "winnerId": "jackie-stewart",
+      "winner": "Jackie Stewart"
+    },
+    {
+      "round": 11,
+      "grandPrixId": "united-states",
+      "name": "United States GP",
+      "winnerId": "francois-cevert",
+      "winner": "François Cevert"
+    }
+  ],
   "notes": null,
   "updated": "2026-06-21"
 }

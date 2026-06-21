@@ -255,6 +255,127 @@
       "championshipWon": false
     }
   ],
+  "races": [
+    {
+      "round": 1,
+      "grandPrixId": "australia",
+      "name": "Australian GP",
+      "winnerId": "david-coulthard",
+      "winner": "David Coulthard"
+    },
+    {
+      "round": 2,
+      "grandPrixId": "brazil",
+      "name": "Brazilian GP",
+      "winnerId": "jacques-villeneuve",
+      "winner": "Jacques Villeneuve"
+    },
+    {
+      "round": 3,
+      "grandPrixId": "argentina",
+      "name": "Argentine GP",
+      "winnerId": "jacques-villeneuve",
+      "winner": "Jacques Villeneuve"
+    },
+    {
+      "round": 4,
+      "grandPrixId": "san-marino",
+      "name": "San Marino GP",
+      "winnerId": "heinz-harald-frentzen",
+      "winner": "Heinz-Harald Frentzen"
+    },
+    {
+      "round": 5,
+      "grandPrixId": "monaco",
+      "name": "Monaco GP",
+      "winnerId": "michael-schumacher",
+      "winner": "Michael Schumacher"
+    },
+    {
+      "round": 6,
+      "grandPrixId": "spain",
+      "name": "Spanish GP",
+      "winnerId": "jacques-villeneuve",
+      "winner": "Jacques Villeneuve"
+    },
+    {
+      "round": 7,
+      "grandPrixId": "canada",
+      "name": "Canadian GP",
+      "winnerId": "michael-schumacher",
+      "winner": "Michael Schumacher"
+    },
+    {
+      "round": 8,
+      "grandPrixId": "france",
+      "name": "French GP",
+      "winnerId": "michael-schumacher",
+      "winner": "Michael Schumacher"
+    },
+    {
+      "round": 9,
+      "grandPrixId": "great-britain",
+      "name": "British GP",
+      "winnerId": "jacques-villeneuve",
+      "winner": "Jacques Villeneuve"
+    },
+    {
+      "round": 10,
+      "grandPrixId": "germany",
+      "name": "German GP",
+      "winnerId": "gerhard-berger",
+      "winner": "Gerhard Berger"
+    },
+    {
+      "round": 11,
+      "grandPrixId": "hungary",
+      "name": "Hungarian GP",
+      "winnerId": "jacques-villeneuve",
+      "winner": "Jacques Villeneuve"
+    },
+    {
+      "round": 12,
+      "grandPrixId": "belgium",
+      "name": "Belgian GP",
+      "winnerId": "michael-schumacher",
+      "winner": "Michael Schumacher"
+    },
+    {
+      "round": 13,
+      "grandPrixId": "italy",
+      "name": "Italian GP",
+      "winnerId": "david-coulthard",
+      "winner": "David Coulthard"
+    },
+    {
+      "round": 14,
+      "grandPrixId": "austria",
+      "name": "Austrian GP",
+      "winnerId": "jacques-villeneuve",
+      "winner": "Jacques Villeneuve"
+    },
+    {
+      "round": 15,
+      "grandPrixId": "luxembourg",
+      "name": "Luxembourg GP",
+      "winnerId": "jacques-villeneuve",
+      "winner": "Jacques Villeneuve"
+    },
+    {
+      "round": 16,
+      "grandPrixId": "japan",
+      "name": "Japanese GP",
+      "winnerId": "michael-schumacher",
+      "winner": "Michael Schumacher"
+    },
+    {
+      "round": 17,
+      "grandPrixId": "europe",
+      "name": "European GP",
+      "winnerId": "mika-hakkinen",
+      "winner": "Mika Häkkinen"
+    }
+  ],
   "notes": null,
   "updated": "2026-06-21"
 }

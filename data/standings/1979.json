@@ -287,6 +287,113 @@
       "championshipWon": false
     }
   ],
+  "races": [
+    {
+      "round": 1,
+      "grandPrixId": "argentina",
+      "name": "Argentine GP",
+      "winnerId": "jacques-laffite",
+      "winner": "Jacques Laffite"
+    },
+    {
+      "round": 2,
+      "grandPrixId": "brazil",
+      "name": "Brazilian GP",
+      "winnerId": "jacques-laffite",
+      "winner": "Jacques Laffite"
+    },
+    {
+      "round": 3,
+      "grandPrixId": "south-africa",
+      "name": "South African GP",
+      "winnerId": "gilles-villeneuve",
+      "winner": "Gilles Villeneuve"
+    },
+    {
+      "round": 4,
+      "grandPrixId": "united-states-west",
+      "name": "United States GP West",
+      "winnerId": "gilles-villeneuve",
+      "winner": "Gilles Villeneuve"
+    },
+    {
+      "round": 5,
+      "grandPrixId": "spain",
+      "name": "Spanish GP",
+      "winnerId": "patrick-depailler",
+      "winner": "Patrick Depailler"
+    },
+    {
+      "round": 6,
+      "grandPrixId": "belgium",
+      "name": "Belgian GP",
+      "winnerId": "jody-scheckter",
+      "winner": "Jody Scheckter"
+    },
+    {
+      "round": 7,
+      "grandPrixId": "monaco",
+      "name": "Monaco GP",
+      "winnerId": "jody-scheckter",
+      "winner": "Jody Scheckter"
+    },
+    {
+      "round": 8,
+      "grandPrixId": "france",
+      "name": "French GP",
+      "winnerId": "jean-pierre-jabouille",
+      "winner": "Jean-Pierre Jabouille"
+    },
+    {
+      "round": 9,
+      "grandPrixId": "great-britain",
+      "name": "British GP",
+      "winnerId": "clay-regazzoni",
+      "winner": "Clay Regazzoni"
+    },
+    {
+      "round": 10,
+      "grandPrixId": "germany",
+      "name": "German GP",
+      "winnerId": "alan-jones",
+      "winner": "Alan Jones"
+    },
+    {
+      "round": 11,
+      "grandPrixId": "austria",
+      "name": "Austrian GP",
+      "winnerId": "alan-jones",
+      "winner": "Alan Jones"
+    },
+    {
+      "round": 12,
+      "grandPrixId": "netherlands",
+      "name": "Dutch GP",
+      "winnerId": "alan-jones",
+      "winner": "Alan Jones"
+    },
+    {
+      "round": 13,
+      "grandPrixId": "italy",
+      "name": "Italian GP",
+      "winnerId": "jody-scheckter",
+      "winner": "Jody Scheckter"
+    },
+    {
+      "round": 14,
+      "grandPrixId": "canada",
+      "name": "Canadian GP",
+      "winnerId": "alan-jones",
+      "winner": "Alan Jones"
+    },
+    {
+      "round": 15,
+      "grandPrixId": "united-states",
+      "name": "United States GP",
+      "winnerId": "gilles-villeneuve",
+      "winner": "Gilles Villeneuve"
+    }
+  ],
   "notes": null,
   "updated": "2026-06-21"
 }

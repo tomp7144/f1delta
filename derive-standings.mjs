@@ -35,6 +35,12 @@ const WCC_FILE     = path.resolve("./data/f1db/f1db-seasons-constructor-standing
 const NOTES_FILE   = path.resolve("./data/standings/notes.source.json");
 const WCC_FIRST_YEAR = 1958;
 
+const F1DB_DIR     = path.resolve("./data/f1db");
+const RACES_FILE   = path.join(F1DB_DIR, "f1db-races.json");
+const GPS_FILE     = path.join(F1DB_DIR, "f1db-grands-prix.json");
+const RESULTS_FILE = path.join(F1DB_DIR, "f1db-races-race-results.json");
+const F1DB_DRIVERS = path.join(F1DB_DIR, "f1db-drivers.json");
+
 const writeJSON = (fp, obj) => writeFile(fp, JSON.stringify(obj, null, 2) + "\n");
 
 async function loadJSON(fp, label, optional = false) {
@@ -99,6 +105,37 @@ async function main() {
     });
   }
 
+  // ---- Races: per-season round list, linking to /grands-prix/<grandPrixId> ----
+  // Reuses the exact grandPrixId keying that derive-gps.mjs uses for GP pages,
+  // so the links match the GP routes by construction.
+  const racesArr   = await loadJSON(RACES_FILE, "races");
+  const gpsArr     = await loadJSON(GPS_FILE, "grands prix");
+  const resultsArr = await loadJSON(RESULTS_FILE, "race results");
+  const f1dbDrvArr = await loadJSON(F1DB_DRIVERS, "f1db drivers");
+  assertFields(racesArr[0], ["id", "year", "round", "grandPrixId"], "races");
+  assertFields(gpsArr[0], ["id"], "grands prix");
+
+  const gpName     = new Map(gpsArr.map((g) => [g.id, g.shortName ?? g.fullName ?? g.id]));
+  const f1dbName   = new Map(f1dbDrvArr.map((d) => [d.id, d.name]));
+  const winnerByRace = new Map();
+  for (const r of resultsArr) {
+    if (r.positionNumber === 1 && !winnerByRace.has(r.raceId)) winnerByRace.set(r.raceId, r);
+  }
+
+  const racesByYear = new Map();
+  for (const race of racesArr) {
+    if (!racesByYear.has(race.year)) racesByYear.set(race.year, []);
+    const w = winnerByRace.get(race.id);
+    racesByYear.get(race.year).push({
+      round: race.round,
+      grandPrixId: race.grandPrixId,
+      name: gpName.get(race.grandPrixId) ?? race.grandPrixId,
+      winnerId: w?.driverId ?? null,
+      winner: w ? (f1dbName.get(w.driverId) ?? w.driverId) : null,
+    });
+  }
+  for (const list of racesByYear.values()) list.sort((a, b) => (a.round ?? 0) - (b.round ?? 0));
+
   await mkdir(OUT_DIR, { recursive: true });
   const now = new Date().toISOString().slice(0, 10);
   const indexRows = [];
@@ -118,6 +155,7 @@ async function main() {
       wccChampion: wccChampion && { constructorId: wccChampion.constructorId, name: wccChampion.name },
       wdc,
       wcc: hasWCC ? wcc : null,
+      races: racesByYear.get(year) ?? [],
       notes: notes[String(year)] ?? null,
       updated: now,
     });

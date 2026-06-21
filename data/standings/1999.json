@@ -246,6 +246,120 @@
       "championshipWon": false
     }
   ],
+  "races": [
+    {
+      "round": 1,
+      "grandPrixId": "australia",
+      "name": "Australian GP",
+      "winnerId": "eddie-irvine",
+      "winner": "Eddie Irvine"
+    },
+    {
+      "round": 2,
+      "grandPrixId": "brazil",
+      "name": "Brazilian GP",
+      "winnerId": "mika-hakkinen",
+      "winner": "Mika Häkkinen"
+    },
+    {
+      "round": 3,
+      "grandPrixId": "san-marino",
+      "name": "San Marino GP",
+      "winnerId": "michael-schumacher",
+      "winner": "Michael Schumacher"
+    },
+    {
+      "round": 4,
+      "grandPrixId": "monaco",
+      "name": "Monaco GP",
+      "winnerId": "michael-schumacher",
+      "winner": "Michael Schumacher"
+    },
+    {
+      "round": 5,
+      "grandPrixId": "spain",
+      "name": "Spanish GP",
+      "winnerId": "mika-hakkinen",
+      "winner": "Mika Häkkinen"
+    },
+    {
+      "round": 6,
+      "grandPrixId": "canada",
+      "name": "Canadian GP",
+      "winnerId": "mika-hakkinen",
+      "winner": "Mika Häkkinen"
+    },
+    {
+      "round": 7,
+      "grandPrixId": "france",
+      "name": "French GP",
+      "winnerId": "heinz-harald-frentzen",
+      "winner": "Heinz-Harald Frentzen"
+    },
+    {
+      "round": 8,
+      "grandPrixId": "great-britain",
+      "name": "British GP",
+      "winnerId": "david-coulthard",
+      "winner": "David Coulthard"
+    },
+    {
+      "round": 9,
+      "grandPrixId": "austria",
+      "name": "Austrian GP",
+      "winnerId": "eddie-irvine",
+      "winner": "Eddie Irvine"
+    },
+    {
+      "round": 10,
+      "grandPrixId": "germany",
+      "name": "German GP",
+      "winnerId": "eddie-irvine",
+      "winner": "Eddie Irvine"
+    },
+    {
+      "round": 11,
+      "grandPrixId": "hungary",
+      "name": "Hungarian GP",
+      "winnerId": "mika-hakkinen",
+      "winner": "Mika Häkkinen"
+    },
+    {
+      "round": 12,
+      "grandPrixId": "belgium",
+      "name": "Belgian GP",
+      "winnerId": "david-coulthard",
+      "winner": "David Coulthard"
+    },
+    {
+      "round": 13,
+      "grandPrixId": "italy",
+      "name": "Italian GP",
+      "winnerId": "heinz-harald-frentzen",
+      "winner": "Heinz-Harald Frentzen"
+    },
+    {
+      "round": 14,
+      "grandPrixId": "europe",
+      "name": "European GP",
+      "winnerId": "johnny-herbert",
+      "winner": "Johnny Herbert"
+    },
+    {
+      "round": 15,
+      "grandPrixId": "malaysia",
+      "name": "Malaysian GP",
+      "winnerId": "eddie-irvine",
+      "winner": "Eddie Irvine"
+    },
+    {
+      "round": 16,
+      "grandPrixId": "japan",
+      "name": "Japanese GP",
+      "winnerId": "mika-hakkinen",
+      "winner": "Mika Häkkinen"
+    }
+  ],
   "notes": null,
   "updated": "2026-06-21"
 }

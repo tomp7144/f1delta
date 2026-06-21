@@ -235,6 +235,57 @@
     }
   ],
   "wcc": null,
+  "races": [
+    {
+      "round": 1,
+      "grandPrixId": "argentina",
+      "name": "Argentine GP",
+      "winnerId": "juan-manuel-fangio",
+      "winner": "Juan Manuel Fangio"
+    },
+    {
+      "round": 2,
+      "grandPrixId": "monaco",
+      "name": "Monaco GP",
+      "winnerId": "maurice-trintignant",
+      "winner": "Maurice Trintignant"
+    },
+    {
+      "round": 3,
+      "grandPrixId": "indianapolis",
+      "name": "Indy 500",
+      "winnerId": "bob-sweikert",
+      "winner": "Bob Sweikert"
+    },
+    {
+      "round": 4,
+      "grandPrixId": "belgium",
+      "name": "Belgian GP",
+      "winnerId": "juan-manuel-fangio",
+      "winner": "Juan Manuel Fangio"
+    },
+    {
+      "round": 5,
+      "grandPrixId": "netherlands",
+      "name": "Dutch GP",
+      "winnerId": "juan-manuel-fangio",
+      "winner": "Juan Manuel Fangio"
+    },
+    {
+      "round": 6,
+      "grandPrixId": "great-britain",
+      "name": "British GP",
+      "winnerId": "stirling-moss",
+      "winner": "Stirling Moss"
+    },
+    {
+      "round": 7,
+      "grandPrixId": "italy",
+      "name": "Italian GP",
+      "winnerId": "juan-manuel-fangio",
+      "winner": "Juan Manuel Fangio"
+    }
+  ],
   "notes": null,
   "updated": "2026-06-21"
 }

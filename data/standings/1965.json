@@ -214,6 +214,78 @@
       "championshipWon": false
     }
   ],
+  "races": [
+    {
+      "round": 1,
+      "grandPrixId": "south-africa",
+      "name": "South African GP",
+      "winnerId": "jim-clark",
+      "winner": "Jim Clark"
+    },
+    {
+      "round": 2,
+      "grandPrixId": "monaco",
+      "name": "Monaco GP",
+      "winnerId": "graham-hill",
+      "winner": "Graham Hill"
+    },
+    {
+      "round": 3,
+      "grandPrixId": "belgium",
+      "name": "Belgian GP",
+      "winnerId": "jim-clark",
+      "winner": "Jim Clark"
+    },
+    {
+      "round": 4,
+      "grandPrixId": "france",
+      "name": "French GP",
+      "winnerId": "jim-clark",
+      "winner": "Jim Clark"
+    },
+    {
+      "round": 5,
+      "grandPrixId": "great-britain",
+      "name": "British GP",
+      "winnerId": "jim-clark",
+      "winner": "Jim Clark"
+    },
+    {
+      "round": 6,
+      "grandPrixId": "netherlands",
+      "name": "Dutch GP",
+      "winnerId": "jim-clark",
+      "winner": "Jim Clark"
+    },
+    {
+      "round": 7,
+      "grandPrixId": "germany",
+      "name": "German GP",
+      "winnerId": "jim-clark",
+      "winner": "Jim Clark"
+    },
+    {
+      "round": 8,
+      "grandPrixId": "italy",
+      "name": "Italian GP",
+      "winnerId": "jackie-stewart",
+      "winner": "Jackie Stewart"
+    },
+    {
+      "round": 9,
+      "grandPrixId": "united-states",
+      "name": "United States GP",
+      "winnerId": "graham-hill",
+      "winner": "Graham Hill"
+    },
+    {
+      "round": 10,
+      "grandPrixId": "mexico",
+      "name": "Mexican GP",
+      "winnerId": "richie-ginther",
+      "winner": "Richie Ginther"
+    }
+  ],
   "notes": null,
   "updated": "2026-06-21"
 }

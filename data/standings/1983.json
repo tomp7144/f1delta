@@ -285,6 +285,113 @@
       "championshipWon": false
     }
   ],
+  "races": [
+    {
+      "round": 1,
+      "grandPrixId": "brazil",
+      "name": "Brazilian GP",
+      "winnerId": "nelson-piquet",
+      "winner": "Nelson Piquet"
+    },
+    {
+      "round": 2,
+      "grandPrixId": "united-states-west",
+      "name": "United States GP West",
+      "winnerId": "john-watson",
+      "winner": "John Watson"
+    },
+    {
+      "round": 3,
+      "grandPrixId": "france",
+      "name": "French GP",
+      "winnerId": "alain-prost",
+      "winner": "Alain Prost"
+    },
+    {
+      "round": 4,
+      "grandPrixId": "san-marino",
+      "name": "San Marino GP",
+      "winnerId": "patrick-tambay",
+      "winner": "Patrick Tambay"
+    },
+    {
+      "round": 5,
+      "grandPrixId": "monaco",
+      "name": "Monaco GP",
+      "winnerId": "keke-rosberg",
+      "winner": "Keke Rosberg"
+    },
+    {
+      "round": 6,
+      "grandPrixId": "belgium",
+      "name": "Belgian GP",
+      "winnerId": "alain-prost",
+      "winner": "Alain Prost"
+    },
+    {
+      "round": 7,
+      "grandPrixId": "detroit",
+      "name": "Detroit GP",
+      "winnerId": "michele-alboreto",
+      "winner": "Michele Alboreto"
+    },
+    {
+      "round": 8,
+      "grandPrixId": "canada",
+      "name": "Canadian GP",
+      "winnerId": "rene-arnoux",
+      "winner": "René Arnoux"
+    },
+    {
+      "round": 9,
+      "grandPrixId": "great-britain",
+      "name": "British GP",
+      "winnerId": "alain-prost",
+      "winner": "Alain Prost"
+    },
+    {
+      "round": 10,
+      "grandPrixId": "germany",
+      "name": "German GP",
+      "winnerId": "rene-arnoux",
+      "winner": "René Arnoux"
+    },
+    {
+      "round": 11,
+      "grandPrixId": "austria",
+      "name": "Austrian GP",
+      "winnerId": "alain-prost",
+      "winner": "Alain Prost"
+    },
+    {
+      "round": 12,
+      "grandPrixId": "netherlands",
+      "name": "Dutch GP",
+      "winnerId": "rene-arnoux",
+      "winner": "René Arnoux"
+    },
+    {
+      "round": 13,
+      "grandPrixId": "italy",
+      "name": "Italian GP",
+      "winnerId": "nelson-piquet",
+      "winner": "Nelson Piquet"
+    },
+    {
+      "round": 14,
+      "grandPrixId": "europe",
+      "name": "European GP",
+      "winnerId": "nelson-piquet",
+      "winner": "Nelson Piquet"
+    },
+    {
+      "round": 15,
+      "grandPrixId": "south-africa",
+      "name": "South African GP",
+      "winnerId": "riccardo-patrese",
+      "winner": "Riccardo Patrese"
+    }
+  ],
   "notes": null,
   "updated": "2026-06-21"
 }

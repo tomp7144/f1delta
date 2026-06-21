@@ -294,6 +294,113 @@
       "championshipWon": false
     }
   ],
+  "races": [
+    {
+      "round": 1,
+      "grandPrixId": "united-states-west",
+      "name": "United States GP West",
+      "winnerId": "alan-jones",
+      "winner": "Alan Jones"
+    },
+    {
+      "round": 2,
+      "grandPrixId": "brazil",
+      "name": "Brazilian GP",
+      "winnerId": "carlos-reutemann",
+      "winner": "Carlos Reutemann"
+    },
+    {
+      "round": 3,
+      "grandPrixId": "argentina",
+      "name": "Argentine GP",
+      "winnerId": "nelson-piquet",
+      "winner": "Nelson Piquet"
+    },
+    {
+      "round": 4,
+      "grandPrixId": "san-marino",
+      "name": "San Marino GP",
+      "winnerId": "nelson-piquet",
+      "winner": "Nelson Piquet"
+    },
+    {
+      "round": 5,
+      "grandPrixId": "belgium",
+      "name": "Belgian GP",
+      "winnerId": "carlos-reutemann",
+      "winner": "Carlos Reutemann"
+    },
+    {
+      "round": 6,
+      "grandPrixId": "monaco",
+      "name": "Monaco GP",
+      "winnerId": "gilles-villeneuve",
+      "winner": "Gilles Villeneuve"
+    },
+    {
+      "round": 7,
+      "grandPrixId": "spain",
+      "name": "Spanish GP",
+      "winnerId": "gilles-villeneuve",
+      "winner": "Gilles Villeneuve"
+    },
+    {
+      "round": 8,
+      "grandPrixId": "france",
+      "name": "French GP",
+      "winnerId": "alain-prost",
+      "winner": "Alain Prost"
+    },
+    {
+      "round": 9,
+      "grandPrixId": "great-britain",
+      "name": "British GP",
+      "winnerId": "john-watson",
+      "winner": "John Watson"
+    },
+    {
+      "round": 10,
+      "grandPrixId": "germany",
+      "name": "German GP",
+      "winnerId": "nelson-piquet",
+      "winner": "Nelson Piquet"
+    },
+    {
+      "round": 11,
+      "grandPrixId": "austria",
+      "name": "Austrian GP",
+      "winnerId": "jacques-laffite",
+      "winner": "Jacques Laffite"
+    },
+    {
+      "round": 12,
+      "grandPrixId": "netherlands",
+      "name": "Dutch GP",
+      "winnerId": "alain-prost",
+      "winner": "Alain Prost"
+    },
+    {
+      "round": 13,
+      "grandPrixId": "italy",
+      "name": "Italian GP",
+      "winnerId": "alain-prost",
+      "winner": "Alain Prost"
+    },
+    {
+      "round": 14,
+      "grandPrixId": "canada",
+      "name": "Canadian GP",
+      "winnerId": "jacques-laffite",
+      "winner": "Jacques Laffite"
+    },
+    {
+      "round": 15,
+      "grandPrixId": "caesars-palace",
+      "name": "Caesars Palace GP",
+      "winnerId": "alan-jones",
+      "winner": "Alan Jones"
+    }
+  ],
   "notes": null,
   "updated": "2026-06-21"
 }

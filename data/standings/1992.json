@@ -276,6 +276,120 @@
       "championshipWon": false
     }
   ],
+  "races": [
+    {
+      "round": 1,
+      "grandPrixId": "south-africa",
+      "name": "South African GP",
+      "winnerId": "nigel-mansell",
+      "winner": "Nigel Mansell"
+    },
+    {
+      "round": 2,
+      "grandPrixId": "mexico",
+      "name": "Mexican GP",
+      "winnerId": "nigel-mansell",
+      "winner": "Nigel Mansell"
+    },
+    {
+      "round": 3,
+      "grandPrixId": "brazil",
+      "name": "Brazilian GP",
+      "winnerId": "nigel-mansell",
+      "winner": "Nigel Mansell"
+    },
+    {
+      "round": 4,
+      "grandPrixId": "spain",
+      "name": "Spanish GP",
+      "winnerId": "nigel-mansell",
+      "winner": "Nigel Mansell"
+    },
+    {
+      "round": 5,
+      "grandPrixId": "san-marino",
+      "name": "San Marino GP",
+      "winnerId": "nigel-mansell",
+      "winner": "Nigel Mansell"
+    },
+    {
+      "round": 6,
+      "grandPrixId": "monaco",
+      "name": "Monaco GP",
+      "winnerId": "ayrton-senna",
+      "winner": "Ayrton Senna"
+    },
+    {
+      "round": 7,
+      "grandPrixId": "canada",
+      "name": "Canadian GP",
+      "winnerId": "gerhard-berger",
+      "winner": "Gerhard Berger"
+    },
+    {
+      "round": 8,
+      "grandPrixId": "france",
+      "name": "French GP",
+      "winnerId": "nigel-mansell",
+      "winner": "Nigel Mansell"
+    },
+    {
+      "round": 9,
+      "grandPrixId": "great-britain",
+      "name": "British GP",
+      "winnerId": "nigel-mansell",
+      "winner": "Nigel Mansell"
+    },
+    {
+      "round": 10,
+      "grandPrixId": "germany",
+      "name": "German GP",
+      "winnerId": "nigel-mansell",
+      "winner": "Nigel Mansell"
+    },
+    {
+      "round": 11,
+      "grandPrixId": "hungary",
+      "name": "Hungarian GP",
+      "winnerId": "ayrton-senna",
+      "winner": "Ayrton Senna"
+    },
+    {
+      "round": 12,
+      "grandPrixId": "belgium",
+      "name": "Belgian GP",
+      "winnerId": "michael-schumacher",
+      "winner": "Michael Schumacher"
+    },
+    {
+      "round": 13,
+      "grandPrixId": "italy",
+      "name": "Italian GP",
+      "winnerId": "ayrton-senna",
+      "winner": "Ayrton Senna"
+    },
+    {
+      "round": 14,
+      "grandPrixId": "portugal",
+      "name": "Portuguese GP",
+      "winnerId": "nigel-mansell",
+      "winner": "Nigel Mansell"
+    },
+    {
+      "round": 15,
+      "grandPrixId": "japan",
+      "name": "Japanese GP",
+      "winnerId": "riccardo-patrese",
+      "winner": "Riccardo Patrese"
+    },
+    {
+      "round": 16,
+      "grandPrixId": "australia",
+      "name": "Australian GP",
+      "winnerId": "gerhard-berger",
+      "winner": "Gerhard Berger"
+    }
+  ],
   "notes": null,
   "updated": "2026-06-21"
 }

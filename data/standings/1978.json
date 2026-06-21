@@ -301,6 +301,120 @@
       "championshipWon": false
     }
   ],
+  "races": [
+    {
+      "round": 1,
+      "grandPrixId": "argentina",
+      "name": "Argentine GP",
+      "winnerId": "mario-andretti",
+      "winner": "Mario Andretti"
+    },
+    {
+      "round": 2,
+      "grandPrixId": "brazil",
+      "name": "Brazilian GP",
+      "winnerId": "carlos-reutemann",
+      "winner": "Carlos Reutemann"
+    },
+    {
+      "round": 3,
+      "grandPrixId": "south-africa",
+      "name": "South African GP",
+      "winnerId": "ronnie-peterson",
+      "winner": "Ronnie Peterson"
+    },
+    {
+      "round": 4,
+      "grandPrixId": "united-states-west",
+      "name": "United States GP West",
+      "winnerId": "carlos-reutemann",
+      "winner": "Carlos Reutemann"
+    },
+    {
+      "round": 5,
+      "grandPrixId": "monaco",
+      "name": "Monaco GP",
+      "winnerId": "patrick-depailler",
+      "winner": "Patrick Depailler"
+    },
+    {
+      "round": 6,
+      "grandPrixId": "belgium",
+      "name": "Belgian GP",
+      "winnerId": "mario-andretti",
+      "winner": "Mario Andretti"
+    },
+    {
+      "round": 7,
+      "grandPrixId": "spain",
+      "name": "Spanish GP",
+      "winnerId": "mario-andretti",
+      "winner": "Mario Andretti"
+    },
+    {
+      "round": 8,
+      "grandPrixId": "sweden",
+      "name": "Swedish GP",
+      "winnerId": "niki-lauda",
+      "winner": "Niki Lauda"
+    },
+    {
+      "round": 9,
+      "grandPrixId": "france",
+      "name": "French GP",
+      "winnerId": "mario-andretti",
+      "winner": "Mario Andretti"
+    },
+    {
+      "round": 10,
+      "grandPrixId": "great-britain",
+      "name": "British GP",
+      "winnerId": "carlos-reutemann",
+      "winner": "Carlos Reutemann"
+    },
+    {
+      "round": 11,
+      "grandPrixId": "germany",
+      "name": "German GP",
+      "winnerId": "mario-andretti",
+      "winner": "Mario Andretti"
+    },
+    {
+      "round": 12,
+      "grandPrixId": "austria",
+      "name": "Austrian GP",
+      "winnerId": "ronnie-peterson",
+      "winner": "Ronnie Peterson"
+    },
+    {
+      "round": 13,
+      "grandPrixId": "netherlands",
+      "name": "Dutch GP",
+      "winnerId": "mario-andretti",
+      "winner": "Mario Andretti"
+    },
+    {
+      "round": 14,
+      "grandPrixId": "italy",
+      "name": "Italian GP",
+      "winnerId": "niki-lauda",
+      "winner": "Niki Lauda"
+    },
+    {
+      "round": 15,
+      "grandPrixId": "united-states",
+      "name": "United States GP",
+      "winnerId": "carlos-reutemann",
+      "winner": "Carlos Reutemann"
+    },
+    {
+      "round": 16,
+      "grandPrixId": "canada",
+      "name": "Canadian GP",
+      "winnerId": "gilles-villeneuve",
+      "winner": "Gilles Villeneuve"
+    }
+  ],
   "notes": null,
   "updated": "2026-06-21"
 }

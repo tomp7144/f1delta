@@ -268,6 +268,78 @@
       "championshipWon": false
     }
   ],
+  "races": [
+    {
+      "round": 1,
+      "grandPrixId": "monaco",
+      "name": "Monaco GP",
+      "winnerId": "graham-hill",
+      "winner": "Graham Hill"
+    },
+    {
+      "round": 2,
+      "grandPrixId": "netherlands",
+      "name": "Dutch GP",
+      "winnerId": "jim-clark",
+      "winner": "Jim Clark"
+    },
+    {
+      "round": 3,
+      "grandPrixId": "belgium",
+      "name": "Belgian GP",
+      "winnerId": "jim-clark",
+      "winner": "Jim Clark"
+    },
+    {
+      "round": 4,
+      "grandPrixId": "france",
+      "name": "French GP",
+      "winnerId": "dan-gurney",
+      "winner": "Dan Gurney"
+    },
+    {
+      "round": 5,
+      "grandPrixId": "great-britain",
+      "name": "British GP",
+      "winnerId": "jim-clark",
+      "winner": "Jim Clark"
+    },
+    {
+      "round": 6,
+      "grandPrixId": "germany",
+      "name": "German GP",
+      "winnerId": "john-surtees",
+      "winner": "John Surtees"
+    },
+    {
+      "round": 7,
+      "grandPrixId": "austria",
+      "name": "Austrian GP",
+      "winnerId": "lorenzo-bandini",
+      "winner": "Lorenzo Bandini"
+    },
+    {
+      "round": 8,
+      "grandPrixId": "italy",
+      "name": "Italian GP",
+      "winnerId": "john-surtees",
+      "winner": "John Surtees"
+    },
+    {
+      "round": 9,
+      "grandPrixId": "united-states",
+      "name": "United States GP",
+      "winnerId": "graham-hill",
+      "winner": "Graham Hill"
+    },
+    {
+      "round": 10,
+      "grandPrixId": "mexico",
+      "name": "Mexican GP",
+      "winnerId": "dan-gurney",
+      "winner": "Dan Gurney"
+    }
+  ],
   "notes": null,
   "updated": "2026-06-21"
 }

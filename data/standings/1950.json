@@ -208,6 +208,57 @@
     }
   ],
   "wcc": null,
+  "races": [
+    {
+      "round": 1,
+      "grandPrixId": "great-britain",
+      "name": "British GP",
+      "winnerId": "nino-farina",
+      "winner": "Nino Farina"
+    },
+    {
+      "round": 2,
+      "grandPrixId": "monaco",
+      "name": "Monaco GP",
+      "winnerId": "juan-manuel-fangio",
+      "winner": "Juan Manuel Fangio"
+    },
+    {
+      "round": 3,
+      "grandPrixId": "indianapolis",
+      "name": "Indy 500",
+      "winnerId": "johnnie-parsons",
+      "winner": "Johnnie Parsons"
+    },
+    {
+      "round": 4,
+      "grandPrixId": "switzerland",
+      "name": "Swiss GP",
+      "winnerId": "nino-farina",
+      "winner": "Nino Farina"
+    },
+    {
+      "round": 5,
+      "grandPrixId": "belgium",
+      "name": "Belgian GP",
+      "winnerId": "juan-manuel-fangio",
+      "winner": "Juan Manuel Fangio"
+    },
+    {
+      "round": 6,
+      "grandPrixId": "france",
+      "name": "French GP",
+      "winnerId": "juan-manuel-fangio",
+      "winner": "Juan Manuel Fangio"
+    },
+    {
+      "round": 7,
+      "grandPrixId": "italy",
+      "name": "Italian GP",
+      "winnerId": "nino-farina",
+      "winner": "Nino Farina"
+    }
+  ],
   "notes": null,
   "updated": "2026-06-21"
 }
