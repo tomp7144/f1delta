@@ -1,5 +1,4 @@
 ---
-import SiteNav from "./SiteNav.astro";
 const { circuit } = Astro.props;
 const { stats, runningsList, layouts, grandsPrix } = circuit;
 const multiLayout = layouts.length > 1;
@@ -18,7 +17,6 @@ const activeSpan = circuit.runningsList[0]?.year === circuit.runningsList[circui
   : `${circuit.runningsList[0]?.year}–${circuit.runningsList[circuit.runningsList.length - 1]?.year}`;
 ---
 
-<SiteNav current="circuits" />
 <section class="page">
 
   <div class="hero">

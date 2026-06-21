@@ -1,10 +1,8 @@
 ---
 // PeopleHub.astro — generic hub for team principals and technical directors.
-import SiteNav from "./SiteNav.astro";
-const { people, title, lede, navCurrent } = Astro.props;
+const { people, title, lede } = Astro.props;
 ---
 
-<SiteNav current={navCurrent} />
 <section class="hub">
   <h1>{title}</h1>
   <p class="lede">{lede}</p>

@@ -1,0 +1,196 @@
+---
+interface Props {
+  title?: string;
+  description?: string;
+  canonical?: string;
+}
+
+const { title, description, canonical } = Astro.props;
+const pageTitle = title ?? "f1delta";
+
+const pathname = Astro.url.pathname;
+function navKey(p: string): string {
+  if (p.startsWith("/drivers")) return "drivers";
+  if (p.startsWith("/teams")) return "teams";
+  if (p.startsWith("/engineers") || p.startsWith("/principals") || p.startsWith("/technical-directors") || p.startsWith("/people")) return "people";
+  if (p.startsWith("/standings")) return "standings";
+  if (p.startsWith("/grands-prix")) return "gps";
+  if (p.startsWith("/circuits")) return "circuits";
+  if (p.startsWith("/records")) return "records";
+  return "";
+}
+const current = navKey(pathname);
+---
+
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>{pageTitle}</title>
+    {description && <meta name="description" content={description} />}
+    {canonical && <link rel="canonical" href={canonical} />}
+    <slot name="head" />
+    <script defer src="https://static.cloudflareinsights.com/beacon.min.js" data-cf-beacon='{"token":"231dcb0acef2461c8d76032d94a31207"}'></script>
+  </head>
+  <body style="margin:0;background:#f4f4f1">
+    <nav class="site-nav">
+      <div class="nav-inner">
+        <a class="wordmark" href="/">f1delta</a>
+        <button class="hamburger" id="nav-hamburger" aria-label="Toggle menu" aria-expanded="false" aria-controls="nav-links">&#9776;</button>
+        <div class="nav-links" id="nav-links">
+          <a href="/drivers" aria-current={current === "drivers" ? "page" : undefined}>Drivers</a>
+          <a href="/teams" aria-current={current === "teams" ? "page" : undefined}>Teams</a>
+          <div class:list={["nav-group", { "is-active": current === "people" }]}>
+            <button class="nav-group-btn" aria-haspopup="true" aria-expanded="false">People <span class="caret" aria-hidden="true">&#9660;</span></button>
+            <div class="nav-group-panel" role="menu">
+              <a href="/engineers" role="menuitem" aria-current={pathname.startsWith("/engineers") ? "page" : undefined}>Engineers</a>
+              <a href="/principals" role="menuitem" aria-current={pathname.startsWith("/principals") ? "page" : undefined}>Team Principals</a>
+              <a href="/technical-directors" role="menuitem" aria-current={pathname.startsWith("/technical-directors") ? "page" : undefined}>Technical Directors</a>
+            </div>
+          </div>
+          <a href="/standings" aria-current={current === "standings" ? "page" : undefined}>Seasons</a>
+          <a href="/grands-prix" aria-current={current === "gps" ? "page" : undefined}>GPs</a>
+          <a href="/circuits" aria-current={current === "circuits" ? "page" : undefined}>Circuits</a>
+          <a href="/records" aria-current={current === "records" ? "page" : undefined}>Records</a>
+        </div>
+      </div>
+    </nav>
+    <slot />
+  </body>
+</html>
+
+<style>
+  .site-nav {
+    background: #fff;
+    border-bottom: 1px solid #e4e4df;
+    font-family: system-ui, -apple-system, "Segoe UI", Roboto, sans-serif;
+  }
+  .nav-inner {
+    max-width: 760px; margin: 0 auto; padding: 0 20px;
+    display: flex; align-items: center; position: relative;
+  }
+  .wordmark {
+    font-size: 15px; font-weight: 700; color: #e10600; text-decoration: none;
+    padding: 12px 18px 12px 0; flex-shrink: 0;
+  }
+
+  .nav-links {
+    display: flex; align-items: center; gap: 0; flex: 1;
+  }
+  .nav-links > a {
+    font-size: 14px; color: #6b6b70; text-decoration: none;
+    padding: 12px 10px; white-space: nowrap;
+  }
+  .nav-links > a:hover { color: #16161a; }
+  .nav-links > a[aria-current="page"] { color: #16161a; font-weight: 600; }
+
+  /* People dropdown */
+  .nav-group { position: relative; }
+  .nav-group-btn {
+    font-family: inherit; font-size: 14px; color: #6b6b70;
+    background: none; border: none; cursor: pointer;
+    padding: 12px 10px; display: flex; align-items: center; gap: 4px;
+    white-space: nowrap;
+  }
+  .nav-group-btn:hover { color: #16161a; }
+  .nav-group.is-active .nav-group-btn { color: #16161a; font-weight: 600; }
+  .caret { font-size: 8px; }
+
+  .nav-group-panel {
+    display: none; position: absolute; top: 100%; left: 0;
+    background: #fff; border: 1px solid #e4e4df; border-radius: 6px;
+    box-shadow: 0 4px 12px rgba(0,0,0,.08);
+    min-width: 172px; z-index: 100; padding: 4px 0;
+  }
+  .nav-group-panel a {
+    display: block; font-size: 13px; color: #6b6b70; text-decoration: none;
+    padding: 8px 14px; white-space: nowrap;
+  }
+  .nav-group-panel a:hover { color: #16161a; background: #f4f4f1; }
+  .nav-group-panel a[aria-current="page"] { color: #16161a; font-weight: 600; }
+  /* show on hover (desktop) */
+  .nav-group:hover .nav-group-panel,
+  .nav-group:focus-within .nav-group-panel,
+  .nav-group.open .nav-group-panel { display: block; }
+
+  /* Hamburger — hidden on desktop */
+  .hamburger {
+    display: none; margin-left: auto; background: none; border: none;
+    font-size: 20px; color: #6b6b70; cursor: pointer; padding: 10px 0 10px 12px;
+    line-height: 1;
+  }
+  .hamburger:hover { color: #16161a; }
+
+  @media (max-width: 620px) {
+    .hamburger { display: block; }
+
+    .nav-links {
+      display: none; flex-direction: column; align-items: stretch; gap: 0;
+      position: absolute; top: 100%; left: 0; right: 0;
+      background: #fff; border-bottom: 1px solid #e4e4df;
+      z-index: 200; padding: 6px 0;
+    }
+    .nav-links.open { display: flex; }
+
+    .nav-links > a { padding: 10px 20px; font-size: 15px; }
+
+    /* People section — header label + always-visible sub-items */
+    .nav-group { width: 100%; }
+    .nav-group-btn {
+      width: 100%; padding: 10px 20px; font-size: 13px; font-weight: 600;
+      text-transform: uppercase; letter-spacing: .05em; color: #9a9a9e;
+      pointer-events: none; cursor: default;
+    }
+    .nav-group.is-active .nav-group-btn { color: #6b6b70; }
+    .caret { display: none; }
+
+    .nav-group-panel {
+      display: block; position: static;
+      box-shadow: none; border: none; border-radius: 0;
+      padding: 0; min-width: 0; background: transparent;
+    }
+    .nav-group-panel a {
+      padding: 9px 20px 9px 32px; font-size: 15px;
+    }
+    .nav-group-panel a:hover { background: #f4f4f1; }
+  }
+</style>
+
+<script is:inline>
+(function () {
+  var burger = document.getElementById("nav-hamburger");
+  var links = document.getElementById("nav-links");
+  if (burger && links) {
+    burger.addEventListener("click", function () {
+      var open = links.classList.toggle("open");
+      burger.setAttribute("aria-expanded", open ? "true" : "false");
+    });
+  }
+
+  // Desktop: People dropdown click-open (for touch/hybrid devices)
+  var gpBtn = document.querySelector(".nav-group-btn");
+  if (gpBtn) {
+    gpBtn.addEventListener("click", function () {
+      if (window.innerWidth > 620) {
+        var grp = gpBtn.closest(".nav-group");
+        if (grp) {
+          var wasOpen = grp.classList.contains("open");
+          grp.classList.toggle("open");
+          gpBtn.setAttribute("aria-expanded", wasOpen ? "false" : "true");
+        }
+      }
+    });
+  }
+
+  // Close dropdown when clicking outside
+  document.addEventListener("click", function (e) {
+    var grp = document.querySelector(".nav-group.open");
+    if (grp && !grp.contains(e.target)) {
+      grp.classList.remove("open");
+      var btn = grp.querySelector(".nav-group-btn");
+      if (btn) btn.setAttribute("aria-expanded", "false");
+    }
+  });
+})();
+</script>

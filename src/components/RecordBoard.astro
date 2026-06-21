@@ -2,7 +2,6 @@
 // RecordBoard.astro — renders one board as STATIC HTML (all rows in the markup,
 // crawlable). f1-records.js progressively adds column sorting; the table is fully
 // usable with JS disabled. Light reference-desk theme.
-import SiteNav from "./SiteNav.astro";
 const { board } = Astro.props;
 const { meta, columns, rows } = board;
 const entityLabel = columns[0];                 // "Driver" | "Constructor"
@@ -21,7 +20,6 @@ function flag(a2) {
 const fmt = (v) => (isRate ? v.toFixed(2) + "%" : typeof v === "number" ? v.toLocaleString("en-US") : v);
 ---
 
-<SiteNav current="records" />
 <section class="rec">
   <a class="back" href="/records">← All records</a>
   <h1>{meta.title}</h1>

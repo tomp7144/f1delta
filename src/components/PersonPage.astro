@@ -1,6 +1,5 @@
 ---
 // PersonPage.astro — one person's full career page (race engineer, team principal, technical director).
-import SiteNav from "./SiteNav.astro";
 const { person } = Astro.props;
 const { id, name, aka, status, roles, totals, roleTypes } = person;
 
@@ -39,7 +38,6 @@ const backLabel = roleTypes.includes("race-engineer")
   : "← All technical directors";
 ---
 
-<SiteNav current="engineers" />
 <section class="person">
   <a class="back" href={backHref}>{backLabel}</a>
 

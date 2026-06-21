@@ -1,5 +1,4 @@
 ---
-import SiteNav from "./SiteNav.astro";
 const { index } = Astro.props;
 const gps = index.grandsPrix;
 
@@ -10,7 +9,6 @@ function flag(a2: string | null | undefined) {
 }
 ---
 
-<SiteNav current="gps" />
 <section class="hub">
   <h1>F1 Grands Prix</h1>
   <p class="lede">Every Grand Prix in World Championship history, 1950–present.</p>

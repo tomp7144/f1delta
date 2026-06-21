@@ -1,6 +1,5 @@
 ---
 // TeamsHub.astro — the /teams index, fully static + sortable via /f1-records.js.
-import SiteNav from "./SiteNav.astro";
 const { index } = Astro.props;
 const teams = index.teams;
 
@@ -13,7 +12,6 @@ const fmt = (n) => (typeof n === "number" ? n.toLocaleString("en-US") : n);
 const active = (t) => (t.first == null ? "—" : t.first === t.last ? `${t.first}` : `${t.first}\u2013${t.last}`);
 ---
 
-<SiteNav current="teams" />
 <section class="hub">
   <h1>F1 Teams</h1>
   <p class="lede">Every constructor in World Championship history, 1950&ndash;present.</p>

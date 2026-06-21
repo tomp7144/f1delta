@@ -1,5 +1,4 @@
 ---
-import SiteNav from "./SiteNav.astro";
 const { gp } = Astro.props;
 const { stats, runningsList, circuits } = gp;
 
@@ -24,7 +23,6 @@ for (const r of runningsList) {
 }
 ---
 
-<SiteNav current="gps" />
 <section class="page">
 
   <div class="hero">

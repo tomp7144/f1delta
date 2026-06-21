@@ -1,7 +1,6 @@
 ---
 // RecordsHub.astro — the /records directory, fully static. Groups boards by
 // entity -> scope from index.json.
-import SiteNav from "./SiteNav.astro";
 const { index } = Astro.props;
 
 const SCOPE_ORDER = ["career", "season", "grand-prix", "circuit", "rate", "streak"];
@@ -19,7 +18,6 @@ for (const b of index.boards) {
 const entities = ["drivers", "constructors"].filter((e) => groups[e]);
 ---
 
-<SiteNav current="records" />
 <section class="hub">
   <h1>F1 Records</h1>
   <p class="lede">All-time leaderboards across every era, 1950&ndash;present.</p>

@@ -2,32 +2,27 @@
 export const prerender = true;
 import fs from "node:fs";
 import path from "node:path";
+import BaseLayout from "../../layouts/BaseLayout.astro";
 import CircuitPage from "../../components/CircuitPage.astro";
 
 export function getStaticPaths() {
   const DIR = path.resolve("./data/circuits");
   const index = JSON.parse(fs.readFileSync(path.join(DIR, "index.json"), "utf8"));
-  return index.circuits.map((c) => ({
+  return index.circuits.map((c: any) => ({
     params: { id: c.id },
     props: { circuit: JSON.parse(fs.readFileSync(path.join(DIR, `${c.id}.json`), "utf8")) },
   }));
 }
 
-const { circuit } = Astro.props;
+const { circuit } = Astro.props as { circuit: any };
 const desc = `${circuit.fullName}: ${circuit.totalRacesHeld} World Championship races, track profile, layout history and all-time records.`;
 ---
 
-<!doctype html>
-<html lang="en">
-  <head>
-    <meta charset="utf-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1" />
-    <title>{circuit.fullName} — F1 Race History & Records | f1delta</title>
-    <meta name="description" content={desc} />
-    <link rel="canonical" href={`https://f1delta.com/circuits/${circuit.id}`} />
-  </head>
-  <body style="margin:0;background:#f4f4f1">
-    <CircuitPage circuit={circuit} />
-    <script src="/f1-records.js" defer></script>
-  </body>
-</html>
+<BaseLayout
+  title={`${circuit.fullName} — F1 Race History & Records | f1delta`}
+  description={desc}
+  canonical={`https://f1delta.com/circuits/${circuit.id}`}
+>
+  <CircuitPage circuit={circuit} />
+  <script src="/f1-records.js" defer is:inline></script>
+</BaseLayout>

@@ -1,6 +1,5 @@
 ---
 // EngineerPage.astro — one engineer's career timeline. Fully static, sortable table.
-import SiteNav from "./SiteNav.astro";
 const { eng } = Astro.props;
 const { id, name, aka, status, pairings, totals } = eng;
 
@@ -19,7 +18,6 @@ const statusLabel: Record<string, string> = { active: "Active", retired: "Retire
 const statusClass: Record<string, string> = { active: "st-active", retired: "st-retired", unknown: "st-unknown" };
 ---
 
-<SiteNav current="engineers" />
 <section class="eng">
   <a class="back" href="/engineers">← All engineers</a>
 

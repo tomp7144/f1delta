@@ -2,22 +2,17 @@
 export const prerender = true;
 import fs from "node:fs";
 import path from "node:path";
+import BaseLayout from "../../layouts/BaseLayout.astro";
 import GrandsPrixHub from "../../components/GrandsPrixHub.astro";
 
 const index = JSON.parse(fs.readFileSync(path.resolve("./data/grands-prix/index.json"), "utf8"));
 ---
 
-<!doctype html>
-<html lang="en">
-  <head>
-    <meta charset="utf-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1" />
-    <title>F1 Grands Prix — Every Race in Championship History | f1delta</title>
-    <meta name="description" content="Every Grand Prix in Formula 1 World Championship history — all-time winners, records, and runnings from 1950 to today." />
-    <link rel="canonical" href="https://f1delta.com/grands-prix" />
-  </head>
-  <body style="margin:0;background:#f4f4f1">
-    <GrandsPrixHub index={index} />
-    <script src="/f1-records.js" defer></script>
-  </body>
-</html>
+<BaseLayout
+  title="F1 Grands Prix — Every Race in Championship History | f1delta"
+  description="Every Grand Prix in Formula 1 World Championship history — all-time winners, records, and runnings from 1950 to today."
+  canonical="https://f1delta.com/grands-prix"
+>
+  <GrandsPrixHub index={index} />
+  <script src="/f1-records.js" defer is:inline></script>
+</BaseLayout>

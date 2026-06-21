@@ -1,8 +1,8 @@
 ---
-// src/pages/people/[id].astro — canonical person page (race engineers, team principals, technical directors).
 export const prerender = true;
 import fs from "node:fs";
 import path from "node:path";
+import BaseLayout from "../../layouts/BaseLayout.astro";
 import PersonPage from "../../components/PersonPage.astro";
 
 export function getStaticPaths() {
@@ -14,7 +14,7 @@ export function getStaticPaths() {
   }));
 }
 
-const { person } = Astro.props;
+const { person } = Astro.props as { person: any };
 const displayName = person.aka ? `${person.name} ("${person.aka}")` : person.name;
 const isEngineer  = person.roleTypes.includes("race-engineer");
 const isTP        = person.roleTypes.includes("team-principal");
@@ -23,17 +23,11 @@ const title = `${person.name} — F1 ${titleRole} | f1delta`;
 const desc = `${displayName}: full F1 career history across all roles.`;
 ---
 
-<!doctype html>
-<html lang="en">
-  <head>
-    <meta charset="utf-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1" />
-    <title>{title}</title>
-    <meta name="description" content={desc} />
-    <link rel="canonical" href={`https://f1delta.com/people/${person.id}`} />
-  </head>
-  <body style="margin:0;background:#f4f4f1">
-    <PersonPage person={person} />
-    <script src="/f1-records.js" defer></script>
-  </body>
-</html>
+<BaseLayout
+  title={title}
+  description={desc}
+  canonical={`https://f1delta.com/people/${person.id}`}
+>
+  <PersonPage person={person} />
+  <script src="/f1-records.js" defer is:inline></script>
+</BaseLayout>
