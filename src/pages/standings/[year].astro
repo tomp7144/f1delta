@@ -18,7 +18,7 @@ export function getStaticPaths() {
 }
 
 const { season, allYears } = Astro.props as { season: any; allYears: number[] };
-const { year, wccExists, wdcChampion, wccChampion, wdc, wcc, notes } = season;
+const { year, wccExists, wdcChampion, wccChampion, wdc, wcc, races, notes } = season;
 
 const prevYear = allYears.includes(year - 1) ? year - 1 : null;
 const nextYear = allYears.includes(year + 1) ? year + 1 : null;
@@ -134,6 +134,32 @@ const fmt = (n: number | null | undefined) => {
         <p class="no-wcc">The Constructors&rsquo; Championship was not awarded until 1958.</p>
       )}
 
+      {races && races.length > 0 && (
+        <section>
+          <h2 class="sec-h">Races</h2>
+          <div class="card">
+            <table>
+              <thead>
+                <tr>
+                  <th class="pos">Rd</th>
+                  <th class="l">Grand Prix</th>
+                  <th class="l">Winner</th>
+                </tr>
+              </thead>
+              <tbody>
+                {races.map((r: any) => (
+                  <tr>
+                    <td class="pos">{r.round}</td>
+                    <td class="gp"><a href={`/grands-prix/${r.grandPrixId}`}>{r.name}</a></td>
+                    <td class="drv"><a href={`/driver?d=${encodeURIComponent(r.winnerId)}`}>{r.winner}</a></td>
+                  </tr>
+                ))}
+              </tbody>
+            </table>
+          </div>
+        </section>
+      )}
+
     </div>
 
     <style>
@@ -235,6 +261,10 @@ const fmt = (n: number | null | undefined) => {
       td.team { text-align: left; }
       td.team a { color: #6b6b70; text-decoration: none; font-size: 13px; }
       td.team a:hover { color: #16161a; }
+
+      td.gp { text-align: left; }
+      td.gp a { color: #16161a; text-decoration: none; font-weight: 500; }
+      td.gp a:hover { text-decoration: underline; }
 
       td.pts {
         text-align: right; color: #6b6b70;
