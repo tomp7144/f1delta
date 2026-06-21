@@ -76,6 +76,8 @@ function Styles() {
       .dp tbody tr:last-child td{border-bottom:0}
       .dp tbody tr:hover td{background:#faf9f6}
       .dp td.yr{text-align:left;color:var(--ink);font-weight:500}
+      .dp td.yr a{color:inherit;text-decoration:none}
+      .dp td.yr a:hover{color:var(--red)}
       .dp td.tm{text-align:left;font-family:var(--body);font-size:13px;color:var(--ink);max-width:0;overflow:hidden;text-overflow:ellipsis}
       .dp td.tm a:hover{color:var(--red)}
       .dp td.tm .dot{display:inline-block;width:8px;height:8px;border-radius:2px;margin-right:7px;vertical-align:middle}
@@ -195,7 +197,7 @@ function CareerTable({ d }) {
             const others = s.teams.filter((t) => t.constructorId !== s.primaryTeamId);
             return (
               <tr key={s.season} className={champ ? "champ" : ""}>
-                <td className="yr">{s.season}</td>
+                <td className="yr"><a href={`/standings/${s.season}`}>{s.season}</a></td>
                 <td className="tm"><span className="dot" style={{ background: ac(s.primaryTeamId) }} /><a href={"/teams/" + s.primaryTeamId}>{s.primaryTeam}</a>{others.length ? <span className="alt"> +{others.map((t, i) => <span key={t.constructorId}>{i > 0 ? ", " : ""}<a href={"/teams/" + t.constructorId}>{t.constructor}</a></span>)}</span> : null}</td>
                 <td className="n">{s.races}</td>
                 <td className={"n" + (s.wins ? " hot" : "")}>{s.wins}</td>
