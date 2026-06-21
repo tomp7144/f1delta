@@ -219,6 +219,18 @@ function LinkCards() {
         <span><span className="lt">Teams</span><span className="ls">Constructor history &amp; records</span></span>
         <span className="arr">→</span>
       </a>
+      <a className="lk" href="/engineers">
+        <span><span className="lt">Race Engineers</span><span className="ls">Pitwall pairings, 1950–now</span></span>
+        <span className="arr">→</span>
+      </a>
+      <a className="lk" href="/technical-directors">
+        <span><span className="lt">Technical Directors</span><span className="ls">The tech minds behind the cars</span></span>
+        <span className="arr">→</span>
+      </a>
+      <a className="lk" href="/principals">
+        <span><span className="lt">Team Principals</span><span className="ls">Team leadership history</span></span>
+        <span className="arr">→</span>
+      </a>
       <a className="lk soon" href="#">
         <span><span className="lt">History &amp; eras</span><span className="ls">Champions, dynasties, rule resets</span></span>
         <span className="tag">Soon</span>
