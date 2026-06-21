@@ -35,8 +35,7 @@ function IndexStyles() {
 
       .ix-count{font-size:12px;color:#6b6b70;margin:6px 0;font-variant-numeric:tabular-nums}
 
-      .ix-list{display:grid;grid-template-columns:repeat(2,1fr);gap:1px;background:#e4e4df;border:1px solid #e4e4df;border-radius:8px;overflow:hidden}
-      @media(max-width:600px){.ix-list{grid-template-columns:1fr}}
+      .ix-list{display:grid;grid-template-columns:1fr;gap:1px;background:#e4e4df;border:1px solid #e4e4df;border-radius:8px;overflow:hidden}
       .ix-row{display:flex;align-items:center;gap:12px;padding:11px 14px;background:#fff;text-decoration:none;color:#16161a}
       .ix-row:hover{background:#faf9f6}
       .ix-row .code{font-weight:700;font-size:13px;color:#e10600;flex:0 0 40px;letter-spacing:.02em}
