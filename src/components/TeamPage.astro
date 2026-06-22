@@ -60,7 +60,7 @@ const STATS = [
           <tr class={s.pos === 1 ? "champ" : undefined}
               data-year={s.year} data-pos={s.pos ?? 9999} data-wins={s.wins}
               data-podiums={s.podiums} data-poles={s.poles} data-points={s.points}>
-            <td>{s.year}</td>
+            <td class="yr-lnk"><a href={`/standings/${s.year}`}>{s.year}</a></td>
             <td class="num">{s.pos == null ? "—" : s.pos}</td>
             <td class="num">{s.wins}</td>
             <td class="num">{s.podiums}</td>
@@ -166,6 +166,11 @@ const STATS = [
   .yrs { color: #6b6b70; font-variant-numeric: tabular-nums; }
   .ent { color: #16161a; text-decoration: none; font-weight: 500; }
   .ent:hover { text-decoration: underline; }
+  td.yr-lnk { font-variant-numeric: tabular-nums; }
+  td.yr-lnk a { color: #16161a; text-decoration: none; font-variant-numeric: tabular-nums; }
+  td.yr-lnk a:hover { color: #e10600; }
+  tr.champ td.yr-lnk a { color: #b8962e; }
+  tr.champ td.yr-lnk a:hover { color: #e10600; }
   .nat { color: #6b6b70; font-size: 12px; margin-left: 8px; white-space: nowrap; }
   tr.champ { background: #fbf3d0; }
   tr.cur-eng td { background: #fbf3d0; }

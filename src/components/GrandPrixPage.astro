@@ -115,7 +115,7 @@ for (const r of runningsList) {
             class:list={[{ "champ-row": r.champDecider }]}
           >
             <td class="yr">
-              {r.year}
+              <a href={`/standings/${r.year}`}>{r.year}</a>
               {r.grandSlam && <span class="badge gs" title="Grand Slam">GS</span>}
               {r.wdcDecider && <span class="badge wdc" title="WDC title decided here">WDC</span>}
               {r.wccDecider && <span class="badge wcc" title="WCC title decided here">WCC</span>}
@@ -198,6 +198,8 @@ for (const r of runningsList) {
 
   .num    { text-align: right; font-variant-numeric: tabular-nums; font-feature-settings: "tnum"; }
   .yr     { font-weight: 600; white-space: nowrap; }
+  .yr a   { color: inherit; text-decoration: none; }
+  .yr a:hover { color: #e10600; }
   .circ   { color: #6b6b70; font-size: 12px; }
   .margin { color: #6b6b70; }
   .muted  { color: #6b6b70; }
