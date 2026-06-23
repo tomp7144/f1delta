@@ -119,6 +119,15 @@ function Styles() {
       .dp .state{padding:clamp(70px,16vh,170px) 0;text-align:center;font-family:var(--mono);font-size:12px;letter-spacing:.16em;text-transform:uppercase;color:var(--faint)}
       .dp .foot{font-family:var(--mono);font-size:10px;color:var(--faint);text-align:center;padding:24px 0 32px}
       .dp .foot b{color:var(--dim)}
+      .dp .ham{display:none;background:none;border:none;font-size:20px;color:var(--dim);cursor:pointer;padding:10px 0 10px 12px;line-height:1;margin-left:auto;flex-shrink:0}
+      .dp .ham:hover{color:var(--ink)}
+      @media(max-width:620px){
+        .dp .top .wrap{height:auto;padding:0 12px;flex-wrap:wrap}
+        .dp .ham{display:block}
+        .dp .topnav{display:none;flex-direction:column;align-items:stretch;width:100%;order:3;padding:4px 0;border-top:1px solid var(--line);gap:0}
+        .dp .topnav.open{display:flex}
+        .dp .topnav a{padding:10px 4px;font-size:13px}
+      }
       @media (min-width:560px){.dp .id .code,.dp .id h1{font-size:42px}.dp tbody td{font-size:13px;padding:10px 11px}.dp thead th{padding:10px 11px}}
       .dp .eng-card{padding:12px 14px}
       .dp .eng-cur{border-left:3px solid var(--red);padding-left:10px;margin-bottom:2px}
@@ -136,10 +145,12 @@ function Styles() {
 }
 
 function TopBar() {
+  const [open, setOpen] = useState(false);
   return (
     <div className="top"><div className="wrap">
       <a className="brand" href="/">F1<svg className="d" width="11" height="10" viewBox="0 0 100 86"><path d="M50 4 L97 82 L3 82 Z" fill="currentColor"/></svg>DELTA</a>
-      <nav className="topnav"><a href="/drivers" className="on">Drivers</a><a href="/#standings">Standings</a><a href="/records">Records</a><a href="/teams">Teams</a><a href="/engineers">Engineers</a><a href="/pro">Pro</a></nav>
+      <button className="ham" aria-label="Toggle menu" aria-expanded={open ? "true" : "false"} onClick={() => setOpen(o => !o)}>&#9776;</button>
+      <nav className={"topnav" + (open ? " open" : "")}><a href="/drivers" className="on">Drivers</a><a href="/#standings">Standings</a><a href="/records">Records</a><a href="/teams">Teams</a><a href="/engineers">Engineers</a><a href="/pro">Pro</a></nav>
     </div></div>
   );
 }
