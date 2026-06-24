@@ -1,0 +1,65 @@
+{
+  "driverId": "jody-scheckter",
+  "name": "Jody Scheckter",
+  "career": {
+    "score": 1108,
+    "races": 113,
+    "partial": 0
+  },
+  "seasons": [
+    {
+      "year": 1972,
+      "score": 3,
+      "races": 1,
+      "partial": 0
+    },
+    {
+      "year": 1973,
+      "score": -60,
+      "races": 5,
+      "partial": 0
+    },
+    {
+      "year": 1974,
+      "score": 202,
+      "races": 15,
+      "partial": 0
+    },
+    {
+      "year": 1975,
+      "score": 76,
+      "races": 14,
+      "partial": 0
+    },
+    {
+      "year": 1976,
+      "score": 236,
+      "races": 16,
+      "partial": 0
+    },
+    {
+      "year": 1977,
+      "score": 199,
+      "races": 17,
+      "partial": 0
+    },
+    {
+      "year": 1978,
+      "score": 57,
+      "races": 16,
+      "partial": 0
+    },
+    {
+      "year": 1979,
+      "score": 295,
+      "races": 15,
+      "partial": 0
+    },
+    {
+      "year": 1980,
+      "score": 100,
+      "races": 14,
+      "partial": 0
+    }
+  ]
+}

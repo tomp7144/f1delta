@@ -1,0 +1,47 @@
+{
+  "driverId": "giorgio-scarlatti",
+  "name": "Giorgio Scarlatti",
+  "career": {
+    "score": -56,
+    "races": 15,
+    "partial": 0
+  },
+  "seasons": [
+    {
+      "year": 1956,
+      "score": -20,
+      "races": 2,
+      "partial": 0
+    },
+    {
+      "year": 1957,
+      "score": 28,
+      "races": 4,
+      "partial": 0
+    },
+    {
+      "year": 1958,
+      "score": -40,
+      "races": 2,
+      "partial": 0
+    },
+    {
+      "year": 1959,
+      "score": 30,
+      "races": 3,
+      "partial": 0
+    },
+    {
+      "year": 1960,
+      "score": -34,
+      "races": 3,
+      "partial": 0
+    },
+    {
+      "year": 1961,
+      "score": -20,
+      "races": 1,
+      "partial": 0
+    }
+  ]
+}

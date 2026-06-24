@@ -1,0 +1,17 @@
+{
+  "driverId": "chris-craft",
+  "name": "Chris Craft",
+  "career": {
+    "score": -20,
+    "races": 2,
+    "partial": 0
+  },
+  "seasons": [
+    {
+      "year": 1971,
+      "score": -20,
+      "races": 2,
+      "partial": 0
+    }
+  ]
+}

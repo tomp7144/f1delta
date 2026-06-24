@@ -10,6 +10,7 @@
  */
 import { mkdir, readFile, writeFile } from "node:fs/promises";
 import path from "node:path";
+import { ppm } from "./fantasy-scoring.mjs";
 
 const BASE        = "https://fantasy.formula1.com";
 const PLAYERS_OUT = path.resolve("./data/fantasy/players.json");
@@ -25,13 +26,52 @@ async function getJSON(url) {
   return res.json();
 }
 
-// Phase 2: swap out the numerator here to change the value metric.
-export function ppm(price, points) {
-  if (!price) return null;
-  return Math.round((points / price) * 10) / 10;
+// F1DB driver name → id lookup with manual overrides for known name mismatches.
+// Fantasy API uses "Carlos Sainz"; F1DB id is "carlos-sainz-jr".
+const DRIVER_OVERRIDES = {
+  "carlos sainz":    "carlos-sainz-jr",   // F1DB id has -jr suffix
+  "sergio perez":    "sergio-perez",       // F1DB name is "Sergio Pérez"
+  "nico hulkenberg": "nico-hulkenberg",    // F1DB name is "Nico Hülkenberg"
+};
+// Fantasy constructor name → F1DB constructor id
+const CTOR_ID = {
+  "mercedes":       "mercedes",
+  "ferrari":        "ferrari",
+  "mclaren":        "mclaren",
+  "red bull racing": "red-bull",
+  "alpine":         "alpine",
+  "racing bulls":   "racing-bulls",
+  "haas f1 team":   "haas",
+  "williams":       "williams",
+  "audi":           "audi",
+  "cadillac":       "cadillac",
+  "aston martin":   "aston-martin",
+};
+
+async function buildDriverLookup() {
+  try {
+    const raw = JSON.parse(await readFile(path.resolve("./data/f1db/f1db-drivers.json"), "utf8"));
+    // Map normalized name → F1DB id
+    const map = new Map();
+    for (const d of raw) {
+      const key = d.name.toLowerCase().replace(/[^a-z0-9]+/g, " ").trim();
+      map.set(key, d.id);
+    }
+    return map;
+  } catch {
+    return new Map();
+  }
+}
+
+function resolveDriverId(fantasyName, driverLookup) {
+  const norm = fantasyName.toLowerCase().replace(/[^a-z0-9]+/g, " ").trim();
+  if (DRIVER_OVERRIDES[norm]) return DRIVER_OVERRIDES[norm];
+  return driverLookup.get(norm) ?? null;
 }
 
 async function main() {
+  const driverLookup = await buildDriverLookup();
+
   // 1. Resolve current tourId from config (falls back to 4 if unavailable).
   const cfg    = await getJSON(`${BASE}/feeds/v2/apps/web_config.json`);
   const tourId = cfg?.Data?.config?.tourId ?? 4;
@@ -44,25 +84,23 @@ async function main() {
     throw new Error("Unexpected response shape — missing participant arrays");
   }
 
-  // 3. Normalize to a uniform schema.
+  // 3. Normalize to a uniform schema (with pageId for driver/team links).
+  const unmatched = [];
   const assets = [
-    ...drvBucket.map(p => ({
-      id:     p.playerid,
-      name:   p.playername ?? p.teamname,
-      type:   "driver",
-      team:   p.teamname,
-      price:  p.curvalue,
-      points: p.statvalue,
-    })),
-    ...ctorBucket.map(p => ({
-      id:     p.playerid,
-      name:   p.teamname,
-      type:   "constructor",
-      team:   p.teamname,
-      price:  p.curvalue,
-      points: p.statvalue,
-    })),
+    ...drvBucket.map(p => {
+      const name   = p.playername ?? p.teamname;
+      const pageId = resolveDriverId(name, driverLookup);
+      if (!pageId) unmatched.push(`driver: ${name}`);
+      return { id: p.playerid, name, type: "driver", team: p.teamname, price: p.curvalue, points: p.statvalue, pageId };
+    }),
+    ...ctorBucket.map(p => {
+      const name   = p.teamname;
+      const pageId = CTOR_ID[name.toLowerCase()] ?? null;
+      if (!pageId) unmatched.push(`constructor: ${name}`);
+      return { id: p.playerid, name, type: "constructor", team: p.teamname, price: p.curvalue, points: p.statvalue, pageId };
+    }),
   ];
+  if (unmatched.length) console.warn("bake-fantasy: unmatched pageId for:", unmatched.join(", "));
 
   // 4. Load existing price history.
   let history = [];

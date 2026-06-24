@@ -1,0 +1,17 @@
+{
+  "driverId": "marco-apicella",
+  "name": "Marco Apicella",
+  "career": {
+    "score": -20,
+    "races": 1,
+    "partial": 0
+  },
+  "seasons": [
+    {
+      "year": 1993,
+      "score": -20,
+      "races": 1,
+      "partial": 0
+    }
+  ]
+}

@@ -1,0 +1,23 @@
+{
+  "driverId": "pierre-henri-raphanel",
+  "name": "Pierre-Henri Raphanel",
+  "career": {
+    "score": -20,
+    "races": 17,
+    "partial": 9
+  },
+  "seasons": [
+    {
+      "year": 1988,
+      "score": 0,
+      "races": 1,
+      "partial": 0
+    },
+    {
+      "year": 1989,
+      "score": -20,
+      "races": 16,
+      "partial": 9
+    }
+  ]
+}

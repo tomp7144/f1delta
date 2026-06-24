@@ -1,0 +1,297 @@
+{
+  "year": 2008,
+  "drivers": {
+    "lewis-hamilton": {
+      "score": 364,
+      "races": 18,
+      "partial": 0
+    },
+    "nick-heidfeld": {
+      "score": 311,
+      "races": 18,
+      "partial": 0
+    },
+    "nico-rosberg": {
+      "score": 91,
+      "races": 18,
+      "partial": 0
+    },
+    "fernando-alonso": {
+      "score": 225,
+      "races": 18,
+      "partial": 0
+    },
+    "heikki-kovalainen": {
+      "score": 164,
+      "races": 18,
+      "partial": 0
+    },
+    "kazuki-nakajima": {
+      "score": 95,
+      "races": 18,
+      "partial": 0
+    },
+    "sebastien-bourdais": {
+      "score": -13,
+      "races": 18,
+      "partial": 0
+    },
+    "kimi-raikkonen": {
+      "score": 276,
+      "races": 18,
+      "partial": 0
+    },
+    "robert-kubica": {
+      "score": 273,
+      "races": 18,
+      "partial": 0
+    },
+    "timo-glock": {
+      "score": 107,
+      "races": 18,
+      "partial": 0
+    },
+    "takuma-sato": {
+      "score": 14,
+      "races": 4,
+      "partial": 0
+    },
+    "nelson-piquet-jr": {
+      "score": -3,
+      "races": 18,
+      "partial": 0
+    },
+    "felipe-massa": {
+      "score": 302,
+      "races": 18,
+      "partial": 0
+    },
+    "david-coulthard": {
+      "score": 19,
+      "races": 18,
+      "partial": 0
+    },
+    "jarno-trulli": {
+      "score": 88,
+      "races": 18,
+      "partial": 0
+    },
+    "adrian-sutil": {
+      "score": -186,
+      "races": 18,
+      "partial": 0
+    },
+    "sebastian-vettel": {
+      "score": 61,
+      "races": 18,
+      "partial": 1
+    },
+    "jenson-button": {
+      "score": 11,
+      "races": 18,
+      "partial": 0
+    },
+    "mark-webber": {
+      "score": 81,
+      "races": 18,
+      "partial": 0
+    },
+    "giancarlo-fisichella": {
+      "score": -61,
+      "races": 18,
+      "partial": 0
+    },
+    "anthony-davidson": {
+      "score": -18,
+      "races": 4,
+      "partial": 0
+    },
+    "rubens-barrichello": {
+      "score": 20,
+      "races": 18,
+      "partial": 0
+    }
+  },
+  "races": [
+    {
+      "round": 1,
+      "raceId": 786,
+      "gpId": "australia",
+      "name": "Australian GP",
+      "topId": "lewis-hamilton",
+      "topName": "Lewis Hamilton",
+      "topScore": 35,
+      "partial": false
+    },
+    {
+      "round": 2,
+      "raceId": 787,
+      "gpId": "malaysia",
+      "name": "Malaysian GP",
+      "topId": "kimi-raikkonen",
+      "topName": "Kimi Räikkönen",
+      "topScore": 36,
+      "partial": false
+    },
+    {
+      "round": 3,
+      "raceId": 788,
+      "gpId": "bahrain",
+      "name": "Bahrain GP",
+      "topId": "felipe-massa",
+      "topName": "Felipe Massa",
+      "topScore": 36,
+      "partial": false
+    },
+    {
+      "round": 4,
+      "raceId": 789,
+      "gpId": "spain",
+      "name": "Spanish GP",
+      "topId": "kimi-raikkonen",
+      "topName": "Kimi Räikkönen",
+      "topScore": 40,
+      "partial": false
+    },
+    {
+      "round": 5,
+      "raceId": 790,
+      "gpId": "turkey",
+      "name": "Turkish GP",
+      "topId": "felipe-massa",
+      "topName": "Felipe Massa",
+      "topScore": 35,
+      "partial": false
+    },
+    {
+      "round": 6,
+      "raceId": 791,
+      "gpId": "monaco",
+      "name": "Monaco GP",
+      "topId": "sebastian-vettel",
+      "topName": "Sebastian Vettel",
+      "topScore": 38,
+      "partial": false
+    },
+    {
+      "round": 7,
+      "raceId": 792,
+      "gpId": "canada",
+      "name": "Canadian GP",
+      "topId": "david-coulthard",
+      "topName": "David Coulthard",
+      "topScore": 38,
+      "partial": true
+    },
+    {
+      "round": 8,
+      "raceId": 793,
+      "gpId": "france",
+      "name": "French GP",
+      "topId": "felipe-massa",
+      "topName": "Felipe Massa",
+      "topScore": 36,
+      "partial": false
+    },
+    {
+      "round": 9,
+      "raceId": 794,
+      "gpId": "great-britain",
+      "name": "British GP",
+      "topId": "rubens-barrichello",
+      "topName": "Rubens Barrichello",
+      "topScore": 41,
+      "partial": false
+    },
+    {
+      "round": 10,
+      "raceId": 795,
+      "gpId": "germany",
+      "name": "German GP",
+      "topId": "nelson-piquet-jr",
+      "topName": "Nelson Piquet Jr.",
+      "topScore": 48,
+      "partial": false
+    },
+    {
+      "round": 11,
+      "raceId": 796,
+      "gpId": "hungary",
+      "name": "Hungarian GP",
+      "topId": "heikki-kovalainen",
+      "topName": "Heikki Kovalainen",
+      "topScore": 36,
+      "partial": false
+    },
+    {
+      "round": 12,
+      "raceId": 797,
+      "gpId": "europe",
+      "name": "European GP",
+      "topId": "felipe-massa",
+      "topName": "Felipe Massa",
+      "topScore": 40,
+      "partial": false
+    },
+    {
+      "round": 13,
+      "raceId": 798,
+      "gpId": "belgium",
+      "name": "Belgian GP",
+      "topId": "felipe-massa",
+      "topName": "Felipe Massa",
+      "topScore": 36,
+      "partial": false
+    },
+    {
+      "round": 14,
+      "raceId": 799,
+      "gpId": "italy",
+      "name": "Italian GP",
+      "topId": "robert-kubica",
+      "topName": "Robert Kubica",
+      "topScore": 36,
+      "partial": false
+    },
+    {
+      "round": 15,
+      "raceId": 800,
+      "gpId": "singapore",
+      "name": "Singapore GP",
+      "topId": "fernando-alonso",
+      "topName": "Fernando Alonso",
+      "topScore": 54,
+      "partial": false
+    },
+    {
+      "round": 16,
+      "raceId": 801,
+      "gpId": "japan",
+      "name": "Japanese GP",
+      "topId": "fernando-alonso",
+      "topName": "Fernando Alonso",
+      "topScore": 38,
+      "partial": false
+    },
+    {
+      "round": 17,
+      "raceId": 802,
+      "gpId": "china",
+      "name": "Chinese GP",
+      "topId": "lewis-hamilton",
+      "topName": "Lewis Hamilton",
+      "topScore": 40,
+      "partial": false
+    },
+    {
+      "round": 18,
+      "raceId": 803,
+      "gpId": "brazil",
+      "name": "Brazilian GP",
+      "topId": "felipe-massa",
+      "topName": "Felipe Massa",
+      "topScore": 40,
+      "partial": false
+    }
+  ]
+}

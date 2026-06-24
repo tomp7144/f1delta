@@ -1,0 +1,23 @@
+{
+  "driverId": "charles-de-tornaco",
+  "name": "Charles de Tornaco",
+  "career": {
+    "score": -2,
+    "races": 4,
+    "partial": 0
+  },
+  "seasons": [
+    {
+      "year": 1952,
+      "score": -2,
+      "races": 3,
+      "partial": 0
+    },
+    {
+      "year": 1953,
+      "score": 0,
+      "races": 1,
+      "partial": 0
+    }
+  ]
+}

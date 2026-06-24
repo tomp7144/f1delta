@@ -1,0 +1,23 @@
+{
+  "driverId": "charles-pic",
+  "name": "Charles Pic",
+  "career": {
+    "score": 10,
+    "races": 39,
+    "partial": 2
+  },
+  "seasons": [
+    {
+      "year": 2012,
+      "score": 10,
+      "races": 20,
+      "partial": 1
+    },
+    {
+      "year": 2013,
+      "score": 0,
+      "races": 19,
+      "partial": 1
+    }
+  ]
+}

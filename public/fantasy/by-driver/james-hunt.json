@@ -1,0 +1,53 @@
+{
+  "driverId": "james-hunt",
+  "name": "James Hunt",
+  "career": {
+    "score": 335,
+    "races": 93,
+    "partial": 0
+  },
+  "seasons": [
+    {
+      "year": 1973,
+      "score": 139,
+      "races": 8,
+      "partial": 0
+    },
+    {
+      "year": 1974,
+      "score": -35,
+      "races": 15,
+      "partial": 0
+    },
+    {
+      "year": 1975,
+      "score": 109,
+      "races": 14,
+      "partial": 0
+    },
+    {
+      "year": 1976,
+      "score": 214,
+      "races": 16,
+      "partial": 0
+    },
+    {
+      "year": 1977,
+      "score": 94,
+      "races": 17,
+      "partial": 0
+    },
+    {
+      "year": 1978,
+      "score": -87,
+      "races": 16,
+      "partial": 0
+    },
+    {
+      "year": 1979,
+      "score": -99,
+      "races": 7,
+      "partial": 0
+    }
+  ]
+}

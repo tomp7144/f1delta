@@ -1,0 +1,29 @@
+{
+  "driverId": "alan-stacey",
+  "name": "Alan Stacey",
+  "career": {
+    "score": -105,
+    "races": 7,
+    "partial": 0
+  },
+  "seasons": [
+    {
+      "year": 1958,
+      "score": -20,
+      "races": 1,
+      "partial": 0
+    },
+    {
+      "year": 1959,
+      "score": -8,
+      "races": 2,
+      "partial": 0
+    },
+    {
+      "year": 1960,
+      "score": -77,
+      "races": 4,
+      "partial": 0
+    }
+  ]
+}

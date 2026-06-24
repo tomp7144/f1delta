@@ -1,0 +1,53 @@
+{
+  "driverId": "mike-hailwood",
+  "name": "Mike Hailwood",
+  "career": {
+    "score": 2,
+    "races": 50,
+    "partial": 0
+  },
+  "seasons": [
+    {
+      "year": 1963,
+      "score": 37,
+      "races": 2,
+      "partial": 0
+    },
+    {
+      "year": 1964,
+      "score": 8,
+      "races": 9,
+      "partial": 0
+    },
+    {
+      "year": 1965,
+      "score": -20,
+      "races": 1,
+      "partial": 0
+    },
+    {
+      "year": 1971,
+      "score": 36,
+      "races": 2,
+      "partial": 0
+    },
+    {
+      "year": 1972,
+      "score": 7,
+      "races": 10,
+      "partial": 0
+    },
+    {
+      "year": 1973,
+      "score": -140,
+      "races": 15,
+      "partial": 0
+    },
+    {
+      "year": 1974,
+      "score": 74,
+      "races": 11,
+      "partial": 0
+    }
+  ]
+}

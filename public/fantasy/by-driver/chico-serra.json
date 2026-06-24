@@ -1,0 +1,29 @@
+{
+  "driverId": "chico-serra",
+  "name": "Chico Serra",
+  "career": {
+    "score": 166,
+    "races": 33,
+    "partial": 1
+  },
+  "seasons": [
+    {
+      "year": 1981,
+      "score": -12,
+      "races": 14,
+      "partial": 0
+    },
+    {
+      "year": 1982,
+      "score": 118,
+      "races": 15,
+      "partial": 1
+    },
+    {
+      "year": 1983,
+      "score": 60,
+      "races": 4,
+      "partial": 0
+    }
+  ]
+}

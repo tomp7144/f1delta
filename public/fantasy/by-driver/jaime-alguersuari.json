@@ -1,0 +1,29 @@
+{
+  "driverId": "jaime-alguersuari",
+  "name": "Jaime Alguersuari",
+  "career": {
+    "score": 86,
+    "races": 46,
+    "partial": 0
+  },
+  "seasons": [
+    {
+      "year": 2009,
+      "score": -84,
+      "races": 8,
+      "partial": 0
+    },
+    {
+      "year": 2010,
+      "score": 93,
+      "races": 19,
+      "partial": 0
+    },
+    {
+      "year": 2011,
+      "score": 77,
+      "races": 19,
+      "partial": 0
+    }
+  ]
+}

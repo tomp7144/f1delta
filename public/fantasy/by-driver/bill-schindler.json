@@ -1,0 +1,29 @@
+{
+  "driverId": "bill-schindler",
+  "name": "Bill Schindler",
+  "career": {
+    "score": 0,
+    "races": 3,
+    "partial": 0
+  },
+  "seasons": [
+    {
+      "year": 1950,
+      "score": -8,
+      "races": 1,
+      "partial": 0
+    },
+    {
+      "year": 1951,
+      "score": 6,
+      "races": 1,
+      "partial": 0
+    },
+    {
+      "year": 1952,
+      "score": 2,
+      "races": 1,
+      "partial": 0
+    }
+  ]
+}

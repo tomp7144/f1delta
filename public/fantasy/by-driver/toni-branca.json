@@ -1,0 +1,23 @@
+{
+  "driverId": "toni-branca",
+  "name": "Toni Branca",
+  "career": {
+    "score": -5,
+    "races": 3,
+    "partial": 0
+  },
+  "seasons": [
+    {
+      "year": 1950,
+      "score": 15,
+      "races": 2,
+      "partial": 0
+    },
+    {
+      "year": 1951,
+      "score": -20,
+      "races": 1,
+      "partial": 0
+    }
+  ]
+}

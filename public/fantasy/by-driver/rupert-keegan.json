@@ -1,0 +1,35 @@
+{
+  "driverId": "rupert-keegan",
+  "name": "Rupert Keegan",
+  "career": {
+    "score": -15,
+    "races": 37,
+    "partial": 0
+  },
+  "seasons": [
+    {
+      "year": 1977,
+      "score": 17,
+      "races": 12,
+      "partial": 0
+    },
+    {
+      "year": 1978,
+      "score": -76,
+      "races": 13,
+      "partial": 0
+    },
+    {
+      "year": 1980,
+      "score": 58,
+      "races": 7,
+      "partial": 0
+    },
+    {
+      "year": 1982,
+      "score": -14,
+      "races": 5,
+      "partial": 0
+    }
+  ]
+}

@@ -1,0 +1,65 @@
+{
+  "driverId": "jochen-mass",
+  "name": "Jochen Mass",
+  "career": {
+    "score": 560,
+    "races": 114,
+    "partial": 1
+  },
+  "seasons": [
+    {
+      "year": 1973,
+      "score": -18,
+      "races": 3,
+      "partial": 0
+    },
+    {
+      "year": 1974,
+      "score": -142,
+      "races": 13,
+      "partial": 0
+    },
+    {
+      "year": 1975,
+      "score": 139,
+      "races": 14,
+      "partial": 0
+    },
+    {
+      "year": 1976,
+      "score": 167,
+      "races": 16,
+      "partial": 0
+    },
+    {
+      "year": 1977,
+      "score": 62,
+      "races": 17,
+      "partial": 0
+    },
+    {
+      "year": 1978,
+      "score": 20,
+      "races": 13,
+      "partial": 0
+    },
+    {
+      "year": 1979,
+      "score": 107,
+      "races": 15,
+      "partial": 0
+    },
+    {
+      "year": 1980,
+      "score": 122,
+      "races": 13,
+      "partial": 1
+    },
+    {
+      "year": 1982,
+      "score": 103,
+      "races": 10,
+      "partial": 0
+    }
+  ]
+}

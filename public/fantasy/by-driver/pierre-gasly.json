@@ -1,0 +1,71 @@
+{
+  "driverId": "pierre-gasly",
+  "name": "Pierre Gasly",
+  "career": {
+    "score": 715,
+    "races": 184,
+    "partial": 3
+  },
+  "seasons": [
+    {
+      "year": 2017,
+      "score": 35,
+      "races": 5,
+      "partial": 0
+    },
+    {
+      "year": 2018,
+      "score": 34,
+      "races": 21,
+      "partial": 0
+    },
+    {
+      "year": 2019,
+      "score": 174,
+      "races": 21,
+      "partial": 1
+    },
+    {
+      "year": 2020,
+      "score": 116,
+      "races": 17,
+      "partial": 0
+    },
+    {
+      "year": 2021,
+      "score": 116,
+      "races": 22,
+      "partial": 1
+    },
+    {
+      "year": 2022,
+      "score": 46,
+      "races": 22,
+      "partial": 0
+    },
+    {
+      "year": 2023,
+      "score": 127,
+      "races": 22,
+      "partial": 0
+    },
+    {
+      "year": 2024,
+      "score": 69,
+      "races": 24,
+      "partial": 1
+    },
+    {
+      "year": 2025,
+      "score": -66,
+      "races": 24,
+      "partial": 0
+    },
+    {
+      "year": 2026,
+      "score": 64,
+      "races": 6,
+      "partial": 0
+    }
+  ]
+}

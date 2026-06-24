@@ -1,0 +1,41 @@
+{
+  "driverId": "olivier-gendebien",
+  "name": "Olivier Gendebien",
+  "career": {
+    "score": 132,
+    "races": 15,
+    "partial": 0
+  },
+  "seasons": [
+    {
+      "year": 1956,
+      "score": 1,
+      "races": 2,
+      "partial": 0
+    },
+    {
+      "year": 1958,
+      "score": -16,
+      "races": 3,
+      "partial": 0
+    },
+    {
+      "year": 1959,
+      "score": 39,
+      "races": 2,
+      "partial": 0
+    },
+    {
+      "year": 1960,
+      "score": 82,
+      "races": 5,
+      "partial": 0
+    },
+    {
+      "year": 1961,
+      "score": 26,
+      "races": 3,
+      "partial": 0
+    }
+  ]
+}

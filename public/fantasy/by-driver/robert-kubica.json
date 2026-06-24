@@ -1,0 +1,53 @@
+{
+  "driverId": "robert-kubica",
+  "name": "Robert Kubica",
+  "career": {
+    "score": 652,
+    "races": 99,
+    "partial": 2
+  },
+  "seasons": [
+    {
+      "year": 2006,
+      "score": 6,
+      "races": 6,
+      "partial": 0
+    },
+    {
+      "year": 2007,
+      "score": 118,
+      "races": 16,
+      "partial": 0
+    },
+    {
+      "year": 2008,
+      "score": 273,
+      "races": 18,
+      "partial": 0
+    },
+    {
+      "year": 2009,
+      "score": 32,
+      "races": 17,
+      "partial": 0
+    },
+    {
+      "year": 2010,
+      "score": 202,
+      "races": 19,
+      "partial": 0
+    },
+    {
+      "year": 2019,
+      "score": 13,
+      "races": 21,
+      "partial": 2
+    },
+    {
+      "year": 2021,
+      "score": 8,
+      "races": 2,
+      "partial": 0
+    }
+  ]
+}

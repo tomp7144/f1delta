@@ -1,0 +1,47 @@
+{
+  "driverId": "louis-chiron",
+  "name": "Louis Chiron",
+  "career": {
+    "score": 16,
+    "races": 19,
+    "partial": 3
+  },
+  "seasons": [
+    {
+      "year": 1950,
+      "score": -16,
+      "races": 5,
+      "partial": 0
+    },
+    {
+      "year": 1951,
+      "score": -53,
+      "races": 7,
+      "partial": 0
+    },
+    {
+      "year": 1953,
+      "score": 51,
+      "races": 4,
+      "partial": 1
+    },
+    {
+      "year": 1955,
+      "score": 34,
+      "races": 1,
+      "partial": 0
+    },
+    {
+      "year": 1956,
+      "score": 0,
+      "races": 1,
+      "partial": 1
+    },
+    {
+      "year": 1958,
+      "score": 0,
+      "races": 1,
+      "partial": 1
+    }
+  ]
+}

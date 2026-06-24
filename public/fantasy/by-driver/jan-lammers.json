@@ -1,0 +1,41 @@
+{
+  "driverId": "jan-lammers",
+  "name": "Jan Lammers",
+  "career": {
+    "score": 9,
+    "races": 41,
+    "partial": 0
+  },
+  "seasons": [
+    {
+      "year": 1979,
+      "score": 34,
+      "races": 15,
+      "partial": 0
+    },
+    {
+      "year": 1980,
+      "score": -13,
+      "races": 14,
+      "partial": 0
+    },
+    {
+      "year": 1981,
+      "score": 2,
+      "races": 4,
+      "partial": 0
+    },
+    {
+      "year": 1982,
+      "score": -20,
+      "races": 6,
+      "partial": 0
+    },
+    {
+      "year": 1992,
+      "score": 6,
+      "races": 2,
+      "partial": 0
+    }
+  ]
+}

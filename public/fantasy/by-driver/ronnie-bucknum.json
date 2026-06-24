@@ -1,0 +1,29 @@
+{
+  "driverId": "ronnie-bucknum",
+  "name": "Ronnie Bucknum",
+  "career": {
+    "score": -83,
+    "races": 11,
+    "partial": 0
+  },
+  "seasons": [
+    {
+      "year": 1964,
+      "score": -21,
+      "races": 3,
+      "partial": 0
+    },
+    {
+      "year": 1965,
+      "score": -56,
+      "races": 6,
+      "partial": 0
+    },
+    {
+      "year": 1966,
+      "score": -6,
+      "races": 2,
+      "partial": 0
+    }
+  ]
+}

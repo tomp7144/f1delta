@@ -1,0 +1,35 @@
+{
+  "driverId": "yves-giraud-cabantous",
+  "name": "Yves Giraud-Cabantous",
+  "career": {
+    "score": 16,
+    "races": 13,
+    "partial": 0
+  },
+  "seasons": [
+    {
+      "year": 1950,
+      "score": -9,
+      "races": 4,
+      "partial": 0
+    },
+    {
+      "year": 1951,
+      "score": -11,
+      "races": 6,
+      "partial": 0
+    },
+    {
+      "year": 1952,
+      "score": 2,
+      "races": 1,
+      "partial": 0
+    },
+    {
+      "year": 1953,
+      "score": 34,
+      "races": 2,
+      "partial": 0
+    }
+  ]
+}

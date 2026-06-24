@@ -1,0 +1,23 @@
+{
+  "driverId": "roger-penske",
+  "name": "Roger Penske",
+  "career": {
+    "score": 28,
+    "races": 2,
+    "partial": 0
+  },
+  "seasons": [
+    {
+      "year": 1961,
+      "score": 20,
+      "races": 1,
+      "partial": 0
+    },
+    {
+      "year": 1962,
+      "score": 8,
+      "races": 1,
+      "partial": 0
+    }
+  ]
+}

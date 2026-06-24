@@ -1,0 +1,65 @@
+{
+  "driverId": "patrick-tambay",
+  "name": "Patrick Tambay",
+  "career": {
+    "score": 139,
+    "races": 123,
+    "partial": 1
+  },
+  "seasons": [
+    {
+      "year": 1977,
+      "score": -2,
+      "races": 9,
+      "partial": 0
+    },
+    {
+      "year": 1978,
+      "score": 116,
+      "races": 15,
+      "partial": 0
+    },
+    {
+      "year": 1979,
+      "score": -71,
+      "races": 15,
+      "partial": 0
+    },
+    {
+      "year": 1981,
+      "score": -87,
+      "races": 15,
+      "partial": 0
+    },
+    {
+      "year": 1982,
+      "score": 150,
+      "races": 8,
+      "partial": 0
+    },
+    {
+      "year": 1983,
+      "score": 151,
+      "races": 15,
+      "partial": 0
+    },
+    {
+      "year": 1984,
+      "score": -21,
+      "races": 16,
+      "partial": 1
+    },
+    {
+      "year": 1985,
+      "score": 3,
+      "races": 15,
+      "partial": 0
+    },
+    {
+      "year": 1986,
+      "score": -100,
+      "races": 15,
+      "partial": 0
+    }
+  ]
+}

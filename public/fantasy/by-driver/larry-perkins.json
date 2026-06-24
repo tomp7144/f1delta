@@ -1,0 +1,29 @@
+{
+  "driverId": "larry-perkins",
+  "name": "Larry Perkins",
+  "career": {
+    "score": -30,
+    "races": 15,
+    "partial": 0
+  },
+  "seasons": [
+    {
+      "year": 1974,
+      "score": 0,
+      "races": 1,
+      "partial": 0
+    },
+    {
+      "year": 1976,
+      "score": -46,
+      "races": 9,
+      "partial": 0
+    },
+    {
+      "year": 1977,
+      "score": 16,
+      "races": 5,
+      "partial": 0
+    }
+  ]
+}

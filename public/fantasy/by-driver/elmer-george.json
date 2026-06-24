@@ -1,0 +1,17 @@
+{
+  "driverId": "elmer-george",
+  "name": "Elmer George",
+  "career": {
+    "score": -46,
+    "races": 1,
+    "partial": 0
+  },
+  "seasons": [
+    {
+      "year": 1957,
+      "score": -46,
+      "races": 1,
+      "partial": 0
+    }
+  ]
+}

@@ -1,0 +1,17 @@
+{
+  "driverId": "joe-fry",
+  "name": "Joe Fry",
+  "career": {
+    "score": 21,
+    "races": 1,
+    "partial": 0
+  },
+  "seasons": [
+    {
+      "year": 1950,
+      "score": 21,
+      "races": 1,
+      "partial": 0
+    }
+  ]
+}

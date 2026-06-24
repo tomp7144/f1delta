@@ -1,0 +1,29 @@
+{
+  "driverId": "marshall-teague",
+  "name": "Marshall Teague",
+  "career": {
+    "score": 56,
+    "races": 4,
+    "partial": 2
+  },
+  "seasons": [
+    {
+      "year": 1953,
+      "score": 8,
+      "races": 1,
+      "partial": 0
+    },
+    {
+      "year": 1954,
+      "score": 0,
+      "races": 2,
+      "partial": 2
+    },
+    {
+      "year": 1957,
+      "score": 48,
+      "races": 1,
+      "partial": 0
+    }
+  ]
+}

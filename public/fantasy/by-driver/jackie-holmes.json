@@ -1,0 +1,23 @@
+{
+  "driverId": "jackie-holmes",
+  "name": "Jackie Holmes",
+  "career": {
+    "score": 14,
+    "races": 2,
+    "partial": 1
+  },
+  "seasons": [
+    {
+      "year": 1950,
+      "score": 14,
+      "races": 1,
+      "partial": 0
+    },
+    {
+      "year": 1953,
+      "score": 0,
+      "races": 1,
+      "partial": 1
+    }
+  ]
+}

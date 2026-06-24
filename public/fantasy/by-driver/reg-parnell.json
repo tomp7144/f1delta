@@ -1,0 +1,35 @@
+{
+  "driverId": "reg-parnell",
+  "name": "Reg Parnell",
+  "career": {
+    "score": 60,
+    "races": 7,
+    "partial": 0
+  },
+  "seasons": [
+    {
+      "year": 1950,
+      "score": 4,
+      "races": 2,
+      "partial": 0
+    },
+    {
+      "year": 1951,
+      "score": 67,
+      "races": 3,
+      "partial": 0
+    },
+    {
+      "year": 1952,
+      "score": 9,
+      "races": 1,
+      "partial": 0
+    },
+    {
+      "year": 1954,
+      "score": -20,
+      "races": 1,
+      "partial": 0
+    }
+  ]
+}

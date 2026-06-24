@@ -1,0 +1,29 @@
+{
+  "driverId": "franco-rol",
+  "name": "Franco Rol",
+  "career": {
+    "score": -54,
+    "races": 5,
+    "partial": 0
+  },
+  "seasons": [
+    {
+      "year": 1950,
+      "score": -54,
+      "races": 3,
+      "partial": 0
+    },
+    {
+      "year": 1951,
+      "score": 20,
+      "races": 1,
+      "partial": 0
+    },
+    {
+      "year": 1952,
+      "score": -20,
+      "races": 1,
+      "partial": 0
+    }
+  ]
+}

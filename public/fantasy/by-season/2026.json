@@ -1,0 +1,177 @@
+{
+  "year": 2026,
+  "drivers": {
+    "george-russell": {
+      "score": 82,
+      "races": 6,
+      "partial": 0
+    },
+    "kimi-antonelli": {
+      "score": 223,
+      "races": 6,
+      "partial": 0
+    },
+    "charles-leclerc": {
+      "score": 79,
+      "races": 6,
+      "partial": 0
+    },
+    "lewis-hamilton": {
+      "score": 129,
+      "races": 6,
+      "partial": 0
+    },
+    "lando-norris": {
+      "score": 43,
+      "races": 6,
+      "partial": 0
+    },
+    "max-verstappen": {
+      "score": 39,
+      "races": 6,
+      "partial": 1
+    },
+    "oliver-bearman": {
+      "score": 20,
+      "races": 6,
+      "partial": 0
+    },
+    "arvid-lindblad": {
+      "score": 37,
+      "races": 6,
+      "partial": 0
+    },
+    "gabriel-bortoleto": {
+      "score": 20,
+      "races": 6,
+      "partial": 0
+    },
+    "pierre-gasly": {
+      "score": 64,
+      "races": 6,
+      "partial": 0
+    },
+    "esteban-ocon": {
+      "score": 45,
+      "races": 6,
+      "partial": 0
+    },
+    "alexander-albon": {
+      "score": 8,
+      "races": 6,
+      "partial": 0
+    },
+    "liam-lawson": {
+      "score": 51,
+      "races": 6,
+      "partial": 0
+    },
+    "franco-colapinto": {
+      "score": 42,
+      "races": 6,
+      "partial": 0
+    },
+    "carlos-sainz-jr": {
+      "score": 44,
+      "races": 6,
+      "partial": 1
+    },
+    "sergio-perez": {
+      "score": 14,
+      "races": 6,
+      "partial": 0
+    },
+    "lance-stroll": {
+      "score": -78,
+      "races": 6,
+      "partial": 1
+    },
+    "fernando-alonso": {
+      "score": -27,
+      "races": 6,
+      "partial": 0
+    },
+    "valtteri-bottas": {
+      "score": -14,
+      "races": 6,
+      "partial": 0
+    },
+    "isack-hadjar": {
+      "score": 9,
+      "races": 6,
+      "partial": 1
+    },
+    "oscar-piastri": {
+      "score": 78,
+      "races": 6,
+      "partial": 0
+    },
+    "nico-hulkenberg": {
+      "score": 4,
+      "races": 6,
+      "partial": 0
+    }
+  },
+  "races": [
+    {
+      "round": 1,
+      "raceId": 1150,
+      "gpId": "australia",
+      "name": "Australian GP",
+      "topId": "george-russell",
+      "topName": "George Russell",
+      "topScore": 35,
+      "partial": true
+    },
+    {
+      "round": 2,
+      "raceId": 1151,
+      "gpId": "china",
+      "name": "Chinese GP",
+      "topId": "kimi-antonelli",
+      "topName": "Kimi Antonelli",
+      "topScore": 40,
+      "partial": false
+    },
+    {
+      "round": 3,
+      "raceId": 1152,
+      "gpId": "japan",
+      "name": "Japanese GP",
+      "topId": "kimi-antonelli",
+      "topName": "Kimi Antonelli",
+      "topScore": 40,
+      "partial": false
+    },
+    {
+      "round": 4,
+      "raceId": 1153,
+      "gpId": "miami",
+      "name": "Miami GP",
+      "topId": "kimi-antonelli",
+      "topName": "Kimi Antonelli",
+      "topScore": 35,
+      "partial": true
+    },
+    {
+      "round": 5,
+      "raceId": 1154,
+      "gpId": "canada",
+      "name": "Canadian GP",
+      "topId": "kimi-antonelli",
+      "topName": "Kimi Antonelli",
+      "topScore": 41,
+      "partial": false
+    },
+    {
+      "round": 6,
+      "raceId": 1155,
+      "gpId": "monaco",
+      "name": "Monaco GP",
+      "topId": "kimi-antonelli",
+      "topName": "Kimi Antonelli",
+      "topScore": 40,
+      "partial": false
+    }
+  ]
+}

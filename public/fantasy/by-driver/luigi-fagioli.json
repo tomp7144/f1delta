@@ -1,0 +1,23 @@
+{
+  "driverId": "luigi-fagioli",
+  "name": "Luigi Fagioli",
+  "career": {
+    "score": 163,
+    "races": 8,
+    "partial": 1
+  },
+  "seasons": [
+    {
+      "year": 1950,
+      "score": 122,
+      "races": 6,
+      "partial": 0
+    },
+    {
+      "year": 1951,
+      "score": 41,
+      "races": 2,
+      "partial": 1
+    }
+  ]
+}

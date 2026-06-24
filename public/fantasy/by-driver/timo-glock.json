@@ -1,0 +1,47 @@
+{
+  "driverId": "timo-glock",
+  "name": "Timo Glock",
+  "career": {
+    "score": 284,
+    "races": 95,
+    "partial": 3
+  },
+  "seasons": [
+    {
+      "year": 2004,
+      "score": 34,
+      "races": 4,
+      "partial": 0
+    },
+    {
+      "year": 2008,
+      "score": 107,
+      "races": 18,
+      "partial": 0
+    },
+    {
+      "year": 2009,
+      "score": 179,
+      "races": 15,
+      "partial": 1
+    },
+    {
+      "year": 2010,
+      "score": -96,
+      "races": 19,
+      "partial": 0
+    },
+    {
+      "year": 2011,
+      "score": -34,
+      "races": 19,
+      "partial": 1
+    },
+    {
+      "year": 2012,
+      "score": 94,
+      "races": 20,
+      "partial": 1
+    }
+  ]
+}

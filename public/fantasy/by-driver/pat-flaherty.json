@@ -1,0 +1,47 @@
+{
+  "driverId": "pat-flaherty",
+  "name": "Pat Flaherty",
+  "career": {
+    "score": 45,
+    "races": 6,
+    "partial": 1
+  },
+  "seasons": [
+    {
+      "year": 1950,
+      "score": 3,
+      "races": 1,
+      "partial": 0
+    },
+    {
+      "year": 1953,
+      "score": 4,
+      "races": 1,
+      "partial": 0
+    },
+    {
+      "year": 1954,
+      "score": 0,
+      "races": 1,
+      "partial": 1
+    },
+    {
+      "year": 1955,
+      "score": 5,
+      "races": 1,
+      "partial": 0
+    },
+    {
+      "year": 1956,
+      "score": 35,
+      "races": 1,
+      "partial": 0
+    },
+    {
+      "year": 1959,
+      "score": -2,
+      "races": 1,
+      "partial": 0
+    }
+  ]
+}

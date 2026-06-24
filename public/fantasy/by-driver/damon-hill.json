@@ -1,0 +1,59 @@
+{
+  "driverId": "damon-hill",
+  "name": "Damon Hill",
+  "career": {
+    "score": 1247,
+    "races": 122,
+    "partial": 1
+  },
+  "seasons": [
+    {
+      "year": 1992,
+      "score": 48,
+      "races": 8,
+      "partial": 0
+    },
+    {
+      "year": 1993,
+      "score": 256,
+      "races": 16,
+      "partial": 0
+    },
+    {
+      "year": 1994,
+      "score": 361,
+      "races": 16,
+      "partial": 0
+    },
+    {
+      "year": 1995,
+      "score": 230,
+      "races": 17,
+      "partial": 0
+    },
+    {
+      "year": 1996,
+      "score": 350,
+      "races": 16,
+      "partial": 0
+    },
+    {
+      "year": 1997,
+      "score": -13,
+      "races": 17,
+      "partial": 0
+    },
+    {
+      "year": 1998,
+      "score": 91,
+      "races": 16,
+      "partial": 0
+    },
+    {
+      "year": 1999,
+      "score": -76,
+      "races": 16,
+      "partial": 1
+    }
+  ]
+}

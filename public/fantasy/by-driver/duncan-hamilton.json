@@ -1,0 +1,29 @@
+{
+  "driverId": "duncan-hamilton",
+  "name": "Duncan Hamilton",
+  "career": {
+    "score": -49,
+    "races": 5,
+    "partial": 0
+  },
+  "seasons": [
+    {
+      "year": 1951,
+      "score": -22,
+      "races": 2,
+      "partial": 0
+    },
+    {
+      "year": 1952,
+      "score": -7,
+      "races": 2,
+      "partial": 0
+    },
+    {
+      "year": 1953,
+      "score": -20,
+      "races": 1,
+      "partial": 0
+    }
+  ]
+}

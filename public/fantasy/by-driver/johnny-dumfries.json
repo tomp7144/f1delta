@@ -1,0 +1,17 @@
+{
+  "driverId": "johnny-dumfries",
+  "name": "Johnny Dumfries",
+  "career": {
+    "score": -83,
+    "races": 16,
+    "partial": 0
+  },
+  "seasons": [
+    {
+      "year": 1986,
+      "score": -83,
+      "races": 16,
+      "partial": 0
+    }
+  ]
+}

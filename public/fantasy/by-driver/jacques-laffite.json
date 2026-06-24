@@ -1,0 +1,89 @@
+{
+  "driverId": "jacques-laffite",
+  "name": "Jacques Laffite",
+  "career": {
+    "score": 534,
+    "races": 180,
+    "partial": 0
+  },
+  "seasons": [
+    {
+      "year": 1974,
+      "score": -74,
+      "races": 5,
+      "partial": 0
+    },
+    {
+      "year": 1975,
+      "score": -70,
+      "races": 12,
+      "partial": 0
+    },
+    {
+      "year": 1976,
+      "score": 0,
+      "races": 16,
+      "partial": 0
+    },
+    {
+      "year": 1977,
+      "score": 40,
+      "races": 17,
+      "partial": 0
+    },
+    {
+      "year": 1978,
+      "score": 170,
+      "races": 16,
+      "partial": 0
+    },
+    {
+      "year": 1979,
+      "score": 76,
+      "races": 15,
+      "partial": 0
+    },
+    {
+      "year": 1980,
+      "score": 157,
+      "races": 14,
+      "partial": 0
+    },
+    {
+      "year": 1981,
+      "score": 185,
+      "races": 15,
+      "partial": 0
+    },
+    {
+      "year": 1982,
+      "score": -139,
+      "races": 15,
+      "partial": 0
+    },
+    {
+      "year": 1983,
+      "score": 121,
+      "races": 15,
+      "partial": 0
+    },
+    {
+      "year": 1984,
+      "score": -99,
+      "races": 16,
+      "partial": 0
+    },
+    {
+      "year": 1985,
+      "score": 91,
+      "races": 15,
+      "partial": 0
+    },
+    {
+      "year": 1986,
+      "score": 76,
+      "races": 9,
+      "partial": 0
+    }
+  ]
+}

@@ -1,0 +1,77 @@
+{
+  "driverId": "ayrton-senna",
+  "name": "Ayrton Senna",
+  "career": {
+    "score": 2105,
+    "races": 162,
+    "partial": 0
+  },
+  "seasons": [
+    {
+      "year": 1984,
+      "score": 15,
+      "races": 15,
+      "partial": 0
+    },
+    {
+      "year": 1985,
+      "score": 89,
+      "races": 16,
+      "partial": 0
+    },
+    {
+      "year": 1986,
+      "score": 177,
+      "races": 16,
+      "partial": 0
+    },
+    {
+      "year": 1987,
+      "score": 251,
+      "races": 16,
+      "partial": 0
+    },
+    {
+      "year": 1988,
+      "score": 364,
+      "races": 16,
+      "partial": 0
+    },
+    {
+      "year": 1989,
+      "score": 166,
+      "races": 16,
+      "partial": 0
+    },
+    {
+      "year": 1990,
+      "score": 281,
+      "races": 16,
+      "partial": 0
+    },
+    {
+      "year": 1991,
+      "score": 406,
+      "races": 16,
+      "partial": 0
+    },
+    {
+      "year": 1992,
+      "score": 138,
+      "races": 16,
+      "partial": 0
+    },
+    {
+      "year": 1993,
+      "score": 248,
+      "races": 16,
+      "partial": 0
+    },
+    {
+      "year": 1994,
+      "score": -30,
+      "races": 3,
+      "partial": 0
+    }
+  ]
+}

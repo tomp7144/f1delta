@@ -1,0 +1,23 @@
+{
+  "driverId": "tiago-monteiro",
+  "name": "Tiago Monteiro",
+  "career": {
+    "score": 109,
+    "races": 37,
+    "partial": 0
+  },
+  "seasons": [
+    {
+      "year": 2005,
+      "score": 177,
+      "races": 19,
+      "partial": 0
+    },
+    {
+      "year": 2006,
+      "score": -68,
+      "races": 18,
+      "partial": 0
+    }
+  ]
+}

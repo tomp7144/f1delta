@@ -1,0 +1,23 @@
+{
+  "driverId": "cristiano-da-matta",
+  "name": "Cristiano da Matta",
+  "career": {
+    "score": -43,
+    "races": 28,
+    "partial": 0
+  },
+  "seasons": [
+    {
+      "year": 2003,
+      "score": 39,
+      "races": 16,
+      "partial": 0
+    },
+    {
+      "year": 2004,
+      "score": -82,
+      "races": 12,
+      "partial": 0
+    }
+  ]
+}

@@ -1,0 +1,23 @@
+{
+  "driverId": "jolyon-palmer",
+  "name": "Jolyon Palmer",
+  "career": {
+    "score": -29,
+    "races": 37,
+    "partial": 3
+  },
+  "seasons": [
+    {
+      "year": 2016,
+      "score": -35,
+      "races": 21,
+      "partial": 2
+    },
+    {
+      "year": 2017,
+      "score": 6,
+      "races": 16,
+      "partial": 1
+    }
+  ]
+}

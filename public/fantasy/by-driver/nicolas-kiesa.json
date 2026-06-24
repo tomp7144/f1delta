@@ -1,0 +1,17 @@
+{
+  "driverId": "nicolas-kiesa",
+  "name": "Nicolas Kiesa",
+  "career": {
+    "score": 66,
+    "races": 5,
+    "partial": 0
+  },
+  "seasons": [
+    {
+      "year": 2003,
+      "score": 66,
+      "races": 5,
+      "partial": 0
+    }
+  ]
+}

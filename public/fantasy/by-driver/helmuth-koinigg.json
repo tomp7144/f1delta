@@ -1,0 +1,17 @@
+{
+  "driverId": "helmuth-koinigg",
+  "name": "Helmuth Koinigg",
+  "career": {
+    "score": 5,
+    "races": 3,
+    "partial": 0
+  },
+  "seasons": [
+    {
+      "year": 1974,
+      "score": 5,
+      "races": 3,
+      "partial": 0
+    }
+  ]
+}

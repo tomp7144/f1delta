@@ -1,0 +1,35 @@
+{
+  "driverId": "paul-di-resta",
+  "name": "Paul di Resta",
+  "career": {
+    "score": 262,
+    "races": 59,
+    "partial": 1
+  },
+  "seasons": [
+    {
+      "year": 2011,
+      "score": 83,
+      "races": 19,
+      "partial": 0
+    },
+    {
+      "year": 2012,
+      "score": 124,
+      "races": 20,
+      "partial": 0
+    },
+    {
+      "year": 2013,
+      "score": 75,
+      "races": 19,
+      "partial": 1
+    },
+    {
+      "year": 2017,
+      "score": -20,
+      "races": 1,
+      "partial": 0
+    }
+  ]
+}

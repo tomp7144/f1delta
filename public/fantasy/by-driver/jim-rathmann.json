@@ -1,0 +1,71 @@
+{
+  "driverId": "jim-rathmann",
+  "name": "Jim Rathmann",
+  "career": {
+    "score": 262,
+    "races": 12,
+    "partial": 2
+  },
+  "seasons": [
+    {
+      "year": 1950,
+      "score": 8,
+      "races": 1,
+      "partial": 0
+    },
+    {
+      "year": 1952,
+      "score": 35,
+      "races": 1,
+      "partial": 0
+    },
+    {
+      "year": 1953,
+      "score": 42,
+      "races": 2,
+      "partial": 1
+    },
+    {
+      "year": 1954,
+      "score": 0,
+      "races": 2,
+      "partial": 1
+    },
+    {
+      "year": 1955,
+      "score": 12,
+      "races": 1,
+      "partial": 0
+    },
+    {
+      "year": 1956,
+      "score": -27,
+      "races": 1,
+      "partial": 0
+    },
+    {
+      "year": 1957,
+      "score": 83,
+      "races": 1,
+      "partial": 0
+    },
+    {
+      "year": 1958,
+      "score": 40,
+      "races": 1,
+      "partial": 0
+    },
+    {
+      "year": 1959,
+      "score": 28,
+      "races": 1,
+      "partial": 0
+    },
+    {
+      "year": 1960,
+      "score": 41,
+      "races": 1,
+      "partial": 0
+    }
+  ]
+}

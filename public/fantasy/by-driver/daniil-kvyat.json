@@ -1,0 +1,47 @@
+{
+  "driverId": "daniil-kvyat",
+  "name": "Daniil Kvyat",
+  "career": {
+    "score": 390,
+    "races": 112,
+    "partial": 1
+  },
+  "seasons": [
+    {
+      "year": 2014,
+      "score": -16,
+      "races": 19,
+      "partial": 0
+    },
+    {
+      "year": 2015,
+      "score": 188,
+      "races": 19,
+      "partial": 0
+    },
+    {
+      "year": 2016,
+      "score": 10,
+      "races": 21,
+      "partial": 0
+    },
+    {
+      "year": 2017,
+      "score": -14,
+      "races": 15,
+      "partial": 0
+    },
+    {
+      "year": 2019,
+      "score": 122,
+      "races": 21,
+      "partial": 1
+    },
+    {
+      "year": 2020,
+      "score": 100,
+      "races": 17,
+      "partial": 0
+    }
+  ]
+}

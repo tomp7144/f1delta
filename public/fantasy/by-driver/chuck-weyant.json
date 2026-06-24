@@ -1,0 +1,35 @@
+{
+  "driverId": "chuck-weyant",
+  "name": "Chuck Weyant",
+  "career": {
+    "score": 60,
+    "races": 4,
+    "partial": 0
+  },
+  "seasons": [
+    {
+      "year": 1955,
+      "score": 26,
+      "races": 1,
+      "partial": 0
+    },
+    {
+      "year": 1957,
+      "score": 22,
+      "races": 1,
+      "partial": 0
+    },
+    {
+      "year": 1958,
+      "score": 10,
+      "races": 1,
+      "partial": 0
+    },
+    {
+      "year": 1959,
+      "score": 2,
+      "races": 1,
+      "partial": 0
+    }
+  ]
+}

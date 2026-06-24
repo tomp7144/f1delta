@@ -1,0 +1,23 @@
+{
+  "driverId": "gregor-foitek",
+  "name": "Gregor Foitek",
+  "career": {
+    "score": -52,
+    "races": 22,
+    "partial": 10
+  },
+  "seasons": [
+    {
+      "year": 1989,
+      "score": 0,
+      "races": 12,
+      "partial": 10
+    },
+    {
+      "year": 1990,
+      "score": -52,
+      "races": 10,
+      "partial": 0
+    }
+  ]
+}

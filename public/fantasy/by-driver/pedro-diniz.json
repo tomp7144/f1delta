@@ -1,0 +1,47 @@
+{
+  "driverId": "pedro-diniz",
+  "name": "Pedro Diniz",
+  "career": {
+    "score": -456,
+    "races": 99,
+    "partial": 0
+  },
+  "seasons": [
+    {
+      "year": 1995,
+      "score": 0,
+      "races": 17,
+      "partial": 0
+    },
+    {
+      "year": 1996,
+      "score": -52,
+      "races": 16,
+      "partial": 0
+    },
+    {
+      "year": 1997,
+      "score": -120,
+      "races": 17,
+      "partial": 0
+    },
+    {
+      "year": 1998,
+      "score": -138,
+      "races": 16,
+      "partial": 0
+    },
+    {
+      "year": 1999,
+      "score": -148,
+      "races": 16,
+      "partial": 0
+    },
+    {
+      "year": 2000,
+      "score": 2,
+      "races": 17,
+      "partial": 0
+    }
+  ]
+}

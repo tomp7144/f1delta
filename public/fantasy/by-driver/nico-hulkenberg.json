@@ -1,0 +1,101 @@
+{
+  "driverId": "nico-hulkenberg",
+  "name": "Nico Hülkenberg",
+  "career": {
+    "score": 749,
+    "races": 260,
+    "partial": 2
+  },
+  "seasons": [
+    {
+      "year": 2010,
+      "score": -19,
+      "races": 19,
+      "partial": 0
+    },
+    {
+      "year": 2012,
+      "score": 138,
+      "races": 20,
+      "partial": 1
+    },
+    {
+      "year": 2013,
+      "score": 88,
+      "races": 19,
+      "partial": 0
+    },
+    {
+      "year": 2014,
+      "score": 222,
+      "races": 19,
+      "partial": 0
+    },
+    {
+      "year": 2015,
+      "score": 48,
+      "races": 19,
+      "partial": 0
+    },
+    {
+      "year": 2016,
+      "score": 30,
+      "races": 21,
+      "partial": 0
+    },
+    {
+      "year": 2017,
+      "score": -36,
+      "races": 20,
+      "partial": 0
+    },
+    {
+      "year": 2018,
+      "score": 33,
+      "races": 21,
+      "partial": 0
+    },
+    {
+      "year": 2019,
+      "score": 49,
+      "races": 21,
+      "partial": 0
+    },
+    {
+      "year": 2020,
+      "score": 37,
+      "races": 3,
+      "partial": 0
+    },
+    {
+      "year": 2022,
+      "score": 10,
+      "races": 2,
+      "partial": 0
+    },
+    {
+      "year": 2023,
+      "score": -62,
+      "races": 22,
+      "partial": 0
+    },
+    {
+      "year": 2024,
+      "score": 35,
+      "races": 24,
+      "partial": 1
+    },
+    {
+      "year": 2025,
+      "score": 172,
+      "races": 24,
+      "partial": 0
+    },
+    {
+      "year": 2026,
+      "score": 4,
+      "races": 6,
+      "partial": 0
+    }
+  ]
+}

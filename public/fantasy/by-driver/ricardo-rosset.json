@@ -1,0 +1,29 @@
+{
+  "driverId": "ricardo-rosset",
+  "name": "Ricardo Rosset",
+  "career": {
+    "score": -70,
+    "races": 33,
+    "partial": 2
+  },
+  "seasons": [
+    {
+      "year": 1996,
+      "score": -28,
+      "races": 16,
+      "partial": 0
+    },
+    {
+      "year": 1997,
+      "score": 0,
+      "races": 1,
+      "partial": 0
+    },
+    {
+      "year": 1998,
+      "score": -42,
+      "races": 16,
+      "partial": 2
+    }
+  ]
+}

@@ -1,0 +1,41 @@
+{
+  "driverId": "jimmy-davies",
+  "name": "Jimmy Davies",
+  "career": {
+    "score": 117,
+    "races": 6,
+    "partial": 2
+  },
+  "seasons": [
+    {
+      "year": 1950,
+      "score": 20,
+      "races": 1,
+      "partial": 0
+    },
+    {
+      "year": 1951,
+      "score": 22,
+      "races": 1,
+      "partial": 0
+    },
+    {
+      "year": 1953,
+      "score": 45,
+      "races": 1,
+      "partial": 0
+    },
+    {
+      "year": 1954,
+      "score": 0,
+      "races": 2,
+      "partial": 2
+    },
+    {
+      "year": 1955,
+      "score": 30,
+      "races": 1,
+      "partial": 0
+    }
+  ]
+}

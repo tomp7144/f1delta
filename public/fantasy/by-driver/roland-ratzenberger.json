@@ -1,0 +1,17 @@
+{
+  "driverId": "roland-ratzenberger",
+  "name": "Roland Ratzenberger",
+  "career": {
+    "score": 30,
+    "races": 3,
+    "partial": 0
+  },
+  "seasons": [
+    {
+      "year": 1994,
+      "score": 30,
+      "races": 3,
+      "partial": 0
+    }
+  ]
+}

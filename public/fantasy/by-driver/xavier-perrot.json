@@ -1,0 +1,17 @@
+{
+  "driverId": "xavier-perrot",
+  "name": "Xavier Perrot",
+  "career": {
+    "score": 25,
+    "races": 1,
+    "partial": 0
+  },
+  "seasons": [
+    {
+      "year": 1969,
+      "score": 25,
+      "races": 1,
+      "partial": 0
+    }
+  ]
+}

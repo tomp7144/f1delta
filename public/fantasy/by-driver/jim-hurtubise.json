@@ -1,0 +1,17 @@
+{
+  "driverId": "jim-hurtubise",
+  "name": "Jim Hurtubise",
+  "career": {
+    "score": 10,
+    "races": 1,
+    "partial": 0
+  },
+  "seasons": [
+    {
+      "year": 1960,
+      "score": 10,
+      "races": 1,
+      "partial": 0
+    }
+  ]
+}

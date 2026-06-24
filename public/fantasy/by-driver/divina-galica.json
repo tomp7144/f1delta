@@ -1,0 +1,23 @@
+{
+  "driverId": "divina-galica",
+  "name": "Divina Galica",
+  "career": {
+    "score": 0,
+    "races": 3,
+    "partial": 0
+  },
+  "seasons": [
+    {
+      "year": 1976,
+      "score": 0,
+      "races": 1,
+      "partial": 0
+    },
+    {
+      "year": 1978,
+      "score": 0,
+      "races": 2,
+      "partial": 0
+    }
+  ]
+}

@@ -1,0 +1,23 @@
+{
+  "driverId": "john-campbell-jones",
+  "name": "John Campbell-Jones",
+  "career": {
+    "score": 36,
+    "races": 2,
+    "partial": 0
+  },
+  "seasons": [
+    {
+      "year": 1962,
+      "score": 16,
+      "races": 1,
+      "partial": 0
+    },
+    {
+      "year": 1963,
+      "score": 20,
+      "races": 1,
+      "partial": 0
+    }
+  ]
+}

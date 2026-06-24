@@ -1,0 +1,35 @@
+{
+  "driverId": "jim-hall",
+  "name": "Jim Hall",
+  "career": {
+    "score": 95,
+    "races": 12,
+    "partial": 0
+  },
+  "seasons": [
+    {
+      "year": 1960,
+      "score": 16,
+      "races": 1,
+      "partial": 0
+    },
+    {
+      "year": 1961,
+      "score": -20,
+      "races": 1,
+      "partial": 0
+    },
+    {
+      "year": 1962,
+      "score": 0,
+      "races": 1,
+      "partial": 0
+    },
+    {
+      "year": 1963,
+      "score": 99,
+      "races": 9,
+      "partial": 0
+    }
+  ]
+}

@@ -1,0 +1,83 @@
+{
+  "driverId": "john-watson",
+  "name": "John Watson",
+  "career": {
+    "score": 820,
+    "races": 154,
+    "partial": 0
+  },
+  "seasons": [
+    {
+      "year": 1973,
+      "score": -40,
+      "races": 2,
+      "partial": 0
+    },
+    {
+      "year": 1974,
+      "score": 77,
+      "races": 15,
+      "partial": 0
+    },
+    {
+      "year": 1975,
+      "score": -45,
+      "races": 13,
+      "partial": 0
+    },
+    {
+      "year": 1976,
+      "score": 135,
+      "races": 16,
+      "partial": 0
+    },
+    {
+      "year": 1977,
+      "score": -101,
+      "races": 17,
+      "partial": 0
+    },
+    {
+      "year": 1978,
+      "score": 131,
+      "races": 16,
+      "partial": 0
+    },
+    {
+      "year": 1979,
+      "score": 130,
+      "races": 15,
+      "partial": 0
+    },
+    {
+      "year": 1980,
+      "score": 6,
+      "races": 14,
+      "partial": 0
+    },
+    {
+      "year": 1981,
+      "score": 107,
+      "races": 15,
+      "partial": 0
+    },
+    {
+      "year": 1982,
+      "score": 168,
+      "races": 15,
+      "partial": 0
+    },
+    {
+      "year": 1983,
+      "score": 218,
+      "races": 15,
+      "partial": 0
+    },
+    {
+      "year": 1985,
+      "score": 34,
+      "races": 1,
+      "partial": 0
+    }
+  ]
+}

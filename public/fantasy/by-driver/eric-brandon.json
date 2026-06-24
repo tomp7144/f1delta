@@ -1,0 +1,23 @@
+{
+  "driverId": "eric-brandon",
+  "name": "Eric Brandon",
+  "career": {
+    "score": 20,
+    "races": 5,
+    "partial": 0
+  },
+  "seasons": [
+    {
+      "year": 1952,
+      "score": 40,
+      "races": 4,
+      "partial": 0
+    },
+    {
+      "year": 1954,
+      "score": -20,
+      "races": 1,
+      "partial": 0
+    }
+  ]
+}

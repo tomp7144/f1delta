@@ -1,0 +1,35 @@
+{
+  "driverId": "antonio-giovinazzi",
+  "name": "Antonio Giovinazzi",
+  "career": {
+    "score": 96,
+    "races": 62,
+    "partial": 2
+  },
+  "seasons": [
+    {
+      "year": 2017,
+      "score": -11,
+      "races": 2,
+      "partial": 0
+    },
+    {
+      "year": 2019,
+      "score": 46,
+      "races": 21,
+      "partial": 1
+    },
+    {
+      "year": 2020,
+      "score": 43,
+      "races": 17,
+      "partial": 0
+    },
+    {
+      "year": 2021,
+      "score": 18,
+      "races": 22,
+      "partial": 1
+    }
+  ]
+}

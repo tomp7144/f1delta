@@ -1,0 +1,377 @@
+{
+  "year": 1973,
+  "drivers": {
+    "emerson-fittipaldi": {
+      "score": 247,
+      "races": 15,
+      "partial": 0
+    },
+    "francois-cevert": {
+      "score": 213,
+      "races": 15,
+      "partial": 0
+    },
+    "jackie-stewart": {
+      "score": 354,
+      "races": 15,
+      "partial": 0
+    },
+    "jacky-ickx": {
+      "score": 120,
+      "races": 12,
+      "partial": 0
+    },
+    "denny-hulme": {
+      "score": 144,
+      "races": 15,
+      "partial": 0
+    },
+    "wilson-fittipaldi": {
+      "score": -126,
+      "races": 15,
+      "partial": 0
+    },
+    "clay-regazzoni": {
+      "score": 24,
+      "races": 14,
+      "partial": 0
+    },
+    "peter-revson": {
+      "score": 184,
+      "races": 14,
+      "partial": 0
+    },
+    "arturo-merzario": {
+      "score": 70,
+      "races": 9,
+      "partial": 0
+    },
+    "mike-beuttler": {
+      "score": 20,
+      "races": 14,
+      "partial": 0
+    },
+    "jean-pierre-jarier": {
+      "score": -164,
+      "races": 10,
+      "partial": 0
+    },
+    "jean-pierre-beltoise": {
+      "score": -18,
+      "races": 15,
+      "partial": 0
+    },
+    "howden-ganley": {
+      "score": 32,
+      "races": 15,
+      "partial": 0
+    },
+    "ronnie-peterson": {
+      "score": 137,
+      "races": 15,
+      "partial": 0
+    },
+    "niki-lauda": {
+      "score": -105,
+      "races": 15,
+      "partial": 1
+    },
+    "carlos-reutemann": {
+      "score": 29,
+      "races": 15,
+      "partial": 0
+    },
+    "carlos-pace": {
+      "score": -39,
+      "races": 15,
+      "partial": 0
+    },
+    "mike-hailwood": {
+      "score": -140,
+      "races": 15,
+      "partial": 0
+    },
+    "nanni-galli": {
+      "score": -22,
+      "races": 5,
+      "partial": 0
+    },
+    "luiz-bueno": {
+      "score": 16,
+      "races": 1,
+      "partial": 0
+    },
+    "george-follmer": {
+      "score": 37,
+      "races": 13,
+      "partial": 0
+    },
+    "andrea-de-adamich": {
+      "score": 50,
+      "races": 6,
+      "partial": 0
+    },
+    "jody-scheckter": {
+      "score": -60,
+      "races": 5,
+      "partial": 0
+    },
+    "eddie-keizan": {
+      "score": -20,
+      "races": 1,
+      "partial": 0
+    },
+    "jackie-pretorius": {
+      "score": -20,
+      "races": 1,
+      "partial": 0
+    },
+    "jackie-oliver": {
+      "score": -45,
+      "races": 13,
+      "partial": 0
+    },
+    "dave-charlton": {
+      "score": -20,
+      "races": 1,
+      "partial": 0
+    },
+    "henri-pescarolo": {
+      "score": 9,
+      "races": 3,
+      "partial": 0
+    },
+    "graham-hill": {
+      "score": -35,
+      "races": 12,
+      "partial": 0
+    },
+    "chris-amon": {
+      "score": -31,
+      "races": 7,
+      "partial": 0
+    },
+    "james-hunt": {
+      "score": 139,
+      "races": 8,
+      "partial": 0
+    },
+    "david-purley": {
+      "score": 6,
+      "races": 5,
+      "partial": 0
+    },
+    "reine-wisell": {
+      "score": -20,
+      "races": 2,
+      "partial": 0
+    },
+    "tom-belso": {
+      "score": 0,
+      "races": 1,
+      "partial": 0
+    },
+    "rikky-von-opel": {
+      "score": -44,
+      "races": 7,
+      "partial": 0
+    },
+    "john-watson": {
+      "score": -40,
+      "races": 2,
+      "partial": 0
+    },
+    "graham-mcrae": {
+      "score": -20,
+      "races": 1,
+      "partial": 0
+    },
+    "jochen-mass": {
+      "score": -18,
+      "races": 3,
+      "partial": 0
+    },
+    "roger-williamson": {
+      "score": -40,
+      "races": 2,
+      "partial": 0
+    },
+    "gijs-van-lennep": {
+      "score": 46,
+      "races": 3,
+      "partial": 0
+    },
+    "rolf-stommelen": {
+      "score": -2,
+      "races": 4,
+      "partial": 0
+    },
+    "tim-schenken": {
+      "score": 20,
+      "races": 1,
+      "partial": 0
+    },
+    "peter-gethin": {
+      "score": -20,
+      "races": 1,
+      "partial": 0
+    },
+    "brian-redman": {
+      "score": -25,
+      "races": 1,
+      "partial": 0
+    }
+  },
+  "races": [
+    {
+      "round": 1,
+      "raceId": 221,
+      "gpId": "argentina",
+      "name": "Argentine GP",
+      "topId": "emerson-fittipaldi",
+      "topName": "Emerson Fittipaldi",
+      "topScore": 41,
+      "partial": false
+    },
+    {
+      "round": 2,
+      "raceId": 222,
+      "gpId": "brazil",
+      "name": "Brazilian GP",
+      "topId": "emerson-fittipaldi",
+      "topName": "Emerson Fittipaldi",
+      "topScore": 41,
+      "partial": false
+    },
+    {
+      "round": 3,
+      "raceId": 223,
+      "gpId": "south-africa",
+      "name": "South African GP",
+      "topId": "jackie-stewart",
+      "topName": "Jackie Stewart",
+      "topScore": 55,
+      "partial": false
+    },
+    {
+      "round": 4,
+      "raceId": 224,
+      "gpId": "spain",
+      "name": "Spanish GP",
+      "topId": "emerson-fittipaldi",
+      "topName": "Emerson Fittipaldi",
+      "topScore": 41,
+      "partial": false
+    },
+    {
+      "round": 5,
+      "raceId": 225,
+      "gpId": "belgium",
+      "name": "Belgian GP",
+      "topId": "jackie-stewart",
+      "topName": "Jackie Stewart",
+      "topScore": 40,
+      "partial": false
+    },
+    {
+      "round": 6,
+      "raceId": 226,
+      "gpId": "monaco",
+      "name": "Monaco GP",
+      "topId": "andrea-de-adamich",
+      "topName": "Andrea de Adamich",
+      "topScore": 42,
+      "partial": false
+    },
+    {
+      "round": 7,
+      "raceId": 227,
+      "gpId": "sweden",
+      "name": "Swedish GP",
+      "topId": "denny-hulme",
+      "topName": "Denny Hulme",
+      "topScore": 45,
+      "partial": false
+    },
+    {
+      "round": 8,
+      "raceId": 228,
+      "gpId": "france",
+      "name": "French GP",
+      "topId": "ronnie-peterson",
+      "topName": "Ronnie Peterson",
+      "topScore": 39,
+      "partial": false
+    },
+    {
+      "round": 9,
+      "raceId": 229,
+      "gpId": "great-britain",
+      "name": "British GP",
+      "topId": "peter-revson",
+      "topName": "Peter Revson",
+      "topScore": 37,
+      "partial": false
+    },
+    {
+      "round": 10,
+      "raceId": 230,
+      "gpId": "netherlands",
+      "name": "Dutch GP",
+      "topId": "jackie-stewart",
+      "topName": "Jackie Stewart",
+      "topScore": 36,
+      "partial": false
+    },
+    {
+      "round": 11,
+      "raceId": 231,
+      "gpId": "germany",
+      "name": "German GP",
+      "topId": "jackie-stewart",
+      "topName": "Jackie Stewart",
+      "topScore": 35,
+      "partial": false
+    },
+    {
+      "round": 12,
+      "raceId": 232,
+      "gpId": "austria",
+      "name": "Austrian GP",
+      "topId": "ronnie-peterson",
+      "topName": "Ronnie Peterson",
+      "topScore": 36,
+      "partial": true
+    },
+    {
+      "round": 13,
+      "raceId": 233,
+      "gpId": "italy",
+      "name": "Italian GP",
+      "topId": "ronnie-peterson",
+      "topName": "Ronnie Peterson",
+      "topScore": 35,
+      "partial": false
+    },
+    {
+      "round": 14,
+      "raceId": 234,
+      "gpId": "canada",
+      "name": "Canadian GP",
+      "topId": "howden-ganley",
+      "topName": "Howden Ganley",
+      "topScore": 40,
+      "partial": false
+    },
+    {
+      "round": 15,
+      "raceId": 235,
+      "gpId": "united-states",
+      "name": "United States GP",
+      "topId": "jacky-ickx",
+      "topName": "Jacky Ickx",
+      "topScore": 38,
+      "partial": false
+    }
+  ]
+}

@@ -1,0 +1,77 @@
+{
+  "driverId": "thierry-boutsen",
+  "name": "Thierry Boutsen",
+  "career": {
+    "score": 566,
+    "races": 164,
+    "partial": 0
+  },
+  "seasons": [
+    {
+      "year": 1983,
+      "score": 75,
+      "races": 10,
+      "partial": 0
+    },
+    {
+      "year": 1984,
+      "score": -28,
+      "races": 16,
+      "partial": 0
+    },
+    {
+      "year": 1985,
+      "score": 99,
+      "races": 16,
+      "partial": 0
+    },
+    {
+      "year": 1986,
+      "score": -63,
+      "races": 16,
+      "partial": 0
+    },
+    {
+      "year": 1987,
+      "score": -8,
+      "races": 16,
+      "partial": 0
+    },
+    {
+      "year": 1988,
+      "score": 200,
+      "races": 16,
+      "partial": 0
+    },
+    {
+      "year": 1989,
+      "score": 122,
+      "races": 16,
+      "partial": 0
+    },
+    {
+      "year": 1990,
+      "score": 131,
+      "races": 16,
+      "partial": 0
+    },
+    {
+      "year": 1991,
+      "score": 47,
+      "races": 16,
+      "partial": 0
+    },
+    {
+      "year": 1992,
+      "score": -25,
+      "races": 16,
+      "partial": 0
+    },
+    {
+      "year": 1993,
+      "score": 16,
+      "races": 10,
+      "partial": 0
+    }
+  ]
+}

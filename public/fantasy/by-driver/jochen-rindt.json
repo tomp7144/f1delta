@@ -1,0 +1,53 @@
+{
+  "driverId": "jochen-rindt",
+  "name": "Jochen Rindt",
+  "career": {
+    "score": 45,
+    "races": 62,
+    "partial": 0
+  },
+  "seasons": [
+    {
+      "year": 1964,
+      "score": -20,
+      "races": 1,
+      "partial": 0
+    },
+    {
+      "year": 1965,
+      "score": -26,
+      "races": 10,
+      "partial": 0
+    },
+    {
+      "year": 1966,
+      "score": 106,
+      "races": 9,
+      "partial": 0
+    },
+    {
+      "year": 1967,
+      "score": -90,
+      "races": 10,
+      "partial": 0
+    },
+    {
+      "year": 1968,
+      "score": -104,
+      "races": 12,
+      "partial": 0
+    },
+    {
+      "year": 1969,
+      "score": 35,
+      "races": 10,
+      "partial": 0
+    },
+    {
+      "year": 1970,
+      "score": 144,
+      "races": 10,
+      "partial": 0
+    }
+  ]
+}

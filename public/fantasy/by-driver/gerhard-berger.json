@@ -1,0 +1,95 @@
+{
+  "driverId": "gerhard-berger",
+  "name": "Gerhard Berger",
+  "career": {
+    "score": 1185,
+    "races": 210,
+    "partial": 0
+  },
+  "seasons": [
+    {
+      "year": 1984,
+      "score": 52,
+      "races": 4,
+      "partial": 0
+    },
+    {
+      "year": 1985,
+      "score": 13,
+      "races": 16,
+      "partial": 0
+    },
+    {
+      "year": 1986,
+      "score": 1,
+      "races": 16,
+      "partial": 0
+    },
+    {
+      "year": 1987,
+      "score": 72,
+      "races": 16,
+      "partial": 0
+    },
+    {
+      "year": 1988,
+      "score": 171,
+      "races": 16,
+      "partial": 0
+    },
+    {
+      "year": 1989,
+      "score": -76,
+      "races": 15,
+      "partial": 0
+    },
+    {
+      "year": 1990,
+      "score": 174,
+      "races": 16,
+      "partial": 0
+    },
+    {
+      "year": 1991,
+      "score": 139,
+      "races": 16,
+      "partial": 0
+    },
+    {
+      "year": 1992,
+      "score": 180,
+      "races": 16,
+      "partial": 0
+    },
+    {
+      "year": 1993,
+      "score": 6,
+      "races": 16,
+      "partial": 0
+    },
+    {
+      "year": 1994,
+      "score": 92,
+      "races": 16,
+      "partial": 0
+    },
+    {
+      "year": 1995,
+      "score": 107,
+      "races": 17,
+      "partial": 0
+    },
+    {
+      "year": 1996,
+      "score": 32,
+      "races": 16,
+      "partial": 0
+    },
+    {
+      "year": 1997,
+      "score": 222,
+      "races": 14,
+      "partial": 0
+    }
+  ]
+}

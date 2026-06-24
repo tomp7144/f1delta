@@ -1,0 +1,17 @@
+{
+  "driverId": "roger-laurent",
+  "name": "Roger Laurent",
+  "career": {
+    "score": 46,
+    "races": 2,
+    "partial": 0
+  },
+  "seasons": [
+    {
+      "year": 1952,
+      "score": 46,
+      "races": 2,
+      "partial": 0
+    }
+  ]
+}

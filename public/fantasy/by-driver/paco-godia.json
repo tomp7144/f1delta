@@ -1,0 +1,41 @@
+{
+  "driverId": "paco-godia",
+  "name": "Paco Godia",
+  "career": {
+    "score": 97,
+    "races": 14,
+    "partial": 0
+  },
+  "seasons": [
+    {
+      "year": 1951,
+      "score": 15,
+      "races": 1,
+      "partial": 0
+    },
+    {
+      "year": 1954,
+      "score": 22,
+      "races": 1,
+      "partial": 0
+    },
+    {
+      "year": 1956,
+      "score": 118,
+      "races": 5,
+      "partial": 0
+    },
+    {
+      "year": 1957,
+      "score": -26,
+      "races": 3,
+      "partial": 0
+    },
+    {
+      "year": 1958,
+      "score": -32,
+      "races": 4,
+      "partial": 0
+    }
+  ]
+}

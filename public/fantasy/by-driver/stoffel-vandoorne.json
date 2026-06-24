@@ -1,0 +1,29 @@
+{
+  "driverId": "stoffel-vandoorne",
+  "name": "Stoffel Vandoorne",
+  "career": {
+    "score": 145,
+    "races": 42,
+    "partial": 0
+  },
+  "seasons": [
+    {
+      "year": 2016,
+      "score": 5,
+      "races": 1,
+      "partial": 0
+    },
+    {
+      "year": 2017,
+      "score": 12,
+      "races": 20,
+      "partial": 0
+    },
+    {
+      "year": 2018,
+      "score": 128,
+      "races": 21,
+      "partial": 0
+    }
+  ]
+}

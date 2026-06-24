@@ -1,0 +1,6932 @@
+{
+  "1": {
+    "topDriverId": "nino-farina",
+    "topDriverName": "Nino Farina",
+    "topScore": 40,
+    "partial": true
+  },
+  "2": {
+    "topDriverId": "juan-manuel-fangio",
+    "topDriverName": "Juan Manuel Fangio",
+    "topScore": 40,
+    "partial": false
+  },
+  "3": {
+    "topDriverId": "johnnie-parsons",
+    "topDriverName": "Johnnie Parsons",
+    "topScore": 44,
+    "partial": true
+  },
+  "4": {
+    "topDriverId": "nino-farina",
+    "topDriverName": "Nino Farina",
+    "topScore": 41,
+    "partial": false
+  },
+  "5": {
+    "topDriverId": "juan-manuel-fangio",
+    "topDriverName": "Juan Manuel Fangio",
+    "topScore": 36,
+    "partial": false
+  },
+  "6": {
+    "topDriverId": "peter-whitehead",
+    "topDriverName": "Peter Whitehead",
+    "topScore": 47,
+    "partial": true
+  },
+  "7": {
+    "topDriverId": "nino-farina",
+    "topDriverName": "Nino Farina",
+    "topScore": 37,
+    "partial": true
+  },
+  "8": {
+    "topDriverId": "juan-manuel-fangio",
+    "topDriverName": "Juan Manuel Fangio",
+    "topScore": 40,
+    "partial": false
+  },
+  "9": {
+    "topDriverId": "andy-linden",
+    "topDriverName": "Andy Linden",
+    "topScore": 66,
+    "partial": true
+  },
+  "10": {
+    "topDriverId": "nino-farina",
+    "topDriverName": "Nino Farina",
+    "topScore": 36,
+    "partial": false
+  },
+  "11": {
+    "topDriverId": "luigi-fagioli",
+    "topDriverName": "Luigi Fagioli",
+    "topScore": 41,
+    "partial": true
+  },
+  "12": {
+    "topDriverId": "reg-parnell",
+    "topDriverName": "Reg Parnell",
+    "topScore": 40,
+    "partial": false
+  },
+  "13": {
+    "topDriverId": "alberto-ascari",
+    "topDriverName": "Alberto Ascari",
+    "topScore": 35,
+    "partial": true
+  },
+  "14": {
+    "topDriverId": "alberto-ascari",
+    "topDriverName": "Alberto Ascari",
+    "topScore": 37,
+    "partial": true
+  },
+  "15": {
+    "topDriverId": "juan-manuel-fangio",
+    "topDriverName": "Juan Manuel Fangio",
+    "topScore": 41,
+    "partial": false
+  },
+  "16": {
+    "topDriverId": "piero-taruffi",
+    "topDriverName": "Piero Taruffi",
+    "topScore": 41,
+    "partial": true
+  },
+  "17": {
+    "topDriverId": "johnnie-parsons",
+    "topDriverName": "Johnnie Parsons",
+    "topScore": 43,
+    "partial": false
+  },
+  "18": {
+    "topDriverId": "alberto-ascari",
+    "topDriverName": "Alberto Ascari",
+    "topScore": 40,
+    "partial": false
+  },
+  "19": {
+    "topDriverId": "alberto-ascari",
+    "topDriverName": "Alberto Ascari",
+    "topScore": 40,
+    "partial": true
+  },
+  "20": {
+    "topDriverId": "alberto-ascari",
+    "topDriverName": "Alberto Ascari",
+    "topScore": 41,
+    "partial": false
+  },
+  "21": {
+    "topDriverId": "johnny-claes",
+    "topDriverName": "Johnny Claes",
+    "topScore": 45,
+    "partial": true
+  },
+  "22": {
+    "topDriverId": "alberto-ascari",
+    "topDriverName": "Alberto Ascari",
+    "topScore": 40,
+    "partial": true
+  },
+  "23": {
+    "topDriverId": "alberto-ascari",
+    "topDriverName": "Alberto Ascari",
+    "topScore": 40,
+    "partial": false
+  },
+  "24": {
+    "topDriverId": "alberto-ascari",
+    "topDriverName": "Alberto Ascari",
+    "topScore": 40,
+    "partial": true
+  },
+  "25": {
+    "topDriverId": "jimmy-davies",
+    "topDriverName": "Jimmy Davies",
+    "topScore": 45,
+    "partial": true
+  },
+  "26": {
+    "topDriverId": "alberto-ascari",
+    "topDriverName": "Alberto Ascari",
+    "topScore": 35,
+    "partial": true
+  },
+  "27": {
+    "topDriverId": "alberto-ascari",
+    "topDriverName": "Alberto Ascari",
+    "topScore": 36,
+    "partial": true
+  },
+  "28": {
+    "topDriverId": "mike-hawthorn",
+    "topDriverName": "Mike Hawthorn",
+    "topScore": 41,
+    "partial": false
+  },
+  "29": {
+    "topDriverId": "alberto-ascari",
+    "topDriverName": "Alberto Ascari",
+    "topScore": 40,
+    "partial": false
+  },
+  "30": {
+    "topDriverId": "nino-farina",
+    "topDriverName": "Nino Farina",
+    "topScore": 37,
+    "partial": true
+  },
+  "31": {
+    "topDriverId": "alberto-ascari",
+    "topDriverName": "Alberto Ascari",
+    "topScore": 41,
+    "partial": true
+  },
+  "32": {
+    "topDriverId": "juan-manuel-fangio",
+    "topDriverName": "Juan Manuel Fangio",
+    "topScore": 41,
+    "partial": true
+  },
+  "33": {
+    "topDriverId": "juan-manuel-fangio",
+    "topDriverName": "Juan Manuel Fangio",
+    "topScore": 37,
+    "partial": false
+  },
+  "34": {
+    "topDriverId": "bill-vukovich",
+    "topDriverName": "Bill Vukovich",
+    "topScore": 61,
+    "partial": true
+  },
+  "35": {
+    "topDriverId": "juan-manuel-fangio",
+    "topDriverName": "Juan Manuel Fangio",
+    "topScore": 40,
+    "partial": true
+  },
+  "36": {
+    "topDriverId": "juan-manuel-fangio",
+    "topDriverName": "Juan Manuel Fangio",
+    "topScore": 35,
+    "partial": true
+  },
+  "37": {
+    "topDriverId": "onofre-marimon",
+    "topDriverName": "Onofre Marimón",
+    "topScore": 70,
+    "partial": true
+  },
+  "38": {
+    "topDriverId": "karl-kling",
+    "topDriverName": "Karl Kling",
+    "topScore": 55,
+    "partial": true
+  },
+  "39": {
+    "topDriverId": "juan-manuel-fangio",
+    "topDriverName": "Juan Manuel Fangio",
+    "topScore": 41,
+    "partial": false
+  },
+  "40": {
+    "topDriverId": "juan-manuel-fangio",
+    "topDriverName": "Juan Manuel Fangio",
+    "topScore": 35,
+    "partial": true
+  },
+  "41": {
+    "topDriverId": "mike-hawthorn",
+    "topDriverName": "Mike Hawthorn",
+    "topScore": 37,
+    "partial": true
+  },
+  "42": {
+    "topDriverId": "juan-manuel-fangio",
+    "topDriverName": "Juan Manuel Fangio",
+    "topScore": 42,
+    "partial": true
+  },
+  "43": {
+    "topDriverId": "maurice-trintignant",
+    "topDriverName": "Maurice Trintignant",
+    "topScore": 43,
+    "partial": true
+  },
+  "44": {
+    "topDriverId": "johnny-thomson",
+    "topDriverName": "Johnny Thomson",
+    "topScore": 70,
+    "partial": true
+  },
+  "45": {
+    "topDriverId": "juan-manuel-fangio",
+    "topDriverName": "Juan Manuel Fangio",
+    "topScore": 41,
+    "partial": true
+  },
+  "46": {
+    "topDriverId": "juan-manuel-fangio",
+    "topDriverName": "Juan Manuel Fangio",
+    "topScore": 35,
+    "partial": false
+  },
+  "47": {
+    "topDriverId": "stirling-moss",
+    "topDriverName": "Stirling Moss",
+    "topScore": 40,
+    "partial": true
+  },
+  "48": {
+    "topDriverId": "juan-manuel-fangio",
+    "topDriverName": "Juan Manuel Fangio",
+    "topScore": 35,
+    "partial": true
+  },
+  "49": {
+    "topDriverId": "luigi-musso",
+    "topDriverName": "Luigi Musso",
+    "topScore": 37,
+    "partial": true
+  },
+  "50": {
+    "topDriverId": "stirling-moss",
+    "topDriverName": "Stirling Moss",
+    "topScore": 36,
+    "partial": true
+  },
+  "51": {
+    "topDriverId": "don-freeland",
+    "topDriverName": "Don Freeland",
+    "topScore": 61,
+    "partial": true
+  },
+  "52": {
+    "topDriverId": "peter-collins",
+    "topDriverName": "Peter Collins",
+    "topScore": 37,
+    "partial": true
+  },
+  "53": {
+    "topDriverId": "peter-collins",
+    "topDriverName": "Peter Collins",
+    "topScore": 37,
+    "partial": true
+  },
+  "54": {
+    "topDriverId": "jack-fairman",
+    "topDriverName": "Jack Fairman",
+    "topScore": 46,
+    "partial": true
+  },
+  "55": {
+    "topDriverId": "juan-manuel-fangio",
+    "topDriverName": "Juan Manuel Fangio",
+    "topScore": 40,
+    "partial": true
+  },
+  "56": {
+    "topDriverId": "ron-flockhart",
+    "topDriverName": "Ron Flockhart",
+    "topScore": 55,
+    "partial": true
+  },
+  "57": {
+    "topDriverId": "juan-manuel-fangio",
+    "topDriverName": "Juan Manuel Fangio",
+    "topScore": 36,
+    "partial": true
+  },
+  "58": {
+    "topDriverId": "juan-manuel-fangio",
+    "topDriverName": "Juan Manuel Fangio",
+    "topScore": 40,
+    "partial": true
+  },
+  "59": {
+    "topDriverId": "jim-rathmann",
+    "topDriverName": "Jim Rathmann",
+    "topScore": 83,
+    "partial": false
+  },
+  "60": {
+    "topDriverId": "juan-manuel-fangio",
+    "topDriverName": "Juan Manuel Fangio",
+    "topScore": 35,
+    "partial": true
+  },
+  "61": {
+    "topDriverId": "tony-brooks",
+    "topDriverName": "Tony Brooks",
+    "topScore": 37,
+    "partial": true
+  },
+  "62": {
+    "topDriverId": "juan-manuel-fangio",
+    "topDriverName": "Juan Manuel Fangio",
+    "topScore": 40,
+    "partial": false
+  },
+  "63": {
+    "topDriverId": "stirling-moss",
+    "topDriverName": "Stirling Moss",
+    "topScore": 41,
+    "partial": false
+  },
+  "64": {
+    "topDriverId": "stirling-moss",
+    "topDriverName": "Stirling Moss",
+    "topScore": 36,
+    "partial": true
+  },
+  "65": {
+    "topDriverId": "stirling-moss",
+    "topDriverName": "Stirling Moss",
+    "topScore": 41,
+    "partial": false
+  },
+  "66": {
+    "topDriverId": "maurice-trintignant",
+    "topDriverName": "Maurice Trintignant",
+    "topScore": 39,
+    "partial": true
+  },
+  "67": {
+    "topDriverId": "stirling-moss",
+    "topDriverName": "Stirling Moss",
+    "topScore": 41,
+    "partial": true
+  },
+  "68": {
+    "topDriverId": "george-amick",
+    "topDriverName": "George Amick",
+    "topScore": 64,
+    "partial": false
+  },
+  "69": {
+    "topDriverId": "tony-brooks",
+    "topDriverName": "Tony Brooks",
+    "topScore": 39,
+    "partial": false
+  },
+  "70": {
+    "topDriverId": "wolfgang-von-trips",
+    "topDriverName": "Wolfgang von Trips",
+    "topScore": 51,
+    "partial": true
+  },
+  "71": {
+    "topDriverId": "peter-collins",
+    "topDriverName": "Peter Collins",
+    "topScore": 40,
+    "partial": false
+  },
+  "72": {
+    "topDriverId": "tony-brooks",
+    "topDriverName": "Tony Brooks",
+    "topScore": 36,
+    "partial": false
+  },
+  "73": {
+    "topDriverId": "stirling-moss",
+    "topDriverName": "Stirling Moss",
+    "topScore": 35,
+    "partial": false
+  },
+  "74": {
+    "topDriverId": "tony-brooks",
+    "topDriverName": "Tony Brooks",
+    "topScore": 36,
+    "partial": true
+  },
+  "75": {
+    "topDriverId": "stirling-moss",
+    "topDriverName": "Stirling Moss",
+    "topScore": 41,
+    "partial": false
+  },
+  "76": {
+    "topDriverId": "jack-brabham",
+    "topDriverName": "Jack Brabham",
+    "topScore": 42,
+    "partial": false
+  },
+  "77": {
+    "topDriverId": "rodger-ward",
+    "topDriverName": "Rodger Ward",
+    "topScore": 40,
+    "partial": false
+  },
+  "78": {
+    "topDriverId": "jo-bonnier",
+    "topDriverName": "Jo Bonnier",
+    "topScore": 35,
+    "partial": false
+  },
+  "79": {
+    "topDriverId": "tony-brooks",
+    "topDriverName": "Tony Brooks",
+    "topScore": 35,
+    "partial": true
+  },
+  "80": {
+    "topDriverId": "stirling-moss",
+    "topDriverName": "Stirling Moss",
+    "topScore": 37,
+    "partial": false
+  },
+  "81": {
+    "topDriverId": "tony-brooks",
+    "topDriverName": "Tony Brooks",
+    "topScore": 39,
+    "partial": true
+  },
+  "82": {
+    "topDriverId": "stirling-moss",
+    "topDriverName": "Stirling Moss",
+    "topScore": 40,
+    "partial": false
+  },
+  "83": {
+    "topDriverId": "stirling-moss",
+    "topDriverName": "Stirling Moss",
+    "topScore": 35,
+    "partial": false
+  },
+  "84": {
+    "topDriverId": "bruce-mclaren",
+    "topDriverName": "Bruce McLaren",
+    "topScore": 44,
+    "partial": false
+  },
+  "85": {
+    "topDriverId": "bruce-mclaren",
+    "topDriverName": "Bruce McLaren",
+    "topScore": 49,
+    "partial": true
+  },
+  "86": {
+    "topDriverId": "bruce-mclaren",
+    "topDriverName": "Bruce McLaren",
+    "topScore": 41,
+    "partial": false
+  },
+  "87": {
+    "topDriverId": "paul-goldsmith",
+    "topDriverName": "Paul Goldsmith",
+    "topScore": 61,
+    "partial": false
+  },
+  "88": {
+    "topDriverId": "jack-brabham",
+    "topDriverName": "Jack Brabham",
+    "topScore": 36,
+    "partial": false
+  },
+  "89": {
+    "topDriverId": "jack-brabham",
+    "topDriverName": "Jack Brabham",
+    "topScore": 40,
+    "partial": false
+  },
+  "90": {
+    "topDriverId": "jack-brabham",
+    "topDriverName": "Jack Brabham",
+    "topScore": 40,
+    "partial": false
+  },
+  "91": {
+    "topDriverId": "john-surtees",
+    "topDriverName": "John Surtees",
+    "topScore": 36,
+    "partial": false
+  },
+  "92": {
+    "topDriverId": "jack-brabham",
+    "topDriverName": "Jack Brabham",
+    "topScore": 37,
+    "partial": true
+  },
+  "93": {
+    "topDriverId": "phil-hill",
+    "topDriverName": "Phil Hill",
+    "topScore": 40,
+    "partial": true
+  },
+  "94": {
+    "topDriverId": "stirling-moss",
+    "topDriverName": "Stirling Moss",
+    "topScore": 35,
+    "partial": false
+  },
+  "95": {
+    "topDriverId": "stirling-moss",
+    "topDriverName": "Stirling Moss",
+    "topScore": 40,
+    "partial": false
+  },
+  "96": {
+    "topDriverId": "wolfgang-von-trips",
+    "topDriverName": "Wolfgang von Trips",
+    "topScore": 36,
+    "partial": false
+  },
+  "97": {
+    "topDriverId": "phil-hill",
+    "topDriverName": "Phil Hill",
+    "topScore": 35,
+    "partial": true
+  },
+  "98": {
+    "topDriverId": "giancarlo-baghetti",
+    "topDriverName": "Giancarlo Baghetti",
+    "topScore": 47,
+    "partial": true
+  },
+  "99": {
+    "topDriverId": "wolfgang-von-trips",
+    "topDriverName": "Wolfgang von Trips",
+    "topScore": 38,
+    "partial": true
+  },
+  "100": {
+    "topDriverId": "stirling-moss",
+    "topDriverName": "Stirling Moss",
+    "topScore": 37,
+    "partial": false
+  },
+  "101": {
+    "topDriverId": "phil-hill",
+    "topDriverName": "Phil Hill",
+    "topScore": 38,
+    "partial": true
+  },
+  "102": {
+    "topDriverId": "innes-ireland",
+    "topDriverName": "Innes Ireland",
+    "topScore": 42,
+    "partial": true
+  },
+  "103": {
+    "topDriverId": "graham-hill",
+    "topDriverName": "Graham Hill",
+    "topScore": 36,
+    "partial": false
+  },
+  "104": {
+    "topDriverId": "bruce-mclaren",
+    "topDriverName": "Bruce McLaren",
+    "topScore": 37,
+    "partial": false
+  },
+  "105": {
+    "topDriverId": "jim-clark",
+    "topDriverName": "Jim Clark",
+    "topScore": 52,
+    "partial": false
+  },
+  "106": {
+    "topDriverId": "dan-gurney",
+    "topDriverName": "Dan Gurney",
+    "topScore": 40,
+    "partial": false
+  },
+  "107": {
+    "topDriverId": "jim-clark",
+    "topDriverName": "Jim Clark",
+    "topScore": 40,
+    "partial": false
+  },
+  "108": {
+    "topDriverId": "graham-hill",
+    "topDriverName": "Graham Hill",
+    "topScore": 41,
+    "partial": false
+  },
+  "109": {
+    "topDriverId": "graham-hill",
+    "topDriverName": "Graham Hill",
+    "topScore": 41,
+    "partial": false
+  },
+  "110": {
+    "topDriverId": "jim-clark",
+    "topDriverName": "Jim Clark",
+    "topScore": 40,
+    "partial": true
+  },
+  "111": {
+    "topDriverId": "graham-hill",
+    "topDriverName": "Graham Hill",
+    "topScore": 36,
+    "partial": false
+  },
+  "112": {
+    "topDriverId": "graham-hill",
+    "topDriverName": "Graham Hill",
+    "topScore": 36,
+    "partial": false
+  },
+  "113": {
+    "topDriverId": "jim-clark",
+    "topDriverName": "Jim Clark",
+    "topScore": 47,
+    "partial": false
+  },
+  "114": {
+    "topDriverId": "dan-gurney",
+    "topDriverName": "Dan Gurney",
+    "topScore": 42,
+    "partial": false
+  },
+  "115": {
+    "topDriverId": "jim-clark",
+    "topDriverName": "Jim Clark",
+    "topScore": 40,
+    "partial": false
+  },
+  "116": {
+    "topDriverId": "jim-clark",
+    "topDriverName": "Jim Clark",
+    "topScore": 35,
+    "partial": false
+  },
+  "117": {
+    "topDriverId": "john-surtees",
+    "topDriverName": "John Surtees",
+    "topScore": 41,
+    "partial": false
+  },
+  "118": {
+    "topDriverId": "jim-clark",
+    "topDriverName": "Jim Clark",
+    "topScore": 42,
+    "partial": false
+  },
+  "119": {
+    "topDriverId": "graham-hill",
+    "topDriverName": "Graham Hill",
+    "topScore": 35,
+    "partial": false
+  },
+  "120": {
+    "topDriverId": "jim-clark",
+    "topDriverName": "Jim Clark",
+    "topScore": 40,
+    "partial": true
+  },
+  "121": {
+    "topDriverId": "jim-clark",
+    "topDriverName": "Jim Clark",
+    "topScore": 35,
+    "partial": false
+  },
+  "122": {
+    "topDriverId": "graham-hill",
+    "topDriverName": "Graham Hill",
+    "topScore": 42,
+    "partial": false
+  },
+  "123": {
+    "topDriverId": "jim-clark",
+    "topDriverName": "Jim Clark",
+    "topScore": 41,
+    "partial": false
+  },
+  "124": {
+    "topDriverId": "jim-clark",
+    "topDriverName": "Jim Clark",
+    "topScore": 40,
+    "partial": false
+  },
+  "125": {
+    "topDriverId": "dan-gurney",
+    "topDriverName": "Dan Gurney",
+    "topScore": 36,
+    "partial": false
+  },
+  "126": {
+    "topDriverId": "jim-clark",
+    "topDriverName": "Jim Clark",
+    "topScore": 40,
+    "partial": false
+  },
+  "127": {
+    "topDriverId": "john-surtees",
+    "topDriverName": "John Surtees",
+    "topScore": 40,
+    "partial": false
+  },
+  "128": {
+    "topDriverId": "tony-maggs",
+    "topDriverName": "Tony Maggs",
+    "topScore": 42,
+    "partial": false
+  },
+  "129": {
+    "topDriverId": "john-surtees",
+    "topDriverName": "John Surtees",
+    "topScore": 40,
+    "partial": false
+  },
+  "130": {
+    "topDriverId": "graham-hill",
+    "topDriverName": "Graham Hill",
+    "topScore": 38,
+    "partial": true
+  },
+  "131": {
+    "topDriverId": "dan-gurney",
+    "topDriverName": "Dan Gurney",
+    "topScore": 36,
+    "partial": false
+  },
+  "132": {
+    "topDriverId": "jim-clark",
+    "topDriverName": "Jim Clark",
+    "topScore": 40,
+    "partial": true
+  },
+  "133": {
+    "topDriverId": "graham-hill",
+    "topDriverName": "Graham Hill",
+    "topScore": 40,
+    "partial": false
+  },
+  "134": {
+    "topDriverId": "jim-clark",
+    "topDriverName": "Jim Clark",
+    "topScore": 41,
+    "partial": false
+  },
+  "135": {
+    "topDriverId": "jim-clark",
+    "topDriverName": "Jim Clark",
+    "topScore": 40,
+    "partial": false
+  },
+  "136": {
+    "topDriverId": "jim-clark",
+    "topDriverName": "Jim Clark",
+    "topScore": 35,
+    "partial": false
+  },
+  "137": {
+    "topDriverId": "jim-clark",
+    "topDriverName": "Jim Clark",
+    "topScore": 41,
+    "partial": false
+  },
+  "138": {
+    "topDriverId": "jim-clark",
+    "topDriverName": "Jim Clark",
+    "topScore": 40,
+    "partial": false
+  },
+  "139": {
+    "topDriverId": "jackie-stewart",
+    "topDriverName": "Jackie Stewart",
+    "topScore": 37,
+    "partial": false
+  },
+  "140": {
+    "topDriverId": "graham-hill",
+    "topDriverName": "Graham Hill",
+    "topScore": 40,
+    "partial": false
+  },
+  "141": {
+    "topDriverId": "richie-ginther",
+    "topDriverName": "Richie Ginther",
+    "topScore": 37,
+    "partial": false
+  },
+  "142": {
+    "topDriverId": "jackie-stewart",
+    "topDriverName": "Jackie Stewart",
+    "topScore": 37,
+    "partial": false
+  },
+  "143": {
+    "topDriverId": "john-surtees",
+    "topDriverName": "John Surtees",
+    "topScore": 40,
+    "partial": false
+  },
+  "144": {
+    "topDriverId": "jack-brabham",
+    "topDriverName": "Jack Brabham",
+    "topScore": 38,
+    "partial": false
+  },
+  "145": {
+    "topDriverId": "jack-brabham",
+    "topDriverName": "Jack Brabham",
+    "topScore": 40,
+    "partial": false
+  },
+  "146": {
+    "topDriverId": "jack-brabham",
+    "topDriverName": "Jack Brabham",
+    "topScore": 35,
+    "partial": false
+  },
+  "147": {
+    "topDriverId": "jack-brabham",
+    "topDriverName": "Jack Brabham",
+    "topScore": 39,
+    "partial": false
+  },
+  "148": {
+    "topDriverId": "ludovico-scarfiotti",
+    "topDriverName": "Ludovico Scarfiotti",
+    "topScore": 41,
+    "partial": false
+  },
+  "149": {
+    "topDriverId": "jim-clark",
+    "topDriverName": "Jim Clark",
+    "topScore": 36,
+    "partial": false
+  },
+  "150": {
+    "topDriverId": "john-surtees",
+    "topDriverName": "John Surtees",
+    "topScore": 35,
+    "partial": false
+  },
+  "151": {
+    "topDriverId": "pedro-rodriguez",
+    "topDriverName": "Pedro Rodríguez",
+    "topScore": 38,
+    "partial": false
+  },
+  "152": {
+    "topDriverId": "denny-hulme",
+    "topDriverName": "Denny Hulme",
+    "topScore": 38,
+    "partial": false
+  },
+  "153": {
+    "topDriverId": "jim-clark",
+    "topDriverName": "Jim Clark",
+    "topScore": 47,
+    "partial": false
+  },
+  "154": {
+    "topDriverId": "dan-gurney",
+    "topDriverName": "Dan Gurney",
+    "topScore": 41,
+    "partial": false
+  },
+  "155": {
+    "topDriverId": "jack-brabham",
+    "topDriverName": "Jack Brabham",
+    "topScore": 36,
+    "partial": false
+  },
+  "156": {
+    "topDriverId": "jim-clark",
+    "topDriverName": "Jim Clark",
+    "topScore": 35,
+    "partial": false
+  },
+  "157": {
+    "topDriverId": "jackie-oliver",
+    "topDriverName": "Jackie Oliver",
+    "topScore": 38,
+    "partial": false
+  },
+  "158": {
+    "topDriverId": "jack-brabham",
+    "topDriverName": "Jack Brabham",
+    "topScore": 41,
+    "partial": false
+  },
+  "159": {
+    "topDriverId": "john-surtees",
+    "topDriverName": "John Surtees",
+    "topScore": 43,
+    "partial": false
+  },
+  "160": {
+    "topDriverId": "jim-clark",
+    "topDriverName": "Jim Clark",
+    "topScore": 36,
+    "partial": false
+  },
+  "161": {
+    "topDriverId": "jim-clark",
+    "topDriverName": "Jim Clark",
+    "topScore": 40,
+    "partial": false
+  },
+  "162": {
+    "topDriverId": "jim-clark",
+    "topDriverName": "Jim Clark",
+    "topScore": 40,
+    "partial": false
+  },
+  "163": {
+    "topDriverId": "graham-hill",
+    "topDriverName": "Graham Hill",
+    "topScore": 40,
+    "partial": false
+  },
+  "164": {
+    "topDriverId": "lucien-bianchi",
+    "topDriverName": "Lucien Bianchi",
+    "topScore": 37,
+    "partial": false
+  },
+  "165": {
+    "topDriverId": "bruce-mclaren",
+    "topDriverName": "Bruce McLaren",
+    "topScore": 40,
+    "partial": false
+  },
+  "166": {
+    "topDriverId": "jean-pierre-beltoise",
+    "topDriverName": "Jean-Pierre Beltoise",
+    "topScore": 51,
+    "partial": false
+  },
+  "167": {
+    "topDriverId": "vic-elford",
+    "topDriverName": "Vic Elford",
+    "topScore": 38,
+    "partial": false
+  },
+  "168": {
+    "topDriverId": "jo-siffert",
+    "topDriverName": "Jo Siffert",
+    "topScore": 43,
+    "partial": false
+  },
+  "169": {
+    "topDriverId": "jackie-stewart",
+    "topDriverName": "Jackie Stewart",
+    "topScore": 45,
+    "partial": false
+  },
+  "170": {
+    "topDriverId": "denny-hulme",
+    "topDriverName": "Denny Hulme",
+    "topScore": 41,
+    "partial": false
+  },
+  "171": {
+    "topDriverId": "denny-hulme",
+    "topDriverName": "Denny Hulme",
+    "topScore": 40,
+    "partial": false
+  },
+  "172": {
+    "topDriverId": "jackie-stewart",
+    "topDriverName": "Jackie Stewart",
+    "topScore": 41,
+    "partial": false
+  },
+  "173": {
+    "topDriverId": "graham-hill",
+    "topDriverName": "Graham Hill",
+    "topScore": 37,
+    "partial": false
+  },
+  "174": {
+    "topDriverId": "jackie-stewart",
+    "topDriverName": "Jackie Stewart",
+    "topScore": 43,
+    "partial": false
+  },
+  "175": {
+    "topDriverId": "bruce-mclaren",
+    "topDriverName": "Bruce McLaren",
+    "topScore": 40,
+    "partial": false
+  },
+  "176": {
+    "topDriverId": "graham-hill",
+    "topDriverName": "Graham Hill",
+    "topScore": 38,
+    "partial": false
+  },
+  "177": {
+    "topDriverId": "jackie-stewart",
+    "topDriverName": "Jackie Stewart",
+    "topScore": 41,
+    "partial": false
+  },
+  "178": {
+    "topDriverId": "jackie-stewart",
+    "topDriverName": "Jackie Stewart",
+    "topScore": 40,
+    "partial": false
+  },
+  "179": {
+    "topDriverId": "jackie-stewart",
+    "topDriverName": "Jackie Stewart",
+    "topScore": 41,
+    "partial": false
+  },
+  "180": {
+    "topDriverId": "jacky-ickx",
+    "topDriverName": "Jacky Ickx",
+    "topScore": 40,
+    "partial": false
+  },
+  "181": {
+    "topDriverId": "jackie-stewart",
+    "topDriverName": "Jackie Stewart",
+    "topScore": 37,
+    "partial": false
+  },
+  "182": {
+    "topDriverId": "jacky-ickx",
+    "topDriverName": "Jacky Ickx",
+    "topScore": 40,
+    "partial": false
+  },
+  "183": {
+    "topDriverId": "jochen-rindt",
+    "topDriverName": "Jochen Rindt",
+    "topScore": 40,
+    "partial": false
+  },
+  "184": {
+    "topDriverId": "denny-hulme",
+    "topDriverName": "Denny Hulme",
+    "topScore": 38,
+    "partial": false
+  },
+  "185": {
+    "topDriverId": "jack-brabham",
+    "topDriverName": "Jack Brabham",
+    "topScore": 42,
+    "partial": false
+  },
+  "186": {
+    "topDriverId": "mario-andretti",
+    "topDriverName": "Mario Andretti",
+    "topScore": 41,
+    "partial": false
+  },
+  "187": {
+    "topDriverId": "jochen-rindt",
+    "topDriverName": "Jochen Rindt",
+    "topScore": 47,
+    "partial": false
+  },
+  "188": {
+    "topDriverId": "pedro-rodriguez",
+    "topDriverName": "Pedro Rodríguez",
+    "topScore": 40,
+    "partial": false
+  },
+  "189": {
+    "topDriverId": "jochen-rindt",
+    "topDriverName": "Jochen Rindt",
+    "topScore": 35,
+    "partial": false
+  },
+  "190": {
+    "topDriverId": "jochen-rindt",
+    "topDriverName": "Jochen Rindt",
+    "topScore": 40,
+    "partial": false
+  },
+  "191": {
+    "topDriverId": "graham-hill",
+    "topDriverName": "Graham Hill",
+    "topScore": 40,
+    "partial": false
+  },
+  "192": {
+    "topDriverId": "denny-hulme",
+    "topDriverName": "Denny Hulme",
+    "topScore": 41,
+    "partial": false
+  },
+  "193": {
+    "topDriverId": "pedro-rodriguez",
+    "topDriverName": "Pedro Rodríguez",
+    "topScore": 48,
+    "partial": false
+  },
+  "194": {
+    "topDriverId": "clay-regazzoni",
+    "topDriverName": "Clay Regazzoni",
+    "topScore": 42,
+    "partial": false
+  },
+  "195": {
+    "topDriverId": "jacky-ickx",
+    "topDriverName": "Jacky Ickx",
+    "topScore": 36,
+    "partial": false
+  },
+  "196": {
+    "topDriverId": "emerson-fittipaldi",
+    "topDriverName": "Emerson Fittipaldi",
+    "topScore": 37,
+    "partial": false
+  },
+  "197": {
+    "topDriverId": "jacky-ickx",
+    "topDriverName": "Jacky Ickx",
+    "topScore": 42,
+    "partial": false
+  },
+  "198": {
+    "topDriverId": "mario-andretti",
+    "topDriverName": "Mario Andretti",
+    "topScore": 43,
+    "partial": false
+  },
+  "199": {
+    "topDriverId": "jackie-stewart",
+    "topDriverName": "Jackie Stewart",
+    "topScore": 38,
+    "partial": false
+  },
+  "200": {
+    "topDriverId": "jackie-stewart",
+    "topDriverName": "Jackie Stewart",
+    "topScore": 40,
+    "partial": false
+  },
+  "201": {
+    "topDriverId": "jacky-ickx",
+    "topDriverName": "Jacky Ickx",
+    "topScore": 40,
+    "partial": true
+  },
+  "202": {
+    "topDriverId": "emerson-fittipaldi",
+    "topDriverName": "Emerson Fittipaldi",
+    "topScore": 43,
+    "partial": false
+  },
+  "203": {
+    "topDriverId": "jackie-stewart",
+    "topDriverName": "Jackie Stewart",
+    "topScore": 41,
+    "partial": false
+  },
+  "204": {
+    "topDriverId": "jackie-stewart",
+    "topDriverName": "Jackie Stewart",
+    "topScore": 35,
+    "partial": false
+  },
+  "205": {
+    "topDriverId": "jo-siffert",
+    "topDriverName": "Jo Siffert",
+    "topScore": 40,
+    "partial": false
+  },
+  "206": {
+    "topDriverId": "peter-gethin",
+    "topDriverName": "Peter Gethin",
+    "topScore": 45,
+    "partial": false
+  },
+  "207": {
+    "topDriverId": "jackie-stewart",
+    "topDriverName": "Jackie Stewart",
+    "topScore": 35,
+    "partial": false
+  },
+  "208": {
+    "topDriverId": "francois-cevert",
+    "topDriverName": "François Cevert",
+    "topScore": 39,
+    "partial": false
+  },
+  "209": {
+    "topDriverId": "jackie-stewart",
+    "topDriverName": "Jackie Stewart",
+    "topScore": 41,
+    "partial": false
+  },
+  "210": {
+    "topDriverId": "denny-hulme",
+    "topDriverName": "Denny Hulme",
+    "topScore": 39,
+    "partial": false
+  },
+  "211": {
+    "topDriverId": "emerson-fittipaldi",
+    "topDriverName": "Emerson Fittipaldi",
+    "topScore": 37,
+    "partial": false
+  },
+  "212": {
+    "topDriverId": "jean-pierre-beltoise",
+    "topDriverName": "Jean-Pierre Beltoise",
+    "topScore": 43,
+    "partial": false
+  },
+  "213": {
+    "topDriverId": "emerson-fittipaldi",
+    "topDriverName": "Emerson Fittipaldi",
+    "topScore": 35,
+    "partial": false
+  },
+  "214": {
+    "topDriverId": "jackie-stewart",
+    "topDriverName": "Jackie Stewart",
+    "topScore": 37,
+    "partial": false
+  },
+  "215": {
+    "topDriverId": "chris-amon",
+    "topDriverName": "Chris Amon",
+    "topScore": 38,
+    "partial": false
+  },
+  "216": {
+    "topDriverId": "mike-beuttler",
+    "topDriverName": "Mike Beuttler",
+    "topScore": 42,
+    "partial": false
+  },
+  "217": {
+    "topDriverId": "denny-hulme",
+    "topDriverName": "Denny Hulme",
+    "topScore": 37,
+    "partial": false
+  },
+  "218": {
+    "topDriverId": "emerson-fittipaldi",
+    "topDriverName": "Emerson Fittipaldi",
+    "topScore": 40,
+    "partial": false
+  },
+  "219": {
+    "topDriverId": "jackie-stewart",
+    "topDriverName": "Jackie Stewart",
+    "topScore": 44,
+    "partial": false
+  },
+  "220": {
+    "topDriverId": "ronnie-peterson",
+    "topDriverName": "Ronnie Peterson",
+    "topScore": 56,
+    "partial": true
+  },
+  "221": {
+    "topDriverId": "emerson-fittipaldi",
+    "topDriverName": "Emerson Fittipaldi",
+    "topScore": 41,
+    "partial": false
+  },
+  "222": {
+    "topDriverId": "emerson-fittipaldi",
+    "topDriverName": "Emerson Fittipaldi",
+    "topScore": 41,
+    "partial": false
+  },
+  "223": {
+    "topDriverId": "jackie-stewart",
+    "topDriverName": "Jackie Stewart",
+    "topScore": 55,
+    "partial": false
+  },
+  "224": {
+    "topDriverId": "emerson-fittipaldi",
+    "topDriverName": "Emerson Fittipaldi",
+    "topScore": 41,
+    "partial": false
+  },
+  "225": {
+    "topDriverId": "jackie-stewart",
+    "topDriverName": "Jackie Stewart",
+    "topScore": 40,
+    "partial": false
+  },
+  "226": {
+    "topDriverId": "andrea-de-adamich",
+    "topDriverName": "Andrea de Adamich",
+    "topScore": 42,
+    "partial": false
+  },
+  "227": {
+    "topDriverId": "denny-hulme",
+    "topDriverName": "Denny Hulme",
+    "topScore": 45,
+    "partial": false
+  },
+  "228": {
+    "topDriverId": "ronnie-peterson",
+    "topDriverName": "Ronnie Peterson",
+    "topScore": 39,
+    "partial": false
+  },
+  "229": {
+    "topDriverId": "peter-revson",
+    "topDriverName": "Peter Revson",
+    "topScore": 37,
+    "partial": false
+  },
+  "230": {
+    "topDriverId": "jackie-stewart",
+    "topDriverName": "Jackie Stewart",
+    "topScore": 36,
+    "partial": false
+  },
+  "231": {
+    "topDriverId": "jackie-stewart",
+    "topDriverName": "Jackie Stewart",
+    "topScore": 35,
+    "partial": false
+  },
+  "232": {
+    "topDriverId": "ronnie-peterson",
+    "topDriverName": "Ronnie Peterson",
+    "topScore": 36,
+    "partial": true
+  },
+  "233": {
+    "topDriverId": "ronnie-peterson",
+    "topDriverName": "Ronnie Peterson",
+    "topScore": 35,
+    "partial": false
+  },
+  "234": {
+    "topDriverId": "howden-ganley",
+    "topDriverName": "Howden Ganley",
+    "topScore": 40,
+    "partial": false
+  },
+  "235": {
+    "topDriverId": "jacky-ickx",
+    "topDriverName": "Jacky Ickx",
+    "topScore": 38,
+    "partial": false
+  },
+  "236": {
+    "topDriverId": "denny-hulme",
+    "topDriverName": "Denny Hulme",
+    "topScore": 44,
+    "partial": false
+  },
+  "237": {
+    "topDriverId": "clay-regazzoni",
+    "topDriverName": "Clay Regazzoni",
+    "topScore": 38,
+    "partial": false
+  },
+  "238": {
+    "topDriverId": "carlos-reutemann",
+    "topDriverName": "Carlos Reutemann",
+    "topScore": 43,
+    "partial": false
+  },
+  "239": {
+    "topDriverId": "niki-lauda",
+    "topDriverName": "Niki Lauda",
+    "topScore": 40,
+    "partial": true
+  },
+  "240": {
+    "topDriverId": "graham-hill",
+    "topDriverName": "Graham Hill",
+    "topScore": 46,
+    "partial": false
+  },
+  "241": {
+    "topDriverId": "ronnie-peterson",
+    "topDriverName": "Ronnie Peterson",
+    "topScore": 42,
+    "partial": false
+  },
+  "242": {
+    "topDriverId": "jody-scheckter",
+    "topDriverName": "Jody Scheckter",
+    "topScore": 36,
+    "partial": false
+  },
+  "243": {
+    "topDriverId": "niki-lauda",
+    "topDriverName": "Niki Lauda",
+    "topScore": 35,
+    "partial": false
+  },
+  "244": {
+    "topDriverId": "ronnie-peterson",
+    "topDriverName": "Ronnie Peterson",
+    "topScore": 36,
+    "partial": false
+  },
+  "245": {
+    "topDriverId": "jody-scheckter",
+    "topDriverName": "Jody Scheckter",
+    "topScore": 37,
+    "partial": false
+  },
+  "246": {
+    "topDriverId": "clay-regazzoni",
+    "topDriverName": "Clay Regazzoni",
+    "topScore": 36,
+    "partial": false
+  },
+  "247": {
+    "topDriverId": "carlos-reutemann",
+    "topDriverName": "Carlos Reutemann",
+    "topScore": 36,
+    "partial": false
+  },
+  "248": {
+    "topDriverId": "ronnie-peterson",
+    "topDriverName": "Ronnie Peterson",
+    "topScore": 41,
+    "partial": false
+  },
+  "249": {
+    "topDriverId": "emerson-fittipaldi",
+    "topDriverName": "Emerson Fittipaldi",
+    "topScore": 35,
+    "partial": false
+  },
+  "250": {
+    "topDriverId": "graham-hill",
+    "topDriverName": "Graham Hill",
+    "topScore": 36,
+    "partial": false
+  },
+  "251": {
+    "topDriverId": "emerson-fittipaldi",
+    "topDriverName": "Emerson Fittipaldi",
+    "topScore": 39,
+    "partial": false
+  },
+  "252": {
+    "topDriverId": "carlos-pace",
+    "topDriverName": "Carlos Pace",
+    "topScore": 40,
+    "partial": false
+  },
+  "253": {
+    "topDriverId": "jody-scheckter",
+    "topDriverName": "Jody Scheckter",
+    "topScore": 37,
+    "partial": false
+  },
+  "254": {
+    "topDriverId": "jacky-ickx",
+    "topDriverName": "Jacky Ickx",
+    "topScore": 46,
+    "partial": false
+  },
+  "255": {
+    "topDriverId": "niki-lauda",
+    "topDriverName": "Niki Lauda",
+    "topScore": 35,
+    "partial": false
+  },
+  "256": {
+    "topDriverId": "niki-lauda",
+    "topDriverName": "Niki Lauda",
+    "topScore": 35,
+    "partial": false
+  },
+  "257": {
+    "topDriverId": "niki-lauda",
+    "topDriverName": "Niki Lauda",
+    "topScore": 44,
+    "partial": false
+  },
+  "258": {
+    "topDriverId": "james-hunt",
+    "topDriverName": "James Hunt",
+    "topScore": 37,
+    "partial": false
+  },
+  "259": {
+    "topDriverId": "niki-lauda",
+    "topDriverName": "Niki Lauda",
+    "topScore": 35,
+    "partial": false
+  },
+  "260": {
+    "topDriverId": "emerson-fittipaldi",
+    "topDriverName": "Emerson Fittipaldi",
+    "topScore": 41,
+    "partial": false
+  },
+  "261": {
+    "topDriverId": "carlos-reutemann",
+    "topDriverName": "Carlos Reutemann",
+    "topScore": 44,
+    "partial": false
+  },
+  "262": {
+    "topDriverId": "vittorio-brambilla",
+    "topDriverName": "Vittorio Brambilla",
+    "topScore": 47,
+    "partial": false
+  },
+  "263": {
+    "topDriverId": "clay-regazzoni",
+    "topDriverName": "Clay Regazzoni",
+    "topScore": 41,
+    "partial": false
+  },
+  "264": {
+    "topDriverId": "niki-lauda",
+    "topDriverName": "Niki Lauda",
+    "topScore": 35,
+    "partial": false
+  },
+  "265": {
+    "topDriverId": "niki-lauda",
+    "topDriverName": "Niki Lauda",
+    "topScore": 36,
+    "partial": false
+  },
+  "266": {
+    "topDriverId": "niki-lauda",
+    "topDriverName": "Niki Lauda",
+    "topScore": 41,
+    "partial": false
+  },
+  "267": {
+    "topDriverId": "clay-regazzoni",
+    "topDriverName": "Clay Regazzoni",
+    "topScore": 40,
+    "partial": false
+  },
+  "268": {
+    "topDriverId": "james-hunt",
+    "topDriverName": "James Hunt",
+    "topScore": 35,
+    "partial": false
+  },
+  "269": {
+    "topDriverId": "niki-lauda",
+    "topDriverName": "Niki Lauda",
+    "topScore": 40,
+    "partial": false
+  },
+  "270": {
+    "topDriverId": "niki-lauda",
+    "topDriverName": "Niki Lauda",
+    "topScore": 35,
+    "partial": false
+  },
+  "271": {
+    "topDriverId": "jody-scheckter",
+    "topDriverName": "Jody Scheckter",
+    "topScore": 35,
+    "partial": false
+  },
+  "272": {
+    "topDriverId": "james-hunt",
+    "topDriverName": "James Hunt",
+    "topScore": 35,
+    "partial": false
+  },
+  "273": {
+    "topDriverId": "tom-pryce",
+    "topDriverName": "Tom Pryce",
+    "topScore": 44,
+    "partial": false
+  },
+  "274": {
+    "topDriverId": "jody-scheckter",
+    "topDriverName": "Jody Scheckter",
+    "topScore": 38,
+    "partial": true
+  },
+  "275": {
+    "topDriverId": "john-watson",
+    "topDriverName": "John Watson",
+    "topScore": 36,
+    "partial": false
+  },
+  "276": {
+    "topDriverId": "james-hunt",
+    "topDriverName": "James Hunt",
+    "topScore": 36,
+    "partial": false
+  },
+  "277": {
+    "topDriverId": "ronnie-peterson",
+    "topDriverName": "Ronnie Peterson",
+    "topScore": 47,
+    "partial": false
+  },
+  "278": {
+    "topDriverId": "james-hunt",
+    "topDriverName": "James Hunt",
+    "topScore": 35,
+    "partial": false
+  },
+  "279": {
+    "topDriverId": "james-hunt",
+    "topDriverName": "James Hunt",
+    "topScore": 40,
+    "partial": false
+  },
+  "280": {
+    "topDriverId": "alan-jones",
+    "topDriverName": "Alan Jones",
+    "topScore": 44,
+    "partial": false
+  },
+  "281": {
+    "topDriverId": "jody-scheckter",
+    "topDriverName": "Jody Scheckter",
+    "topScore": 45,
+    "partial": false
+  },
+  "282": {
+    "topDriverId": "carlos-reutemann",
+    "topDriverName": "Carlos Reutemann",
+    "topScore": 36,
+    "partial": false
+  },
+  "283": {
+    "topDriverId": "niki-lauda",
+    "topDriverName": "Niki Lauda",
+    "topScore": 37,
+    "partial": false
+  },
+  "284": {
+    "topDriverId": "mario-andretti",
+    "topDriverName": "Mario Andretti",
+    "topScore": 36,
+    "partial": false
+  },
+  "285": {
+    "topDriverId": "mario-andretti",
+    "topDriverName": "Mario Andretti",
+    "topScore": 35,
+    "partial": false
+  },
+  "286": {
+    "topDriverId": "jody-scheckter",
+    "topDriverName": "Jody Scheckter",
+    "topScore": 41,
+    "partial": false
+  },
+  "287": {
+    "topDriverId": "gunnar-nilsson",
+    "topDriverName": "Gunnar Nilsson",
+    "topScore": 42,
+    "partial": false
+  },
+  "288": {
+    "topDriverId": "jacques-laffite",
+    "topDriverName": "Jacques Laffite",
+    "topScore": 42,
+    "partial": false
+  },
+  "289": {
+    "topDriverId": "mario-andretti",
+    "topDriverName": "Mario Andretti",
+    "topScore": 40,
+    "partial": false
+  },
+  "290": {
+    "topDriverId": "james-hunt",
+    "topDriverName": "James Hunt",
+    "topScore": 40,
+    "partial": true
+  },
+  "291": {
+    "topDriverId": "niki-lauda",
+    "topDriverName": "Niki Lauda",
+    "topScore": 42,
+    "partial": false
+  },
+  "292": {
+    "topDriverId": "alan-jones",
+    "topDriverName": "Alan Jones",
+    "topScore": 51,
+    "partial": false
+  },
+  "293": {
+    "topDriverId": "niki-lauda",
+    "topDriverName": "Niki Lauda",
+    "topScore": 43,
+    "partial": false
+  },
+  "294": {
+    "topDriverId": "mario-andretti",
+    "topDriverName": "Mario Andretti",
+    "topScore": 43,
+    "partial": false
+  },
+  "295": {
+    "topDriverId": "clay-regazzoni",
+    "topDriverName": "Clay Regazzoni",
+    "topScore": 38,
+    "partial": false
+  },
+  "296": {
+    "topDriverId": "jody-scheckter",
+    "topDriverName": "Jody Scheckter",
+    "topScore": 43,
+    "partial": false
+  },
+  "297": {
+    "topDriverId": "patrick-depailler",
+    "topDriverName": "Patrick Depailler",
+    "topScore": 39,
+    "partial": false
+  },
+  "298": {
+    "topDriverId": "mario-andretti",
+    "topDriverName": "Mario Andretti",
+    "topScore": 35,
+    "partial": false
+  },
+  "299": {
+    "topDriverId": "carlos-reutemann",
+    "topDriverName": "Carlos Reutemann",
+    "topScore": 43,
+    "partial": false
+  },
+  "300": {
+    "topDriverId": "ronnie-peterson",
+    "topDriverName": "Ronnie Peterson",
+    "topScore": 45,
+    "partial": false
+  },
+  "301": {
+    "topDriverId": "carlos-reutemann",
+    "topDriverName": "Carlos Reutemann",
+    "topScore": 35,
+    "partial": true
+  },
+  "302": {
+    "topDriverId": "patrick-depailler",
+    "topDriverName": "Patrick Depailler",
+    "topScore": 39,
+    "partial": true
+  },
+  "303": {
+    "topDriverId": "didier-pironi",
+    "topDriverName": "Didier Pironi",
+    "topScore": 42,
+    "partial": true
+  },
+  "304": {
+    "topDriverId": "mario-andretti",
+    "topDriverName": "Mario Andretti",
+    "topScore": 40,
+    "partial": true
+  },
+  "305": {
+    "topDriverId": "niki-lauda",
+    "topDriverName": "Niki Lauda",
+    "topScore": 42,
+    "partial": false
+  },
+  "306": {
+    "topDriverId": "mario-andretti",
+    "topDriverName": "Mario Andretti",
+    "topScore": 36,
+    "partial": false
+  },
+  "307": {
+    "topDriverId": "carlos-reutemann",
+    "topDriverName": "Carlos Reutemann",
+    "topScore": 42,
+    "partial": false
+  },
+  "308": {
+    "topDriverId": "mario-andretti",
+    "topDriverName": "Mario Andretti",
+    "topScore": 35,
+    "partial": true
+  },
+  "309": {
+    "topDriverId": "ronnie-peterson",
+    "topDriverName": "Ronnie Peterson",
+    "topScore": 40,
+    "partial": true
+  },
+  "310": {
+    "topDriverId": "mario-andretti",
+    "topDriverName": "Mario Andretti",
+    "topScore": 35,
+    "partial": true
+  },
+  "311": {
+    "topDriverId": "niki-lauda",
+    "topDriverName": "Niki Lauda",
+    "topScore": 38,
+    "partial": true
+  },
+  "312": {
+    "topDriverId": "carlos-reutemann",
+    "topDriverName": "Carlos Reutemann",
+    "topScore": 36,
+    "partial": false
+  },
+  "313": {
+    "topDriverId": "gilles-villeneuve",
+    "topDriverName": "Gilles Villeneuve",
+    "topScore": 37,
+    "partial": false
+  },
+  "314": {
+    "topDriverId": "jacques-laffite",
+    "topDriverName": "Jacques Laffite",
+    "topScore": 40,
+    "partial": false
+  },
+  "315": {
+    "topDriverId": "jacques-laffite",
+    "topDriverName": "Jacques Laffite",
+    "topScore": 40,
+    "partial": false
+  },
+  "316": {
+    "topDriverId": "gilles-villeneuve",
+    "topDriverName": "Gilles Villeneuve",
+    "topScore": 42,
+    "partial": false
+  },
+  "317": {
+    "topDriverId": "gilles-villeneuve",
+    "topDriverName": "Gilles Villeneuve",
+    "topScore": 40,
+    "partial": false
+  },
+  "318": {
+    "topDriverId": "patrick-depailler",
+    "topDriverName": "Patrick Depailler",
+    "topScore": 36,
+    "partial": false
+  },
+  "319": {
+    "topDriverId": "jody-scheckter",
+    "topDriverName": "Jody Scheckter",
+    "topScore": 41,
+    "partial": false
+  },
+  "320": {
+    "topDriverId": "clay-regazzoni",
+    "topDriverName": "Clay Regazzoni",
+    "topScore": 46,
+    "partial": false
+  },
+  "321": {
+    "topDriverId": "jean-pierre-jabouille",
+    "topDriverName": "Jean-Pierre Jabouille",
+    "topScore": 35,
+    "partial": false
+  },
+  "322": {
+    "topDriverId": "clay-regazzoni",
+    "topDriverName": "Clay Regazzoni",
+    "topScore": 43,
+    "partial": false
+  },
+  "323": {
+    "topDriverId": "alan-jones",
+    "topDriverName": "Alan Jones",
+    "topScore": 36,
+    "partial": false
+  },
+  "324": {
+    "topDriverId": "alan-jones",
+    "topDriverName": "Alan Jones",
+    "topScore": 36,
+    "partial": false
+  },
+  "325": {
+    "topDriverId": "jacky-ickx",
+    "topDriverName": "Jacky Ickx",
+    "topScore": 40,
+    "partial": false
+  },
+  "326": {
+    "topDriverId": "jody-scheckter",
+    "topDriverName": "Jody Scheckter",
+    "topScore": 37,
+    "partial": false
+  },
+  "327": {
+    "topDriverId": "alan-jones",
+    "topDriverName": "Alan Jones",
+    "topScore": 40,
+    "partial": false
+  },
+  "328": {
+    "topDriverId": "elio-de-angelis",
+    "topDriverName": "Elio de Angelis",
+    "topScore": 44,
+    "partial": false
+  },
+  "329": {
+    "topDriverId": "derek-daly",
+    "topDriverName": "Derek Daly",
+    "topScore": 48,
+    "partial": false
+  },
+  "330": {
+    "topDriverId": "rene-arnoux",
+    "topDriverName": "René Arnoux",
+    "topScore": 45,
+    "partial": false
+  },
+  "331": {
+    "topDriverId": "rene-arnoux",
+    "topDriverName": "René Arnoux",
+    "topScore": 41,
+    "partial": false
+  },
+  "332": {
+    "topDriverId": "emerson-fittipaldi",
+    "topDriverName": "Emerson Fittipaldi",
+    "topScore": 57,
+    "partial": false
+  },
+  "333": {
+    "topDriverId": "didier-pironi",
+    "topDriverName": "Didier Pironi",
+    "topScore": 36,
+    "partial": false
+  },
+  "334": {
+    "topDriverId": "carlos-reutemann",
+    "topDriverName": "Carlos Reutemann",
+    "topScore": 41,
+    "partial": false
+  },
+  "335": {
+    "topDriverId": "alan-jones",
+    "topDriverName": "Alan Jones",
+    "topScore": 43,
+    "partial": false
+  },
+  "336": {
+    "topDriverId": "alan-jones",
+    "topDriverName": "Alan Jones",
+    "topScore": 37,
+    "partial": false
+  },
+  "337": {
+    "topDriverId": "jacques-laffite",
+    "topDriverName": "Jacques Laffite",
+    "topScore": 39,
+    "partial": false
+  },
+  "338": {
+    "topDriverId": "jean-pierre-jabouille",
+    "topDriverName": "Jean-Pierre Jabouille",
+    "topScore": 36,
+    "partial": false
+  },
+  "339": {
+    "topDriverId": "nelson-piquet",
+    "topDriverName": "Nelson Piquet",
+    "topScore": 39,
+    "partial": true
+  },
+  "340": {
+    "topDriverId": "elio-de-angelis",
+    "topDriverName": "Elio de Angelis",
+    "topScore": 40,
+    "partial": false
+  },
+  "341": {
+    "topDriverId": "gilles-villeneuve",
+    "topDriverName": "Gilles Villeneuve",
+    "topScore": 44,
+    "partial": false
+  },
+  "342": {
+    "topDriverId": "alan-jones",
+    "topDriverName": "Alan Jones",
+    "topScore": 44,
+    "partial": false
+  },
+  "343": {
+    "topDriverId": "alan-jones",
+    "topDriverName": "Alan Jones",
+    "topScore": 41,
+    "partial": false
+  },
+  "344": {
+    "topDriverId": "marc-surer",
+    "topDriverName": "Marc Surer",
+    "topScore": 45,
+    "partial": true
+  },
+  "345": {
+    "topDriverId": "nelson-piquet",
+    "topDriverName": "Nelson Piquet",
+    "topScore": 40,
+    "partial": false
+  },
+  "346": {
+    "topDriverId": "nelson-piquet",
+    "topDriverName": "Nelson Piquet",
+    "topScore": 39,
+    "partial": false
+  },
+  "347": {
+    "topDriverId": "carlos-reutemann",
+    "topDriverName": "Carlos Reutemann",
+    "topScore": 40,
+    "partial": false
+  },
+  "348": {
+    "topDriverId": "didier-pironi",
+    "topDriverName": "Didier Pironi",
+    "topScore": 38,
+    "partial": true
+  },
+  "349": {
+    "topDriverId": "gilles-villeneuve",
+    "topDriverName": "Gilles Villeneuve",
+    "topScore": 41,
+    "partial": false
+  },
+  "350": {
+    "topDriverId": "alain-prost",
+    "topDriverName": "Alain Prost",
+    "topScore": 42,
+    "partial": false
+  },
+  "351": {
+    "topDriverId": "eddie-cheever",
+    "topDriverName": "Eddie Cheever",
+    "topScore": 50,
+    "partial": false
+  },
+  "352": {
+    "topDriverId": "nelson-piquet",
+    "topDriverName": "Nelson Piquet",
+    "topScore": 40,
+    "partial": false
+  },
+  "353": {
+    "topDriverId": "jacques-laffite",
+    "topDriverName": "Jacques Laffite",
+    "topScore": 43,
+    "partial": false
+  },
+  "354": {
+    "topDriverId": "eliseo-salazar",
+    "topDriverName": "Eliseo Salazar",
+    "topScore": 44,
+    "partial": false
+  },
+  "355": {
+    "topDriverId": "alain-prost",
+    "topDriverName": "Alain Prost",
+    "topScore": 37,
+    "partial": false
+  },
+  "356": {
+    "topDriverId": "jacques-laffite",
+    "topDriverName": "Jacques Laffite",
+    "topScore": 44,
+    "partial": false
+  },
+  "357": {
+    "topDriverId": "alan-jones",
+    "topDriverName": "Alan Jones",
+    "topScore": 36,
+    "partial": false
+  },
+  "358": {
+    "topDriverId": "alain-prost",
+    "topDriverName": "Alain Prost",
+    "topScore": 44,
+    "partial": false
+  },
+  "359": {
+    "topDriverId": "alain-prost",
+    "topDriverName": "Alain Prost",
+    "topScore": 40,
+    "partial": true
+  },
+  "360": {
+    "topDriverId": "riccardo-patrese",
+    "topDriverName": "Riccardo Patrese",
+    "topScore": 45,
+    "partial": true
+  },
+  "361": {
+    "topDriverId": "didier-pironi",
+    "topDriverName": "Didier Pironi",
+    "topScore": 43,
+    "partial": false
+  },
+  "362": {
+    "topDriverId": "john-watson",
+    "topDriverName": "John Watson",
+    "topScore": 48,
+    "partial": true
+  },
+  "363": {
+    "topDriverId": "riccardo-patrese",
+    "topDriverName": "Riccardo Patrese",
+    "topScore": 41,
+    "partial": true
+  },
+  "364": {
+    "topDriverId": "john-watson",
+    "topDriverName": "John Watson",
+    "topScore": 57,
+    "partial": false
+  },
+  "365": {
+    "topDriverId": "nelson-piquet",
+    "topDriverName": "Nelson Piquet",
+    "topScore": 38,
+    "partial": false
+  },
+  "366": {
+    "topDriverId": "didier-pironi",
+    "topDriverName": "Didier Pironi",
+    "topScore": 38,
+    "partial": true
+  },
+  "367": {
+    "topDriverId": "niki-lauda",
+    "topDriverName": "Niki Lauda",
+    "topScore": 39,
+    "partial": false
+  },
+  "368": {
+    "topDriverId": "rene-arnoux",
+    "topDriverName": "René Arnoux",
+    "topScore": 35,
+    "partial": false
+  },
+  "369": {
+    "topDriverId": "marc-surer",
+    "topDriverName": "Marc Surer",
+    "topScore": 48,
+    "partial": false
+  },
+  "370": {
+    "topDriverId": "mauro-baldi",
+    "topDriverName": "Mauro Baldi",
+    "topScore": 42,
+    "partial": false
+  },
+  "371": {
+    "topDriverId": "keke-rosberg",
+    "topDriverName": "Keke Rosberg",
+    "topScore": 42,
+    "partial": false
+  },
+  "372": {
+    "topDriverId": "rene-arnoux",
+    "topDriverName": "René Arnoux",
+    "topScore": 45,
+    "partial": false
+  },
+  "373": {
+    "topDriverId": "michele-alboreto",
+    "topDriverName": "Michele Alboreto",
+    "topScore": 42,
+    "partial": false
+  },
+  "374": {
+    "topDriverId": "nelson-piquet",
+    "topDriverName": "Nelson Piquet",
+    "topScore": 43,
+    "partial": true
+  },
+  "375": {
+    "topDriverId": "john-watson",
+    "topDriverName": "John Watson",
+    "topScore": 67,
+    "partial": false
+  },
+  "376": {
+    "topDriverId": "alain-prost",
+    "topDriverName": "Alain Prost",
+    "topScore": 40,
+    "partial": false
+  },
+  "377": {
+    "topDriverId": "john-watson",
+    "topDriverName": "John Watson",
+    "topScore": 48,
+    "partial": false
+  },
+  "378": {
+    "topDriverId": "danny-sullivan",
+    "topDriverName": "Danny Sullivan",
+    "topScore": 40,
+    "partial": true
+  },
+  "379": {
+    "topDriverId": "derek-warwick",
+    "topDriverName": "Derek Warwick",
+    "topScore": 36,
+    "partial": false
+  },
+  "380": {
+    "topDriverId": "john-watson",
+    "topDriverName": "John Watson",
+    "topScore": 56,
+    "partial": false
+  },
+  "381": {
+    "topDriverId": "john-watson",
+    "topDriverName": "John Watson",
+    "topScore": 36,
+    "partial": false
+  },
+  "382": {
+    "topDriverId": "alain-prost",
+    "topDriverName": "Alain Prost",
+    "topScore": 42,
+    "partial": false
+  },
+  "383": {
+    "topDriverId": "john-watson",
+    "topDriverName": "John Watson",
+    "topScore": 46,
+    "partial": true
+  },
+  "384": {
+    "topDriverId": "alain-prost",
+    "topDriverName": "Alain Prost",
+    "topScore": 44,
+    "partial": false
+  },
+  "385": {
+    "topDriverId": "rene-arnoux",
+    "topDriverName": "René Arnoux",
+    "topScore": 49,
+    "partial": false
+  },
+  "386": {
+    "topDriverId": "nelson-piquet",
+    "topDriverName": "Nelson Piquet",
+    "topScore": 43,
+    "partial": false
+  },
+  "387": {
+    "topDriverId": "nelson-piquet",
+    "topDriverName": "Nelson Piquet",
+    "topScore": 38,
+    "partial": false
+  },
+  "388": {
+    "topDriverId": "riccardo-patrese",
+    "topDriverName": "Riccardo Patrese",
+    "topScore": 37,
+    "partial": false
+  },
+  "389": {
+    "topDriverId": "alain-prost",
+    "topDriverName": "Alain Prost",
+    "topScore": 43,
+    "partial": true
+  },
+  "390": {
+    "topDriverId": "niki-lauda",
+    "topDriverName": "Niki Lauda",
+    "topScore": 42,
+    "partial": true
+  },
+  "391": {
+    "topDriverId": "michele-alboreto",
+    "topDriverName": "Michele Alboreto",
+    "topScore": 35,
+    "partial": true
+  },
+  "392": {
+    "topDriverId": "thierry-boutsen",
+    "topDriverName": "Thierry Boutsen",
+    "topScore": 40,
+    "partial": true
+  },
+  "393": {
+    "topDriverId": "niki-lauda",
+    "topDriverName": "Niki Lauda",
+    "topScore": 43,
+    "partial": true
+  },
+  "394": {
+    "topDriverId": "ayrton-senna",
+    "topDriverName": "Ayrton Senna",
+    "topScore": 45,
+    "partial": true
+  },
+  "395": {
+    "topDriverId": "nelson-piquet",
+    "topDriverName": "Nelson Piquet",
+    "topScore": 40,
+    "partial": true
+  },
+  "396": {
+    "topDriverId": "teo-fabi",
+    "topDriverName": "Teo Fabi",
+    "topScore": 51,
+    "partial": true
+  },
+  "397": {
+    "topDriverId": "jacques-laffite",
+    "topDriverName": "Jacques Laffite",
+    "topScore": 50,
+    "partial": true
+  },
+  "398": {
+    "topDriverId": "niki-lauda",
+    "topDriverName": "Niki Lauda",
+    "topScore": 42,
+    "partial": true
+  },
+  "399": {
+    "topDriverId": "alain-prost",
+    "topDriverName": "Alain Prost",
+    "topScore": 40,
+    "partial": true
+  },
+  "400": {
+    "topDriverId": "niki-lauda",
+    "topDriverName": "Niki Lauda",
+    "topScore": 43,
+    "partial": true
+  },
+  "401": {
+    "topDriverId": "alain-prost",
+    "topDriverName": "Alain Prost",
+    "topScore": 35,
+    "partial": true
+  },
+  "402": {
+    "topDriverId": "jo-gartner",
+    "topDriverName": "Jo Gartner",
+    "topScore": 48,
+    "partial": false
+  },
+  "403": {
+    "topDriverId": "alain-prost",
+    "topDriverName": "Alain Prost",
+    "topScore": 36,
+    "partial": false
+  },
+  "404": {
+    "topDriverId": "niki-lauda",
+    "topDriverName": "Niki Lauda",
+    "topScore": 41,
+    "partial": false
+  },
+  "405": {
+    "topDriverId": "alain-prost",
+    "topDriverName": "Alain Prost",
+    "topScore": 45,
+    "partial": false
+  },
+  "406": {
+    "topDriverId": "ayrton-senna",
+    "topDriverName": "Ayrton Senna",
+    "topScore": 40,
+    "partial": false
+  },
+  "407": {
+    "topDriverId": "elio-de-angelis",
+    "topDriverName": "Elio de Angelis",
+    "topScore": 37,
+    "partial": false
+  },
+  "408": {
+    "topDriverId": "alain-prost",
+    "topDriverName": "Alain Prost",
+    "topScore": 39,
+    "partial": false
+  },
+  "409": {
+    "topDriverId": "michele-alboreto",
+    "topDriverName": "Michele Alboreto",
+    "topScore": 37,
+    "partial": false
+  },
+  "410": {
+    "topDriverId": "stefan-bellof",
+    "topDriverName": "Stefan Bellof",
+    "topScore": 42,
+    "partial": false
+  },
+  "411": {
+    "topDriverId": "nelson-piquet",
+    "topDriverName": "Nelson Piquet",
+    "topScore": 39,
+    "partial": false
+  },
+  "412": {
+    "topDriverId": "alain-prost",
+    "topDriverName": "Alain Prost",
+    "topScore": 42,
+    "partial": false
+  },
+  "413": {
+    "topDriverId": "michele-alboreto",
+    "topDriverName": "Michele Alboreto",
+    "topScore": 42,
+    "partial": false
+  },
+  "414": {
+    "topDriverId": "ayrton-senna",
+    "topDriverName": "Ayrton Senna",
+    "topScore": 42,
+    "partial": false
+  },
+  "415": {
+    "topDriverId": "niki-lauda",
+    "topDriverName": "Niki Lauda",
+    "topScore": 44,
+    "partial": false
+  },
+  "416": {
+    "topDriverId": "alain-prost",
+    "topDriverName": "Alain Prost",
+    "topScore": 39,
+    "partial": false
+  },
+  "417": {
+    "topDriverId": "ayrton-senna",
+    "topDriverName": "Ayrton Senna",
+    "topScore": 36,
+    "partial": true
+  },
+  "418": {
+    "topDriverId": "nigel-mansell",
+    "topDriverName": "Nigel Mansell",
+    "topScore": 37,
+    "partial": false
+  },
+  "419": {
+    "topDriverId": "stefan-johansson",
+    "topDriverName": "Stefan Johansson",
+    "topScore": 36,
+    "partial": false
+  },
+  "420": {
+    "topDriverId": "jacques-laffite",
+    "topDriverName": "Jacques Laffite",
+    "topScore": 54,
+    "partial": false
+  },
+  "421": {
+    "topDriverId": "nelson-piquet",
+    "topDriverName": "Nelson Piquet",
+    "topScore": 41,
+    "partial": false
+  },
+  "422": {
+    "topDriverId": "ayrton-senna",
+    "topDriverName": "Ayrton Senna",
+    "topScore": 35,
+    "partial": false
+  },
+  "423": {
+    "topDriverId": "alain-prost",
+    "topDriverName": "Alain Prost",
+    "topScore": 38,
+    "partial": false
+  },
+  "424": {
+    "topDriverId": "alain-prost",
+    "topDriverName": "Alain Prost",
+    "topScore": 40,
+    "partial": false
+  },
+  "425": {
+    "topDriverId": "nigel-mansell",
+    "topDriverName": "Nigel Mansell",
+    "topScore": 39,
+    "partial": false
+  },
+  "426": {
+    "topDriverId": "nigel-mansell",
+    "topDriverName": "Nigel Mansell",
+    "topScore": 35,
+    "partial": false
+  },
+  "427": {
+    "topDriverId": "ayrton-senna",
+    "topDriverName": "Ayrton Senna",
+    "topScore": 35,
+    "partial": false
+  },
+  "428": {
+    "topDriverId": "nigel-mansell",
+    "topDriverName": "Nigel Mansell",
+    "topScore": 41,
+    "partial": false
+  },
+  "429": {
+    "topDriverId": "nigel-mansell",
+    "topDriverName": "Nigel Mansell",
+    "topScore": 41,
+    "partial": false
+  },
+  "430": {
+    "topDriverId": "nelson-piquet",
+    "topDriverName": "Nelson Piquet",
+    "topScore": 39,
+    "partial": false
+  },
+  "431": {
+    "topDriverId": "nelson-piquet",
+    "topDriverName": "Nelson Piquet",
+    "topScore": 41,
+    "partial": false
+  },
+  "432": {
+    "topDriverId": "christian-danner",
+    "topDriverName": "Christian Danner",
+    "topScore": 40,
+    "partial": false
+  },
+  "433": {
+    "topDriverId": "nelson-piquet",
+    "topDriverName": "Nelson Piquet",
+    "topScore": 40,
+    "partial": false
+  },
+  "434": {
+    "topDriverId": "nigel-mansell",
+    "topDriverName": "Nigel Mansell",
+    "topScore": 41,
+    "partial": false
+  },
+  "435": {
+    "topDriverId": "gerhard-berger",
+    "topDriverName": "Gerhard Berger",
+    "topScore": 38,
+    "partial": false
+  },
+  "436": {
+    "topDriverId": "alain-prost",
+    "topDriverName": "Alain Prost",
+    "topScore": 38,
+    "partial": false
+  },
+  "437": {
+    "topDriverId": "alain-prost",
+    "topDriverName": "Alain Prost",
+    "topScore": 39,
+    "partial": false
+  },
+  "438": {
+    "topDriverId": "nigel-mansell",
+    "topDriverName": "Nigel Mansell",
+    "topScore": 36,
+    "partial": false
+  },
+  "439": {
+    "topDriverId": "alain-prost",
+    "topDriverName": "Alain Prost",
+    "topScore": 45,
+    "partial": false
+  },
+  "440": {
+    "topDriverId": "ayrton-senna",
+    "topDriverName": "Ayrton Senna",
+    "topScore": 41,
+    "partial": true
+  },
+  "441": {
+    "topDriverId": "ayrton-senna",
+    "topDriverName": "Ayrton Senna",
+    "topScore": 41,
+    "partial": false
+  },
+  "442": {
+    "topDriverId": "philippe-streiff",
+    "topDriverName": "Philippe Streiff",
+    "topScore": 46,
+    "partial": false
+  },
+  "443": {
+    "topDriverId": "nigel-mansell",
+    "topDriverName": "Nigel Mansell",
+    "topScore": 41,
+    "partial": false
+  },
+  "444": {
+    "topDriverId": "philippe-streiff",
+    "topDriverName": "Philippe Streiff",
+    "topScore": 48,
+    "partial": false
+  },
+  "445": {
+    "topDriverId": "nelson-piquet",
+    "topDriverName": "Nelson Piquet",
+    "topScore": 42,
+    "partial": false
+  },
+  "446": {
+    "topDriverId": "nigel-mansell",
+    "topDriverName": "Nigel Mansell",
+    "topScore": 41,
+    "partial": false
+  },
+  "447": {
+    "topDriverId": "nelson-piquet",
+    "topDriverName": "Nelson Piquet",
+    "topScore": 35,
+    "partial": false
+  },
+  "448": {
+    "topDriverId": "alain-prost",
+    "topDriverName": "Alain Prost",
+    "topScore": 37,
+    "partial": false
+  },
+  "449": {
+    "topDriverId": "nigel-mansell",
+    "topDriverName": "Nigel Mansell",
+    "topScore": 36,
+    "partial": false
+  },
+  "450": {
+    "topDriverId": "philippe-alliot",
+    "topDriverName": "Philippe Alliot",
+    "topScore": 44,
+    "partial": false
+  },
+  "451": {
+    "topDriverId": "gerhard-berger",
+    "topDriverName": "Gerhard Berger",
+    "topScore": 35,
+    "partial": false
+  },
+  "452": {
+    "topDriverId": "roberto-moreno",
+    "topDriverName": "Roberto Moreno",
+    "topScore": 46,
+    "partial": false
+  },
+  "453": {
+    "topDriverId": "alain-prost",
+    "topDriverName": "Alain Prost",
+    "topScore": 37,
+    "partial": true
+  },
+  "454": {
+    "topDriverId": "ayrton-senna",
+    "topDriverName": "Ayrton Senna",
+    "topScore": 35,
+    "partial": true
+  },
+  "455": {
+    "topDriverId": "alain-prost",
+    "topDriverName": "Alain Prost",
+    "topScore": 36,
+    "partial": true
+  },
+  "456": {
+    "topDriverId": "alain-prost",
+    "topDriverName": "Alain Prost",
+    "topScore": 41,
+    "partial": true
+  },
+  "457": {
+    "topDriverId": "ayrton-senna",
+    "topDriverName": "Ayrton Senna",
+    "topScore": 40,
+    "partial": true
+  },
+  "458": {
+    "topDriverId": "yannick-dalmas",
+    "topDriverName": "Yannick Dalmas",
+    "topScore": 40,
+    "partial": true
+  },
+  "459": {
+    "topDriverId": "alain-prost",
+    "topDriverName": "Alain Prost",
+    "topScore": 40,
+    "partial": true
+  },
+  "460": {
+    "topDriverId": "nigel-mansell",
+    "topDriverName": "Nigel Mansell",
+    "topScore": 41,
+    "partial": true
+  },
+  "461": {
+    "topDriverId": "ayrton-senna",
+    "topDriverName": "Ayrton Senna",
+    "topScore": 35,
+    "partial": true
+  },
+  "462": {
+    "topDriverId": "alain-prost",
+    "topDriverName": "Alain Prost",
+    "topScore": 37,
+    "partial": true
+  },
+  "463": {
+    "topDriverId": "ivan-capelli",
+    "topDriverName": "Ivan Capelli",
+    "topScore": 37,
+    "partial": true
+  },
+  "464": {
+    "topDriverId": "gerhard-berger",
+    "topDriverName": "Gerhard Berger",
+    "topScore": 37,
+    "partial": true
+  },
+  "465": {
+    "topDriverId": "alain-prost",
+    "topDriverName": "Alain Prost",
+    "topScore": 35,
+    "partial": true
+  },
+  "466": {
+    "topDriverId": "alain-prost",
+    "topDriverName": "Alain Prost",
+    "topScore": 41,
+    "partial": true
+  },
+  "467": {
+    "topDriverId": "ayrton-senna",
+    "topDriverName": "Ayrton Senna",
+    "topScore": 40,
+    "partial": true
+  },
+  "468": {
+    "topDriverId": "alain-prost",
+    "topDriverName": "Alain Prost",
+    "topScore": 41,
+    "partial": true
+  },
+  "469": {
+    "topDriverId": "nigel-mansell",
+    "topDriverName": "Nigel Mansell",
+    "topScore": 40,
+    "partial": true
+  },
+  "470": {
+    "topDriverId": "jonathan-palmer",
+    "topDriverName": "Jonathan Palmer",
+    "topScore": 46,
+    "partial": true
+  },
+  "471": {
+    "topDriverId": "ayrton-senna",
+    "topDriverName": "Ayrton Senna",
+    "topScore": 35,
+    "partial": true
+  },
+  "472": {
+    "topDriverId": "eddie-cheever",
+    "topDriverName": "Eddie Cheever",
+    "topScore": 40,
+    "partial": true
+  },
+  "473": {
+    "topDriverId": "christian-danner",
+    "topDriverName": "Christian Danner",
+    "topScore": 56,
+    "partial": true
+  },
+  "474": {
+    "topDriverId": "rene-arnoux",
+    "topDriverName": "René Arnoux",
+    "topScore": 44,
+    "partial": true
+  },
+  "475": {
+    "topDriverId": "eddie-cheever",
+    "topDriverName": "Eddie Cheever",
+    "topScore": 42,
+    "partial": true
+  },
+  "476": {
+    "topDriverId": "olivier-grouillard",
+    "topDriverName": "Olivier Grouillard",
+    "topScore": 40,
+    "partial": true
+  },
+  "477": {
+    "topDriverId": "ayrton-senna",
+    "topDriverName": "Ayrton Senna",
+    "topScore": 40,
+    "partial": true
+  },
+  "478": {
+    "topDriverId": "nigel-mansell",
+    "topDriverName": "Nigel Mansell",
+    "topScore": 52,
+    "partial": true
+  },
+  "479": {
+    "topDriverId": "ayrton-senna",
+    "topDriverName": "Ayrton Senna",
+    "topScore": 35,
+    "partial": true
+  },
+  "480": {
+    "topDriverId": "alain-prost",
+    "topDriverName": "Alain Prost",
+    "topScore": 43,
+    "partial": true
+  },
+  "481": {
+    "topDriverId": "satoru-nakajima",
+    "topDriverName": "Satoru Nakajima",
+    "topScore": 42,
+    "partial": true
+  },
+  "482": {
+    "topDriverId": "ayrton-senna",
+    "topDriverName": "Ayrton Senna",
+    "topScore": 40,
+    "partial": true
+  },
+  "483": {
+    "topDriverId": "derek-warwick",
+    "topDriverName": "Derek Warwick",
+    "topScore": 46,
+    "partial": true
+  },
+  "484": {
+    "topDriverId": "satoru-nakajima",
+    "topDriverName": "Satoru Nakajima",
+    "topScore": 55,
+    "partial": true
+  },
+  "485": {
+    "topDriverId": "ayrton-senna",
+    "topDriverName": "Ayrton Senna",
+    "topScore": 39,
+    "partial": true
+  },
+  "486": {
+    "topDriverId": "alain-prost",
+    "topDriverName": "Alain Prost",
+    "topScore": 40,
+    "partial": true
+  },
+  "487": {
+    "topDriverId": "riccardo-patrese",
+    "topDriverName": "Riccardo Patrese",
+    "topScore": 37,
+    "partial": true
+  },
+  "488": {
+    "topDriverId": "alex-caffi",
+    "topDriverName": "Alex Caffi",
+    "topScore": 44,
+    "partial": true
+  },
+  "489": {
+    "topDriverId": "alex-caffi",
+    "topDriverName": "Alex Caffi",
+    "topScore": 40,
+    "partial": true
+  },
+  "490": {
+    "topDriverId": "alain-prost",
+    "topDriverName": "Alain Prost",
+    "topScore": 54,
+    "partial": true
+  },
+  "491": {
+    "topDriverId": "alain-prost",
+    "topDriverName": "Alain Prost",
+    "topScore": 38,
+    "partial": true
+  },
+  "492": {
+    "topDriverId": "alain-prost",
+    "topDriverName": "Alain Prost",
+    "topScore": 39,
+    "partial": true
+  },
+  "493": {
+    "topDriverId": "ayrton-senna",
+    "topDriverName": "Ayrton Senna",
+    "topScore": 35,
+    "partial": true
+  },
+  "494": {
+    "topDriverId": "alex-caffi",
+    "topDriverName": "Alex Caffi",
+    "topScore": 36,
+    "partial": true
+  },
+  "495": {
+    "topDriverId": "ayrton-senna",
+    "topDriverName": "Ayrton Senna",
+    "topScore": 35,
+    "partial": true
+  },
+  "496": {
+    "topDriverId": "ayrton-senna",
+    "topDriverName": "Ayrton Senna",
+    "topScore": 40,
+    "partial": true
+  },
+  "497": {
+    "topDriverId": "nigel-mansell",
+    "topDriverName": "Nigel Mansell",
+    "topScore": 35,
+    "partial": true
+  },
+  "498": {
+    "topDriverId": "alain-prost",
+    "topDriverName": "Alain Prost",
+    "topScore": 36,
+    "partial": true
+  },
+  "499": {
+    "topDriverId": "nelson-piquet",
+    "topDriverName": "Nelson Piquet",
+    "topScore": 40,
+    "partial": false
+  },
+  "500": {
+    "topDriverId": "nelson-piquet",
+    "topDriverName": "Nelson Piquet",
+    "topScore": 41,
+    "partial": false
+  },
+  "501": {
+    "topDriverId": "aguri-suzuki",
+    "topDriverName": "Aguri Suzuki",
+    "topScore": 38,
+    "partial": true
+  },
+  "502": {
+    "topDriverId": "ayrton-senna",
+    "topDriverName": "Ayrton Senna",
+    "topScore": 35,
+    "partial": true
+  },
+  "503": {
+    "topDriverId": "mika-hakkinen",
+    "topDriverName": "Mika Häkkinen",
+    "topScore": 50,
+    "partial": true
+  },
+  "504": {
+    "topDriverId": "bertrand-gachot",
+    "topDriverName": "Bertrand Gachot",
+    "topScore": 36,
+    "partial": true
+  },
+  "505": {
+    "topDriverId": "nelson-piquet",
+    "topDriverName": "Nelson Piquet",
+    "topScore": 42,
+    "partial": true
+  },
+  "506": {
+    "topDriverId": "gianni-morbidelli",
+    "topDriverName": "Gianni Morbidelli",
+    "topScore": 38,
+    "partial": true
+  },
+  "507": {
+    "topDriverId": "nigel-mansell",
+    "topDriverName": "Nigel Mansell",
+    "topScore": 43,
+    "partial": true
+  },
+  "508": {
+    "topDriverId": "nigel-mansell",
+    "topDriverName": "Nigel Mansell",
+    "topScore": 40,
+    "partial": true
+  },
+  "509": {
+    "topDriverId": "nigel-mansell",
+    "topDriverName": "Nigel Mansell",
+    "topScore": 35,
+    "partial": true
+  },
+  "510": {
+    "topDriverId": "ayrton-senna",
+    "topDriverName": "Ayrton Senna",
+    "topScore": 35,
+    "partial": true
+  },
+  "511": {
+    "topDriverId": "riccardo-patrese",
+    "topDriverName": "Riccardo Patrese",
+    "topScore": 43,
+    "partial": true
+  },
+  "512": {
+    "topDriverId": "nigel-mansell",
+    "topDriverName": "Nigel Mansell",
+    "topScore": 36,
+    "partial": true
+  },
+  "513": {
+    "topDriverId": "riccardo-patrese",
+    "topDriverName": "Riccardo Patrese",
+    "topScore": 35,
+    "partial": true
+  },
+  "514": {
+    "topDriverId": "nigel-mansell",
+    "topDriverName": "Nigel Mansell",
+    "topScore": 36,
+    "partial": true
+  },
+  "515": {
+    "topDriverId": "martin-brundle",
+    "topDriverName": "Martin Brundle",
+    "topScore": 38,
+    "partial": true
+  },
+  "516": {
+    "topDriverId": "ayrton-senna",
+    "topDriverName": "Ayrton Senna",
+    "topScore": 35,
+    "partial": true
+  },
+  "517": {
+    "topDriverId": "nigel-mansell",
+    "topDriverName": "Nigel Mansell",
+    "topScore": 40,
+    "partial": true
+  },
+  "518": {
+    "topDriverId": "erik-comas",
+    "topDriverName": "Érik Comas",
+    "topScore": 36,
+    "partial": false
+  },
+  "519": {
+    "topDriverId": "gianni-morbidelli",
+    "topDriverName": "Gianni Morbidelli",
+    "topScore": 38,
+    "partial": true
+  },
+  "520": {
+    "topDriverId": "nigel-mansell",
+    "topDriverName": "Nigel Mansell",
+    "topScore": 40,
+    "partial": true
+  },
+  "521": {
+    "topDriverId": "nigel-mansell",
+    "topDriverName": "Nigel Mansell",
+    "topScore": 35,
+    "partial": true
+  },
+  "522": {
+    "topDriverId": "ayrton-senna",
+    "topDriverName": "Ayrton Senna",
+    "topScore": 37,
+    "partial": true
+  },
+  "523": {
+    "topDriverId": "gerhard-berger",
+    "topDriverName": "Gerhard Berger",
+    "topScore": 43,
+    "partial": true
+  },
+  "524": {
+    "topDriverId": "nigel-mansell",
+    "topDriverName": "Nigel Mansell",
+    "topScore": 40,
+    "partial": false
+  },
+  "525": {
+    "topDriverId": "nigel-mansell",
+    "topDriverName": "Nigel Mansell",
+    "topScore": 40,
+    "partial": true
+  },
+  "526": {
+    "topDriverId": "nigel-mansell",
+    "topDriverName": "Nigel Mansell",
+    "topScore": 35,
+    "partial": true
+  },
+  "527": {
+    "topDriverId": "ayrton-senna",
+    "topDriverName": "Ayrton Senna",
+    "topScore": 37,
+    "partial": true
+  },
+  "528": {
+    "topDriverId": "michael-schumacher",
+    "topDriverName": "Michael Schumacher",
+    "topScore": 42,
+    "partial": true
+  },
+  "529": {
+    "topDriverId": "andrea-de-cesaris",
+    "topDriverName": "Andrea de Cesaris",
+    "topScore": 38,
+    "partial": false
+  },
+  "530": {
+    "topDriverId": "nigel-mansell",
+    "topDriverName": "Nigel Mansell",
+    "topScore": 35,
+    "partial": false
+  },
+  "531": {
+    "topDriverId": "riccardo-patrese",
+    "topDriverName": "Riccardo Patrese",
+    "topScore": 36,
+    "partial": false
+  },
+  "532": {
+    "topDriverId": "thierry-boutsen",
+    "topDriverName": "Thierry Boutsen",
+    "topScore": 44,
+    "partial": false
+  },
+  "533": {
+    "topDriverId": "alain-prost",
+    "topDriverName": "Alain Prost",
+    "topScore": 40,
+    "partial": false
+  },
+  "534": {
+    "topDriverId": "ayrton-senna",
+    "topDriverName": "Ayrton Senna",
+    "topScore": 37,
+    "partial": false
+  },
+  "535": {
+    "topDriverId": "ayrton-senna",
+    "topDriverName": "Ayrton Senna",
+    "topScore": 43,
+    "partial": false
+  },
+  "536": {
+    "topDriverId": "fabrizio-barbazza",
+    "topDriverName": "Fabrizio Barbazza",
+    "topScore": 46,
+    "partial": false
+  },
+  "537": {
+    "topDriverId": "alain-prost",
+    "topDriverName": "Alain Prost",
+    "topScore": 35,
+    "partial": false
+  },
+  "538": {
+    "topDriverId": "ayrton-senna",
+    "topDriverName": "Ayrton Senna",
+    "topScore": 37,
+    "partial": false
+  },
+  "539": {
+    "topDriverId": "alain-prost",
+    "topDriverName": "Alain Prost",
+    "topScore": 35,
+    "partial": false
+  },
+  "540": {
+    "topDriverId": "alain-prost",
+    "topDriverName": "Alain Prost",
+    "topScore": 36,
+    "partial": false
+  },
+  "541": {
+    "topDriverId": "alain-prost",
+    "topDriverName": "Alain Prost",
+    "topScore": 35,
+    "partial": false
+  },
+  "542": {
+    "topDriverId": "alain-prost",
+    "topDriverName": "Alain Prost",
+    "topScore": 35,
+    "partial": false
+  },
+  "543": {
+    "topDriverId": "damon-hill",
+    "topDriverName": "Damon Hill",
+    "topScore": 36,
+    "partial": false
+  },
+  "544": {
+    "topDriverId": "damon-hill",
+    "topDriverName": "Damon Hill",
+    "topScore": 36,
+    "partial": true
+  },
+  "545": {
+    "topDriverId": "damon-hill",
+    "topDriverName": "Damon Hill",
+    "topScore": 41,
+    "partial": false
+  },
+  "546": {
+    "topDriverId": "michael-schumacher",
+    "topDriverName": "Michael Schumacher",
+    "topScore": 40,
+    "partial": false
+  },
+  "547": {
+    "topDriverId": "ayrton-senna",
+    "topDriverName": "Ayrton Senna",
+    "topScore": 36,
+    "partial": false
+  },
+  "548": {
+    "topDriverId": "ayrton-senna",
+    "topDriverName": "Ayrton Senna",
+    "topScore": 35,
+    "partial": false
+  },
+  "549": {
+    "topDriverId": "michael-schumacher",
+    "topDriverName": "Michael Schumacher",
+    "topScore": 41,
+    "partial": true
+  },
+  "550": {
+    "topDriverId": "michael-schumacher",
+    "topDriverName": "Michael Schumacher",
+    "topScore": 41,
+    "partial": false
+  },
+  "551": {
+    "topDriverId": "michael-schumacher",
+    "topDriverName": "Michael Schumacher",
+    "topScore": 36,
+    "partial": false
+  },
+  "552": {
+    "topDriverId": "michael-schumacher",
+    "topDriverName": "Michael Schumacher",
+    "topScore": 40,
+    "partial": true
+  },
+  "553": {
+    "topDriverId": "damon-hill",
+    "topDriverName": "Damon Hill",
+    "topScore": 36,
+    "partial": false
+  },
+  "554": {
+    "topDriverId": "michael-schumacher",
+    "topDriverName": "Michael Schumacher",
+    "topScore": 40,
+    "partial": false
+  },
+  "555": {
+    "topDriverId": "michael-schumacher",
+    "topDriverName": "Michael Schumacher",
+    "topScore": 37,
+    "partial": false
+  },
+  "556": {
+    "topDriverId": "damon-hill",
+    "topDriverName": "Damon Hill",
+    "topScore": 40,
+    "partial": false
+  },
+  "557": {
+    "topDriverId": "erik-comas",
+    "topDriverName": "Érik Comas",
+    "topScore": 40,
+    "partial": false
+  },
+  "558": {
+    "topDriverId": "michael-schumacher",
+    "topDriverName": "Michael Schumacher",
+    "topScore": 40,
+    "partial": false
+  },
+  "559": {
+    "topDriverId": "damon-hill",
+    "topDriverName": "Damon Hill",
+    "topScore": 42,
+    "partial": false
+  },
+  "560": {
+    "topDriverId": "damon-hill",
+    "topDriverName": "Damon Hill",
+    "topScore": 42,
+    "partial": false
+  },
+  "561": {
+    "topDriverId": "damon-hill",
+    "topDriverName": "Damon Hill",
+    "topScore": 36,
+    "partial": false
+  },
+  "562": {
+    "topDriverId": "michael-schumacher",
+    "topDriverName": "Michael Schumacher",
+    "topScore": 40,
+    "partial": false
+  },
+  "563": {
+    "topDriverId": "damon-hill",
+    "topDriverName": "Damon Hill",
+    "topScore": 41,
+    "partial": false
+  },
+  "564": {
+    "topDriverId": "gerhard-berger",
+    "topDriverName": "Gerhard Berger",
+    "topScore": 36,
+    "partial": false
+  },
+  "565": {
+    "topDriverId": "michael-schumacher",
+    "topDriverName": "Michael Schumacher",
+    "topScore": 41,
+    "partial": false
+  },
+  "566": {
+    "topDriverId": "damon-hill",
+    "topDriverName": "Damon Hill",
+    "topScore": 36,
+    "partial": false
+  },
+  "567": {
+    "topDriverId": "damon-hill",
+    "topDriverName": "Damon Hill",
+    "topScore": 38,
+    "partial": false
+  },
+  "568": {
+    "topDriverId": "michael-schumacher",
+    "topDriverName": "Michael Schumacher",
+    "topScore": 35,
+    "partial": false
+  },
+  "569": {
+    "topDriverId": "michael-schumacher",
+    "topDriverName": "Michael Schumacher",
+    "topScore": 36,
+    "partial": false
+  },
+  "570": {
+    "topDriverId": "jean-alesi",
+    "topDriverName": "Jean Alesi",
+    "topScore": 39,
+    "partial": false
+  },
+  "571": {
+    "topDriverId": "michael-schumacher",
+    "topDriverName": "Michael Schumacher",
+    "topScore": 41,
+    "partial": false
+  },
+  "572": {
+    "topDriverId": "johnny-herbert",
+    "topDriverName": "Johnny Herbert",
+    "topScore": 39,
+    "partial": false
+  },
+  "573": {
+    "topDriverId": "michael-schumacher",
+    "topDriverName": "Michael Schumacher",
+    "topScore": 41,
+    "partial": false
+  },
+  "574": {
+    "topDriverId": "damon-hill",
+    "topDriverName": "Damon Hill",
+    "topScore": 40,
+    "partial": false
+  },
+  "575": {
+    "topDriverId": "michael-schumacher",
+    "topDriverName": "Michael Schumacher",
+    "topScore": 55,
+    "partial": false
+  },
+  "576": {
+    "topDriverId": "johnny-herbert",
+    "topDriverName": "Johnny Herbert",
+    "topScore": 42,
+    "partial": false
+  },
+  "577": {
+    "topDriverId": "david-coulthard",
+    "topDriverName": "David Coulthard",
+    "topScore": 40,
+    "partial": false
+  },
+  "578": {
+    "topDriverId": "michael-schumacher",
+    "topDriverName": "Michael Schumacher",
+    "topScore": 42,
+    "partial": false
+  },
+  "579": {
+    "topDriverId": "michael-schumacher",
+    "topDriverName": "Michael Schumacher",
+    "topScore": 42,
+    "partial": false
+  },
+  "580": {
+    "topDriverId": "michael-schumacher",
+    "topDriverName": "Michael Schumacher",
+    "topScore": 40,
+    "partial": false
+  },
+  "581": {
+    "topDriverId": "damon-hill",
+    "topDriverName": "Damon Hill",
+    "topScore": 40,
+    "partial": false
+  },
+  "582": {
+    "topDriverId": "damon-hill",
+    "topDriverName": "Damon Hill",
+    "topScore": 36,
+    "partial": false
+  },
+  "583": {
+    "topDriverId": "damon-hill",
+    "topDriverName": "Damon Hill",
+    "topScore": 40,
+    "partial": false
+  },
+  "584": {
+    "topDriverId": "damon-hill",
+    "topDriverName": "Damon Hill",
+    "topScore": 35,
+    "partial": false
+  },
+  "585": {
+    "topDriverId": "jacques-villeneuve",
+    "topDriverName": "Jacques Villeneuve",
+    "topScore": 36,
+    "partial": false
+  },
+  "586": {
+    "topDriverId": "damon-hill",
+    "topDriverName": "Damon Hill",
+    "topScore": 41,
+    "partial": false
+  },
+  "587": {
+    "topDriverId": "olivier-panis",
+    "topDriverName": "Olivier Panis",
+    "topScore": 51,
+    "partial": false
+  },
+  "588": {
+    "topDriverId": "michael-schumacher",
+    "topDriverName": "Michael Schumacher",
+    "topScore": 42,
+    "partial": false
+  },
+  "589": {
+    "topDriverId": "damon-hill",
+    "topDriverName": "Damon Hill",
+    "topScore": 35,
+    "partial": false
+  },
+  "590": {
+    "topDriverId": "damon-hill",
+    "topDriverName": "Damon Hill",
+    "topScore": 36,
+    "partial": false
+  },
+  "591": {
+    "topDriverId": "jacques-villeneuve",
+    "topDriverName": "Jacques Villeneuve",
+    "topScore": 41,
+    "partial": false
+  },
+  "592": {
+    "topDriverId": "damon-hill",
+    "topDriverName": "Damon Hill",
+    "topScore": 40,
+    "partial": false
+  },
+  "593": {
+    "topDriverId": "jacques-villeneuve",
+    "topDriverName": "Jacques Villeneuve",
+    "topScore": 37,
+    "partial": false
+  },
+  "594": {
+    "topDriverId": "michael-schumacher",
+    "topDriverName": "Michael Schumacher",
+    "topScore": 37,
+    "partial": false
+  },
+  "595": {
+    "topDriverId": "michael-schumacher",
+    "topDriverName": "Michael Schumacher",
+    "topScore": 42,
+    "partial": false
+  },
+  "596": {
+    "topDriverId": "jacques-villeneuve",
+    "topDriverName": "Jacques Villeneuve",
+    "topScore": 41,
+    "partial": false
+  },
+  "597": {
+    "topDriverId": "damon-hill",
+    "topDriverName": "Damon Hill",
+    "topScore": 36,
+    "partial": false
+  },
+  "598": {
+    "topDriverId": "david-coulthard",
+    "topDriverName": "David Coulthard",
+    "topScore": 38,
+    "partial": false
+  },
+  "599": {
+    "topDriverId": "jacques-villeneuve",
+    "topDriverName": "Jacques Villeneuve",
+    "topScore": 40,
+    "partial": false
+  },
+  "600": {
+    "topDriverId": "jacques-villeneuve",
+    "topDriverName": "Jacques Villeneuve",
+    "topScore": 35,
+    "partial": false
+  },
+  "601": {
+    "topDriverId": "heinz-harald-frentzen",
+    "topDriverName": "Heinz-Harald Frentzen",
+    "topScore": 41,
+    "partial": false
+  },
+  "602": {
+    "topDriverId": "michael-schumacher",
+    "topDriverName": "Michael Schumacher",
+    "topScore": 41,
+    "partial": false
+  },
+  "603": {
+    "topDriverId": "olivier-panis",
+    "topDriverName": "Olivier Panis",
+    "topScore": 38,
+    "partial": false
+  },
+  "604": {
+    "topDriverId": "michael-schumacher",
+    "topDriverName": "Michael Schumacher",
+    "topScore": 35,
+    "partial": false
+  },
+  "605": {
+    "topDriverId": "michael-schumacher",
+    "topDriverName": "Michael Schumacher",
+    "topScore": 40,
+    "partial": false
+  },
+  "606": {
+    "topDriverId": "jean-alesi",
+    "topDriverName": "Jean Alesi",
+    "topScore": 36,
+    "partial": false
+  },
+  "607": {
+    "topDriverId": "gerhard-berger",
+    "topDriverName": "Gerhard Berger",
+    "topScore": 40,
+    "partial": false
+  },
+  "608": {
+    "topDriverId": "jacques-villeneuve",
+    "topDriverName": "Jacques Villeneuve",
+    "topScore": 36,
+    "partial": false
+  },
+  "609": {
+    "topDriverId": "michael-schumacher",
+    "topDriverName": "Michael Schumacher",
+    "topScore": 37,
+    "partial": false
+  },
+  "610": {
+    "topDriverId": "david-coulthard",
+    "topDriverName": "David Coulthard",
+    "topScore": 40,
+    "partial": false
+  },
+  "611": {
+    "topDriverId": "jacques-villeneuve",
+    "topDriverName": "Jacques Villeneuve",
+    "topScore": 40,
+    "partial": false
+  },
+  "612": {
+    "topDriverId": "jacques-villeneuve",
+    "topDriverName": "Jacques Villeneuve",
+    "topScore": 36,
+    "partial": false
+  },
+  "613": {
+    "topDriverId": "michael-schumacher",
+    "topDriverName": "Michael Schumacher",
+    "topScore": 36,
+    "partial": false
+  },
+  "614": {
+    "topDriverId": "mika-hakkinen",
+    "topDriverName": "Mika Häkkinen",
+    "topScore": 39,
+    "partial": false
+  },
+  "615": {
+    "topDriverId": "mika-hakkinen",
+    "topDriverName": "Mika Häkkinen",
+    "topScore": 40,
+    "partial": false
+  },
+  "616": {
+    "topDriverId": "mika-hakkinen",
+    "topDriverName": "Mika Häkkinen",
+    "topScore": 40,
+    "partial": false
+  },
+  "617": {
+    "topDriverId": "michael-schumacher",
+    "topDriverName": "Michael Schumacher",
+    "topScore": 36,
+    "partial": false
+  },
+  "618": {
+    "topDriverId": "david-coulthard",
+    "topDriverName": "David Coulthard",
+    "topScore": 35,
+    "partial": false
+  },
+  "619": {
+    "topDriverId": "mika-hakkinen",
+    "topDriverName": "Mika Häkkinen",
+    "topScore": 40,
+    "partial": false
+  },
+  "620": {
+    "topDriverId": "mika-hakkinen",
+    "topDriverName": "Mika Häkkinen",
+    "topScore": 40,
+    "partial": false
+  },
+  "621": {
+    "topDriverId": "michael-schumacher",
+    "topDriverName": "Michael Schumacher",
+    "topScore": 42,
+    "partial": false
+  },
+  "622": {
+    "topDriverId": "michael-schumacher",
+    "topDriverName": "Michael Schumacher",
+    "topScore": 36,
+    "partial": false
+  },
+  "623": {
+    "topDriverId": "michael-schumacher",
+    "topDriverName": "Michael Schumacher",
+    "topScore": 41,
+    "partial": false
+  },
+  "624": {
+    "topDriverId": "david-coulthard",
+    "topDriverName": "David Coulthard",
+    "topScore": 47,
+    "partial": false
+  },
+  "625": {
+    "topDriverId": "mika-hakkinen",
+    "topDriverName": "Mika Häkkinen",
+    "topScore": 35,
+    "partial": true
+  },
+  "626": {
+    "topDriverId": "michael-schumacher",
+    "topDriverName": "Michael Schumacher",
+    "topScore": 42,
+    "partial": true
+  },
+  "627": {
+    "topDriverId": "damon-hill",
+    "topDriverName": "Damon Hill",
+    "topScore": 37,
+    "partial": false
+  },
+  "628": {
+    "topDriverId": "michael-schumacher",
+    "topDriverName": "Michael Schumacher",
+    "topScore": 35,
+    "partial": false
+  },
+  "629": {
+    "topDriverId": "mika-hakkinen",
+    "topDriverName": "Mika Häkkinen",
+    "topScore": 42,
+    "partial": false
+  },
+  "630": {
+    "topDriverId": "mika-hakkinen",
+    "topDriverName": "Mika Häkkinen",
+    "topScore": 36,
+    "partial": false
+  },
+  "631": {
+    "topDriverId": "eddie-irvine",
+    "topDriverName": "Eddie Irvine",
+    "topScore": 40,
+    "partial": true
+  },
+  "632": {
+    "topDriverId": "mika-hakkinen",
+    "topDriverName": "Mika Häkkinen",
+    "topScore": 40,
+    "partial": true
+  },
+  "633": {
+    "topDriverId": "michael-schumacher",
+    "topDriverName": "Michael Schumacher",
+    "topScore": 42,
+    "partial": false
+  },
+  "634": {
+    "topDriverId": "michael-schumacher",
+    "topDriverName": "Michael Schumacher",
+    "topScore": 36,
+    "partial": false
+  },
+  "635": {
+    "topDriverId": "mika-hakkinen",
+    "topDriverName": "Mika Häkkinen",
+    "topScore": 35,
+    "partial": false
+  },
+  "636": {
+    "topDriverId": "mika-hakkinen",
+    "topDriverName": "Mika Häkkinen",
+    "topScore": 36,
+    "partial": false
+  },
+  "637": {
+    "topDriverId": "mika-hakkinen",
+    "topDriverName": "Mika Häkkinen",
+    "topScore": 42,
+    "partial": true
+  },
+  "638": {
+    "topDriverId": "david-coulthard",
+    "topDriverName": "David Coulthard",
+    "topScore": 37,
+    "partial": false
+  },
+  "639": {
+    "topDriverId": "eddie-irvine",
+    "topDriverName": "Eddie Irvine",
+    "topScore": 37,
+    "partial": false
+  },
+  "640": {
+    "topDriverId": "eddie-irvine",
+    "topDriverName": "Eddie Irvine",
+    "topScore": 39,
+    "partial": false
+  },
+  "641": {
+    "topDriverId": "mika-hakkinen",
+    "topDriverName": "Mika Häkkinen",
+    "topScore": 35,
+    "partial": false
+  },
+  "642": {
+    "topDriverId": "david-coulthard",
+    "topDriverName": "David Coulthard",
+    "topScore": 36,
+    "partial": false
+  },
+  "643": {
+    "topDriverId": "heinz-harald-frentzen",
+    "topDriverName": "Heinz-Harald Frentzen",
+    "topScore": 36,
+    "partial": false
+  },
+  "644": {
+    "topDriverId": "johnny-herbert",
+    "topDriverName": "Johnny Herbert",
+    "topScore": 51,
+    "partial": false
+  },
+  "645": {
+    "topDriverId": "eddie-irvine",
+    "topDriverName": "Eddie Irvine",
+    "topScore": 36,
+    "partial": false
+  },
+  "646": {
+    "topDriverId": "mika-hakkinen",
+    "topDriverName": "Mika Häkkinen",
+    "topScore": 36,
+    "partial": false
+  },
+  "647": {
+    "topDriverId": "michael-schumacher",
+    "topDriverName": "Michael Schumacher",
+    "topScore": 37,
+    "partial": false
+  },
+  "648": {
+    "topDriverId": "michael-schumacher",
+    "topDriverName": "Michael Schumacher",
+    "topScore": 42,
+    "partial": false
+  },
+  "649": {
+    "topDriverId": "michael-schumacher",
+    "topDriverName": "Michael Schumacher",
+    "topScore": 36,
+    "partial": false
+  },
+  "650": {
+    "topDriverId": "david-coulthard",
+    "topDriverName": "David Coulthard",
+    "topScore": 38,
+    "partial": false
+  },
+  "651": {
+    "topDriverId": "mika-hakkinen",
+    "topDriverName": "Mika Häkkinen",
+    "topScore": 41,
+    "partial": false
+  },
+  "652": {
+    "topDriverId": "michael-schumacher",
+    "topDriverName": "Michael Schumacher",
+    "topScore": 41,
+    "partial": true
+  },
+  "653": {
+    "topDriverId": "david-coulthard",
+    "topDriverName": "David Coulthard",
+    "topScore": 37,
+    "partial": false
+  },
+  "654": {
+    "topDriverId": "michael-schumacher",
+    "topDriverName": "Michael Schumacher",
+    "topScore": 35,
+    "partial": false
+  },
+  "655": {
+    "topDriverId": "david-coulthard",
+    "topDriverName": "David Coulthard",
+    "topScore": 41,
+    "partial": false
+  },
+  "656": {
+    "topDriverId": "jenson-button",
+    "topDriverName": "Jenson Button",
+    "topScore": 36,
+    "partial": false
+  },
+  "657": {
+    "topDriverId": "rubens-barrichello",
+    "topDriverName": "Rubens Barrichello",
+    "topScore": 64,
+    "partial": false
+  },
+  "658": {
+    "topDriverId": "mika-hakkinen",
+    "topDriverName": "Mika Häkkinen",
+    "topScore": 42,
+    "partial": false
+  },
+  "659": {
+    "topDriverId": "mika-hakkinen",
+    "topDriverName": "Mika Häkkinen",
+    "topScore": 35,
+    "partial": false
+  },
+  "660": {
+    "topDriverId": "michael-schumacher",
+    "topDriverName": "Michael Schumacher",
+    "topScore": 35,
+    "partial": false
+  },
+  "661": {
+    "topDriverId": "michael-schumacher",
+    "topDriverName": "Michael Schumacher",
+    "topScore": 35,
+    "partial": false
+  },
+  "662": {
+    "topDriverId": "michael-schumacher",
+    "topDriverName": "Michael Schumacher",
+    "topScore": 35,
+    "partial": false
+  },
+  "663": {
+    "topDriverId": "michael-schumacher",
+    "topDriverName": "Michael Schumacher",
+    "topScore": 35,
+    "partial": false
+  },
+  "664": {
+    "topDriverId": "michael-schumacher",
+    "topDriverName": "Michael Schumacher",
+    "topScore": 40,
+    "partial": true
+  },
+  "665": {
+    "topDriverId": "michael-schumacher",
+    "topDriverName": "Michael Schumacher",
+    "topScore": 35,
+    "partial": false
+  },
+  "666": {
+    "topDriverId": "david-coulthard",
+    "topDriverName": "David Coulthard",
+    "topScore": 39,
+    "partial": false
+  },
+  "667": {
+    "topDriverId": "ralf-schumacher",
+    "topDriverName": "Ralf Schumacher",
+    "topScore": 42,
+    "partial": false
+  },
+  "668": {
+    "topDriverId": "michael-schumacher",
+    "topDriverName": "Michael Schumacher",
+    "topScore": 40,
+    "partial": false
+  },
+  "669": {
+    "topDriverId": "david-coulthard",
+    "topDriverName": "David Coulthard",
+    "topScore": 46,
+    "partial": false
+  },
+  "670": {
+    "topDriverId": "michael-schumacher",
+    "topDriverName": "Michael Schumacher",
+    "topScore": 36,
+    "partial": false
+  },
+  "671": {
+    "topDriverId": "ralf-schumacher",
+    "topDriverName": "Ralf Schumacher",
+    "topScore": 41,
+    "partial": true
+  },
+  "672": {
+    "topDriverId": "michael-schumacher",
+    "topDriverName": "Michael Schumacher",
+    "topScore": 35,
+    "partial": false
+  },
+  "673": {
+    "topDriverId": "michael-schumacher",
+    "topDriverName": "Michael Schumacher",
+    "topScore": 36,
+    "partial": false
+  },
+  "674": {
+    "topDriverId": "mika-hakkinen",
+    "topDriverName": "Mika Häkkinen",
+    "topScore": 41,
+    "partial": false
+  },
+  "675": {
+    "topDriverId": "giancarlo-fisichella",
+    "topDriverName": "Giancarlo Fisichella",
+    "topScore": 38,
+    "partial": false
+  },
+  "676": {
+    "topDriverId": "michael-schumacher",
+    "topDriverName": "Michael Schumacher",
+    "topScore": 35,
+    "partial": false
+  },
+  "677": {
+    "topDriverId": "michael-schumacher",
+    "topDriverName": "Michael Schumacher",
+    "topScore": 42,
+    "partial": false
+  },
+  "678": {
+    "topDriverId": "juan-pablo-montoya",
+    "topDriverName": "Juan Pablo Montoya",
+    "topScore": 35,
+    "partial": false
+  },
+  "679": {
+    "topDriverId": "mika-hakkinen",
+    "topDriverName": "Mika Häkkinen",
+    "topScore": 40,
+    "partial": false
+  },
+  "680": {
+    "topDriverId": "michael-schumacher",
+    "topDriverName": "Michael Schumacher",
+    "topScore": 35,
+    "partial": false
+  },
+  "681": {
+    "topDriverId": "eddie-irvine",
+    "topDriverName": "Eddie Irvine",
+    "topScore": 42,
+    "partial": true
+  },
+  "682": {
+    "topDriverId": "ralf-schumacher",
+    "topDriverName": "Ralf Schumacher",
+    "topScore": 38,
+    "partial": false
+  },
+  "683": {
+    "topDriverId": "michael-schumacher",
+    "topDriverName": "Michael Schumacher",
+    "topScore": 36,
+    "partial": false
+  },
+  "684": {
+    "topDriverId": "michael-schumacher",
+    "topDriverName": "Michael Schumacher",
+    "topScore": 35,
+    "partial": false
+  },
+  "685": {
+    "topDriverId": "michael-schumacher",
+    "topDriverName": "Michael Schumacher",
+    "topScore": 40,
+    "partial": true
+  },
+  "686": {
+    "topDriverId": "michael-schumacher",
+    "topDriverName": "Michael Schumacher",
+    "topScore": 42,
+    "partial": false
+  },
+  "687": {
+    "topDriverId": "david-coulthard",
+    "topDriverName": "David Coulthard",
+    "topScore": 36,
+    "partial": false
+  },
+  "688": {
+    "topDriverId": "michael-schumacher",
+    "topDriverName": "Michael Schumacher",
+    "topScore": 36,
+    "partial": false
+  },
+  "689": {
+    "topDriverId": "rubens-barrichello",
+    "topDriverName": "Rubens Barrichello",
+    "topScore": 38,
+    "partial": false
+  },
+  "690": {
+    "topDriverId": "michael-schumacher",
+    "topDriverName": "Michael Schumacher",
+    "topScore": 37,
+    "partial": false
+  },
+  "691": {
+    "topDriverId": "michael-schumacher",
+    "topDriverName": "Michael Schumacher",
+    "topScore": 36,
+    "partial": true
+  },
+  "692": {
+    "topDriverId": "michael-schumacher",
+    "topDriverName": "Michael Schumacher",
+    "topScore": 40,
+    "partial": false
+  },
+  "693": {
+    "topDriverId": "rubens-barrichello",
+    "topDriverName": "Rubens Barrichello",
+    "topScore": 35,
+    "partial": false
+  },
+  "694": {
+    "topDriverId": "michael-schumacher",
+    "topDriverName": "Michael Schumacher",
+    "topScore": 40,
+    "partial": false
+  },
+  "695": {
+    "topDriverId": "rubens-barrichello",
+    "topDriverName": "Rubens Barrichello",
+    "topScore": 43,
+    "partial": false
+  },
+  "696": {
+    "topDriverId": "rubens-barrichello",
+    "topDriverName": "Rubens Barrichello",
+    "topScore": 41,
+    "partial": false
+  },
+  "697": {
+    "topDriverId": "michael-schumacher",
+    "topDriverName": "Michael Schumacher",
+    "topScore": 40,
+    "partial": false
+  },
+  "698": {
+    "topDriverId": "david-coulthard",
+    "topDriverName": "David Coulthard",
+    "topScore": 45,
+    "partial": true
+  },
+  "699": {
+    "topDriverId": "kimi-raikkonen",
+    "topDriverName": "Kimi Räikkönen",
+    "topScore": 41,
+    "partial": false
+  },
+  "700": {
+    "topDriverId": "giancarlo-fisichella",
+    "topDriverName": "Giancarlo Fisichella",
+    "topScore": 42,
+    "partial": false
+  },
+  "701": {
+    "topDriverId": "michael-schumacher",
+    "topDriverName": "Michael Schumacher",
+    "topScore": 40,
+    "partial": false
+  },
+  "702": {
+    "topDriverId": "michael-schumacher",
+    "topDriverName": "Michael Schumacher",
+    "topScore": 35,
+    "partial": false
+  },
+  "703": {
+    "topDriverId": "michael-schumacher",
+    "topDriverName": "Michael Schumacher",
+    "topScore": 40,
+    "partial": false
+  },
+  "704": {
+    "topDriverId": "juan-pablo-montoya",
+    "topDriverName": "Juan Pablo Montoya",
+    "topScore": 37,
+    "partial": true
+  },
+  "705": {
+    "topDriverId": "michael-schumacher",
+    "topDriverName": "Michael Schumacher",
+    "topScore": 37,
+    "partial": false
+  },
+  "706": {
+    "topDriverId": "ralf-schumacher",
+    "topDriverName": "Ralf Schumacher",
+    "topScore": 37,
+    "partial": false
+  },
+  "707": {
+    "topDriverId": "ralf-schumacher",
+    "topDriverName": "Ralf Schumacher",
+    "topScore": 35,
+    "partial": false
+  },
+  "708": {
+    "topDriverId": "rubens-barrichello",
+    "topDriverName": "Rubens Barrichello",
+    "topScore": 40,
+    "partial": false
+  },
+  "709": {
+    "topDriverId": "juan-pablo-montoya",
+    "topDriverName": "Juan Pablo Montoya",
+    "topScore": 40,
+    "partial": false
+  },
+  "710": {
+    "topDriverId": "fernando-alonso",
+    "topDriverName": "Fernando Alonso",
+    "topScore": 35,
+    "partial": false
+  },
+  "711": {
+    "topDriverId": "michael-schumacher",
+    "topDriverName": "Michael Schumacher",
+    "topScore": 40,
+    "partial": false
+  },
+  "712": {
+    "topDriverId": "michael-schumacher",
+    "topDriverName": "Michael Schumacher",
+    "topScore": 46,
+    "partial": false
+  },
+  "713": {
+    "topDriverId": "jarno-trulli",
+    "topDriverName": "Jarno Trulli",
+    "topScore": 38,
+    "partial": false
+  },
+  "714": {
+    "topDriverId": "michael-schumacher",
+    "topDriverName": "Michael Schumacher",
+    "topScore": 40,
+    "partial": false
+  },
+  "715": {
+    "topDriverId": "michael-schumacher",
+    "topDriverName": "Michael Schumacher",
+    "topScore": 35,
+    "partial": false
+  },
+  "716": {
+    "topDriverId": "michael-schumacher",
+    "topDriverName": "Michael Schumacher",
+    "topScore": 40,
+    "partial": false
+  },
+  "717": {
+    "topDriverId": "michael-schumacher",
+    "topDriverName": "Michael Schumacher",
+    "topScore": 41,
+    "partial": false
+  },
+  "718": {
+    "topDriverId": "michael-schumacher",
+    "topDriverName": "Michael Schumacher",
+    "topScore": 40,
+    "partial": false
+  },
+  "719": {
+    "topDriverId": "jarno-trulli",
+    "topDriverName": "Jarno Trulli",
+    "topScore": 35,
+    "partial": false
+  },
+  "720": {
+    "topDriverId": "michael-schumacher",
+    "topDriverName": "Michael Schumacher",
+    "topScore": 40,
+    "partial": false
+  },
+  "721": {
+    "topDriverId": "michael-schumacher",
+    "topDriverName": "Michael Schumacher",
+    "topScore": 40,
+    "partial": false
+  },
+  "722": {
+    "topDriverId": "jarno-trulli",
+    "topDriverName": "Jarno Trulli",
+    "topScore": 44,
+    "partial": false
+  },
+  "723": {
+    "topDriverId": "michael-schumacher",
+    "topDriverName": "Michael Schumacher",
+    "topScore": 41,
+    "partial": false
+  },
+  "724": {
+    "topDriverId": "michael-schumacher",
+    "topDriverName": "Michael Schumacher",
+    "topScore": 43,
+    "partial": false
+  },
+  "725": {
+    "topDriverId": "jenson-button",
+    "topDriverName": "Jenson Button",
+    "topScore": 48,
+    "partial": false
+  },
+  "726": {
+    "topDriverId": "michael-schumacher",
+    "topDriverName": "Michael Schumacher",
+    "topScore": 40,
+    "partial": false
+  },
+  "727": {
+    "topDriverId": "kimi-raikkonen",
+    "topDriverName": "Kimi Räikkönen",
+    "topScore": 49,
+    "partial": false
+  },
+  "728": {
+    "topDriverId": "rubens-barrichello",
+    "topDriverName": "Rubens Barrichello",
+    "topScore": 40,
+    "partial": false
+  },
+  "729": {
+    "topDriverId": "rubens-barrichello",
+    "topDriverName": "Rubens Barrichello",
+    "topScore": 35,
+    "partial": false
+  },
+  "730": {
+    "topDriverId": "michael-schumacher",
+    "topDriverName": "Michael Schumacher",
+    "topScore": 35,
+    "partial": false
+  },
+  "731": {
+    "topDriverId": "juan-pablo-montoya",
+    "topDriverName": "Juan Pablo Montoya",
+    "topScore": 41,
+    "partial": false
+  },
+  "732": {
+    "topDriverId": "fernando-alonso",
+    "topDriverName": "Fernando Alonso",
+    "topScore": 40,
+    "partial": false
+  },
+  "733": {
+    "topDriverId": "fernando-alonso",
+    "topDriverName": "Fernando Alonso",
+    "topScore": 35,
+    "partial": false
+  },
+  "734": {
+    "topDriverId": "fernando-alonso",
+    "topDriverName": "Fernando Alonso",
+    "topScore": 35,
+    "partial": false
+  },
+  "735": {
+    "topDriverId": "michael-schumacher",
+    "topDriverName": "Michael Schumacher",
+    "topScore": 45,
+    "partial": false
+  },
+  "736": {
+    "topDriverId": "kimi-raikkonen",
+    "topDriverName": "Kimi Räikkönen",
+    "topScore": 35,
+    "partial": false
+  },
+  "737": {
+    "topDriverId": "kimi-raikkonen",
+    "topDriverName": "Kimi Räikkönen",
+    "topScore": 35,
+    "partial": false
+  },
+  "738": {
+    "topDriverId": "fernando-alonso",
+    "topDriverName": "Fernando Alonso",
+    "topScore": 45,
+    "partial": false
+  },
+  "739": {
+    "topDriverId": "kimi-raikkonen",
+    "topDriverName": "Kimi Räikkönen",
+    "topScore": 46,
+    "partial": false
+  },
+  "740": {
+    "topDriverId": "michael-schumacher",
+    "topDriverName": "Michael Schumacher",
+    "topScore": 44,
+    "partial": false
+  },
+  "741": {
+    "topDriverId": "kimi-raikkonen",
+    "topDriverName": "Kimi Räikkönen",
+    "topScore": 53,
+    "partial": false
+  },
+  "742": {
+    "topDriverId": "kimi-raikkonen",
+    "topDriverName": "Kimi Räikkönen",
+    "topScore": 47,
+    "partial": false
+  },
+  "743": {
+    "topDriverId": "juan-pablo-montoya",
+    "topDriverName": "Juan Pablo Montoya",
+    "topScore": 54,
+    "partial": false
+  },
+  "744": {
+    "topDriverId": "kimi-raikkonen",
+    "topDriverName": "Kimi Räikkönen",
+    "topScore": 43,
+    "partial": false
+  },
+  "745": {
+    "topDriverId": "kimi-raikkonen",
+    "topDriverName": "Kimi Räikkönen",
+    "topScore": 35,
+    "partial": true
+  },
+  "746": {
+    "topDriverId": "kimi-raikkonen",
+    "topDriverName": "Kimi Räikkönen",
+    "topScore": 41,
+    "partial": false
+  },
+  "747": {
+    "topDriverId": "kimi-raikkonen",
+    "topDriverName": "Kimi Räikkönen",
+    "topScore": 36,
+    "partial": false
+  },
+  "748": {
+    "topDriverId": "juan-pablo-montoya",
+    "topDriverName": "Juan Pablo Montoya",
+    "topScore": 36,
+    "partial": false
+  },
+  "749": {
+    "topDriverId": "kimi-raikkonen",
+    "topDriverName": "Kimi Räikkönen",
+    "topScore": 62,
+    "partial": false
+  },
+  "750": {
+    "topDriverId": "fernando-alonso",
+    "topDriverName": "Fernando Alonso",
+    "topScore": 35,
+    "partial": false
+  },
+  "751": {
+    "topDriverId": "kimi-raikkonen",
+    "topDriverName": "Kimi Räikkönen",
+    "topScore": 53,
+    "partial": false
+  },
+  "752": {
+    "topDriverId": "felipe-massa",
+    "topDriverName": "Felipe Massa",
+    "topScore": 42,
+    "partial": false
+  },
+  "753": {
+    "topDriverId": "fernando-alonso",
+    "topDriverName": "Fernando Alonso",
+    "topScore": 37,
+    "partial": false
+  },
+  "754": {
+    "topDriverId": "michael-schumacher",
+    "topDriverName": "Michael Schumacher",
+    "topScore": 35,
+    "partial": false
+  },
+  "755": {
+    "topDriverId": "michael-schumacher",
+    "topDriverName": "Michael Schumacher",
+    "topScore": 41,
+    "partial": false
+  },
+  "756": {
+    "topDriverId": "fernando-alonso",
+    "topDriverName": "Fernando Alonso",
+    "topScore": 35,
+    "partial": false
+  },
+  "757": {
+    "topDriverId": "fernando-alonso",
+    "topDriverName": "Fernando Alonso",
+    "topScore": 35,
+    "partial": true
+  },
+  "758": {
+    "topDriverId": "fernando-alonso",
+    "topDriverName": "Fernando Alonso",
+    "topScore": 40,
+    "partial": false
+  },
+  "759": {
+    "topDriverId": "fernando-alonso",
+    "topDriverName": "Fernando Alonso",
+    "topScore": 35,
+    "partial": false
+  },
+  "760": {
+    "topDriverId": "michael-schumacher",
+    "topDriverName": "Michael Schumacher",
+    "topScore": 40,
+    "partial": false
+  },
+  "761": {
+    "topDriverId": "michael-schumacher",
+    "topDriverName": "Michael Schumacher",
+    "topScore": 40,
+    "partial": false
+  },
+  "762": {
+    "topDriverId": "michael-schumacher",
+    "topDriverName": "Michael Schumacher",
+    "topScore": 41,
+    "partial": false
+  },
+  "763": {
+    "topDriverId": "jenson-button",
+    "topDriverName": "Jenson Button",
+    "topScore": 58,
+    "partial": false
+  },
+  "764": {
+    "topDriverId": "felipe-massa",
+    "topDriverName": "Felipe Massa",
+    "topScore": 35,
+    "partial": false
+  },
+  "765": {
+    "topDriverId": "michael-schumacher",
+    "topDriverName": "Michael Schumacher",
+    "topScore": 36,
+    "partial": false
+  },
+  "766": {
+    "topDriverId": "michael-schumacher",
+    "topDriverName": "Michael Schumacher",
+    "topScore": 40,
+    "partial": true
+  },
+  "767": {
+    "topDriverId": "fernando-alonso",
+    "topDriverName": "Fernando Alonso",
+    "topScore": 44,
+    "partial": false
+  },
+  "768": {
+    "topDriverId": "jenson-button",
+    "topDriverName": "Jenson Button",
+    "topScore": 39,
+    "partial": false
+  },
+  "769": {
+    "topDriverId": "kimi-raikkonen",
+    "topDriverName": "Kimi Räikkönen",
+    "topScore": 40,
+    "partial": false
+  },
+  "770": {
+    "topDriverId": "fernando-alonso",
+    "topDriverName": "Fernando Alonso",
+    "topScore": 36,
+    "partial": false
+  },
+  "771": {
+    "topDriverId": "felipe-massa",
+    "topDriverName": "Felipe Massa",
+    "topScore": 40,
+    "partial": false
+  },
+  "772": {
+    "topDriverId": "felipe-massa",
+    "topDriverName": "Felipe Massa",
+    "topScore": 40,
+    "partial": false
+  },
+  "773": {
+    "topDriverId": "fernando-alonso",
+    "topDriverName": "Fernando Alonso",
+    "topScore": 40,
+    "partial": false
+  },
+  "774": {
+    "topDriverId": "heikki-kovalainen",
+    "topDriverName": "Heikki Kovalainen",
+    "topScore": 48,
+    "partial": false
+  },
+  "775": {
+    "topDriverId": "lewis-hamilton",
+    "topDriverName": "Lewis Hamilton",
+    "topScore": 35,
+    "partial": false
+  },
+  "776": {
+    "topDriverId": "kimi-raikkonen",
+    "topDriverName": "Kimi Räikkönen",
+    "topScore": 37,
+    "partial": false
+  },
+  "777": {
+    "topDriverId": "kimi-raikkonen",
+    "topDriverName": "Kimi Räikkönen",
+    "topScore": 41,
+    "partial": false
+  },
+  "778": {
+    "topDriverId": "david-coulthard",
+    "topDriverName": "David Coulthard",
+    "topScore": 40,
+    "partial": false
+  },
+  "779": {
+    "topDriverId": "lewis-hamilton",
+    "topDriverName": "Lewis Hamilton",
+    "topScore": 34,
+    "partial": false
+  },
+  "780": {
+    "topDriverId": "felipe-massa",
+    "topDriverName": "Felipe Massa",
+    "topScore": 35,
+    "partial": false
+  },
+  "781": {
+    "topDriverId": "fernando-alonso",
+    "topDriverName": "Fernando Alonso",
+    "topScore": 40,
+    "partial": false
+  },
+  "782": {
+    "topDriverId": "kimi-raikkonen",
+    "topDriverName": "Kimi Räikkönen",
+    "topScore": 35,
+    "partial": false
+  },
+  "783": {
+    "topDriverId": "lewis-hamilton",
+    "topDriverName": "Lewis Hamilton",
+    "topScore": 40,
+    "partial": false
+  },
+  "784": {
+    "topDriverId": "sebastian-vettel",
+    "topDriverName": "Sebastian Vettel",
+    "topScore": 42,
+    "partial": false
+  },
+  "785": {
+    "topDriverId": "kimi-raikkonen",
+    "topDriverName": "Kimi Räikkönen",
+    "topScore": 42,
+    "partial": false
+  },
+  "786": {
+    "topDriverId": "lewis-hamilton",
+    "topDriverName": "Lewis Hamilton",
+    "topScore": 35,
+    "partial": false
+  },
+  "787": {
+    "topDriverId": "kimi-raikkonen",
+    "topDriverName": "Kimi Räikkönen",
+    "topScore": 36,
+    "partial": false
+  },
+  "788": {
+    "topDriverId": "felipe-massa",
+    "topDriverName": "Felipe Massa",
+    "topScore": 36,
+    "partial": false
+  },
+  "789": {
+    "topDriverId": "kimi-raikkonen",
+    "topDriverName": "Kimi Räikkönen",
+    "topScore": 40,
+    "partial": false
+  },
+  "790": {
+    "topDriverId": "felipe-massa",
+    "topDriverName": "Felipe Massa",
+    "topScore": 35,
+    "partial": false
+  },
+  "791": {
+    "topDriverId": "sebastian-vettel",
+    "topDriverName": "Sebastian Vettel",
+    "topScore": 38,
+    "partial": false
+  },
+  "792": {
+    "topDriverId": "david-coulthard",
+    "topDriverName": "David Coulthard",
+    "topScore": 38,
+    "partial": true
+  },
+  "793": {
+    "topDriverId": "felipe-massa",
+    "topDriverName": "Felipe Massa",
+    "topScore": 36,
+    "partial": false
+  },
+  "794": {
+    "topDriverId": "rubens-barrichello",
+    "topDriverName": "Rubens Barrichello",
+    "topScore": 41,
+    "partial": false
+  },
+  "795": {
+    "topDriverId": "nelson-piquet-jr",
+    "topDriverName": "Nelson Piquet Jr.",
+    "topScore": 48,
+    "partial": false
+  },
+  "796": {
+    "topDriverId": "heikki-kovalainen",
+    "topDriverName": "Heikki Kovalainen",
+    "topScore": 36,
+    "partial": false
+  },
+  "797": {
+    "topDriverId": "felipe-massa",
+    "topDriverName": "Felipe Massa",
+    "topScore": 40,
+    "partial": false
+  },
+  "798": {
+    "topDriverId": "felipe-massa",
+    "topDriverName": "Felipe Massa",
+    "topScore": 36,
+    "partial": false
+  },
+  "799": {
+    "topDriverId": "robert-kubica",
+    "topDriverName": "Robert Kubica",
+    "topScore": 36,
+    "partial": false
+  },
+  "800": {
+    "topDriverId": "fernando-alonso",
+    "topDriverName": "Fernando Alonso",
+    "topScore": 54,
+    "partial": false
+  },
+  "801": {
+    "topDriverId": "fernando-alonso",
+    "topDriverName": "Fernando Alonso",
+    "topScore": 38,
+    "partial": false
+  },
+  "802": {
+    "topDriverId": "lewis-hamilton",
+    "topDriverName": "Lewis Hamilton",
+    "topScore": 40,
+    "partial": false
+  },
+  "803": {
+    "topDriverId": "felipe-massa",
+    "topDriverName": "Felipe Massa",
+    "topScore": 40,
+    "partial": false
+  },
+  "804": {
+    "topDriverId": "jenson-button",
+    "topDriverName": "Jenson Button",
+    "topScore": 35,
+    "partial": true
+  },
+  "805": {
+    "topDriverId": "jenson-button",
+    "topDriverName": "Jenson Button",
+    "topScore": 40,
+    "partial": false
+  },
+  "806": {
+    "topDriverId": "sebastian-vettel",
+    "topDriverName": "Sebastian Vettel",
+    "topScore": 35,
+    "partial": false
+  },
+  "807": {
+    "topDriverId": "jenson-button",
+    "topDriverName": "Jenson Button",
+    "topScore": 38,
+    "partial": false
+  },
+  "808": {
+    "topDriverId": "jenson-button",
+    "topDriverName": "Jenson Button",
+    "topScore": 35,
+    "partial": false
+  },
+  "809": {
+    "topDriverId": "jenson-button",
+    "topDriverName": "Jenson Button",
+    "topScore": 35,
+    "partial": false
+  },
+  "810": {
+    "topDriverId": "jenson-button",
+    "topDriverName": "Jenson Button",
+    "topScore": 41,
+    "partial": false
+  },
+  "811": {
+    "topDriverId": "sebastian-vettel",
+    "topDriverName": "Sebastian Vettel",
+    "topScore": 40,
+    "partial": false
+  },
+  "812": {
+    "topDriverId": "mark-webber",
+    "topDriverName": "Mark Webber",
+    "topScore": 35,
+    "partial": false
+  },
+  "813": {
+    "topDriverId": "lewis-hamilton",
+    "topDriverName": "Lewis Hamilton",
+    "topScore": 38,
+    "partial": false
+  },
+  "814": {
+    "topDriverId": "rubens-barrichello",
+    "topDriverName": "Rubens Barrichello",
+    "topScore": 37,
+    "partial": false
+  },
+  "815": {
+    "topDriverId": "kimi-raikkonen",
+    "topDriverName": "Kimi Räikkönen",
+    "topScore": 40,
+    "partial": false
+  },
+  "816": {
+    "topDriverId": "rubens-barrichello",
+    "topDriverName": "Rubens Barrichello",
+    "topScore": 39,
+    "partial": false
+  },
+  "817": {
+    "topDriverId": "lewis-hamilton",
+    "topDriverName": "Lewis Hamilton",
+    "topScore": 35,
+    "partial": false
+  },
+  "818": {
+    "topDriverId": "sebastian-vettel",
+    "topDriverName": "Sebastian Vettel",
+    "topScore": 35,
+    "partial": true
+  },
+  "819": {
+    "topDriverId": "lewis-hamilton",
+    "topDriverName": "Lewis Hamilton",
+    "topScore": 43,
+    "partial": false
+  },
+  "820": {
+    "topDriverId": "sebastian-vettel",
+    "topDriverName": "Sebastian Vettel",
+    "topScore": 41,
+    "partial": false
+  },
+  "821": {
+    "topDriverId": "fernando-alonso",
+    "topDriverName": "Fernando Alonso",
+    "topScore": 42,
+    "partial": false
+  },
+  "822": {
+    "topDriverId": "jenson-button",
+    "topDriverName": "Jenson Button",
+    "topScore": 38,
+    "partial": false
+  },
+  "823": {
+    "topDriverId": "sebastian-vettel",
+    "topDriverName": "Sebastian Vettel",
+    "topScore": 37,
+    "partial": false
+  },
+  "824": {
+    "topDriverId": "jenson-button",
+    "topDriverName": "Jenson Button",
+    "topScore": 39,
+    "partial": false
+  },
+  "825": {
+    "topDriverId": "mark-webber",
+    "topDriverName": "Mark Webber",
+    "topScore": 35,
+    "partial": false
+  },
+  "826": {
+    "topDriverId": "mark-webber",
+    "topDriverName": "Mark Webber",
+    "topScore": 35,
+    "partial": true
+  },
+  "827": {
+    "topDriverId": "lewis-hamilton",
+    "topDriverName": "Lewis Hamilton",
+    "topScore": 36,
+    "partial": false
+  },
+  "828": {
+    "topDriverId": "lewis-hamilton",
+    "topDriverName": "Lewis Hamilton",
+    "topScore": 35,
+    "partial": false
+  },
+  "829": {
+    "topDriverId": "sebastian-vettel",
+    "topDriverName": "Sebastian Vettel",
+    "topScore": 35,
+    "partial": false
+  },
+  "830": {
+    "topDriverId": "mark-webber",
+    "topDriverName": "Mark Webber",
+    "topScore": 36,
+    "partial": false
+  },
+  "831": {
+    "topDriverId": "fernando-alonso",
+    "topDriverName": "Fernando Alonso",
+    "topScore": 36,
+    "partial": false
+  },
+  "832": {
+    "topDriverId": "mark-webber",
+    "topDriverName": "Mark Webber",
+    "topScore": 36,
+    "partial": false
+  },
+  "833": {
+    "topDriverId": "lewis-hamilton",
+    "topDriverName": "Lewis Hamilton",
+    "topScore": 41,
+    "partial": false
+  },
+  "834": {
+    "topDriverId": "fernando-alonso",
+    "topDriverName": "Fernando Alonso",
+    "topScore": 40,
+    "partial": false
+  },
+  "835": {
+    "topDriverId": "fernando-alonso",
+    "topDriverName": "Fernando Alonso",
+    "topScore": 40,
+    "partial": false
+  },
+  "836": {
+    "topDriverId": "sebastian-vettel",
+    "topDriverName": "Sebastian Vettel",
+    "topScore": 35,
+    "partial": false
+  },
+  "837": {
+    "topDriverId": "fernando-alonso",
+    "topDriverName": "Fernando Alonso",
+    "topScore": 42,
+    "partial": false
+  },
+  "838": {
+    "topDriverId": "sebastian-vettel",
+    "topDriverName": "Sebastian Vettel",
+    "topScore": 36,
+    "partial": false
+  },
+  "839": {
+    "topDriverId": "sebastian-vettel",
+    "topDriverName": "Sebastian Vettel",
+    "topScore": 35,
+    "partial": false
+  },
+  "840": {
+    "topDriverId": "sebastian-vettel",
+    "topDriverName": "Sebastian Vettel",
+    "topScore": 35,
+    "partial": false
+  },
+  "841": {
+    "topDriverId": "sebastian-vettel",
+    "topDriverName": "Sebastian Vettel",
+    "topScore": 35,
+    "partial": false
+  },
+  "842": {
+    "topDriverId": "mark-webber",
+    "topDriverName": "Mark Webber",
+    "topScore": 50,
+    "partial": false
+  },
+  "843": {
+    "topDriverId": "sebastian-vettel",
+    "topDriverName": "Sebastian Vettel",
+    "topScore": 35,
+    "partial": false
+  },
+  "844": {
+    "topDriverId": "sebastian-vettel",
+    "topDriverName": "Sebastian Vettel",
+    "topScore": 36,
+    "partial": true
+  },
+  "845": {
+    "topDriverId": "sebastian-vettel",
+    "topDriverName": "Sebastian Vettel",
+    "topScore": 35,
+    "partial": true
+  },
+  "846": {
+    "topDriverId": "jenson-button",
+    "topDriverName": "Jenson Button",
+    "topScore": 46,
+    "partial": true
+  },
+  "847": {
+    "topDriverId": "sebastian-vettel",
+    "topDriverName": "Sebastian Vettel",
+    "topScore": 40,
+    "partial": false
+  },
+  "848": {
+    "topDriverId": "fernando-alonso",
+    "topDriverName": "Fernando Alonso",
+    "topScore": 42,
+    "partial": false
+  },
+  "849": {
+    "topDriverId": "lewis-hamilton",
+    "topDriverName": "Lewis Hamilton",
+    "topScore": 41,
+    "partial": true
+  },
+  "850": {
+    "topDriverId": "jenson-button",
+    "topDriverName": "Jenson Button",
+    "topScore": 37,
+    "partial": false
+  },
+  "851": {
+    "topDriverId": "jenson-button",
+    "topDriverName": "Jenson Button",
+    "topScore": 38,
+    "partial": true
+  },
+  "852": {
+    "topDriverId": "sebastian-vettel",
+    "topDriverName": "Sebastian Vettel",
+    "topScore": 35,
+    "partial": false
+  },
+  "853": {
+    "topDriverId": "sebastian-vettel",
+    "topDriverName": "Sebastian Vettel",
+    "topScore": 35,
+    "partial": false
+  },
+  "854": {
+    "topDriverId": "jenson-button",
+    "topDriverName": "Jenson Button",
+    "topScore": 41,
+    "partial": true
+  },
+  "855": {
+    "topDriverId": "sebastian-vettel",
+    "topDriverName": "Sebastian Vettel",
+    "topScore": 41,
+    "partial": true
+  },
+  "856": {
+    "topDriverId": "sebastian-vettel",
+    "topDriverName": "Sebastian Vettel",
+    "topScore": 40,
+    "partial": true
+  },
+  "857": {
+    "topDriverId": "lewis-hamilton",
+    "topDriverName": "Lewis Hamilton",
+    "topScore": 36,
+    "partial": true
+  },
+  "858": {
+    "topDriverId": "mark-webber",
+    "topDriverName": "Mark Webber",
+    "topScore": 41,
+    "partial": false
+  },
+  "859": {
+    "topDriverId": "jenson-button",
+    "topDriverName": "Jenson Button",
+    "topScore": 41,
+    "partial": true
+  },
+  "860": {
+    "topDriverId": "fernando-alonso",
+    "topDriverName": "Fernando Alonso",
+    "topScore": 41,
+    "partial": false
+  },
+  "861": {
+    "topDriverId": "nico-rosberg",
+    "topDriverName": "Nico Rosberg",
+    "topScore": 35,
+    "partial": false
+  },
+  "862": {
+    "topDriverId": "kimi-raikkonen",
+    "topDriverName": "Kimi Räikkönen",
+    "topScore": 41,
+    "partial": false
+  },
+  "863": {
+    "topDriverId": "pastor-maldonado",
+    "topDriverName": "Pastor Maldonado",
+    "topScore": 35,
+    "partial": true
+  },
+  "864": {
+    "topDriverId": "mark-webber",
+    "topDriverName": "Mark Webber",
+    "topScore": 34,
+    "partial": true
+  },
+  "865": {
+    "topDriverId": "sergio-perez",
+    "topDriverName": "Sergio Pérez",
+    "topScore": 40,
+    "partial": false
+  },
+  "866": {
+    "topDriverId": "fernando-alonso",
+    "topDriverName": "Fernando Alonso",
+    "topScore": 50,
+    "partial": true
+  },
+  "867": {
+    "topDriverId": "mark-webber",
+    "topDriverName": "Mark Webber",
+    "topScore": 36,
+    "partial": true
+  },
+  "868": {
+    "topDriverId": "fernando-alonso",
+    "topDriverName": "Fernando Alonso",
+    "topScore": 35,
+    "partial": false
+  },
+  "869": {
+    "topDriverId": "lewis-hamilton",
+    "topDriverName": "Lewis Hamilton",
+    "topScore": 35,
+    "partial": false
+  },
+  "870": {
+    "topDriverId": "sebastian-vettel",
+    "topDriverName": "Sebastian Vettel",
+    "topScore": 39,
+    "partial": false
+  },
+  "871": {
+    "topDriverId": "sergio-perez",
+    "topDriverName": "Sergio Pérez",
+    "topScore": 41,
+    "partial": true
+  },
+  "872": {
+    "topDriverId": "sebastian-vettel",
+    "topDriverName": "Sebastian Vettel",
+    "topScore": 37,
+    "partial": false
+  },
+  "873": {
+    "topDriverId": "sebastian-vettel",
+    "topDriverName": "Sebastian Vettel",
+    "topScore": 40,
+    "partial": false
+  },
+  "874": {
+    "topDriverId": "sebastian-vettel",
+    "topDriverName": "Sebastian Vettel",
+    "topScore": 36,
+    "partial": true
+  },
+  "875": {
+    "topDriverId": "sebastian-vettel",
+    "topDriverName": "Sebastian Vettel",
+    "topScore": 35,
+    "partial": false
+  },
+  "876": {
+    "topDriverId": "kimi-raikkonen",
+    "topDriverName": "Kimi Räikkönen",
+    "topScore": 38,
+    "partial": true
+  },
+  "877": {
+    "topDriverId": "lewis-hamilton",
+    "topDriverName": "Lewis Hamilton",
+    "topScore": 36,
+    "partial": false
+  },
+  "878": {
+    "topDriverId": "jenson-button",
+    "topDriverName": "Jenson Button",
+    "topScore": 36,
+    "partial": false
+  },
+  "879": {
+    "topDriverId": "kimi-raikkonen",
+    "topDriverName": "Kimi Räikkönen",
+    "topScore": 46,
+    "partial": true
+  },
+  "880": {
+    "topDriverId": "sebastian-vettel",
+    "topDriverName": "Sebastian Vettel",
+    "topScore": 35,
+    "partial": false
+  },
+  "881": {
+    "topDriverId": "fernando-alonso",
+    "topDriverName": "Fernando Alonso",
+    "topScore": 37,
+    "partial": false
+  },
+  "882": {
+    "topDriverId": "sebastian-vettel",
+    "topDriverName": "Sebastian Vettel",
+    "topScore": 41,
+    "partial": false
+  },
+  "883": {
+    "topDriverId": "fernando-alonso",
+    "topDriverName": "Fernando Alonso",
+    "topScore": 39,
+    "partial": false
+  },
+  "884": {
+    "topDriverId": "nico-rosberg",
+    "topDriverName": "Nico Rosberg",
+    "topScore": 35,
+    "partial": true
+  },
+  "885": {
+    "topDriverId": "sebastian-vettel",
+    "topDriverName": "Sebastian Vettel",
+    "topScore": 35,
+    "partial": false
+  },
+  "886": {
+    "topDriverId": "nico-rosberg",
+    "topDriverName": "Nico Rosberg",
+    "topScore": 36,
+    "partial": true
+  },
+  "887": {
+    "topDriverId": "sebastian-vettel",
+    "topDriverName": "Sebastian Vettel",
+    "topScore": 36,
+    "partial": false
+  },
+  "888": {
+    "topDriverId": "lewis-hamilton",
+    "topDriverName": "Lewis Hamilton",
+    "topScore": 35,
+    "partial": false
+  },
+  "889": {
+    "topDriverId": "sebastian-vettel",
+    "topDriverName": "Sebastian Vettel",
+    "topScore": 41,
+    "partial": false
+  },
+  "890": {
+    "topDriverId": "sebastian-vettel",
+    "topDriverName": "Sebastian Vettel",
+    "topScore": 35,
+    "partial": false
+  },
+  "891": {
+    "topDriverId": "sebastian-vettel",
+    "topDriverName": "Sebastian Vettel",
+    "topScore": 40,
+    "partial": false
+  },
+  "892": {
+    "topDriverId": "sebastian-vettel",
+    "topDriverName": "Sebastian Vettel",
+    "topScore": 40,
+    "partial": false
+  },
+  "893": {
+    "topDriverId": "sebastian-vettel",
+    "topDriverName": "Sebastian Vettel",
+    "topScore": 36,
+    "partial": false
+  },
+  "894": {
+    "topDriverId": "romain-grosjean",
+    "topDriverName": "Romain Grosjean",
+    "topScore": 43,
+    "partial": false
+  },
+  "895": {
+    "topDriverId": "sebastian-vettel",
+    "topDriverName": "Sebastian Vettel",
+    "topScore": 36,
+    "partial": true
+  },
+  "896": {
+    "topDriverId": "sebastian-vettel",
+    "topDriverName": "Sebastian Vettel",
+    "topScore": 40,
+    "partial": false
+  },
+  "897": {
+    "topDriverId": "sergio-perez",
+    "topDriverName": "Sergio Pérez",
+    "topScore": 36,
+    "partial": false
+  },
+  "898": {
+    "topDriverId": "nico-rosberg",
+    "topDriverName": "Nico Rosberg",
+    "topScore": 42,
+    "partial": true
+  },
+  "899": {
+    "topDriverId": "lewis-hamilton",
+    "topDriverName": "Lewis Hamilton",
+    "topScore": 40,
+    "partial": false
+  },
+  "900": {
+    "topDriverId": "daniel-ricciardo",
+    "topDriverName": "Daniel Ricciardo",
+    "topScore": 38,
+    "partial": false
+  },
+  "901": {
+    "topDriverId": "lewis-hamilton",
+    "topDriverName": "Lewis Hamilton",
+    "topScore": 35,
+    "partial": true
+  },
+  "902": {
+    "topDriverId": "sebastian-vettel",
+    "topDriverName": "Sebastian Vettel",
+    "topScore": 40,
+    "partial": true
+  },
+  "903": {
+    "topDriverId": "nico-rosberg",
+    "topDriverName": "Nico Rosberg",
+    "topScore": 35,
+    "partial": false
+  },
+  "904": {
+    "topDriverId": "daniel-ricciardo",
+    "topDriverName": "Daniel Ricciardo",
+    "topScore": 40,
+    "partial": true
+  },
+  "905": {
+    "topDriverId": "nico-rosberg",
+    "topDriverName": "Nico Rosberg",
+    "topScore": 37,
+    "partial": false
+  },
+  "906": {
+    "topDriverId": "lewis-hamilton",
+    "topDriverName": "Lewis Hamilton",
+    "topScore": 45,
+    "partial": true
+  },
+  "907": {
+    "topDriverId": "lewis-hamilton",
+    "topDriverName": "Lewis Hamilton",
+    "topScore": 54,
+    "partial": true
+  },
+  "908": {
+    "topDriverId": "daniel-ricciardo",
+    "topDriverName": "Daniel Ricciardo",
+    "topScore": 38,
+    "partial": true
+  },
+  "909": {
+    "topDriverId": "daniel-ricciardo",
+    "topDriverName": "Daniel Ricciardo",
+    "topScore": 39,
+    "partial": false
+  },
+  "910": {
+    "topDriverId": "lewis-hamilton",
+    "topDriverName": "Lewis Hamilton",
+    "topScore": 40,
+    "partial": false
+  },
+  "911": {
+    "topDriverId": "lewis-hamilton",
+    "topDriverName": "Lewis Hamilton",
+    "topScore": 40,
+    "partial": false
+  },
+  "912": {
+    "topDriverId": "lewis-hamilton",
+    "topDriverName": "Lewis Hamilton",
+    "topScore": 41,
+    "partial": false
+  },
+  "913": {
+    "topDriverId": "lewis-hamilton",
+    "topDriverName": "Lewis Hamilton",
+    "topScore": 35,
+    "partial": false
+  },
+  "914": {
+    "topDriverId": "lewis-hamilton",
+    "topDriverName": "Lewis Hamilton",
+    "topScore": 36,
+    "partial": false
+  },
+  "915": {
+    "topDriverId": "nico-rosberg",
+    "topDriverName": "Nico Rosberg",
+    "topScore": 35,
+    "partial": false
+  },
+  "916": {
+    "topDriverId": "lewis-hamilton",
+    "topDriverName": "Lewis Hamilton",
+    "topScore": 36,
+    "partial": true
+  },
+  "917": {
+    "topDriverId": "lewis-hamilton",
+    "topDriverName": "Lewis Hamilton",
+    "topScore": 40,
+    "partial": true
+  },
+  "918": {
+    "topDriverId": "sebastian-vettel",
+    "topDriverName": "Sebastian Vettel",
+    "topScore": 36,
+    "partial": true
+  },
+  "919": {
+    "topDriverId": "lewis-hamilton",
+    "topDriverName": "Lewis Hamilton",
+    "topScore": 40,
+    "partial": false
+  },
+  "920": {
+    "topDriverId": "lewis-hamilton",
+    "topDriverName": "Lewis Hamilton",
+    "topScore": 35,
+    "partial": true
+  },
+  "921": {
+    "topDriverId": "nico-rosberg",
+    "topDriverName": "Nico Rosberg",
+    "topScore": 35,
+    "partial": false
+  },
+  "922": {
+    "topDriverId": "nico-rosberg",
+    "topDriverName": "Nico Rosberg",
+    "topScore": 36,
+    "partial": false
+  },
+  "923": {
+    "topDriverId": "sebastian-vettel",
+    "topDriverName": "Sebastian Vettel",
+    "topScore": 36,
+    "partial": true
+  },
+  "924": {
+    "topDriverId": "nico-rosberg",
+    "topDriverName": "Nico Rosberg",
+    "topScore": 41,
+    "partial": false
+  },
+  "925": {
+    "topDriverId": "lewis-hamilton",
+    "topDriverName": "Lewis Hamilton",
+    "topScore": 40,
+    "partial": false
+  },
+  "926": {
+    "topDriverId": "sebastian-vettel",
+    "topDriverName": "Sebastian Vettel",
+    "topScore": 37,
+    "partial": false
+  },
+  "927": {
+    "topDriverId": "lewis-hamilton",
+    "topDriverName": "Lewis Hamilton",
+    "topScore": 35,
+    "partial": false
+  },
+  "928": {
+    "topDriverId": "lewis-hamilton",
+    "topDriverName": "Lewis Hamilton",
+    "topScore": 40,
+    "partial": true
+  },
+  "929": {
+    "topDriverId": "sebastian-vettel",
+    "topDriverName": "Sebastian Vettel",
+    "topScore": 35,
+    "partial": false
+  },
+  "930": {
+    "topDriverId": "lewis-hamilton",
+    "topDriverName": "Lewis Hamilton",
+    "topScore": 41,
+    "partial": true
+  },
+  "931": {
+    "topDriverId": "lewis-hamilton",
+    "topDriverName": "Lewis Hamilton",
+    "topScore": 36,
+    "partial": true
+  },
+  "932": {
+    "topDriverId": "sebastian-vettel",
+    "topDriverName": "Sebastian Vettel",
+    "topScore": 41,
+    "partial": true
+  },
+  "933": {
+    "topDriverId": "nico-rosberg",
+    "topDriverName": "Nico Rosberg",
+    "topScore": 40,
+    "partial": true
+  },
+  "934": {
+    "topDriverId": "nico-rosberg",
+    "topDriverName": "Nico Rosberg",
+    "topScore": 35,
+    "partial": true
+  },
+  "935": {
+    "topDriverId": "nico-rosberg",
+    "topDriverName": "Nico Rosberg",
+    "topScore": 35,
+    "partial": false
+  },
+  "936": {
+    "topDriverId": "nico-rosberg",
+    "topDriverName": "Nico Rosberg",
+    "topScore": 36,
+    "partial": false
+  },
+  "937": {
+    "topDriverId": "nico-rosberg",
+    "topDriverName": "Nico Rosberg",
+    "topScore": 41,
+    "partial": false
+  },
+  "938": {
+    "topDriverId": "nico-rosberg",
+    "topDriverName": "Nico Rosberg",
+    "topScore": 35,
+    "partial": true
+  },
+  "939": {
+    "topDriverId": "nico-rosberg",
+    "topDriverName": "Nico Rosberg",
+    "topScore": 40,
+    "partial": false
+  },
+  "940": {
+    "topDriverId": "max-verstappen",
+    "topDriverName": "Max Verstappen",
+    "topScore": 38,
+    "partial": false
+  },
+  "941": {
+    "topDriverId": "lewis-hamilton",
+    "topDriverName": "Lewis Hamilton",
+    "topScore": 42,
+    "partial": true
+  },
+  "942": {
+    "topDriverId": "lewis-hamilton",
+    "topDriverName": "Lewis Hamilton",
+    "topScore": 35,
+    "partial": true
+  },
+  "943": {
+    "topDriverId": "nico-rosberg",
+    "topDriverName": "Nico Rosberg",
+    "topScore": 40,
+    "partial": false
+  },
+  "944": {
+    "topDriverId": "lewis-hamilton",
+    "topDriverName": "Lewis Hamilton",
+    "topScore": 40,
+    "partial": false
+  },
+  "945": {
+    "topDriverId": "lewis-hamilton",
+    "topDriverName": "Lewis Hamilton",
+    "topScore": 35,
+    "partial": true
+  },
+  "946": {
+    "topDriverId": "lewis-hamilton",
+    "topDriverName": "Lewis Hamilton",
+    "topScore": 36,
+    "partial": true
+  },
+  "947": {
+    "topDriverId": "lewis-hamilton",
+    "topDriverName": "Lewis Hamilton",
+    "topScore": 36,
+    "partial": false
+  },
+  "948": {
+    "topDriverId": "lewis-hamilton",
+    "topDriverName": "Lewis Hamilton",
+    "topScore": 56,
+    "partial": true
+  },
+  "949": {
+    "topDriverId": "nico-rosberg",
+    "topDriverName": "Nico Rosberg",
+    "topScore": 36,
+    "partial": true
+  },
+  "950": {
+    "topDriverId": "sebastian-vettel",
+    "topDriverName": "Sebastian Vettel",
+    "topScore": 44,
+    "partial": false
+  },
+  "951": {
+    "topDriverId": "daniel-ricciardo",
+    "topDriverName": "Daniel Ricciardo",
+    "topScore": 38,
+    "partial": false
+  },
+  "952": {
+    "topDriverId": "nico-rosberg",
+    "topDriverName": "Nico Rosberg",
+    "topScore": 35,
+    "partial": false
+  },
+  "953": {
+    "topDriverId": "lewis-hamilton",
+    "topDriverName": "Lewis Hamilton",
+    "topScore": 35,
+    "partial": false
+  },
+  "954": {
+    "topDriverId": "lewis-hamilton",
+    "topDriverName": "Lewis Hamilton",
+    "topScore": 35,
+    "partial": true
+  },
+  "955": {
+    "topDriverId": "lewis-hamilton",
+    "topDriverName": "Lewis Hamilton",
+    "topScore": 35,
+    "partial": false
+  },
+  "956": {
+    "topDriverId": "lewis-hamilton",
+    "topDriverName": "Lewis Hamilton",
+    "topScore": 35,
+    "partial": false
+  },
+  "957": {
+    "topDriverId": "sebastian-vettel",
+    "topDriverName": "Sebastian Vettel",
+    "topScore": 36,
+    "partial": false
+  },
+  "958": {
+    "topDriverId": "max-verstappen",
+    "topDriverName": "Max Verstappen",
+    "topScore": 41,
+    "partial": false
+  },
+  "959": {
+    "topDriverId": "sebastian-vettel",
+    "topDriverName": "Sebastian Vettel",
+    "topScore": 37,
+    "partial": false
+  },
+  "960": {
+    "topDriverId": "valtteri-bottas",
+    "topDriverName": "Valtteri Bottas",
+    "topScore": 37,
+    "partial": false
+  },
+  "961": {
+    "topDriverId": "lewis-hamilton",
+    "topDriverName": "Lewis Hamilton",
+    "topScore": 40,
+    "partial": false
+  },
+  "962": {
+    "topDriverId": "sebastian-vettel",
+    "topDriverName": "Sebastian Vettel",
+    "topScore": 36,
+    "partial": false
+  },
+  "963": {
+    "topDriverId": "lewis-hamilton",
+    "topDriverName": "Lewis Hamilton",
+    "topScore": 40,
+    "partial": false
+  },
+  "964": {
+    "topDriverId": "daniel-ricciardo",
+    "topDriverName": "Daniel Ricciardo",
+    "topScore": 44,
+    "partial": true
+  },
+  "965": {
+    "topDriverId": "valtteri-bottas",
+    "topDriverName": "Valtteri Bottas",
+    "topScore": 35,
+    "partial": false
+  },
+  "966": {
+    "topDriverId": "lewis-hamilton",
+    "topDriverName": "Lewis Hamilton",
+    "topScore": 40,
+    "partial": false
+  },
+  "967": {
+    "topDriverId": "sebastian-vettel",
+    "topDriverName": "Sebastian Vettel",
+    "topScore": 35,
+    "partial": false
+  },
+  "968": {
+    "topDriverId": "lewis-hamilton",
+    "topDriverName": "Lewis Hamilton",
+    "topScore": 35,
+    "partial": false
+  },
+  "969": {
+    "topDriverId": "daniel-ricciardo",
+    "topDriverName": "Daniel Ricciardo",
+    "topScore": 49,
+    "partial": true
+  },
+  "970": {
+    "topDriverId": "lewis-hamilton",
+    "topDriverName": "Lewis Hamilton",
+    "topScore": 44,
+    "partial": false
+  },
+  "971": {
+    "topDriverId": "max-verstappen",
+    "topDriverName": "Max Verstappen",
+    "topScore": 37,
+    "partial": true
+  },
+  "972": {
+    "topDriverId": "lewis-hamilton",
+    "topDriverName": "Lewis Hamilton",
+    "topScore": 35,
+    "partial": false
+  },
+  "973": {
+    "topDriverId": "max-verstappen",
+    "topDriverName": "Max Verstappen",
+    "topScore": 41,
+    "partial": false
+  },
+  "974": {
+    "topDriverId": "max-verstappen",
+    "topDriverName": "Max Verstappen",
+    "topScore": 36,
+    "partial": false
+  },
+  "975": {
+    "topDriverId": "sebastian-vettel",
+    "topDriverName": "Sebastian Vettel",
+    "topScore": 36,
+    "partial": true
+  },
+  "976": {
+    "topDriverId": "valtteri-bottas",
+    "topDriverName": "Valtteri Bottas",
+    "topScore": 40,
+    "partial": false
+  },
+  "977": {
+    "topDriverId": "sebastian-vettel",
+    "topDriverName": "Sebastian Vettel",
+    "topScore": 37,
+    "partial": false
+  },
+  "978": {
+    "topDriverId": "sebastian-vettel",
+    "topDriverName": "Sebastian Vettel",
+    "topScore": 35,
+    "partial": false
+  },
+  "979": {
+    "topDriverId": "daniel-ricciardo",
+    "topDriverName": "Daniel Ricciardo",
+    "topScore": 45,
+    "partial": false
+  },
+  "980": {
+    "topDriverId": "lewis-hamilton",
+    "topDriverName": "Lewis Hamilton",
+    "topScore": 36,
+    "partial": true
+  },
+  "981": {
+    "topDriverId": "lewis-hamilton",
+    "topDriverName": "Lewis Hamilton",
+    "topScore": 35,
+    "partial": true
+  },
+  "982": {
+    "topDriverId": "daniel-ricciardo",
+    "topDriverName": "Daniel Ricciardo",
+    "topScore": 35,
+    "partial": true
+  },
+  "983": {
+    "topDriverId": "sebastian-vettel",
+    "topDriverName": "Sebastian Vettel",
+    "topScore": 35,
+    "partial": true
+  },
+  "984": {
+    "topDriverId": "lewis-hamilton",
+    "topDriverName": "Lewis Hamilton",
+    "topScore": 35,
+    "partial": false
+  },
+  "985": {
+    "topDriverId": "max-verstappen",
+    "topDriverName": "Max Verstappen",
+    "topScore": 37,
+    "partial": false
+  },
+  "986": {
+    "topDriverId": "sebastian-vettel",
+    "topDriverName": "Sebastian Vettel",
+    "topScore": 41,
+    "partial": true
+  },
+  "987": {
+    "topDriverId": "lewis-hamilton",
+    "topDriverName": "Lewis Hamilton",
+    "topScore": 58,
+    "partial": false
+  },
+  "988": {
+    "topDriverId": "daniel-ricciardo",
+    "topDriverName": "Daniel Ricciardo",
+    "topScore": 37,
+    "partial": false
+  },
+  "989": {
+    "topDriverId": "valtteri-bottas",
+    "topDriverName": "Valtteri Bottas",
+    "topScore": 44,
+    "partial": false
+  },
+  "990": {
+    "topDriverId": "lewis-hamilton",
+    "topDriverName": "Lewis Hamilton",
+    "topScore": 42,
+    "partial": false
+  },
+  "991": {
+    "topDriverId": "lewis-hamilton",
+    "topDriverName": "Lewis Hamilton",
+    "topScore": 35,
+    "partial": false
+  },
+  "992": {
+    "topDriverId": "max-verstappen",
+    "topDriverName": "Max Verstappen",
+    "topScore": 43,
+    "partial": false
+  },
+  "993": {
+    "topDriverId": "lewis-hamilton",
+    "topDriverName": "Lewis Hamilton",
+    "topScore": 35,
+    "partial": false
+  },
+  "994": {
+    "topDriverId": "max-verstappen",
+    "topDriverName": "Max Verstappen",
+    "topScore": 51,
+    "partial": false
+  },
+  "995": {
+    "topDriverId": "max-verstappen",
+    "topDriverName": "Max Verstappen",
+    "topScore": 36,
+    "partial": false
+  },
+  "996": {
+    "topDriverId": "lewis-hamilton",
+    "topDriverName": "Lewis Hamilton",
+    "topScore": 35,
+    "partial": false
+  },
+  "997": {
+    "topDriverId": "lewis-hamilton",
+    "topDriverName": "Lewis Hamilton",
+    "topScore": 35,
+    "partial": false
+  },
+  "998": {
+    "topDriverId": "valtteri-bottas",
+    "topDriverName": "Valtteri Bottas",
+    "topScore": 41,
+    "partial": false
+  },
+  "999": {
+    "topDriverId": "lewis-hamilton",
+    "topDriverName": "Lewis Hamilton",
+    "topScore": 37,
+    "partial": false
+  },
+  "1000": {
+    "topDriverId": "lewis-hamilton",
+    "topDriverName": "Lewis Hamilton",
+    "topScore": 36,
+    "partial": true
+  },
+  "1001": {
+    "topDriverId": "valtteri-bottas",
+    "topDriverName": "Valtteri Bottas",
+    "topScore": 35,
+    "partial": true
+  },
+  "1002": {
+    "topDriverId": "lewis-hamilton",
+    "topDriverName": "Lewis Hamilton",
+    "topScore": 41,
+    "partial": false
+  },
+  "1003": {
+    "topDriverId": "lewis-hamilton",
+    "topDriverName": "Lewis Hamilton",
+    "topScore": 35,
+    "partial": false
+  },
+  "1004": {
+    "topDriverId": "lewis-hamilton",
+    "topDriverName": "Lewis Hamilton",
+    "topScore": 36,
+    "partial": false
+  },
+  "1005": {
+    "topDriverId": "lewis-hamilton",
+    "topDriverName": "Lewis Hamilton",
+    "topScore": 35,
+    "partial": false
+  },
+  "1006": {
+    "topDriverId": "max-verstappen",
+    "topDriverName": "Max Verstappen",
+    "topScore": 40,
+    "partial": false
+  },
+  "1007": {
+    "topDriverId": "lewis-hamilton",
+    "topDriverName": "Lewis Hamilton",
+    "topScore": 41,
+    "partial": false
+  },
+  "1008": {
+    "topDriverId": "max-verstappen",
+    "topDriverName": "Max Verstappen",
+    "topScore": 41,
+    "partial": true
+  },
+  "1009": {
+    "topDriverId": "lewis-hamilton",
+    "topDriverName": "Lewis Hamilton",
+    "topScore": 37,
+    "partial": false
+  },
+  "1010": {
+    "topDriverId": "alexander-albon",
+    "topDriverName": "Alexander Albon",
+    "topScore": 36,
+    "partial": true
+  },
+  "1011": {
+    "topDriverId": "charles-leclerc",
+    "topDriverName": "Charles Leclerc",
+    "topScore": 35,
+    "partial": true
+  },
+  "1012": {
+    "topDriverId": "sebastian-vettel",
+    "topDriverName": "Sebastian Vettel",
+    "topScore": 37,
+    "partial": true
+  },
+  "1013": {
+    "topDriverId": "lewis-hamilton",
+    "topDriverName": "Lewis Hamilton",
+    "topScore": 41,
+    "partial": true
+  },
+  "1014": {
+    "topDriverId": "valtteri-bottas",
+    "topDriverName": "Valtteri Bottas",
+    "topScore": 37,
+    "partial": true
+  },
+  "1015": {
+    "topDriverId": "lewis-hamilton",
+    "topDriverName": "Lewis Hamilton",
+    "topScore": 36,
+    "partial": false
+  },
+  "1016": {
+    "topDriverId": "valtteri-bottas",
+    "topDriverName": "Valtteri Bottas",
+    "topScore": 35,
+    "partial": false
+  },
+  "1017": {
+    "topDriverId": "max-verstappen",
+    "topDriverName": "Max Verstappen",
+    "topScore": 35,
+    "partial": true
+  },
+  "1018": {
+    "topDriverId": "valtteri-bottas",
+    "topDriverName": "Valtteri Bottas",
+    "topScore": 53,
+    "partial": false
+  },
+  "1019": {
+    "topDriverId": "valtteri-bottas",
+    "topDriverName": "Valtteri Bottas",
+    "topScore": 35,
+    "partial": false
+  },
+  "1020": {
+    "topDriverId": "lewis-hamilton",
+    "topDriverName": "Lewis Hamilton",
+    "topScore": 35,
+    "partial": false
+  },
+  "1021": {
+    "topDriverId": "lewis-hamilton",
+    "topDriverName": "Lewis Hamilton",
+    "topScore": 40,
+    "partial": false
+  },
+  "1022": {
+    "topDriverId": "lewis-hamilton",
+    "topDriverName": "Lewis Hamilton",
+    "topScore": 35,
+    "partial": false
+  },
+  "1023": {
+    "topDriverId": "max-verstappen",
+    "topDriverName": "Max Verstappen",
+    "topScore": 38,
+    "partial": false
+  },
+  "1024": {
+    "topDriverId": "lewis-hamilton",
+    "topDriverName": "Lewis Hamilton",
+    "topScore": 35,
+    "partial": false
+  },
+  "1025": {
+    "topDriverId": "lewis-hamilton",
+    "topDriverName": "Lewis Hamilton",
+    "topScore": 35,
+    "partial": false
+  },
+  "1026": {
+    "topDriverId": "pierre-gasly",
+    "topDriverName": "Pierre Gasly",
+    "topScore": 44,
+    "partial": false
+  },
+  "1027": {
+    "topDriverId": "lewis-hamilton",
+    "topDriverName": "Lewis Hamilton",
+    "topScore": 40,
+    "partial": false
+  },
+  "1028": {
+    "topDriverId": "valtteri-bottas",
+    "topDriverName": "Valtteri Bottas",
+    "topScore": 42,
+    "partial": false
+  },
+  "1029": {
+    "topDriverId": "lewis-hamilton",
+    "topDriverName": "Lewis Hamilton",
+    "topScore": 36,
+    "partial": false
+  },
+  "1030": {
+    "topDriverId": "lewis-hamilton",
+    "topDriverName": "Lewis Hamilton",
+    "topScore": 40,
+    "partial": false
+  },
+  "1031": {
+    "topDriverId": "lewis-hamilton",
+    "topDriverName": "Lewis Hamilton",
+    "topScore": 41,
+    "partial": false
+  },
+  "1032": {
+    "topDriverId": "lewis-hamilton",
+    "topDriverName": "Lewis Hamilton",
+    "topScore": 40,
+    "partial": false
+  },
+  "1033": {
+    "topDriverId": "lewis-hamilton",
+    "topDriverName": "Lewis Hamilton",
+    "topScore": 35,
+    "partial": false
+  },
+  "1034": {
+    "topDriverId": "esteban-ocon",
+    "topDriverName": "Esteban Ocon",
+    "topScore": 41,
+    "partial": false
+  },
+  "1035": {
+    "topDriverId": "max-verstappen",
+    "topDriverName": "Max Verstappen",
+    "topScore": 35,
+    "partial": false
+  },
+  "1036": {
+    "topDriverId": "lewis-hamilton",
+    "topDriverName": "Lewis Hamilton",
+    "topScore": 36,
+    "partial": false
+  },
+  "1037": {
+    "topDriverId": "max-verstappen",
+    "topDriverName": "Max Verstappen",
+    "topScore": 37,
+    "partial": true
+  },
+  "1038": {
+    "topDriverId": "lewis-hamilton",
+    "topDriverName": "Lewis Hamilton",
+    "topScore": 36,
+    "partial": false
+  },
+  "1039": {
+    "topDriverId": "lewis-hamilton",
+    "topDriverName": "Lewis Hamilton",
+    "topScore": 35,
+    "partial": false
+  },
+  "1040": {
+    "topDriverId": "max-verstappen",
+    "topDriverName": "Max Verstappen",
+    "topScore": 36,
+    "partial": true
+  },
+  "1041": {
+    "topDriverId": "sebastian-vettel",
+    "topDriverName": "Sebastian Vettel",
+    "topScore": 41,
+    "partial": true
+  },
+  "1042": {
+    "topDriverId": "max-verstappen",
+    "topDriverName": "Max Verstappen",
+    "topScore": 40,
+    "partial": true
+  },
+  "1043": {
+    "topDriverId": "max-verstappen",
+    "topDriverName": "Max Verstappen",
+    "topScore": 35,
+    "partial": false
+  },
+  "1044": {
+    "topDriverId": "max-verstappen",
+    "topDriverName": "Max Verstappen",
+    "topScore": 40,
+    "partial": false
+  },
+  "1045": {
+    "topDriverId": "lewis-hamilton",
+    "topDriverName": "Lewis Hamilton",
+    "topScore": 36,
+    "partial": false
+  },
+  "1046": {
+    "topDriverId": "esteban-ocon",
+    "topDriverName": "Esteban Ocon",
+    "topScore": 42,
+    "partial": true
+  },
+  "1047": {
+    "topDriverId": "max-verstappen",
+    "topDriverName": "Max Verstappen",
+    "topScore": 35,
+    "partial": false
+  },
+  "1048": {
+    "topDriverId": "max-verstappen",
+    "topDriverName": "Max Verstappen",
+    "topScore": 35,
+    "partial": false
+  },
+  "1049": {
+    "topDriverId": "valtteri-bottas",
+    "topDriverName": "Valtteri Bottas",
+    "topScore": 57,
+    "partial": true
+  },
+  "1050": {
+    "topDriverId": "max-verstappen",
+    "topDriverName": "Max Verstappen",
+    "topScore": 54,
+    "partial": false
+  },
+  "1051": {
+    "topDriverId": "valtteri-bottas",
+    "topDriverName": "Valtteri Bottas",
+    "topScore": 39,
+    "partial": false
+  },
+  "1052": {
+    "topDriverId": "max-verstappen",
+    "topDriverName": "Max Verstappen",
+    "topScore": 35,
+    "partial": false
+  },
+  "1053": {
+    "topDriverId": "max-verstappen",
+    "topDriverName": "Max Verstappen",
+    "topScore": 37,
+    "partial": false
+  },
+  "1054": {
+    "topDriverId": "lewis-hamilton",
+    "topDriverName": "Lewis Hamilton",
+    "topScore": 49,
+    "partial": false
+  },
+  "1055": {
+    "topDriverId": "max-verstappen",
+    "topDriverName": "Max Verstappen",
+    "topScore": 42,
+    "partial": false
+  },
+  "1056": {
+    "topDriverId": "lewis-hamilton",
+    "topDriverName": "Lewis Hamilton",
+    "topScore": 40,
+    "partial": false
+  },
+  "1057": {
+    "topDriverId": "max-verstappen",
+    "topDriverName": "Max Verstappen",
+    "topScore": 40,
+    "partial": false
+  },
+  "1058": {
+    "topDriverId": "charles-leclerc",
+    "topDriverName": "Charles Leclerc",
+    "topScore": 40,
+    "partial": false
+  },
+  "1059": {
+    "topDriverId": "max-verstappen",
+    "topDriverName": "Max Verstappen",
+    "topScore": 38,
+    "partial": true
+  },
+  "1060": {
+    "topDriverId": "charles-leclerc",
+    "topDriverName": "Charles Leclerc",
+    "topScore": 40,
+    "partial": true
+  },
+  "1061": {
+    "topDriverId": "max-verstappen",
+    "topDriverName": "Max Verstappen",
+    "topScore": 40,
+    "partial": true
+  },
+  "1062": {
+    "topDriverId": "max-verstappen",
+    "topDriverName": "Max Verstappen",
+    "topScore": 42,
+    "partial": true
+  },
+  "1063": {
+    "topDriverId": "max-verstappen",
+    "topDriverName": "Max Verstappen",
+    "topScore": 36,
+    "partial": false
+  },
+  "1064": {
+    "topDriverId": "sergio-perez",
+    "topDriverName": "Sergio Pérez",
+    "topScore": 37,
+    "partial": false
+  },
+  "1065": {
+    "topDriverId": "max-verstappen",
+    "topDriverName": "Max Verstappen",
+    "topScore": 37,
+    "partial": false
+  },
+  "1066": {
+    "topDriverId": "charles-leclerc",
+    "topDriverName": "Charles Leclerc",
+    "topScore": 39,
+    "partial": false
+  },
+  "1067": {
+    "topDriverId": "carlos-sainz-jr",
+    "topDriverName": "Carlos Sainz Jr.",
+    "topScore": 35,
+    "partial": false
+  },
+  "1068": {
+    "topDriverId": "charles-leclerc",
+    "topDriverName": "Charles Leclerc",
+    "topScore": 36,
+    "partial": true
+  },
+  "1069": {
+    "topDriverId": "carlos-sainz-jr",
+    "topDriverName": "Carlos Sainz Jr.",
+    "topScore": 45,
+    "partial": false
+  },
+  "1070": {
+    "topDriverId": "max-verstappen",
+    "topDriverName": "Max Verstappen",
+    "topScore": 44,
+    "partial": false
+  },
+  "1071": {
+    "topDriverId": "max-verstappen",
+    "topDriverName": "Max Verstappen",
+    "topScore": 66,
+    "partial": false
+  },
+  "1072": {
+    "topDriverId": "max-verstappen",
+    "topDriverName": "Max Verstappen",
+    "topScore": 40,
+    "partial": false
+  },
+  "1073": {
+    "topDriverId": "carlos-sainz-jr",
+    "topDriverName": "Carlos Sainz Jr.",
+    "topScore": 48,
+    "partial": false
+  },
+  "1074": {
+    "topDriverId": "sergio-perez",
+    "topDriverName": "Sergio Pérez",
+    "topScore": 36,
+    "partial": false
+  },
+  "1075": {
+    "topDriverId": "max-verstappen",
+    "topDriverName": "Max Verstappen",
+    "topScore": 35,
+    "partial": false
+  },
+  "1076": {
+    "topDriverId": "charles-leclerc",
+    "topDriverName": "Charles Leclerc",
+    "topScore": 42,
+    "partial": false
+  },
+  "1077": {
+    "topDriverId": "max-verstappen",
+    "topDriverName": "Max Verstappen",
+    "topScore": 35,
+    "partial": false
+  },
+  "1078": {
+    "topDriverId": "george-russell",
+    "topDriverName": "George Russell",
+    "topScore": 40,
+    "partial": true
+  },
+  "1079": {
+    "topDriverId": "max-verstappen",
+    "topDriverName": "Max Verstappen",
+    "topScore": 35,
+    "partial": false
+  },
+  "1080": {
+    "topDriverId": "max-verstappen",
+    "topDriverName": "Max Verstappen",
+    "topScore": 35,
+    "partial": false
+  },
+  "1081": {
+    "topDriverId": "max-verstappen",
+    "topDriverName": "Max Verstappen",
+    "topScore": 50,
+    "partial": true
+  },
+  "1082": {
+    "topDriverId": "max-verstappen",
+    "topDriverName": "Max Verstappen",
+    "topScore": 35,
+    "partial": true
+  },
+  "1083": {
+    "topDriverId": "sergio-perez",
+    "topDriverName": "Sergio Pérez",
+    "topScore": 37,
+    "partial": true
+  },
+  "1084": {
+    "topDriverId": "max-verstappen",
+    "topDriverName": "Max Verstappen",
+    "topScore": 48,
+    "partial": false
+  },
+  "1085": {
+    "topDriverId": "max-verstappen",
+    "topDriverName": "Max Verstappen",
+    "topScore": 35,
+    "partial": false
+  },
+  "1086": {
+    "topDriverId": "max-verstappen",
+    "topDriverName": "Max Verstappen",
+    "topScore": 40,
+    "partial": false
+  },
+  "1087": {
+    "topDriverId": "max-verstappen",
+    "topDriverName": "Max Verstappen",
+    "topScore": 35,
+    "partial": false
+  },
+  "1088": {
+    "topDriverId": "max-verstappen",
+    "topDriverName": "Max Verstappen",
+    "topScore": 40,
+    "partial": false
+  },
+  "1089": {
+    "topDriverId": "max-verstappen",
+    "topDriverName": "Max Verstappen",
+    "topScore": 40,
+    "partial": true
+  },
+  "1090": {
+    "topDriverId": "max-verstappen",
+    "topDriverName": "Max Verstappen",
+    "topScore": 41,
+    "partial": false
+  },
+  "1091": {
+    "topDriverId": "max-verstappen",
+    "topDriverName": "Max Verstappen",
+    "topScore": 45,
+    "partial": false
+  },
+  "1092": {
+    "topDriverId": "pierre-gasly",
+    "topDriverName": "Pierre Gasly",
+    "topScore": 37,
+    "partial": false
+  },
+  "1093": {
+    "topDriverId": "max-verstappen",
+    "topDriverName": "Max Verstappen",
+    "topScore": 36,
+    "partial": false
+  },
+  "1094": {
+    "topDriverId": "carlos-sainz-jr",
+    "topDriverName": "Carlos Sainz Jr.",
+    "topScore": 35,
+    "partial": false
+  },
+  "1095": {
+    "topDriverId": "max-verstappen",
+    "topDriverName": "Max Verstappen",
+    "topScore": 40,
+    "partial": true
+  },
+  "1096": {
+    "topDriverId": "max-verstappen",
+    "topDriverName": "Max Verstappen",
+    "topScore": 40,
+    "partial": false
+  },
+  "1097": {
+    "topDriverId": "max-verstappen",
+    "topDriverName": "Max Verstappen",
+    "topScore": 40,
+    "partial": false
+  },
+  "1098": {
+    "topDriverId": "max-verstappen",
+    "topDriverName": "Max Verstappen",
+    "topScore": 37,
+    "partial": true
+  },
+  "1099": {
+    "topDriverId": "max-verstappen",
+    "topDriverName": "Max Verstappen",
+    "topScore": 35,
+    "partial": false
+  },
+  "1100": {
+    "topDriverId": "lance-stroll",
+    "topDriverName": "Lance Stroll",
+    "topScore": 40,
+    "partial": false
+  },
+  "1101": {
+    "topDriverId": "max-verstappen",
+    "topDriverName": "Max Verstappen",
+    "topScore": 40,
+    "partial": true
+  },
+  "1102": {
+    "topDriverId": "max-verstappen",
+    "topDriverName": "Max Verstappen",
+    "topScore": 40,
+    "partial": false
+  },
+  "1103": {
+    "topDriverId": "max-verstappen",
+    "topDriverName": "Max Verstappen",
+    "topScore": 35,
+    "partial": true
+  },
+  "1104": {
+    "topDriverId": "carlos-sainz-jr",
+    "topDriverName": "Carlos Sainz Jr.",
+    "topScore": 36,
+    "partial": false
+  },
+  "1105": {
+    "topDriverId": "max-verstappen",
+    "topDriverName": "Max Verstappen",
+    "topScore": 40,
+    "partial": false
+  },
+  "1106": {
+    "topDriverId": "max-verstappen",
+    "topDriverName": "Max Verstappen",
+    "topScore": 35,
+    "partial": false
+  },
+  "1107": {
+    "topDriverId": "lando-norris",
+    "topDriverName": "Lando Norris",
+    "topScore": 39,
+    "partial": false
+  },
+  "1108": {
+    "topDriverId": "max-verstappen",
+    "topDriverName": "Max Verstappen",
+    "topScore": 35,
+    "partial": true
+  },
+  "1109": {
+    "topDriverId": "charles-leclerc",
+    "topDriverName": "Charles Leclerc",
+    "topScore": 35,
+    "partial": true
+  },
+  "1110": {
+    "topDriverId": "max-verstappen",
+    "topDriverName": "Max Verstappen",
+    "topScore": 36,
+    "partial": false
+  },
+  "1111": {
+    "topDriverId": "max-verstappen",
+    "topDriverName": "Max Verstappen",
+    "topScore": 36,
+    "partial": false
+  },
+  "1112": {
+    "topDriverId": "george-russell",
+    "topDriverName": "George Russell",
+    "topScore": 37,
+    "partial": false
+  },
+  "1113": {
+    "topDriverId": "lewis-hamilton",
+    "topDriverName": "Lewis Hamilton",
+    "topScore": 36,
+    "partial": false
+  },
+  "1114": {
+    "topDriverId": "oscar-piastri",
+    "topDriverName": "Oscar Piastri",
+    "topScore": 36,
+    "partial": false
+  },
+  "1115": {
+    "topDriverId": "lewis-hamilton",
+    "topDriverName": "Lewis Hamilton",
+    "topScore": 36,
+    "partial": false
+  },
+  "1116": {
+    "topDriverId": "lando-norris",
+    "topDriverName": "Lando Norris",
+    "topScore": 40,
+    "partial": true
+  },
+  "1117": {
+    "topDriverId": "charles-leclerc",
+    "topDriverName": "Charles Leclerc",
+    "topScore": 38,
+    "partial": false
+  },
+  "1118": {
+    "topDriverId": "lando-norris",
+    "topDriverName": "Lando Norris",
+    "topScore": 39,
+    "partial": true
+  },
+  "1119": {
+    "topDriverId": "lando-norris",
+    "topDriverName": "Lando Norris",
+    "topScore": 35,
+    "partial": false
+  },
+  "1120": {
+    "topDriverId": "charles-leclerc",
+    "topDriverName": "Charles Leclerc",
+    "topScore": 38,
+    "partial": false
+  },
+  "1121": {
+    "topDriverId": "carlos-sainz-jr",
+    "topDriverName": "Carlos Sainz Jr.",
+    "topScore": 35,
+    "partial": false
+  },
+  "1122": {
+    "topDriverId": "max-verstappen",
+    "topDriverName": "Max Verstappen",
+    "topScore": 66,
+    "partial": false
+  },
+  "1123": {
+    "topDriverId": "george-russell",
+    "topDriverName": "George Russell",
+    "topScore": 35,
+    "partial": false
+  },
+  "1124": {
+    "topDriverId": "max-verstappen",
+    "topDriverName": "Max Verstappen",
+    "topScore": 37,
+    "partial": false
+  },
+  "1125": {
+    "topDriverId": "charles-leclerc",
+    "topDriverName": "Charles Leclerc",
+    "topScore": 49,
+    "partial": false
+  },
+  "1126": {
+    "topDriverId": "lando-norris",
+    "topDriverName": "Lando Norris",
+    "topScore": 40,
+    "partial": true
+  },
+  "1127": {
+    "topDriverId": "oscar-piastri",
+    "topDriverName": "Oscar Piastri",
+    "topScore": 35,
+    "partial": false
+  },
+  "1128": {
+    "topDriverId": "max-verstappen",
+    "topDriverName": "Max Verstappen",
+    "topScore": 35,
+    "partial": false
+  },
+  "1129": {
+    "topDriverId": "oscar-piastri",
+    "topDriverName": "Oscar Piastri",
+    "topScore": 40,
+    "partial": false
+  },
+  "1130": {
+    "topDriverId": "oscar-piastri",
+    "topDriverName": "Oscar Piastri",
+    "topScore": 36,
+    "partial": false
+  },
+  "1131": {
+    "topDriverId": "oscar-piastri",
+    "topDriverName": "Oscar Piastri",
+    "topScore": 38,
+    "partial": false
+  },
+  "1132": {
+    "topDriverId": "max-verstappen",
+    "topDriverName": "Max Verstappen",
+    "topScore": 41,
+    "partial": true
+  },
+  "1133": {
+    "topDriverId": "lando-norris",
+    "topDriverName": "Lando Norris",
+    "topScore": 40,
+    "partial": false
+  },
+  "1134": {
+    "topDriverId": "oscar-piastri",
+    "topDriverName": "Oscar Piastri",
+    "topScore": 40,
+    "partial": false
+  },
+  "1135": {
+    "topDriverId": "george-russell",
+    "topDriverName": "George Russell",
+    "topScore": 40,
+    "partial": false
+  },
+  "1136": {
+    "topDriverId": "lando-norris",
+    "topDriverName": "Lando Norris",
+    "topScore": 35,
+    "partial": false
+  },
+  "1137": {
+    "topDriverId": "nico-hulkenberg",
+    "topDriverName": "Nico Hülkenberg",
+    "topScore": 47,
+    "partial": false
+  },
+  "1138": {
+    "topDriverId": "oscar-piastri",
+    "topDriverName": "Oscar Piastri",
+    "topScore": 36,
+    "partial": false
+  },
+  "1139": {
+    "topDriverId": "lando-norris",
+    "topDriverName": "Lando Norris",
+    "topScore": 37,
+    "partial": false
+  },
+  "1140": {
+    "topDriverId": "oscar-piastri",
+    "topDriverName": "Oscar Piastri",
+    "topScore": 40,
+    "partial": true
+  },
+  "1141": {
+    "topDriverId": "max-verstappen",
+    "topDriverName": "Max Verstappen",
+    "topScore": 35,
+    "partial": false
+  },
+  "1142": {
+    "topDriverId": "max-verstappen",
+    "topDriverName": "Max Verstappen",
+    "topScore": 40,
+    "partial": true
+  },
+  "1143": {
+    "topDriverId": "george-russell",
+    "topDriverName": "George Russell",
+    "topScore": 35,
+    "partial": true
+  },
+  "1144": {
+    "topDriverId": "max-verstappen",
+    "topDriverName": "Max Verstappen",
+    "topScore": 35,
+    "partial": true
+  },
+  "1145": {
+    "topDriverId": "lando-norris",
+    "topDriverName": "Lando Norris",
+    "topScore": 35,
+    "partial": false
+  },
+  "1146": {
+    "topDriverId": "lando-norris",
+    "topDriverName": "Lando Norris",
+    "topScore": 35,
+    "partial": true
+  },
+  "1147": {
+    "topDriverId": "kimi-antonelli",
+    "topDriverName": "Kimi Antonelli",
+    "topScore": 43,
+    "partial": false
+  },
+  "1148": {
+    "topDriverId": "max-verstappen",
+    "topDriverName": "Max Verstappen",
+    "topScore": 37,
+    "partial": false
+  },
+  "1149": {
+    "topDriverId": "max-verstappen",
+    "topDriverName": "Max Verstappen",
+    "topScore": 35,
+    "partial": false
+  },
+  "1150": {
+    "topDriverId": "george-russell",
+    "topDriverName": "George Russell",
+    "topScore": 35,
+    "partial": true
+  },
+  "1151": {
+    "topDriverId": "kimi-antonelli",
+    "topDriverName": "Kimi Antonelli",
+    "topScore": 40,
+    "partial": false
+  },
+  "1152": {
+    "topDriverId": "kimi-antonelli",
+    "topDriverName": "Kimi Antonelli",
+    "topScore": 40,
+    "partial": false
+  },
+  "1153": {
+    "topDriverId": "kimi-antonelli",
+    "topDriverName": "Kimi Antonelli",
+    "topScore": 35,
+    "partial": true
+  },
+  "1154": {
+    "topDriverId": "kimi-antonelli",
+    "topDriverName": "Kimi Antonelli",
+    "topScore": 41,
+    "partial": false
+  },
+  "1155": {
+    "topDriverId": "kimi-antonelli",
+    "topDriverName": "Kimi Antonelli",
+    "topScore": 40,
+    "partial": false
+  }
+}

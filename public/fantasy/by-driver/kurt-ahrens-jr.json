@@ -1,0 +1,35 @@
+{
+  "driverId": "kurt-ahrens-jr",
+  "name": "Kurt Ahrens, Jr.",
+  "career": {
+    "score": 0,
+    "races": 4,
+    "partial": 0
+  },
+  "seasons": [
+    {
+      "year": 1966,
+      "score": -20,
+      "races": 1,
+      "partial": 0
+    },
+    {
+      "year": 1967,
+      "score": -20,
+      "races": 1,
+      "partial": 0
+    },
+    {
+      "year": 1968,
+      "score": 10,
+      "races": 1,
+      "partial": 0
+    },
+    {
+      "year": 1969,
+      "score": 30,
+      "races": 1,
+      "partial": 0
+    }
+  ]
+}

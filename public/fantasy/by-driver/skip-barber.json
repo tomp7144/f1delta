@@ -1,0 +1,23 @@
+{
+  "driverId": "skip-barber",
+  "name": "Skip Barber",
+  "career": {
+    "score": -72,
+    "races": 6,
+    "partial": 0
+  },
+  "seasons": [
+    {
+      "year": 1971,
+      "score": -60,
+      "races": 4,
+      "partial": 0
+    },
+    {
+      "year": 1972,
+      "score": -12,
+      "races": 2,
+      "partial": 0
+    }
+  ]
+}

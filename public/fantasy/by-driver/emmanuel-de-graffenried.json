@@ -1,0 +1,47 @@
+{
+  "driverId": "emmanuel-de-graffenried",
+  "name": "Emmanuel de Graffenried",
+  "career": {
+    "score": 44,
+    "races": 23,
+    "partial": 0
+  },
+  "seasons": [
+    {
+      "year": 1950,
+      "score": 11,
+      "races": 4,
+      "partial": 0
+    },
+    {
+      "year": 1951,
+      "score": -29,
+      "races": 5,
+      "partial": 0
+    },
+    {
+      "year": 1952,
+      "score": 19,
+      "races": 4,
+      "partial": 0
+    },
+    {
+      "year": 1953,
+      "score": 21,
+      "races": 7,
+      "partial": 0
+    },
+    {
+      "year": 1954,
+      "score": -6,
+      "races": 2,
+      "partial": 0
+    },
+    {
+      "year": 1956,
+      "score": 28,
+      "races": 1,
+      "partial": 0
+    }
+  ]
+}

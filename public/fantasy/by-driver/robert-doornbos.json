@@ -1,0 +1,23 @@
+{
+  "driverId": "robert-doornbos",
+  "name": "Robert Doornbos",
+  "career": {
+    "score": 8,
+    "races": 11,
+    "partial": 0
+  },
+  "seasons": [
+    {
+      "year": 2005,
+      "score": -20,
+      "races": 8,
+      "partial": 0
+    },
+    {
+      "year": 2006,
+      "score": 28,
+      "races": 3,
+      "partial": 0
+    }
+  ]
+}

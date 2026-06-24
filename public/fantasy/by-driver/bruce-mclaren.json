@@ -1,0 +1,89 @@
+{
+  "driverId": "bruce-mclaren",
+  "name": "Bruce McLaren",
+  "career": {
+    "score": 856,
+    "races": 104,
+    "partial": 0
+  },
+  "seasons": [
+    {
+      "year": 1958,
+      "score": 40,
+      "races": 2,
+      "partial": 0
+    },
+    {
+      "year": 1959,
+      "score": 70,
+      "races": 7,
+      "partial": 0
+    },
+    {
+      "year": 1960,
+      "score": 220,
+      "races": 8,
+      "partial": 0
+    },
+    {
+      "year": 1961,
+      "score": 107,
+      "races": 8,
+      "partial": 0
+    },
+    {
+      "year": 1962,
+      "score": 153,
+      "races": 9,
+      "partial": 0
+    },
+    {
+      "year": 1963,
+      "score": 47,
+      "races": 10,
+      "partial": 0
+    },
+    {
+      "year": 1964,
+      "score": 15,
+      "races": 10,
+      "partial": 0
+    },
+    {
+      "year": 1965,
+      "score": -2,
+      "races": 10,
+      "partial": 0
+    },
+    {
+      "year": 1966,
+      "score": 5,
+      "races": 6,
+      "partial": 0
+    },
+    {
+      "year": 1967,
+      "score": -80,
+      "races": 9,
+      "partial": 0
+    },
+    {
+      "year": 1968,
+      "score": 91,
+      "races": 11,
+      "partial": 0
+    },
+    {
+      "year": 1969,
+      "score": 192,
+      "races": 11,
+      "partial": 0
+    },
+    {
+      "year": 1970,
+      "score": -2,
+      "races": 3,
+      "partial": 0
+    }
+  ]
+}

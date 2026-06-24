@@ -1,0 +1,23 @@
+{
+  "driverId": "jean-denis-deletraz",
+  "name": "Jean-Denis Délétraz",
+  "career": {
+    "score": -22,
+    "races": 3,
+    "partial": 0
+  },
+  "seasons": [
+    {
+      "year": 1994,
+      "score": -20,
+      "races": 1,
+      "partial": 0
+    },
+    {
+      "year": 1995,
+      "score": -2,
+      "races": 2,
+      "partial": 0
+    }
+  ]
+}

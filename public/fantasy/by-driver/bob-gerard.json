@@ -1,0 +1,47 @@
+{
+  "driverId": "bob-gerard",
+  "name": "Bob Gerard",
+  "career": {
+    "score": 102,
+    "races": 8,
+    "partial": 0
+  },
+  "seasons": [
+    {
+      "year": 1950,
+      "score": 50,
+      "races": 2,
+      "partial": 0
+    },
+    {
+      "year": 1951,
+      "score": -1,
+      "races": 1,
+      "partial": 0
+    },
+    {
+      "year": 1953,
+      "score": -18,
+      "races": 2,
+      "partial": 0
+    },
+    {
+      "year": 1954,
+      "score": 17,
+      "races": 1,
+      "partial": 0
+    },
+    {
+      "year": 1956,
+      "score": 22,
+      "races": 1,
+      "partial": 0
+    },
+    {
+      "year": 1957,
+      "score": 32,
+      "races": 1,
+      "partial": 0
+    }
+  ]
+}

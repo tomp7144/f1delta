@@ -1,0 +1,41 @@
+{
+  "driverId": "kamui-kobayashi",
+  "name": "Kamui Kobayashi",
+  "career": {
+    "score": 148,
+    "races": 76,
+    "partial": 1
+  },
+  "seasons": [
+    {
+      "year": 2009,
+      "score": 35,
+      "races": 2,
+      "partial": 0
+    },
+    {
+      "year": 2010,
+      "score": 3,
+      "races": 19,
+      "partial": 0
+    },
+    {
+      "year": 2011,
+      "score": 82,
+      "races": 19,
+      "partial": 0
+    },
+    {
+      "year": 2012,
+      "score": 99,
+      "races": 20,
+      "partial": 0
+    },
+    {
+      "year": 2014,
+      "score": -71,
+      "races": 16,
+      "partial": 1
+    }
+  ]
+}

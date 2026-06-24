@@ -1,0 +1,23 @@
+{
+  "driverId": "beppe-gabbiani",
+  "name": "Beppe Gabbiani",
+  "career": {
+    "score": -60,
+    "races": 17,
+    "partial": 0
+  },
+  "seasons": [
+    {
+      "year": 1978,
+      "score": 0,
+      "races": 2,
+      "partial": 0
+    },
+    {
+      "year": 1981,
+      "score": -60,
+      "races": 15,
+      "partial": 0
+    }
+  ]
+}

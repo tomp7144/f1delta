@@ -1,0 +1,35 @@
+{
+  "driverId": "chico-landi",
+  "name": "Chico Landi",
+  "career": {
+    "score": 6,
+    "races": 6,
+    "partial": 0
+  },
+  "seasons": [
+    {
+      "year": 1951,
+      "score": -20,
+      "races": 1,
+      "partial": 0
+    },
+    {
+      "year": 1952,
+      "score": 40,
+      "races": 2,
+      "partial": 0
+    },
+    {
+      "year": 1953,
+      "score": -40,
+      "races": 2,
+      "partial": 0
+    },
+    {
+      "year": 1956,
+      "score": 26,
+      "races": 1,
+      "partial": 0
+    }
+  ]
+}

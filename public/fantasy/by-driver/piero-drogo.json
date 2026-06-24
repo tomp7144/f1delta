@@ -1,0 +1,17 @@
+{
+  "driverId": "piero-drogo",
+  "name": "Piero Drogo",
+  "career": {
+    "score": 18,
+    "races": 1,
+    "partial": 0
+  },
+  "seasons": [
+    {
+      "year": 1960,
+      "score": 18,
+      "races": 1,
+      "partial": 0
+    }
+  ]
+}

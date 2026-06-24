@@ -1,0 +1,131 @@
+{
+  "driverId": "lewis-hamilton",
+  "name": "Lewis Hamilton",
+  "career": {
+    "score": 8204,
+    "races": 386,
+    "partial": 4
+  },
+  "seasons": [
+    {
+      "year": 2007,
+      "score": 387,
+      "races": 17,
+      "partial": 0
+    },
+    {
+      "year": 2008,
+      "score": 364,
+      "races": 18,
+      "partial": 0
+    },
+    {
+      "year": 2009,
+      "score": 178,
+      "races": 17,
+      "partial": 0
+    },
+    {
+      "year": 2010,
+      "score": 380,
+      "races": 19,
+      "partial": 0
+    },
+    {
+      "year": 2011,
+      "score": 320,
+      "races": 19,
+      "partial": 0
+    },
+    {
+      "year": 2012,
+      "score": 185,
+      "races": 20,
+      "partial": 1
+    },
+    {
+      "year": 2013,
+      "score": 267,
+      "races": 19,
+      "partial": 0
+    },
+    {
+      "year": 2014,
+      "score": 549,
+      "races": 19,
+      "partial": 1
+    },
+    {
+      "year": 2015,
+      "score": 568,
+      "races": 19,
+      "partial": 0
+    },
+    {
+      "year": 2016,
+      "score": 580,
+      "races": 21,
+      "partial": 1
+    },
+    {
+      "year": 2017,
+      "score": 568,
+      "races": 20,
+      "partial": 1
+    },
+    {
+      "year": 2018,
+      "score": 619,
+      "races": 21,
+      "partial": 0
+    },
+    {
+      "year": 2019,
+      "score": 618,
+      "races": 21,
+      "partial": 0
+    },
+    {
+      "year": 2020,
+      "score": 520,
+      "races": 16,
+      "partial": 0
+    },
+    {
+      "year": 2021,
+      "score": 596,
+      "races": 22,
+      "partial": 0
+    },
+    {
+      "year": 2022,
+      "score": 387,
+      "races": 22,
+      "partial": 0
+    },
+    {
+      "year": 2023,
+      "score": 370,
+      "races": 22,
+      "partial": 0
+    },
+    {
+      "year": 2024,
+      "score": 362,
+      "races": 24,
+      "partial": 0
+    },
+    {
+      "year": 2025,
+      "score": 257,
+      "races": 24,
+      "partial": 0
+    },
+    {
+      "year": 2026,
+      "score": 129,
+      "races": 6,
+      "partial": 0
+    }
+  ]
+}

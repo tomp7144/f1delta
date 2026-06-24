@@ -1,0 +1,71 @@
+{
+  "driverId": "esteban-ocon",
+  "name": "Esteban Ocon",
+  "career": {
+    "score": 958,
+    "races": 186,
+    "partial": 3
+  },
+  "seasons": [
+    {
+      "year": 2016,
+      "score": 54,
+      "races": 9,
+      "partial": 1
+    },
+    {
+      "year": 2017,
+      "score": 181,
+      "races": 20,
+      "partial": 0
+    },
+    {
+      "year": 2018,
+      "score": 35,
+      "races": 21,
+      "partial": 0
+    },
+    {
+      "year": 2020,
+      "score": 103,
+      "races": 17,
+      "partial": 0
+    },
+    {
+      "year": 2021,
+      "score": 114,
+      "races": 22,
+      "partial": 0
+    },
+    {
+      "year": 2022,
+      "score": 194,
+      "races": 22,
+      "partial": 1
+    },
+    {
+      "year": 2023,
+      "score": 55,
+      "races": 22,
+      "partial": 0
+    },
+    {
+      "year": 2024,
+      "score": 37,
+      "races": 23,
+      "partial": 0
+    },
+    {
+      "year": 2025,
+      "score": 140,
+      "races": 24,
+      "partial": 1
+    },
+    {
+      "year": 2026,
+      "score": 45,
+      "races": 6,
+      "partial": 0
+    }
+  ]
+}

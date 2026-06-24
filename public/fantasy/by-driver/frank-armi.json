@@ -1,0 +1,17 @@
+{
+  "driverId": "frank-armi",
+  "name": "Frank Armi",
+  "career": {
+    "score": 28,
+    "races": 1,
+    "partial": 0
+  },
+  "seasons": [
+    {
+      "year": 1954,
+      "score": 28,
+      "races": 1,
+      "partial": 0
+    }
+  ]
+}

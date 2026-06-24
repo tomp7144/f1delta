@@ -34,12 +34,17 @@ jobs:
         continue-on-error: true
         run: node bake-fantasy.mjs
 
+      - name: Bake fantasy history (derived scores for all F1 history)
+        continue-on-error: true
+        run: node bake-fantasy-history.mjs
+
       - name: Commit if anything changed
         run: |
           git config user.name  "f1delta-bot"
           git config user.email "bot@users.noreply.github.com"
           git add public/latest-race.json  public/standings.json public/grid-map.js
           git add data/fantasy/players.json data/fantasy/price-history.json 2>/dev/null || true
+          git add public/fantasy/ 2>/dev/null || true
 
           if git diff --staged --quiet; then
             echo "No change — nothing to commit."

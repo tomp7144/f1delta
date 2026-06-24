@@ -1,0 +1,17 @@
+{
+  "driverId": "jan-flinterman",
+  "name": "Jan Flinterman",
+  "career": {
+    "score": -18,
+    "races": 2,
+    "partial": 1
+  },
+  "seasons": [
+    {
+      "year": 1952,
+      "score": -18,
+      "races": 2,
+      "partial": 1
+    }
+  ]
+}

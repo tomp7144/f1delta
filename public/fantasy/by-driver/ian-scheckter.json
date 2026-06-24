@@ -1,0 +1,35 @@
+{
+  "driverId": "ian-scheckter",
+  "name": "Ian Scheckter",
+  "career": {
+    "score": -205,
+    "races": 20,
+    "partial": 0
+  },
+  "seasons": [
+    {
+      "year": 1974,
+      "score": 18,
+      "races": 2,
+      "partial": 0
+    },
+    {
+      "year": 1975,
+      "score": -26,
+      "races": 3,
+      "partial": 0
+    },
+    {
+      "year": 1976,
+      "score": -20,
+      "races": 1,
+      "partial": 0
+    },
+    {
+      "year": 1977,
+      "score": -177,
+      "races": 14,
+      "partial": 0
+    }
+  ]
+}

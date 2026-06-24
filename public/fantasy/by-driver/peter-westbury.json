@@ -1,0 +1,23 @@
+{
+  "driverId": "peter-westbury",
+  "name": "Peter Westbury",
+  "career": {
+    "score": 20,
+    "races": 2,
+    "partial": 0
+  },
+  "seasons": [
+    {
+      "year": 1969,
+      "score": 20,
+      "races": 1,
+      "partial": 0
+    },
+    {
+      "year": 1970,
+      "score": 0,
+      "races": 1,
+      "partial": 0
+    }
+  ]
+}

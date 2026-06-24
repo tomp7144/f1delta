@@ -1,0 +1,29 @@
+{
+  "driverId": "lella-lombardi",
+  "name": "Lella Lombardi",
+  "career": {
+    "score": 68,
+    "races": 17,
+    "partial": 0
+  },
+  "seasons": [
+    {
+      "year": 1974,
+      "score": 0,
+      "races": 1,
+      "partial": 0
+    },
+    {
+      "year": 1975,
+      "score": 28,
+      "races": 12,
+      "partial": 0
+    },
+    {
+      "year": 1976,
+      "score": 40,
+      "races": 4,
+      "partial": 0
+    }
+  ]
+}

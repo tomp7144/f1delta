@@ -1,0 +1,29 @@
+{
+  "driverId": "bill-cheesbourg",
+  "name": "Bill Cheesbourg",
+  "career": {
+    "score": 59,
+    "races": 3,
+    "partial": 0
+  },
+  "seasons": [
+    {
+      "year": 1957,
+      "score": -6,
+      "races": 1,
+      "partial": 0
+    },
+    {
+      "year": 1958,
+      "score": 47,
+      "races": 1,
+      "partial": 0
+    },
+    {
+      "year": 1959,
+      "score": 18,
+      "races": 1,
+      "partial": 0
+    }
+  ]
+}

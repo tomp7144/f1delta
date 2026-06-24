@@ -1,0 +1,107 @@
+{
+  "driverId": "jo-bonnier",
+  "name": "Jo Bonnier",
+  "career": {
+    "score": -165,
+    "races": 108,
+    "partial": 1
+  },
+  "seasons": [
+    {
+      "year": 1956,
+      "score": -20,
+      "races": 1,
+      "partial": 1
+    },
+    {
+      "year": 1957,
+      "score": -40,
+      "races": 4,
+      "partial": 0
+    },
+    {
+      "year": 1958,
+      "score": -31,
+      "races": 9,
+      "partial": 0
+    },
+    {
+      "year": 1959,
+      "score": -2,
+      "races": 7,
+      "partial": 0
+    },
+    {
+      "year": 1960,
+      "score": -43,
+      "races": 8,
+      "partial": 0
+    },
+    {
+      "year": 1961,
+      "score": 27,
+      "races": 8,
+      "partial": 0
+    },
+    {
+      "year": 1962,
+      "score": 52,
+      "races": 7,
+      "partial": 0
+    },
+    {
+      "year": 1963,
+      "score": 80,
+      "races": 10,
+      "partial": 0
+    },
+    {
+      "year": 1964,
+      "score": -46,
+      "races": 9,
+      "partial": 0
+    },
+    {
+      "year": 1965,
+      "score": -13,
+      "races": 10,
+      "partial": 0
+    },
+    {
+      "year": 1966,
+      "score": -97,
+      "races": 9,
+      "partial": 0
+    },
+    {
+      "year": 1967,
+      "score": 5,
+      "races": 8,
+      "partial": 0
+    },
+    {
+      "year": 1968,
+      "score": -4,
+      "races": 9,
+      "partial": 0
+    },
+    {
+      "year": 1969,
+      "score": -40,
+      "races": 2,
+      "partial": 0
+    },
+    {
+      "year": 1970,
+      "score": -20,
+      "races": 2,
+      "partial": 0
+    },
+    {
+      "year": 1971,
+      "score": 27,
+      "races": 5,
+      "partial": 0
+    }
+  ]
+}

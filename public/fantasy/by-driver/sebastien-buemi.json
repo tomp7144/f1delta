@@ -1,0 +1,29 @@
+{
+  "driverId": "sebastien-buemi",
+  "name": "Sébastien Buemi",
+  "career": {
+    "score": 40,
+    "races": 55,
+    "partial": 1
+  },
+  "seasons": [
+    {
+      "year": 2009,
+      "score": -14,
+      "races": 17,
+      "partial": 0
+    },
+    {
+      "year": 2010,
+      "score": 20,
+      "races": 19,
+      "partial": 0
+    },
+    {
+      "year": 2011,
+      "score": 34,
+      "races": 19,
+      "partial": 1
+    }
+  ]
+}

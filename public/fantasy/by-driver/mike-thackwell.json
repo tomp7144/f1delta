@@ -1,0 +1,23 @@
+{
+  "driverId": "mike-thackwell",
+  "name": "Mike Thackwell",
+  "career": {
+    "score": -65,
+    "races": 5,
+    "partial": 1
+  },
+  "seasons": [
+    {
+      "year": 1980,
+      "score": -20,
+      "races": 3,
+      "partial": 0
+    },
+    {
+      "year": 1984,
+      "score": -45,
+      "races": 2,
+      "partial": 1
+    }
+  ]
+}

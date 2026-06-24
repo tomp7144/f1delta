@@ -1,0 +1,23 @@
+{
+  "driverId": "jacques-pollet",
+  "name": "Jacques Pollet",
+  "career": {
+    "score": -23,
+    "races": 5,
+    "partial": 0
+  },
+  "seasons": [
+    {
+      "year": 1954,
+      "score": -40,
+      "races": 2,
+      "partial": 0
+    },
+    {
+      "year": 1955,
+      "score": 17,
+      "races": 3,
+      "partial": 0
+    }
+  ]
+}

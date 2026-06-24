@@ -1,0 +1,41 @@
+{
+  "driverId": "philippe-streiff",
+  "name": "Philippe Streiff",
+  "career": {
+    "score": 216,
+    "races": 54,
+    "partial": 0
+  },
+  "seasons": [
+    {
+      "year": 1984,
+      "score": -20,
+      "races": 1,
+      "partial": 0
+    },
+    {
+      "year": 1985,
+      "score": 68,
+      "races": 5,
+      "partial": 0
+    },
+    {
+      "year": 1986,
+      "score": 37,
+      "races": 16,
+      "partial": 0
+    },
+    {
+      "year": 1987,
+      "score": 232,
+      "races": 16,
+      "partial": 0
+    },
+    {
+      "year": 1988,
+      "score": -101,
+      "races": 16,
+      "partial": 0
+    }
+  ]
+}

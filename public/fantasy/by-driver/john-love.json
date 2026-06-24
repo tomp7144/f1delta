@@ -1,0 +1,71 @@
+{
+  "driverId": "john-love",
+  "name": "John Love",
+  "career": {
+    "score": 63,
+    "races": 10,
+    "partial": 0
+  },
+  "seasons": [
+    {
+      "year": 1962,
+      "score": 12,
+      "races": 1,
+      "partial": 0
+    },
+    {
+      "year": 1963,
+      "score": 10,
+      "races": 1,
+      "partial": 0
+    },
+    {
+      "year": 1964,
+      "score": 0,
+      "races": 1,
+      "partial": 0
+    },
+    {
+      "year": 1965,
+      "score": -20,
+      "races": 1,
+      "partial": 0
+    },
+    {
+      "year": 1967,
+      "score": 30,
+      "races": 1,
+      "partial": 0
+    },
+    {
+      "year": 1968,
+      "score": 18,
+      "races": 1,
+      "partial": 0
+    },
+    {
+      "year": 1969,
+      "score": -19,
+      "races": 1,
+      "partial": 0
+    },
+    {
+      "year": 1970,
+      "score": 32,
+      "races": 1,
+      "partial": 0
+    },
+    {
+      "year": 1971,
+      "score": -20,
+      "races": 1,
+      "partial": 0
+    },
+    {
+      "year": 1972,
+      "score": 20,
+      "races": 1,
+      "partial": 0
+    }
+  ]
+}

@@ -1,0 +1,47 @@
+{
+  "driverId": "ian-burgess",
+  "name": "Ian Burgess",
+  "career": {
+    "score": 9,
+    "races": 20,
+    "partial": 0
+  },
+  "seasons": [
+    {
+      "year": 1958,
+      "score": -6,
+      "races": 2,
+      "partial": 0
+    },
+    {
+      "year": 1959,
+      "score": -10,
+      "races": 4,
+      "partial": 0
+    },
+    {
+      "year": 1960,
+      "score": -19,
+      "races": 4,
+      "partial": 0
+    },
+    {
+      "year": 1961,
+      "score": 66,
+      "races": 5,
+      "partial": 0
+    },
+    {
+      "year": 1962,
+      "score": 18,
+      "races": 3,
+      "partial": 0
+    },
+    {
+      "year": 1963,
+      "score": -40,
+      "races": 2,
+      "partial": 0
+    }
+  ]
+}

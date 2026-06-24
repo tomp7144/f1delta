@@ -1,0 +1,35 @@
+{
+  "driverId": "tom-pryce",
+  "name": "Tom Pryce",
+  "career": {
+    "score": 102,
+    "races": 42,
+    "partial": 0
+  },
+  "seasons": [
+    {
+      "year": 1974,
+      "score": -65,
+      "races": 9,
+      "partial": 0
+    },
+    {
+      "year": 1975,
+      "score": 52,
+      "races": 14,
+      "partial": 0
+    },
+    {
+      "year": 1976,
+      "score": 173,
+      "races": 16,
+      "partial": 0
+    },
+    {
+      "year": 1977,
+      "score": -58,
+      "races": 3,
+      "partial": 0
+    }
+  ]
+}

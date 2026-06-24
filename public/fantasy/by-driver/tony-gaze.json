@@ -1,0 +1,17 @@
+{
+  "driverId": "tony-gaze",
+  "name": "Tony Gaze",
+  "career": {
+    "score": -38,
+    "races": 4,
+    "partial": 0
+  },
+  "seasons": [
+    {
+      "year": 1952,
+      "score": -38,
+      "races": 4,
+      "partial": 0
+    }
+  ]
+}

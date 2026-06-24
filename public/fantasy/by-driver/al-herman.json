@@ -1,0 +1,41 @@
+{
+  "driverId": "al-herman",
+  "name": "Al Herman",
+  "career": {
+    "score": 56,
+    "races": 5,
+    "partial": 0
+  },
+  "seasons": [
+    {
+      "year": 1955,
+      "score": 24,
+      "races": 1,
+      "partial": 0
+    },
+    {
+      "year": 1956,
+      "score": -2,
+      "races": 1,
+      "partial": 0
+    },
+    {
+      "year": 1957,
+      "score": 18,
+      "races": 1,
+      "partial": 0
+    },
+    {
+      "year": 1959,
+      "score": 20,
+      "races": 1,
+      "partial": 0
+    },
+    {
+      "year": 1960,
+      "score": -4,
+      "races": 1,
+      "partial": 0
+    }
+  ]
+}

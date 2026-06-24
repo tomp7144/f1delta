@@ -1,0 +1,47 @@
+{
+  "driverId": "johnny-boyd",
+  "name": "Johnny Boyd",
+  "career": {
+    "score": -12,
+    "races": 6,
+    "partial": 0
+  },
+  "seasons": [
+    {
+      "year": 1955,
+      "score": -6,
+      "races": 1,
+      "partial": 0
+    },
+    {
+      "year": 1956,
+      "score": -36,
+      "races": 1,
+      "partial": 0
+    },
+    {
+      "year": 1957,
+      "score": 12,
+      "races": 1,
+      "partial": 0
+    },
+    {
+      "year": 1958,
+      "score": 28,
+      "races": 1,
+      "partial": 0
+    },
+    {
+      "year": 1959,
+      "score": 18,
+      "races": 1,
+      "partial": 0
+    },
+    {
+      "year": 1960,
+      "score": -28,
+      "races": 1,
+      "partial": 0
+    }
+  ]
+}

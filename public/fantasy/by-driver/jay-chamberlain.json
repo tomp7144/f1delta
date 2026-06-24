@@ -1,0 +1,17 @@
+{
+  "driverId": "jay-chamberlain",
+  "name": "Jay Chamberlain",
+  "career": {
+    "score": 10,
+    "races": 3,
+    "partial": 0
+  },
+  "seasons": [
+    {
+      "year": 1962,
+      "score": 10,
+      "races": 3,
+      "partial": 0
+    }
+  ]
+}

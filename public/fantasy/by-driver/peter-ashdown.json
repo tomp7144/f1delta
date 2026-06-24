@@ -1,0 +1,17 @@
+{
+  "driverId": "peter-ashdown",
+  "name": "Peter Ashdown",
+  "career": {
+    "score": 22,
+    "races": 1,
+    "partial": 0
+  },
+  "seasons": [
+    {
+      "year": 1959,
+      "score": 22,
+      "races": 1,
+      "partial": 0
+    }
+  ]
+}

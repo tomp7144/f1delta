@@ -1,0 +1,29 @@
+{
+  "driverId": "theo-helfrich",
+  "name": "Theo Helfrich",
+  "career": {
+    "score": -8,
+    "races": 3,
+    "partial": 0
+  },
+  "seasons": [
+    {
+      "year": 1952,
+      "score": -20,
+      "races": 1,
+      "partial": 0
+    },
+    {
+      "year": 1953,
+      "score": 32,
+      "races": 1,
+      "partial": 0
+    },
+    {
+      "year": 1954,
+      "score": -20,
+      "races": 1,
+      "partial": 0
+    }
+  ]
+}

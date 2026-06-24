@@ -1,0 +1,41 @@
+{
+  "driverId": "andrea-de-adamich",
+  "name": "Andrea de Adamich",
+  "career": {
+    "score": -113,
+    "races": 36,
+    "partial": 0
+  },
+  "seasons": [
+    {
+      "year": 1968,
+      "score": -16,
+      "races": 1,
+      "partial": 0
+    },
+    {
+      "year": 1970,
+      "score": -22,
+      "races": 10,
+      "partial": 0
+    },
+    {
+      "year": 1971,
+      "score": -52,
+      "races": 7,
+      "partial": 0
+    },
+    {
+      "year": 1972,
+      "score": -73,
+      "races": 12,
+      "partial": 0
+    },
+    {
+      "year": 1973,
+      "score": 50,
+      "races": 6,
+      "partial": 0
+    }
+  ]
+}

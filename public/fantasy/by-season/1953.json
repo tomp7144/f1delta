@@ -1,0 +1,647 @@
+{
+  "year": 1953,
+  "drivers": {
+    "alberto-ascari": {
+      "score": 183,
+      "races": 9,
+      "partial": 1
+    },
+    "luigi-villoresi": {
+      "score": 67,
+      "races": 9,
+      "partial": 1
+    },
+    "jose-froilan-gonzalez": {
+      "score": 61,
+      "races": 6,
+      "partial": 1
+    },
+    "mike-hawthorn": {
+      "score": 183,
+      "races": 8,
+      "partial": 0
+    },
+    "oscar-alfredo-galvez": {
+      "score": 20,
+      "races": 1,
+      "partial": 0
+    },
+    "jean-behra": {
+      "score": -35,
+      "races": 6,
+      "partial": 0
+    },
+    "maurice-trintignant": {
+      "score": 4,
+      "races": 8,
+      "partial": 0
+    },
+    "harry-schell": {
+      "score": -40,
+      "races": 7,
+      "partial": 1
+    },
+    "john-barber": {
+      "score": 20,
+      "races": 1,
+      "partial": 0
+    },
+    "alan-brown": {
+      "score": -8,
+      "races": 4,
+      "partial": 0
+    },
+    "robert-manzon": {
+      "score": -17,
+      "races": 1,
+      "partial": 0
+    },
+    "juan-manuel-fangio": {
+      "score": 75,
+      "races": 10,
+      "partial": 2
+    },
+    "felice-bonetto": {
+      "score": 31,
+      "races": 8,
+      "partial": 1
+    },
+    "nino-farina": {
+      "score": 137,
+      "races": 8,
+      "partial": 0
+    },
+    "carlos-menditeguy": {
+      "score": -19,
+      "races": 1,
+      "partial": 0
+    },
+    "pablo-birger": {
+      "score": -20,
+      "races": 1,
+      "partial": 0
+    },
+    "adolfo-schwelm-cruz": {
+      "score": -20,
+      "races": 1,
+      "partial": 0
+    },
+    "bill-vukovich": {
+      "score": 40,
+      "races": 1,
+      "partial": 0
+    },
+    "art-cross": {
+      "score": 38,
+      "races": 1,
+      "partial": 0
+    },
+    "sam-hanks": {
+      "score": 29,
+      "races": 1,
+      "partial": 0
+    },
+    "duane-carter": {
+      "score": 21,
+      "races": 2,
+      "partial": 1
+    },
+    "fred-agabashian": {
+      "score": 17,
+      "races": 1,
+      "partial": 0
+    },
+    "paul-russo": {
+      "score": -4,
+      "races": 2,
+      "partial": 1
+    },
+    "jack-mcgrath": {
+      "score": 14,
+      "races": 1,
+      "partial": 0
+    },
+    "jimmy-daywalt": {
+      "score": 38,
+      "races": 1,
+      "partial": 0
+    },
+    "jim-rathmann": {
+      "score": 42,
+      "races": 2,
+      "partial": 1
+    },
+    "eddie-johnson": {
+      "score": 6,
+      "races": 1,
+      "partial": 1
+    },
+    "ernie-mccoy": {
+      "score": 28,
+      "races": 1,
+      "partial": 0
+    },
+    "tony-bettenhausen": {
+      "score": 1,
+      "races": 1,
+      "partial": 0
+    },
+    "chuck-stevenson": {
+      "score": -24,
+      "races": 3,
+      "partial": 2
+    },
+    "gene-hartley": {
+      "score": -28,
+      "races": 2,
+      "partial": 1
+    },
+    "jimmy-davies": {
+      "score": 45,
+      "races": 1,
+      "partial": 0
+    },
+    "duke-nalon": {
+      "score": 30,
+      "races": 1,
+      "partial": 0
+    },
+    "carl-scarborough": {
+      "score": 14,
+      "races": 1,
+      "partial": 0
+    },
+    "bob-scott": {
+      "score": -40,
+      "races": 2,
+      "partial": 1
+    },
+    "manny-ayulo": {
+      "score": -11,
+      "races": 1,
+      "partial": 0
+    },
+    "jimmy-bryan": {
+      "score": 34,
+      "races": 1,
+      "partial": 0
+    },
+    "bill-holland": {
+      "score": 26,
+      "races": 1,
+      "partial": 0
+    },
+    "rodger-ward": {
+      "score": -11,
+      "races": 1,
+      "partial": 0
+    },
+    "andy-linden": {
+      "score": -50,
+      "races": 3,
+      "partial": 2
+    },
+    "duke-dinsmore": {
+      "score": 0,
+      "races": 1,
+      "partial": 1
+    },
+    "walt-faulkner": {
+      "score": -6,
+      "races": 1,
+      "partial": 0
+    },
+    "johnny-mantz": {
+      "score": 0,
+      "races": 1,
+      "partial": 1
+    },
+    "marshall-teague": {
+      "score": 8,
+      "races": 1,
+      "partial": 0
+    },
+    "spider-webb": {
+      "score": -2,
+      "races": 1,
+      "partial": 0
+    },
+    "johnny-thomson": {
+      "score": 2,
+      "races": 2,
+      "partial": 1
+    },
+    "jackie-holmes": {
+      "score": 0,
+      "races": 1,
+      "partial": 1
+    },
+    "bob-sweikert": {
+      "score": 18,
+      "races": 1,
+      "partial": 0
+    },
+    "mike-nazaruk": {
+      "score": 4,
+      "races": 1,
+      "partial": 0
+    },
+    "pat-flaherty": {
+      "score": 4,
+      "races": 1,
+      "partial": 0
+    },
+    "jerry-hoyt": {
+      "score": -28,
+      "races": 1,
+      "partial": 0
+    },
+    "johnnie-parsons": {
+      "score": -33,
+      "races": 1,
+      "partial": 0
+    },
+    "don-freeland": {
+      "score": -24,
+      "races": 1,
+      "partial": 0
+    },
+    "cal-niday": {
+      "score": 0,
+      "races": 1,
+      "partial": 0
+    },
+    "emmanuel-de-graffenried": {
+      "score": 21,
+      "races": 7,
+      "partial": 0
+    },
+    "louis-rosier": {
+      "score": 70,
+      "races": 7,
+      "partial": 0
+    },
+    "peter-collins": {
+      "score": -12,
+      "races": 4,
+      "partial": 0
+    },
+    "stirling-moss": {
+      "score": -1,
+      "races": 4,
+      "partial": 0
+    },
+    "kenneth-mcalpine": {
+      "score": -54,
+      "races": 4,
+      "partial": 0
+    },
+    "johnny-claes": {
+      "score": -61,
+      "races": 5,
+      "partial": 0
+    },
+    "roberto-mieres": {
+      "score": -12,
+      "races": 3,
+      "partial": 0
+    },
+    "ken-wharton": {
+      "score": -38,
+      "races": 5,
+      "partial": 0
+    },
+    "roy-salvadori": {
+      "score": -100,
+      "races": 5,
+      "partial": 0
+    },
+    "lance-macklin": {
+      "score": -120,
+      "races": 6,
+      "partial": 0
+    },
+    "fred-wacker": {
+      "score": 14,
+      "races": 3,
+      "partial": 1
+    },
+    "onofre-marimon": {
+      "score": -31,
+      "races": 6,
+      "partial": 0
+    },
+    "paul-frere": {
+      "score": -17,
+      "races": 2,
+      "partial": 0
+    },
+    "andre-pilette": {
+      "score": 14,
+      "races": 1,
+      "partial": 0
+    },
+    "georges-berger": {
+      "score": -20,
+      "races": 1,
+      "partial": 0
+    },
+    "arthur-legat": {
+      "score": -20,
+      "races": 1,
+      "partial": 0
+    },
+    "jacques-swaters": {
+      "score": 10,
+      "races": 3,
+      "partial": 0
+    },
+    "charles-de-tornaco": {
+      "score": 0,
+      "races": 1,
+      "partial": 0
+    },
+    "bob-gerard": {
+      "score": -18,
+      "races": 2,
+      "partial": 0
+    },
+    "yves-giraud-cabantous": {
+      "score": 34,
+      "races": 2,
+      "partial": 0
+    },
+    "louis-chiron": {
+      "score": 51,
+      "races": 4,
+      "partial": 1
+    },
+    "birabongse-bhanudej": {
+      "score": 14,
+      "races": 4,
+      "partial": 0
+    },
+    "elie-bayol": {
+      "score": -40,
+      "races": 3,
+      "partial": 1
+    },
+    "peter-whitehead": {
+      "score": 12,
+      "races": 1,
+      "partial": 0
+    },
+    "jimmy-stewart": {
+      "score": -20,
+      "races": 1,
+      "partial": 0
+    },
+    "tony-rolt": {
+      "score": -19,
+      "races": 1,
+      "partial": 0
+    },
+    "jack-fairman": {
+      "score": -40,
+      "races": 2,
+      "partial": 0
+    },
+    "ian-stewart": {
+      "score": -20,
+      "races": 1,
+      "partial": 0
+    },
+    "duncan-hamilton": {
+      "score": -20,
+      "races": 1,
+      "partial": 0
+    },
+    "tony-crook": {
+      "score": -20,
+      "races": 1,
+      "partial": 0
+    },
+    "hans-herrmann": {
+      "score": 12,
+      "races": 1,
+      "partial": 0
+    },
+    "rodney-nuckey": {
+      "score": 18,
+      "races": 1,
+      "partial": 0
+    },
+    "theo-helfrich": {
+      "score": 32,
+      "races": 1,
+      "partial": 0
+    },
+    "rudolf-krause": {
+      "score": 24,
+      "races": 1,
+      "partial": 0
+    },
+    "ernst-klodwig": {
+      "score": 34,
+      "races": 1,
+      "partial": 0
+    },
+    "wolfgang-seidel": {
+      "score": 26,
+      "races": 1,
+      "partial": 0
+    },
+    "edgar-barth": {
+      "score": -20,
+      "races": 1,
+      "partial": 0
+    },
+    "oswald-karch": {
+      "score": -20,
+      "races": 1,
+      "partial": 0
+    },
+    "willi-heeks": {
+      "score": -20,
+      "races": 1,
+      "partial": 0
+    },
+    "theo-fitzau": {
+      "score": -20,
+      "races": 1,
+      "partial": 0
+    },
+    "kurt-adolff": {
+      "score": -20,
+      "races": 1,
+      "partial": 0
+    },
+    "karl-gunther-bechem": {
+      "score": -20,
+      "races": 1,
+      "partial": 0
+    },
+    "erwin-bauer": {
+      "score": -20,
+      "races": 1,
+      "partial": 0
+    },
+    "hans-stuck": {
+      "score": 10,
+      "races": 2,
+      "partial": 0
+    },
+    "ernst-loof": {
+      "score": -20,
+      "races": 1,
+      "partial": 0
+    },
+    "helm-glockler": {
+      "score": 0,
+      "races": 1,
+      "partial": 0
+    },
+    "hermann-lang": {
+      "score": 22,
+      "races": 1,
+      "partial": 0
+    },
+    "max-de-terra": {
+      "score": 26,
+      "races": 1,
+      "partial": 0
+    },
+    "albert-scherrer": {
+      "score": 20,
+      "races": 1,
+      "partial": 0
+    },
+    "chico-landi": {
+      "score": -40,
+      "races": 2,
+      "partial": 0
+    },
+    "peter-hirt": {
+      "score": -20,
+      "races": 1,
+      "partial": 0
+    },
+    "sergio-mantovani": {
+      "score": 16,
+      "races": 1,
+      "partial": 0
+    },
+    "luigi-musso": {
+      "score": 6,
+      "races": 1,
+      "partial": 1
+    },
+    "umberto-maglioli": {
+      "score": 10,
+      "races": 1,
+      "partial": 0
+    },
+    "piero-carini": {
+      "score": -20,
+      "races": 1,
+      "partial": 0
+    },
+    "john-fitch": {
+      "score": -20,
+      "races": 1,
+      "partial": 0
+    }
+  },
+  "races": [
+    {
+      "round": 1,
+      "raceId": 24,
+      "gpId": "argentina",
+      "name": "Argentine GP",
+      "topId": "alberto-ascari",
+      "topName": "Alberto Ascari",
+      "topScore": 40,
+      "partial": true
+    },
+    {
+      "round": 2,
+      "raceId": 25,
+      "gpId": "indianapolis",
+      "name": "Indy 500",
+      "topId": "jimmy-davies",
+      "topName": "Jimmy Davies",
+      "topScore": 45,
+      "partial": true
+    },
+    {
+      "round": 3,
+      "raceId": 26,
+      "gpId": "netherlands",
+      "name": "Dutch GP",
+      "topId": "alberto-ascari",
+      "topName": "Alberto Ascari",
+      "topScore": 35,
+      "partial": true
+    },
+    {
+      "round": 4,
+      "raceId": 27,
+      "gpId": "belgium",
+      "name": "Belgian GP",
+      "topId": "alberto-ascari",
+      "topName": "Alberto Ascari",
+      "topScore": 36,
+      "partial": true
+    },
+    {
+      "round": 5,
+      "raceId": 28,
+      "gpId": "france",
+      "name": "French GP",
+      "topId": "mike-hawthorn",
+      "topName": "Mike Hawthorn",
+      "topScore": 41,
+      "partial": false
+    },
+    {
+      "round": 6,
+      "raceId": 29,
+      "gpId": "great-britain",
+      "name": "British GP",
+      "topId": "alberto-ascari",
+      "topName": "Alberto Ascari",
+      "topScore": 40,
+      "partial": false
+    },
+    {
+      "round": 7,
+      "raceId": 30,
+      "gpId": "germany",
+      "name": "German GP",
+      "topId": "nino-farina",
+      "topName": "Nino Farina",
+      "topScore": 37,
+      "partial": true
+    },
+    {
+      "round": 8,
+      "raceId": 31,
+      "gpId": "switzerland",
+      "name": "Swiss GP",
+      "topId": "alberto-ascari",
+      "topName": "Alberto Ascari",
+      "topScore": 41,
+      "partial": true
+    },
+    {
+      "round": 9,
+      "raceId": 32,
+      "gpId": "italy",
+      "name": "Italian GP",
+      "topId": "juan-manuel-fangio",
+      "topName": "Juan Manuel Fangio",
+      "topScore": 41,
+      "partial": true
+    }
+  ]
+}

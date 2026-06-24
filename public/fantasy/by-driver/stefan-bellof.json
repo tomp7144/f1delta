@@ -1,0 +1,23 @@
+{
+  "driverId": "stefan-bellof",
+  "name": "Stefan Bellof",
+  "career": {
+    "score": -120,
+    "races": 22,
+    "partial": 12
+  },
+  "seasons": [
+    {
+      "year": 1984,
+      "score": -300,
+      "races": 12,
+      "partial": 12
+    },
+    {
+      "year": 1985,
+      "score": 180,
+      "races": 10,
+      "partial": 0
+    }
+  ]
+}

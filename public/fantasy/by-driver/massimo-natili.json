@@ -1,0 +1,17 @@
+{
+  "driverId": "massimo-natili",
+  "name": "Massimo Natili",
+  "career": {
+    "score": -20,
+    "races": 2,
+    "partial": 1
+  },
+  "seasons": [
+    {
+      "year": 1961,
+      "score": -20,
+      "races": 2,
+      "partial": 1
+    }
+  ]
+}

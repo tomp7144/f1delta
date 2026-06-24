@@ -1,0 +1,47 @@
+{
+  "driverId": "ron-flockhart",
+  "name": "Ron Flockhart",
+  "career": {
+    "score": -49,
+    "races": 14,
+    "partial": 1
+  },
+  "seasons": [
+    {
+      "year": 1954,
+      "score": -20,
+      "races": 1,
+      "partial": 1
+    },
+    {
+      "year": 1956,
+      "score": 35,
+      "races": 2,
+      "partial": 0
+    },
+    {
+      "year": 1957,
+      "score": -40,
+      "races": 2,
+      "partial": 0
+    },
+    {
+      "year": 1958,
+      "score": -20,
+      "races": 2,
+      "partial": 0
+    },
+    {
+      "year": 1959,
+      "score": 1,
+      "races": 5,
+      "partial": 0
+    },
+    {
+      "year": 1960,
+      "score": -5,
+      "races": 2,
+      "partial": 0
+    }
+  ]
+}

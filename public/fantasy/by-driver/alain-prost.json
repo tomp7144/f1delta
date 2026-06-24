@@ -1,0 +1,89 @@
+{
+  "driverId": "alain-prost",
+  "name": "Alain Prost",
+  "career": {
+    "score": 3214,
+    "races": 202,
+    "partial": 0
+  },
+  "seasons": [
+    {
+      "year": 1980,
+      "score": 79,
+      "races": 13,
+      "partial": 0
+    },
+    {
+      "year": 1981,
+      "score": 58,
+      "races": 15,
+      "partial": 0
+    },
+    {
+      "year": 1982,
+      "score": 90,
+      "races": 16,
+      "partial": 0
+    },
+    {
+      "year": 1983,
+      "score": 252,
+      "races": 15,
+      "partial": 0
+    },
+    {
+      "year": 1984,
+      "score": 277,
+      "races": 16,
+      "partial": 0
+    },
+    {
+      "year": 1985,
+      "score": 334,
+      "races": 16,
+      "partial": 0
+    },
+    {
+      "year": 1986,
+      "score": 328,
+      "races": 16,
+      "partial": 0
+    },
+    {
+      "year": 1987,
+      "score": 172,
+      "races": 16,
+      "partial": 0
+    },
+    {
+      "year": 1988,
+      "score": 458,
+      "races": 16,
+      "partial": 0
+    },
+    {
+      "year": 1989,
+      "score": 356,
+      "races": 16,
+      "partial": 0
+    },
+    {
+      "year": 1990,
+      "score": 311,
+      "races": 16,
+      "partial": 0
+    },
+    {
+      "year": 1991,
+      "score": 124,
+      "races": 15,
+      "partial": 0
+    },
+    {
+      "year": 1993,
+      "score": 375,
+      "races": 16,
+      "partial": 0
+    }
+  ]
+}

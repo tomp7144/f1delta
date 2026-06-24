@@ -1,0 +1,59 @@
+{
+  "driverId": "patrick-depailler",
+  "name": "Patrick Depailler",
+  "career": {
+    "score": 370,
+    "races": 95,
+    "partial": 0
+  },
+  "seasons": [
+    {
+      "year": 1972,
+      "score": -6,
+      "races": 2,
+      "partial": 0
+    },
+    {
+      "year": 1974,
+      "score": 119,
+      "races": 15,
+      "partial": 0
+    },
+    {
+      "year": 1975,
+      "score": 100,
+      "races": 14,
+      "partial": 0
+    },
+    {
+      "year": 1976,
+      "score": 156,
+      "races": 16,
+      "partial": 0
+    },
+    {
+      "year": 1977,
+      "score": -30,
+      "races": 17,
+      "partial": 0
+    },
+    {
+      "year": 1978,
+      "score": 81,
+      "races": 16,
+      "partial": 0
+    },
+    {
+      "year": 1979,
+      "score": 89,
+      "races": 7,
+      "partial": 0
+    },
+    {
+      "year": 1980,
+      "score": -139,
+      "races": 8,
+      "partial": 0
+    }
+  ]
+}

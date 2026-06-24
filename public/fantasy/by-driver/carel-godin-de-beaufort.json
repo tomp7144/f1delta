@@ -1,0 +1,59 @@
+{
+  "driverId": "carel-godin-de-beaufort",
+  "name": "Carel Godin de Beaufort",
+  "career": {
+    "score": 270,
+    "races": 31,
+    "partial": 0
+  },
+  "seasons": [
+    {
+      "year": 1957,
+      "score": 12,
+      "races": 1,
+      "partial": 0
+    },
+    {
+      "year": 1958,
+      "score": -8,
+      "races": 2,
+      "partial": 0
+    },
+    {
+      "year": 1959,
+      "score": 33,
+      "races": 2,
+      "partial": 0
+    },
+    {
+      "year": 1960,
+      "score": 22,
+      "races": 1,
+      "partial": 0
+    },
+    {
+      "year": 1961,
+      "score": 20,
+      "races": 6,
+      "partial": 0
+    },
+    {
+      "year": 1962,
+      "score": 82,
+      "races": 9,
+      "partial": 0
+    },
+    {
+      "year": 1963,
+      "score": 129,
+      "races": 8,
+      "partial": 0
+    },
+    {
+      "year": 1964,
+      "score": -20,
+      "races": 2,
+      "partial": 0
+    }
+  ]
+}

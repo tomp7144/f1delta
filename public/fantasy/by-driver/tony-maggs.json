@@ -1,0 +1,41 @@
+{
+  "driverId": "tony-maggs",
+  "name": "Tony Maggs",
+  "career": {
+    "score": 254,
+    "races": 27,
+    "partial": 0
+  },
+  "seasons": [
+    {
+      "year": 1961,
+      "score": 44,
+      "races": 2,
+      "partial": 0
+    },
+    {
+      "year": 1962,
+      "score": 134,
+      "races": 9,
+      "partial": 0
+    },
+    {
+      "year": 1963,
+      "score": 22,
+      "races": 10,
+      "partial": 0
+    },
+    {
+      "year": 1964,
+      "score": 50,
+      "races": 5,
+      "partial": 0
+    },
+    {
+      "year": 1965,
+      "score": 4,
+      "races": 1,
+      "partial": 0
+    }
+  ]
+}

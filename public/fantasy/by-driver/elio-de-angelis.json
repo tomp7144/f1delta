@@ -1,0 +1,59 @@
+{
+  "driverId": "elio-de-angelis",
+  "name": "Elio de Angelis",
+  "career": {
+    "score": 306,
+    "races": 109,
+    "partial": 0
+  },
+  "seasons": [
+    {
+      "year": 1979,
+      "score": 12,
+      "races": 15,
+      "partial": 0
+    },
+    {
+      "year": 1980,
+      "score": 10,
+      "races": 14,
+      "partial": 0
+    },
+    {
+      "year": 1981,
+      "score": 114,
+      "races": 14,
+      "partial": 0
+    },
+    {
+      "year": 1982,
+      "score": 83,
+      "races": 15,
+      "partial": 0
+    },
+    {
+      "year": 1983,
+      "score": -190,
+      "races": 15,
+      "partial": 0
+    },
+    {
+      "year": 1984,
+      "score": 181,
+      "races": 16,
+      "partial": 0
+    },
+    {
+      "year": 1985,
+      "score": 140,
+      "races": 16,
+      "partial": 0
+    },
+    {
+      "year": 1986,
+      "score": -44,
+      "races": 4,
+      "partial": 0
+    }
+  ]
+}

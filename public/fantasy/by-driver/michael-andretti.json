@@ -1,0 +1,17 @@
+{
+  "driverId": "michael-andretti",
+  "name": "Michael Andretti",
+  "career": {
+    "score": -27,
+    "races": 13,
+    "partial": 0
+  },
+  "seasons": [
+    {
+      "year": 1993,
+      "score": -27,
+      "races": 13,
+      "partial": 0
+    }
+  ]
+}

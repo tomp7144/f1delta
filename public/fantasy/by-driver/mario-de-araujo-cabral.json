@@ -1,0 +1,35 @@
+{
+  "driverId": "mario-de-araujo-cabral",
+  "name": "Mário de Araújo Cabral",
+  "career": {
+    "score": -51,
+    "races": 5,
+    "partial": 0
+  },
+  "seasons": [
+    {
+      "year": 1959,
+      "score": 9,
+      "races": 1,
+      "partial": 0
+    },
+    {
+      "year": 1960,
+      "score": -20,
+      "races": 1,
+      "partial": 0
+    },
+    {
+      "year": 1963,
+      "score": -20,
+      "races": 2,
+      "partial": 0
+    },
+    {
+      "year": 1964,
+      "score": -20,
+      "races": 1,
+      "partial": 0
+    }
+  ]
+}

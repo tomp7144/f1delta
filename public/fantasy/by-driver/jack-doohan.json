@@ -1,0 +1,23 @@
+{
+  "driverId": "jack-doohan",
+  "name": "Jack Doohan",
+  "career": {
+    "score": -15,
+    "races": 7,
+    "partial": 0
+  },
+  "seasons": [
+    {
+      "year": 2024,
+      "score": 4,
+      "races": 1,
+      "partial": 0
+    },
+    {
+      "year": 2025,
+      "score": -19,
+      "races": 6,
+      "partial": 0
+    }
+  ]
+}

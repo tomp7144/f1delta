@@ -1,0 +1,407 @@
+{
+  "year": 1978,
+  "drivers": {
+    "mario-andretti": {
+      "score": 238,
+      "races": 16,
+      "partial": 0
+    },
+    "niki-lauda": {
+      "score": 112,
+      "races": 16,
+      "partial": 0
+    },
+    "patrick-depailler": {
+      "score": 81,
+      "races": 16,
+      "partial": 0
+    },
+    "james-hunt": {
+      "score": -87,
+      "races": 16,
+      "partial": 0
+    },
+    "ronnie-peterson": {
+      "score": 204,
+      "races": 14,
+      "partial": 0
+    },
+    "patrick-tambay": {
+      "score": 116,
+      "races": 15,
+      "partial": 0
+    },
+    "carlos-reutemann": {
+      "score": 167,
+      "races": 16,
+      "partial": 0
+    },
+    "gilles-villeneuve": {
+      "score": 35,
+      "races": 16,
+      "partial": 0
+    },
+    "emerson-fittipaldi": {
+      "score": 106,
+      "races": 16,
+      "partial": 0
+    },
+    "jody-scheckter": {
+      "score": 57,
+      "races": 16,
+      "partial": 0
+    },
+    "jochen-mass": {
+      "score": 20,
+      "races": 13,
+      "partial": 0
+    },
+    "jean-pierre-jarier": {
+      "score": 15,
+      "races": 8,
+      "partial": 0
+    },
+    "brett-lunger": {
+      "score": 78,
+      "races": 15,
+      "partial": 2
+    },
+    "didier-pironi": {
+      "score": 112,
+      "races": 16,
+      "partial": 0
+    },
+    "clay-regazzoni": {
+      "score": 5,
+      "races": 16,
+      "partial": 0
+    },
+    "jacques-laffite": {
+      "score": 170,
+      "races": 16,
+      "partial": 0
+    },
+    "hans-joachim-stuck": {
+      "score": -121,
+      "races": 16,
+      "partial": 0
+    },
+    "vittorio-brambilla": {
+      "score": -3,
+      "races": 14,
+      "partial": 0
+    },
+    "john-watson": {
+      "score": 131,
+      "races": 16,
+      "partial": 0
+    },
+    "alan-jones": {
+      "score": 5,
+      "races": 16,
+      "partial": 0
+    },
+    "danny-ongais": {
+      "score": -40,
+      "races": 4,
+      "partial": 2
+    },
+    "lamberto-leoni": {
+      "score": -20,
+      "races": 4,
+      "partial": 0
+    },
+    "arturo-merzario": {
+      "score": -160,
+      "races": 16,
+      "partial": 2
+    },
+    "rupert-keegan": {
+      "score": -76,
+      "races": 13,
+      "partial": 0
+    },
+    "hector-rebaque": {
+      "score": -7,
+      "races": 16,
+      "partial": 3
+    },
+    "eddie-cheever": {
+      "score": -20,
+      "races": 3,
+      "partial": 0
+    },
+    "divina-galica": {
+      "score": 0,
+      "races": 2,
+      "partial": 0
+    },
+    "riccardo-patrese": {
+      "score": 15,
+      "races": 14,
+      "partial": 0
+    },
+    "rolf-stommelen": {
+      "score": 35,
+      "races": 14,
+      "partial": 3
+    },
+    "jean-pierre-jabouille": {
+      "score": -128,
+      "races": 14,
+      "partial": 0
+    },
+    "keke-rosberg": {
+      "score": -65,
+      "races": 14,
+      "partial": 4
+    },
+    "rene-arnoux": {
+      "score": 52,
+      "races": 9,
+      "partial": 2
+    },
+    "derek-daly": {
+      "score": 4,
+      "races": 10,
+      "partial": 2
+    },
+    "jacky-ickx": {
+      "score": -20,
+      "races": 4,
+      "partial": 0
+    },
+    "bruno-giacomelli": {
+      "score": 26,
+      "races": 5,
+      "partial": 0
+    },
+    "alberto-colombo": {
+      "score": 0,
+      "races": 3,
+      "partial": 1
+    },
+    "bernard-de-dryver": {
+      "score": 0,
+      "races": 1,
+      "partial": 1
+    },
+    "patrick-neve": {
+      "score": 0,
+      "races": 1,
+      "partial": 1
+    },
+    "emilio-de-villota": {
+      "score": 0,
+      "races": 1,
+      "partial": 0
+    },
+    "geoff-lees": {
+      "score": 0,
+      "races": 1,
+      "partial": 0
+    },
+    "tony-trimmer": {
+      "score": 0,
+      "races": 1,
+      "partial": 0
+    },
+    "harald-ertl": {
+      "score": 4,
+      "races": 5,
+      "partial": 2
+    },
+    "nelson-piquet": {
+      "score": -22,
+      "races": 5,
+      "partial": 0
+    },
+    "hans-binder": {
+      "score": 0,
+      "races": 1,
+      "partial": 0
+    },
+    "michael-bleekemolen": {
+      "score": -20,
+      "races": 4,
+      "partial": 0
+    },
+    "carlo-franchi": {
+      "score": 0,
+      "races": 1,
+      "partial": 0
+    },
+    "bobby-rahal": {
+      "score": -4,
+      "races": 2,
+      "partial": 0
+    },
+    "beppe-gabbiani": {
+      "score": 0,
+      "races": 2,
+      "partial": 0
+    }
+  },
+  "races": [
+    {
+      "round": 1,
+      "raceId": 298,
+      "gpId": "argentina",
+      "name": "Argentine GP",
+      "topId": "mario-andretti",
+      "topName": "Mario Andretti",
+      "topScore": 35,
+      "partial": false
+    },
+    {
+      "round": 2,
+      "raceId": 299,
+      "gpId": "brazil",
+      "name": "Brazilian GP",
+      "topId": "carlos-reutemann",
+      "topName": "Carlos Reutemann",
+      "topScore": 43,
+      "partial": false
+    },
+    {
+      "round": 3,
+      "raceId": 300,
+      "gpId": "south-africa",
+      "name": "South African GP",
+      "topId": "ronnie-peterson",
+      "topName": "Ronnie Peterson",
+      "topScore": 45,
+      "partial": false
+    },
+    {
+      "round": 4,
+      "raceId": 301,
+      "gpId": "united-states-west",
+      "name": "United States GP West",
+      "topId": "carlos-reutemann",
+      "topName": "Carlos Reutemann",
+      "topScore": 35,
+      "partial": true
+    },
+    {
+      "round": 5,
+      "raceId": 302,
+      "gpId": "monaco",
+      "name": "Monaco GP",
+      "topId": "patrick-depailler",
+      "topName": "Patrick Depailler",
+      "topScore": 39,
+      "partial": true
+    },
+    {
+      "round": 6,
+      "raceId": 303,
+      "gpId": "belgium",
+      "name": "Belgian GP",
+      "topId": "didier-pironi",
+      "topName": "Didier Pironi",
+      "topScore": 42,
+      "partial": true
+    },
+    {
+      "round": 7,
+      "raceId": 304,
+      "gpId": "spain",
+      "name": "Spanish GP",
+      "topId": "mario-andretti",
+      "topName": "Mario Andretti",
+      "topScore": 40,
+      "partial": true
+    },
+    {
+      "round": 8,
+      "raceId": 305,
+      "gpId": "sweden",
+      "name": "Swedish GP",
+      "topId": "niki-lauda",
+      "topName": "Niki Lauda",
+      "topScore": 42,
+      "partial": false
+    },
+    {
+      "round": 9,
+      "raceId": 306,
+      "gpId": "france",
+      "name": "French GP",
+      "topId": "mario-andretti",
+      "topName": "Mario Andretti",
+      "topScore": 36,
+      "partial": false
+    },
+    {
+      "round": 10,
+      "raceId": 307,
+      "gpId": "great-britain",
+      "name": "British GP",
+      "topId": "carlos-reutemann",
+      "topName": "Carlos Reutemann",
+      "topScore": 42,
+      "partial": false
+    },
+    {
+      "round": 11,
+      "raceId": 308,
+      "gpId": "germany",
+      "name": "German GP",
+      "topId": "mario-andretti",
+      "topName": "Mario Andretti",
+      "topScore": 35,
+      "partial": true
+    },
+    {
+      "round": 12,
+      "raceId": 309,
+      "gpId": "austria",
+      "name": "Austrian GP",
+      "topId": "ronnie-peterson",
+      "topName": "Ronnie Peterson",
+      "topScore": 40,
+      "partial": true
+    },
+    {
+      "round": 13,
+      "raceId": 310,
+      "gpId": "netherlands",
+      "name": "Dutch GP",
+      "topId": "mario-andretti",
+      "topName": "Mario Andretti",
+      "topScore": 35,
+      "partial": true
+    },
+    {
+      "round": 14,
+      "raceId": 311,
+      "gpId": "italy",
+      "name": "Italian GP",
+      "topId": "niki-lauda",
+      "topName": "Niki Lauda",
+      "topScore": 38,
+      "partial": true
+    },
+    {
+      "round": 15,
+      "raceId": 312,
+      "gpId": "united-states",
+      "name": "United States GP",
+      "topId": "carlos-reutemann",
+      "topName": "Carlos Reutemann",
+      "topScore": 36,
+      "partial": false
+    },
+    {
+      "round": 16,
+      "raceId": 313,
+      "gpId": "canada",
+      "name": "Canadian GP",
+      "topId": "gilles-villeneuve",
+      "topName": "Gilles Villeneuve",
+      "topScore": 37,
+      "partial": false
+    }
+  ]
+}

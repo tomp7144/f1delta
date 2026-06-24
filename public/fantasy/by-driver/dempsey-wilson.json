@@ -1,0 +1,23 @@
+{
+  "driverId": "dempsey-wilson",
+  "name": "Dempsey Wilson",
+  "career": {
+    "score": 34,
+    "races": 2,
+    "partial": 0
+  },
+  "seasons": [
+    {
+      "year": 1958,
+      "score": 34,
+      "races": 1,
+      "partial": 0
+    },
+    {
+      "year": 1960,
+      "score": 0,
+      "races": 1,
+      "partial": 0
+    }
+  ]
+}

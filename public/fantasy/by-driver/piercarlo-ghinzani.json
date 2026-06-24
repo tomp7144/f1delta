@@ -1,0 +1,59 @@
+{
+  "driverId": "piercarlo-ghinzani",
+  "name": "Piercarlo Ghinzani",
+  "career": {
+    "score": -612,
+    "races": 111,
+    "partial": 14
+  },
+  "seasons": [
+    {
+      "year": 1981,
+      "score": 22,
+      "races": 2,
+      "partial": 0
+    },
+    {
+      "year": 1983,
+      "score": -92,
+      "races": 15,
+      "partial": 0
+    },
+    {
+      "year": 1984,
+      "score": -32,
+      "races": 16,
+      "partial": 0
+    },
+    {
+      "year": 1985,
+      "score": -68,
+      "races": 15,
+      "partial": 0
+    },
+    {
+      "year": 1986,
+      "score": -252,
+      "races": 16,
+      "partial": 0
+    },
+    {
+      "year": 1987,
+      "score": -45,
+      "races": 15,
+      "partial": 0
+    },
+    {
+      "year": 1988,
+      "score": -85,
+      "races": 16,
+      "partial": 1
+    },
+    {
+      "year": 1989,
+      "score": -60,
+      "races": 16,
+      "partial": 13
+    }
+  ]
+}

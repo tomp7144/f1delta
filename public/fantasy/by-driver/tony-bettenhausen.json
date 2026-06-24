@@ -1,0 +1,77 @@
+{
+  "driverId": "tony-bettenhausen",
+  "name": "Tony Bettenhausen",
+  "career": {
+    "score": 34,
+    "races": 13,
+    "partial": 2
+  },
+  "seasons": [
+    {
+      "year": 1950,
+      "score": -33,
+      "races": 2,
+      "partial": 1
+    },
+    {
+      "year": 1951,
+      "score": 4,
+      "races": 1,
+      "partial": 0
+    },
+    {
+      "year": 1952,
+      "score": 12,
+      "races": 1,
+      "partial": 0
+    },
+    {
+      "year": 1953,
+      "score": 1,
+      "races": 1,
+      "partial": 0
+    },
+    {
+      "year": 1954,
+      "score": -16,
+      "races": 2,
+      "partial": 1
+    },
+    {
+      "year": 1955,
+      "score": 27,
+      "races": 1,
+      "partial": 0
+    },
+    {
+      "year": 1956,
+      "score": -28,
+      "races": 1,
+      "partial": 0
+    },
+    {
+      "year": 1957,
+      "score": 14,
+      "races": 1,
+      "partial": 0
+    },
+    {
+      "year": 1958,
+      "score": 29,
+      "races": 1,
+      "partial": 0
+    },
+    {
+      "year": 1959,
+      "score": 34,
+      "races": 1,
+      "partial": 0
+    },
+    {
+      "year": 1960,
+      "score": -10,
+      "races": 1,
+      "partial": 0
+    }
+  ]
+}

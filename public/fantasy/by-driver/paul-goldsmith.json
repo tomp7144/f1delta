@@ -1,0 +1,29 @@
+{
+  "driverId": "paul-goldsmith",
+  "name": "Paul Goldsmith",
+  "career": {
+    "score": 65,
+    "races": 3,
+    "partial": 0
+  },
+  "seasons": [
+    {
+      "year": 1958,
+      "score": -28,
+      "races": 1,
+      "partial": 0
+    },
+    {
+      "year": 1959,
+      "score": 32,
+      "races": 1,
+      "partial": 0
+    },
+    {
+      "year": 1960,
+      "score": 61,
+      "races": 1,
+      "partial": 0
+    }
+  ]
+}

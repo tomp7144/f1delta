@@ -1,0 +1,53 @@
+{
+  "driverId": "roberto-moreno",
+  "name": "Roberto Moreno",
+  "career": {
+    "score": -203,
+    "races": 75,
+    "partial": 23
+  },
+  "seasons": [
+    {
+      "year": 1982,
+      "score": 0,
+      "races": 1,
+      "partial": 0
+    },
+    {
+      "year": 1987,
+      "score": 26,
+      "races": 2,
+      "partial": 0
+    },
+    {
+      "year": 1989,
+      "score": -80,
+      "races": 16,
+      "partial": 7
+    },
+    {
+      "year": 1990,
+      "score": 4,
+      "races": 16,
+      "partial": 10
+    },
+    {
+      "year": 1991,
+      "score": 51,
+      "races": 14,
+      "partial": 0
+    },
+    {
+      "year": 1992,
+      "score": -20,
+      "races": 9,
+      "partial": 6
+    },
+    {
+      "year": 1995,
+      "score": -184,
+      "races": 17,
+      "partial": 0
+    }
+  ]
+}

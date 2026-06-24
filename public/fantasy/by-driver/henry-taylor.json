@@ -1,0 +1,29 @@
+{
+  "driverId": "henry-taylor",
+  "name": "Henry Taylor",
+  "career": {
+    "score": 125,
+    "races": 11,
+    "partial": 2
+  },
+  "seasons": [
+    {
+      "year": 1959,
+      "score": 20,
+      "races": 1,
+      "partial": 0
+    },
+    {
+      "year": 1960,
+      "score": 70,
+      "races": 5,
+      "partial": 1
+    },
+    {
+      "year": 1961,
+      "score": 35,
+      "races": 5,
+      "partial": 1
+    }
+  ]
+}

@@ -1,0 +1,17 @@
+{
+  "driverId": "yuji-ide",
+  "name": "Yuji Ide",
+  "career": {
+    "score": -42,
+    "races": 4,
+    "partial": 0
+  },
+  "seasons": [
+    {
+      "year": 2006,
+      "score": -42,
+      "races": 4,
+      "partial": 0
+    }
+  ]
+}

@@ -1,0 +1,35 @@
+{
+  "driverId": "christian-klien",
+  "name": "Christian Klien",
+  "career": {
+    "score": -49,
+    "races": 51,
+    "partial": 0
+  },
+  "seasons": [
+    {
+      "year": 2004,
+      "score": -17,
+      "races": 18,
+      "partial": 0
+    },
+    {
+      "year": 2005,
+      "score": 57,
+      "races": 15,
+      "partial": 0
+    },
+    {
+      "year": 2006,
+      "score": -79,
+      "races": 15,
+      "partial": 0
+    },
+    {
+      "year": 2010,
+      "score": -10,
+      "races": 3,
+      "partial": 0
+    }
+  ]
+}

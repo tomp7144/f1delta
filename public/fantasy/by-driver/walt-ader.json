@@ -1,0 +1,17 @@
+{
+  "driverId": "walt-ader",
+  "name": "Walt Ader",
+  "career": {
+    "score": 14,
+    "races": 1,
+    "partial": 0
+  },
+  "seasons": [
+    {
+      "year": 1950,
+      "score": 14,
+      "races": 1,
+      "partial": 0
+    }
+  ]
+}

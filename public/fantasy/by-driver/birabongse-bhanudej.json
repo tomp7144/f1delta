@@ -1,0 +1,41 @@
+{
+  "driverId": "birabongse-bhanudej",
+  "name": "Birabongse Bhanudej",
+  "career": {
+    "score": 23,
+    "races": 19,
+    "partial": 0
+  },
+  "seasons": [
+    {
+      "year": 1950,
+      "score": 19,
+      "races": 4,
+      "partial": 0
+    },
+    {
+      "year": 1951,
+      "score": -20,
+      "races": 1,
+      "partial": 0
+    },
+    {
+      "year": 1952,
+      "score": -21,
+      "races": 4,
+      "partial": 0
+    },
+    {
+      "year": 1953,
+      "score": 14,
+      "races": 4,
+      "partial": 0
+    },
+    {
+      "year": 1954,
+      "score": 31,
+      "races": 6,
+      "partial": 0
+    }
+  ]
+}

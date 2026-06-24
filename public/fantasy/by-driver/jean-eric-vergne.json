@@ -1,0 +1,29 @@
+{
+  "driverId": "jean-eric-vergne",
+  "name": "Jean-Éric Vergne",
+  "career": {
+    "score": 43,
+    "races": 58,
+    "partial": 0
+  },
+  "seasons": [
+    {
+      "year": 2012,
+      "score": 88,
+      "races": 20,
+      "partial": 0
+    },
+    {
+      "year": 2013,
+      "score": -34,
+      "races": 19,
+      "partial": 0
+    },
+    {
+      "year": 2014,
+      "score": -11,
+      "races": 19,
+      "partial": 0
+    }
+  ]
+}

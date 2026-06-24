@@ -1,0 +1,23 @@
+{
+  "driverId": "guy-ligier",
+  "name": "Guy Ligier",
+  "career": {
+    "score": -11,
+    "races": 13,
+    "partial": 0
+  },
+  "seasons": [
+    {
+      "year": 1966,
+      "score": -29,
+      "races": 6,
+      "partial": 0
+    },
+    {
+      "year": 1967,
+      "score": 18,
+      "races": 7,
+      "partial": 0
+    }
+  ]
+}

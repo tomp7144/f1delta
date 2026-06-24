@@ -1,0 +1,65 @@
+{
+  "driverId": "dave-charlton",
+  "name": "Dave Charlton",
+  "career": {
+    "score": -141,
+    "races": 14,
+    "partial": 2
+  },
+  "seasons": [
+    {
+      "year": 1965,
+      "score": 0,
+      "races": 1,
+      "partial": 1
+    },
+    {
+      "year": 1967,
+      "score": -17,
+      "races": 1,
+      "partial": 0
+    },
+    {
+      "year": 1968,
+      "score": -20,
+      "races": 1,
+      "partial": 0
+    },
+    {
+      "year": 1970,
+      "score": 2,
+      "races": 1,
+      "partial": 0
+    },
+    {
+      "year": 1971,
+      "score": -40,
+      "races": 3,
+      "partial": 1
+    },
+    {
+      "year": 1972,
+      "score": -60,
+      "races": 4,
+      "partial": 0
+    },
+    {
+      "year": 1973,
+      "score": -20,
+      "races": 1,
+      "partial": 0
+    },
+    {
+      "year": 1974,
+      "score": 2,
+      "races": 1,
+      "partial": 0
+    },
+    {
+      "year": 1975,
+      "score": 12,
+      "races": 1,
+      "partial": 0
+    }
+  ]
+}

@@ -1,0 +1,71 @@
+{
+  "driverId": "romain-grosjean",
+  "name": "Romain Grosjean",
+  "career": {
+    "score": 154,
+    "races": 181,
+    "partial": 3
+  },
+  "seasons": [
+    {
+      "year": 2009,
+      "score": -35,
+      "races": 7,
+      "partial": 0
+    },
+    {
+      "year": 2012,
+      "score": 51,
+      "races": 19,
+      "partial": 0
+    },
+    {
+      "year": 2013,
+      "score": 194,
+      "races": 19,
+      "partial": 0
+    },
+    {
+      "year": 2014,
+      "score": -50,
+      "races": 19,
+      "partial": 0
+    },
+    {
+      "year": 2015,
+      "score": 44,
+      "races": 19,
+      "partial": 0
+    },
+    {
+      "year": 2016,
+      "score": 96,
+      "races": 21,
+      "partial": 0
+    },
+    {
+      "year": 2017,
+      "score": 65,
+      "races": 20,
+      "partial": 1
+    },
+    {
+      "year": 2018,
+      "score": -65,
+      "races": 21,
+      "partial": 2
+    },
+    {
+      "year": 2019,
+      "score": -120,
+      "races": 21,
+      "partial": 0
+    },
+    {
+      "year": 2020,
+      "score": -26,
+      "races": 15,
+      "partial": 0
+    }
+  ]
+}

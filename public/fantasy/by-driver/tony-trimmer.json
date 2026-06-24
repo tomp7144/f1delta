@@ -1,0 +1,35 @@
+{
+  "driverId": "tony-trimmer",
+  "name": "Tony Trimmer",
+  "career": {
+    "score": 0,
+    "races": 6,
+    "partial": 1
+  },
+  "seasons": [
+    {
+      "year": 1975,
+      "score": 0,
+      "races": 3,
+      "partial": 0
+    },
+    {
+      "year": 1976,
+      "score": 0,
+      "races": 1,
+      "partial": 0
+    },
+    {
+      "year": 1977,
+      "score": 0,
+      "races": 1,
+      "partial": 1
+    },
+    {
+      "year": 1978,
+      "score": 0,
+      "races": 1,
+      "partial": 0
+    }
+  ]
+}

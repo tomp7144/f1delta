@@ -1,0 +1,23 @@
+{
+  "driverId": "george-fonder",
+  "name": "George Fonder",
+  "career": {
+    "score": -4,
+    "races": 3,
+    "partial": 2
+  },
+  "seasons": [
+    {
+      "year": 1952,
+      "score": -4,
+      "races": 1,
+      "partial": 0
+    },
+    {
+      "year": 1954,
+      "score": 0,
+      "races": 2,
+      "partial": 2
+    }
+  ]
+}

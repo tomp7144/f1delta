@@ -1,0 +1,29 @@
+{
+  "driverId": "patrick-neve",
+  "name": "Patrick Nève",
+  "career": {
+    "score": 148,
+    "races": 14,
+    "partial": 1
+  },
+  "seasons": [
+    {
+      "year": 1976,
+      "score": -4,
+      "races": 2,
+      "partial": 0
+    },
+    {
+      "year": 1977,
+      "score": 152,
+      "races": 11,
+      "partial": 0
+    },
+    {
+      "year": 1978,
+      "score": 0,
+      "races": 1,
+      "partial": 1
+    }
+  ]
+}

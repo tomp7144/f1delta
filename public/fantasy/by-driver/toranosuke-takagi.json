@@ -1,0 +1,23 @@
+{
+  "driverId": "toranosuke-takagi",
+  "name": "Toranosuke Takagi",
+  "career": {
+    "score": -237,
+    "races": 32,
+    "partial": 1
+  },
+  "seasons": [
+    {
+      "year": 1998,
+      "score": -66,
+      "races": 16,
+      "partial": 0
+    },
+    {
+      "year": 1999,
+      "score": -171,
+      "races": 16,
+      "partial": 1
+    }
+  ]
+}

@@ -1,0 +1,35 @@
+{
+  "driverId": "anthony-davidson",
+  "name": "Anthony Davidson",
+  "career": {
+    "score": -123,
+    "races": 24,
+    "partial": 0
+  },
+  "seasons": [
+    {
+      "year": 2002,
+      "score": -40,
+      "races": 2,
+      "partial": 0
+    },
+    {
+      "year": 2005,
+      "score": -20,
+      "races": 1,
+      "partial": 0
+    },
+    {
+      "year": 2007,
+      "score": -45,
+      "races": 17,
+      "partial": 0
+    },
+    {
+      "year": 2008,
+      "score": -18,
+      "races": 4,
+      "partial": 0
+    }
+  ]
+}

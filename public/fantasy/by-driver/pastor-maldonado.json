@@ -1,0 +1,41 @@
+{
+  "driverId": "pastor-maldonado",
+  "name": "Pastor Maldonado",
+  "career": {
+    "score": -160,
+    "races": 96,
+    "partial": 5
+  },
+  "seasons": [
+    {
+      "year": 2011,
+      "score": -100,
+      "races": 19,
+      "partial": 0
+    },
+    {
+      "year": 2012,
+      "score": -22,
+      "races": 20,
+      "partial": 0
+    },
+    {
+      "year": 2013,
+      "score": 27,
+      "races": 19,
+      "partial": 0
+    },
+    {
+      "year": 2014,
+      "score": -26,
+      "races": 19,
+      "partial": 5
+    },
+    {
+      "year": 2015,
+      "score": -39,
+      "races": 19,
+      "partial": 0
+    }
+  ]
+}

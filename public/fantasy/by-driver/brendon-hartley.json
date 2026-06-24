@@ -1,0 +1,23 @@
+{
+  "driverId": "brendon-hartley",
+  "name": "Brendon Hartley",
+  "career": {
+    "score": -74,
+    "races": 25,
+    "partial": 3
+  },
+  "seasons": [
+    {
+      "year": 2017,
+      "score": -14,
+      "races": 4,
+      "partial": 0
+    },
+    {
+      "year": 2018,
+      "score": -60,
+      "races": 21,
+      "partial": 3
+    }
+  ]
+}

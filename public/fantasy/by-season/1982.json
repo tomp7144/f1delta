@@ -1,0 +1,367 @@
+{
+  "year": 1982,
+  "drivers": {
+    "alain-prost": {
+      "score": 90,
+      "races": 16,
+      "partial": 0
+    },
+    "carlos-reutemann": {
+      "score": 18,
+      "races": 2,
+      "partial": 0
+    },
+    "rene-arnoux": {
+      "score": 4,
+      "races": 16,
+      "partial": 0
+    },
+    "niki-lauda": {
+      "score": 56,
+      "races": 15,
+      "partial": 0
+    },
+    "keke-rosberg": {
+      "score": 211,
+      "races": 15,
+      "partial": 0
+    },
+    "john-watson": {
+      "score": 168,
+      "races": 15,
+      "partial": 0
+    },
+    "michele-alboreto": {
+      "score": 156,
+      "races": 16,
+      "partial": 0
+    },
+    "elio-de-angelis": {
+      "score": 83,
+      "races": 15,
+      "partial": 0
+    },
+    "eliseo-salazar": {
+      "score": -44,
+      "races": 16,
+      "partial": 0
+    },
+    "manfred-winkelhock": {
+      "score": -102,
+      "races": 16,
+      "partial": 0
+    },
+    "bruno-giacomelli": {
+      "score": -80,
+      "races": 16,
+      "partial": 0
+    },
+    "jochen-mass": {
+      "score": 103,
+      "races": 10,
+      "partial": 0
+    },
+    "andrea-de-cesaris": {
+      "score": -97,
+      "races": 16,
+      "partial": 0
+    },
+    "derek-daly": {
+      "score": 44,
+      "races": 15,
+      "partial": 0
+    },
+    "raul-boesel": {
+      "score": -20,
+      "races": 15,
+      "partial": 1
+    },
+    "slim-borgudd": {
+      "score": 77,
+      "races": 3,
+      "partial": 0
+    },
+    "chico-serra": {
+      "score": 118,
+      "races": 15,
+      "partial": 1
+    },
+    "didier-pironi": {
+      "score": 181,
+      "races": 12,
+      "partial": 0
+    },
+    "jacques-laffite": {
+      "score": -139,
+      "races": 15,
+      "partial": 0
+    },
+    "derek-warwick": {
+      "score": -169,
+      "races": 14,
+      "partial": 1
+    },
+    "riccardo-patrese": {
+      "score": -24,
+      "races": 15,
+      "partial": 0
+    },
+    "eddie-cheever": {
+      "score": -30,
+      "races": 15,
+      "partial": 0
+    },
+    "gilles-villeneuve": {
+      "score": -13,
+      "races": 5,
+      "partial": 0
+    },
+    "nelson-piquet": {
+      "score": -44,
+      "races": 15,
+      "partial": 0
+    },
+    "nigel-mansell": {
+      "score": 53,
+      "races": 13,
+      "partial": 0
+    },
+    "jean-pierre-jarier": {
+      "score": -127,
+      "races": 16,
+      "partial": 0
+    },
+    "mauro-baldi": {
+      "score": 115,
+      "races": 15,
+      "partial": 0
+    },
+    "riccardo-paletti": {
+      "score": -40,
+      "races": 8,
+      "partial": 3
+    },
+    "brian-henton": {
+      "score": 26,
+      "races": 16,
+      "partial": 0
+    },
+    "teo-fabi": {
+      "score": -139,
+      "races": 14,
+      "partial": 1
+    },
+    "roberto-guerrero": {
+      "score": -110,
+      "races": 14,
+      "partial": 0
+    },
+    "mario-andretti": {
+      "score": -15,
+      "races": 3,
+      "partial": 0
+    },
+    "marc-surer": {
+      "score": 157,
+      "races": 12,
+      "partial": 0
+    },
+    "jan-lammers": {
+      "score": -20,
+      "races": 6,
+      "partial": 0
+    },
+    "emilio-de-villota": {
+      "score": 0,
+      "races": 5,
+      "partial": 3
+    },
+    "geoff-lees": {
+      "score": 4,
+      "races": 2,
+      "partial": 0
+    },
+    "patrick-tambay": {
+      "score": 150,
+      "races": 8,
+      "partial": 0
+    },
+    "roberto-moreno": {
+      "score": 0,
+      "races": 1,
+      "partial": 0
+    },
+    "tommy-byrne": {
+      "score": -40,
+      "races": 5,
+      "partial": 0
+    },
+    "rupert-keegan": {
+      "score": -14,
+      "races": 5,
+      "partial": 0
+    }
+  },
+  "races": [
+    {
+      "round": 1,
+      "raceId": 358,
+      "gpId": "south-africa",
+      "name": "South African GP",
+      "topId": "alain-prost",
+      "topName": "Alain Prost",
+      "topScore": 44,
+      "partial": false
+    },
+    {
+      "round": 2,
+      "raceId": 359,
+      "gpId": "brazil",
+      "name": "Brazilian GP",
+      "topId": "alain-prost",
+      "topName": "Alain Prost",
+      "topScore": 40,
+      "partial": true
+    },
+    {
+      "round": 3,
+      "raceId": 360,
+      "gpId": "united-states-west",
+      "name": "United States GP West",
+      "topId": "riccardo-patrese",
+      "topName": "Riccardo Patrese",
+      "topScore": 45,
+      "partial": true
+    },
+    {
+      "round": 4,
+      "raceId": 361,
+      "gpId": "san-marino",
+      "name": "San Marino GP",
+      "topId": "didier-pironi",
+      "topName": "Didier Pironi",
+      "topScore": 43,
+      "partial": false
+    },
+    {
+      "round": 5,
+      "raceId": 362,
+      "gpId": "belgium",
+      "name": "Belgian GP",
+      "topId": "john-watson",
+      "topName": "John Watson",
+      "topScore": 48,
+      "partial": true
+    },
+    {
+      "round": 6,
+      "raceId": 363,
+      "gpId": "monaco",
+      "name": "Monaco GP",
+      "topId": "riccardo-patrese",
+      "topName": "Riccardo Patrese",
+      "topScore": 41,
+      "partial": true
+    },
+    {
+      "round": 7,
+      "raceId": 364,
+      "gpId": "detroit",
+      "name": "Detroit GP",
+      "topId": "john-watson",
+      "topName": "John Watson",
+      "topScore": 57,
+      "partial": false
+    },
+    {
+      "round": 8,
+      "raceId": 365,
+      "gpId": "canada",
+      "name": "Canadian GP",
+      "topId": "nelson-piquet",
+      "topName": "Nelson Piquet",
+      "topScore": 38,
+      "partial": false
+    },
+    {
+      "round": 9,
+      "raceId": 366,
+      "gpId": "netherlands",
+      "name": "Dutch GP",
+      "topId": "didier-pironi",
+      "topName": "Didier Pironi",
+      "topScore": 38,
+      "partial": true
+    },
+    {
+      "round": 10,
+      "raceId": 367,
+      "gpId": "great-britain",
+      "name": "British GP",
+      "topId": "niki-lauda",
+      "topName": "Niki Lauda",
+      "topScore": 39,
+      "partial": false
+    },
+    {
+      "round": 11,
+      "raceId": 368,
+      "gpId": "france",
+      "name": "French GP",
+      "topId": "rene-arnoux",
+      "topName": "René Arnoux",
+      "topScore": 35,
+      "partial": false
+    },
+    {
+      "round": 12,
+      "raceId": 369,
+      "gpId": "germany",
+      "name": "German GP",
+      "topId": "marc-surer",
+      "topName": "Marc Surer",
+      "topScore": 48,
+      "partial": false
+    },
+    {
+      "round": 13,
+      "raceId": 370,
+      "gpId": "austria",
+      "name": "Austrian GP",
+      "topId": "mauro-baldi",
+      "topName": "Mauro Baldi",
+      "topScore": 42,
+      "partial": false
+    },
+    {
+      "round": 14,
+      "raceId": 371,
+      "gpId": "switzerland",
+      "name": "Swiss GP",
+      "topId": "keke-rosberg",
+      "topName": "Keke Rosberg",
+      "topScore": 42,
+      "partial": false
+    },
+    {
+      "round": 15,
+      "raceId": 372,
+      "gpId": "italy",
+      "name": "Italian GP",
+      "topId": "rene-arnoux",
+      "topName": "René Arnoux",
+      "topScore": 45,
+      "partial": false
+    },
+    {
+      "round": 16,
+      "raceId": 373,
+      "gpId": "caesars-palace",
+      "name": "Caesars Palace GP",
+      "topId": "michele-alboreto",
+      "topName": "Michele Alboreto",
+      "topScore": 42,
+      "partial": false
+    }
+  ]
+}

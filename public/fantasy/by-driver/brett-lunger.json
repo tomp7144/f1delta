@@ -1,0 +1,35 @@
+{
+  "driverId": "brett-lunger",
+  "name": "Brett Lunger",
+  "career": {
+    "score": 247,
+    "races": 43,
+    "partial": 2
+  },
+  "seasons": [
+    {
+      "year": 1975,
+      "score": 11,
+      "races": 3,
+      "partial": 0
+    },
+    {
+      "year": 1976,
+      "score": 63,
+      "races": 12,
+      "partial": 0
+    },
+    {
+      "year": 1977,
+      "score": 95,
+      "races": 13,
+      "partial": 0
+    },
+    {
+      "year": 1978,
+      "score": 78,
+      "races": 15,
+      "partial": 2
+    }
+  ]
+}

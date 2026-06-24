@@ -1,0 +1,17 @@
+{
+  "driverId": "fritz-dorey",
+  "name": "Fritz d'Orey",
+  "career": {
+    "score": -23,
+    "races": 3,
+    "partial": 0
+  },
+  "seasons": [
+    {
+      "year": 1959,
+      "score": -23,
+      "races": 3,
+      "partial": 0
+    }
+  ]
+}

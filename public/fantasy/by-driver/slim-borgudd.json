@@ -1,0 +1,23 @@
+{
+  "driverId": "slim-borgudd",
+  "name": "Slim Borgudd",
+  "career": {
+    "score": 84,
+    "races": 15,
+    "partial": 1
+  },
+  "seasons": [
+    {
+      "year": 1981,
+      "score": 7,
+      "races": 12,
+      "partial": 1
+    },
+    {
+      "year": 1982,
+      "score": 77,
+      "races": 3,
+      "partial": 0
+    }
+  ]
+}

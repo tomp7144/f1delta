@@ -1,0 +1,17 @@
+{
+  "driverId": "oscar-gonzalez",
+  "name": "Óscar González",
+  "career": {
+    "score": 8,
+    "races": 1,
+    "partial": 1
+  },
+  "seasons": [
+    {
+      "year": 1956,
+      "score": 8,
+      "races": 1,
+      "partial": 1
+    }
+  ]
+}

@@ -1,0 +1,17 @@
+{
+  "driverId": "george-constantine",
+  "name": "George Constantine",
+  "career": {
+    "score": -20,
+    "races": 1,
+    "partial": 0
+  },
+  "seasons": [
+    {
+      "year": 1959,
+      "score": -20,
+      "races": 1,
+      "partial": 0
+    }
+  ]
+}

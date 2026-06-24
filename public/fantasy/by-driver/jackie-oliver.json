@@ -1,0 +1,59 @@
+{
+  "driverId": "jackie-oliver",
+  "name": "Jackie Oliver",
+  "career": {
+    "score": -271,
+    "races": 52,
+    "partial": 0
+  },
+  "seasons": [
+    {
+      "year": 1967,
+      "score": 38,
+      "races": 1,
+      "partial": 0
+    },
+    {
+      "year": 1968,
+      "score": -17,
+      "races": 10,
+      "partial": 0
+    },
+    {
+      "year": 1969,
+      "score": -119,
+      "races": 10,
+      "partial": 0
+    },
+    {
+      "year": 1970,
+      "score": -150,
+      "races": 13,
+      "partial": 0
+    },
+    {
+      "year": 1971,
+      "score": 26,
+      "races": 3,
+      "partial": 0
+    },
+    {
+      "year": 1972,
+      "score": -20,
+      "races": 1,
+      "partial": 0
+    },
+    {
+      "year": 1973,
+      "score": -45,
+      "races": 13,
+      "partial": 0
+    },
+    {
+      "year": 1977,
+      "score": 16,
+      "races": 1,
+      "partial": 0
+    }
+  ]
+}

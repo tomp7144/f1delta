@@ -1,0 +1,41 @@
+{
+  "driverId": "willy-mairesse",
+  "name": "Willy Mairesse",
+  "career": {
+    "score": -98,
+    "races": 13,
+    "partial": 0
+  },
+  "seasons": [
+    {
+      "year": 1960,
+      "score": -11,
+      "races": 3,
+      "partial": 0
+    },
+    {
+      "year": 1961,
+      "score": -60,
+      "races": 3,
+      "partial": 0
+    },
+    {
+      "year": 1962,
+      "score": 17,
+      "races": 3,
+      "partial": 0
+    },
+    {
+      "year": 1963,
+      "score": -44,
+      "races": 3,
+      "partial": 0
+    },
+    {
+      "year": 1965,
+      "score": 0,
+      "races": 1,
+      "partial": 0
+    }
+  ]
+}

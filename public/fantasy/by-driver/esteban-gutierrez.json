@@ -1,0 +1,29 @@
+{
+  "driverId": "esteban-gutierrez",
+  "name": "Esteban Gutiérrez",
+  "career": {
+    "score": -71,
+    "races": 59,
+    "partial": 1
+  },
+  "seasons": [
+    {
+      "year": 2013,
+      "score": 79,
+      "races": 19,
+      "partial": 0
+    },
+    {
+      "year": 2014,
+      "score": -91,
+      "races": 19,
+      "partial": 1
+    },
+    {
+      "year": 2016,
+      "score": -59,
+      "races": 21,
+      "partial": 0
+    }
+  ]
+}

@@ -1,0 +1,47 @@
+{
+  "driverId": "trevor-taylor",
+  "name": "Trevor Taylor",
+  "career": {
+    "score": -149,
+    "races": 29,
+    "partial": 0
+  },
+  "seasons": [
+    {
+      "year": 1959,
+      "score": 0,
+      "races": 1,
+      "partial": 0
+    },
+    {
+      "year": 1961,
+      "score": 2,
+      "races": 1,
+      "partial": 0
+    },
+    {
+      "year": 1962,
+      "score": -39,
+      "races": 9,
+      "partial": 0
+    },
+    {
+      "year": 1963,
+      "score": -34,
+      "races": 9,
+      "partial": 0
+    },
+    {
+      "year": 1964,
+      "score": -58,
+      "races": 8,
+      "partial": 0
+    },
+    {
+      "year": 1966,
+      "score": -20,
+      "races": 1,
+      "partial": 0
+    }
+  ]
+}

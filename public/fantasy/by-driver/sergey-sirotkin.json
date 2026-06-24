@@ -1,0 +1,17 @@
+{
+  "driverId": "sergey-sirotkin",
+  "name": "Sergey Sirotkin",
+  "career": {
+    "score": 7,
+    "races": 21,
+    "partial": 0
+  },
+  "seasons": [
+    {
+      "year": 2018,
+      "score": 7,
+      "races": 21,
+      "partial": 0
+    }
+  ]
+}

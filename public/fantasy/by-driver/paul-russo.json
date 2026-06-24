@@ -1,0 +1,59 @@
+{
+  "driverId": "paul-russo",
+  "name": "Paul Russo",
+  "career": {
+    "score": 96,
+    "races": 9,
+    "partial": 2
+  },
+  "seasons": [
+    {
+      "year": 1950,
+      "score": 22,
+      "races": 1,
+      "partial": 0
+    },
+    {
+      "year": 1953,
+      "score": -4,
+      "races": 2,
+      "partial": 1
+    },
+    {
+      "year": 1954,
+      "score": 52,
+      "races": 1,
+      "partial": 0
+    },
+    {
+      "year": 1955,
+      "score": 18,
+      "races": 1,
+      "partial": 1
+    },
+    {
+      "year": 1956,
+      "score": -47,
+      "races": 1,
+      "partial": 0
+    },
+    {
+      "year": 1957,
+      "score": 25,
+      "races": 1,
+      "partial": 0
+    },
+    {
+      "year": 1958,
+      "score": -8,
+      "races": 1,
+      "partial": 0
+    },
+    {
+      "year": 1959,
+      "score": 38,
+      "races": 1,
+      "partial": 0
+    }
+  ]
+}

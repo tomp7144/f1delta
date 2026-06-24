@@ -65,7 +65,8 @@ import BaseLayout from "../layouts/BaseLayout.astro";
       var assets = raw.map(function (a) {
         return { id: a.id, name: a.name, type: a.type, team: a.team,
                  price: a.price || 0, points: a.points || 0,
-                 ppm: ppm(a.price, a.points), priceDelta: a.priceDelta || 0 };
+                 ppm: ppm(a.price, a.points), priceDelta: a.priceDelta || 0,
+                 pageId: a.pageId || null };
       }).sort(function (a, b) { return b.price - a.price; });
 
       // Unique teams for dropdown
@@ -93,7 +94,10 @@ import BaseLayout from "../layouts/BaseLayout.astro";
           ' data-points="' + esc(String(a.points)) + '"' +
           ' data-ppm="' + esc(String(a.ppm != null ? a.ppm : 0)) + '"' +
           ' data-delta="' + esc(String(d)) + '">' +
-          '<td class="nm"><span class="' + esc(dotC) + '"></span>' + esc(a.name) + '</td>' +
+          '<td class="nm"><span class="' + esc(dotC) + '"></span>' +
+            (a.pageId
+              ? '<a class="nm-link" href="' + esc(a.type === 'constructor' ? '/teams/' + a.pageId : '/driver?d=' + a.pageId) + '">' + esc(a.name) + '</a>'
+              : esc(a.name)) + '</td>' +
           '<td class="tm">' + esc(a.team || "—") + '</td>' +
           '<td class="n">\xa3' + esc(a.price.toFixed(1)) + 'm</td>' +
           '<td class="n">' + esc(a.points.toFixed(1)) + '</td>' +
@@ -322,6 +326,8 @@ import BaseLayout from "../layouts/BaseLayout.astro";
   .fhub tr:hover td { background: #faf9f6; }
 
   .fhub td.nm { text-align: left; font-weight: 500; white-space: nowrap; }
+  .fhub td.nm .nm-link { color: #16161a; text-decoration: none; }
+  .fhub td.nm .nm-link:hover { text-decoration: underline; }
   .fhub td.nm .dot { display: inline-block; width: 7px; height: 7px; border-radius: 50%; background: #e10600; margin-right: 6px; vertical-align: middle; flex-shrink: 0; }
   .fhub td.nm .dot.ctor { background: #6b6b70; }
   .fhub td.tm { text-align: left; color: #6b6b70; font-size: 12px; white-space: nowrap; }

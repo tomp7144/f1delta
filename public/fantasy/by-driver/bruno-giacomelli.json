@@ -1,0 +1,59 @@
+{
+  "driverId": "bruno-giacomelli",
+  "name": "Bruno Giacomelli",
+  "career": {
+    "score": -318,
+    "races": 82,
+    "partial": 12
+  },
+  "seasons": [
+    {
+      "year": 1977,
+      "score": -20,
+      "races": 1,
+      "partial": 0
+    },
+    {
+      "year": 1978,
+      "score": 26,
+      "races": 5,
+      "partial": 0
+    },
+    {
+      "year": 1979,
+      "score": -60,
+      "races": 4,
+      "partial": 0
+    },
+    {
+      "year": 1980,
+      "score": -89,
+      "races": 14,
+      "partial": 0
+    },
+    {
+      "year": 1981,
+      "score": -19,
+      "races": 15,
+      "partial": 0
+    },
+    {
+      "year": 1982,
+      "score": -80,
+      "races": 16,
+      "partial": 0
+    },
+    {
+      "year": 1983,
+      "score": -76,
+      "races": 15,
+      "partial": 0
+    },
+    {
+      "year": 1990,
+      "score": 0,
+      "races": 12,
+      "partial": 12
+    }
+  ]
+}

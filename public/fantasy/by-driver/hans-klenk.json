@@ -1,0 +1,17 @@
+{
+  "driverId": "hans-klenk",
+  "name": "Hans Klenk",
+  "career": {
+    "score": -3,
+    "races": 1,
+    "partial": 0
+  },
+  "seasons": [
+    {
+      "year": 1952,
+      "score": -3,
+      "races": 1,
+      "partial": 0
+    }
+  ]
+}

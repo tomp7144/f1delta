@@ -1,0 +1,17 @@
+{
+  "driverId": "harry-merkel",
+  "name": "Harry Merkel",
+  "career": {
+    "score": 0,
+    "races": 1,
+    "partial": 1
+  },
+  "seasons": [
+    {
+      "year": 1952,
+      "score": 0,
+      "races": 1,
+      "partial": 1
+    }
+  ]
+}

@@ -1,0 +1,53 @@
+{
+  "driverId": "andre-pilette",
+  "name": "André Pilette",
+  "career": {
+    "score": 71,
+    "races": 14,
+    "partial": 1
+  },
+  "seasons": [
+    {
+      "year": 1951,
+      "score": 20,
+      "races": 1,
+      "partial": 0
+    },
+    {
+      "year": 1953,
+      "score": 14,
+      "races": 1,
+      "partial": 0
+    },
+    {
+      "year": 1954,
+      "score": 7,
+      "races": 3,
+      "partial": 0
+    },
+    {
+      "year": 1956,
+      "score": 50,
+      "races": 4,
+      "partial": 1
+    },
+    {
+      "year": 1961,
+      "score": 0,
+      "races": 1,
+      "partial": 0
+    },
+    {
+      "year": 1963,
+      "score": 0,
+      "races": 2,
+      "partial": 0
+    },
+    {
+      "year": 1964,
+      "score": -20,
+      "races": 2,
+      "partial": 0
+    }
+  ]
+}

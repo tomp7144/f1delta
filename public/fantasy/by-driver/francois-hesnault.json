@@ -1,0 +1,23 @@
+{
+  "driverId": "francois-hesnault",
+  "name": "François Hesnault",
+  "career": {
+    "score": -165,
+    "races": 21,
+    "partial": 0
+  },
+  "seasons": [
+    {
+      "year": 1984,
+      "score": -85,
+      "races": 16,
+      "partial": 0
+    },
+    {
+      "year": 1985,
+      "score": -80,
+      "races": 5,
+      "partial": 0
+    }
+  ]
+}

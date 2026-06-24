@@ -1,0 +1,17 @@
+{
+  "driverId": "dorino-serafini",
+  "name": "Dorino Serafini",
+  "career": {
+    "score": 31,
+    "races": 1,
+    "partial": 0
+  },
+  "seasons": [
+    {
+      "year": 1950,
+      "score": 31,
+      "races": 1,
+      "partial": 0
+    }
+  ]
+}

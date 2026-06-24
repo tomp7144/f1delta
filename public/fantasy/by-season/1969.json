@@ -1,0 +1,327 @@
+{
+  "year": 1969,
+  "drivers": {
+    "jackie-stewart": {
+      "score": 250,
+      "races": 11,
+      "partial": 0
+    },
+    "graham-hill": {
+      "score": 94,
+      "races": 10,
+      "partial": 0
+    },
+    "denny-hulme": {
+      "score": 81,
+      "races": 11,
+      "partial": 0
+    },
+    "jo-siffert": {
+      "score": 40,
+      "races": 11,
+      "partial": 0
+    },
+    "bruce-mclaren": {
+      "score": 192,
+      "races": 11,
+      "partial": 0
+    },
+    "jean-pierre-beltoise": {
+      "score": 145,
+      "races": 11,
+      "partial": 0
+    },
+    "jackie-oliver": {
+      "score": -119,
+      "races": 10,
+      "partial": 0
+    },
+    "sam-tingle": {
+      "score": 22,
+      "races": 1,
+      "partial": 0
+    },
+    "peter-de-klerk": {
+      "score": -20,
+      "races": 1,
+      "partial": 0
+    },
+    "jochen-rindt": {
+      "score": 35,
+      "races": 10,
+      "partial": 0
+    },
+    "john-surtees": {
+      "score": -49,
+      "races": 10,
+      "partial": 0
+    },
+    "pedro-rodriguez": {
+      "score": -31,
+      "races": 8,
+      "partial": 0
+    },
+    "chris-amon": {
+      "score": -41,
+      "races": 6,
+      "partial": 0
+    },
+    "jack-brabham": {
+      "score": 40,
+      "races": 8,
+      "partial": 0
+    },
+    "mario-andretti": {
+      "score": -55,
+      "races": 3,
+      "partial": 0
+    },
+    "john-love": {
+      "score": -19,
+      "races": 1,
+      "partial": 0
+    },
+    "jacky-ickx": {
+      "score": 153,
+      "races": 11,
+      "partial": 0
+    },
+    "basil-van-rooyen": {
+      "score": -18,
+      "races": 1,
+      "partial": 0
+    },
+    "piers-courage": {
+      "score": 12,
+      "races": 10,
+      "partial": 0
+    },
+    "richard-attwood": {
+      "score": 61,
+      "races": 2,
+      "partial": 0
+    },
+    "vic-elford": {
+      "score": 59,
+      "races": 5,
+      "partial": 0
+    },
+    "silvio-moser": {
+      "score": -28,
+      "races": 7,
+      "partial": 0
+    },
+    "john-miles": {
+      "score": -71,
+      "races": 5,
+      "partial": 0
+    },
+    "jo-bonnier": {
+      "score": -40,
+      "races": 2,
+      "partial": 0
+    },
+    "derek-bell": {
+      "score": -20,
+      "races": 1,
+      "partial": 0
+    },
+    "henri-pescarolo": {
+      "score": 34,
+      "races": 1,
+      "partial": 0
+    },
+    "kurt-ahrens-jr": {
+      "score": 30,
+      "races": 1,
+      "partial": 0
+    },
+    "rolf-stommelen": {
+      "score": 30,
+      "races": 1,
+      "partial": 0
+    },
+    "peter-westbury": {
+      "score": 20,
+      "races": 1,
+      "partial": 0
+    },
+    "xavier-perrot": {
+      "score": 25,
+      "races": 1,
+      "partial": 0
+    },
+    "francois-cevert": {
+      "score": -20,
+      "races": 1,
+      "partial": 0
+    },
+    "johnny-servoz-gavin": {
+      "score": 2,
+      "races": 4,
+      "partial": 0
+    },
+    "gerhard-mitter": {
+      "score": 0,
+      "races": 1,
+      "partial": 0
+    },
+    "hubert-hahne": {
+      "score": 0,
+      "races": 1,
+      "partial": 0
+    },
+    "dieter-quester": {
+      "score": 0,
+      "races": 1,
+      "partial": 0
+    },
+    "hans-herrmann": {
+      "score": 0,
+      "races": 1,
+      "partial": 0
+    },
+    "ernesto-brambilla": {
+      "score": 0,
+      "races": 1,
+      "partial": 0
+    },
+    "pete-lovely": {
+      "score": 20,
+      "races": 3,
+      "partial": 0
+    },
+    "bill-brack": {
+      "score": -20,
+      "races": 1,
+      "partial": 0
+    },
+    "john-cordts": {
+      "score": -20,
+      "races": 1,
+      "partial": 0
+    },
+    "al-pease": {
+      "score": -25,
+      "races": 1,
+      "partial": 0
+    },
+    "george-eaton": {
+      "score": -40,
+      "races": 2,
+      "partial": 0
+    }
+  },
+  "races": [
+    {
+      "round": 1,
+      "raceId": 174,
+      "gpId": "south-africa",
+      "name": "South African GP",
+      "topId": "jackie-stewart",
+      "topName": "Jackie Stewart",
+      "topScore": 43,
+      "partial": false
+    },
+    {
+      "round": 2,
+      "raceId": 175,
+      "gpId": "spain",
+      "name": "Spanish GP",
+      "topId": "bruce-mclaren",
+      "topName": "Bruce McLaren",
+      "topScore": 40,
+      "partial": false
+    },
+    {
+      "round": 3,
+      "raceId": 176,
+      "gpId": "monaco",
+      "name": "Monaco GP",
+      "topId": "graham-hill",
+      "topName": "Graham Hill",
+      "topScore": 38,
+      "partial": false
+    },
+    {
+      "round": 4,
+      "raceId": 177,
+      "gpId": "netherlands",
+      "name": "Dutch GP",
+      "topId": "jackie-stewart",
+      "topName": "Jackie Stewart",
+      "topScore": 41,
+      "partial": false
+    },
+    {
+      "round": 5,
+      "raceId": 178,
+      "gpId": "france",
+      "name": "French GP",
+      "topId": "jackie-stewart",
+      "topName": "Jackie Stewart",
+      "topScore": 40,
+      "partial": false
+    },
+    {
+      "round": 6,
+      "raceId": 179,
+      "gpId": "great-britain",
+      "name": "British GP",
+      "topId": "jackie-stewart",
+      "topName": "Jackie Stewart",
+      "topScore": 41,
+      "partial": false
+    },
+    {
+      "round": 7,
+      "raceId": 180,
+      "gpId": "germany",
+      "name": "German GP",
+      "topId": "jacky-ickx",
+      "topName": "Jacky Ickx",
+      "topScore": 40,
+      "partial": false
+    },
+    {
+      "round": 8,
+      "raceId": 181,
+      "gpId": "italy",
+      "name": "Italian GP",
+      "topId": "jackie-stewart",
+      "topName": "Jackie Stewart",
+      "topScore": 37,
+      "partial": false
+    },
+    {
+      "round": 9,
+      "raceId": 182,
+      "gpId": "canada",
+      "name": "Canadian GP",
+      "topId": "jacky-ickx",
+      "topName": "Jacky Ickx",
+      "topScore": 40,
+      "partial": false
+    },
+    {
+      "round": 10,
+      "raceId": 183,
+      "gpId": "united-states",
+      "name": "United States GP",
+      "topId": "jochen-rindt",
+      "topName": "Jochen Rindt",
+      "topScore": 40,
+      "partial": false
+    },
+    {
+      "round": 11,
+      "raceId": 184,
+      "gpId": "mexico",
+      "name": "Mexican GP",
+      "topId": "denny-hulme",
+      "topName": "Denny Hulme",
+      "topScore": 38,
+      "partial": false
+    }
+  ]
+}

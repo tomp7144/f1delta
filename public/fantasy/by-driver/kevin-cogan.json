@@ -1,0 +1,23 @@
+{
+  "driverId": "kevin-cogan",
+  "name": "Kevin Cogan",
+  "career": {
+    "score": 0,
+    "races": 2,
+    "partial": 0
+  },
+  "seasons": [
+    {
+      "year": 1980,
+      "score": 0,
+      "races": 1,
+      "partial": 0
+    },
+    {
+      "year": 1981,
+      "score": 0,
+      "races": 1,
+      "partial": 0
+    }
+  ]
+}

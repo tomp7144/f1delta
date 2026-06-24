@@ -1,0 +1,41 @@
+{
+  "driverId": "edgar-barth",
+  "name": "Edgar Barth",
+  "career": {
+    "score": -2,
+    "races": 5,
+    "partial": 0
+  },
+  "seasons": [
+    {
+      "year": 1953,
+      "score": -20,
+      "races": 1,
+      "partial": 0
+    },
+    {
+      "year": 1957,
+      "score": 0,
+      "races": 1,
+      "partial": 0
+    },
+    {
+      "year": 1958,
+      "score": 22,
+      "races": 1,
+      "partial": 0
+    },
+    {
+      "year": 1960,
+      "score": 16,
+      "races": 1,
+      "partial": 0
+    },
+    {
+      "year": 1964,
+      "score": -20,
+      "races": 1,
+      "partial": 0
+    }
+  ]
+}

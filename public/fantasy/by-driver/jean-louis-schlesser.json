@@ -1,0 +1,23 @@
+{
+  "driverId": "jean-louis-schlesser",
+  "name": "Jean-Louis Schlesser",
+  "career": {
+    "score": 22,
+    "races": 2,
+    "partial": 0
+  },
+  "seasons": [
+    {
+      "year": 1983,
+      "score": 0,
+      "races": 1,
+      "partial": 0
+    },
+    {
+      "year": 1988,
+      "score": 22,
+      "races": 1,
+      "partial": 0
+    }
+  ]
+}

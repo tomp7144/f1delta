@@ -1,0 +1,41 @@
+{
+  "driverId": "pete-lovely",
+  "name": "Pete Lovely",
+  "career": {
+    "score": -22,
+    "races": 11,
+    "partial": 0
+  },
+  "seasons": [
+    {
+      "year": 1959,
+      "score": 0,
+      "races": 1,
+      "partial": 0
+    },
+    {
+      "year": 1960,
+      "score": 18,
+      "races": 1,
+      "partial": 0
+    },
+    {
+      "year": 1969,
+      "score": 20,
+      "races": 3,
+      "partial": 0
+    },
+    {
+      "year": 1970,
+      "score": -20,
+      "races": 4,
+      "partial": 0
+    },
+    {
+      "year": 1971,
+      "score": -40,
+      "races": 2,
+      "partial": 0
+    }
+  ]
+}

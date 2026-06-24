@@ -1,0 +1,71 @@
+{
+  "driverId": "kevin-magnussen",
+  "name": "Kevin Magnussen",
+  "career": {
+    "score": 12,
+    "races": 186,
+    "partial": 4
+  },
+  "seasons": [
+    {
+      "year": 2014,
+      "score": 67,
+      "races": 19,
+      "partial": 0
+    },
+    {
+      "year": 2015,
+      "score": 0,
+      "races": 1,
+      "partial": 0
+    },
+    {
+      "year": 2016,
+      "score": 2,
+      "races": 21,
+      "partial": 2
+    },
+    {
+      "year": 2017,
+      "score": 9,
+      "races": 20,
+      "partial": 0
+    },
+    {
+      "year": 2018,
+      "score": 71,
+      "races": 21,
+      "partial": 0
+    },
+    {
+      "year": 2019,
+      "score": -40,
+      "races": 21,
+      "partial": 1
+    },
+    {
+      "year": 2020,
+      "score": -82,
+      "races": 17,
+      "partial": 0
+    },
+    {
+      "year": 2022,
+      "score": -45,
+      "races": 22,
+      "partial": 0
+    },
+    {
+      "year": 2023,
+      "score": -48,
+      "races": 22,
+      "partial": 0
+    },
+    {
+      "year": 2024,
+      "score": 78,
+      "races": 22,
+      "partial": 1
+    }
+  ]
+}

@@ -1,0 +1,17 @@
+{
+  "driverId": "archie-scott-brown",
+  "name": "Archie Scott Brown",
+  "career": {
+    "score": -19,
+    "races": 1,
+    "partial": 0
+  },
+  "seasons": [
+    {
+      "year": 1956,
+      "score": -19,
+      "races": 1,
+      "partial": 0
+    }
+  ]
+}

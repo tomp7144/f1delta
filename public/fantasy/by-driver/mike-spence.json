@@ -1,0 +1,47 @@
+{
+  "driverId": "mike-spence",
+  "name": "Mike Spence",
+  "career": {
+    "score": 44,
+    "races": 38,
+    "partial": 1
+  },
+  "seasons": [
+    {
+      "year": 1963,
+      "score": -6,
+      "races": 1,
+      "partial": 0
+    },
+    {
+      "year": 1964,
+      "score": 39,
+      "races": 7,
+      "partial": 1
+    },
+    {
+      "year": 1965,
+      "score": 71,
+      "races": 9,
+      "partial": 0
+    },
+    {
+      "year": 1966,
+      "score": -61,
+      "races": 9,
+      "partial": 0
+    },
+    {
+      "year": 1967,
+      "score": 21,
+      "races": 11,
+      "partial": 0
+    },
+    {
+      "year": 1968,
+      "score": -20,
+      "races": 1,
+      "partial": 0
+    }
+  ]
+}

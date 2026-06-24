@@ -1,0 +1,23 @@
+{
+  "driverId": "taki-inoue",
+  "name": "Taki Inoue",
+  "career": {
+    "score": -172,
+    "races": 18,
+    "partial": 0
+  },
+  "seasons": [
+    {
+      "year": 1994,
+      "score": -20,
+      "races": 1,
+      "partial": 0
+    },
+    {
+      "year": 1995,
+      "score": -152,
+      "races": 17,
+      "partial": 0
+    }
+  ]
+}

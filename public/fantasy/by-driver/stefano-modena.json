@@ -1,0 +1,47 @@
+{
+  "driverId": "stefano-modena",
+  "name": "Stefano Modena",
+  "career": {
+    "score": -490,
+    "races": 81,
+    "partial": 3
+  },
+  "seasons": [
+    {
+      "year": 1987,
+      "score": -20,
+      "races": 1,
+      "partial": 0
+    },
+    {
+      "year": 1988,
+      "score": -60,
+      "races": 16,
+      "partial": 2
+    },
+    {
+      "year": 1989,
+      "score": -185,
+      "races": 16,
+      "partial": 1
+    },
+    {
+      "year": 1990,
+      "score": -107,
+      "races": 16,
+      "partial": 0
+    },
+    {
+      "year": 1991,
+      "score": -36,
+      "races": 16,
+      "partial": 0
+    },
+    {
+      "year": 1992,
+      "score": -82,
+      "races": 16,
+      "partial": 0
+    }
+  ]
+}

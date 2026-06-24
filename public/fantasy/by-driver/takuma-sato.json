@@ -1,0 +1,53 @@
+{
+  "driverId": "takuma-sato",
+  "name": "Takuma Sato",
+  "career": {
+    "score": -47,
+    "races": 91,
+    "partial": 2
+  },
+  "seasons": [
+    {
+      "year": 2002,
+      "score": -28,
+      "races": 17,
+      "partial": 1
+    },
+    {
+      "year": 2003,
+      "score": 22,
+      "races": 1,
+      "partial": 0
+    },
+    {
+      "year": 2004,
+      "score": 65,
+      "races": 18,
+      "partial": 0
+    },
+    {
+      "year": 2005,
+      "score": -107,
+      "races": 16,
+      "partial": 1
+    },
+    {
+      "year": 2006,
+      "score": -64,
+      "races": 18,
+      "partial": 0
+    },
+    {
+      "year": 2007,
+      "score": 51,
+      "races": 17,
+      "partial": 0
+    },
+    {
+      "year": 2008,
+      "score": 14,
+      "races": 4,
+      "partial": 0
+    }
+  ]
+}

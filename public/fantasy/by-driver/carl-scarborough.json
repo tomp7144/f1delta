@@ -1,0 +1,23 @@
+{
+  "driverId": "carl-scarborough",
+  "name": "Carl Scarborough",
+  "career": {
+    "score": 8,
+    "races": 2,
+    "partial": 0
+  },
+  "seasons": [
+    {
+      "year": 1951,
+      "score": -6,
+      "races": 1,
+      "partial": 0
+    },
+    {
+      "year": 1953,
+      "score": 14,
+      "races": 1,
+      "partial": 0
+    }
+  ]
+}

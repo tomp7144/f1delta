@@ -1,0 +1,77 @@
+{
+  "driverId": "rodger-ward",
+  "name": "Rodger Ward",
+  "career": {
+    "score": -9,
+    "races": 12,
+    "partial": 0
+  },
+  "seasons": [
+    {
+      "year": 1951,
+      "score": -4,
+      "races": 1,
+      "partial": 0
+    },
+    {
+      "year": 1952,
+      "score": -2,
+      "races": 1,
+      "partial": 0
+    },
+    {
+      "year": 1953,
+      "score": -11,
+      "races": 1,
+      "partial": 0
+    },
+    {
+      "year": 1954,
+      "score": -12,
+      "races": 1,
+      "partial": 0
+    },
+    {
+      "year": 1955,
+      "score": 4,
+      "races": 1,
+      "partial": 0
+    },
+    {
+      "year": 1956,
+      "score": 18,
+      "races": 1,
+      "partial": 0
+    },
+    {
+      "year": 1957,
+      "score": -12,
+      "races": 1,
+      "partial": 0
+    },
+    {
+      "year": 1958,
+      "score": -18,
+      "races": 1,
+      "partial": 0
+    },
+    {
+      "year": 1959,
+      "score": 20,
+      "races": 2,
+      "partial": 0
+    },
+    {
+      "year": 1960,
+      "score": 28,
+      "races": 1,
+      "partial": 0
+    },
+    {
+      "year": 1963,
+      "score": -20,
+      "races": 1,
+      "partial": 0
+    }
+  ]
+}

@@ -1,0 +1,17 @@
+{
+  "driverId": "alexander-rossi",
+  "name": "Alexander Rossi",
+  "career": {
+    "score": 22,
+    "races": 5,
+    "partial": 1
+  },
+  "seasons": [
+    {
+      "year": 2015,
+      "score": 22,
+      "races": 5,
+      "partial": 1
+    }
+  ]
+}

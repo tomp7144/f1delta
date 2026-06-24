@@ -1,0 +1,17 @@
+{
+  "driverId": "danny-sullivan",
+  "name": "Danny Sullivan",
+  "career": {
+    "score": -9,
+    "races": 15,
+    "partial": 0
+  },
+  "seasons": [
+    {
+      "year": 1983,
+      "score": -9,
+      "races": 15,
+      "partial": 0
+    }
+  ]
+}

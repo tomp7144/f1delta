@@ -1,0 +1,53 @@
+{
+  "driverId": "jean-pierre-jabouille",
+  "name": "Jean-Pierre Jabouille",
+  "career": {
+    "score": -471,
+    "races": 56,
+    "partial": 0
+  },
+  "seasons": [
+    {
+      "year": 1974,
+      "score": 0,
+      "races": 2,
+      "partial": 0
+    },
+    {
+      "year": 1975,
+      "score": 18,
+      "races": 1,
+      "partial": 0
+    },
+    {
+      "year": 1977,
+      "score": -79,
+      "races": 5,
+      "partial": 0
+    },
+    {
+      "year": 1978,
+      "score": -128,
+      "races": 14,
+      "partial": 0
+    },
+    {
+      "year": 1979,
+      "score": -101,
+      "races": 15,
+      "partial": 0
+    },
+    {
+      "year": 1980,
+      "score": -121,
+      "races": 13,
+      "partial": 0
+    },
+    {
+      "year": 1981,
+      "score": -60,
+      "races": 6,
+      "partial": 0
+    }
+  ]
+}

@@ -1,0 +1,17 @@
+{
+  "driverId": "rio-haryanto",
+  "name": "Rio Haryanto",
+  "career": {
+    "score": -36,
+    "races": 12,
+    "partial": 1
+  },
+  "seasons": [
+    {
+      "year": 2016,
+      "score": -36,
+      "races": 12,
+      "partial": 1
+    }
+  ]
+}

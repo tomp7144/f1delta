@@ -1,0 +1,377 @@
+{
+  "year": 1963,
+  "drivers": {
+    "graham-hill": {
+      "score": 107,
+      "races": 10,
+      "partial": 0
+    },
+    "richie-ginther": {
+      "score": 167,
+      "races": 10,
+      "partial": 0
+    },
+    "bruce-mclaren": {
+      "score": 47,
+      "races": 10,
+      "partial": 0
+    },
+    "john-surtees": {
+      "score": 51,
+      "races": 10,
+      "partial": 0
+    },
+    "tony-maggs": {
+      "score": 22,
+      "races": 10,
+      "partial": 0
+    },
+    "trevor-taylor": {
+      "score": -34,
+      "races": 9,
+      "partial": 0
+    },
+    "jo-bonnier": {
+      "score": 80,
+      "races": 10,
+      "partial": 0
+    },
+    "jim-clark": {
+      "score": 332,
+      "races": 10,
+      "partial": 0
+    },
+    "jack-brabham": {
+      "score": 64,
+      "races": 10,
+      "partial": 0
+    },
+    "innes-ireland": {
+      "score": -19,
+      "races": 7,
+      "partial": 0
+    },
+    "willy-mairesse": {
+      "score": -44,
+      "races": 3,
+      "partial": 0
+    },
+    "maurice-trintignant": {
+      "score": 18,
+      "races": 3,
+      "partial": 0
+    },
+    "dan-gurney": {
+      "score": 49,
+      "races": 10,
+      "partial": 0
+    },
+    "jim-hall": {
+      "score": 99,
+      "races": 9,
+      "partial": 0
+    },
+    "jo-siffert": {
+      "score": -49,
+      "races": 9,
+      "partial": 0
+    },
+    "chris-amon": {
+      "score": -38,
+      "races": 8,
+      "partial": 0
+    },
+    "bernard-collomb": {
+      "score": 23,
+      "races": 2,
+      "partial": 0
+    },
+    "carel-godin-de-beaufort": {
+      "score": 129,
+      "races": 8,
+      "partial": 0
+    },
+    "tony-settember": {
+      "score": -34,
+      "races": 5,
+      "partial": 0
+    },
+    "lucien-bianchi": {
+      "score": -20,
+      "races": 1,
+      "partial": 0
+    },
+    "phil-hill": {
+      "score": -94,
+      "races": 6,
+      "partial": 0
+    },
+    "giancarlo-baghetti": {
+      "score": -70,
+      "races": 5,
+      "partial": 0
+    },
+    "ludovico-scarfiotti": {
+      "score": 18,
+      "races": 2,
+      "partial": 0
+    },
+    "gerhard-mitter": {
+      "score": 14,
+      "races": 2,
+      "partial": 0
+    },
+    "lorenzo-bandini": {
+      "score": 31,
+      "races": 7,
+      "partial": 0
+    },
+    "masten-gregory": {
+      "score": -55,
+      "races": 5,
+      "partial": 0
+    },
+    "peter-arundell": {
+      "score": 0,
+      "races": 1,
+      "partial": 0
+    },
+    "mike-hailwood": {
+      "score": 37,
+      "races": 2,
+      "partial": 0
+    },
+    "bob-anderson": {
+      "score": 20,
+      "races": 2,
+      "partial": 0
+    },
+    "john-campbell-jones": {
+      "score": 20,
+      "races": 1,
+      "partial": 0
+    },
+    "ian-raby": {
+      "score": -20,
+      "races": 3,
+      "partial": 0
+    },
+    "ian-burgess": {
+      "score": -40,
+      "races": 2,
+      "partial": 0
+    },
+    "mario-de-araujo-cabral": {
+      "score": -20,
+      "races": 2,
+      "partial": 0
+    },
+    "andre-pilette": {
+      "score": 0,
+      "races": 2,
+      "partial": 0
+    },
+    "tim-parnell": {
+      "score": 0,
+      "races": 1,
+      "partial": 0
+    },
+    "kurt-kuhnke": {
+      "score": 0,
+      "races": 1,
+      "partial": 0
+    },
+    "mike-spence": {
+      "score": -6,
+      "races": 1,
+      "partial": 0
+    },
+    "ernesto-brambilla": {
+      "score": 0,
+      "races": 1,
+      "partial": 0
+    },
+    "roberto-lippi": {
+      "score": 0,
+      "races": 1,
+      "partial": 0
+    },
+    "peter-broeker": {
+      "score": 34,
+      "races": 1,
+      "partial": 0
+    },
+    "rodger-ward": {
+      "score": -20,
+      "races": 1,
+      "partial": 0
+    },
+    "pedro-rodriguez": {
+      "score": -40,
+      "races": 2,
+      "partial": 0
+    },
+    "hap-sharp": {
+      "score": 4,
+      "races": 2,
+      "partial": 0
+    },
+    "moises-solana": {
+      "score": 0,
+      "races": 1,
+      "partial": 0
+    },
+    "frank-dochnal": {
+      "score": 0,
+      "races": 1,
+      "partial": 1
+    },
+    "john-love": {
+      "score": 10,
+      "races": 1,
+      "partial": 0
+    },
+    "doug-serrurier": {
+      "score": 14,
+      "races": 1,
+      "partial": 0
+    },
+    "trevor-blokdyk": {
+      "score": 14,
+      "races": 1,
+      "partial": 0
+    },
+    "brausch-niemann": {
+      "score": 2,
+      "races": 1,
+      "partial": 0
+    },
+    "peter-de-klerk": {
+      "score": -20,
+      "races": 1,
+      "partial": 0
+    },
+    "david-prophet": {
+      "score": -20,
+      "races": 1,
+      "partial": 0
+    },
+    "ernie-pieterse": {
+      "score": -20,
+      "races": 1,
+      "partial": 0
+    },
+    "sam-tingle": {
+      "score": -20,
+      "races": 1,
+      "partial": 0
+    },
+    "paddy-driver": {
+      "score": 0,
+      "races": 1,
+      "partial": 0
+    }
+  },
+  "races": [
+    {
+      "round": 1,
+      "raceId": 112,
+      "gpId": "monaco",
+      "name": "Monaco GP",
+      "topId": "graham-hill",
+      "topName": "Graham Hill",
+      "topScore": 36,
+      "partial": false
+    },
+    {
+      "round": 2,
+      "raceId": 113,
+      "gpId": "belgium",
+      "name": "Belgian GP",
+      "topId": "jim-clark",
+      "topName": "Jim Clark",
+      "topScore": 47,
+      "partial": false
+    },
+    {
+      "round": 3,
+      "raceId": 114,
+      "gpId": "netherlands",
+      "name": "Dutch GP",
+      "topId": "dan-gurney",
+      "topName": "Dan Gurney",
+      "topScore": 42,
+      "partial": false
+    },
+    {
+      "round": 4,
+      "raceId": 115,
+      "gpId": "france",
+      "name": "French GP",
+      "topId": "jim-clark",
+      "topName": "Jim Clark",
+      "topScore": 40,
+      "partial": false
+    },
+    {
+      "round": 5,
+      "raceId": 116,
+      "gpId": "great-britain",
+      "name": "British GP",
+      "topId": "jim-clark",
+      "topName": "Jim Clark",
+      "topScore": 35,
+      "partial": false
+    },
+    {
+      "round": 6,
+      "raceId": 117,
+      "gpId": "germany",
+      "name": "German GP",
+      "topId": "john-surtees",
+      "topName": "John Surtees",
+      "topScore": 41,
+      "partial": false
+    },
+    {
+      "round": 7,
+      "raceId": 118,
+      "gpId": "italy",
+      "name": "Italian GP",
+      "topId": "jim-clark",
+      "topName": "Jim Clark",
+      "topScore": 42,
+      "partial": false
+    },
+    {
+      "round": 8,
+      "raceId": 119,
+      "gpId": "united-states",
+      "name": "United States GP",
+      "topId": "graham-hill",
+      "topName": "Graham Hill",
+      "topScore": 35,
+      "partial": false
+    },
+    {
+      "round": 9,
+      "raceId": 120,
+      "gpId": "mexico",
+      "name": "Mexican GP",
+      "topId": "jim-clark",
+      "topName": "Jim Clark",
+      "topScore": 40,
+      "partial": true
+    },
+    {
+      "round": 10,
+      "raceId": 121,
+      "gpId": "south-africa",
+      "name": "South African GP",
+      "topId": "jim-clark",
+      "topName": "Jim Clark",
+      "topScore": 35,
+      "partial": false
+    }
+  ]
+}

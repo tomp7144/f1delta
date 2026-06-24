@@ -1,0 +1,35 @@
+{
+  "driverId": "mauro-baldi",
+  "name": "Mauro Baldi",
+  "career": {
+    "score": 63,
+    "races": 41,
+    "partial": 0
+  },
+  "seasons": [
+    {
+      "year": 1982,
+      "score": 115,
+      "races": 15,
+      "partial": 0
+    },
+    {
+      "year": 1983,
+      "score": -48,
+      "races": 15,
+      "partial": 0
+    },
+    {
+      "year": 1984,
+      "score": 56,
+      "races": 8,
+      "partial": 0
+    },
+    {
+      "year": 1985,
+      "score": -60,
+      "races": 3,
+      "partial": 0
+    }
+  ]
+}

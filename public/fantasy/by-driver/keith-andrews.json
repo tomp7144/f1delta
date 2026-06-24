@@ -1,0 +1,23 @@
+{
+  "driverId": "keith-andrews",
+  "name": "Keith Andrews",
+  "career": {
+    "score": 4,
+    "races": 2,
+    "partial": 0
+  },
+  "seasons": [
+    {
+      "year": 1955,
+      "score": 16,
+      "races": 1,
+      "partial": 0
+    },
+    {
+      "year": 1956,
+      "score": -12,
+      "races": 1,
+      "partial": 0
+    }
+  ]
+}

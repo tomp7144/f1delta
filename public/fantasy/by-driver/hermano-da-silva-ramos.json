@@ -1,0 +1,23 @@
+{
+  "driverId": "hermano-da-silva-ramos",
+  "name": "Hermano da Silva Ramos",
+  "career": {
+    "score": -20,
+    "races": 7,
+    "partial": 0
+  },
+  "seasons": [
+    {
+      "year": 1955,
+      "score": -24,
+      "races": 3,
+      "partial": 0
+    },
+    {
+      "year": 1956,
+      "score": 4,
+      "races": 4,
+      "partial": 0
+    }
+  ]
+}

@@ -1,0 +1,23 @@
+{
+  "driverId": "brausch-niemann",
+  "name": "Brausch Niemann",
+  "career": {
+    "score": 2,
+    "races": 2,
+    "partial": 0
+  },
+  "seasons": [
+    {
+      "year": 1963,
+      "score": 2,
+      "races": 1,
+      "partial": 0
+    },
+    {
+      "year": 1965,
+      "score": 0,
+      "races": 1,
+      "partial": 0
+    }
+  ]
+}

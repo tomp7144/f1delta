@@ -1,0 +1,35 @@
+{
+  "driverId": "bruce-halford",
+  "name": "Bruce Halford",
+  "career": {
+    "score": -95,
+    "races": 9,
+    "partial": 0
+  },
+  "seasons": [
+    {
+      "year": 1956,
+      "score": -65,
+      "races": 3,
+      "partial": 0
+    },
+    {
+      "year": 1957,
+      "score": -30,
+      "races": 3,
+      "partial": 0
+    },
+    {
+      "year": 1959,
+      "score": -20,
+      "races": 1,
+      "partial": 0
+    },
+    {
+      "year": 1960,
+      "score": 20,
+      "races": 2,
+      "partial": 0
+    }
+  ]
+}

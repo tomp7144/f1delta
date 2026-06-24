@@ -1,0 +1,41 @@
+{
+  "driverId": "derek-daly",
+  "name": "Derek Daly",
+  "career": {
+    "score": 65,
+    "races": 64,
+    "partial": 3
+  },
+  "seasons": [
+    {
+      "year": 1978,
+      "score": 4,
+      "races": 10,
+      "partial": 2
+    },
+    {
+      "year": 1979,
+      "score": -4,
+      "races": 10,
+      "partial": 0
+    },
+    {
+      "year": 1980,
+      "score": 19,
+      "races": 14,
+      "partial": 0
+    },
+    {
+      "year": 1981,
+      "score": 2,
+      "races": 15,
+      "partial": 1
+    },
+    {
+      "year": 1982,
+      "score": 44,
+      "races": 15,
+      "partial": 0
+    }
+  ]
+}

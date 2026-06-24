@@ -1,0 +1,307 @@
+{
+  "year": 2015,
+  "drivers": {
+    "lewis-hamilton": {
+      "score": 568,
+      "races": 19,
+      "partial": 0
+    },
+    "nico-rosberg": {
+      "score": 463,
+      "races": 19,
+      "partial": 0
+    },
+    "sebastian-vettel": {
+      "score": 465,
+      "races": 19,
+      "partial": 0
+    },
+    "felipe-massa": {
+      "score": 137,
+      "races": 19,
+      "partial": 0
+    },
+    "felipe-nasr": {
+      "score": 105,
+      "races": 19,
+      "partial": 0
+    },
+    "daniel-ricciardo": {
+      "score": 144,
+      "races": 19,
+      "partial": 0
+    },
+    "nico-hulkenberg": {
+      "score": 48,
+      "races": 19,
+      "partial": 0
+    },
+    "marcus-ericsson": {
+      "score": 36,
+      "races": 19,
+      "partial": 0
+    },
+    "carlos-sainz-jr": {
+      "score": -52,
+      "races": 19,
+      "partial": 2
+    },
+    "sergio-perez": {
+      "score": 172,
+      "races": 19,
+      "partial": 0
+    },
+    "jenson-button": {
+      "score": -8,
+      "races": 19,
+      "partial": 3
+    },
+    "kimi-raikkonen": {
+      "score": 188,
+      "races": 19,
+      "partial": 0
+    },
+    "max-verstappen": {
+      "score": 44,
+      "races": 19,
+      "partial": 1
+    },
+    "romain-grosjean": {
+      "score": 44,
+      "races": 19,
+      "partial": 0
+    },
+    "pastor-maldonado": {
+      "score": -39,
+      "races": 19,
+      "partial": 0
+    },
+    "daniil-kvyat": {
+      "score": 188,
+      "races": 19,
+      "partial": 0
+    },
+    "kevin-magnussen": {
+      "score": 0,
+      "races": 1,
+      "partial": 0
+    },
+    "valtteri-bottas": {
+      "score": 188,
+      "races": 19,
+      "partial": 0
+    },
+    "will-stevens": {
+      "score": 14,
+      "races": 19,
+      "partial": 2
+    },
+    "roberto-merhi": {
+      "score": 40,
+      "races": 14,
+      "partial": 2
+    },
+    "fernando-alonso": {
+      "score": -34,
+      "races": 18,
+      "partial": 1
+    },
+    "alexander-rossi": {
+      "score": 22,
+      "races": 5,
+      "partial": 1
+    }
+  },
+  "races": [
+    {
+      "round": 1,
+      "raceId": 917,
+      "gpId": "australia",
+      "name": "Australian GP",
+      "topId": "lewis-hamilton",
+      "topName": "Lewis Hamilton",
+      "topScore": 40,
+      "partial": true
+    },
+    {
+      "round": 2,
+      "raceId": 918,
+      "gpId": "malaysia",
+      "name": "Malaysian GP",
+      "topId": "sebastian-vettel",
+      "topName": "Sebastian Vettel",
+      "topScore": 36,
+      "partial": true
+    },
+    {
+      "round": 3,
+      "raceId": 919,
+      "gpId": "china",
+      "name": "Chinese GP",
+      "topId": "lewis-hamilton",
+      "topName": "Lewis Hamilton",
+      "topScore": 40,
+      "partial": false
+    },
+    {
+      "round": 4,
+      "raceId": 920,
+      "gpId": "bahrain",
+      "name": "Bahrain GP",
+      "topId": "lewis-hamilton",
+      "topName": "Lewis Hamilton",
+      "topScore": 35,
+      "partial": true
+    },
+    {
+      "round": 5,
+      "raceId": 921,
+      "gpId": "spain",
+      "name": "Spanish GP",
+      "topId": "nico-rosberg",
+      "topName": "Nico Rosberg",
+      "topScore": 35,
+      "partial": false
+    },
+    {
+      "round": 6,
+      "raceId": 922,
+      "gpId": "monaco",
+      "name": "Monaco GP",
+      "topId": "nico-rosberg",
+      "topName": "Nico Rosberg",
+      "topScore": 36,
+      "partial": false
+    },
+    {
+      "round": 7,
+      "raceId": 923,
+      "gpId": "canada",
+      "name": "Canadian GP",
+      "topId": "sebastian-vettel",
+      "topName": "Sebastian Vettel",
+      "topScore": 36,
+      "partial": true
+    },
+    {
+      "round": 8,
+      "raceId": 924,
+      "gpId": "austria",
+      "name": "Austrian GP",
+      "topId": "nico-rosberg",
+      "topName": "Nico Rosberg",
+      "topScore": 41,
+      "partial": false
+    },
+    {
+      "round": 9,
+      "raceId": 925,
+      "gpId": "great-britain",
+      "name": "British GP",
+      "topId": "lewis-hamilton",
+      "topName": "Lewis Hamilton",
+      "topScore": 40,
+      "partial": false
+    },
+    {
+      "round": 10,
+      "raceId": 926,
+      "gpId": "hungary",
+      "name": "Hungarian GP",
+      "topId": "sebastian-vettel",
+      "topName": "Sebastian Vettel",
+      "topScore": 37,
+      "partial": false
+    },
+    {
+      "round": 11,
+      "raceId": 927,
+      "gpId": "belgium",
+      "name": "Belgian GP",
+      "topId": "lewis-hamilton",
+      "topName": "Lewis Hamilton",
+      "topScore": 35,
+      "partial": false
+    },
+    {
+      "round": 12,
+      "raceId": 928,
+      "gpId": "italy",
+      "name": "Italian GP",
+      "topId": "lewis-hamilton",
+      "topName": "Lewis Hamilton",
+      "topScore": 40,
+      "partial": true
+    },
+    {
+      "round": 13,
+      "raceId": 929,
+      "gpId": "singapore",
+      "name": "Singapore GP",
+      "topId": "sebastian-vettel",
+      "topName": "Sebastian Vettel",
+      "topScore": 35,
+      "partial": false
+    },
+    {
+      "round": 14,
+      "raceId": 930,
+      "gpId": "japan",
+      "name": "Japanese GP",
+      "topId": "lewis-hamilton",
+      "topName": "Lewis Hamilton",
+      "topScore": 41,
+      "partial": true
+    },
+    {
+      "round": 15,
+      "raceId": 931,
+      "gpId": "russia",
+      "name": "Russian GP",
+      "topId": "lewis-hamilton",
+      "topName": "Lewis Hamilton",
+      "topScore": 36,
+      "partial": true
+    },
+    {
+      "round": 16,
+      "raceId": 932,
+      "gpId": "united-states",
+      "name": "United States GP",
+      "topId": "sebastian-vettel",
+      "topName": "Sebastian Vettel",
+      "topScore": 41,
+      "partial": true
+    },
+    {
+      "round": 17,
+      "raceId": 933,
+      "gpId": "mexico",
+      "name": "Mexican GP",
+      "topId": "nico-rosberg",
+      "topName": "Nico Rosberg",
+      "topScore": 40,
+      "partial": true
+    },
+    {
+      "round": 18,
+      "raceId": 934,
+      "gpId": "brazil",
+      "name": "Brazilian GP",
+      "topId": "nico-rosberg",
+      "topName": "Nico Rosberg",
+      "topScore": 35,
+      "partial": true
+    },
+    {
+      "round": 19,
+      "raceId": 935,
+      "gpId": "abu-dhabi",
+      "name": "Abu Dhabi GP",
+      "topId": "nico-rosberg",
+      "topName": "Nico Rosberg",
+      "topScore": 35,
+      "partial": false
+    }
+  ]
+}

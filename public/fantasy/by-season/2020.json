@@ -1,0 +1,292 @@
+{
+  "year": 2020,
+  "drivers": {
+    "valtteri-bottas": {
+      "score": 297,
+      "races": 17,
+      "partial": 0
+    },
+    "charles-leclerc": {
+      "score": 120,
+      "races": 17,
+      "partial": 0
+    },
+    "lando-norris": {
+      "score": 179,
+      "races": 17,
+      "partial": 0
+    },
+    "lewis-hamilton": {
+      "score": 520,
+      "races": 16,
+      "partial": 0
+    },
+    "carlos-sainz-jr": {
+      "score": 180,
+      "races": 17,
+      "partial": 0
+    },
+    "sergio-perez": {
+      "score": 182,
+      "races": 15,
+      "partial": 0
+    },
+    "pierre-gasly": {
+      "score": 116,
+      "races": 17,
+      "partial": 0
+    },
+    "esteban-ocon": {
+      "score": 103,
+      "races": 17,
+      "partial": 0
+    },
+    "antonio-giovinazzi": {
+      "score": 43,
+      "races": 17,
+      "partial": 0
+    },
+    "sebastian-vettel": {
+      "score": 87,
+      "races": 17,
+      "partial": 0
+    },
+    "nicholas-latifi": {
+      "score": 33,
+      "races": 17,
+      "partial": 0
+    },
+    "daniil-kvyat": {
+      "score": 100,
+      "races": 17,
+      "partial": 0
+    },
+    "alexander-albon": {
+      "score": 157,
+      "races": 17,
+      "partial": 0
+    },
+    "kimi-raikkonen": {
+      "score": 96,
+      "races": 17,
+      "partial": 0
+    },
+    "george-russell": {
+      "score": -46,
+      "races": 17,
+      "partial": 0
+    },
+    "romain-grosjean": {
+      "score": -26,
+      "races": 15,
+      "partial": 0
+    },
+    "kevin-magnussen": {
+      "score": -82,
+      "races": 17,
+      "partial": 0
+    },
+    "lance-stroll": {
+      "score": 52,
+      "races": 16,
+      "partial": 0
+    },
+    "daniel-ricciardo": {
+      "score": 200,
+      "races": 17,
+      "partial": 0
+    },
+    "max-verstappen": {
+      "score": 274,
+      "races": 17,
+      "partial": 0
+    },
+    "nico-hulkenberg": {
+      "score": 37,
+      "races": 3,
+      "partial": 0
+    },
+    "jack-aitken": {
+      "score": 2,
+      "races": 1,
+      "partial": 0
+    },
+    "pietro-fittipaldi": {
+      "score": 2,
+      "races": 2,
+      "partial": 0
+    }
+  },
+  "races": [
+    {
+      "round": 1,
+      "raceId": 1019,
+      "gpId": "austria",
+      "name": "Austrian GP",
+      "topId": "valtteri-bottas",
+      "topName": "Valtteri Bottas",
+      "topScore": 35,
+      "partial": false
+    },
+    {
+      "round": 2,
+      "raceId": 1020,
+      "gpId": "styria",
+      "name": "Styrian GP",
+      "topId": "lewis-hamilton",
+      "topName": "Lewis Hamilton",
+      "topScore": 35,
+      "partial": false
+    },
+    {
+      "round": 3,
+      "raceId": 1021,
+      "gpId": "hungary",
+      "name": "Hungarian GP",
+      "topId": "lewis-hamilton",
+      "topName": "Lewis Hamilton",
+      "topScore": 40,
+      "partial": false
+    },
+    {
+      "round": 4,
+      "raceId": 1022,
+      "gpId": "great-britain",
+      "name": "British GP",
+      "topId": "lewis-hamilton",
+      "topName": "Lewis Hamilton",
+      "topScore": 35,
+      "partial": false
+    },
+    {
+      "round": 5,
+      "raceId": 1023,
+      "gpId": "70th-anniversary",
+      "name": "70th Anniversary GP",
+      "topId": "max-verstappen",
+      "topName": "Max Verstappen",
+      "topScore": 38,
+      "partial": false
+    },
+    {
+      "round": 6,
+      "raceId": 1024,
+      "gpId": "spain",
+      "name": "Spanish GP",
+      "topId": "lewis-hamilton",
+      "topName": "Lewis Hamilton",
+      "topScore": 35,
+      "partial": false
+    },
+    {
+      "round": 7,
+      "raceId": 1025,
+      "gpId": "belgium",
+      "name": "Belgian GP",
+      "topId": "lewis-hamilton",
+      "topName": "Lewis Hamilton",
+      "topScore": 35,
+      "partial": false
+    },
+    {
+      "round": 8,
+      "raceId": 1026,
+      "gpId": "italy",
+      "name": "Italian GP",
+      "topId": "pierre-gasly",
+      "topName": "Pierre Gasly",
+      "topScore": 44,
+      "partial": false
+    },
+    {
+      "round": 9,
+      "raceId": 1027,
+      "gpId": "tuscany",
+      "name": "Tuscan GP",
+      "topId": "lewis-hamilton",
+      "topName": "Lewis Hamilton",
+      "topScore": 40,
+      "partial": false
+    },
+    {
+      "round": 10,
+      "raceId": 1028,
+      "gpId": "russia",
+      "name": "Russian GP",
+      "topId": "valtteri-bottas",
+      "topName": "Valtteri Bottas",
+      "topScore": 42,
+      "partial": false
+    },
+    {
+      "round": 11,
+      "raceId": 1029,
+      "gpId": "eifel",
+      "name": "Eifel GP",
+      "topId": "lewis-hamilton",
+      "topName": "Lewis Hamilton",
+      "topScore": 36,
+      "partial": false
+    },
+    {
+      "round": 12,
+      "raceId": 1030,
+      "gpId": "portugal",
+      "name": "Portuguese GP",
+      "topId": "lewis-hamilton",
+      "topName": "Lewis Hamilton",
+      "topScore": 40,
+      "partial": false
+    },
+    {
+      "round": 13,
+      "raceId": 1031,
+      "gpId": "emilia-romagna",
+      "name": "Emilia Romagna GP",
+      "topId": "lewis-hamilton",
+      "topName": "Lewis Hamilton",
+      "topScore": 41,
+      "partial": false
+    },
+    {
+      "round": 14,
+      "raceId": 1032,
+      "gpId": "turkey",
+      "name": "Turkish GP",
+      "topId": "lewis-hamilton",
+      "topName": "Lewis Hamilton",
+      "topScore": 40,
+      "partial": false
+    },
+    {
+      "round": 15,
+      "raceId": 1033,
+      "gpId": "bahrain",
+      "name": "Bahrain GP",
+      "topId": "lewis-hamilton",
+      "topName": "Lewis Hamilton",
+      "topScore": 35,
+      "partial": false
+    },
+    {
+      "round": 16,
+      "raceId": 1034,
+      "gpId": "sakhir",
+      "name": "Sakhir GP",
+      "topId": "esteban-ocon",
+      "topName": "Esteban Ocon",
+      "topScore": 41,
+      "partial": false
+    },
+    {
+      "round": 17,
+      "raceId": 1035,
+      "gpId": "abu-dhabi",
+      "name": "Abu Dhabi GP",
+      "topId": "max-verstappen",
+      "topName": "Max Verstappen",
+      "topScore": 35,
+      "partial": false
+    }
+  ]
+}

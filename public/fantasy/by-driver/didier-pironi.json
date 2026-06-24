@@ -1,0 +1,41 @@
+{
+  "driverId": "didier-pironi",
+  "name": "Didier Pironi",
+  "career": {
+    "score": 449,
+    "races": 72,
+    "partial": 0
+  },
+  "seasons": [
+    {
+      "year": 1978,
+      "score": 112,
+      "races": 16,
+      "partial": 0
+    },
+    {
+      "year": 1979,
+      "score": 39,
+      "races": 15,
+      "partial": 0
+    },
+    {
+      "year": 1980,
+      "score": 116,
+      "races": 14,
+      "partial": 0
+    },
+    {
+      "year": 1981,
+      "score": 1,
+      "races": 15,
+      "partial": 0
+    },
+    {
+      "year": 1982,
+      "score": 181,
+      "races": 12,
+      "partial": 0
+    }
+  ]
+}

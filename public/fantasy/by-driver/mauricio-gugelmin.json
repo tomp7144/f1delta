@@ -1,0 +1,41 @@
+{
+  "driverId": "mauricio-gugelmin",
+  "name": "Maurício Gugelmin",
+  "career": {
+    "score": -327,
+    "races": 80,
+    "partial": 0
+  },
+  "seasons": [
+    {
+      "year": 1988,
+      "score": -41,
+      "races": 16,
+      "partial": 0
+    },
+    {
+      "year": 1989,
+      "score": -71,
+      "races": 16,
+      "partial": 0
+    },
+    {
+      "year": 1990,
+      "score": -34,
+      "races": 16,
+      "partial": 0
+    },
+    {
+      "year": 1991,
+      "score": -75,
+      "races": 16,
+      "partial": 0
+    },
+    {
+      "year": 1992,
+      "score": -106,
+      "races": 16,
+      "partial": 0
+    }
+  ]
+}

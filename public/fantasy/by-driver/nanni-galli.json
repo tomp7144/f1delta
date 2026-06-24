@@ -1,0 +1,35 @@
+{
+  "driverId": "nanni-galli",
+  "name": "Nanni Galli",
+  "career": {
+    "score": -98,
+    "races": 20,
+    "partial": 0
+  },
+  "seasons": [
+    {
+      "year": 1970,
+      "score": 0,
+      "races": 1,
+      "partial": 0
+    },
+    {
+      "year": 1971,
+      "score": -8,
+      "races": 9,
+      "partial": 0
+    },
+    {
+      "year": 1972,
+      "score": -68,
+      "races": 5,
+      "partial": 0
+    },
+    {
+      "year": 1973,
+      "score": -22,
+      "races": 5,
+      "partial": 0
+    }
+  ]
+}

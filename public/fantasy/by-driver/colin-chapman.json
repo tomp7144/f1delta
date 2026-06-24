@@ -1,0 +1,17 @@
+{
+  "driverId": "colin-chapman",
+  "name": "Colin Chapman",
+  "career": {
+    "score": 6,
+    "races": 1,
+    "partial": 0
+  },
+  "seasons": [
+    {
+      "year": 1956,
+      "score": 6,
+      "races": 1,
+      "partial": 0
+    }
+  ]
+}

@@ -1,0 +1,29 @@
+{
+  "driverId": "huub-rothengatter",
+  "name": "Huub Rothengatter",
+  "career": {
+    "score": -178,
+    "races": 30,
+    "partial": 0
+  },
+  "seasons": [
+    {
+      "year": 1984,
+      "score": -30,
+      "races": 8,
+      "partial": 0
+    },
+    {
+      "year": 1985,
+      "score": -26,
+      "races": 8,
+      "partial": 0
+    },
+    {
+      "year": 1986,
+      "score": -122,
+      "races": 14,
+      "partial": 0
+    }
+  ]
+}

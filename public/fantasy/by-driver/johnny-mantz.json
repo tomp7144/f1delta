@@ -1,0 +1,17 @@
+{
+  "driverId": "johnny-mantz",
+  "name": "Johnny Mantz",
+  "career": {
+    "score": 0,
+    "races": 1,
+    "partial": 1
+  },
+  "seasons": [
+    {
+      "year": 1953,
+      "score": 0,
+      "races": 1,
+      "partial": 1
+    }
+  ]
+}

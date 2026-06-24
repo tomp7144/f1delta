@@ -1,0 +1,23 @@
+{
+  "driverId": "will-stevens",
+  "name": "Will Stevens",
+  "career": {
+    "score": 14,
+    "races": 20,
+    "partial": 2
+  },
+  "seasons": [
+    {
+      "year": 2014,
+      "score": 0,
+      "races": 1,
+      "partial": 0
+    },
+    {
+      "year": 2015,
+      "score": 14,
+      "races": 19,
+      "partial": 2
+    }
+  ]
+}

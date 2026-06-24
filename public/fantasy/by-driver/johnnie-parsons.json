@@ -1,0 +1,65 @@
+{
+  "driverId": "johnnie-parsons",
+  "name": "Johnnie Parsons",
+  "career": {
+    "score": 25,
+    "races": 10,
+    "partial": 1
+  },
+  "seasons": [
+    {
+      "year": 1950,
+      "score": 44,
+      "races": 1,
+      "partial": 0
+    },
+    {
+      "year": 1951,
+      "score": -23,
+      "races": 1,
+      "partial": 0
+    },
+    {
+      "year": 1952,
+      "score": 43,
+      "races": 1,
+      "partial": 0
+    },
+    {
+      "year": 1953,
+      "score": -33,
+      "races": 1,
+      "partial": 0
+    },
+    {
+      "year": 1954,
+      "score": -34,
+      "races": 2,
+      "partial": 1
+    },
+    {
+      "year": 1955,
+      "score": 12,
+      "races": 1,
+      "partial": 0
+    },
+    {
+      "year": 1956,
+      "score": 21,
+      "races": 1,
+      "partial": 0
+    },
+    {
+      "year": 1957,
+      "score": 2,
+      "races": 1,
+      "partial": 0
+    },
+    {
+      "year": 1958,
+      "score": -7,
+      "races": 1,
+      "partial": 0
+    }
+  ]
+}

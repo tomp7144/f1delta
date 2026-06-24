@@ -1,0 +1,29 @@
+{
+  "driverId": "mike-parkes",
+  "name": "Mike Parkes",
+  "career": {
+    "score": 28,
+    "races": 7,
+    "partial": 0
+  },
+  "seasons": [
+    {
+      "year": 1959,
+      "score": 0,
+      "races": 1,
+      "partial": 0
+    },
+    {
+      "year": 1966,
+      "score": 24,
+      "races": 4,
+      "partial": 0
+    },
+    {
+      "year": 1967,
+      "score": 4,
+      "races": 2,
+      "partial": 0
+    }
+  ]
+}

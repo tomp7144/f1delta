@@ -1,0 +1,53 @@
+{
+  "driverId": "lorenzo-bandini",
+  "name": "Lorenzo Bandini",
+  "career": {
+    "score": 277,
+    "races": 42,
+    "partial": 0
+  },
+  "seasons": [
+    {
+      "year": 1961,
+      "score": 8,
+      "races": 4,
+      "partial": 0
+    },
+    {
+      "year": 1962,
+      "score": 32,
+      "races": 3,
+      "partial": 0
+    },
+    {
+      "year": 1963,
+      "score": 31,
+      "races": 7,
+      "partial": 0
+    },
+    {
+      "year": 1964,
+      "score": 82,
+      "races": 10,
+      "partial": 0
+    },
+    {
+      "year": 1965,
+      "score": 82,
+      "races": 10,
+      "partial": 0
+    },
+    {
+      "year": 1966,
+      "score": 53,
+      "races": 7,
+      "partial": 0
+    },
+    {
+      "year": 1967,
+      "score": -11,
+      "races": 1,
+      "partial": 0
+    }
+  ]
+}

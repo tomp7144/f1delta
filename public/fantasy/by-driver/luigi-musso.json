@@ -1,0 +1,47 @@
+{
+  "driverId": "luigi-musso",
+  "name": "Luigi Musso",
+  "career": {
+    "score": 173,
+    "races": 26,
+    "partial": 2
+  },
+  "seasons": [
+    {
+      "year": 1953,
+      "score": 6,
+      "races": 1,
+      "partial": 1
+    },
+    {
+      "year": 1954,
+      "score": 16,
+      "races": 3,
+      "partial": 0
+    },
+    {
+      "year": 1955,
+      "score": 26,
+      "races": 7,
+      "partial": 1
+    },
+    {
+      "year": 1956,
+      "score": -6,
+      "races": 4,
+      "partial": 0
+    },
+    {
+      "year": 1957,
+      "score": 72,
+      "races": 6,
+      "partial": 0
+    },
+    {
+      "year": 1958,
+      "score": 59,
+      "races": 5,
+      "partial": 0
+    }
+  ]
+}

@@ -1,0 +1,23 @@
+{
+  "driverId": "fabrizio-barbazza",
+  "name": "Fabrizio Barbazza",
+  "career": {
+    "score": 10,
+    "races": 20,
+    "partial": 6
+  },
+  "seasons": [
+    {
+      "year": 1991,
+      "score": 0,
+      "races": 12,
+      "partial": 6
+    },
+    {
+      "year": 1993,
+      "score": 10,
+      "races": 8,
+      "partial": 0
+    }
+  ]
+}

@@ -1,0 +1,35 @@
+{
+  "driverId": "peter-de-klerk",
+  "name": "Peter de Klerk",
+  "career": {
+    "score": -5,
+    "races": 4,
+    "partial": 0
+  },
+  "seasons": [
+    {
+      "year": 1963,
+      "score": -20,
+      "races": 1,
+      "partial": 0
+    },
+    {
+      "year": 1965,
+      "score": 15,
+      "races": 1,
+      "partial": 0
+    },
+    {
+      "year": 1969,
+      "score": -20,
+      "races": 1,
+      "partial": 0
+    },
+    {
+      "year": 1970,
+      "score": 20,
+      "races": 1,
+      "partial": 0
+    }
+  ]
+}

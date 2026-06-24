@@ -1,0 +1,47 @@
+{
+  "driverId": "tony-brooks",
+  "name": "Tony Brooks",
+  "career": {
+    "score": 147,
+    "races": 41,
+    "partial": 2
+  },
+  "seasons": [
+    {
+      "year": 1956,
+      "score": -18,
+      "races": 2,
+      "partial": 0
+    },
+    {
+      "year": 1957,
+      "score": 42,
+      "races": 6,
+      "partial": 1
+    },
+    {
+      "year": 1958,
+      "score": 37,
+      "races": 10,
+      "partial": 1
+    },
+    {
+      "year": 1959,
+      "score": 84,
+      "races": 8,
+      "partial": 0
+    },
+    {
+      "year": 1960,
+      "score": -6,
+      "races": 7,
+      "partial": 0
+    },
+    {
+      "year": 1961,
+      "score": 8,
+      "races": 8,
+      "partial": 0
+    }
+  ]
+}

@@ -1,0 +1,23 @@
+{
+  "driverId": "gabriel-bortoleto",
+  "name": "Gabriel Bortoleto",
+  "career": {
+    "score": -10,
+    "races": 30,
+    "partial": 1
+  },
+  "seasons": [
+    {
+      "year": 2025,
+      "score": -30,
+      "races": 24,
+      "partial": 1
+    },
+    {
+      "year": 2026,
+      "score": 20,
+      "races": 6,
+      "partial": 0
+    }
+  ]
+}

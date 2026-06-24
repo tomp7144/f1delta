@@ -1,0 +1,17 @@
+{
+  "driverId": "don-beauman",
+  "name": "Don Beauman",
+  "career": {
+    "score": 12,
+    "races": 1,
+    "partial": 0
+  },
+  "seasons": [
+    {
+      "year": 1954,
+      "score": 12,
+      "races": 1,
+      "partial": 0
+    }
+  ]
+}

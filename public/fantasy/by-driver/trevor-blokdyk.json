@@ -1,0 +1,23 @@
+{
+  "driverId": "trevor-blokdyk",
+  "name": "Trevor Blokdyk",
+  "career": {
+    "score": 14,
+    "races": 2,
+    "partial": 0
+  },
+  "seasons": [
+    {
+      "year": 1963,
+      "score": 14,
+      "races": 1,
+      "partial": 0
+    },
+    {
+      "year": 1965,
+      "score": 0,
+      "races": 1,
+      "partial": 0
+    }
+  ]
+}

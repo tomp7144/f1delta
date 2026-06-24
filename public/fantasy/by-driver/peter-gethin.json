@@ -1,0 +1,41 @@
+{
+  "driverId": "peter-gethin",
+  "name": "Peter Gethin",
+  "career": {
+    "score": -176,
+    "races": 31,
+    "partial": 0
+  },
+  "seasons": [
+    {
+      "year": 1970,
+      "score": -24,
+      "races": 7,
+      "partial": 0
+    },
+    {
+      "year": 1971,
+      "score": 16,
+      "races": 11,
+      "partial": 0
+    },
+    {
+      "year": 1972,
+      "score": -128,
+      "races": 11,
+      "partial": 0
+    },
+    {
+      "year": 1973,
+      "score": -20,
+      "races": 1,
+      "partial": 0
+    },
+    {
+      "year": 1974,
+      "score": -20,
+      "races": 1,
+      "partial": 0
+    }
+  ]
+}

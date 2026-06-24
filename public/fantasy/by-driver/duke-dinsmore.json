@@ -1,0 +1,35 @@
+{
+  "driverId": "duke-dinsmore",
+  "name": "Duke Dinsmore",
+  "career": {
+    "score": 0,
+    "races": 4,
+    "partial": 1
+  },
+  "seasons": [
+    {
+      "year": 1950,
+      "score": -48,
+      "races": 1,
+      "partial": 0
+    },
+    {
+      "year": 1951,
+      "score": 16,
+      "races": 1,
+      "partial": 0
+    },
+    {
+      "year": 1953,
+      "score": 0,
+      "races": 1,
+      "partial": 1
+    },
+    {
+      "year": 1956,
+      "score": 32,
+      "races": 1,
+      "partial": 0
+    }
+  ]
+}

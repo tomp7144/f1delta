@@ -1,0 +1,17 @@
+{
+  "driverId": "toshio-suzuki",
+  "name": "Toshio Suzuki",
+  "career": {
+    "score": 42,
+    "races": 2,
+    "partial": 0
+  },
+  "seasons": [
+    {
+      "year": 1993,
+      "score": 42,
+      "races": 2,
+      "partial": 0
+    }
+  ]
+}

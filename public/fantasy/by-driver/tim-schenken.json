@@ -1,0 +1,41 @@
+{
+  "driverId": "tim-schenken",
+  "name": "Tim Schenken",
+  "career": {
+    "score": -145,
+    "races": 36,
+    "partial": 1
+  },
+  "seasons": [
+    {
+      "year": 1970,
+      "score": -80,
+      "races": 4,
+      "partial": 0
+    },
+    {
+      "year": 1971,
+      "score": 6,
+      "races": 10,
+      "partial": 0
+    },
+    {
+      "year": 1972,
+      "score": -74,
+      "races": 12,
+      "partial": 1
+    },
+    {
+      "year": 1973,
+      "score": 20,
+      "races": 1,
+      "partial": 0
+    },
+    {
+      "year": 1974,
+      "score": -17,
+      "races": 9,
+      "partial": 0
+    }
+  ]
+}

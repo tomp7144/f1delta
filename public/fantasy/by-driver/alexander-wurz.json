@@ -1,0 +1,47 @@
+{
+  "driverId": "alexander-wurz",
+  "name": "Alexander Wurz",
+  "career": {
+    "score": 276,
+    "races": 69,
+    "partial": 0
+  },
+  "seasons": [
+    {
+      "year": 1997,
+      "score": -8,
+      "races": 3,
+      "partial": 0
+    },
+    {
+      "year": 1998,
+      "score": 107,
+      "races": 16,
+      "partial": 0
+    },
+    {
+      "year": 1999,
+      "score": 12,
+      "races": 16,
+      "partial": 0
+    },
+    {
+      "year": 2000,
+      "score": 45,
+      "races": 17,
+      "partial": 0
+    },
+    {
+      "year": 2005,
+      "score": 27,
+      "races": 1,
+      "partial": 0
+    },
+    {
+      "year": 2007,
+      "score": 93,
+      "races": 16,
+      "partial": 0
+    }
+  ]
+}

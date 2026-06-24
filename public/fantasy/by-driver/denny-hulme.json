@@ -1,0 +1,71 @@
+{
+  "driverId": "denny-hulme",
+  "name": "Denny Hulme",
+  "career": {
+    "score": 1095,
+    "races": 112,
+    "partial": 1
+  },
+  "seasons": [
+    {
+      "year": 1965,
+      "score": -13,
+      "races": 6,
+      "partial": 0
+    },
+    {
+      "year": 1966,
+      "score": 30,
+      "races": 9,
+      "partial": 0
+    },
+    {
+      "year": 1967,
+      "score": 233,
+      "races": 11,
+      "partial": 0
+    },
+    {
+      "year": 1968,
+      "score": 148,
+      "races": 12,
+      "partial": 0
+    },
+    {
+      "year": 1969,
+      "score": 81,
+      "races": 11,
+      "partial": 0
+    },
+    {
+      "year": 1970,
+      "score": 161,
+      "races": 11,
+      "partial": 0
+    },
+    {
+      "year": 1971,
+      "score": 7,
+      "races": 10,
+      "partial": 0
+    },
+    {
+      "year": 1972,
+      "score": 183,
+      "races": 12,
+      "partial": 0
+    },
+    {
+      "year": 1973,
+      "score": 144,
+      "races": 15,
+      "partial": 0
+    },
+    {
+      "year": 1974,
+      "score": 121,
+      "races": 15,
+      "partial": 1
+    }
+  ]
+}

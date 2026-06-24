@@ -1,0 +1,17 @@
+{
+  "driverId": "alberto-colombo",
+  "name": "Alberto Colombo",
+  "career": {
+    "score": 0,
+    "races": 3,
+    "partial": 1
+  },
+  "seasons": [
+    {
+      "year": 1978,
+      "score": 0,
+      "races": 3,
+      "partial": 1
+    }
+  ]
+}

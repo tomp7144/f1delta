@@ -1,0 +1,23 @@
+{
+  "driverId": "andre-testut",
+  "name": "André Testut",
+  "career": {
+    "score": 0,
+    "races": 2,
+    "partial": 0
+  },
+  "seasons": [
+    {
+      "year": 1958,
+      "score": 0,
+      "races": 1,
+      "partial": 0
+    },
+    {
+      "year": 1959,
+      "score": 0,
+      "races": 1,
+      "partial": 0
+    }
+  ]
+}

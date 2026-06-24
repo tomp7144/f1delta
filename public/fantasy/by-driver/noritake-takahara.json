@@ -1,0 +1,23 @@
+{
+  "driverId": "noritake-takahara",
+  "name": "Noritake Takahara",
+  "career": {
+    "score": 12,
+    "races": 2,
+    "partial": 0
+  },
+  "seasons": [
+    {
+      "year": 1976,
+      "score": 32,
+      "races": 1,
+      "partial": 0
+    },
+    {
+      "year": 1977,
+      "score": -20,
+      "races": 1,
+      "partial": 0
+    }
+  ]
+}

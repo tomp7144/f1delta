@@ -1,0 +1,29 @@
+{
+  "driverId": "george-eaton",
+  "name": "George Eaton",
+  "career": {
+    "score": -89,
+    "races": 13,
+    "partial": 0
+  },
+  "seasons": [
+    {
+      "year": 1969,
+      "score": -40,
+      "races": 2,
+      "partial": 0
+    },
+    {
+      "year": 1970,
+      "score": -61,
+      "races": 10,
+      "partial": 0
+    },
+    {
+      "year": 1971,
+      "score": 12,
+      "races": 1,
+      "partial": 0
+    }
+  ]
+}

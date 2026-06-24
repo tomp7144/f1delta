@@ -1,0 +1,17 @@
+{
+  "driverId": "roberto-bonomi",
+  "name": "Roberto Bonomi",
+  "career": {
+    "score": 12,
+    "races": 1,
+    "partial": 0
+  },
+  "seasons": [
+    {
+      "year": 1960,
+      "score": 12,
+      "races": 1,
+      "partial": 0
+    }
+  ]
+}

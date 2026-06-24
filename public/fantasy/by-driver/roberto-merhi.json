@@ -1,0 +1,17 @@
+{
+  "driverId": "roberto-merhi",
+  "name": "Roberto Merhi",
+  "career": {
+    "score": 40,
+    "races": 14,
+    "partial": 2
+  },
+  "seasons": [
+    {
+      "year": 2015,
+      "score": 40,
+      "races": 14,
+      "partial": 2
+    }
+  ]
+}

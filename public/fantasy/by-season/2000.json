@@ -1,0 +1,292 @@
+{
+  "year": 2000,
+  "drivers": {
+    "michael-schumacher": {
+      "score": 379,
+      "races": 17,
+      "partial": 0
+    },
+    "rubens-barrichello": {
+      "score": 303,
+      "races": 17,
+      "partial": 0
+    },
+    "ralf-schumacher": {
+      "score": 78,
+      "races": 17,
+      "partial": 0
+    },
+    "jacques-villeneuve": {
+      "score": 106,
+      "races": 17,
+      "partial": 0
+    },
+    "giancarlo-fisichella": {
+      "score": 99,
+      "races": 17,
+      "partial": 0
+    },
+    "ricardo-zonta": {
+      "score": 7,
+      "races": 17,
+      "partial": 0
+    },
+    "alexander-wurz": {
+      "score": 45,
+      "races": 17,
+      "partial": 0
+    },
+    "marc-gene": {
+      "score": 30,
+      "races": 17,
+      "partial": 0
+    },
+    "nick-heidfeld": {
+      "score": -155,
+      "races": 17,
+      "partial": 1
+    },
+    "jenson-button": {
+      "score": 35,
+      "races": 17,
+      "partial": 0
+    },
+    "pedro-diniz": {
+      "score": 2,
+      "races": 17,
+      "partial": 0
+    },
+    "gaston-mazzacane": {
+      "score": 118,
+      "races": 17,
+      "partial": 0
+    },
+    "heinz-harald-frentzen": {
+      "score": -72,
+      "races": 17,
+      "partial": 0
+    },
+    "jarno-trulli": {
+      "score": -19,
+      "races": 17,
+      "partial": 0
+    },
+    "jean-alesi": {
+      "score": -171,
+      "races": 17,
+      "partial": 0
+    },
+    "mika-hakkinen": {
+      "score": 399,
+      "races": 17,
+      "partial": 0
+    },
+    "jos-verstappen": {
+      "score": -85,
+      "races": 17,
+      "partial": 0
+    },
+    "david-coulthard": {
+      "score": 317,
+      "races": 17,
+      "partial": 0
+    },
+    "pedro-de-la-rosa": {
+      "score": -143,
+      "races": 17,
+      "partial": 0
+    },
+    "eddie-irvine": {
+      "score": 17,
+      "races": 16,
+      "partial": 0
+    },
+    "johnny-herbert": {
+      "score": -59,
+      "races": 17,
+      "partial": 0
+    },
+    "mika-salo": {
+      "score": 137,
+      "races": 17,
+      "partial": 0
+    },
+    "luciano-burti": {
+      "score": 0,
+      "races": 1,
+      "partial": 0
+    }
+  },
+  "races": [
+    {
+      "round": 1,
+      "raceId": 647,
+      "gpId": "australia",
+      "name": "Australian GP",
+      "topId": "michael-schumacher",
+      "topName": "Michael Schumacher",
+      "topScore": 37,
+      "partial": false
+    },
+    {
+      "round": 2,
+      "raceId": 648,
+      "gpId": "brazil",
+      "name": "Brazilian GP",
+      "topId": "michael-schumacher",
+      "topName": "Michael Schumacher",
+      "topScore": 42,
+      "partial": false
+    },
+    {
+      "round": 3,
+      "raceId": 649,
+      "gpId": "san-marino",
+      "name": "San Marino GP",
+      "topId": "michael-schumacher",
+      "topName": "Michael Schumacher",
+      "topScore": 36,
+      "partial": false
+    },
+    {
+      "round": 4,
+      "raceId": 650,
+      "gpId": "great-britain",
+      "name": "British GP",
+      "topId": "david-coulthard",
+      "topName": "David Coulthard",
+      "topScore": 38,
+      "partial": false
+    },
+    {
+      "round": 5,
+      "raceId": 651,
+      "gpId": "spain",
+      "name": "Spanish GP",
+      "topId": "mika-hakkinen",
+      "topName": "Mika Häkkinen",
+      "topScore": 41,
+      "partial": false
+    },
+    {
+      "round": 6,
+      "raceId": 652,
+      "gpId": "europe",
+      "name": "European GP",
+      "topId": "michael-schumacher",
+      "topName": "Michael Schumacher",
+      "topScore": 41,
+      "partial": true
+    },
+    {
+      "round": 7,
+      "raceId": 653,
+      "gpId": "monaco",
+      "name": "Monaco GP",
+      "topId": "david-coulthard",
+      "topName": "David Coulthard",
+      "topScore": 37,
+      "partial": false
+    },
+    {
+      "round": 8,
+      "raceId": 654,
+      "gpId": "canada",
+      "name": "Canadian GP",
+      "topId": "michael-schumacher",
+      "topName": "Michael Schumacher",
+      "topScore": 35,
+      "partial": false
+    },
+    {
+      "round": 9,
+      "raceId": 655,
+      "gpId": "france",
+      "name": "French GP",
+      "topId": "david-coulthard",
+      "topName": "David Coulthard",
+      "topScore": 41,
+      "partial": false
+    },
+    {
+      "round": 10,
+      "raceId": 656,
+      "gpId": "austria",
+      "name": "Austrian GP",
+      "topId": "jenson-button",
+      "topName": "Jenson Button",
+      "topScore": 36,
+      "partial": false
+    },
+    {
+      "round": 11,
+      "raceId": 657,
+      "gpId": "germany",
+      "name": "German GP",
+      "topId": "rubens-barrichello",
+      "topName": "Rubens Barrichello",
+      "topScore": 64,
+      "partial": false
+    },
+    {
+      "round": 12,
+      "raceId": 658,
+      "gpId": "hungary",
+      "name": "Hungarian GP",
+      "topId": "mika-hakkinen",
+      "topName": "Mika Häkkinen",
+      "topScore": 42,
+      "partial": false
+    },
+    {
+      "round": 13,
+      "raceId": 659,
+      "gpId": "belgium",
+      "name": "Belgian GP",
+      "topId": "mika-hakkinen",
+      "topName": "Mika Häkkinen",
+      "topScore": 35,
+      "partial": false
+    },
+    {
+      "round": 14,
+      "raceId": 660,
+      "gpId": "italy",
+      "name": "Italian GP",
+      "topId": "michael-schumacher",
+      "topName": "Michael Schumacher",
+      "topScore": 35,
+      "partial": false
+    },
+    {
+      "round": 15,
+      "raceId": 661,
+      "gpId": "united-states",
+      "name": "United States GP",
+      "topId": "michael-schumacher",
+      "topName": "Michael Schumacher",
+      "topScore": 35,
+      "partial": false
+    },
+    {
+      "round": 16,
+      "raceId": 662,
+      "gpId": "japan",
+      "name": "Japanese GP",
+      "topId": "michael-schumacher",
+      "topName": "Michael Schumacher",
+      "topScore": 35,
+      "partial": false
+    },
+    {
+      "round": 17,
+      "raceId": 663,
+      "gpId": "malaysia",
+      "name": "Malaysian GP",
+      "topId": "michael-schumacher",
+      "topName": "Michael Schumacher",
+      "topScore": 35,
+      "partial": false
+    }
+  ]
+}

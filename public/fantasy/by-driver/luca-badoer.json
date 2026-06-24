@@ -1,0 +1,41 @@
+{
+  "driverId": "luca-badoer",
+  "name": "Luca Badoer",
+  "career": {
+    "score": -74,
+    "races": 58,
+    "partial": 1
+  },
+  "seasons": [
+    {
+      "year": 1993,
+      "score": 35,
+      "races": 14,
+      "partial": 0
+    },
+    {
+      "year": 1995,
+      "score": -3,
+      "races": 17,
+      "partial": 0
+    },
+    {
+      "year": 1996,
+      "score": -41,
+      "races": 10,
+      "partial": 0
+    },
+    {
+      "year": 1999,
+      "score": -83,
+      "races": 15,
+      "partial": 1
+    },
+    {
+      "year": 2009,
+      "score": 18,
+      "races": 2,
+      "partial": 0
+    }
+  ]
+}

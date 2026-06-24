@@ -1,0 +1,149 @@
+{
+  "driverId": "fernando-alonso",
+  "name": "Fernando Alonso",
+  "career": {
+    "score": 4599,
+    "races": 434,
+    "partial": 5
+  },
+  "seasons": [
+    {
+      "year": 2001,
+      "score": -57,
+      "races": 17,
+      "partial": 1
+    },
+    {
+      "year": 2003,
+      "score": 177,
+      "races": 16,
+      "partial": 0
+    },
+    {
+      "year": 2004,
+      "score": 232,
+      "races": 18,
+      "partial": 0
+    },
+    {
+      "year": 2005,
+      "score": 501,
+      "races": 19,
+      "partial": 0
+    },
+    {
+      "year": 2006,
+      "score": 473,
+      "races": 18,
+      "partial": 0
+    },
+    {
+      "year": 2007,
+      "score": 409,
+      "races": 17,
+      "partial": 0
+    },
+    {
+      "year": 2008,
+      "score": 225,
+      "races": 18,
+      "partial": 0
+    },
+    {
+      "year": 2009,
+      "score": 106,
+      "races": 17,
+      "partial": 0
+    },
+    {
+      "year": 2010,
+      "score": 375,
+      "races": 19,
+      "partial": 1
+    },
+    {
+      "year": 2011,
+      "score": 409,
+      "races": 19,
+      "partial": 0
+    },
+    {
+      "year": 2012,
+      "score": 443,
+      "races": 20,
+      "partial": 0
+    },
+    {
+      "year": 2013,
+      "score": 402,
+      "races": 19,
+      "partial": 0
+    },
+    {
+      "year": 2014,
+      "score": 247,
+      "races": 19,
+      "partial": 0
+    },
+    {
+      "year": 2015,
+      "score": -34,
+      "races": 18,
+      "partial": 1
+    },
+    {
+      "year": 2016,
+      "score": 74,
+      "races": 20,
+      "partial": 1
+    },
+    {
+      "year": 2017,
+      "score": -24,
+      "races": 19,
+      "partial": 0
+    },
+    {
+      "year": 2018,
+      "score": 59,
+      "races": 21,
+      "partial": 0
+    },
+    {
+      "year": 2021,
+      "score": 136,
+      "races": 22,
+      "partial": 0
+    },
+    {
+      "year": 2022,
+      "score": 79,
+      "races": 22,
+      "partial": 1
+    },
+    {
+      "year": 2023,
+      "score": 277,
+      "races": 22,
+      "partial": 0
+    },
+    {
+      "year": 2024,
+      "score": 104,
+      "races": 24,
+      "partial": 0
+    },
+    {
+      "year": 2025,
+      "score": 13,
+      "races": 24,
+      "partial": 0
+    },
+    {
+      "year": 2026,
+      "score": -27,
+      "races": 6,
+      "partial": 0
+    }
+  ]
+}

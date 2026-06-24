@@ -1,0 +1,17 @@
+{
+  "driverId": "andre-lotterer",
+  "name": "André Lotterer",
+  "career": {
+    "score": -20,
+    "races": 1,
+    "partial": 0
+  },
+  "seasons": [
+    {
+      "year": 2014,
+      "score": -20,
+      "races": 1,
+      "partial": 0
+    }
+  ]
+}

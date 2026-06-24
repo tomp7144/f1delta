@@ -1,0 +1,47 @@
+{
+  "driverId": "piero-taruffi",
+  "name": "Piero Taruffi",
+  "career": {
+    "score": 189,
+    "races": 19,
+    "partial": 1
+  },
+  "seasons": [
+    {
+      "year": 1950,
+      "score": -16,
+      "races": 1,
+      "partial": 0
+    },
+    {
+      "year": 1951,
+      "score": 35,
+      "races": 5,
+      "partial": 0
+    },
+    {
+      "year": 1952,
+      "score": 109,
+      "races": 6,
+      "partial": 0
+    },
+    {
+      "year": 1954,
+      "score": 22,
+      "races": 1,
+      "partial": 0
+    },
+    {
+      "year": 1955,
+      "score": 72,
+      "races": 4,
+      "partial": 1
+    },
+    {
+      "year": 1956,
+      "score": -33,
+      "races": 2,
+      "partial": 0
+    }
+  ]
+}

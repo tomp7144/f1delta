@@ -1,0 +1,47 @@
+{
+  "driverId": "silvio-moser",
+  "name": "Silvio Moser",
+  "career": {
+    "score": -74,
+    "races": 20,
+    "partial": 0
+  },
+  "seasons": [
+    {
+      "year": 1966,
+      "score": 0,
+      "races": 1,
+      "partial": 0
+    },
+    {
+      "year": 1967,
+      "score": -20,
+      "races": 1,
+      "partial": 0
+    },
+    {
+      "year": 1968,
+      "score": 14,
+      "races": 5,
+      "partial": 0
+    },
+    {
+      "year": 1969,
+      "score": -28,
+      "races": 7,
+      "partial": 0
+    },
+    {
+      "year": 1970,
+      "score": -20,
+      "races": 5,
+      "partial": 0
+    },
+    {
+      "year": 1971,
+      "score": -20,
+      "races": 1,
+      "partial": 0
+    }
+  ]
+}

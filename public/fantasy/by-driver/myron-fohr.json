@@ -1,0 +1,17 @@
+{
+  "driverId": "myron-fohr",
+  "name": "Myron Fohr",
+  "career": {
+    "score": 10,
+    "races": 1,
+    "partial": 0
+  },
+  "seasons": [
+    {
+      "year": 1950,
+      "score": 10,
+      "races": 1,
+      "partial": 0
+    }
+  ]
+}

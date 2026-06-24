@@ -1,0 +1,41 @@
+{
+  "driverId": "pat-oconnor",
+  "name": "Pat O'Connor",
+  "career": {
+    "score": -56,
+    "races": 5,
+    "partial": 0
+  },
+  "seasons": [
+    {
+      "year": 1954,
+      "score": -18,
+      "races": 1,
+      "partial": 0
+    },
+    {
+      "year": 1955,
+      "score": 26,
+      "races": 1,
+      "partial": 0
+    },
+    {
+      "year": 1956,
+      "score": -22,
+      "races": 1,
+      "partial": 0
+    },
+    {
+      "year": 1957,
+      "score": 0,
+      "races": 1,
+      "partial": 0
+    },
+    {
+      "year": 1958,
+      "score": -42,
+      "races": 1,
+      "partial": 0
+    }
+  ]
+}

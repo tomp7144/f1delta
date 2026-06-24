@@ -1,0 +1,342 @@
+{
+  "year": 1993,
+  "drivers": {
+    "alain-prost": {
+      "score": 375,
+      "races": 16,
+      "partial": 0
+    },
+    "ayrton-senna": {
+      "score": 248,
+      "races": 16,
+      "partial": 0
+    },
+    "mark-blundell": {
+      "score": 37,
+      "races": 16,
+      "partial": 0
+    },
+    "christian-fittipaldi": {
+      "score": 188,
+      "races": 14,
+      "partial": 0
+    },
+    "jj-lehto": {
+      "score": -53,
+      "races": 16,
+      "partial": 0
+    },
+    "gerhard-berger": {
+      "score": 6,
+      "races": 16,
+      "partial": 0
+    },
+    "derek-warwick": {
+      "score": -4,
+      "races": 16,
+      "partial": 0
+    },
+    "martin-brundle": {
+      "score": 65,
+      "races": 16,
+      "partial": 0
+    },
+    "michele-alboreto": {
+      "score": -4,
+      "races": 14,
+      "partial": 0
+    },
+    "erik-comas": {
+      "score": -36,
+      "races": 16,
+      "partial": 0
+    },
+    "riccardo-patrese": {
+      "score": 51,
+      "races": 16,
+      "partial": 0
+    },
+    "michael-schumacher": {
+      "score": 193,
+      "races": 16,
+      "partial": 0
+    },
+    "johnny-herbert": {
+      "score": -2,
+      "races": 16,
+      "partial": 0
+    },
+    "karl-wendlinger": {
+      "score": -56,
+      "races": 16,
+      "partial": 0
+    },
+    "rubens-barrichello": {
+      "score": -75,
+      "races": 16,
+      "partial": 0
+    },
+    "jean-alesi": {
+      "score": -23,
+      "races": 16,
+      "partial": 0
+    },
+    "philippe-alliot": {
+      "score": 96,
+      "races": 14,
+      "partial": 0
+    },
+    "fabrizio-barbazza": {
+      "score": 10,
+      "races": 8,
+      "partial": 0
+    },
+    "aguri-suzuki": {
+      "score": -139,
+      "races": 16,
+      "partial": 0
+    },
+    "luca-badoer": {
+      "score": 35,
+      "races": 14,
+      "partial": 0
+    },
+    "damon-hill": {
+      "score": 256,
+      "races": 16,
+      "partial": 0
+    },
+    "alex-zanardi": {
+      "score": -26,
+      "races": 12,
+      "partial": 1
+    },
+    "michael-andretti": {
+      "score": -27,
+      "races": 13,
+      "partial": 0
+    },
+    "ivan-capelli": {
+      "score": -20,
+      "races": 2,
+      "partial": 0
+    },
+    "ukyo-katayama": {
+      "score": -143,
+      "races": 16,
+      "partial": 0
+    },
+    "andrea-de-cesaris": {
+      "score": -100,
+      "races": 16,
+      "partial": 0
+    },
+    "thierry-boutsen": {
+      "score": 16,
+      "races": 10,
+      "partial": 0
+    },
+    "pierluigi-martini": {
+      "score": 27,
+      "races": 8,
+      "partial": 0
+    },
+    "pedro-lamy": {
+      "score": 4,
+      "races": 4,
+      "partial": 0
+    },
+    "marco-apicella": {
+      "score": -20,
+      "races": 1,
+      "partial": 0
+    },
+    "mika-hakkinen": {
+      "score": -3,
+      "races": 3,
+      "partial": 0
+    },
+    "emanuele-naspetti": {
+      "score": -20,
+      "races": 1,
+      "partial": 0
+    },
+    "eddie-irvine": {
+      "score": -5,
+      "races": 2,
+      "partial": 0
+    },
+    "toshio-suzuki": {
+      "score": 42,
+      "races": 2,
+      "partial": 0
+    },
+    "jean-marc-gounon": {
+      "score": -40,
+      "races": 2,
+      "partial": 0
+    }
+  },
+  "races": [
+    {
+      "round": 1,
+      "raceId": 533,
+      "gpId": "south-africa",
+      "name": "South African GP",
+      "topId": "alain-prost",
+      "topName": "Alain Prost",
+      "topScore": 40,
+      "partial": false
+    },
+    {
+      "round": 2,
+      "raceId": 534,
+      "gpId": "brazil",
+      "name": "Brazilian GP",
+      "topId": "ayrton-senna",
+      "topName": "Ayrton Senna",
+      "topScore": 37,
+      "partial": false
+    },
+    {
+      "round": 3,
+      "raceId": 535,
+      "gpId": "europe",
+      "name": "European GP",
+      "topId": "ayrton-senna",
+      "topName": "Ayrton Senna",
+      "topScore": 43,
+      "partial": false
+    },
+    {
+      "round": 4,
+      "raceId": 536,
+      "gpId": "san-marino",
+      "name": "San Marino GP",
+      "topId": "fabrizio-barbazza",
+      "topName": "Fabrizio Barbazza",
+      "topScore": 46,
+      "partial": false
+    },
+    {
+      "round": 5,
+      "raceId": 537,
+      "gpId": "spain",
+      "name": "Spanish GP",
+      "topId": "alain-prost",
+      "topName": "Alain Prost",
+      "topScore": 35,
+      "partial": false
+    },
+    {
+      "round": 6,
+      "raceId": 538,
+      "gpId": "monaco",
+      "name": "Monaco GP",
+      "topId": "ayrton-senna",
+      "topName": "Ayrton Senna",
+      "topScore": 37,
+      "partial": false
+    },
+    {
+      "round": 7,
+      "raceId": 539,
+      "gpId": "canada",
+      "name": "Canadian GP",
+      "topId": "alain-prost",
+      "topName": "Alain Prost",
+      "topScore": 35,
+      "partial": false
+    },
+    {
+      "round": 8,
+      "raceId": 540,
+      "gpId": "france",
+      "name": "French GP",
+      "topId": "alain-prost",
+      "topName": "Alain Prost",
+      "topScore": 36,
+      "partial": false
+    },
+    {
+      "round": 9,
+      "raceId": 541,
+      "gpId": "great-britain",
+      "name": "British GP",
+      "topId": "alain-prost",
+      "topName": "Alain Prost",
+      "topScore": 35,
+      "partial": false
+    },
+    {
+      "round": 10,
+      "raceId": 542,
+      "gpId": "germany",
+      "name": "German GP",
+      "topId": "alain-prost",
+      "topName": "Alain Prost",
+      "topScore": 35,
+      "partial": false
+    },
+    {
+      "round": 11,
+      "raceId": 543,
+      "gpId": "hungary",
+      "name": "Hungarian GP",
+      "topId": "damon-hill",
+      "topName": "Damon Hill",
+      "topScore": 36,
+      "partial": false
+    },
+    {
+      "round": 12,
+      "raceId": 544,
+      "gpId": "belgium",
+      "name": "Belgian GP",
+      "topId": "damon-hill",
+      "topName": "Damon Hill",
+      "topScore": 36,
+      "partial": true
+    },
+    {
+      "round": 13,
+      "raceId": 545,
+      "gpId": "italy",
+      "name": "Italian GP",
+      "topId": "damon-hill",
+      "topName": "Damon Hill",
+      "topScore": 41,
+      "partial": false
+    },
+    {
+      "round": 14,
+      "raceId": 546,
+      "gpId": "portugal",
+      "name": "Portuguese GP",
+      "topId": "michael-schumacher",
+      "topName": "Michael Schumacher",
+      "topScore": 40,
+      "partial": false
+    },
+    {
+      "round": 15,
+      "raceId": 547,
+      "gpId": "japan",
+      "name": "Japanese GP",
+      "topId": "ayrton-senna",
+      "topName": "Ayrton Senna",
+      "topScore": 36,
+      "partial": false
+    },
+    {
+      "round": 16,
+      "raceId": 548,
+      "gpId": "australia",
+      "name": "Australian GP",
+      "topId": "ayrton-senna",
+      "topName": "Ayrton Senna",
+      "topScore": 35,
+      "partial": false
+    }
+  ]
+}

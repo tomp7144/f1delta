@@ -1,0 +1,71 @@
+{
+  "driverId": "eddie-irvine",
+  "name": "Eddie Irvine",
+  "career": {
+    "score": 384,
+    "races": 147,
+    "partial": 1
+  },
+  "seasons": [
+    {
+      "year": 1993,
+      "score": -5,
+      "races": 2,
+      "partial": 0
+    },
+    {
+      "year": 1994,
+      "score": -69,
+      "races": 13,
+      "partial": 0
+    },
+    {
+      "year": 1995,
+      "score": -41,
+      "races": 17,
+      "partial": 0
+    },
+    {
+      "year": 1996,
+      "score": -57,
+      "races": 16,
+      "partial": 0
+    },
+    {
+      "year": 1997,
+      "score": 78,
+      "races": 17,
+      "partial": 0
+    },
+    {
+      "year": 1998,
+      "score": 246,
+      "races": 16,
+      "partial": 0
+    },
+    {
+      "year": 1999,
+      "score": 384,
+      "races": 16,
+      "partial": 0
+    },
+    {
+      "year": 2000,
+      "score": 17,
+      "races": 16,
+      "partial": 0
+    },
+    {
+      "year": 2001,
+      "score": -116,
+      "races": 17,
+      "partial": 0
+    },
+    {
+      "year": 2002,
+      "score": -53,
+      "races": 17,
+      "partial": 1
+    }
+  ]
+}

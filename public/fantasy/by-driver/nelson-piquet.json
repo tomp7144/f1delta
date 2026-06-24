@@ -1,0 +1,95 @@
+{
+  "driverId": "nelson-piquet",
+  "name": "Nelson Piquet",
+  "career": {
+    "score": 1724,
+    "races": 207,
+    "partial": 0
+  },
+  "seasons": [
+    {
+      "year": 1978,
+      "score": -22,
+      "races": 5,
+      "partial": 0
+    },
+    {
+      "year": 1979,
+      "score": -60,
+      "races": 15,
+      "partial": 0
+    },
+    {
+      "year": 1980,
+      "score": 226,
+      "races": 14,
+      "partial": 0
+    },
+    {
+      "year": 1981,
+      "score": 199,
+      "races": 15,
+      "partial": 0
+    },
+    {
+      "year": 1982,
+      "score": -44,
+      "races": 15,
+      "partial": 0
+    },
+    {
+      "year": 1983,
+      "score": 245,
+      "races": 15,
+      "partial": 0
+    },
+    {
+      "year": 1984,
+      "score": 22,
+      "races": 16,
+      "partial": 0
+    },
+    {
+      "year": 1985,
+      "score": 1,
+      "races": 16,
+      "partial": 0
+    },
+    {
+      "year": 1986,
+      "score": 315,
+      "races": 16,
+      "partial": 0
+    },
+    {
+      "year": 1987,
+      "score": 333,
+      "races": 16,
+      "partial": 0
+    },
+    {
+      "year": 1988,
+      "score": 65,
+      "races": 16,
+      "partial": 0
+    },
+    {
+      "year": 1989,
+      "score": 71,
+      "races": 16,
+      "partial": 0
+    },
+    {
+      "year": 1990,
+      "score": 254,
+      "races": 16,
+      "partial": 0
+    },
+    {
+      "year": 1991,
+      "score": 119,
+      "races": 16,
+      "partial": 0
+    }
+  ]
+}

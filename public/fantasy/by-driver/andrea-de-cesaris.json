@@ -1,0 +1,101 @@
+{
+  "driverId": "andrea-de-cesaris",
+  "name": "Andrea de Cesaris",
+  "career": {
+    "score": -1409,
+    "races": 214,
+    "partial": 2
+  },
+  "seasons": [
+    {
+      "year": 1980,
+      "score": -36,
+      "races": 2,
+      "partial": 0
+    },
+    {
+      "year": 1981,
+      "score": -70,
+      "races": 15,
+      "partial": 0
+    },
+    {
+      "year": 1982,
+      "score": -97,
+      "races": 16,
+      "partial": 0
+    },
+    {
+      "year": 1983,
+      "score": -80,
+      "races": 15,
+      "partial": 1
+    },
+    {
+      "year": 1984,
+      "score": -23,
+      "races": 16,
+      "partial": 0
+    },
+    {
+      "year": 1985,
+      "score": -93,
+      "races": 11,
+      "partial": 0
+    },
+    {
+      "year": 1986,
+      "score": -248,
+      "races": 16,
+      "partial": 0
+    },
+    {
+      "year": 1987,
+      "score": -226,
+      "races": 16,
+      "partial": 0
+    },
+    {
+      "year": 1988,
+      "score": -159,
+      "races": 16,
+      "partial": 0
+    },
+    {
+      "year": 1989,
+      "score": 20,
+      "races": 16,
+      "partial": 0
+    },
+    {
+      "year": 1990,
+      "score": -219,
+      "races": 16,
+      "partial": 0
+    },
+    {
+      "year": 1991,
+      "score": 43,
+      "races": 16,
+      "partial": 1
+    },
+    {
+      "year": 1992,
+      "score": 6,
+      "races": 16,
+      "partial": 0
+    },
+    {
+      "year": 1993,
+      "score": -100,
+      "races": 16,
+      "partial": 0
+    },
+    {
+      "year": 1994,
+      "score": -127,
+      "races": 11,
+      "partial": 0
+    }
+  ]
+}

@@ -1,0 +1,23 @@
+{
+  "driverId": "giorgio-francia",
+  "name": "Giorgio Francia",
+  "career": {
+    "score": 0,
+    "races": 2,
+    "partial": 0
+  },
+  "seasons": [
+    {
+      "year": 1977,
+      "score": 0,
+      "races": 1,
+      "partial": 0
+    },
+    {
+      "year": 1981,
+      "score": 0,
+      "races": 1,
+      "partial": 0
+    }
+  ]
+}

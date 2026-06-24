@@ -1,0 +1,29 @@
+{
+  "driverId": "guy-edwards",
+  "name": "Guy Edwards",
+  "career": {
+    "score": 106,
+    "races": 17,
+    "partial": 1
+  },
+  "seasons": [
+    {
+      "year": 1974,
+      "score": 84,
+      "races": 10,
+      "partial": 0
+    },
+    {
+      "year": 1976,
+      "score": 22,
+      "races": 6,
+      "partial": 0
+    },
+    {
+      "year": 1977,
+      "score": 0,
+      "races": 1,
+      "partial": 1
+    }
+  ]
+}

@@ -1,0 +1,17 @@
+{
+  "driverId": "ben-pon",
+  "name": "Ben Pon",
+  "career": {
+    "score": -20,
+    "races": 1,
+    "partial": 0
+  },
+  "seasons": [
+    {
+      "year": 1962,
+      "score": -20,
+      "races": 1,
+      "partial": 0
+    }
+  ]
+}

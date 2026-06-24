@@ -1,0 +1,29 @@
+{
+  "driverId": "nicholas-latifi",
+  "name": "Nicholas Latifi",
+  "career": {
+    "score": 4,
+    "races": 61,
+    "partial": 0
+  },
+  "seasons": [
+    {
+      "year": 2020,
+      "score": 33,
+      "races": 17,
+      "partial": 0
+    },
+    {
+      "year": 2021,
+      "score": -8,
+      "races": 22,
+      "partial": 0
+    },
+    {
+      "year": 2022,
+      "score": -21,
+      "races": 22,
+      "partial": 0
+    }
+  ]
+}

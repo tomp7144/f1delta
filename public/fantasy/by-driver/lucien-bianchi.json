@@ -1,0 +1,53 @@
+{
+  "driverId": "lucien-bianchi",
+  "name": "Lucien Bianchi",
+  "career": {
+    "score": -91,
+    "races": 19,
+    "partial": 0
+  },
+  "seasons": [
+    {
+      "year": 1959,
+      "score": 0,
+      "races": 1,
+      "partial": 0
+    },
+    {
+      "year": 1960,
+      "score": -16,
+      "races": 3,
+      "partial": 0
+    },
+    {
+      "year": 1961,
+      "score": -60,
+      "races": 4,
+      "partial": 0
+    },
+    {
+      "year": 1962,
+      "score": 38,
+      "races": 2,
+      "partial": 0
+    },
+    {
+      "year": 1963,
+      "score": -20,
+      "races": 1,
+      "partial": 0
+    },
+    {
+      "year": 1965,
+      "score": 10,
+      "races": 1,
+      "partial": 0
+    },
+    {
+      "year": 1968,
+      "score": -43,
+      "races": 7,
+      "partial": 0
+    }
+  ]
+}

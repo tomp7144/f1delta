@@ -1,0 +1,41 @@
+{
+  "driverId": "piers-courage",
+  "name": "Piers Courage",
+  "career": {
+    "score": -171,
+    "races": 30,
+    "partial": 0
+  },
+  "seasons": [
+    {
+      "year": 1966,
+      "score": -20,
+      "races": 1,
+      "partial": 0
+    },
+    {
+      "year": 1967,
+      "score": -40,
+      "races": 3,
+      "partial": 0
+    },
+    {
+      "year": 1968,
+      "score": -47,
+      "races": 11,
+      "partial": 0
+    },
+    {
+      "year": 1969,
+      "score": 12,
+      "races": 10,
+      "partial": 0
+    },
+    {
+      "year": 1970,
+      "score": -76,
+      "races": 5,
+      "partial": 0
+    }
+  ]
+}

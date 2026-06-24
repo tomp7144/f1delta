@@ -1,0 +1,29 @@
+{
+  "driverId": "eliseo-salazar",
+  "name": "Eliseo Salazar",
+  "career": {
+    "score": -116,
+    "races": 37,
+    "partial": 1
+  },
+  "seasons": [
+    {
+      "year": 1981,
+      "score": -76,
+      "races": 15,
+      "partial": 1
+    },
+    {
+      "year": 1982,
+      "score": -44,
+      "races": 16,
+      "partial": 0
+    },
+    {
+      "year": 1983,
+      "score": 4,
+      "races": 6,
+      "partial": 0
+    }
+  ]
+}

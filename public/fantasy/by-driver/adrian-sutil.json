@@ -1,0 +1,53 @@
+{
+  "driverId": "adrian-sutil",
+  "name": "Adrian Sutil",
+  "career": {
+    "score": -166,
+    "races": 128,
+    "partial": 0
+  },
+  "seasons": [
+    {
+      "year": 2007,
+      "score": -42,
+      "races": 17,
+      "partial": 0
+    },
+    {
+      "year": 2008,
+      "score": -186,
+      "races": 18,
+      "partial": 0
+    },
+    {
+      "year": 2009,
+      "score": -23,
+      "races": 17,
+      "partial": 0
+    },
+    {
+      "year": 2010,
+      "score": 82,
+      "races": 19,
+      "partial": 0
+    },
+    {
+      "year": 2011,
+      "score": 99,
+      "races": 19,
+      "partial": 0
+    },
+    {
+      "year": 2013,
+      "score": 41,
+      "races": 19,
+      "partial": 0
+    },
+    {
+      "year": 2014,
+      "score": -137,
+      "races": 19,
+      "partial": 0
+    }
+  ]
+}

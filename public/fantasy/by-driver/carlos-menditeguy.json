@@ -1,0 +1,53 @@
+{
+  "driverId": "carlos-menditeguy",
+  "name": "Carlos Menditéguy",
+  "career": {
+    "score": -29,
+    "races": 12,
+    "partial": 1
+  },
+  "seasons": [
+    {
+      "year": 1953,
+      "score": -19,
+      "races": 1,
+      "partial": 0
+    },
+    {
+      "year": 1954,
+      "score": 2,
+      "races": 1,
+      "partial": 0
+    },
+    {
+      "year": 1955,
+      "score": -8,
+      "races": 3,
+      "partial": 1
+    },
+    {
+      "year": 1956,
+      "score": -15,
+      "races": 1,
+      "partial": 0
+    },
+    {
+      "year": 1957,
+      "score": -26,
+      "races": 4,
+      "partial": 0
+    },
+    {
+      "year": 1958,
+      "score": 9,
+      "races": 1,
+      "partial": 0
+    },
+    {
+      "year": 1960,
+      "score": 28,
+      "races": 1,
+      "partial": 0
+    }
+  ]
+}

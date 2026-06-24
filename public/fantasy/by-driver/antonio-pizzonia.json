@@ -1,0 +1,29 @@
+{
+  "driverId": "antonio-pizzonia",
+  "name": "Antônio Pizzonia",
+  "career": {
+    "score": -65,
+    "races": 20,
+    "partial": 0
+  },
+  "seasons": [
+    {
+      "year": 2003,
+      "score": -61,
+      "races": 11,
+      "partial": 0
+    },
+    {
+      "year": 2004,
+      "score": 12,
+      "races": 4,
+      "partial": 0
+    },
+    {
+      "year": 2005,
+      "score": -16,
+      "races": 5,
+      "partial": 0
+    }
+  ]
+}

@@ -1,0 +1,17 @@
+{
+  "driverId": "mike-macdowel",
+  "name": "Mike MacDowel",
+  "career": {
+    "score": 22,
+    "races": 1,
+    "partial": 0
+  },
+  "seasons": [
+    {
+      "year": 1957,
+      "score": 22,
+      "races": 1,
+      "partial": 0
+    }
+  ]
+}

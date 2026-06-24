@@ -1,0 +1,35 @@
+{
+  "driverId": "eddie-russo",
+  "name": "Eddie Russo",
+  "career": {
+    "score": -24,
+    "races": 4,
+    "partial": 1
+  },
+  "seasons": [
+    {
+      "year": 1955,
+      "score": -18,
+      "races": 1,
+      "partial": 0
+    },
+    {
+      "year": 1956,
+      "score": 0,
+      "races": 1,
+      "partial": 1
+    },
+    {
+      "year": 1957,
+      "score": -12,
+      "races": 1,
+      "partial": 0
+    },
+    {
+      "year": 1960,
+      "score": 6,
+      "races": 1,
+      "partial": 0
+    }
+  ]
+}

@@ -1,0 +1,29 @@
+{
+  "driverId": "peter-hirt",
+  "name": "Peter Hirt",
+  "career": {
+    "score": -30,
+    "races": 5,
+    "partial": 1
+  },
+  "seasons": [
+    {
+      "year": 1951,
+      "score": -20,
+      "races": 1,
+      "partial": 0
+    },
+    {
+      "year": 1952,
+      "score": 10,
+      "races": 3,
+      "partial": 1
+    },
+    {
+      "year": 1953,
+      "score": -20,
+      "races": 1,
+      "partial": 0
+    }
+  ]
+}

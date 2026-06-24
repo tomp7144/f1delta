@@ -1,0 +1,29 @@
+{
+  "driverId": "alan-brown",
+  "name": "Alan Brown",
+  "career": {
+    "score": 32,
+    "races": 9,
+    "partial": 0
+  },
+  "seasons": [
+    {
+      "year": 1952,
+      "score": 40,
+      "races": 4,
+      "partial": 0
+    },
+    {
+      "year": 1953,
+      "score": -8,
+      "races": 4,
+      "partial": 0
+    },
+    {
+      "year": 1954,
+      "score": 0,
+      "races": 1,
+      "partial": 0
+    }
+  ]
+}

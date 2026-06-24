@@ -1,0 +1,23 @@
+{
+  "driverId": "john-taylor",
+  "name": "John Taylor",
+  "career": {
+    "score": 60,
+    "races": 5,
+    "partial": 0
+  },
+  "seasons": [
+    {
+      "year": 1964,
+      "score": 12,
+      "races": 1,
+      "partial": 0
+    },
+    {
+      "year": 1966,
+      "score": 48,
+      "races": 4,
+      "partial": 0
+    }
+  ]
+}

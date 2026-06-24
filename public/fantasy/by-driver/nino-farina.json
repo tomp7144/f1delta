@@ -1,0 +1,47 @@
+{
+  "driverId": "nino-farina",
+  "name": "Nino Farina",
+  "career": {
+    "score": 572,
+    "races": 37,
+    "partial": 3
+  },
+  "seasons": [
+    {
+      "year": 1950,
+      "score": 133,
+      "races": 6,
+      "partial": 0
+    },
+    {
+      "year": 1951,
+      "score": 79,
+      "races": 8,
+      "partial": 1
+    },
+    {
+      "year": 1952,
+      "score": 104,
+      "races": 8,
+      "partial": 1
+    },
+    {
+      "year": 1953,
+      "score": 137,
+      "races": 8,
+      "partial": 0
+    },
+    {
+      "year": 1954,
+      "score": 14,
+      "races": 2,
+      "partial": 0
+    },
+    {
+      "year": 1955,
+      "score": 105,
+      "races": 5,
+      "partial": 1
+    }
+  ]
+}

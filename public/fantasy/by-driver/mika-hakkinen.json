@@ -1,0 +1,77 @@
+{
+  "driverId": "mika-hakkinen",
+  "name": "Mika Häkkinen",
+  "career": {
+    "score": 1705,
+    "races": 165,
+    "partial": 0
+  },
+  "seasons": [
+    {
+      "year": 1991,
+      "score": 78,
+      "races": 16,
+      "partial": 0
+    },
+    {
+      "year": 1992,
+      "score": 96,
+      "races": 16,
+      "partial": 0
+    },
+    {
+      "year": 1993,
+      "score": -3,
+      "races": 3,
+      "partial": 0
+    },
+    {
+      "year": 1994,
+      "score": 64,
+      "races": 15,
+      "partial": 0
+    },
+    {
+      "year": 1995,
+      "score": -24,
+      "races": 16,
+      "partial": 0
+    },
+    {
+      "year": 1996,
+      "score": 200,
+      "races": 16,
+      "partial": 0
+    },
+    {
+      "year": 1997,
+      "score": 69,
+      "races": 17,
+      "partial": 0
+    },
+    {
+      "year": 1998,
+      "score": 384,
+      "races": 16,
+      "partial": 0
+    },
+    {
+      "year": 1999,
+      "score": 300,
+      "races": 16,
+      "partial": 0
+    },
+    {
+      "year": 2000,
+      "score": 399,
+      "races": 17,
+      "partial": 0
+    },
+    {
+      "year": 2001,
+      "score": 142,
+      "races": 17,
+      "partial": 0
+    }
+  ]
+}

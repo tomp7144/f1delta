@@ -1,0 +1,17 @@
+{
+  "driverId": "graham-mcrae",
+  "name": "Graham McRae",
+  "career": {
+    "score": -20,
+    "races": 1,
+    "partial": 0
+  },
+  "seasons": [
+    {
+      "year": 1973,
+      "score": -20,
+      "races": 1,
+      "partial": 0
+    }
+  ]
+}

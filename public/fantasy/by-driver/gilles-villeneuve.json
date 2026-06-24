@@ -1,0 +1,47 @@
+{
+  "driverId": "gilles-villeneuve",
+  "name": "Gilles Villeneuve",
+  "career": {
+    "score": 285,
+    "races": 68,
+    "partial": 0
+  },
+  "seasons": [
+    {
+      "year": 1977,
+      "score": -12,
+      "races": 3,
+      "partial": 0
+    },
+    {
+      "year": 1978,
+      "score": 35,
+      "races": 16,
+      "partial": 0
+    },
+    {
+      "year": 1979,
+      "score": 257,
+      "races": 15,
+      "partial": 0
+    },
+    {
+      "year": 1980,
+      "score": 29,
+      "races": 14,
+      "partial": 0
+    },
+    {
+      "year": 1981,
+      "score": -11,
+      "races": 15,
+      "partial": 0
+    },
+    {
+      "year": 1982,
+      "score": -13,
+      "races": 5,
+      "partial": 0
+    }
+  ]
+}

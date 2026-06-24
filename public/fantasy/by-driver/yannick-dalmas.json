@@ -1,0 +1,41 @@
+{
+  "driverId": "yannick-dalmas",
+  "name": "Yannick Dalmas",
+  "career": {
+    "score": 154,
+    "races": 50,
+    "partial": 15
+  },
+  "seasons": [
+    {
+      "year": 1987,
+      "score": 88,
+      "races": 3,
+      "partial": 0
+    },
+    {
+      "year": 1988,
+      "score": 100,
+      "races": 14,
+      "partial": 0
+    },
+    {
+      "year": 1989,
+      "score": -20,
+      "races": 15,
+      "partial": 9
+    },
+    {
+      "year": 1990,
+      "score": -12,
+      "races": 16,
+      "partial": 6
+    },
+    {
+      "year": 1994,
+      "score": -2,
+      "races": 2,
+      "partial": 0
+    }
+  ]
+}

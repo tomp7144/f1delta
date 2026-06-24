@@ -1,0 +1,17 @@
+{
+  "driverId": "chuck-arnold",
+  "name": "Chuck Arnold",
+  "career": {
+    "score": 12,
+    "races": 1,
+    "partial": 0
+  },
+  "seasons": [
+    {
+      "year": 1959,
+      "score": 12,
+      "races": 1,
+      "partial": 0
+    }
+  ]
+}

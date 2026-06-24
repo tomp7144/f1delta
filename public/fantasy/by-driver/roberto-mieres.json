@@ -1,0 +1,29 @@
+{
+  "driverId": "roberto-mieres",
+  "name": "Roberto Mieres",
+  "career": {
+    "score": 71,
+    "races": 17,
+    "partial": 0
+  },
+  "seasons": [
+    {
+      "year": 1953,
+      "score": -12,
+      "races": 3,
+      "partial": 0
+    },
+    {
+      "year": 1954,
+      "score": 18,
+      "races": 8,
+      "partial": 0
+    },
+    {
+      "year": 1955,
+      "score": 65,
+      "races": 6,
+      "partial": 0
+    }
+  ]
+}

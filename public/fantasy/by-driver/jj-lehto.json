@@ -1,0 +1,47 @@
+{
+  "driverId": "jj-lehto",
+  "name": "JJ Lehto",
+  "career": {
+    "score": -154,
+    "races": 70,
+    "partial": 3
+  },
+  "seasons": [
+    {
+      "year": 1989,
+      "score": -40,
+      "races": 4,
+      "partial": 2
+    },
+    {
+      "year": 1990,
+      "score": -54,
+      "races": 10,
+      "partial": 1
+    },
+    {
+      "year": 1991,
+      "score": -162,
+      "races": 16,
+      "partial": 0
+    },
+    {
+      "year": 1992,
+      "score": 121,
+      "races": 16,
+      "partial": 0
+    },
+    {
+      "year": 1993,
+      "score": -53,
+      "races": 16,
+      "partial": 0
+    },
+    {
+      "year": 1994,
+      "score": 34,
+      "races": 8,
+      "partial": 0
+    }
+  ]
+}

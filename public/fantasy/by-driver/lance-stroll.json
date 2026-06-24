@@ -1,0 +1,71 @@
+{
+  "driverId": "lance-stroll",
+  "name": "Lance Stroll",
+  "career": {
+    "score": 736,
+    "races": 198,
+    "partial": 6
+  },
+  "seasons": [
+    {
+      "year": 2017,
+      "score": 81,
+      "races": 20,
+      "partial": 0
+    },
+    {
+      "year": 2018,
+      "score": 56,
+      "races": 21,
+      "partial": 1
+    },
+    {
+      "year": 2019,
+      "score": 127,
+      "races": 21,
+      "partial": 0
+    },
+    {
+      "year": 2020,
+      "score": 52,
+      "races": 16,
+      "partial": 0
+    },
+    {
+      "year": 2021,
+      "score": 66,
+      "races": 22,
+      "partial": 2
+    },
+    {
+      "year": 2022,
+      "score": 133,
+      "races": 22,
+      "partial": 1
+    },
+    {
+      "year": 2023,
+      "score": 147,
+      "races": 22,
+      "partial": 0
+    },
+    {
+      "year": 2024,
+      "score": 40,
+      "races": 24,
+      "partial": 0
+    },
+    {
+      "year": 2025,
+      "score": 112,
+      "races": 24,
+      "partial": 1
+    },
+    {
+      "year": 2026,
+      "score": -78,
+      "races": 6,
+      "partial": 1
+    }
+  ]
+}

@@ -1,0 +1,23 @@
+{
+  "driverId": "dick-gibson",
+  "name": "Dick Gibson",
+  "career": {
+    "score": -40,
+    "races": 2,
+    "partial": 0
+  },
+  "seasons": [
+    {
+      "year": 1957,
+      "score": -20,
+      "races": 1,
+      "partial": 0
+    },
+    {
+      "year": 1958,
+      "score": -20,
+      "races": 1,
+      "partial": 0
+    }
+  ]
+}

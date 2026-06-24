@@ -1,0 +1,29 @@
+{
+  "driverId": "cliff-griffith",
+  "name": "Cliff Griffith",
+  "career": {
+    "score": 25,
+    "races": 3,
+    "partial": 0
+  },
+  "seasons": [
+    {
+      "year": 1951,
+      "score": -20,
+      "races": 1,
+      "partial": 0
+    },
+    {
+      "year": 1952,
+      "score": 4,
+      "races": 1,
+      "partial": 0
+    },
+    {
+      "year": 1956,
+      "score": 41,
+      "races": 1,
+      "partial": 0
+    }
+  ]
+}

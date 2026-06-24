@@ -1,0 +1,77 @@
+{
+  "driverId": "eddie-cheever",
+  "name": "Eddie Cheever",
+  "career": {
+    "score": -496,
+    "races": 143,
+    "partial": 0
+  },
+  "seasons": [
+    {
+      "year": 1978,
+      "score": -20,
+      "races": 3,
+      "partial": 0
+    },
+    {
+      "year": 1980,
+      "score": -170,
+      "races": 14,
+      "partial": 0
+    },
+    {
+      "year": 1981,
+      "score": 26,
+      "races": 15,
+      "partial": 0
+    },
+    {
+      "year": 1982,
+      "score": -30,
+      "races": 15,
+      "partial": 0
+    },
+    {
+      "year": 1983,
+      "score": 23,
+      "races": 15,
+      "partial": 0
+    },
+    {
+      "year": 1984,
+      "score": -155,
+      "races": 16,
+      "partial": 0
+    },
+    {
+      "year": 1985,
+      "score": -214,
+      "races": 16,
+      "partial": 0
+    },
+    {
+      "year": 1986,
+      "score": -19,
+      "races": 1,
+      "partial": 0
+    },
+    {
+      "year": 1987,
+      "score": -57,
+      "races": 16,
+      "partial": 0
+    },
+    {
+      "year": 1988,
+      "score": -37,
+      "races": 16,
+      "partial": 0
+    },
+    {
+      "year": 1989,
+      "score": 157,
+      "races": 16,
+      "partial": 0
+    }
+  ]
+}

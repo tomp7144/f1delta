@@ -1,0 +1,71 @@
+{
+  "driverId": "heinz-harald-frentzen",
+  "name": "Heinz-Harald Frentzen",
+  "career": {
+    "score": 387,
+    "races": 159,
+    "partial": 1
+  },
+  "seasons": [
+    {
+      "year": 1994,
+      "score": -35,
+      "races": 16,
+      "partial": 1
+    },
+    {
+      "year": 1995,
+      "score": 121,
+      "races": 17,
+      "partial": 0
+    },
+    {
+      "year": 1996,
+      "score": -65,
+      "races": 16,
+      "partial": 0
+    },
+    {
+      "year": 1997,
+      "score": 188,
+      "races": 17,
+      "partial": 0
+    },
+    {
+      "year": 1998,
+      "score": 99,
+      "races": 16,
+      "partial": 0
+    },
+    {
+      "year": 1999,
+      "score": 253,
+      "races": 16,
+      "partial": 0
+    },
+    {
+      "year": 2000,
+      "score": -72,
+      "races": 17,
+      "partial": 0
+    },
+    {
+      "year": 2001,
+      "score": -32,
+      "races": 15,
+      "partial": 0
+    },
+    {
+      "year": 2002,
+      "score": -56,
+      "races": 13,
+      "partial": 0
+    },
+    {
+      "year": 2003,
+      "score": -14,
+      "races": 16,
+      "partial": 0
+    }
+  ]
+}

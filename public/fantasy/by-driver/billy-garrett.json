@@ -1,0 +1,23 @@
+{
+  "driverId": "billy-garrett",
+  "name": "Billy Garrett",
+  "career": {
+    "score": 14,
+    "races": 2,
+    "partial": 0
+  },
+  "seasons": [
+    {
+      "year": 1956,
+      "score": 26,
+      "races": 1,
+      "partial": 0
+    },
+    {
+      "year": 1958,
+      "score": -12,
+      "races": 1,
+      "partial": 0
+    }
+  ]
+}

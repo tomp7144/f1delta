@@ -1,0 +1,17 @@
+{
+  "driverId": "perry-mccarthy",
+  "name": "Perry McCarthy",
+  "career": {
+    "score": -25,
+    "races": 7,
+    "partial": 6
+  },
+  "seasons": [
+    {
+      "year": 1992,
+      "score": -25,
+      "races": 7,
+      "partial": 6
+    }
+  ]
+}

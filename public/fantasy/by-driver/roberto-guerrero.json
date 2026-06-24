@@ -1,0 +1,23 @@
+{
+  "driverId": "roberto-guerrero",
+  "name": "Roberto Guerrero",
+  "career": {
+    "score": -230,
+    "races": 28,
+    "partial": 1
+  },
+  "seasons": [
+    {
+      "year": 1982,
+      "score": -110,
+      "races": 14,
+      "partial": 0
+    },
+    {
+      "year": 1983,
+      "score": -120,
+      "races": 14,
+      "partial": 1
+    }
+  ]
+}

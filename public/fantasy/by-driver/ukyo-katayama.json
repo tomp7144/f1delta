@@ -1,0 +1,47 @@
+{
+  "driverId": "ukyo-katayama",
+  "name": "Ukyo Katayama",
+  "career": {
+    "score": -674,
+    "races": 97,
+    "partial": 1
+  },
+  "seasons": [
+    {
+      "year": 1992,
+      "score": -24,
+      "races": 16,
+      "partial": 1
+    },
+    {
+      "year": 1993,
+      "score": -143,
+      "races": 16,
+      "partial": 0
+    },
+    {
+      "year": 1994,
+      "score": -146,
+      "races": 16,
+      "partial": 0
+    },
+    {
+      "year": 1995,
+      "score": -175,
+      "races": 16,
+      "partial": 0
+    },
+    {
+      "year": 1996,
+      "score": -122,
+      "races": 16,
+      "partial": 0
+    },
+    {
+      "year": 1997,
+      "score": -64,
+      "races": 17,
+      "partial": 0
+    }
+  ]
+}

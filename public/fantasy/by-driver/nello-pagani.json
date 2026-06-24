@@ -1,0 +1,17 @@
+{
+  "driverId": "nello-pagani",
+  "name": "Nello Pagani",
+  "career": {
+    "score": 22,
+    "races": 1,
+    "partial": 0
+  },
+  "seasons": [
+    {
+      "year": 1950,
+      "score": 22,
+      "races": 1,
+      "partial": 0
+    }
+  ]
+}

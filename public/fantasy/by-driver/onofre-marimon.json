@@ -1,0 +1,29 @@
+{
+  "driverId": "onofre-marimon",
+  "name": "Onofre Marimón",
+  "career": {
+    "score": -20,
+    "races": 12,
+    "partial": 0
+  },
+  "seasons": [
+    {
+      "year": 1951,
+      "score": -20,
+      "races": 1,
+      "partial": 0
+    },
+    {
+      "year": 1953,
+      "score": -31,
+      "races": 6,
+      "partial": 0
+    },
+    {
+      "year": 1954,
+      "score": 31,
+      "races": 5,
+      "partial": 0
+    }
+  ]
+}

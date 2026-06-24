@@ -1,0 +1,59 @@
+{
+  "driverId": "richie-ginther",
+  "name": "Richie Ginther",
+  "career": {
+    "score": 528,
+    "races": 54,
+    "partial": 0
+  },
+  "seasons": [
+    {
+      "year": 1960,
+      "score": 63,
+      "races": 4,
+      "partial": 0
+    },
+    {
+      "year": 1961,
+      "score": 86,
+      "races": 7,
+      "partial": 0
+    },
+    {
+      "year": 1962,
+      "score": 2,
+      "races": 9,
+      "partial": 0
+    },
+    {
+      "year": 1963,
+      "score": 167,
+      "races": 10,
+      "partial": 0
+    },
+    {
+      "year": 1964,
+      "score": 197,
+      "races": 10,
+      "partial": 0
+    },
+    {
+      "year": 1965,
+      "score": 22,
+      "races": 8,
+      "partial": 0
+    },
+    {
+      "year": 1966,
+      "score": -9,
+      "races": 5,
+      "partial": 0
+    },
+    {
+      "year": 1967,
+      "score": 0,
+      "races": 1,
+      "partial": 0
+    }
+  ]
+}

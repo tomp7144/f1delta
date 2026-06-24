@@ -1,0 +1,35 @@
+{
+  "driverId": "marc-gene",
+  "name": "Marc Gené",
+  "career": {
+    "score": 134,
+    "races": 36,
+    "partial": 2
+  },
+  "seasons": [
+    {
+      "year": 1999,
+      "score": 90,
+      "races": 16,
+      "partial": 2
+    },
+    {
+      "year": 2000,
+      "score": 30,
+      "races": 17,
+      "partial": 0
+    },
+    {
+      "year": 2003,
+      "score": 16,
+      "races": 1,
+      "partial": 0
+    },
+    {
+      "year": 2004,
+      "score": -2,
+      "races": 2,
+      "partial": 0
+    }
+  ]
+}

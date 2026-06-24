@@ -1,0 +1,41 @@
+{
+  "driverId": "peter-whitehead",
+  "name": "Peter Whitehead",
+  "career": {
+    "score": 13,
+    "races": 12,
+    "partial": 0
+  },
+  "seasons": [
+    {
+      "year": 1950,
+      "score": 75,
+      "races": 3,
+      "partial": 0
+    },
+    {
+      "year": 1951,
+      "score": -55,
+      "races": 4,
+      "partial": 0
+    },
+    {
+      "year": 1952,
+      "score": 1,
+      "races": 3,
+      "partial": 0
+    },
+    {
+      "year": 1953,
+      "score": 12,
+      "races": 1,
+      "partial": 0
+    },
+    {
+      "year": 1954,
+      "score": -20,
+      "races": 1,
+      "partial": 0
+    }
+  ]
+}

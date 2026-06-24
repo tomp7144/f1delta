@@ -1,0 +1,23 @@
+{
+  "driverId": "sebastien-bourdais",
+  "name": "Sébastien Bourdais",
+  "career": {
+    "score": 5,
+    "races": 27,
+    "partial": 0
+  },
+  "seasons": [
+    {
+      "year": 2008,
+      "score": -13,
+      "races": 18,
+      "partial": 0
+    },
+    {
+      "year": 2009,
+      "score": 18,
+      "races": 9,
+      "partial": 0
+    }
+  ]
+}

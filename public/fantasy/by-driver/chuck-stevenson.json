@@ -1,0 +1,41 @@
+{
+  "driverId": "chuck-stevenson",
+  "name": "Chuck Stevenson",
+  "career": {
+    "score": -58,
+    "races": 7,
+    "partial": 2
+  },
+  "seasons": [
+    {
+      "year": 1951,
+      "score": -2,
+      "races": 1,
+      "partial": 0
+    },
+    {
+      "year": 1952,
+      "score": -14,
+      "races": 1,
+      "partial": 0
+    },
+    {
+      "year": 1953,
+      "score": -24,
+      "races": 3,
+      "partial": 2
+    },
+    {
+      "year": 1954,
+      "score": -8,
+      "races": 1,
+      "partial": 0
+    },
+    {
+      "year": 1960,
+      "score": -10,
+      "races": 1,
+      "partial": 0
+    }
+  ]
+}

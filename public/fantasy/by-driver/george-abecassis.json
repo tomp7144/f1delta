@@ -1,0 +1,23 @@
+{
+  "driverId": "george-abecassis",
+  "name": "George Abecassis",
+  "career": {
+    "score": -39,
+    "races": 2,
+    "partial": 0
+  },
+  "seasons": [
+    {
+      "year": 1951,
+      "score": -20,
+      "races": 1,
+      "partial": 0
+    },
+    {
+      "year": 1952,
+      "score": -19,
+      "races": 1,
+      "partial": 0
+    }
+  ]
+}

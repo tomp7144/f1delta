@@ -1,0 +1,23 @@
+{
+  "driverId": "david-walker",
+  "name": "David Walker",
+  "career": {
+    "score": -70,
+    "races": 11,
+    "partial": 0
+  },
+  "seasons": [
+    {
+      "year": 1971,
+      "score": -20,
+      "races": 1,
+      "partial": 0
+    },
+    {
+      "year": 1972,
+      "score": -50,
+      "races": 10,
+      "partial": 0
+    }
+  ]
+}

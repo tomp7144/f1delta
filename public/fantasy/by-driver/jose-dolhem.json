@@ -1,0 +1,17 @@
+{
+  "driverId": "jose-dolhem",
+  "name": "José Dolhem",
+  "career": {
+    "score": -20,
+    "races": 3,
+    "partial": 0
+  },
+  "seasons": [
+    {
+      "year": 1974,
+      "score": -20,
+      "races": 3,
+      "partial": 0
+    }
+  ]
+}

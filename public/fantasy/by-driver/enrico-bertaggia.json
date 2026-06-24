@@ -1,0 +1,23 @@
+{
+  "driverId": "enrico-bertaggia",
+  "name": "Enrico Bertaggia",
+  "career": {
+    "score": -25,
+    "races": 7,
+    "partial": 7
+  },
+  "seasons": [
+    {
+      "year": 1989,
+      "score": 0,
+      "races": 6,
+      "partial": 6
+    },
+    {
+      "year": 1992,
+      "score": -25,
+      "races": 1,
+      "partial": 1
+    }
+  ]
+}

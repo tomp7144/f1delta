@@ -1,0 +1,23 @@
+{
+  "driverId": "pierre-levegh",
+  "name": "Pierre Levegh",
+  "career": {
+    "score": -9,
+    "races": 6,
+    "partial": 0
+  },
+  "seasons": [
+    {
+      "year": 1950,
+      "score": -25,
+      "races": 3,
+      "partial": 0
+    },
+    {
+      "year": 1951,
+      "score": 16,
+      "races": 3,
+      "partial": 0
+    }
+  ]
+}

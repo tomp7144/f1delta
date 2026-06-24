@@ -1,0 +1,53 @@
+{
+  "driverId": "vittorio-brambilla",
+  "name": "Vittorio Brambilla",
+  "career": {
+    "score": -124,
+    "races": 79,
+    "partial": 0
+  },
+  "seasons": [
+    {
+      "year": 1974,
+      "score": 79,
+      "races": 13,
+      "partial": 0
+    },
+    {
+      "year": 1975,
+      "score": -55,
+      "races": 14,
+      "partial": 0
+    },
+    {
+      "year": 1976,
+      "score": -146,
+      "races": 16,
+      "partial": 0
+    },
+    {
+      "year": 1977,
+      "score": 41,
+      "races": 17,
+      "partial": 0
+    },
+    {
+      "year": 1978,
+      "score": -3,
+      "races": 14,
+      "partial": 0
+    },
+    {
+      "year": 1979,
+      "score": 0,
+      "races": 3,
+      "partial": 0
+    },
+    {
+      "year": 1980,
+      "score": -40,
+      "races": 2,
+      "partial": 0
+    }
+  ]
+}

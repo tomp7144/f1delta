@@ -1,0 +1,23 @@
+{
+  "driverId": "mick-schumacher",
+  "name": "Mick Schumacher",
+  "career": {
+    "score": -5,
+    "races": 44,
+    "partial": 2
+  },
+  "seasons": [
+    {
+      "year": 2021,
+      "score": -25,
+      "races": 22,
+      "partial": 2
+    },
+    {
+      "year": 2022,
+      "score": 20,
+      "races": 22,
+      "partial": 0
+    }
+  ]
+}

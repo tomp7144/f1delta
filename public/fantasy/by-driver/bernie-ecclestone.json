@@ -1,0 +1,17 @@
+{
+  "driverId": "bernie-ecclestone",
+  "name": "Bernie Ecclestone",
+  "career": {
+    "score": 0,
+    "races": 1,
+    "partial": 1
+  },
+  "seasons": [
+    {
+      "year": 1958,
+      "score": 0,
+      "races": 1,
+      "partial": 1
+    }
+  ]
+}

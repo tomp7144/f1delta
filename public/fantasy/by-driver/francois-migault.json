@@ -1,0 +1,29 @@
+{
+  "driverId": "francois-migault",
+  "name": "François Migault",
+  "career": {
+    "score": -112,
+    "races": 16,
+    "partial": 0
+  },
+  "seasons": [
+    {
+      "year": 1972,
+      "score": -20,
+      "races": 2,
+      "partial": 0
+    },
+    {
+      "year": 1974,
+      "score": -52,
+      "races": 11,
+      "partial": 0
+    },
+    {
+      "year": 1975,
+      "score": -40,
+      "races": 3,
+      "partial": 0
+    }
+  ]
+}

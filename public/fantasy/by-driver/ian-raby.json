@@ -1,0 +1,29 @@
+{
+  "driverId": "ian-raby",
+  "name": "Ian Raby",
+  "career": {
+    "score": -22,
+    "races": 7,
+    "partial": 0
+  },
+  "seasons": [
+    {
+      "year": 1963,
+      "score": -20,
+      "races": 3,
+      "partial": 0
+    },
+    {
+      "year": 1964,
+      "score": -20,
+      "races": 2,
+      "partial": 0
+    },
+    {
+      "year": 1965,
+      "score": 18,
+      "races": 2,
+      "partial": 0
+    }
+  ]
+}

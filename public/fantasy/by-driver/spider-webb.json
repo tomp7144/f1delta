@@ -1,0 +1,35 @@
+{
+  "driverId": "spider-webb",
+  "name": "Spider Webb",
+  "career": {
+    "score": -2,
+    "races": 4,
+    "partial": 0
+  },
+  "seasons": [
+    {
+      "year": 1950,
+      "score": -12,
+      "races": 1,
+      "partial": 0
+    },
+    {
+      "year": 1952,
+      "score": 14,
+      "races": 1,
+      "partial": 0
+    },
+    {
+      "year": 1953,
+      "score": -2,
+      "races": 1,
+      "partial": 0
+    },
+    {
+      "year": 1954,
+      "score": -2,
+      "races": 1,
+      "partial": 0
+    }
+  ]
+}

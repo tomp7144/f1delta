@@ -1,0 +1,29 @@
+{
+  "driverId": "bob-scott",
+  "name": "Bob Scott",
+  "career": {
+    "score": -48,
+    "races": 5,
+    "partial": 3
+  },
+  "seasons": [
+    {
+      "year": 1952,
+      "score": -8,
+      "races": 1,
+      "partial": 0
+    },
+    {
+      "year": 1953,
+      "score": -40,
+      "races": 2,
+      "partial": 1
+    },
+    {
+      "year": 1954,
+      "score": 0,
+      "races": 2,
+      "partial": 2
+    }
+  ]
+}

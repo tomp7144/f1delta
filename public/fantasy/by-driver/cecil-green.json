@@ -1,0 +1,23 @@
+{
+  "driverId": "cecil-green",
+  "name": "Cecil Green",
+  "career": {
+    "score": 5,
+    "races": 2,
+    "partial": 0
+  },
+  "seasons": [
+    {
+      "year": 1950,
+      "score": 28,
+      "races": 1,
+      "partial": 0
+    },
+    {
+      "year": 1951,
+      "score": -23,
+      "races": 1,
+      "partial": 0
+    }
+  ]
+}

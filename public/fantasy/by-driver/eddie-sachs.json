@@ -1,0 +1,35 @@
+{
+  "driverId": "eddie-sachs",
+  "name": "Eddie Sachs",
+  "career": {
+    "score": -92,
+    "races": 4,
+    "partial": 0
+  },
+  "seasons": [
+    {
+      "year": 1957,
+      "score": -33,
+      "races": 1,
+      "partial": 0
+    },
+    {
+      "year": 1958,
+      "score": -8,
+      "races": 1,
+      "partial": 0
+    },
+    {
+      "year": 1959,
+      "score": -21,
+      "races": 1,
+      "partial": 0
+    },
+    {
+      "year": 1960,
+      "score": -30,
+      "races": 1,
+      "partial": 0
+    }
+  ]
+}

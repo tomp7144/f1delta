@@ -1,0 +1,23 @@
+{
+  "driverId": "tony-settember",
+  "name": "Tony Settember",
+  "career": {
+    "score": -38,
+    "races": 7,
+    "partial": 0
+  },
+  "seasons": [
+    {
+      "year": 1962,
+      "score": -4,
+      "races": 2,
+      "partial": 0
+    },
+    {
+      "year": 1963,
+      "score": -34,
+      "races": 5,
+      "partial": 0
+    }
+  ]
+}

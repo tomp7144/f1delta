@@ -1,0 +1,23 @@
+{
+  "driverId": "bob-evans",
+  "name": "Bob Evans",
+  "career": {
+    "score": 5,
+    "races": 12,
+    "partial": 0
+  },
+  "seasons": [
+    {
+      "year": 1975,
+      "score": -2,
+      "races": 9,
+      "partial": 0
+    },
+    {
+      "year": 1976,
+      "score": 7,
+      "races": 3,
+      "partial": 0
+    }
+  ]
+}

@@ -1,0 +1,23 @@
+{
+  "driverId": "paul-belmondo",
+  "name": "Paul Belmondo",
+  "career": {
+    "score": 52,
+    "races": 27,
+    "partial": 1
+  },
+  "seasons": [
+    {
+      "year": 1992,
+      "score": 92,
+      "races": 11,
+      "partial": 0
+    },
+    {
+      "year": 1994,
+      "score": -40,
+      "races": 16,
+      "partial": 1
+    }
+  ]
+}

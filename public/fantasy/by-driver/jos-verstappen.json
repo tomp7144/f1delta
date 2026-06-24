@@ -1,0 +1,59 @@
+{
+  "driverId": "jos-verstappen",
+  "name": "Jos Verstappen",
+  "career": {
+    "score": -393,
+    "races": 107,
+    "partial": 1
+  },
+  "seasons": [
+    {
+      "year": 1994,
+      "score": -24,
+      "races": 10,
+      "partial": 0
+    },
+    {
+      "year": 1995,
+      "score": -52,
+      "races": 5,
+      "partial": 0
+    },
+    {
+      "year": 1996,
+      "score": -185,
+      "races": 16,
+      "partial": 0
+    },
+    {
+      "year": 1997,
+      "score": -34,
+      "races": 17,
+      "partial": 0
+    },
+    {
+      "year": 1998,
+      "score": -96,
+      "races": 9,
+      "partial": 0
+    },
+    {
+      "year": 2000,
+      "score": -85,
+      "races": 17,
+      "partial": 0
+    },
+    {
+      "year": 2001,
+      "score": 108,
+      "races": 17,
+      "partial": 0
+    },
+    {
+      "year": 2003,
+      "score": -25,
+      "races": 16,
+      "partial": 1
+    }
+  ]
+}

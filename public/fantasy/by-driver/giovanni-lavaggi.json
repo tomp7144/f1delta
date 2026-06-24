@@ -1,0 +1,23 @@
+{
+  "driverId": "giovanni-lavaggi",
+  "name": "Giovanni Lavaggi",
+  "career": {
+    "score": -69,
+    "races": 10,
+    "partial": 0
+  },
+  "seasons": [
+    {
+      "year": 1995,
+      "score": -80,
+      "races": 4,
+      "partial": 0
+    },
+    {
+      "year": 1996,
+      "score": 11,
+      "races": 6,
+      "partial": 0
+    }
+  ]
+}

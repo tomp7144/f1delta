@@ -6,15 +6,30 @@ import BaseLayout from "../../layouts/BaseLayout.astro";
 import GrandPrixPage from "../../components/GrandPrixPage.astro";
 
 export function getStaticPaths() {
-  const DIR = path.resolve("./data/grands-prix");
+  const DIR  = path.resolve("./data/grands-prix");
+  const FANT = path.resolve("./public/fantasy/race-summaries.json");
   const index = JSON.parse(fs.readFileSync(path.join(DIR, "index.json"), "utf8"));
-  return index.grandsPrix.map((gp: any) => ({
-    params: { id: gp.id },
-    props: { gp: JSON.parse(fs.readFileSync(path.join(DIR, `${gp.id}.json`), "utf8")) },
-  }));
+
+  let allSummaries: Record<string, any> = {};
+  try { allSummaries = JSON.parse(fs.readFileSync(FANT, "utf8")); }
+  catch { /* absent before first history bake */ }
+
+  return index.grandsPrix.map((gp: any) => {
+    const gpData = JSON.parse(fs.readFileSync(path.join(DIR, `${gp.id}.json`), "utf8"));
+    // Pre-filter to just the raceIds for this GP
+    const fantSummaries: Record<string, any> = {};
+    for (const r of gpData.runningsList ?? []) {
+      const k = String(r.raceId);
+      if (allSummaries[k]) fantSummaries[k] = allSummaries[k];
+    }
+    return {
+      params: { id: gp.id },
+      props: { gp: gpData, fantSummaries },
+    };
+  });
 }
 
-const { gp } = Astro.props as { gp: any };
+const { gp, fantSummaries } = Astro.props as { gp: any; fantSummaries: Record<string, any> };
 const desc = `${gp.name}: all-time winners, poles, fastest laps and records across ${gp.runnings} runnings from ${gp.firstYear} to ${gp.lastYear}.`;
 ---
 
@@ -23,6 +38,6 @@ const desc = `${gp.name}: all-time winners, poles, fastest laps and records acro
   description={desc}
   canonical={`https://f1delta.com/grands-prix/${gp.id}`}
 >
-  <GrandPrixPage gp={gp} />
+  <GrandPrixPage gp={gp} fantSummaries={fantSummaries} />
   <script src="/f1-records.js" defer is:inline></script>
 </BaseLayout>

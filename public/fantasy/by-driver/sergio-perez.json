@@ -1,0 +1,101 @@
+{
+  "driverId": "sergio-perez",
+  "name": "Sergio Pérez",
+  "career": {
+    "score": 2874,
+    "races": 289,
+    "partial": 2
+  },
+  "seasons": [
+    {
+      "year": 2011,
+      "score": 27,
+      "races": 18,
+      "partial": 0
+    },
+    {
+      "year": 2012,
+      "score": 117,
+      "races": 20,
+      "partial": 1
+    },
+    {
+      "year": 2013,
+      "score": 143,
+      "races": 19,
+      "partial": 0
+    },
+    {
+      "year": 2014,
+      "score": 146,
+      "races": 19,
+      "partial": 0
+    },
+    {
+      "year": 2015,
+      "score": 172,
+      "races": 19,
+      "partial": 0
+    },
+    {
+      "year": 2016,
+      "score": 221,
+      "races": 21,
+      "partial": 0
+    },
+    {
+      "year": 2017,
+      "score": 183,
+      "races": 20,
+      "partial": 0
+    },
+    {
+      "year": 2018,
+      "score": 114,
+      "races": 21,
+      "partial": 0
+    },
+    {
+      "year": 2019,
+      "score": 162,
+      "races": 21,
+      "partial": 0
+    },
+    {
+      "year": 2020,
+      "score": 182,
+      "races": 15,
+      "partial": 0
+    },
+    {
+      "year": 2021,
+      "score": 272,
+      "races": 22,
+      "partial": 0
+    },
+    {
+      "year": 2022,
+      "score": 439,
+      "races": 22,
+      "partial": 0
+    },
+    {
+      "year": 2023,
+      "score": 502,
+      "races": 22,
+      "partial": 1
+    },
+    {
+      "year": 2024,
+      "score": 180,
+      "races": 24,
+      "partial": 0
+    },
+    {
+      "year": 2026,
+      "score": 14,
+      "races": 6,
+      "partial": 0
+    }
+  ]
+}

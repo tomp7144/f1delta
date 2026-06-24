@@ -1,0 +1,337 @@
+{
+  "year": 2022,
+  "drivers": {
+    "charles-leclerc": {
+      "score": 468,
+      "races": 22,
+      "partial": 0
+    },
+    "carlos-sainz-jr": {
+      "score": 331,
+      "races": 22,
+      "partial": 0
+    },
+    "lewis-hamilton": {
+      "score": 387,
+      "races": 22,
+      "partial": 0
+    },
+    "george-russell": {
+      "score": 434,
+      "races": 22,
+      "partial": 0
+    },
+    "kevin-magnussen": {
+      "score": -45,
+      "races": 22,
+      "partial": 0
+    },
+    "valtteri-bottas": {
+      "score": 24,
+      "races": 22,
+      "partial": 0
+    },
+    "esteban-ocon": {
+      "score": 194,
+      "races": 22,
+      "partial": 1
+    },
+    "yuki-tsunoda": {
+      "score": -15,
+      "races": 22,
+      "partial": 1
+    },
+    "fernando-alonso": {
+      "score": 79,
+      "races": 22,
+      "partial": 1
+    },
+    "guanyu-zhou": {
+      "score": -19,
+      "races": 22,
+      "partial": 1
+    },
+    "mick-schumacher": {
+      "score": 20,
+      "races": 22,
+      "partial": 0
+    },
+    "lance-stroll": {
+      "score": 133,
+      "races": 22,
+      "partial": 1
+    },
+    "alexander-albon": {
+      "score": 1,
+      "races": 21,
+      "partial": 2
+    },
+    "daniel-ricciardo": {
+      "score": 29,
+      "races": 22,
+      "partial": 0
+    },
+    "lando-norris": {
+      "score": 187,
+      "races": 22,
+      "partial": 0
+    },
+    "nicholas-latifi": {
+      "score": -21,
+      "races": 22,
+      "partial": 0
+    },
+    "nico-hulkenberg": {
+      "score": 10,
+      "races": 2,
+      "partial": 0
+    },
+    "sergio-perez": {
+      "score": 439,
+      "races": 22,
+      "partial": 0
+    },
+    "max-verstappen": {
+      "score": 644,
+      "races": 22,
+      "partial": 0
+    },
+    "pierre-gasly": {
+      "score": 46,
+      "races": 22,
+      "partial": 0
+    },
+    "sebastian-vettel": {
+      "score": 120,
+      "races": 20,
+      "partial": 0
+    },
+    "nyck-de-vries": {
+      "score": 3,
+      "races": 1,
+      "partial": 0
+    }
+  },
+  "races": [
+    {
+      "round": 1,
+      "raceId": 1058,
+      "gpId": "bahrain",
+      "name": "Bahrain GP",
+      "topId": "charles-leclerc",
+      "topName": "Charles Leclerc",
+      "topScore": 40,
+      "partial": false
+    },
+    {
+      "round": 2,
+      "raceId": 1059,
+      "gpId": "saudi-arabia",
+      "name": "Saudi Arabian GP",
+      "topId": "max-verstappen",
+      "topName": "Max Verstappen",
+      "topScore": 38,
+      "partial": true
+    },
+    {
+      "round": 3,
+      "raceId": 1060,
+      "gpId": "australia",
+      "name": "Australian GP",
+      "topId": "charles-leclerc",
+      "topName": "Charles Leclerc",
+      "topScore": 40,
+      "partial": true
+    },
+    {
+      "round": 4,
+      "raceId": 1061,
+      "gpId": "emilia-romagna",
+      "name": "Emilia Romagna GP",
+      "topId": "max-verstappen",
+      "topName": "Max Verstappen",
+      "topScore": 40,
+      "partial": true
+    },
+    {
+      "round": 5,
+      "raceId": 1062,
+      "gpId": "miami",
+      "name": "Miami GP",
+      "topId": "max-verstappen",
+      "topName": "Max Verstappen",
+      "topScore": 42,
+      "partial": true
+    },
+    {
+      "round": 6,
+      "raceId": 1063,
+      "gpId": "spain",
+      "name": "Spanish GP",
+      "topId": "max-verstappen",
+      "topName": "Max Verstappen",
+      "topScore": 36,
+      "partial": false
+    },
+    {
+      "round": 7,
+      "raceId": 1064,
+      "gpId": "monaco",
+      "name": "Monaco GP",
+      "topId": "sergio-perez",
+      "topName": "Sergio Pérez",
+      "topScore": 37,
+      "partial": false
+    },
+    {
+      "round": 8,
+      "raceId": 1065,
+      "gpId": "azerbaijan",
+      "name": "Azerbaijan GP",
+      "topId": "max-verstappen",
+      "topName": "Max Verstappen",
+      "topScore": 37,
+      "partial": false
+    },
+    {
+      "round": 9,
+      "raceId": 1066,
+      "gpId": "canada",
+      "name": "Canadian GP",
+      "topId": "charles-leclerc",
+      "topName": "Charles Leclerc",
+      "topScore": 39,
+      "partial": false
+    },
+    {
+      "round": 10,
+      "raceId": 1067,
+      "gpId": "great-britain",
+      "name": "British GP",
+      "topId": "carlos-sainz-jr",
+      "topName": "Carlos Sainz Jr.",
+      "topScore": 35,
+      "partial": false
+    },
+    {
+      "round": 11,
+      "raceId": 1068,
+      "gpId": "austria",
+      "name": "Austrian GP",
+      "topId": "charles-leclerc",
+      "topName": "Charles Leclerc",
+      "topScore": 36,
+      "partial": true
+    },
+    {
+      "round": 12,
+      "raceId": 1069,
+      "gpId": "france",
+      "name": "French GP",
+      "topId": "carlos-sainz-jr",
+      "topName": "Carlos Sainz Jr.",
+      "topScore": 45,
+      "partial": false
+    },
+    {
+      "round": 13,
+      "raceId": 1070,
+      "gpId": "hungary",
+      "name": "Hungarian GP",
+      "topId": "max-verstappen",
+      "topName": "Max Verstappen",
+      "topScore": 44,
+      "partial": false
+    },
+    {
+      "round": 14,
+      "raceId": 1071,
+      "gpId": "belgium",
+      "name": "Belgian GP",
+      "topId": "max-verstappen",
+      "topName": "Max Verstappen",
+      "topScore": 66,
+      "partial": false
+    },
+    {
+      "round": 15,
+      "raceId": 1072,
+      "gpId": "netherlands",
+      "name": "Dutch GP",
+      "topId": "max-verstappen",
+      "topName": "Max Verstappen",
+      "topScore": 40,
+      "partial": false
+    },
+    {
+      "round": 16,
+      "raceId": 1073,
+      "gpId": "italy",
+      "name": "Italian GP",
+      "topId": "carlos-sainz-jr",
+      "topName": "Carlos Sainz Jr.",
+      "topScore": 48,
+      "partial": false
+    },
+    {
+      "round": 17,
+      "raceId": 1074,
+      "gpId": "singapore",
+      "name": "Singapore GP",
+      "topId": "sergio-perez",
+      "topName": "Sergio Pérez",
+      "topScore": 36,
+      "partial": false
+    },
+    {
+      "round": 18,
+      "raceId": 1075,
+      "gpId": "japan",
+      "name": "Japanese GP",
+      "topId": "max-verstappen",
+      "topName": "Max Verstappen",
+      "topScore": 35,
+      "partial": false
+    },
+    {
+      "round": 19,
+      "raceId": 1076,
+      "gpId": "united-states",
+      "name": "United States GP",
+      "topId": "charles-leclerc",
+      "topName": "Charles Leclerc",
+      "topScore": 42,
+      "partial": false
+    },
+    {
+      "round": 20,
+      "raceId": 1077,
+      "gpId": "mexico",
+      "name": "Mexican GP",
+      "topId": "max-verstappen",
+      "topName": "Max Verstappen",
+      "topScore": 35,
+      "partial": false
+    },
+    {
+      "round": 21,
+      "raceId": 1078,
+      "gpId": "sao-paulo",
+      "name": "São Paulo GP",
+      "topId": "george-russell",
+      "topName": "George Russell",
+      "topScore": 40,
+      "partial": true
+    },
+    {
+      "round": 22,
+      "raceId": 1079,
+      "gpId": "abu-dhabi",
+      "name": "Abu Dhabi GP",
+      "topId": "max-verstappen",
+      "topName": "Max Verstappen",
+      "topScore": 35,
+      "partial": false
+    }
+  ]
+}

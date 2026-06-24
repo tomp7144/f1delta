@@ -1,0 +1,41 @@
+{
+  "driverId": "manfred-winkelhock",
+  "name": "Manfred Winkelhock",
+  "career": {
+    "score": -514,
+    "races": 56,
+    "partial": 2
+  },
+  "seasons": [
+    {
+      "year": 1980,
+      "score": 0,
+      "races": 1,
+      "partial": 0
+    },
+    {
+      "year": 1982,
+      "score": -102,
+      "races": 16,
+      "partial": 0
+    },
+    {
+      "year": 1983,
+      "score": -164,
+      "races": 15,
+      "partial": 1
+    },
+    {
+      "year": 1984,
+      "score": -148,
+      "races": 15,
+      "partial": 1
+    },
+    {
+      "year": 1985,
+      "score": -100,
+      "races": 9,
+      "partial": 0
+    }
+  ]
+}

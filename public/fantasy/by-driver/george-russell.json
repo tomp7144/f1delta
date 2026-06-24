@@ -1,0 +1,59 @@
+{
+  "driverId": "george-russell",
+  "name": "George Russell",
+  "career": {
+    "score": 1518,
+    "races": 158,
+    "partial": 0
+  },
+  "seasons": [
+    {
+      "year": 2019,
+      "score": 40,
+      "races": 21,
+      "partial": 0
+    },
+    {
+      "year": 2020,
+      "score": -46,
+      "races": 17,
+      "partial": 0
+    },
+    {
+      "year": 2021,
+      "score": 5,
+      "races": 22,
+      "partial": 0
+    },
+    {
+      "year": 2022,
+      "score": 434,
+      "races": 22,
+      "partial": 0
+    },
+    {
+      "year": 2023,
+      "score": 226,
+      "races": 22,
+      "partial": 0
+    },
+    {
+      "year": 2024,
+      "score": 317,
+      "races": 24,
+      "partial": 0
+    },
+    {
+      "year": 2025,
+      "score": 460,
+      "races": 24,
+      "partial": 0
+    },
+    {
+      "year": 2026,
+      "score": 82,
+      "races": 6,
+      "partial": 0
+    }
+  ]
+}

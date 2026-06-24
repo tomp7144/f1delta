@@ -1,0 +1,29 @@
+{
+  "driverId": "ricardo-zunino",
+  "name": "Ricardo Zunino",
+  "career": {
+    "score": 59,
+    "races": 11,
+    "partial": 0
+  },
+  "seasons": [
+    {
+      "year": 1979,
+      "score": 12,
+      "races": 2,
+      "partial": 0
+    },
+    {
+      "year": 1980,
+      "score": 3,
+      "races": 7,
+      "partial": 0
+    },
+    {
+      "year": 1981,
+      "score": 44,
+      "races": 2,
+      "partial": 0
+    }
+  ]
+}

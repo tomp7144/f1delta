@@ -1,0 +1,59 @@
+{
+  "driverId": "nicola-larini",
+  "name": "Nicola Larini",
+  "career": {
+    "score": 21,
+    "races": 75,
+    "partial": 18
+  },
+  "seasons": [
+    {
+      "year": 1987,
+      "score": -20,
+      "races": 2,
+      "partial": 0
+    },
+    {
+      "year": 1988,
+      "score": -91,
+      "races": 16,
+      "partial": 3
+    },
+    {
+      "year": 1989,
+      "score": -140,
+      "races": 16,
+      "partial": 8
+    },
+    {
+      "year": 1990,
+      "score": 213,
+      "races": 16,
+      "partial": 0
+    },
+    {
+      "year": 1991,
+      "score": 16,
+      "races": 16,
+      "partial": 7
+    },
+    {
+      "year": 1992,
+      "score": 14,
+      "races": 2,
+      "partial": 0
+    },
+    {
+      "year": 1994,
+      "score": 15,
+      "races": 2,
+      "partial": 0
+    },
+    {
+      "year": 1997,
+      "score": 14,
+      "races": 5,
+      "partial": 0
+    }
+  ]
+}

@@ -1,0 +1,95 @@
+{
+  "driverId": "daniel-ricciardo",
+  "name": "Daniel Ricciardo",
+  "career": {
+    "score": 2017,
+    "races": 257,
+    "partial": 4
+  },
+  "seasons": [
+    {
+      "year": 2011,
+      "score": -14,
+      "races": 11,
+      "partial": 2
+    },
+    {
+      "year": 2012,
+      "score": 110,
+      "races": 20,
+      "partial": 0
+    },
+    {
+      "year": 2013,
+      "score": -39,
+      "races": 19,
+      "partial": 0
+    },
+    {
+      "year": 2014,
+      "score": 328,
+      "races": 19,
+      "partial": 1
+    },
+    {
+      "year": 2015,
+      "score": 144,
+      "races": 19,
+      "partial": 0
+    },
+    {
+      "year": 2016,
+      "score": 399,
+      "races": 21,
+      "partial": 0
+    },
+    {
+      "year": 2017,
+      "score": 306,
+      "races": 20,
+      "partial": 0
+    },
+    {
+      "year": 2018,
+      "score": 241,
+      "races": 21,
+      "partial": 0
+    },
+    {
+      "year": 2019,
+      "score": 9,
+      "races": 21,
+      "partial": 1
+    },
+    {
+      "year": 2020,
+      "score": 200,
+      "races": 17,
+      "partial": 0
+    },
+    {
+      "year": 2021,
+      "score": 244,
+      "races": 22,
+      "partial": 0
+    },
+    {
+      "year": 2022,
+      "score": 29,
+      "races": 22,
+      "partial": 0
+    },
+    {
+      "year": 2023,
+      "score": 33,
+      "races": 7,
+      "partial": 0
+    },
+    {
+      "year": 2024,
+      "score": 27,
+      "races": 18,
+      "partial": 0
+    }
+  ]
+}

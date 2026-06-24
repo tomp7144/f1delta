@@ -1,0 +1,41 @@
+{
+  "driverId": "alex-zanardi",
+  "name": "Alex Zanardi",
+  "career": {
+    "score": -204,
+    "races": 44,
+    "partial": 1
+  },
+  "seasons": [
+    {
+      "year": 1991,
+      "score": 20,
+      "races": 3,
+      "partial": 0
+    },
+    {
+      "year": 1992,
+      "score": -20,
+      "races": 3,
+      "partial": 0
+    },
+    {
+      "year": 1993,
+      "score": -26,
+      "races": 12,
+      "partial": 1
+    },
+    {
+      "year": 1994,
+      "score": -18,
+      "races": 10,
+      "partial": 0
+    },
+    {
+      "year": 1999,
+      "score": -160,
+      "races": 16,
+      "partial": 0
+    }
+  ]
+}

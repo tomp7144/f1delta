@@ -1,0 +1,47 @@
+{
+  "driverId": "alberto-ascari",
+  "name": "Alberto Ascari",
+  "career": {
+    "score": 472,
+    "races": 36,
+    "partial": 4
+  },
+  "seasons": [
+    {
+      "year": 1950,
+      "score": 43,
+      "races": 5,
+      "partial": 1
+    },
+    {
+      "year": 1951,
+      "score": 124,
+      "races": 8,
+      "partial": 1
+    },
+    {
+      "year": 1952,
+      "score": 217,
+      "races": 7,
+      "partial": 0
+    },
+    {
+      "year": 1953,
+      "score": 183,
+      "races": 9,
+      "partial": 1
+    },
+    {
+      "year": 1954,
+      "score": -73,
+      "races": 5,
+      "partial": 1
+    },
+    {
+      "year": 1955,
+      "score": -22,
+      "races": 2,
+      "partial": 0
+    }
+  ]
+}

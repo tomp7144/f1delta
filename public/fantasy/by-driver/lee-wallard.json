@@ -1,0 +1,23 @@
+{
+  "driverId": "lee-wallard",
+  "name": "Lee Wallard",
+  "career": {
+    "score": 83,
+    "races": 2,
+    "partial": 0
+  },
+  "seasons": [
+    {
+      "year": 1950,
+      "score": 42,
+      "races": 1,
+      "partial": 0
+    },
+    {
+      "year": 1951,
+      "score": 41,
+      "races": 1,
+      "partial": 0
+    }
+  ]
+}

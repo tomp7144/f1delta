@@ -1,0 +1,71 @@
+{
+  "driverId": "stefan-johansson",
+  "name": "Stefan Johansson",
+  "career": {
+    "score": 288,
+    "races": 103,
+    "partial": 12
+  },
+  "seasons": [
+    {
+      "year": 1980,
+      "score": 0,
+      "races": 2,
+      "partial": 0
+    },
+    {
+      "year": 1983,
+      "score": -18,
+      "races": 6,
+      "partial": 0
+    },
+    {
+      "year": 1984,
+      "score": -83,
+      "races": 7,
+      "partial": 4
+    },
+    {
+      "year": 1985,
+      "score": 189,
+      "races": 16,
+      "partial": 0
+    },
+    {
+      "year": 1986,
+      "score": 98,
+      "races": 16,
+      "partial": 0
+    },
+    {
+      "year": 1987,
+      "score": 169,
+      "races": 16,
+      "partial": 0
+    },
+    {
+      "year": 1988,
+      "score": -19,
+      "races": 16,
+      "partial": 0
+    },
+    {
+      "year": 1989,
+      "score": -28,
+      "races": 16,
+      "partial": 8
+    },
+    {
+      "year": 1990,
+      "score": 0,
+      "races": 2,
+      "partial": 0
+    },
+    {
+      "year": 1991,
+      "score": -20,
+      "races": 6,
+      "partial": 0
+    }
+  ]
+}

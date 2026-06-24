@@ -1,0 +1,29 @@
+{
+  "driverId": "renzo-zorzi",
+  "name": "Renzo Zorzi",
+  "career": {
+    "score": -14,
+    "races": 7,
+    "partial": 0
+  },
+  "seasons": [
+    {
+      "year": 1975,
+      "score": 16,
+      "races": 1,
+      "partial": 0
+    },
+    {
+      "year": 1976,
+      "score": 18,
+      "races": 1,
+      "partial": 0
+    },
+    {
+      "year": 1977,
+      "score": -48,
+      "races": 5,
+      "partial": 0
+    }
+  ]
+}

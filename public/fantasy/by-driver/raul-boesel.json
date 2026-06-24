@@ -1,0 +1,23 @@
+{
+  "driverId": "raul-boesel",
+  "name": "Raul Boesel",
+  "career": {
+    "score": 16,
+    "races": 30,
+    "partial": 1
+  },
+  "seasons": [
+    {
+      "year": 1982,
+      "score": -20,
+      "races": 15,
+      "partial": 1
+    },
+    {
+      "year": 1983,
+      "score": 36,
+      "races": 15,
+      "partial": 0
+    }
+  ]
+}

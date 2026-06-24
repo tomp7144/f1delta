@@ -1,0 +1,47 @@
+{
+  "driverId": "hans-joachim-stuck",
+  "name": "Hans-Joachim Stuck",
+  "career": {
+    "score": -399,
+    "races": 81,
+    "partial": 0
+  },
+  "seasons": [
+    {
+      "year": 1974,
+      "score": -67,
+      "races": 14,
+      "partial": 0
+    },
+    {
+      "year": 1975,
+      "score": -55,
+      "races": 5,
+      "partial": 0
+    },
+    {
+      "year": 1976,
+      "score": -99,
+      "races": 16,
+      "partial": 0
+    },
+    {
+      "year": 1977,
+      "score": 30,
+      "races": 15,
+      "partial": 0
+    },
+    {
+      "year": 1978,
+      "score": -121,
+      "races": 16,
+      "partial": 0
+    },
+    {
+      "year": 1979,
+      "score": -87,
+      "races": 15,
+      "partial": 0
+    }
+  ]
+}

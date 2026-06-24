@@ -1,0 +1,23 @@
+{
+  "driverId": "johnny-cecotto",
+  "name": "Johnny Cecotto",
+  "career": {
+    "score": -61,
+    "races": 23,
+    "partial": 2
+  },
+  "seasons": [
+    {
+      "year": 1983,
+      "score": 75,
+      "races": 13,
+      "partial": 1
+    },
+    {
+      "year": 1984,
+      "score": -136,
+      "races": 10,
+      "partial": 1
+    }
+  ]
+}

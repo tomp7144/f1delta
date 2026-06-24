@@ -1,0 +1,41 @@
+{
+  "driverId": "bob-sweikert",
+  "name": "Bob Sweikert",
+  "career": {
+    "score": 90,
+    "races": 5,
+    "partial": 0
+  },
+  "seasons": [
+    {
+      "year": 1952,
+      "score": 12,
+      "races": 1,
+      "partial": 0
+    },
+    {
+      "year": 1953,
+      "score": 18,
+      "races": 1,
+      "partial": 0
+    },
+    {
+      "year": 1954,
+      "score": -8,
+      "races": 1,
+      "partial": 0
+    },
+    {
+      "year": 1955,
+      "score": 51,
+      "races": 1,
+      "partial": 0
+    },
+    {
+      "year": 1956,
+      "score": 17,
+      "races": 1,
+      "partial": 0
+    }
+  ]
+}

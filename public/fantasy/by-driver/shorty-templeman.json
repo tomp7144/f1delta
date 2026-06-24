@@ -1,0 +1,29 @@
+{
+  "driverId": "shorty-templeman",
+  "name": "Shorty Templeman",
+  "career": {
+    "score": 38,
+    "races": 3,
+    "partial": 0
+  },
+  "seasons": [
+    {
+      "year": 1955,
+      "score": 26,
+      "races": 1,
+      "partial": 0
+    },
+    {
+      "year": 1958,
+      "score": 8,
+      "races": 1,
+      "partial": 0
+    },
+    {
+      "year": 1960,
+      "score": 4,
+      "races": 1,
+      "partial": 0
+    }
+  ]
+}

@@ -1,0 +1,23 @@
+{
+  "driverId": "michel-leclere",
+  "name": "Michel Leclère",
+  "career": {
+    "score": 65,
+    "races": 8,
+    "partial": 0
+  },
+  "seasons": [
+    {
+      "year": 1975,
+      "score": -20,
+      "races": 1,
+      "partial": 0
+    },
+    {
+      "year": 1976,
+      "score": 85,
+      "races": 7,
+      "partial": 0
+    }
+  ]
+}

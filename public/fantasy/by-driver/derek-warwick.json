@@ -1,0 +1,77 @@
+{
+  "driverId": "derek-warwick",
+  "name": "Derek Warwick",
+  "career": {
+    "score": -428,
+    "races": 162,
+    "partial": 2
+  },
+  "seasons": [
+    {
+      "year": 1981,
+      "score": -20,
+      "races": 12,
+      "partial": 1
+    },
+    {
+      "year": 1982,
+      "score": -169,
+      "races": 14,
+      "partial": 1
+    },
+    {
+      "year": 1983,
+      "score": -32,
+      "races": 15,
+      "partial": 0
+    },
+    {
+      "year": 1984,
+      "score": -21,
+      "races": 16,
+      "partial": 0
+    },
+    {
+      "year": 1985,
+      "score": -46,
+      "races": 15,
+      "partial": 0
+    },
+    {
+      "year": 1986,
+      "score": -47,
+      "races": 11,
+      "partial": 0
+    },
+    {
+      "year": 1987,
+      "score": -145,
+      "races": 16,
+      "partial": 0
+    },
+    {
+      "year": 1988,
+      "score": 93,
+      "races": 16,
+      "partial": 0
+    },
+    {
+      "year": 1989,
+      "score": 42,
+      "races": 15,
+      "partial": 0
+    },
+    {
+      "year": 1990,
+      "score": -79,
+      "races": 16,
+      "partial": 0
+    },
+    {
+      "year": 1993,
+      "score": -4,
+      "races": 16,
+      "partial": 0
+    }
+  ]
+}

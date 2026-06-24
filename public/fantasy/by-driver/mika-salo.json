@@ -1,0 +1,59 @@
+{
+  "driverId": "mika-salo",
+  "name": "Mika Salo",
+  "career": {
+    "score": 153,
+    "races": 111,
+    "partial": 0
+  },
+  "seasons": [
+    {
+      "year": 1994,
+      "score": 11,
+      "races": 2,
+      "partial": 0
+    },
+    {
+      "year": 1995,
+      "score": 98,
+      "races": 17,
+      "partial": 0
+    },
+    {
+      "year": 1996,
+      "score": -43,
+      "races": 16,
+      "partial": 0
+    },
+    {
+      "year": 1997,
+      "score": -15,
+      "races": 17,
+      "partial": 0
+    },
+    {
+      "year": 1998,
+      "score": -138,
+      "races": 16,
+      "partial": 0
+    },
+    {
+      "year": 1999,
+      "score": 91,
+      "races": 9,
+      "partial": 0
+    },
+    {
+      "year": 2000,
+      "score": 137,
+      "races": 17,
+      "partial": 0
+    },
+    {
+      "year": 2002,
+      "score": 12,
+      "races": 17,
+      "partial": 0
+    }
+  ]
+}

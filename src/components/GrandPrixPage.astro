@@ -1,5 +1,5 @@
 ---
-const { gp } = Astro.props;
+const { gp, fantSummaries = {} } = Astro.props;
 const { stats, runningsList, circuits } = gp;
 
 function flag(a2: string | null | undefined) {
@@ -99,10 +99,13 @@ for (const r of runningsList) {
           <th data-sort="fastestlap" data-type="text">Fastest Lap</th>
           <th class="num" data-sort="margin" data-type="num">Margin</th>
           <th class="num" data-sort="laps" data-type="num">Laps</th>
+          <th class="num fant-th" data-sort="fantasyscore" data-type="num">f1δ Top</th>
         </tr>
       </thead>
       <tbody>
-        {[...runningsList].reverse().map((r) => (
+        {[...runningsList].reverse().map((r) => {
+          const fant = fantSummaries[String(r.raceId)];
+          return (
           <tr
             data-year={r.year}
             data-circuit={r.circuit}
@@ -112,6 +115,7 @@ for (const r of runningsList) {
             data-fastestlap={r.fastestLap ?? ""}
             data-margin={r.winningMarginMs ?? 9_999_999}
             data-laps={r.laps ?? 0}
+            data-fantasyscore={fant?.topScore ?? 0}
             class:list={[{ "champ-row": r.champDecider }]}
           >
             <td class="yr">
@@ -143,8 +147,14 @@ for (const r of runningsList) {
             </td>
             <td class="num margin">{r.winningMarginText ?? "—"}</td>
             <td class="num muted">{r.laps ?? "—"}</td>
+            <td class="num fant-col">
+              {fant
+                ? <a class="drv" href={`/driver?d=${fant.topDriverId}`}>{fant.topScore}{fant.partial ? "~" : ""}</a>
+                : <span class="muted">—</span>}
+            </td>
           </tr>
-        ))}
+          );
+        })}
       </tbody>
     </table>
   </div>
@@ -215,6 +225,9 @@ for (const r of runningsList) {
   .gs  { background: #fbf3d0; color: #7a5c00; }
   .wdc { background: #e10600; color: #fff; }
   .wcc { background: #16161a; color: #fff; }
+
+  .fant-col { color: #6b6b70; font-size: 12px; }
+  .fant-th  { color: #6b6b70; }
 
   .foot {
     font-size: 12px; color: #9a9a9e; text-align: center; padding: 20px 0 8px;

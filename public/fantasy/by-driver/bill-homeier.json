@@ -1,0 +1,29 @@
+{
+  "driverId": "bill-homeier",
+  "name": "Bill Homeier",
+  "career": {
+    "score": 16,
+    "races": 4,
+    "partial": 2
+  },
+  "seasons": [
+    {
+      "year": 1954,
+      "score": -30,
+      "races": 2,
+      "partial": 1
+    },
+    {
+      "year": 1955,
+      "score": 10,
+      "races": 1,
+      "partial": 1
+    },
+    {
+      "year": 1960,
+      "score": 36,
+      "races": 1,
+      "partial": 0
+    }
+  ]
+}

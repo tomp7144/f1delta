@@ -1,0 +1,35 @@
+{
+  "driverId": "vern-schuppan",
+  "name": "Vern Schuppan",
+  "career": {
+    "score": -42,
+    "races": 13,
+    "partial": 0
+  },
+  "seasons": [
+    {
+      "year": 1972,
+      "score": 0,
+      "races": 1,
+      "partial": 0
+    },
+    {
+      "year": 1974,
+      "score": -92,
+      "races": 7,
+      "partial": 0
+    },
+    {
+      "year": 1975,
+      "score": -20,
+      "races": 1,
+      "partial": 0
+    },
+    {
+      "year": 1977,
+      "score": 70,
+      "races": 4,
+      "partial": 0
+    }
+  ]
+}

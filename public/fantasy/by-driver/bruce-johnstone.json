@@ -1,0 +1,17 @@
+{
+  "driverId": "bruce-johnstone",
+  "name": "Bruce Johnstone",
+  "career": {
+    "score": 18,
+    "races": 1,
+    "partial": 0
+  },
+  "seasons": [
+    {
+      "year": 1962,
+      "score": 18,
+      "races": 1,
+      "partial": 0
+    }
+  ]
+}

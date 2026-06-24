@@ -1,0 +1,89 @@
+{
+  "driverId": "valtteri-bottas",
+  "name": "Valtteri Bottas",
+  "career": {
+    "score": 2560,
+    "races": 253,
+    "partial": 1
+  },
+  "seasons": [
+    {
+      "year": 2013,
+      "score": 27,
+      "races": 19,
+      "partial": 0
+    },
+    {
+      "year": 2014,
+      "score": 277,
+      "races": 19,
+      "partial": 0
+    },
+    {
+      "year": 2015,
+      "score": 188,
+      "races": 19,
+      "partial": 0
+    },
+    {
+      "year": 2016,
+      "score": 113,
+      "races": 21,
+      "partial": 0
+    },
+    {
+      "year": 2017,
+      "score": 471,
+      "races": 20,
+      "partial": 0
+    },
+    {
+      "year": 2018,
+      "score": 406,
+      "races": 21,
+      "partial": 0
+    },
+    {
+      "year": 2019,
+      "score": 502,
+      "races": 21,
+      "partial": 0
+    },
+    {
+      "year": 2020,
+      "score": 297,
+      "races": 17,
+      "partial": 0
+    },
+    {
+      "year": 2021,
+      "score": 340,
+      "races": 22,
+      "partial": 0
+    },
+    {
+      "year": 2022,
+      "score": 24,
+      "races": 22,
+      "partial": 0
+    },
+    {
+      "year": 2023,
+      "score": -47,
+      "races": 22,
+      "partial": 1
+    },
+    {
+      "year": 2024,
+      "score": -24,
+      "races": 24,
+      "partial": 0
+    },
+    {
+      "year": 2026,
+      "score": -14,
+      "races": 6,
+      "partial": 0
+    }
+  ]
+}

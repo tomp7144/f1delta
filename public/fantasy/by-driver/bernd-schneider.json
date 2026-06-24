@@ -1,0 +1,29 @@
+{
+  "driverId": "bernd-schneider",
+  "name": "Bernd Schneider",
+  "career": {
+    "score": -60,
+    "races": 34,
+    "partial": 14
+  },
+  "seasons": [
+    {
+      "year": 1988,
+      "score": -36,
+      "races": 16,
+      "partial": 0
+    },
+    {
+      "year": 1989,
+      "score": -40,
+      "races": 16,
+      "partial": 14
+    },
+    {
+      "year": 1990,
+      "score": 16,
+      "races": 2,
+      "partial": 0
+    }
+  ]
+}

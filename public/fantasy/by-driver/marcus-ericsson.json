@@ -1,0 +1,41 @@
+{
+  "driverId": "marcus-ericsson",
+  "name": "Marcus Ericsson",
+  "career": {
+    "score": 9,
+    "races": 97,
+    "partial": 4
+  },
+  "seasons": [
+    {
+      "year": 2014,
+      "score": -64,
+      "races": 16,
+      "partial": 2
+    },
+    {
+      "year": 2015,
+      "score": 36,
+      "races": 19,
+      "partial": 0
+    },
+    {
+      "year": 2016,
+      "score": 14,
+      "races": 21,
+      "partial": 2
+    },
+    {
+      "year": 2017,
+      "score": -57,
+      "races": 20,
+      "partial": 0
+    },
+    {
+      "year": 2018,
+      "score": 80,
+      "races": 21,
+      "partial": 0
+    }
+  ]
+}

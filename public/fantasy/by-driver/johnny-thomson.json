@@ -1,0 +1,59 @@
+{
+  "driverId": "johnny-thomson",
+  "name": "Johnny Thomson",
+  "career": {
+    "score": 67,
+    "races": 9,
+    "partial": 1
+  },
+  "seasons": [
+    {
+      "year": 1953,
+      "score": 2,
+      "races": 2,
+      "partial": 1
+    },
+    {
+      "year": 1954,
+      "score": -33,
+      "races": 1,
+      "partial": 0
+    },
+    {
+      "year": 1955,
+      "score": 70,
+      "races": 1,
+      "partial": 0
+    },
+    {
+      "year": 1956,
+      "score": -28,
+      "races": 1,
+      "partial": 0
+    },
+    {
+      "year": 1957,
+      "score": -2,
+      "races": 1,
+      "partial": 0
+    },
+    {
+      "year": 1958,
+      "score": -2,
+      "races": 1,
+      "partial": 0
+    },
+    {
+      "year": 1959,
+      "score": 26,
+      "races": 1,
+      "partial": 0
+    },
+    {
+      "year": 1960,
+      "score": 34,
+      "races": 1,
+      "partial": 0
+    }
+  ]
+}

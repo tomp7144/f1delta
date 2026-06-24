@@ -1,0 +1,41 @@
+{
+  "driverId": "richard-attwood",
+  "name": "Richard Attwood",
+  "career": {
+    "score": 156,
+    "races": 18,
+    "partial": 0
+  },
+  "seasons": [
+    {
+      "year": 1964,
+      "score": 0,
+      "races": 1,
+      "partial": 0
+    },
+    {
+      "year": 1965,
+      "score": 42,
+      "races": 8,
+      "partial": 0
+    },
+    {
+      "year": 1967,
+      "score": 7,
+      "races": 1,
+      "partial": 0
+    },
+    {
+      "year": 1968,
+      "score": 46,
+      "races": 6,
+      "partial": 0
+    },
+    {
+      "year": 1969,
+      "score": 61,
+      "races": 2,
+      "partial": 0
+    }
+  ]
+}

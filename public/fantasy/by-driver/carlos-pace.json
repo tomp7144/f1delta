@@ -1,0 +1,47 @@
+{
+  "driverId": "carlos-pace",
+  "name": "Carlos Pace",
+  "career": {
+    "score": -14,
+    "races": 73,
+    "partial": 0
+  },
+  "seasons": [
+    {
+      "year": 1972,
+      "score": -22,
+      "races": 11,
+      "partial": 0
+    },
+    {
+      "year": 1973,
+      "score": -39,
+      "races": 15,
+      "partial": 0
+    },
+    {
+      "year": 1974,
+      "score": 26,
+      "races": 14,
+      "partial": 0
+    },
+    {
+      "year": 1975,
+      "score": 12,
+      "races": 14,
+      "partial": 0
+    },
+    {
+      "year": 1976,
+      "score": 5,
+      "races": 16,
+      "partial": 0
+    },
+    {
+      "year": 1977,
+      "score": 4,
+      "races": 3,
+      "partial": 0
+    }
+  ]
+}

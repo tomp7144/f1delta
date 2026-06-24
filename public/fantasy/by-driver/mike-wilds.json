@@ -1,0 +1,29 @@
+{
+  "driverId": "mike-wilds",
+  "name": "Mike Wilds",
+  "career": {
+    "score": -60,
+    "races": 8,
+    "partial": 0
+  },
+  "seasons": [
+    {
+      "year": 1974,
+      "score": -20,
+      "races": 5,
+      "partial": 0
+    },
+    {
+      "year": 1975,
+      "score": -40,
+      "races": 2,
+      "partial": 0
+    },
+    {
+      "year": 1976,
+      "score": 0,
+      "races": 1,
+      "partial": 0
+    }
+  ]
+}

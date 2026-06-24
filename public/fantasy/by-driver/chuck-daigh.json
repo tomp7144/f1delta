@@ -1,0 +1,17 @@
+{
+  "driverId": "chuck-daigh",
+  "name": "Chuck Daigh",
+  "career": {
+    "score": -23,
+    "races": 6,
+    "partial": 0
+  },
+  "seasons": [
+    {
+      "year": 1960,
+      "score": -23,
+      "races": 6,
+      "partial": 0
+    }
+  ]
+}

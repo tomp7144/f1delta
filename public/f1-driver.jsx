@@ -456,6 +456,14 @@ function Styles() {
       .dp .adslot{margin-top:18px;height:96px;border:1px dashed var(--line);border-radius:6px;background:repeating-linear-gradient(45deg,#fff,#fff 10px,#fbfbf9 10px,#fbfbf9 20px);display:flex;align-items:center;justify-content:center}
       .dp .adslot span{font-family:var(--mono);font-size:10px;letter-spacing:.18em;text-transform:uppercase;color:var(--faint)}
 
+      .dp .sec-h .fant-note{font-family:var(--mono);font-size:10px;color:var(--faint)}
+      .dp .fant-partial{font-size:11px;color:var(--faint);padding:6px 12px 0;margin:0}
+      .dp .fant-note-foot{font-size:11px;color:var(--faint);padding:4px 12px 10px;margin:0;border-top:1px solid var(--line)}
+      .dp table .yr a{color:var(--ink);text-decoration:none}
+      .dp table .yr a:hover{text-decoration:underline}
+      .dp tfoot .career-row td{font-weight:600;color:var(--dim);border-top:2px solid var(--line);border-bottom:none}
+      .dp table th.yr-h{text-align:left}
+
       .dp .gatewrap{position:relative}
       .dp .gatecard{max-height:240px;overflow:hidden}
       .dp .gate{position:absolute;left:0;right:0;bottom:0;top:84px;background:linear-gradient(180deg,rgba(244,244,241,0) 0%,rgba(244,244,241,.82) 42%,var(--bg) 70%);display:flex;flex-direction:column;align-items:center;justify-content:flex-end;text-align:center;padding:0 14px 18px}
@@ -758,6 +766,69 @@ function RoadToF1Timeline({ slug }) {
   );
 }
 
+function FantasySection({ slug }) {
+  const [st, setSt] = useState({ s: "loading", d: null });
+
+  useEffect(function() {
+    let alive = true;
+    fetch("/fantasy/by-driver/" + slug + ".json")
+      .then(function(res) { if (!res.ok) throw new Error("not found"); return res.json(); })
+      .then(function(data) { if (alive) setSt({ s: "ready", d: data }); })
+      .catch(function() { if (alive) setSt({ s: "empty", d: null }); });
+    return function() { alive = false; };
+  }, [slug]);
+
+  const { s, d } = st;
+  if (s !== "ready" || !d || !d.seasons || d.seasons.length === 0) return null;
+
+  const hasPartial = d.career.partial > 0;
+
+  return (
+    <section>
+      <div className="sec-h">
+        <h2>f1delta Fantasy Score</h2>
+        <span className="fant-note">position-based · excludes overtakes &amp; DotD</span>
+      </div>
+      <div className="card">
+        <table>
+          <thead>
+            <tr>
+              <th className="l yr-h">Year</th>
+              <th className="n">Races</th>
+              <th className="n">Score</th>
+              <th className="n">Avg</th>
+            </tr>
+          </thead>
+          <tbody>
+            {d.seasons.map(function(s) {
+              return (
+                <tr key={s.year}>
+                  <td className="yr"><a href={"/standings/" + s.year}>{s.year}</a></td>
+                  <td className="n">{s.races}</td>
+                  <td className="n">{s.partial > 0 ? "~" : ""}{s.score}</td>
+                  <td className="n">{s.races > 0 ? (s.score / s.races).toFixed(1) : "—"}</td>
+                </tr>
+              );
+            })}
+          </tbody>
+          <tfoot>
+            <tr className="career-row">
+              <td className="yr"><strong>Career</strong></td>
+              <td className="n">{d.career.races}</td>
+              <td className="n">{d.career.partial > 0 ? "~" : ""}{d.career.score}</td>
+              <td className="n">{d.career.races > 0 ? (d.career.score / d.career.races).toFixed(1) : "—"}</td>
+            </tr>
+          </tfoot>
+        </table>
+        {hasPartial && (
+          <p className="fant-partial">~ includes races where qualifying data is unavailable</p>
+        )}
+        <p className="fant-note-foot">Scoring: race finish points · qualifying position · positions gained · fastest lap (P1–10). Not the official F1 Fantasy game.</p>
+      </div>
+    </section>
+  );
+}
+
 function RoadToF1({ slug }) {
   const rows = RTF1[slug];
   const hasTl = !!RTF1_TL[slug];
@@ -823,6 +894,7 @@ function DriverPage() {
             {!d.pro && <div className="adslot"><span>Advertisement</span></div>}
             {d.pro ? <H2HPro d={d} /> : <H2HGate d={d} />}
             <RoadToF1 slug={(new URLSearchParams(location.search).get("d") || "").toLowerCase()} />
+            <FantasySection slug={(new URLSearchParams(location.search).get("d") || "").toLowerCase()} />
             <div className="foot">F1 <b>Δ</b> DELTA · data via F1DB · unofficial</div>
           </div>
         </>

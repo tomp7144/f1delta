@@ -1,0 +1,23 @@
+{
+  "driverId": "fred-wacker",
+  "name": "Fred Wacker",
+  "career": {
+    "score": 26,
+    "races": 5,
+    "partial": 1
+  },
+  "seasons": [
+    {
+      "year": 1953,
+      "score": 14,
+      "races": 3,
+      "partial": 1
+    },
+    {
+      "year": 1954,
+      "score": 12,
+      "races": 2,
+      "partial": 0
+    }
+  ]
+}

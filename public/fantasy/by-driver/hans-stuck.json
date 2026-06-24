@@ -1,0 +1,29 @@
+{
+  "driverId": "hans-stuck",
+  "name": "Hans Stuck",
+  "career": {
+    "score": -10,
+    "races": 5,
+    "partial": 1
+  },
+  "seasons": [
+    {
+      "year": 1951,
+      "score": 0,
+      "races": 1,
+      "partial": 1
+    },
+    {
+      "year": 1952,
+      "score": -20,
+      "races": 2,
+      "partial": 0
+    },
+    {
+      "year": 1953,
+      "score": 10,
+      "races": 2,
+      "partial": 0
+    }
+  ]
+}

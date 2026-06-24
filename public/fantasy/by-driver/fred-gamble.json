@@ -1,0 +1,17 @@
+{
+  "driverId": "fred-gamble",
+  "name": "Fred Gamble",
+  "career": {
+    "score": 9,
+    "races": 1,
+    "partial": 0
+  },
+  "seasons": [
+    {
+      "year": 1960,
+      "score": 9,
+      "races": 1,
+      "partial": 0
+    }
+  ]
+}

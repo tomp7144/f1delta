@@ -1,0 +1,17 @@
+{
+  "driverId": "robert-la-caze",
+  "name": "Robert La Caze",
+  "career": {
+    "score": 18,
+    "races": 1,
+    "partial": 0
+  },
+  "seasons": [
+    {
+      "year": 1958,
+      "score": 18,
+      "races": 1,
+      "partial": 0
+    }
+  ]
+}

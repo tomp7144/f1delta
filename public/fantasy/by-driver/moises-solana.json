@@ -1,0 +1,47 @@
+{
+  "driverId": "moises-solana",
+  "name": "Moisés Solana",
+  "career": {
+    "score": -73,
+    "races": 8,
+    "partial": 0
+  },
+  "seasons": [
+    {
+      "year": 1963,
+      "score": 0,
+      "races": 1,
+      "partial": 0
+    },
+    {
+      "year": 1964,
+      "score": 9,
+      "races": 1,
+      "partial": 0
+    },
+    {
+      "year": 1965,
+      "score": -8,
+      "races": 2,
+      "partial": 0
+    },
+    {
+      "year": 1966,
+      "score": -20,
+      "races": 1,
+      "partial": 0
+    },
+    {
+      "year": 1967,
+      "score": -34,
+      "races": 2,
+      "partial": 0
+    },
+    {
+      "year": 1968,
+      "score": -20,
+      "races": 1,
+      "partial": 0
+    }
+  ]
+}

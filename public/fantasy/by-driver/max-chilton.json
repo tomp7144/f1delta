@@ -1,0 +1,23 @@
+{
+  "driverId": "max-chilton",
+  "name": "Max Chilton",
+  "career": {
+    "score": 115,
+    "races": 35,
+    "partial": 0
+  },
+  "seasons": [
+    {
+      "year": 2013,
+      "score": 92,
+      "races": 19,
+      "partial": 0
+    },
+    {
+      "year": 2014,
+      "score": 23,
+      "races": 16,
+      "partial": 0
+    }
+  ]
+}

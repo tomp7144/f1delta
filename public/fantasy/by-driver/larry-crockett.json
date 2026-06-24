@@ -1,0 +1,17 @@
+{
+  "driverId": "larry-crockett",
+  "name": "Larry Crockett",
+  "career": {
+    "score": 34,
+    "races": 1,
+    "partial": 0
+  },
+  "seasons": [
+    {
+      "year": 1954,
+      "score": 34,
+      "races": 1,
+      "partial": 0
+    }
+  ]
+}

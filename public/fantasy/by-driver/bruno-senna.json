@@ -1,0 +1,29 @@
+{
+  "driverId": "bruno-senna",
+  "name": "Bruno Senna",
+  "career": {
+    "score": -1,
+    "races": 46,
+    "partial": 0
+  },
+  "seasons": [
+    {
+      "year": 2010,
+      "score": -82,
+      "races": 18,
+      "partial": 0
+    },
+    {
+      "year": 2011,
+      "score": -19,
+      "races": 8,
+      "partial": 0
+    },
+    {
+      "year": 2012,
+      "score": 100,
+      "races": 20,
+      "partial": 0
+    }
+  ]
+}

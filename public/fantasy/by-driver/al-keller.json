@@ -1,0 +1,41 @@
+{
+  "driverId": "al-keller",
+  "name": "Al Keller",
+  "career": {
+    "score": 23,
+    "races": 5,
+    "partial": 0
+  },
+  "seasons": [
+    {
+      "year": 1955,
+      "score": -10,
+      "races": 1,
+      "partial": 0
+    },
+    {
+      "year": 1956,
+      "score": 28,
+      "races": 1,
+      "partial": 0
+    },
+    {
+      "year": 1957,
+      "score": -35,
+      "races": 1,
+      "partial": 0
+    },
+    {
+      "year": 1958,
+      "score": 20,
+      "races": 1,
+      "partial": 0
+    },
+    {
+      "year": 1959,
+      "score": 20,
+      "races": 1,
+      "partial": 0
+    }
+  ]
+}

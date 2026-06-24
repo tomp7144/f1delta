@@ -1,0 +1,23 @@
+{
+  "driverId": "julian-bailey",
+  "name": "Julian Bailey",
+  "career": {
+    "score": 104,
+    "races": 20,
+    "partial": 0
+  },
+  "seasons": [
+    {
+      "year": 1988,
+      "score": 56,
+      "races": 16,
+      "partial": 0
+    },
+    {
+      "year": 1991,
+      "score": 48,
+      "races": 4,
+      "partial": 0
+    }
+  ]
+}

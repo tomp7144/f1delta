@@ -1,0 +1,35 @@
+{
+  "driverId": "howden-ganley",
+  "name": "Howden Ganley",
+  "career": {
+    "score": 99,
+    "races": 41,
+    "partial": 0
+  },
+  "seasons": [
+    {
+      "year": 1971,
+      "score": 35,
+      "races": 11,
+      "partial": 0
+    },
+    {
+      "year": 1972,
+      "score": 26,
+      "races": 11,
+      "partial": 0
+    },
+    {
+      "year": 1973,
+      "score": 32,
+      "races": 15,
+      "partial": 0
+    },
+    {
+      "year": 1974,
+      "score": 6,
+      "races": 4,
+      "partial": 0
+    }
+  ]
+}

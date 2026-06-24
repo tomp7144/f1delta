@@ -1,0 +1,83 @@
+{
+  "driverId": "carlos-sainz-jr",
+  "name": "Carlos Sainz Jr.",
+  "career": {
+    "score": 1762,
+    "races": 238,
+    "partial": 5
+  },
+  "seasons": [
+    {
+      "year": 2015,
+      "score": -52,
+      "races": 19,
+      "partial": 2
+    },
+    {
+      "year": 2016,
+      "score": 37,
+      "races": 21,
+      "partial": 0
+    },
+    {
+      "year": 2017,
+      "score": 3,
+      "races": 20,
+      "partial": 0
+    },
+    {
+      "year": 2018,
+      "score": 89,
+      "races": 21,
+      "partial": 0
+    },
+    {
+      "year": 2019,
+      "score": 107,
+      "races": 21,
+      "partial": 1
+    },
+    {
+      "year": 2020,
+      "score": 180,
+      "races": 17,
+      "partial": 0
+    },
+    {
+      "year": 2021,
+      "score": 325,
+      "races": 22,
+      "partial": 0
+    },
+    {
+      "year": 2022,
+      "score": 331,
+      "races": 22,
+      "partial": 0
+    },
+    {
+      "year": 2023,
+      "score": 267,
+      "races": 22,
+      "partial": 0
+    },
+    {
+      "year": 2024,
+      "score": 362,
+      "races": 23,
+      "partial": 0
+    },
+    {
+      "year": 2025,
+      "score": 69,
+      "races": 24,
+      "partial": 1
+    },
+    {
+      "year": 2026,
+      "score": 44,
+      "races": 6,
+      "partial": 1
+    }
+  ]
+}

@@ -1,0 +1,29 @@
+{
+  "driverId": "peter-walker",
+  "name": "Peter Walker",
+  "career": {
+    "score": -28,
+    "races": 4,
+    "partial": 1
+  },
+  "seasons": [
+    {
+      "year": 1950,
+      "score": -19,
+      "races": 1,
+      "partial": 0
+    },
+    {
+      "year": 1951,
+      "score": 30,
+      "races": 1,
+      "partial": 0
+    },
+    {
+      "year": 1955,
+      "score": -39,
+      "races": 2,
+      "partial": 1
+    }
+  ]
+}

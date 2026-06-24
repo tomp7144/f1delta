@@ -1,0 +1,41 @@
+{
+  "driverId": "harald-ertl",
+  "name": "Harald Ertl",
+  "career": {
+    "score": 102,
+    "races": 29,
+    "partial": 2
+  },
+  "seasons": [
+    {
+      "year": 1975,
+      "score": 32,
+      "races": 3,
+      "partial": 0
+    },
+    {
+      "year": 1976,
+      "score": 38,
+      "races": 15,
+      "partial": 0
+    },
+    {
+      "year": 1977,
+      "score": 28,
+      "races": 5,
+      "partial": 0
+    },
+    {
+      "year": 1978,
+      "score": 4,
+      "races": 5,
+      "partial": 2
+    },
+    {
+      "year": 1980,
+      "score": 0,
+      "races": 1,
+      "partial": 0
+    }
+  ]
+}

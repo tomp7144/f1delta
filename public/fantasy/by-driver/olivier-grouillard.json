@@ -1,0 +1,35 @@
+{
+  "driverId": "olivier-grouillard",
+  "name": "Olivier Grouillard",
+  "career": {
+    "score": -245,
+    "races": 62,
+    "partial": 11
+  },
+  "seasons": [
+    {
+      "year": 1989,
+      "score": -10,
+      "races": 16,
+      "partial": 0
+    },
+    {
+      "year": 1990,
+      "score": -59,
+      "races": 16,
+      "partial": 2
+    },
+    {
+      "year": 1991,
+      "score": -32,
+      "races": 14,
+      "partial": 9
+    },
+    {
+      "year": 1992,
+      "score": -144,
+      "races": 16,
+      "partial": 0
+    }
+  ]
+}

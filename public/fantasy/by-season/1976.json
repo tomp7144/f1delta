@@ -1,0 +1,442 @@
+{
+  "year": 1976,
+  "drivers": {
+    "niki-lauda": {
+      "score": 289,
+      "races": 14,
+      "partial": 0
+    },
+    "patrick-depailler": {
+      "score": 156,
+      "races": 16,
+      "partial": 0
+    },
+    "tom-pryce": {
+      "score": 173,
+      "races": 16,
+      "partial": 0
+    },
+    "hans-joachim-stuck": {
+      "score": -99,
+      "races": 16,
+      "partial": 0
+    },
+    "jody-scheckter": {
+      "score": 236,
+      "races": 16,
+      "partial": 0
+    },
+    "jochen-mass": {
+      "score": 167,
+      "races": 16,
+      "partial": 0
+    },
+    "clay-regazzoni": {
+      "score": 149,
+      "races": 15,
+      "partial": 0
+    },
+    "jacky-ickx": {
+      "score": 53,
+      "races": 12,
+      "partial": 0
+    },
+    "renzo-zorzi": {
+      "score": 18,
+      "races": 1,
+      "partial": 0
+    },
+    "carlos-pace": {
+      "score": 5,
+      "races": 16,
+      "partial": 0
+    },
+    "ingo-hoffmann": {
+      "score": 18,
+      "races": 4,
+      "partial": 0
+    },
+    "carlos-reutemann": {
+      "score": -143,
+      "races": 13,
+      "partial": 0
+    },
+    "emerson-fittipaldi": {
+      "score": -24,
+      "races": 16,
+      "partial": 0
+    },
+    "lella-lombardi": {
+      "score": 40,
+      "races": 4,
+      "partial": 0
+    },
+    "jean-pierre-jarier": {
+      "score": 66,
+      "races": 16,
+      "partial": 0
+    },
+    "james-hunt": {
+      "score": 214,
+      "races": 16,
+      "partial": 0
+    },
+    "vittorio-brambilla": {
+      "score": -146,
+      "races": 16,
+      "partial": 0
+    },
+    "jacques-laffite": {
+      "score": 0,
+      "races": 16,
+      "partial": 0
+    },
+    "ronnie-peterson": {
+      "score": -123,
+      "races": 16,
+      "partial": 0
+    },
+    "mario-andretti": {
+      "score": 5,
+      "races": 15,
+      "partial": 0
+    },
+    "john-watson": {
+      "score": 135,
+      "races": 16,
+      "partial": 0
+    },
+    "ian-ashley": {
+      "score": -20,
+      "races": 1,
+      "partial": 0
+    },
+    "bob-evans": {
+      "score": 7,
+      "races": 3,
+      "partial": 0
+    },
+    "brett-lunger": {
+      "score": 63,
+      "races": 12,
+      "partial": 0
+    },
+    "michel-leclere": {
+      "score": 85,
+      "races": 7,
+      "partial": 0
+    },
+    "chris-amon": {
+      "score": -15,
+      "races": 9,
+      "partial": 0
+    },
+    "harald-ertl": {
+      "score": 38,
+      "races": 15,
+      "partial": 0
+    },
+    "gunnar-nilsson": {
+      "score": -66,
+      "races": 15,
+      "partial": 0
+    },
+    "ian-scheckter": {
+      "score": -20,
+      "races": 1,
+      "partial": 0
+    },
+    "alan-jones": {
+      "score": 141,
+      "races": 14,
+      "partial": 0
+    },
+    "arturo-merzario": {
+      "score": -144,
+      "races": 14,
+      "partial": 0
+    },
+    "larry-perkins": {
+      "score": -46,
+      "races": 9,
+      "partial": 0
+    },
+    "loris-kessel": {
+      "score": -18,
+      "races": 5,
+      "partial": 0
+    },
+    "emilio-zapico": {
+      "score": 0,
+      "races": 1,
+      "partial": 0
+    },
+    "emilio-de-villota": {
+      "score": 0,
+      "races": 1,
+      "partial": 0
+    },
+    "patrick-neve": {
+      "score": -4,
+      "races": 2,
+      "partial": 0
+    },
+    "guy-edwards": {
+      "score": 22,
+      "races": 6,
+      "partial": 0
+    },
+    "henri-pescarolo": {
+      "score": 4,
+      "races": 9,
+      "partial": 0
+    },
+    "jac-nellemann": {
+      "score": 0,
+      "races": 1,
+      "partial": 0
+    },
+    "damien-magee": {
+      "score": 0,
+      "races": 1,
+      "partial": 0
+    },
+    "divina-galica": {
+      "score": 0,
+      "races": 1,
+      "partial": 0
+    },
+    "mike-wilds": {
+      "score": 0,
+      "races": 1,
+      "partial": 0
+    },
+    "rolf-stommelen": {
+      "score": 32,
+      "races": 4,
+      "partial": 1
+    },
+    "alessandro-pesenti-rossi": {
+      "score": 54,
+      "races": 4,
+      "partial": 0
+    },
+    "hans-binder": {
+      "score": -40,
+      "races": 2,
+      "partial": 0
+    },
+    "boy-hayje": {
+      "score": -20,
+      "races": 1,
+      "partial": 0
+    },
+    "conny-andersson": {
+      "score": -20,
+      "races": 1,
+      "partial": 0
+    },
+    "otto-stuppacher": {
+      "score": 0,
+      "races": 3,
+      "partial": 0
+    },
+    "alex-ribeiro": {
+      "score": 20,
+      "races": 1,
+      "partial": 0
+    },
+    "warwick-brown": {
+      "score": 18,
+      "races": 1,
+      "partial": 0
+    },
+    "noritake-takahara": {
+      "score": 32,
+      "races": 1,
+      "partial": 0
+    },
+    "masahiro-hasemi": {
+      "score": -1,
+      "races": 1,
+      "partial": 0
+    },
+    "kazuyoshi-hoshino": {
+      "score": -20,
+      "races": 1,
+      "partial": 0
+    },
+    "masami-kuwashima": {
+      "score": 0,
+      "races": 1,
+      "partial": 0
+    },
+    "tony-trimmer": {
+      "score": 0,
+      "races": 1,
+      "partial": 0
+    }
+  },
+  "races": [
+    {
+      "round": 1,
+      "raceId": 265,
+      "gpId": "brazil",
+      "name": "Brazilian GP",
+      "topId": "niki-lauda",
+      "topName": "Niki Lauda",
+      "topScore": 36,
+      "partial": false
+    },
+    {
+      "round": 2,
+      "raceId": 266,
+      "gpId": "south-africa",
+      "name": "South African GP",
+      "topId": "niki-lauda",
+      "topName": "Niki Lauda",
+      "topScore": 41,
+      "partial": false
+    },
+    {
+      "round": 3,
+      "raceId": 267,
+      "gpId": "united-states-west",
+      "name": "United States GP West",
+      "topId": "clay-regazzoni",
+      "topName": "Clay Regazzoni",
+      "topScore": 40,
+      "partial": false
+    },
+    {
+      "round": 4,
+      "raceId": 268,
+      "gpId": "spain",
+      "name": "Spanish GP",
+      "topId": "james-hunt",
+      "topName": "James Hunt",
+      "topScore": 35,
+      "partial": false
+    },
+    {
+      "round": 5,
+      "raceId": 269,
+      "gpId": "belgium",
+      "name": "Belgian GP",
+      "topId": "niki-lauda",
+      "topName": "Niki Lauda",
+      "topScore": 40,
+      "partial": false
+    },
+    {
+      "round": 6,
+      "raceId": 270,
+      "gpId": "monaco",
+      "name": "Monaco GP",
+      "topId": "niki-lauda",
+      "topName": "Niki Lauda",
+      "topScore": 35,
+      "partial": false
+    },
+    {
+      "round": 7,
+      "raceId": 271,
+      "gpId": "sweden",
+      "name": "Swedish GP",
+      "topId": "jody-scheckter",
+      "topName": "Jody Scheckter",
+      "topScore": 35,
+      "partial": false
+    },
+    {
+      "round": 8,
+      "raceId": 272,
+      "gpId": "france",
+      "name": "French GP",
+      "topId": "james-hunt",
+      "topName": "James Hunt",
+      "topScore": 35,
+      "partial": false
+    },
+    {
+      "round": 9,
+      "raceId": 273,
+      "gpId": "great-britain",
+      "name": "British GP",
+      "topId": "tom-pryce",
+      "topName": "Tom Pryce",
+      "topScore": 44,
+      "partial": false
+    },
+    {
+      "round": 10,
+      "raceId": 274,
+      "gpId": "germany",
+      "name": "German GP",
+      "topId": "jody-scheckter",
+      "topName": "Jody Scheckter",
+      "topScore": 38,
+      "partial": true
+    },
+    {
+      "round": 11,
+      "raceId": 275,
+      "gpId": "austria",
+      "name": "Austrian GP",
+      "topId": "john-watson",
+      "topName": "John Watson",
+      "topScore": 36,
+      "partial": false
+    },
+    {
+      "round": 12,
+      "raceId": 276,
+      "gpId": "netherlands",
+      "name": "Dutch GP",
+      "topId": "james-hunt",
+      "topName": "James Hunt",
+      "topScore": 36,
+      "partial": false
+    },
+    {
+      "round": 13,
+      "raceId": 277,
+      "gpId": "italy",
+      "name": "Italian GP",
+      "topId": "ronnie-peterson",
+      "topName": "Ronnie Peterson",
+      "topScore": 47,
+      "partial": false
+    },
+    {
+      "round": 14,
+      "raceId": 278,
+      "gpId": "canada",
+      "name": "Canadian GP",
+      "topId": "james-hunt",
+      "topName": "James Hunt",
+      "topScore": 35,
+      "partial": false
+    },
+    {
+      "round": 15,
+      "raceId": 279,
+      "gpId": "united-states",
+      "name": "United States GP",
+      "topId": "james-hunt",
+      "topName": "James Hunt",
+      "topScore": 40,
+      "partial": false
+    },
+    {
+      "round": 16,
+      "raceId": 280,
+      "gpId": "japan",
+      "name": "Japanese GP",
+      "topId": "alan-jones",
+      "topName": "Alan Jones",
+      "topScore": 44,
+      "partial": false
+    }
+  ]
+}

@@ -1,0 +1,53 @@
+{
+  "driverId": "gabriele-tarquini",
+  "name": "Gabriele Tarquini",
+  "career": {
+    "score": -192,
+    "races": 78,
+    "partial": 25
+  },
+  "seasons": [
+    {
+      "year": 1987,
+      "score": -20,
+      "races": 1,
+      "partial": 0
+    },
+    {
+      "year": 1988,
+      "score": 22,
+      "races": 16,
+      "partial": 6
+    },
+    {
+      "year": 1989,
+      "score": 34,
+      "races": 15,
+      "partial": 8
+    },
+    {
+      "year": 1990,
+      "score": -38,
+      "races": 16,
+      "partial": 7
+    },
+    {
+      "year": 1991,
+      "score": 38,
+      "races": 16,
+      "partial": 4
+    },
+    {
+      "year": 1992,
+      "score": -238,
+      "races": 13,
+      "partial": 0
+    },
+    {
+      "year": 1995,
+      "score": 10,
+      "races": 1,
+      "partial": 0
+    }
+  ]
+}

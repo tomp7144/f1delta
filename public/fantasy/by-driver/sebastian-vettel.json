@@ -1,0 +1,107 @@
+{
+  "driverId": "sebastian-vettel",
+  "name": "Sebastian Vettel",
+  "career": {
+    "score": 4847,
+    "races": 300,
+    "partial": 5
+  },
+  "seasons": [
+    {
+      "year": 2007,
+      "score": -5,
+      "races": 8,
+      "partial": 0
+    },
+    {
+      "year": 2008,
+      "score": 61,
+      "races": 18,
+      "partial": 1
+    },
+    {
+      "year": 2009,
+      "score": 293,
+      "races": 17,
+      "partial": 0
+    },
+    {
+      "year": 2010,
+      "score": 330,
+      "races": 19,
+      "partial": 0
+    },
+    {
+      "year": 2011,
+      "score": 562,
+      "races": 19,
+      "partial": 0
+    },
+    {
+      "year": 2012,
+      "score": 419,
+      "races": 20,
+      "partial": 1
+    },
+    {
+      "year": 2013,
+      "score": 596,
+      "races": 19,
+      "partial": 0
+    },
+    {
+      "year": 2014,
+      "score": 244,
+      "races": 19,
+      "partial": 1
+    },
+    {
+      "year": 2015,
+      "score": 465,
+      "races": 19,
+      "partial": 0
+    },
+    {
+      "year": 2016,
+      "score": 366,
+      "races": 21,
+      "partial": 0
+    },
+    {
+      "year": 2017,
+      "score": 461,
+      "races": 20,
+      "partial": 1
+    },
+    {
+      "year": 2018,
+      "score": 483,
+      "races": 21,
+      "partial": 0
+    },
+    {
+      "year": 2019,
+      "score": 294,
+      "races": 21,
+      "partial": 1
+    },
+    {
+      "year": 2020,
+      "score": 87,
+      "races": 17,
+      "partial": 0
+    },
+    {
+      "year": 2021,
+      "score": 71,
+      "races": 22,
+      "partial": 0
+    },
+    {
+      "year": 2022,
+      "score": 120,
+      "races": 20,
+      "partial": 0
+    }
+  ]
+}

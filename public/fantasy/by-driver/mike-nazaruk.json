@@ -1,0 +1,29 @@
+{
+  "driverId": "mike-nazaruk",
+  "name": "Mike Nazaruk",
+  "career": {
+    "score": 64,
+    "races": 3,
+    "partial": 0
+  },
+  "seasons": [
+    {
+      "year": 1951,
+      "score": 32,
+      "races": 1,
+      "partial": 0
+    },
+    {
+      "year": 1953,
+      "score": 4,
+      "races": 1,
+      "partial": 0
+    },
+    {
+      "year": 1954,
+      "score": 28,
+      "races": 1,
+      "partial": 0
+    }
+  ]
+}

@@ -1,0 +1,17 @@
+{
+  "driverId": "gino-bianco",
+  "name": "Gino Bianco",
+  "career": {
+    "score": -40,
+    "races": 4,
+    "partial": 0
+  },
+  "seasons": [
+    {
+      "year": 1952,
+      "score": -40,
+      "races": 4,
+      "partial": 0
+    }
+  ]
+}

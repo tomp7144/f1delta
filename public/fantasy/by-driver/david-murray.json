@@ -1,0 +1,29 @@
+{
+  "driverId": "david-murray",
+  "name": "David Murray",
+  "career": {
+    "score": -80,
+    "races": 5,
+    "partial": 1
+  },
+  "seasons": [
+    {
+      "year": 1950,
+      "score": -40,
+      "races": 2,
+      "partial": 0
+    },
+    {
+      "year": 1951,
+      "score": -20,
+      "races": 2,
+      "partial": 1
+    },
+    {
+      "year": 1952,
+      "score": -20,
+      "races": 1,
+      "partial": 0
+    }
+  ]
+}

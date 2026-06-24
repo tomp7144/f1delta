@@ -1,0 +1,59 @@
+{
+  "driverId": "sam-hanks",
+  "name": "Sam Hanks",
+  "career": {
+    "score": 93,
+    "races": 9,
+    "partial": 1
+  },
+  "seasons": [
+    {
+      "year": 1950,
+      "score": -10,
+      "races": 1,
+      "partial": 0
+    },
+    {
+      "year": 1951,
+      "score": 0,
+      "races": 1,
+      "partial": 0
+    },
+    {
+      "year": 1952,
+      "score": 25,
+      "races": 1,
+      "partial": 0
+    },
+    {
+      "year": 1953,
+      "score": 29,
+      "races": 1,
+      "partial": 0
+    },
+    {
+      "year": 1954,
+      "score": -19,
+      "races": 2,
+      "partial": 1
+    },
+    {
+      "year": 1955,
+      "score": -21,
+      "races": 1,
+      "partial": 0
+    },
+    {
+      "year": 1956,
+      "score": 40,
+      "races": 1,
+      "partial": 0
+    },
+    {
+      "year": 1957,
+      "score": 49,
+      "races": 1,
+      "partial": 0
+    }
+  ]
+}

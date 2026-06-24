@@ -1,0 +1,53 @@
+{
+  "driverId": "giancarlo-baghetti",
+  "name": "Giancarlo Baghetti",
+  "career": {
+    "score": 6,
+    "races": 21,
+    "partial": 0
+  },
+  "seasons": [
+    {
+      "year": 1961,
+      "score": 12,
+      "races": 3,
+      "partial": 0
+    },
+    {
+      "year": 1962,
+      "score": 51,
+      "races": 4,
+      "partial": 0
+    },
+    {
+      "year": 1963,
+      "score": -70,
+      "races": 5,
+      "partial": 0
+    },
+    {
+      "year": 1964,
+      "score": 73,
+      "races": 6,
+      "partial": 0
+    },
+    {
+      "year": 1965,
+      "score": -20,
+      "races": 1,
+      "partial": 0
+    },
+    {
+      "year": 1966,
+      "score": -20,
+      "races": 1,
+      "partial": 0
+    },
+    {
+      "year": 1967,
+      "score": -20,
+      "races": 1,
+      "partial": 0
+    }
+  ]
+}

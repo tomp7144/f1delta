@@ -1,0 +1,35 @@
+{
+  "driverId": "christian-danner",
+  "name": "Christian Danner",
+  "career": {
+    "score": -61,
+    "races": 47,
+    "partial": 1
+  },
+  "seasons": [
+    {
+      "year": 1985,
+      "score": -40,
+      "races": 2,
+      "partial": 0
+    },
+    {
+      "year": 1986,
+      "score": -80,
+      "races": 16,
+      "partial": 0
+    },
+    {
+      "year": 1987,
+      "score": -59,
+      "races": 16,
+      "partial": 1
+    },
+    {
+      "year": 1989,
+      "score": 118,
+      "races": 13,
+      "partial": 0
+    }
+  ]
+}

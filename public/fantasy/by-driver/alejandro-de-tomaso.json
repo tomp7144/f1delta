@@ -1,0 +1,23 @@
+{
+  "driverId": "alejandro-de-tomaso",
+  "name": "Alejandro de Tomaso",
+  "career": {
+    "score": -12,
+    "races": 2,
+    "partial": 0
+  },
+  "seasons": [
+    {
+      "year": 1957,
+      "score": 8,
+      "races": 1,
+      "partial": 0
+    },
+    {
+      "year": 1959,
+      "score": -20,
+      "races": 1,
+      "partial": 0
+    }
+  ]
+}

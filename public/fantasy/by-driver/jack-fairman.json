@@ -1,0 +1,59 @@
+{
+  "driverId": "jack-fairman",
+  "name": "Jack Fairman",
+  "career": {
+    "score": -99,
+    "races": 13,
+    "partial": 0
+  },
+  "seasons": [
+    {
+      "year": 1953,
+      "score": -40,
+      "races": 2,
+      "partial": 0
+    },
+    {
+      "year": 1955,
+      "score": 0,
+      "races": 1,
+      "partial": 0
+    },
+    {
+      "year": 1956,
+      "score": 76,
+      "races": 2,
+      "partial": 0
+    },
+    {
+      "year": 1957,
+      "score": -20,
+      "races": 1,
+      "partial": 0
+    },
+    {
+      "year": 1958,
+      "score": -10,
+      "races": 2,
+      "partial": 0
+    },
+    {
+      "year": 1959,
+      "score": -40,
+      "races": 2,
+      "partial": 0
+    },
+    {
+      "year": 1960,
+      "score": -20,
+      "races": 1,
+      "partial": 0
+    },
+    {
+      "year": 1961,
+      "score": -45,
+      "races": 2,
+      "partial": 0
+    }
+  ]
+}

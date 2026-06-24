@@ -1,0 +1,29 @@
+{
+  "driverId": "sakon-yamamoto",
+  "name": "Sakon Yamamoto",
+  "career": {
+    "score": -18,
+    "races": 21,
+    "partial": 0
+  },
+  "seasons": [
+    {
+      "year": 2006,
+      "score": -56,
+      "races": 7,
+      "partial": 0
+    },
+    {
+      "year": 2007,
+      "score": 2,
+      "races": 7,
+      "partial": 0
+    },
+    {
+      "year": 2010,
+      "score": 36,
+      "races": 7,
+      "partial": 0
+    }
+  ]
+}

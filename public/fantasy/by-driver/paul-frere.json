@@ -1,0 +1,41 @@
+{
+  "driverId": "paul-frere",
+  "name": "Paul Frère",
+  "career": {
+    "score": -32,
+    "races": 11,
+    "partial": 1
+  },
+  "seasons": [
+    {
+      "year": 1952,
+      "score": -21,
+      "races": 3,
+      "partial": 0
+    },
+    {
+      "year": 1953,
+      "score": -17,
+      "races": 2,
+      "partial": 0
+    },
+    {
+      "year": 1954,
+      "score": -54,
+      "races": 3,
+      "partial": 0
+    },
+    {
+      "year": 1955,
+      "score": 27,
+      "races": 2,
+      "partial": 1
+    },
+    {
+      "year": 1956,
+      "score": 33,
+      "races": 1,
+      "partial": 0
+    }
+  ]
+}

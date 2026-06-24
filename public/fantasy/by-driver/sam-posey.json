@@ -1,0 +1,23 @@
+{
+  "driverId": "sam-posey",
+  "name": "Sam Posey",
+  "career": {
+    "score": 2,
+    "races": 2,
+    "partial": 0
+  },
+  "seasons": [
+    {
+      "year": 1971,
+      "score": -20,
+      "races": 1,
+      "partial": 0
+    },
+    {
+      "year": 1972,
+      "score": 22,
+      "races": 1,
+      "partial": 0
+    }
+  ]
+}

@@ -1,0 +1,23 @@
+{
+  "driverId": "luciano-burti",
+  "name": "Luciano Burti",
+  "career": {
+    "score": -6,
+    "races": 15,
+    "partial": 0
+  },
+  "seasons": [
+    {
+      "year": 2000,
+      "score": 0,
+      "races": 1,
+      "partial": 0
+    },
+    {
+      "year": 2001,
+      "score": -6,
+      "races": 14,
+      "partial": 0
+    }
+  ]
+}

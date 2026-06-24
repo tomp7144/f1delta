@@ -1,0 +1,23 @@
+{
+  "driverId": "mauri-rose",
+  "name": "Mauri Rose",
+  "career": {
+    "score": 11,
+    "races": 2,
+    "partial": 0
+  },
+  "seasons": [
+    {
+      "year": 1950,
+      "score": 23,
+      "races": 1,
+      "partial": 0
+    },
+    {
+      "year": 1951,
+      "score": -12,
+      "races": 1,
+      "partial": 0
+    }
+  ]
+}

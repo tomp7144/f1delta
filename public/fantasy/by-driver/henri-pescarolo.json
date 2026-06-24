@@ -1,0 +1,59 @@
+{
+  "driverId": "henri-pescarolo",
+  "name": "Henri Pescarolo",
+  "career": {
+    "score": 85,
+    "races": 64,
+    "partial": 0
+  },
+  "seasons": [
+    {
+      "year": 1968,
+      "score": 4,
+      "races": 3,
+      "partial": 0
+    },
+    {
+      "year": 1969,
+      "score": 34,
+      "races": 1,
+      "partial": 0
+    },
+    {
+      "year": 1970,
+      "score": 99,
+      "races": 13,
+      "partial": 0
+    },
+    {
+      "year": 1971,
+      "score": -30,
+      "races": 11,
+      "partial": 0
+    },
+    {
+      "year": 1972,
+      "score": 12,
+      "races": 12,
+      "partial": 0
+    },
+    {
+      "year": 1973,
+      "score": 9,
+      "races": 3,
+      "partial": 0
+    },
+    {
+      "year": 1974,
+      "score": -47,
+      "races": 12,
+      "partial": 0
+    },
+    {
+      "year": 1976,
+      "score": 4,
+      "races": 9,
+      "partial": 0
+    }
+  ]
+}

@@ -1,0 +1,47 @@
+{
+  "driverId": "wolfgang-von-trips",
+  "name": "Wolfgang von Trips",
+  "career": {
+    "score": 304,
+    "races": 29,
+    "partial": 2
+  },
+  "seasons": [
+    {
+      "year": 1956,
+      "score": 0,
+      "races": 1,
+      "partial": 0
+    },
+    {
+      "year": 1957,
+      "score": 48,
+      "races": 3,
+      "partial": 1
+    },
+    {
+      "year": 1958,
+      "score": 33,
+      "races": 6,
+      "partial": 0
+    },
+    {
+      "year": 1959,
+      "score": -7,
+      "races": 3,
+      "partial": 1
+    },
+    {
+      "year": 1960,
+      "score": 99,
+      "races": 9,
+      "partial": 0
+    },
+    {
+      "year": 1961,
+      "score": 131,
+      "races": 7,
+      "partial": 0
+    }
+  ]
+}

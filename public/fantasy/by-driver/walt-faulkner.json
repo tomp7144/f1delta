@@ -1,0 +1,41 @@
+{
+  "driverId": "walt-faulkner",
+  "name": "Walt Faulkner",
+  "career": {
+    "score": 14,
+    "races": 5,
+    "partial": 1
+  },
+  "seasons": [
+    {
+      "year": 1950,
+      "score": 4,
+      "races": 1,
+      "partial": 0
+    },
+    {
+      "year": 1951,
+      "score": -2,
+      "races": 1,
+      "partial": 0
+    },
+    {
+      "year": 1953,
+      "score": -6,
+      "races": 1,
+      "partial": 0
+    },
+    {
+      "year": 1954,
+      "score": 0,
+      "races": 1,
+      "partial": 1
+    },
+    {
+      "year": 1955,
+      "score": 18,
+      "races": 1,
+      "partial": 0
+    }
+  ]
+}

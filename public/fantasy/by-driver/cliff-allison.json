@@ -1,0 +1,35 @@
+{
+  "driverId": "cliff-allison",
+  "name": "Cliff Allison",
+  "career": {
+    "score": 115,
+    "races": 18,
+    "partial": 1
+  },
+  "seasons": [
+    {
+      "year": 1958,
+      "score": 80,
+      "races": 9,
+      "partial": 0
+    },
+    {
+      "year": 1959,
+      "score": -13,
+      "races": 5,
+      "partial": 0
+    },
+    {
+      "year": 1960,
+      "score": 32,
+      "races": 2,
+      "partial": 0
+    },
+    {
+      "year": 1961,
+      "score": 16,
+      "races": 2,
+      "partial": 1
+    }
+  ]
+}

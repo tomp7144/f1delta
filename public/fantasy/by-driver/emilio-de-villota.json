@@ -1,0 +1,35 @@
+{
+  "driverId": "emilio-de-villota",
+  "name": "Emilio de Villota",
+  "career": {
+    "score": 38,
+    "races": 14,
+    "partial": 3
+  },
+  "seasons": [
+    {
+      "year": 1976,
+      "score": 0,
+      "races": 1,
+      "partial": 0
+    },
+    {
+      "year": 1977,
+      "score": 38,
+      "races": 7,
+      "partial": 0
+    },
+    {
+      "year": 1978,
+      "score": 0,
+      "races": 1,
+      "partial": 0
+    },
+    {
+      "year": 1982,
+      "score": 0,
+      "races": 5,
+      "partial": 3
+    }
+  ]
+}

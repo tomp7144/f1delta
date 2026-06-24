@@ -1,0 +1,35 @@
+{
+  "driverId": "luigi-piotti",
+  "name": "Luigi Piotti",
+  "career": {
+    "score": -27,
+    "races": 9,
+    "partial": 1
+  },
+  "seasons": [
+    {
+      "year": 1955,
+      "score": 0,
+      "races": 1,
+      "partial": 1
+    },
+    {
+      "year": 1956,
+      "score": 4,
+      "races": 3,
+      "partial": 0
+    },
+    {
+      "year": 1957,
+      "score": -31,
+      "races": 4,
+      "partial": 0
+    },
+    {
+      "year": 1958,
+      "score": 0,
+      "races": 1,
+      "partial": 0
+    }
+  ]
+}

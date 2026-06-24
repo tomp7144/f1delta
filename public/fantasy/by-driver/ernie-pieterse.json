@@ -1,0 +1,29 @@
+{
+  "driverId": "ernie-pieterse",
+  "name": "Ernie Pieterse",
+  "career": {
+    "score": -13,
+    "races": 3,
+    "partial": 0
+  },
+  "seasons": [
+    {
+      "year": 1962,
+      "score": 7,
+      "races": 1,
+      "partial": 0
+    },
+    {
+      "year": 1963,
+      "score": -20,
+      "races": 1,
+      "partial": 0
+    },
+    {
+      "year": 1965,
+      "score": 0,
+      "races": 1,
+      "partial": 0
+    }
+  ]
+}

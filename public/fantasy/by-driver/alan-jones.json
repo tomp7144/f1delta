@@ -1,0 +1,71 @@
+{
+  "driverId": "alan-jones",
+  "name": "Alan Jones",
+  "career": {
+    "score": 647,
+    "races": 117,
+    "partial": 0
+  },
+  "seasons": [
+    {
+      "year": 1975,
+      "score": 35,
+      "races": 8,
+      "partial": 0
+    },
+    {
+      "year": 1976,
+      "score": 141,
+      "races": 14,
+      "partial": 0
+    },
+    {
+      "year": 1977,
+      "score": 79,
+      "races": 14,
+      "partial": 0
+    },
+    {
+      "year": 1978,
+      "score": 5,
+      "races": 16,
+      "partial": 0
+    },
+    {
+      "year": 1979,
+      "score": 102,
+      "races": 15,
+      "partial": 0
+    },
+    {
+      "year": 1980,
+      "score": 296,
+      "races": 14,
+      "partial": 0
+    },
+    {
+      "year": 1981,
+      "score": 181,
+      "races": 15,
+      "partial": 0
+    },
+    {
+      "year": 1983,
+      "score": -20,
+      "races": 1,
+      "partial": 0
+    },
+    {
+      "year": 1985,
+      "score": -60,
+      "races": 4,
+      "partial": 0
+    },
+    {
+      "year": 1986,
+      "score": -112,
+      "races": 16,
+      "partial": 0
+    }
+  ]
+}

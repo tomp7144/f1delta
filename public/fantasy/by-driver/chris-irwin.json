@@ -1,0 +1,23 @@
+{
+  "driverId": "chris-irwin",
+  "name": "Chris Irwin",
+  "career": {
+    "score": -14,
+    "races": 10,
+    "partial": 0
+  },
+  "seasons": [
+    {
+      "year": 1966,
+      "score": 16,
+      "races": 1,
+      "partial": 0
+    },
+    {
+      "year": 1967,
+      "score": -30,
+      "races": 9,
+      "partial": 0
+    }
+  ]
+}

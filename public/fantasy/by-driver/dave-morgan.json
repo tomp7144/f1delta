@@ -1,0 +1,17 @@
+{
+  "driverId": "dave-morgan",
+  "name": "Dave Morgan",
+  "career": {
+    "score": 10,
+    "races": 1,
+    "partial": 0
+  },
+  "seasons": [
+    {
+      "year": 1975,
+      "score": 10,
+      "races": 1,
+      "partial": 0
+    }
+  ]
+}

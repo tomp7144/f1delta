@@ -1,0 +1,35 @@
+{
+  "driverId": "pedro-lamy",
+  "name": "Pedro Lamy",
+  "career": {
+    "score": 64,
+    "races": 32,
+    "partial": 0
+  },
+  "seasons": [
+    {
+      "year": 1993,
+      "score": 4,
+      "races": 4,
+      "partial": 0
+    },
+    {
+      "year": 1994,
+      "score": 61,
+      "races": 4,
+      "partial": 0
+    },
+    {
+      "year": 1995,
+      "score": 47,
+      "races": 8,
+      "partial": 0
+    },
+    {
+      "year": 1996,
+      "score": -48,
+      "races": 16,
+      "partial": 0
+    }
+  ]
+}

@@ -1,0 +1,101 @@
+{
+  "driverId": "david-coulthard",
+  "name": "David Coulthard",
+  "career": {
+    "score": 1930,
+    "races": 247,
+    "partial": 0
+  },
+  "seasons": [
+    {
+      "year": 1994,
+      "score": 56,
+      "races": 8,
+      "partial": 0
+    },
+    {
+      "year": 1995,
+      "score": 137,
+      "races": 17,
+      "partial": 0
+    },
+    {
+      "year": 1996,
+      "score": 27,
+      "races": 16,
+      "partial": 0
+    },
+    {
+      "year": 1997,
+      "score": 88,
+      "races": 17,
+      "partial": 0
+    },
+    {
+      "year": 1998,
+      "score": 251,
+      "races": 16,
+      "partial": 0
+    },
+    {
+      "year": 1999,
+      "score": 146,
+      "races": 16,
+      "partial": 0
+    },
+    {
+      "year": 2000,
+      "score": 317,
+      "races": 17,
+      "partial": 0
+    },
+    {
+      "year": 2001,
+      "score": 306,
+      "races": 17,
+      "partial": 0
+    },
+    {
+      "year": 2002,
+      "score": 218,
+      "races": 17,
+      "partial": 0
+    },
+    {
+      "year": 2003,
+      "score": 151,
+      "races": 16,
+      "partial": 0
+    },
+    {
+      "year": 2004,
+      "score": 51,
+      "races": 18,
+      "partial": 0
+    },
+    {
+      "year": 2005,
+      "score": 79,
+      "races": 19,
+      "partial": 0
+    },
+    {
+      "year": 2006,
+      "score": 84,
+      "races": 18,
+      "partial": 0
+    },
+    {
+      "year": 2007,
+      "score": 0,
+      "races": 17,
+      "partial": 0
+    },
+    {
+      "year": 2008,
+      "score": 19,
+      "races": 18,
+      "partial": 0
+    }
+  ]
+}

@@ -1,0 +1,23 @@
+{
+  "driverId": "loris-kessel",
+  "name": "Loris Kessel",
+  "career": {
+    "score": -18,
+    "races": 6,
+    "partial": 0
+  },
+  "seasons": [
+    {
+      "year": 1976,
+      "score": -18,
+      "races": 5,
+      "partial": 0
+    },
+    {
+      "year": 1977,
+      "score": 0,
+      "races": 1,
+      "partial": 0
+    }
+  ]
+}

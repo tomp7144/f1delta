@@ -1,0 +1,41 @@
+{
+  "driverId": "andre-simon",
+  "name": "André Simon",
+  "career": {
+    "score": -53,
+    "races": 12,
+    "partial": 0
+  },
+  "seasons": [
+    {
+      "year": 1951,
+      "score": -41,
+      "races": 4,
+      "partial": 0
+    },
+    {
+      "year": 1952,
+      "score": 2,
+      "races": 2,
+      "partial": 0
+    },
+    {
+      "year": 1955,
+      "score": -36,
+      "races": 2,
+      "partial": 0
+    },
+    {
+      "year": 1956,
+      "score": 12,
+      "races": 2,
+      "partial": 0
+    },
+    {
+      "year": 1957,
+      "score": 10,
+      "races": 2,
+      "partial": 0
+    }
+  ]
+}

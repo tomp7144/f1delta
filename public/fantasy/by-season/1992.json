@@ -1,0 +1,362 @@
+{
+  "year": 1992,
+  "drivers": {
+    "nigel-mansell": {
+      "score": 382,
+      "races": 16,
+      "partial": 0
+    },
+    "riccardo-patrese": {
+      "score": 220,
+      "races": 16,
+      "partial": 0
+    },
+    "ayrton-senna": {
+      "score": 138,
+      "races": 16,
+      "partial": 0
+    },
+    "michael-schumacher": {
+      "score": 248,
+      "races": 16,
+      "partial": 0
+    },
+    "gerhard-berger": {
+      "score": 180,
+      "races": 16,
+      "partial": 0
+    },
+    "johnny-herbert": {
+      "score": -155,
+      "races": 16,
+      "partial": 0
+    },
+    "erik-comas": {
+      "score": 41,
+      "races": 16,
+      "partial": 1
+    },
+    "aguri-suzuki": {
+      "score": 72,
+      "races": 16,
+      "partial": 0
+    },
+    "mika-hakkinen": {
+      "score": 96,
+      "races": 16,
+      "partial": 0
+    },
+    "michele-alboreto": {
+      "score": 234,
+      "races": 16,
+      "partial": 0
+    },
+    "mauricio-gugelmin": {
+      "score": -106,
+      "races": 16,
+      "partial": 0
+    },
+    "ukyo-katayama": {
+      "score": -24,
+      "races": 16,
+      "partial": 1
+    },
+    "eric-van-de-poele": {
+      "score": -3,
+      "races": 13,
+      "partial": 0
+    },
+    "olivier-grouillard": {
+      "score": -144,
+      "races": 16,
+      "partial": 0
+    },
+    "thierry-boutsen": {
+      "score": -25,
+      "races": 16,
+      "partial": 0
+    },
+    "pierluigi-martini": {
+      "score": 21,
+      "races": 16,
+      "partial": 0
+    },
+    "gianni-morbidelli": {
+      "score": 21,
+      "races": 16,
+      "partial": 0
+    },
+    "jj-lehto": {
+      "score": 121,
+      "races": 16,
+      "partial": 0
+    },
+    "christian-fittipaldi": {
+      "score": 54,
+      "races": 13,
+      "partial": 0
+    },
+    "andrea-de-cesaris": {
+      "score": 6,
+      "races": 16,
+      "partial": 0
+    },
+    "jean-alesi": {
+      "score": -13,
+      "races": 16,
+      "partial": 0
+    },
+    "ivan-capelli": {
+      "score": -135,
+      "races": 14,
+      "partial": 0
+    },
+    "gabriele-tarquini": {
+      "score": -238,
+      "races": 13,
+      "partial": 0
+    },
+    "karl-wendlinger": {
+      "score": -100,
+      "races": 14,
+      "partial": 0
+    },
+    "bertrand-gachot": {
+      "score": -188,
+      "races": 16,
+      "partial": 0
+    },
+    "martin-brundle": {
+      "score": 198,
+      "races": 16,
+      "partial": 0
+    },
+    "paul-belmondo": {
+      "score": 92,
+      "races": 11,
+      "partial": 0
+    },
+    "andrea-chiesa": {
+      "score": -60,
+      "races": 10,
+      "partial": 0
+    },
+    "stefano-modena": {
+      "score": -82,
+      "races": 16,
+      "partial": 0
+    },
+    "giovanna-amati": {
+      "score": 0,
+      "races": 3,
+      "partial": 0
+    },
+    "alex-caffi": {
+      "score": -25,
+      "races": 1,
+      "partial": 1
+    },
+    "enrico-bertaggia": {
+      "score": -25,
+      "races": 1,
+      "partial": 1
+    },
+    "roberto-moreno": {
+      "score": -20,
+      "races": 9,
+      "partial": 6
+    },
+    "damon-hill": {
+      "score": 48,
+      "races": 8,
+      "partial": 0
+    },
+    "perry-mccarthy": {
+      "score": -25,
+      "races": 7,
+      "partial": 6
+    },
+    "alex-zanardi": {
+      "score": -20,
+      "races": 3,
+      "partial": 0
+    },
+    "emanuele-naspetti": {
+      "score": 28,
+      "races": 5,
+      "partial": 0
+    },
+    "nicola-larini": {
+      "score": 14,
+      "races": 2,
+      "partial": 0
+    },
+    "jan-lammers": {
+      "score": 6,
+      "races": 2,
+      "partial": 0
+    }
+  },
+  "races": [
+    {
+      "round": 1,
+      "raceId": 517,
+      "gpId": "south-africa",
+      "name": "South African GP",
+      "topId": "nigel-mansell",
+      "topName": "Nigel Mansell",
+      "topScore": 40,
+      "partial": true
+    },
+    {
+      "round": 2,
+      "raceId": 518,
+      "gpId": "mexico",
+      "name": "Mexican GP",
+      "topId": "erik-comas",
+      "topName": "Érik Comas",
+      "topScore": 36,
+      "partial": false
+    },
+    {
+      "round": 3,
+      "raceId": 519,
+      "gpId": "brazil",
+      "name": "Brazilian GP",
+      "topId": "gianni-morbidelli",
+      "topName": "Gianni Morbidelli",
+      "topScore": 38,
+      "partial": true
+    },
+    {
+      "round": 4,
+      "raceId": 520,
+      "gpId": "spain",
+      "name": "Spanish GP",
+      "topId": "nigel-mansell",
+      "topName": "Nigel Mansell",
+      "topScore": 40,
+      "partial": true
+    },
+    {
+      "round": 5,
+      "raceId": 521,
+      "gpId": "san-marino",
+      "name": "San Marino GP",
+      "topId": "nigel-mansell",
+      "topName": "Nigel Mansell",
+      "topScore": 35,
+      "partial": true
+    },
+    {
+      "round": 6,
+      "raceId": 522,
+      "gpId": "monaco",
+      "name": "Monaco GP",
+      "topId": "ayrton-senna",
+      "topName": "Ayrton Senna",
+      "topScore": 37,
+      "partial": true
+    },
+    {
+      "round": 7,
+      "raceId": 523,
+      "gpId": "canada",
+      "name": "Canadian GP",
+      "topId": "gerhard-berger",
+      "topName": "Gerhard Berger",
+      "topScore": 43,
+      "partial": true
+    },
+    {
+      "round": 8,
+      "raceId": 524,
+      "gpId": "france",
+      "name": "French GP",
+      "topId": "nigel-mansell",
+      "topName": "Nigel Mansell",
+      "topScore": 40,
+      "partial": false
+    },
+    {
+      "round": 9,
+      "raceId": 525,
+      "gpId": "great-britain",
+      "name": "British GP",
+      "topId": "nigel-mansell",
+      "topName": "Nigel Mansell",
+      "topScore": 40,
+      "partial": true
+    },
+    {
+      "round": 10,
+      "raceId": 526,
+      "gpId": "germany",
+      "name": "German GP",
+      "topId": "nigel-mansell",
+      "topName": "Nigel Mansell",
+      "topScore": 35,
+      "partial": true
+    },
+    {
+      "round": 11,
+      "raceId": 527,
+      "gpId": "hungary",
+      "name": "Hungarian GP",
+      "topId": "ayrton-senna",
+      "topName": "Ayrton Senna",
+      "topScore": 37,
+      "partial": true
+    },
+    {
+      "round": 12,
+      "raceId": 528,
+      "gpId": "belgium",
+      "name": "Belgian GP",
+      "topId": "michael-schumacher",
+      "topName": "Michael Schumacher",
+      "topScore": 42,
+      "partial": true
+    },
+    {
+      "round": 13,
+      "raceId": 529,
+      "gpId": "italy",
+      "name": "Italian GP",
+      "topId": "andrea-de-cesaris",
+      "topName": "Andrea de Cesaris",
+      "topScore": 38,
+      "partial": false
+    },
+    {
+      "round": 14,
+      "raceId": 530,
+      "gpId": "portugal",
+      "name": "Portuguese GP",
+      "topId": "nigel-mansell",
+      "topName": "Nigel Mansell",
+      "topScore": 35,
+      "partial": false
+    },
+    {
+      "round": 15,
+      "raceId": 531,
+      "gpId": "japan",
+      "name": "Japanese GP",
+      "topId": "riccardo-patrese",
+      "topName": "Riccardo Patrese",
+      "topScore": 36,
+      "partial": false
+    },
+    {
+      "round": 16,
+      "raceId": 532,
+      "gpId": "australia",
+      "name": "Australian GP",
+      "topId": "thierry-boutsen",
+      "topName": "Thierry Boutsen",
+      "topScore": 44,
+      "partial": false
+    }
+  ]
+}

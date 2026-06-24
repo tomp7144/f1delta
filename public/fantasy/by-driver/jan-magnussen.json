@@ -1,0 +1,29 @@
+{
+  "driverId": "jan-magnussen",
+  "name": "Jan Magnussen",
+  "career": {
+    "score": -152,
+    "races": 25,
+    "partial": 0
+  },
+  "seasons": [
+    {
+      "year": 1995,
+      "score": 5,
+      "races": 1,
+      "partial": 0
+    },
+    {
+      "year": 1997,
+      "score": -138,
+      "races": 17,
+      "partial": 0
+    },
+    {
+      "year": 1998,
+      "score": -19,
+      "races": 7,
+      "partial": 0
+    }
+  ]
+}

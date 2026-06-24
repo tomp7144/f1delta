@@ -1,0 +1,59 @@
+{
+  "driverId": "marc-surer",
+  "name": "Marc Surer",
+  "career": {
+    "score": 419,
+    "races": 88,
+    "partial": 0
+  },
+  "seasons": [
+    {
+      "year": 1979,
+      "score": -20,
+      "races": 3,
+      "partial": 0
+    },
+    {
+      "year": 1980,
+      "score": 5,
+      "races": 11,
+      "partial": 0
+    },
+    {
+      "year": 1981,
+      "score": 143,
+      "races": 14,
+      "partial": 0
+    },
+    {
+      "year": 1982,
+      "score": 157,
+      "races": 12,
+      "partial": 0
+    },
+    {
+      "year": 1983,
+      "score": 129,
+      "races": 15,
+      "partial": 0
+    },
+    {
+      "year": 1984,
+      "score": -63,
+      "races": 16,
+      "partial": 0
+    },
+    {
+      "year": 1985,
+      "score": 50,
+      "races": 12,
+      "partial": 0
+    },
+    {
+      "year": 1986,
+      "score": 18,
+      "races": 5,
+      "partial": 0
+    }
+  ]
+}

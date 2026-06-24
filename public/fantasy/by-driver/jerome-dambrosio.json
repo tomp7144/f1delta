@@ -1,0 +1,23 @@
+{
+  "driverId": "jerome-dambrosio",
+  "name": "Jérôme d'Ambrosio",
+  "career": {
+    "score": 42,
+    "races": 20,
+    "partial": 2
+  },
+  "seasons": [
+    {
+      "year": 2011,
+      "score": 38,
+      "races": 19,
+      "partial": 2
+    },
+    {
+      "year": 2012,
+      "score": 4,
+      "races": 1,
+      "partial": 0
+    }
+  ]
+}

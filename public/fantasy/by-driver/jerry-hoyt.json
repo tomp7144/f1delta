@@ -1,0 +1,35 @@
+{
+  "driverId": "jerry-hoyt",
+  "name": "Jerry Hoyt",
+  "career": {
+    "score": -78,
+    "races": 5,
+    "partial": 1
+  },
+  "seasons": [
+    {
+      "year": 1950,
+      "score": -12,
+      "races": 1,
+      "partial": 0
+    },
+    {
+      "year": 1953,
+      "score": -28,
+      "races": 1,
+      "partial": 0
+    },
+    {
+      "year": 1954,
+      "score": 12,
+      "races": 2,
+      "partial": 1
+    },
+    {
+      "year": 1955,
+      "score": -50,
+      "races": 1,
+      "partial": 0
+    }
+  ]
+}

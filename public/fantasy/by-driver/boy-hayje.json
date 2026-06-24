@@ -1,0 +1,23 @@
+{
+  "driverId": "boy-hayje",
+  "name": "Boy Hayje",
+  "career": {
+    "score": -60,
+    "races": 7,
+    "partial": 0
+  },
+  "seasons": [
+    {
+      "year": 1976,
+      "score": -20,
+      "races": 1,
+      "partial": 0
+    },
+    {
+      "year": 1977,
+      "score": -40,
+      "races": 6,
+      "partial": 0
+    }
+  ]
+}

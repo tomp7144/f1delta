@@ -1,0 +1,65 @@
+{
+  "driverId": "jean-pierre-beltoise",
+  "name": "Jean-Pierre Beltoise",
+  "career": {
+    "score": 318,
+    "races": 88,
+    "partial": 0
+  },
+  "seasons": [
+    {
+      "year": 1966,
+      "score": 24,
+      "races": 1,
+      "partial": 0
+    },
+    {
+      "year": 1967,
+      "score": 48,
+      "races": 3,
+      "partial": 0
+    },
+    {
+      "year": 1968,
+      "score": 40,
+      "races": 12,
+      "partial": 0
+    },
+    {
+      "year": 1969,
+      "score": 145,
+      "races": 11,
+      "partial": 0
+    },
+    {
+      "year": 1970,
+      "score": 56,
+      "races": 13,
+      "partial": 0
+    },
+    {
+      "year": 1971,
+      "score": 24,
+      "races": 7,
+      "partial": 0
+    },
+    {
+      "year": 1972,
+      "score": 25,
+      "races": 11,
+      "partial": 0
+    },
+    {
+      "year": 1973,
+      "score": -18,
+      "races": 15,
+      "partial": 0
+    },
+    {
+      "year": 1974,
+      "score": -26,
+      "races": 15,
+      "partial": 0
+    }
+  ]
+}

@@ -1,0 +1,125 @@
+{
+  "driverId": "kimi-raikkonen",
+  "name": "Kimi Räikkönen",
+  "career": {
+    "score": 4099,
+    "races": 352,
+    "partial": 2
+  },
+  "seasons": [
+    {
+      "year": 2001,
+      "score": 13,
+      "races": 17,
+      "partial": 0
+    },
+    {
+      "year": 2002,
+      "score": 6,
+      "races": 17,
+      "partial": 0
+    },
+    {
+      "year": 2003,
+      "score": 296,
+      "races": 16,
+      "partial": 0
+    },
+    {
+      "year": 2004,
+      "score": 93,
+      "races": 18,
+      "partial": 0
+    },
+    {
+      "year": 2005,
+      "score": 521,
+      "races": 19,
+      "partial": 0
+    },
+    {
+      "year": 2006,
+      "score": 218,
+      "races": 18,
+      "partial": 0
+    },
+    {
+      "year": 2007,
+      "score": 427,
+      "races": 17,
+      "partial": 0
+    },
+    {
+      "year": 2008,
+      "score": 276,
+      "races": 18,
+      "partial": 0
+    },
+    {
+      "year": 2009,
+      "score": 147,
+      "races": 17,
+      "partial": 0
+    },
+    {
+      "year": 2012,
+      "score": 388,
+      "races": 20,
+      "partial": 0
+    },
+    {
+      "year": 2013,
+      "score": 305,
+      "races": 17,
+      "partial": 1
+    },
+    {
+      "year": 2014,
+      "score": 82,
+      "races": 19,
+      "partial": 0
+    },
+    {
+      "year": 2015,
+      "score": 188,
+      "races": 19,
+      "partial": 0
+    },
+    {
+      "year": 2016,
+      "score": 259,
+      "races": 21,
+      "partial": 0
+    },
+    {
+      "year": 2017,
+      "score": 301,
+      "races": 20,
+      "partial": 0
+    },
+    {
+      "year": 2018,
+      "score": 342,
+      "races": 21,
+      "partial": 0
+    },
+    {
+      "year": 2019,
+      "score": 73,
+      "races": 21,
+      "partial": 1
+    },
+    {
+      "year": 2020,
+      "score": 96,
+      "races": 17,
+      "partial": 0
+    },
+    {
+      "year": 2021,
+      "score": 68,
+      "races": 20,
+      "partial": 0
+    }
+  ]
+}

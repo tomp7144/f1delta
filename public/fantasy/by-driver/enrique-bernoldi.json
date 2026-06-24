@@ -1,0 +1,23 @@
+{
+  "driverId": "enrique-bernoldi",
+  "name": "Enrique Bernoldi",
+  "career": {
+    "score": -251,
+    "races": 29,
+    "partial": 0
+  },
+  "seasons": [
+    {
+      "year": 2001,
+      "score": -95,
+      "races": 17,
+      "partial": 0
+    },
+    {
+      "year": 2002,
+      "score": -156,
+      "races": 12,
+      "partial": 0
+    }
+  ]
+}

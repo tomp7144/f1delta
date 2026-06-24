@@ -1,0 +1,65 @@
+{
+  "driverId": "charles-leclerc",
+  "name": "Charles Leclerc",
+  "career": {
+    "score": 2439,
+    "races": 179,
+    "partial": 0
+  },
+  "seasons": [
+    {
+      "year": 2018,
+      "score": 49,
+      "races": 21,
+      "partial": 0
+    },
+    {
+      "year": 2019,
+      "score": 362,
+      "races": 21,
+      "partial": 0
+    },
+    {
+      "year": 2020,
+      "score": 120,
+      "races": 17,
+      "partial": 0
+    },
+    {
+      "year": 2021,
+      "score": 263,
+      "races": 22,
+      "partial": 0
+    },
+    {
+      "year": 2022,
+      "score": 468,
+      "races": 22,
+      "partial": 0
+    },
+    {
+      "year": 2023,
+      "score": 249,
+      "races": 22,
+      "partial": 0
+    },
+    {
+      "year": 2024,
+      "score": 528,
+      "races": 24,
+      "partial": 0
+    },
+    {
+      "year": 2025,
+      "score": 321,
+      "races": 24,
+      "partial": 0
+    },
+    {
+      "year": 2026,
+      "score": 79,
+      "races": 6,
+      "partial": 0
+    }
+  ]
+}

@@ -1,0 +1,23 @@
+{
+  "driverId": "brian-shawe-taylor",
+  "name": "Brian Shawe-Taylor",
+  "career": {
+    "score": 13,
+    "races": 2,
+    "partial": 1
+  },
+  "seasons": [
+    {
+      "year": 1950,
+      "score": 1,
+      "races": 1,
+      "partial": 1
+    },
+    {
+      "year": 1951,
+      "score": 12,
+      "races": 1,
+      "partial": 0
+    }
+  ]
+}

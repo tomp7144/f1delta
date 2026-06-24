@@ -1,0 +1,23 @@
+{
+  "driverId": "adrian-campos",
+  "name": "Adrián Campos",
+  "career": {
+    "score": -273,
+    "races": 21,
+    "partial": 0
+  },
+  "seasons": [
+    {
+      "year": 1987,
+      "score": -265,
+      "races": 16,
+      "partial": 0
+    },
+    {
+      "year": 1988,
+      "score": -8,
+      "races": 5,
+      "partial": 0
+    }
+  ]
+}

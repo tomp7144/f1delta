@@ -1,0 +1,17 @@
+{
+  "driverId": "volker-weidler",
+  "name": "Volker Weidler",
+  "career": {
+    "score": 0,
+    "races": 10,
+    "partial": 8
+  },
+  "seasons": [
+    {
+      "year": 1989,
+      "score": 0,
+      "races": 10,
+      "partial": 8
+    }
+  ]
+}

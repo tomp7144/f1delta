@@ -1,0 +1,17 @@
+{
+  "driverId": "lucas-di-grassi",
+  "name": "Lucas di Grassi",
+  "career": {
+    "score": -80,
+    "races": 19,
+    "partial": 0
+  },
+  "seasons": [
+    {
+      "year": 2010,
+      "score": -80,
+      "races": 19,
+      "partial": 0
+    }
+  ]
+}

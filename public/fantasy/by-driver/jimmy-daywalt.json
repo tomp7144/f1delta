@@ -1,0 +1,47 @@
+{
+  "driverId": "jimmy-daywalt",
+  "name": "Jimmy Daywalt",
+  "career": {
+    "score": -1,
+    "races": 6,
+    "partial": 0
+  },
+  "seasons": [
+    {
+      "year": 1953,
+      "score": 38,
+      "races": 1,
+      "partial": 0
+    },
+    {
+      "year": 1954,
+      "score": -41,
+      "races": 1,
+      "partial": 0
+    },
+    {
+      "year": 1955,
+      "score": 18,
+      "races": 1,
+      "partial": 0
+    },
+    {
+      "year": 1956,
+      "score": -16,
+      "races": 1,
+      "partial": 0
+    },
+    {
+      "year": 1957,
+      "score": 2,
+      "races": 1,
+      "partial": 0
+    },
+    {
+      "year": 1959,
+      "score": -2,
+      "races": 1,
+      "partial": 0
+    }
+  ]
+}

@@ -1,0 +1,29 @@
+{
+  "driverId": "guanyu-zhou",
+  "name": "Guanyu Zhou",
+  "career": {
+    "score": 56,
+    "races": 68,
+    "partial": 2
+  },
+  "seasons": [
+    {
+      "year": 2022,
+      "score": -19,
+      "races": 22,
+      "partial": 1
+    },
+    {
+      "year": 2023,
+      "score": 33,
+      "races": 22,
+      "partial": 0
+    },
+    {
+      "year": 2024,
+      "score": 42,
+      "races": 24,
+      "partial": 1
+    }
+  ]
+}

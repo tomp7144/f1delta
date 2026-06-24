@@ -1,0 +1,17 @@
+{
+  "driverId": "bud-tingelstad",
+  "name": "Bud Tingelstad",
+  "career": {
+    "score": 40,
+    "races": 1,
+    "partial": 0
+  },
+  "seasons": [
+    {
+      "year": 1960,
+      "score": 40,
+      "races": 1,
+      "partial": 0
+    }
+  ]
+}

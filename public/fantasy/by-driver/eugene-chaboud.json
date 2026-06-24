@@ -1,0 +1,23 @@
+{
+  "driverId": "eugene-chaboud",
+  "name": "Eugène Chaboud",
+  "career": {
+    "score": 6,
+    "races": 4,
+    "partial": 2
+  },
+  "seasons": [
+    {
+      "year": 1950,
+      "score": -10,
+      "races": 3,
+      "partial": 2
+    },
+    {
+      "year": 1951,
+      "score": 16,
+      "races": 1,
+      "partial": 0
+    }
+  ]
+}

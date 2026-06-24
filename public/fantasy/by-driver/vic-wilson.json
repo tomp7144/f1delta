@@ -1,0 +1,23 @@
+{
+  "driverId": "vic-wilson",
+  "name": "Vic Wilson",
+  "career": {
+    "score": -20,
+    "races": 2,
+    "partial": 0
+  },
+  "seasons": [
+    {
+      "year": 1960,
+      "score": -20,
+      "races": 1,
+      "partial": 0
+    },
+    {
+      "year": 1966,
+      "score": 0,
+      "races": 1,
+      "partial": 0
+    }
+  ]
+}

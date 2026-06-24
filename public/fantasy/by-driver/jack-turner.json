@@ -1,0 +1,35 @@
+{
+  "driverId": "jack-turner",
+  "name": "Jack Turner",
+  "career": {
+    "score": -41,
+    "races": 4,
+    "partial": 0
+  },
+  "seasons": [
+    {
+      "year": 1956,
+      "score": -2,
+      "races": 1,
+      "partial": 0
+    },
+    {
+      "year": 1957,
+      "score": 16,
+      "races": 1,
+      "partial": 0
+    },
+    {
+      "year": 1958,
+      "score": -29,
+      "races": 1,
+      "partial": 0
+    },
+    {
+      "year": 1959,
+      "score": -26,
+      "races": 1,
+      "partial": 0
+    }
+  ]
+}

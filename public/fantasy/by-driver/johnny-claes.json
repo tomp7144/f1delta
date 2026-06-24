@@ -1,0 +1,41 @@
+{
+  "driverId": "johnny-claes",
+  "name": "Johnny Claes",
+  "career": {
+    "score": 33,
+    "races": 25,
+    "partial": 1
+  },
+  "seasons": [
+    {
+      "year": 1950,
+      "score": 35,
+      "races": 6,
+      "partial": 0
+    },
+    {
+      "year": 1951,
+      "score": -20,
+      "races": 7,
+      "partial": 0
+    },
+    {
+      "year": 1952,
+      "score": 69,
+      "races": 5,
+      "partial": 0
+    },
+    {
+      "year": 1953,
+      "score": -61,
+      "races": 5,
+      "partial": 0
+    },
+    {
+      "year": 1955,
+      "score": 10,
+      "races": 2,
+      "partial": 1
+    }
+  ]
+}

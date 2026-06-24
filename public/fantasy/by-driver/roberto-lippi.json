@@ -1,0 +1,29 @@
+{
+  "driverId": "roberto-lippi",
+  "name": "Roberto Lippi",
+  "career": {
+    "score": -20,
+    "races": 3,
+    "partial": 0
+  },
+  "seasons": [
+    {
+      "year": 1961,
+      "score": -20,
+      "races": 1,
+      "partial": 0
+    },
+    {
+      "year": 1962,
+      "score": 0,
+      "races": 1,
+      "partial": 0
+    },
+    {
+      "year": 1963,
+      "score": 0,
+      "races": 1,
+      "partial": 0
+    }
+  ]
+}

@@ -1,0 +1,65 @@
+{
+  "driverId": "jimmy-bryan",
+  "name": "Jimmy Bryan",
+  "career": {
+    "score": 111,
+    "races": 9,
+    "partial": 0
+  },
+  "seasons": [
+    {
+      "year": 1952,
+      "score": 38,
+      "races": 1,
+      "partial": 0
+    },
+    {
+      "year": 1953,
+      "score": 34,
+      "races": 1,
+      "partial": 0
+    },
+    {
+      "year": 1954,
+      "score": 28,
+      "races": 1,
+      "partial": 0
+    },
+    {
+      "year": 1955,
+      "score": -26,
+      "races": 1,
+      "partial": 0
+    },
+    {
+      "year": 1956,
+      "score": 0,
+      "races": 1,
+      "partial": 0
+    },
+    {
+      "year": 1957,
+      "score": 39,
+      "races": 1,
+      "partial": 0
+    },
+    {
+      "year": 1958,
+      "score": 41,
+      "races": 1,
+      "partial": 0
+    },
+    {
+      "year": 1959,
+      "score": -26,
+      "races": 1,
+      "partial": 0
+    },
+    {
+      "year": 1960,
+      "score": -17,
+      "races": 1,
+      "partial": 0
+    }
+  ]
+}

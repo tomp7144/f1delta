@@ -1,0 +1,29 @@
+{
+  "driverId": "narain-karthikeyan",
+  "name": "Narain Karthikeyan",
+  "career": {
+    "score": -72,
+    "races": 47,
+    "partial": 4
+  },
+  "seasons": [
+    {
+      "year": 2005,
+      "score": 0,
+      "races": 19,
+      "partial": 0
+    },
+    {
+      "year": 2011,
+      "score": 10,
+      "races": 8,
+      "partial": 1
+    },
+    {
+      "year": 2012,
+      "score": -82,
+      "races": 20,
+      "partial": 3
+    }
+  ]
+}

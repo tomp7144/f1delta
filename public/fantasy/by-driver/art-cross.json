@@ -1,0 +1,35 @@
+{
+  "driverId": "art-cross",
+  "name": "Art Cross",
+  "career": {
+    "score": 124,
+    "races": 4,
+    "partial": 0
+  },
+  "seasons": [
+    {
+      "year": 1952,
+      "score": 40,
+      "races": 1,
+      "partial": 0
+    },
+    {
+      "year": 1953,
+      "score": 38,
+      "races": 1,
+      "partial": 0
+    },
+    {
+      "year": 1954,
+      "score": 32,
+      "races": 1,
+      "partial": 0
+    },
+    {
+      "year": 1955,
+      "score": 14,
+      "races": 1,
+      "partial": 0
+    }
+  ]
+}

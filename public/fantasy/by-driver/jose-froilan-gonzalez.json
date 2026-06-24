@@ -1,0 +1,65 @@
+{
+  "driverId": "jose-froilan-gonzalez",
+  "name": "José Froilán González",
+  "career": {
+    "score": 315,
+    "races": 29,
+    "partial": 4
+  },
+  "seasons": [
+    {
+      "year": 1950,
+      "score": -29,
+      "races": 2,
+      "partial": 0
+    },
+    {
+      "year": 1951,
+      "score": 125,
+      "races": 6,
+      "partial": 0
+    },
+    {
+      "year": 1952,
+      "score": 35,
+      "races": 1,
+      "partial": 0
+    },
+    {
+      "year": 1953,
+      "score": 61,
+      "races": 6,
+      "partial": 1
+    },
+    {
+      "year": 1954,
+      "score": 113,
+      "races": 9,
+      "partial": 2
+    },
+    {
+      "year": 1955,
+      "score": 26,
+      "races": 1,
+      "partial": 0
+    },
+    {
+      "year": 1956,
+      "score": -29,
+      "races": 2,
+      "partial": 0
+    },
+    {
+      "year": 1957,
+      "score": 10,
+      "races": 1,
+      "partial": 1
+    },
+    {
+      "year": 1960,
+      "score": 3,
+      "races": 1,
+      "partial": 0
+    }
+  ]
+}

@@ -1,0 +1,17 @@
+{
+  "driverId": "pedro-chaves",
+  "name": "Pedro Chaves",
+  "career": {
+    "score": 0,
+    "races": 13,
+    "partial": 13
+  },
+  "seasons": [
+    {
+      "year": 1991,
+      "score": 0,
+      "races": 13,
+      "partial": 13
+    }
+  ]
+}

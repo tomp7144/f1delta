@@ -1,0 +1,29 @@
+{
+  "driverId": "jo-schlesser",
+  "name": "Jo Schlesser",
+  "career": {
+    "score": -21,
+    "races": 3,
+    "partial": 0
+  },
+  "seasons": [
+    {
+      "year": 1966,
+      "score": 19,
+      "races": 1,
+      "partial": 0
+    },
+    {
+      "year": 1967,
+      "score": -20,
+      "races": 1,
+      "partial": 0
+    },
+    {
+      "year": 1968,
+      "score": -20,
+      "races": 1,
+      "partial": 0
+    }
+  ]
+}

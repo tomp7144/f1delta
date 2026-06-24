@@ -1,0 +1,47 @@
+{
+  "driverId": "horace-gould",
+  "name": "Horace Gould",
+  "career": {
+    "score": -100,
+    "races": 18,
+    "partial": 2
+  },
+  "seasons": [
+    {
+      "year": 1954,
+      "score": 10,
+      "races": 1,
+      "partial": 0
+    },
+    {
+      "year": 1955,
+      "score": -60,
+      "races": 3,
+      "partial": 0
+    },
+    {
+      "year": 1956,
+      "score": 8,
+      "races": 4,
+      "partial": 0
+    },
+    {
+      "year": 1957,
+      "score": -63,
+      "races": 6,
+      "partial": 0
+    },
+    {
+      "year": 1958,
+      "score": 5,
+      "races": 3,
+      "partial": 1
+    },
+    {
+      "year": 1960,
+      "score": 0,
+      "races": 1,
+      "partial": 1
+    }
+  ]
+}

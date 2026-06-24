@@ -1,0 +1,29 @@
+{
+  "driverId": "al-pease",
+  "name": "Al Pease",
+  "career": {
+    "score": -45,
+    "races": 3,
+    "partial": 0
+  },
+  "seasons": [
+    {
+      "year": 1967,
+      "score": -20,
+      "races": 1,
+      "partial": 0
+    },
+    {
+      "year": 1968,
+      "score": 0,
+      "races": 1,
+      "partial": 0
+    },
+    {
+      "year": 1969,
+      "score": -25,
+      "races": 1,
+      "partial": 0
+    }
+  ]
+}

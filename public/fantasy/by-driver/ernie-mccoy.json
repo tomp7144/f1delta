@@ -1,0 +1,23 @@
+{
+  "driverId": "ernie-mccoy",
+  "name": "Ernie McCoy",
+  "career": {
+    "score": 36,
+    "races": 2,
+    "partial": 0
+  },
+  "seasons": [
+    {
+      "year": 1953,
+      "score": 28,
+      "races": 1,
+      "partial": 0
+    },
+    {
+      "year": 1954,
+      "score": 8,
+      "races": 1,
+      "partial": 0
+    }
+  ]
+}

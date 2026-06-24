@@ -1,0 +1,35 @@
+{
+  "driverId": "brian-henton",
+  "name": "Brian Henton",
+  "career": {
+    "score": 35,
+    "races": 37,
+    "partial": 1
+  },
+  "seasons": [
+    {
+      "year": 1975,
+      "score": -10,
+      "races": 3,
+      "partial": 0
+    },
+    {
+      "year": 1977,
+      "score": -8,
+      "races": 6,
+      "partial": 0
+    },
+    {
+      "year": 1981,
+      "score": 27,
+      "races": 12,
+      "partial": 1
+    },
+    {
+      "year": 1982,
+      "score": 26,
+      "races": 16,
+      "partial": 0
+    }
+  ]
+}

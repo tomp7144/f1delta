@@ -1,0 +1,29 @@
+{
+  "driverId": "tony-rolt",
+  "name": "Tony Rolt",
+  "career": {
+    "score": -59,
+    "races": 3,
+    "partial": 1
+  },
+  "seasons": [
+    {
+      "year": 1950,
+      "score": -20,
+      "races": 1,
+      "partial": 1
+    },
+    {
+      "year": 1953,
+      "score": -19,
+      "races": 1,
+      "partial": 0
+    },
+    {
+      "year": 1955,
+      "score": -20,
+      "races": 1,
+      "partial": 0
+    }
+  ]
+}

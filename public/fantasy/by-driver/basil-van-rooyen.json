@@ -1,0 +1,23 @@
+{
+  "driverId": "basil-van-rooyen",
+  "name": "Basil van Rooyen",
+  "career": {
+    "score": -38,
+    "races": 2,
+    "partial": 0
+  },
+  "seasons": [
+    {
+      "year": 1968,
+      "score": -20,
+      "races": 1,
+      "partial": 0
+    },
+    {
+      "year": 1969,
+      "score": -18,
+      "races": 1,
+      "partial": 0
+    }
+  ]
+}

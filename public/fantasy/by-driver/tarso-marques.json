@@ -1,0 +1,29 @@
+{
+  "driverId": "tarso-marques",
+  "name": "Tarso Marques",
+  "career": {
+    "score": -128,
+    "races": 26,
+    "partial": 1
+  },
+  "seasons": [
+    {
+      "year": 1996,
+      "score": -40,
+      "races": 2,
+      "partial": 0
+    },
+    {
+      "year": 1997,
+      "score": -58,
+      "races": 10,
+      "partial": 0
+    },
+    {
+      "year": 2001,
+      "score": -30,
+      "races": 14,
+      "partial": 1
+    }
+  ]
+}

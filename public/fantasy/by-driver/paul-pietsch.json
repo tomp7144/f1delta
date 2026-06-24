@@ -1,0 +1,29 @@
+{
+  "driverId": "paul-pietsch",
+  "name": "Paul Pietsch",
+  "career": {
+    "score": -52,
+    "races": 3,
+    "partial": 0
+  },
+  "seasons": [
+    {
+      "year": 1950,
+      "score": -20,
+      "races": 1,
+      "partial": 0
+    },
+    {
+      "year": 1951,
+      "score": -16,
+      "races": 1,
+      "partial": 0
+    },
+    {
+      "year": 1952,
+      "score": -16,
+      "races": 1,
+      "partial": 0
+    }
+  ]
+}

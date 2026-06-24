@@ -1,0 +1,17 @@
+{
+  "driverId": "john-cannon",
+  "name": "John Cannon",
+  "career": {
+    "score": 20,
+    "races": 1,
+    "partial": 0
+  },
+  "seasons": [
+    {
+      "year": 1971,
+      "score": 20,
+      "races": 1,
+      "partial": 0
+    }
+  ]
+}

@@ -1,0 +1,23 @@
+{
+  "driverId": "rikky-von-opel",
+  "name": "Rikky von Opel",
+  "career": {
+    "score": -30,
+    "races": 14,
+    "partial": 0
+  },
+  "seasons": [
+    {
+      "year": 1973,
+      "score": -44,
+      "races": 7,
+      "partial": 0
+    },
+    {
+      "year": 1974,
+      "score": 14,
+      "races": 7,
+      "partial": 0
+    }
+  ]
+}

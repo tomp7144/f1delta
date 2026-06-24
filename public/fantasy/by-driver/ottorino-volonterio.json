@@ -1,0 +1,29 @@
+{
+  "driverId": "ottorino-volonterio",
+  "name": "Ottorino Volonterio",
+  "career": {
+    "score": -40,
+    "races": 3,
+    "partial": 2
+  },
+  "seasons": [
+    {
+      "year": 1954,
+      "score": -20,
+      "races": 1,
+      "partial": 1
+    },
+    {
+      "year": 1956,
+      "score": -20,
+      "races": 1,
+      "partial": 0
+    },
+    {
+      "year": 1957,
+      "score": 0,
+      "races": 1,
+      "partial": 1
+    }
+  ]
+}

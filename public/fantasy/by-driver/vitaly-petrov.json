@@ -1,0 +1,29 @@
+{
+  "driverId": "vitaly-petrov",
+  "name": "Vitaly Petrov",
+  "career": {
+    "score": 116,
+    "races": 58,
+    "partial": 0
+  },
+  "seasons": [
+    {
+      "year": 2010,
+      "score": 20,
+      "races": 19,
+      "partial": 0
+    },
+    {
+      "year": 2011,
+      "score": 40,
+      "races": 19,
+      "partial": 0
+    },
+    {
+      "year": 2012,
+      "score": 56,
+      "races": 20,
+      "partial": 0
+    }
+  ]
+}

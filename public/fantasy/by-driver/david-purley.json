@@ -1,0 +1,29 @@
+{
+  "driverId": "david-purley",
+  "name": "David Purley",
+  "career": {
+    "score": 10,
+    "races": 11,
+    "partial": 1
+  },
+  "seasons": [
+    {
+      "year": 1973,
+      "score": 6,
+      "races": 5,
+      "partial": 0
+    },
+    {
+      "year": 1974,
+      "score": 0,
+      "races": 1,
+      "partial": 0
+    },
+    {
+      "year": 1977,
+      "score": 4,
+      "races": 5,
+      "partial": 1
+    }
+  ]
+}

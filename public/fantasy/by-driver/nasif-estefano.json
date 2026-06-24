@@ -1,0 +1,23 @@
+{
+  "driverId": "nasif-estefano",
+  "name": "Nasif Estéfano",
+  "career": {
+    "score": 12,
+    "races": 2,
+    "partial": 0
+  },
+  "seasons": [
+    {
+      "year": 1960,
+      "score": 12,
+      "races": 1,
+      "partial": 0
+    },
+    {
+      "year": 1962,
+      "score": 0,
+      "races": 1,
+      "partial": 0
+    }
+  ]
+}

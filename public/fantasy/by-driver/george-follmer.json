@@ -1,0 +1,17 @@
+{
+  "driverId": "george-follmer",
+  "name": "George Follmer",
+  "career": {
+    "score": 37,
+    "races": 13,
+    "partial": 0
+  },
+  "seasons": [
+    {
+      "year": 1973,
+      "score": 37,
+      "races": 13,
+      "partial": 0
+    }
+  ]
+}

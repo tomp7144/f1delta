@@ -1,0 +1,59 @@
+{
+  "driverId": "troy-ruttman",
+  "name": "Troy Ruttman",
+  "career": {
+    "score": -38,
+    "races": 9,
+    "partial": 0
+  },
+  "seasons": [
+    {
+      "year": 1950,
+      "score": 18,
+      "races": 1,
+      "partial": 0
+    },
+    {
+      "year": 1951,
+      "score": -29,
+      "races": 1,
+      "partial": 0
+    },
+    {
+      "year": 1952,
+      "score": 41,
+      "races": 1,
+      "partial": 0
+    },
+    {
+      "year": 1954,
+      "score": 26,
+      "races": 1,
+      "partial": 0
+    },
+    {
+      "year": 1956,
+      "score": -40,
+      "races": 1,
+      "partial": 0
+    },
+    {
+      "year": 1957,
+      "score": -48,
+      "races": 1,
+      "partial": 0
+    },
+    {
+      "year": 1958,
+      "score": 17,
+      "races": 2,
+      "partial": 0
+    },
+    {
+      "year": 1960,
+      "score": -23,
+      "races": 1,
+      "partial": 0
+    }
+  ]
+}

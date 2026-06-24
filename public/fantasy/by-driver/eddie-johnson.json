@@ -1,0 +1,65 @@
+{
+  "driverId": "eddie-johnson",
+  "name": "Eddie Johnson",
+  "career": {
+    "score": 141,
+    "races": 9,
+    "partial": 2
+  },
+  "seasons": [
+    {
+      "year": 1952,
+      "score": 16,
+      "races": 1,
+      "partial": 0
+    },
+    {
+      "year": 1953,
+      "score": 6,
+      "races": 1,
+      "partial": 1
+    },
+    {
+      "year": 1954,
+      "score": 0,
+      "races": 1,
+      "partial": 1
+    },
+    {
+      "year": 1955,
+      "score": 38,
+      "races": 1,
+      "partial": 0
+    },
+    {
+      "year": 1956,
+      "score": 34,
+      "races": 1,
+      "partial": 0
+    },
+    {
+      "year": 1957,
+      "score": -10,
+      "races": 1,
+      "partial": 0
+    },
+    {
+      "year": 1958,
+      "score": 36,
+      "races": 1,
+      "partial": 0
+    },
+    {
+      "year": 1959,
+      "score": 7,
+      "races": 1,
+      "partial": 0
+    },
+    {
+      "year": 1960,
+      "score": 14,
+      "races": 1,
+      "partial": 0
+    }
+  ]
+}

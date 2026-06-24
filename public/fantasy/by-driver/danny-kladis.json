@@ -1,0 +1,17 @@
+{
+  "driverId": "danny-kladis",
+  "name": "Danny Kladis",
+  "career": {
+    "score": 0,
+    "races": 1,
+    "partial": 1
+  },
+  "seasons": [
+    {
+      "year": 1954,
+      "score": 0,
+      "races": 1,
+      "partial": 1
+    }
+  ]
+}

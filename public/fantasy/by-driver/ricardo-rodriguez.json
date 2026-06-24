@@ -1,0 +1,23 @@
+{
+  "driverId": "ricardo-rodriguez",
+  "name": "Ricardo Rodríguez",
+  "career": {
+    "score": 2,
+    "races": 6,
+    "partial": 0
+  },
+  "seasons": [
+    {
+      "year": 1961,
+      "score": -11,
+      "races": 1,
+      "partial": 0
+    },
+    {
+      "year": 1962,
+      "score": 13,
+      "races": 5,
+      "partial": 0
+    }
+  ]
+}

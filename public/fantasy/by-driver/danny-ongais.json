@@ -1,0 +1,23 @@
+{
+  "driverId": "danny-ongais",
+  "name": "Danny Ongais",
+  "career": {
+    "score": -24,
+    "races": 6,
+    "partial": 2
+  },
+  "seasons": [
+    {
+      "year": 1977,
+      "score": 16,
+      "races": 2,
+      "partial": 0
+    },
+    {
+      "year": 1978,
+      "score": -40,
+      "races": 4,
+      "partial": 2
+    }
+  ]
+}

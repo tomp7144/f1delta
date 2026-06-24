@@ -1,0 +1,29 @@
+{
+  "driverId": "emanuele-pirro",
+  "name": "Emanuele Pirro",
+  "career": {
+    "score": -115,
+    "races": 40,
+    "partial": 3
+  },
+  "seasons": [
+    {
+      "year": 1989,
+      "score": 38,
+      "races": 10,
+      "partial": 0
+    },
+    {
+      "year": 1990,
+      "score": -199,
+      "races": 14,
+      "partial": 0
+    },
+    {
+      "year": 1991,
+      "score": 46,
+      "races": 16,
+      "partial": 3
+    }
+  ]
+}

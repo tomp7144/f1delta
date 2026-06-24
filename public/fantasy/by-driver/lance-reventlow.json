@@ -1,0 +1,17 @@
+{
+  "driverId": "lance-reventlow",
+  "name": "Lance Reventlow",
+  "career": {
+    "score": -20,
+    "races": 4,
+    "partial": 0
+  },
+  "seasons": [
+    {
+      "year": 1960,
+      "score": -20,
+      "races": 4,
+      "partial": 0
+    }
+  ]
+}

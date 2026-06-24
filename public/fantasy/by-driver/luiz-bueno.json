@@ -1,0 +1,17 @@
+{
+  "driverId": "luiz-bueno",
+  "name": "Luiz Bueno",
+  "career": {
+    "score": 16,
+    "races": 1,
+    "partial": 0
+  },
+  "seasons": [
+    {
+      "year": 1973,
+      "score": 16,
+      "races": 1,
+      "partial": 0
+    }
+  ]
+}

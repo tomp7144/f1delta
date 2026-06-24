@@ -1,0 +1,17 @@
+{
+  "driverId": "andre-guelfi",
+  "name": "André Guelfi",
+  "career": {
+    "score": 20,
+    "races": 1,
+    "partial": 0
+  },
+  "seasons": [
+    {
+      "year": 1958,
+      "score": 20,
+      "races": 1,
+      "partial": 0
+    }
+  ]
+}

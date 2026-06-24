@@ -1,0 +1,29 @@
+{
+  "driverId": "philippe-etancelin",
+  "name": "Philippe Étancelin",
+  "career": {
+    "score": 5,
+    "races": 12,
+    "partial": 0
+  },
+  "seasons": [
+    {
+      "year": 1950,
+      "score": 20,
+      "races": 6,
+      "partial": 0
+    },
+    {
+      "year": 1951,
+      "score": -39,
+      "races": 5,
+      "partial": 0
+    },
+    {
+      "year": 1952,
+      "score": 24,
+      "races": 1,
+      "partial": 0
+    }
+  ]
+}

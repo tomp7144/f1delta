@@ -1,0 +1,41 @@
+{
+  "driverId": "wolfgang-seidel",
+  "name": "Wolfgang Seidel",
+  "career": {
+    "score": -94,
+    "races": 13,
+    "partial": 1
+  },
+  "seasons": [
+    {
+      "year": 1953,
+      "score": 26,
+      "races": 1,
+      "partial": 0
+    },
+    {
+      "year": 1958,
+      "score": -60,
+      "races": 3,
+      "partial": 0
+    },
+    {
+      "year": 1960,
+      "score": 10,
+      "races": 1,
+      "partial": 0
+    },
+    {
+      "year": 1961,
+      "score": -30,
+      "races": 5,
+      "partial": 1
+    },
+    {
+      "year": 1962,
+      "score": -40,
+      "races": 3,
+      "partial": 0
+    }
+  ]
+}

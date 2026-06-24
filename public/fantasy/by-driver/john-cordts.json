@@ -1,0 +1,17 @@
+{
+  "driverId": "john-cordts",
+  "name": "John Cordts",
+  "career": {
+    "score": -20,
+    "races": 1,
+    "partial": 0
+  },
+  "seasons": [
+    {
+      "year": 1969,
+      "score": -20,
+      "races": 1,
+      "partial": 0
+    }
+  ]
+}

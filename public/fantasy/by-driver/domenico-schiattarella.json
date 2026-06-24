@@ -1,0 +1,23 @@
+{
+  "driverId": "domenico-schiattarella",
+  "name": "Domenico Schiattarella",
+  "career": {
+    "score": -8,
+    "races": 7,
+    "partial": 0
+  },
+  "seasons": [
+    {
+      "year": 1994,
+      "score": -6,
+      "races": 2,
+      "partial": 0
+    },
+    {
+      "year": 1995,
+      "score": -2,
+      "races": 5,
+      "partial": 0
+    }
+  ]
+}

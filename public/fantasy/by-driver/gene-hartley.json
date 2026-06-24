@@ -1,0 +1,59 @@
+{
+  "driverId": "gene-hartley",
+  "name": "Gene Hartley",
+  "career": {
+    "score": 19,
+    "races": 9,
+    "partial": 1
+  },
+  "seasons": [
+    {
+      "year": 1950,
+      "score": 30,
+      "races": 1,
+      "partial": 0
+    },
+    {
+      "year": 1952,
+      "score": -20,
+      "races": 1,
+      "partial": 0
+    },
+    {
+      "year": 1953,
+      "score": -28,
+      "races": 2,
+      "partial": 1
+    },
+    {
+      "year": 1954,
+      "score": -12,
+      "races": 1,
+      "partial": 0
+    },
+    {
+      "year": 1956,
+      "score": 22,
+      "races": 1,
+      "partial": 0
+    },
+    {
+      "year": 1957,
+      "score": 9,
+      "races": 1,
+      "partial": 0
+    },
+    {
+      "year": 1959,
+      "score": -2,
+      "races": 1,
+      "partial": 0
+    },
+    {
+      "year": 1960,
+      "score": 20,
+      "races": 1,
+      "partial": 0
+    }
+  ]
+}

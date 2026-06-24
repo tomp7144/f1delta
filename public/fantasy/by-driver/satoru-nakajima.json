@@ -1,0 +1,41 @@
+{
+  "driverId": "satoru-nakajima",
+  "name": "Satoru Nakajima",
+  "career": {
+    "score": -176,
+    "races": 80,
+    "partial": 0
+  },
+  "seasons": [
+    {
+      "year": 1987,
+      "score": 51,
+      "races": 16,
+      "partial": 0
+    },
+    {
+      "year": 1988,
+      "score": -24,
+      "races": 16,
+      "partial": 0
+    },
+    {
+      "year": 1989,
+      "score": 6,
+      "races": 16,
+      "partial": 0
+    },
+    {
+      "year": 1990,
+      "score": -103,
+      "races": 16,
+      "partial": 0
+    },
+    {
+      "year": 1991,
+      "score": -106,
+      "races": 16,
+      "partial": 0
+    }
+  ]
+}

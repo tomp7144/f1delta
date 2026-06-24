@@ -1,0 +1,23 @@
+{
+  "driverId": "paolo-barilla",
+  "name": "Paolo Barilla",
+  "career": {
+    "score": -26,
+    "races": 15,
+    "partial": 0
+  },
+  "seasons": [
+    {
+      "year": 1989,
+      "score": -20,
+      "races": 1,
+      "partial": 0
+    },
+    {
+      "year": 1990,
+      "score": -6,
+      "races": 14,
+      "partial": 0
+    }
+  ]
+}

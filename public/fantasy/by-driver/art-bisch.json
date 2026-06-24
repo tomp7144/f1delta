@@ -1,0 +1,17 @@
+{
+  "driverId": "art-bisch",
+  "name": "Art Bisch",
+  "career": {
+    "score": -10,
+    "races": 1,
+    "partial": 0
+  },
+  "seasons": [
+    {
+      "year": 1958,
+      "score": -10,
+      "races": 1,
+      "partial": 0
+    }
+  ]
+}

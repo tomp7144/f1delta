@@ -1,0 +1,41 @@
+{
+  "driverId": "karl-wendlinger",
+  "name": "Karl Wendlinger",
+  "career": {
+    "score": -200,
+    "races": 42,
+    "partial": 1
+  },
+  "seasons": [
+    {
+      "year": 1991,
+      "score": -8,
+      "races": 2,
+      "partial": 0
+    },
+    {
+      "year": 1992,
+      "score": -100,
+      "races": 14,
+      "partial": 0
+    },
+    {
+      "year": 1993,
+      "score": -56,
+      "races": 16,
+      "partial": 0
+    },
+    {
+      "year": 1994,
+      "score": 19,
+      "races": 4,
+      "partial": 1
+    },
+    {
+      "year": 1995,
+      "score": -55,
+      "races": 6,
+      "partial": 0
+    }
+  ]
+}

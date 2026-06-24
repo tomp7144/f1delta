@@ -1,0 +1,23 @@
+{
+  "driverId": "lloyd-ruby",
+  "name": "Lloyd Ruby",
+  "career": {
+    "score": -4,
+    "races": 2,
+    "partial": 0
+  },
+  "seasons": [
+    {
+      "year": 1960,
+      "score": 16,
+      "races": 1,
+      "partial": 0
+    },
+    {
+      "year": 1961,
+      "score": -20,
+      "races": 1,
+      "partial": 0
+    }
+  ]
+}

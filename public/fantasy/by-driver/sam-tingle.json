@@ -1,0 +1,41 @@
+{
+  "driverId": "sam-tingle",
+  "name": "Sam Tingle",
+  "career": {
+    "score": -24,
+    "races": 5,
+    "partial": 0
+  },
+  "seasons": [
+    {
+      "year": 1963,
+      "score": -20,
+      "races": 1,
+      "partial": 0
+    },
+    {
+      "year": 1965,
+      "score": 14,
+      "races": 1,
+      "partial": 0
+    },
+    {
+      "year": 1967,
+      "score": -20,
+      "races": 1,
+      "partial": 0
+    },
+    {
+      "year": 1968,
+      "score": -20,
+      "races": 1,
+      "partial": 0
+    },
+    {
+      "year": 1969,
+      "score": 22,
+      "races": 1,
+      "partial": 0
+    }
+  ]
+}

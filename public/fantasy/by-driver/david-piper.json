@@ -1,0 +1,23 @@
+{
+  "driverId": "david-piper",
+  "name": "David Piper",
+  "career": {
+    "score": 2,
+    "races": 3,
+    "partial": 0
+  },
+  "seasons": [
+    {
+      "year": 1959,
+      "score": -20,
+      "races": 1,
+      "partial": 0
+    },
+    {
+      "year": 1960,
+      "score": 22,
+      "races": 2,
+      "partial": 0
+    }
+  ]
+}

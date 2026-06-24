@@ -1,0 +1,71 @@
+{
+  "driverId": "olivier-panis",
+  "name": "Olivier Panis",
+  "career": {
+    "score": 133,
+    "races": 158,
+    "partial": 0
+  },
+  "seasons": [
+    {
+      "year": 1994,
+      "score": 213,
+      "races": 16,
+      "partial": 0
+    },
+    {
+      "year": 1995,
+      "score": 94,
+      "races": 17,
+      "partial": 0
+    },
+    {
+      "year": 1996,
+      "score": 43,
+      "races": 16,
+      "partial": 0
+    },
+    {
+      "year": 1997,
+      "score": 112,
+      "races": 10,
+      "partial": 0
+    },
+    {
+      "year": 1998,
+      "score": -55,
+      "races": 16,
+      "partial": 0
+    },
+    {
+      "year": 1999,
+      "score": -28,
+      "races": 16,
+      "partial": 0
+    },
+    {
+      "year": 2001,
+      "score": 20,
+      "races": 17,
+      "partial": 0
+    },
+    {
+      "year": 2002,
+      "score": -116,
+      "races": 17,
+      "partial": 0
+    },
+    {
+      "year": 2003,
+      "score": -107,
+      "races": 16,
+      "partial": 0
+    },
+    {
+      "year": 2004,
+      "score": -43,
+      "races": 17,
+      "partial": 0
+    }
+  ]
+}

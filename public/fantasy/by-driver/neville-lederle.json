@@ -1,0 +1,23 @@
+{
+  "driverId": "neville-lederle",
+  "name": "Neville Lederle",
+  "career": {
+    "score": 17,
+    "races": 2,
+    "partial": 0
+  },
+  "seasons": [
+    {
+      "year": 1962,
+      "score": 17,
+      "races": 1,
+      "partial": 0
+    },
+    {
+      "year": 1965,
+      "score": 0,
+      "races": 1,
+      "partial": 0
+    }
+  ]
+}

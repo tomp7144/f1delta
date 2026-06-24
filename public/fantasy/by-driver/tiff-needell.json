@@ -1,0 +1,17 @@
+{
+  "driverId": "tiff-needell",
+  "name": "Tiff Needell",
+  "career": {
+    "score": -20,
+    "races": 2,
+    "partial": 0
+  },
+  "seasons": [
+    {
+      "year": 1980,
+      "score": -20,
+      "races": 2,
+      "partial": 0
+    }
+  ]
+}

@@ -1,0 +1,41 @@
+{
+  "driverId": "ed-elisian",
+  "name": "Ed Elisian",
+  "career": {
+    "score": -77,
+    "races": 5,
+    "partial": 0
+  },
+  "seasons": [
+    {
+      "year": 1954,
+      "score": 26,
+      "races": 1,
+      "partial": 0
+    },
+    {
+      "year": 1955,
+      "score": -2,
+      "races": 1,
+      "partial": 0
+    },
+    {
+      "year": 1956,
+      "score": -18,
+      "races": 1,
+      "partial": 0
+    },
+    {
+      "year": 1957,
+      "score": -40,
+      "races": 1,
+      "partial": 0
+    },
+    {
+      "year": 1958,
+      "score": -43,
+      "races": 1,
+      "partial": 0
+    }
+  ]
+}

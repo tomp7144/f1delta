@@ -1,0 +1,41 @@
+{
+  "driverId": "ricardo-zonta",
+  "name": "Ricardo Zonta",
+  "career": {
+    "score": -107,
+    "races": 38,
+    "partial": 1
+  },
+  "seasons": [
+    {
+      "year": 1999,
+      "score": -93,
+      "races": 13,
+      "partial": 1
+    },
+    {
+      "year": 2000,
+      "score": 7,
+      "races": 17,
+      "partial": 0
+    },
+    {
+      "year": 2001,
+      "score": -4,
+      "races": 2,
+      "partial": 0
+    },
+    {
+      "year": 2004,
+      "score": -17,
+      "races": 5,
+      "partial": 0
+    },
+    {
+      "year": 2005,
+      "score": 0,
+      "races": 1,
+      "partial": 0
+    }
+  ]
+}

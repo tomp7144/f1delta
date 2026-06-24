@@ -1,0 +1,17 @@
+{
+  "driverId": "jean-lucas",
+  "name": "Jean Lucas",
+  "career": {
+    "score": -20,
+    "races": 1,
+    "partial": 0
+  },
+  "seasons": [
+    {
+      "year": 1955,
+      "score": -20,
+      "races": 1,
+      "partial": 0
+    }
+  ]
+}

@@ -1,0 +1,17 @@
+{
+  "driverId": "paul-england",
+  "name": "Paul England",
+  "career": {
+    "score": -20,
+    "races": 1,
+    "partial": 0
+  },
+  "seasons": [
+    {
+      "year": 1957,
+      "score": -20,
+      "races": 1,
+      "partial": 0
+    }
+  ]
+}

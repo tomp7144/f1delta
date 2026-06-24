@@ -1,0 +1,29 @@
+{
+  "driverId": "kenneth-mcalpine",
+  "name": "Kenneth McAlpine",
+  "career": {
+    "score": -92,
+    "races": 7,
+    "partial": 0
+  },
+  "seasons": [
+    {
+      "year": 1952,
+      "score": -18,
+      "races": 2,
+      "partial": 0
+    },
+    {
+      "year": 1953,
+      "score": -54,
+      "races": 4,
+      "partial": 0
+    },
+    {
+      "year": 1955,
+      "score": -20,
+      "races": 1,
+      "partial": 0
+    }
+  ]
+}

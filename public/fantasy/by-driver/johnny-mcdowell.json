@@ -1,0 +1,29 @@
+{
+  "driverId": "johnny-mcdowell",
+  "name": "Johnny McDowell",
+  "career": {
+    "score": 42,
+    "races": 3,
+    "partial": 0
+  },
+  "seasons": [
+    {
+      "year": 1950,
+      "score": 30,
+      "races": 1,
+      "partial": 0
+    },
+    {
+      "year": 1951,
+      "score": -12,
+      "races": 1,
+      "partial": 0
+    },
+    {
+      "year": 1952,
+      "score": 24,
+      "races": 1,
+      "partial": 0
+    }
+  ]
+}

@@ -1,0 +1,17 @@
+{
+  "driverId": "roger-loyer",
+  "name": "Roger Loyer",
+  "career": {
+    "score": -20,
+    "races": 1,
+    "partial": 0
+  },
+  "seasons": [
+    {
+      "year": 1954,
+      "score": -20,
+      "races": 1,
+      "partial": 0
+    }
+  ]
+}

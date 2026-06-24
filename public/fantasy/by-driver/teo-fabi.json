@@ -1,0 +1,41 @@
+{
+  "driverId": "teo-fabi",
+  "name": "Teo Fabi",
+  "career": {
+    "score": -521,
+    "races": 71,
+    "partial": 1
+  },
+  "seasons": [
+    {
+      "year": 1982,
+      "score": -139,
+      "races": 14,
+      "partial": 1
+    },
+    {
+      "year": 1984,
+      "score": -31,
+      "races": 12,
+      "partial": 0
+    },
+    {
+      "year": 1985,
+      "score": -179,
+      "races": 13,
+      "partial": 0
+    },
+    {
+      "year": 1986,
+      "score": -144,
+      "races": 16,
+      "partial": 0
+    },
+    {
+      "year": 1987,
+      "score": -28,
+      "races": 16,
+      "partial": 0
+    }
+  ]
+}

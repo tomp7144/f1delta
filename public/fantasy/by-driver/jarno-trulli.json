@@ -1,0 +1,101 @@
+{
+  "driverId": "jarno-trulli",
+  "name": "Jarno Trulli",
+  "career": {
+    "score": 195,
+    "races": 256,
+    "partial": 1
+  },
+  "seasons": [
+    {
+      "year": 1997,
+      "score": 69,
+      "races": 14,
+      "partial": 0
+    },
+    {
+      "year": 1998,
+      "score": -115,
+      "races": 16,
+      "partial": 0
+    },
+    {
+      "year": 1999,
+      "score": -16,
+      "races": 16,
+      "partial": 0
+    },
+    {
+      "year": 2000,
+      "score": -19,
+      "races": 17,
+      "partial": 0
+    },
+    {
+      "year": 2001,
+      "score": -50,
+      "races": 17,
+      "partial": 0
+    },
+    {
+      "year": 2002,
+      "score": -58,
+      "races": 17,
+      "partial": 0
+    },
+    {
+      "year": 2003,
+      "score": 93,
+      "races": 16,
+      "partial": 0
+    },
+    {
+      "year": 2004,
+      "score": 151,
+      "races": 17,
+      "partial": 0
+    },
+    {
+      "year": 2005,
+      "score": 105,
+      "races": 19,
+      "partial": 0
+    },
+    {
+      "year": 2006,
+      "score": 20,
+      "races": 18,
+      "partial": 0
+    },
+    {
+      "year": 2007,
+      "score": -45,
+      "races": 17,
+      "partial": 0
+    },
+    {
+      "year": 2008,
+      "score": 88,
+      "races": 18,
+      "partial": 0
+    },
+    {
+      "year": 2009,
+      "score": 100,
+      "races": 17,
+      "partial": 1
+    },
+    {
+      "year": 2010,
+      "score": -108,
+      "races": 19,
+      "partial": 0
+    },
+    {
+      "year": 2011,
+      "score": -20,
+      "races": 18,
+      "partial": 0
+    }
+  ]
+}

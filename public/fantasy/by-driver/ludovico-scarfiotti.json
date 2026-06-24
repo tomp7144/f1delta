@@ -1,0 +1,47 @@
+{
+  "driverId": "ludovico-scarfiotti",
+  "name": "Ludovico Scarfiotti",
+  "career": {
+    "score": 93,
+    "races": 12,
+    "partial": 0
+  },
+  "seasons": [
+    {
+      "year": 1963,
+      "score": 18,
+      "races": 2,
+      "partial": 0
+    },
+    {
+      "year": 1964,
+      "score": 16,
+      "races": 1,
+      "partial": 0
+    },
+    {
+      "year": 1965,
+      "score": 0,
+      "races": 1,
+      "partial": 0
+    },
+    {
+      "year": 1966,
+      "score": 28,
+      "races": 2,
+      "partial": 0
+    },
+    {
+      "year": 1967,
+      "score": -11,
+      "races": 3,
+      "partial": 0
+    },
+    {
+      "year": 1968,
+      "score": 42,
+      "races": 3,
+      "partial": 0
+    }
+  ]
+}

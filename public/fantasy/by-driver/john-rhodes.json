@@ -1,0 +1,17 @@
+{
+  "driverId": "john-rhodes",
+  "name": "John Rhodes",
+  "career": {
+    "score": -20,
+    "races": 1,
+    "partial": 0
+  },
+  "seasons": [
+    {
+      "year": 1965,
+      "score": -20,
+      "races": 1,
+      "partial": 0
+    }
+  ]
+}

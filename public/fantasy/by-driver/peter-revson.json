@@ -1,0 +1,41 @@
+{
+  "driverId": "peter-revson",
+  "name": "Peter Revson",
+  "career": {
+    "score": 236,
+    "races": 32,
+    "partial": 0
+  },
+  "seasons": [
+    {
+      "year": 1964,
+      "score": -26,
+      "races": 6,
+      "partial": 0
+    },
+    {
+      "year": 1971,
+      "score": -20,
+      "races": 1,
+      "partial": 0
+    },
+    {
+      "year": 1972,
+      "score": 126,
+      "races": 9,
+      "partial": 0
+    },
+    {
+      "year": 1973,
+      "score": 184,
+      "races": 14,
+      "partial": 0
+    },
+    {
+      "year": 1974,
+      "score": -28,
+      "races": 2,
+      "partial": 0
+    }
+  ]
+}

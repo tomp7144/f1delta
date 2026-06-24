@@ -1,0 +1,83 @@
+{
+  "driverId": "rene-arnoux",
+  "name": "René Arnoux",
+  "career": {
+    "score": 426,
+    "races": 164,
+    "partial": 2
+  },
+  "seasons": [
+    {
+      "year": 1978,
+      "score": 52,
+      "races": 9,
+      "partial": 2
+    },
+    {
+      "year": 1979,
+      "score": -48,
+      "races": 15,
+      "partial": 0
+    },
+    {
+      "year": 1980,
+      "score": 59,
+      "races": 14,
+      "partial": 0
+    },
+    {
+      "year": 1981,
+      "score": -1,
+      "races": 15,
+      "partial": 0
+    },
+    {
+      "year": 1982,
+      "score": 4,
+      "races": 16,
+      "partial": 0
+    },
+    {
+      "year": 1983,
+      "score": 192,
+      "races": 15,
+      "partial": 0
+    },
+    {
+      "year": 1984,
+      "score": 177,
+      "races": 16,
+      "partial": 0
+    },
+    {
+      "year": 1985,
+      "score": 22,
+      "races": 1,
+      "partial": 0
+    },
+    {
+      "year": 1986,
+      "score": 39,
+      "races": 16,
+      "partial": 0
+    },
+    {
+      "year": 1987,
+      "score": -83,
+      "races": 15,
+      "partial": 0
+    },
+    {
+      "year": 1988,
+      "score": -85,
+      "races": 16,
+      "partial": 0
+    },
+    {
+      "year": 1989,
+      "score": 98,
+      "races": 16,
+      "partial": 0
+    }
+  ]
+}

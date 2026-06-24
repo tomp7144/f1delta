@@ -1,0 +1,41 @@
+{
+  "driverId": "bill-vukovich",
+  "name": "Bill Vukovich",
+  "career": {
+    "score": 34,
+    "races": 5,
+    "partial": 0
+  },
+  "seasons": [
+    {
+      "year": 1951,
+      "score": -18,
+      "races": 1,
+      "partial": 0
+    },
+    {
+      "year": 1952,
+      "score": -15,
+      "races": 1,
+      "partial": 0
+    },
+    {
+      "year": 1953,
+      "score": 40,
+      "races": 1,
+      "partial": 0
+    },
+    {
+      "year": 1954,
+      "score": 61,
+      "races": 1,
+      "partial": 0
+    },
+    {
+      "year": 1955,
+      "score": -34,
+      "races": 1,
+      "partial": 0
+    }
+  ]
+}

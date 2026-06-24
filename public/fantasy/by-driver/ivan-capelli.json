@@ -1,0 +1,65 @@
+{
+  "driverId": "ivan-capelli",
+  "name": "Ivan Capelli",
+  "career": {
+    "score": -672,
+    "races": 98,
+    "partial": 0
+  },
+  "seasons": [
+    {
+      "year": 1985,
+      "score": 28,
+      "races": 2,
+      "partial": 0
+    },
+    {
+      "year": 1986,
+      "score": -40,
+      "races": 2,
+      "partial": 0
+    },
+    {
+      "year": 1987,
+      "score": -39,
+      "races": 16,
+      "partial": 0
+    },
+    {
+      "year": 1988,
+      "score": 76,
+      "races": 16,
+      "partial": 0
+    },
+    {
+      "year": 1989,
+      "score": -230,
+      "races": 16,
+      "partial": 0
+    },
+    {
+      "year": 1990,
+      "score": -109,
+      "races": 16,
+      "partial": 0
+    },
+    {
+      "year": 1991,
+      "score": -203,
+      "races": 14,
+      "partial": 0
+    },
+    {
+      "year": 1992,
+      "score": -135,
+      "races": 14,
+      "partial": 0
+    },
+    {
+      "year": 1993,
+      "score": -20,
+      "races": 2,
+      "partial": 0
+    }
+  ]
+}

@@ -1,0 +1,23 @@
+{
+  "driverId": "bobby-ball",
+  "name": "Bobby Ball",
+  "career": {
+    "score": 28,
+    "races": 2,
+    "partial": 0
+  },
+  "seasons": [
+    {
+      "year": 1951,
+      "score": 58,
+      "races": 1,
+      "partial": 0
+    },
+    {
+      "year": 1952,
+      "score": -30,
+      "races": 1,
+      "partial": 0
+    }
+  ]
+}

@@ -1,0 +1,23 @@
+{
+  "driverId": "gaston-mazzacane",
+  "name": "Gastón Mazzacane",
+  "career": {
+    "score": 72,
+    "races": 21,
+    "partial": 0
+  },
+  "seasons": [
+    {
+      "year": 2000,
+      "score": 118,
+      "races": 17,
+      "partial": 0
+    },
+    {
+      "year": 2001,
+      "score": -46,
+      "races": 4,
+      "partial": 0
+    }
+  ]
+}

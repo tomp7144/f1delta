@@ -1,0 +1,23 @@
+{
+  "driverId": "jimmy-jackson",
+  "name": "Jimmy Jackson",
+  "career": {
+    "score": 6,
+    "races": 2,
+    "partial": 1
+  },
+  "seasons": [
+    {
+      "year": 1950,
+      "score": 6,
+      "races": 1,
+      "partial": 0
+    },
+    {
+      "year": 1954,
+      "score": 0,
+      "races": 1,
+      "partial": 1
+    }
+  ]
+}

@@ -1,0 +1,17 @@
+{
+  "driverId": "roger-williamson",
+  "name": "Roger Williamson",
+  "career": {
+    "score": -40,
+    "races": 2,
+    "partial": 0
+  },
+  "seasons": [
+    {
+      "year": 1973,
+      "score": -40,
+      "races": 2,
+      "partial": 0
+    }
+  ]
+}

@@ -1,0 +1,29 @@
+{
+  "driverId": "duke-nalon",
+  "name": "Duke Nalon",
+  "career": {
+    "score": -12,
+    "races": 3,
+    "partial": 0
+  },
+  "seasons": [
+    {
+      "year": 1951,
+      "score": -7,
+      "races": 1,
+      "partial": 0
+    },
+    {
+      "year": 1952,
+      "score": -35,
+      "races": 1,
+      "partial": 0
+    },
+    {
+      "year": 1953,
+      "score": 30,
+      "races": 1,
+      "partial": 0
+    }
+  ]
+}

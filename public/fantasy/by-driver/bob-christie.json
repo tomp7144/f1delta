@@ -1,0 +1,41 @@
+{
+  "driverId": "bob-christie",
+  "name": "Bob Christie",
+  "career": {
+    "score": 77,
+    "races": 5,
+    "partial": 0
+  },
+  "seasons": [
+    {
+      "year": 1956,
+      "score": 24,
+      "races": 1,
+      "partial": 0
+    },
+    {
+      "year": 1957,
+      "score": 40,
+      "races": 1,
+      "partial": 0
+    },
+    {
+      "year": 1958,
+      "score": 6,
+      "races": 1,
+      "partial": 0
+    },
+    {
+      "year": 1959,
+      "score": -2,
+      "races": 1,
+      "partial": 0
+    },
+    {
+      "year": 1960,
+      "score": 9,
+      "races": 1,
+      "partial": 0
+    }
+  ]
+}

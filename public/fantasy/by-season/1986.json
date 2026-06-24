@@ -1,0 +1,327 @@
+{
+  "year": 1986,
+  "drivers": {
+    "nelson-piquet": {
+      "score": 315,
+      "races": 16,
+      "partial": 0
+    },
+    "ayrton-senna": {
+      "score": 177,
+      "races": 16,
+      "partial": 0
+    },
+    "jacques-laffite": {
+      "score": 76,
+      "races": 9,
+      "partial": 0
+    },
+    "rene-arnoux": {
+      "score": 39,
+      "races": 16,
+      "partial": 0
+    },
+    "martin-brundle": {
+      "score": 57,
+      "races": 16,
+      "partial": 0
+    },
+    "gerhard-berger": {
+      "score": 1,
+      "races": 16,
+      "partial": 0
+    },
+    "philippe-streiff": {
+      "score": 37,
+      "races": 16,
+      "partial": 0
+    },
+    "elio-de-angelis": {
+      "score": -44,
+      "races": 4,
+      "partial": 0
+    },
+    "johnny-dumfries": {
+      "score": -83,
+      "races": 16,
+      "partial": 0
+    },
+    "teo-fabi": {
+      "score": -144,
+      "races": 16,
+      "partial": 0
+    },
+    "thierry-boutsen": {
+      "score": -63,
+      "races": 16,
+      "partial": 0
+    },
+    "michele-alboreto": {
+      "score": -52,
+      "races": 16,
+      "partial": 0
+    },
+    "alain-prost": {
+      "score": 328,
+      "races": 16,
+      "partial": 0
+    },
+    "christian-danner": {
+      "score": -80,
+      "races": 16,
+      "partial": 0
+    },
+    "stefan-johansson": {
+      "score": 98,
+      "races": 16,
+      "partial": 0
+    },
+    "patrick-tambay": {
+      "score": -100,
+      "races": 15,
+      "partial": 0
+    },
+    "riccardo-patrese": {
+      "score": -123,
+      "races": 16,
+      "partial": 0
+    },
+    "jonathan-palmer": {
+      "score": -22,
+      "races": 16,
+      "partial": 0
+    },
+    "marc-surer": {
+      "score": 18,
+      "races": 5,
+      "partial": 0
+    },
+    "alessandro-nannini": {
+      "score": -240,
+      "races": 16,
+      "partial": 0
+    },
+    "andrea-de-cesaris": {
+      "score": -248,
+      "races": 16,
+      "partial": 0
+    },
+    "piercarlo-ghinzani": {
+      "score": -252,
+      "races": 16,
+      "partial": 0
+    },
+    "keke-rosberg": {
+      "score": 16,
+      "races": 16,
+      "partial": 0
+    },
+    "alan-jones": {
+      "score": -112,
+      "races": 16,
+      "partial": 0
+    },
+    "nigel-mansell": {
+      "score": 303,
+      "races": 16,
+      "partial": 0
+    },
+    "huub-rothengatter": {
+      "score": -122,
+      "races": 14,
+      "partial": 0
+    },
+    "derek-warwick": {
+      "score": -47,
+      "races": 11,
+      "partial": 0
+    },
+    "eddie-cheever": {
+      "score": -19,
+      "races": 1,
+      "partial": 0
+    },
+    "allen-berg": {
+      "score": -44,
+      "races": 9,
+      "partial": 0
+    },
+    "philippe-alliot": {
+      "score": -48,
+      "races": 7,
+      "partial": 0
+    },
+    "alex-caffi": {
+      "score": 32,
+      "races": 1,
+      "partial": 0
+    },
+    "ivan-capelli": {
+      "score": -40,
+      "races": 2,
+      "partial": 0
+    }
+  },
+  "races": [
+    {
+      "round": 1,
+      "raceId": 421,
+      "gpId": "brazil",
+      "name": "Brazilian GP",
+      "topId": "nelson-piquet",
+      "topName": "Nelson Piquet",
+      "topScore": 41,
+      "partial": false
+    },
+    {
+      "round": 2,
+      "raceId": 422,
+      "gpId": "spain",
+      "name": "Spanish GP",
+      "topId": "ayrton-senna",
+      "topName": "Ayrton Senna",
+      "topScore": 35,
+      "partial": false
+    },
+    {
+      "round": 3,
+      "raceId": 423,
+      "gpId": "san-marino",
+      "name": "San Marino GP",
+      "topId": "alain-prost",
+      "topName": "Alain Prost",
+      "topScore": 38,
+      "partial": false
+    },
+    {
+      "round": 4,
+      "raceId": 424,
+      "gpId": "monaco",
+      "name": "Monaco GP",
+      "topId": "alain-prost",
+      "topName": "Alain Prost",
+      "topScore": 40,
+      "partial": false
+    },
+    {
+      "round": 5,
+      "raceId": 425,
+      "gpId": "belgium",
+      "name": "Belgian GP",
+      "topId": "nigel-mansell",
+      "topName": "Nigel Mansell",
+      "topScore": 39,
+      "partial": false
+    },
+    {
+      "round": 6,
+      "raceId": 426,
+      "gpId": "canada",
+      "name": "Canadian GP",
+      "topId": "nigel-mansell",
+      "topName": "Nigel Mansell",
+      "topScore": 35,
+      "partial": false
+    },
+    {
+      "round": 7,
+      "raceId": 427,
+      "gpId": "detroit",
+      "name": "Detroit GP",
+      "topId": "ayrton-senna",
+      "topName": "Ayrton Senna",
+      "topScore": 35,
+      "partial": false
+    },
+    {
+      "round": 8,
+      "raceId": 428,
+      "gpId": "france",
+      "name": "French GP",
+      "topId": "nigel-mansell",
+      "topName": "Nigel Mansell",
+      "topScore": 41,
+      "partial": false
+    },
+    {
+      "round": 9,
+      "raceId": 429,
+      "gpId": "great-britain",
+      "name": "British GP",
+      "topId": "nigel-mansell",
+      "topName": "Nigel Mansell",
+      "topScore": 41,
+      "partial": false
+    },
+    {
+      "round": 10,
+      "raceId": 430,
+      "gpId": "germany",
+      "name": "German GP",
+      "topId": "nelson-piquet",
+      "topName": "Nelson Piquet",
+      "topScore": 39,
+      "partial": false
+    },
+    {
+      "round": 11,
+      "raceId": 431,
+      "gpId": "hungary",
+      "name": "Hungarian GP",
+      "topId": "nelson-piquet",
+      "topName": "Nelson Piquet",
+      "topScore": 41,
+      "partial": false
+    },
+    {
+      "round": 12,
+      "raceId": 432,
+      "gpId": "austria",
+      "name": "Austrian GP",
+      "topId": "christian-danner",
+      "topName": "Christian Danner",
+      "topScore": 40,
+      "partial": false
+    },
+    {
+      "round": 13,
+      "raceId": 433,
+      "gpId": "italy",
+      "name": "Italian GP",
+      "topId": "nelson-piquet",
+      "topName": "Nelson Piquet",
+      "topScore": 40,
+      "partial": false
+    },
+    {
+      "round": 14,
+      "raceId": 434,
+      "gpId": "portugal",
+      "name": "Portuguese GP",
+      "topId": "nigel-mansell",
+      "topName": "Nigel Mansell",
+      "topScore": 41,
+      "partial": false
+    },
+    {
+      "round": 15,
+      "raceId": 435,
+      "gpId": "mexico",
+      "name": "Mexican GP",
+      "topId": "gerhard-berger",
+      "topName": "Gerhard Berger",
+      "topScore": 38,
+      "partial": false
+    },
+    {
+      "round": 16,
+      "raceId": 436,
+      "gpId": "australia",
+      "name": "Australian GP",
+      "topId": "alain-prost",
+      "topName": "Alain Prost",
+      "topScore": 38,
+      "partial": false
+    }
+  ]
+}

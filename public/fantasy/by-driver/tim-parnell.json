@@ -1,0 +1,29 @@
+{
+  "driverId": "tim-parnell",
+  "name": "Tim Parnell",
+  "career": {
+    "score": 15,
+    "races": 4,
+    "partial": 0
+  },
+  "seasons": [
+    {
+      "year": 1959,
+      "score": 0,
+      "races": 1,
+      "partial": 0
+    },
+    {
+      "year": 1961,
+      "score": 15,
+      "races": 2,
+      "partial": 0
+    },
+    {
+      "year": 1963,
+      "score": 0,
+      "races": 1,
+      "partial": 0
+    }
+  ]
+}

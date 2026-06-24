@@ -1,0 +1,35 @@
+{
+  "driverId": "johnny-servoz-gavin",
+  "name": "Johnny Servoz-Gavin",
+  "career": {
+    "score": -41,
+    "races": 13,
+    "partial": 0
+  },
+  "seasons": [
+    {
+      "year": 1967,
+      "score": -20,
+      "races": 1,
+      "partial": 0
+    },
+    {
+      "year": 1968,
+      "score": -31,
+      "races": 5,
+      "partial": 0
+    },
+    {
+      "year": 1969,
+      "score": 2,
+      "races": 4,
+      "partial": 0
+    },
+    {
+      "year": 1970,
+      "score": 8,
+      "races": 3,
+      "partial": 0
+    }
+  ]
+}

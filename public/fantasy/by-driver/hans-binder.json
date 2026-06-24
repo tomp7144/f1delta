@@ -1,0 +1,29 @@
+{
+  "driverId": "hans-binder",
+  "name": "Hans Binder",
+  "career": {
+    "score": -18,
+    "races": 15,
+    "partial": 0
+  },
+  "seasons": [
+    {
+      "year": 1976,
+      "score": -40,
+      "races": 2,
+      "partial": 0
+    },
+    {
+      "year": 1977,
+      "score": 22,
+      "races": 12,
+      "partial": 0
+    },
+    {
+      "year": 1978,
+      "score": 0,
+      "races": 1,
+      "partial": 0
+    }
+  ]
+}

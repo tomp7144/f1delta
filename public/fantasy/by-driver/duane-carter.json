@@ -1,0 +1,59 @@
+{
+  "driverId": "duane-carter",
+  "name": "Duane Carter",
+  "career": {
+    "score": 108,
+    "races": 10,
+    "partial": 2
+  },
+  "seasons": [
+    {
+      "year": 1950,
+      "score": 2,
+      "races": 1,
+      "partial": 0
+    },
+    {
+      "year": 1951,
+      "score": 3,
+      "races": 1,
+      "partial": 0
+    },
+    {
+      "year": 1952,
+      "score": 21,
+      "races": 1,
+      "partial": 0
+    },
+    {
+      "year": 1953,
+      "score": 21,
+      "races": 2,
+      "partial": 1
+    },
+    {
+      "year": 1954,
+      "score": 1,
+      "races": 2,
+      "partial": 1
+    },
+    {
+      "year": 1955,
+      "score": 14,
+      "races": 1,
+      "partial": 0
+    },
+    {
+      "year": 1959,
+      "score": 16,
+      "races": 1,
+      "partial": 0
+    },
+    {
+      "year": 1960,
+      "score": 30,
+      "races": 1,
+      "partial": 0
+    }
+  ]
+}

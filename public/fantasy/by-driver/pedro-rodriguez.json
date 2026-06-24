@@ -1,0 +1,65 @@
+{
+  "driverId": "pedro-rodriguez",
+  "name": "Pedro Rodríguez",
+  "career": {
+    "score": 195,
+    "races": 55,
+    "partial": 0
+  },
+  "seasons": [
+    {
+      "year": 1963,
+      "score": -40,
+      "races": 2,
+      "partial": 0
+    },
+    {
+      "year": 1964,
+      "score": 16,
+      "races": 1,
+      "partial": 0
+    },
+    {
+      "year": 1965,
+      "score": 48,
+      "races": 2,
+      "partial": 0
+    },
+    {
+      "year": 1966,
+      "score": -76,
+      "races": 4,
+      "partial": 0
+    },
+    {
+      "year": 1967,
+      "score": 129,
+      "races": 8,
+      "partial": 0
+    },
+    {
+      "year": 1968,
+      "score": 22,
+      "races": 12,
+      "partial": 0
+    },
+    {
+      "year": 1969,
+      "score": -31,
+      "races": 8,
+      "partial": 0
+    },
+    {
+      "year": 1970,
+      "score": 113,
+      "races": 13,
+      "partial": 0
+    },
+    {
+      "year": 1971,
+      "score": 14,
+      "races": 5,
+      "partial": 0
+    }
+  ]
+}

@@ -1,0 +1,29 @@
+{
+  "driverId": "vic-elford",
+  "name": "Vic Elford",
+  "career": {
+    "score": 91,
+    "races": 13,
+    "partial": 0
+  },
+  "seasons": [
+    {
+      "year": 1968,
+      "score": 18,
+      "races": 7,
+      "partial": 0
+    },
+    {
+      "year": 1969,
+      "score": 59,
+      "races": 5,
+      "partial": 0
+    },
+    {
+      "year": 1971,
+      "score": 14,
+      "races": 1,
+      "partial": 0
+    }
+  ]
+}

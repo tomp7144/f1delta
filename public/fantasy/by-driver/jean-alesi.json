@@ -1,0 +1,89 @@
+{
+  "driverId": "jean-alesi",
+  "name": "Jean Alesi",
+  "career": {
+    "score": 753,
+    "races": 202,
+    "partial": 0
+  },
+  "seasons": [
+    {
+      "year": 1989,
+      "score": 29,
+      "races": 8,
+      "partial": 0
+    },
+    {
+      "year": 1990,
+      "score": 36,
+      "races": 16,
+      "partial": 0
+    },
+    {
+      "year": 1991,
+      "score": 25,
+      "races": 16,
+      "partial": 0
+    },
+    {
+      "year": 1992,
+      "score": -13,
+      "races": 16,
+      "partial": 0
+    },
+    {
+      "year": 1993,
+      "score": -23,
+      "races": 16,
+      "partial": 0
+    },
+    {
+      "year": 1994,
+      "score": 84,
+      "races": 14,
+      "partial": 0
+    },
+    {
+      "year": 1995,
+      "score": 118,
+      "races": 17,
+      "partial": 0
+    },
+    {
+      "year": 1996,
+      "score": 201,
+      "races": 16,
+      "partial": 0
+    },
+    {
+      "year": 1997,
+      "score": 198,
+      "races": 17,
+      "partial": 0
+    },
+    {
+      "year": 1998,
+      "score": 96,
+      "races": 16,
+      "partial": 0
+    },
+    {
+      "year": 1999,
+      "score": -42,
+      "races": 16,
+      "partial": 0
+    },
+    {
+      "year": 2000,
+      "score": -171,
+      "races": 17,
+      "partial": 0
+    },
+    {
+      "year": 2001,
+      "score": 215,
+      "races": 17,
+      "partial": 0
+    }
+  ]
+}

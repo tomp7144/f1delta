@@ -1,0 +1,23 @@
+{
+  "driverId": "john-nicholson",
+  "name": "John Nicholson",
+  "career": {
+    "score": 18,
+    "races": 2,
+    "partial": 0
+  },
+  "seasons": [
+    {
+      "year": 1974,
+      "score": 0,
+      "races": 1,
+      "partial": 0
+    },
+    {
+      "year": 1975,
+      "score": 18,
+      "races": 1,
+      "partial": 0
+    }
+  ]
+}

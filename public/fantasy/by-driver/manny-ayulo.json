@@ -1,0 +1,35 @@
+{
+  "driverId": "manny-ayulo",
+  "name": "Manny Ayulo",
+  "career": {
+    "score": 38,
+    "races": 4,
+    "partial": 1
+  },
+  "seasons": [
+    {
+      "year": 1951,
+      "score": 15,
+      "races": 1,
+      "partial": 1
+    },
+    {
+      "year": 1952,
+      "score": 16,
+      "races": 1,
+      "partial": 0
+    },
+    {
+      "year": 1953,
+      "score": -11,
+      "races": 1,
+      "partial": 0
+    },
+    {
+      "year": 1954,
+      "score": 18,
+      "races": 1,
+      "partial": 0
+    }
+  ]
+}

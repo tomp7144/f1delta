@@ -1,0 +1,23 @@
+{
+  "driverId": "corrado-fabi",
+  "name": "Corrado Fabi",
+  "career": {
+    "score": -105,
+    "races": 18,
+    "partial": 0
+  },
+  "seasons": [
+    {
+      "year": 1983,
+      "score": -79,
+      "races": 15,
+      "partial": 0
+    },
+    {
+      "year": 1984,
+      "score": -26,
+      "races": 3,
+      "partial": 0
+    }
+  ]
+}

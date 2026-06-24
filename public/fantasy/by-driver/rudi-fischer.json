@@ -1,0 +1,23 @@
+{
+  "driverId": "rudi-fischer",
+  "name": "Rudi Fischer",
+  "career": {
+    "score": 66,
+    "races": 9,
+    "partial": 2
+  },
+  "seasons": [
+    {
+      "year": 1951,
+      "score": 14,
+      "races": 3,
+      "partial": 1
+    },
+    {
+      "year": 1952,
+      "score": 52,
+      "races": 6,
+      "partial": 1
+    }
+  ]
+}

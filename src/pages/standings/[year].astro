@@ -5,23 +5,37 @@ import path from "node:path";
 import BaseLayout from "../../layouts/BaseLayout.astro";
 
 export function getStaticPaths() {
-  const DIR = path.resolve("./data/standings");
-  const index = JSON.parse(fs.readFileSync(path.join(DIR, "index.json"), "utf8"));
+  const DIR      = path.resolve("./data/standings");
+  const FANT_DIR = path.resolve("./public/fantasy/by-season");
+  const index    = JSON.parse(fs.readFileSync(path.join(DIR, "index.json"), "utf8"));
   const allYears: number[] = index.seasons.map((s: any) => s.year);
-  return index.seasons.map((s: any) => ({
-    params: { year: String(s.year) },
-    props: {
-      season: JSON.parse(fs.readFileSync(path.join(DIR, `${s.year}.json`), "utf8")),
-      allYears,
-    },
-  }));
+  return index.seasons.map((s: any) => {
+    let fantasyData: any = null;
+    try { fantasyData = JSON.parse(fs.readFileSync(path.join(FANT_DIR, `${s.year}.json`), "utf8")); }
+    catch { /* first build before history is generated */ }
+    return {
+      params: { year: String(s.year) },
+      props: {
+        season: JSON.parse(fs.readFileSync(path.join(DIR, `${s.year}.json`), "utf8")),
+        allYears,
+        fantasyData,
+      },
+    };
+  });
 }
 
-const { season, allYears } = Astro.props as { season: any; allYears: number[] };
+const { season, allYears, fantasyData } = Astro.props as { season: any; allYears: number[]; fantasyData: any };
 const { year, wccExists, wdcChampion, wccChampion, wdc, wcc, races, notes } = season;
 
 const prevYear = allYears.includes(year - 1) ? year - 1 : null;
 const nextYear = allYears.includes(year + 1) ? year + 1 : null;
+
+// Fantasy data helpers (null-safe; absent before first history bake)
+const fantDrivers: Record<string, { score: number; races: number; partial: number }> =
+  fantasyData?.drivers ?? {};
+const fantRaceByRound = new Map<number, any>(
+  (fantasyData?.races ?? []).map((r: any) => [r.round, r])
+);
 
 const fmt = (n: number | null | undefined) => {
   if (n == null) return "";
@@ -77,22 +91,27 @@ const fmt = (n: number | null | undefined) => {
               <th class="l">Driver</th>
               <th class="l">Team</th>
               <th class="r">Points</th>
+              <th class="r fant-col">f1δ Score</th>
             </tr>
           </thead>
           <tbody>
-            {(wdc ?? []).map((row: any) => (
-              <tr class={row.position === 1 ? "champ" : ""}>
-                <td class="pos">{row.position}</td>
-                <td class="drv">
-                  <a href={`/driver?d=${encodeURIComponent(row.driverId)}`}>{row.name}</a>
-                  {row.code && <span class="code">{row.code}</span>}
-                </td>
-                <td class="team">
-                  <a href={`/teams/${row.teamId}`}>{row.team}</a>
-                </td>
-                <td class="pts">{fmt(row.points)}</td>
-              </tr>
-            ))}
+            {(wdc ?? []).map((row: any) => {
+              const fd = fantDrivers[row.driverId];
+              return (
+                <tr class={row.position === 1 ? "champ" : ""}>
+                  <td class="pos">{row.position}</td>
+                  <td class="drv">
+                    <a href={`/driver?d=${encodeURIComponent(row.driverId)}`}>{row.name}</a>
+                    {row.code && <span class="code">{row.code}</span>}
+                  </td>
+                  <td class="team">
+                    <a href={`/teams/${row.teamId}`}>{row.team}</a>
+                  </td>
+                  <td class="pts">{fmt(row.points)}</td>
+                  <td class="pts fant-col">{fd ? `${fd.partial > 0 ? "~" : ""}${fd.score}` : "—"}</td>
+                </tr>
+              );
+            })}
           </tbody>
         </table>
       </div>
@@ -138,16 +157,25 @@ const fmt = (n: number | null | undefined) => {
                 <th class="pos">Rd</th>
                 <th class="l">Grand Prix</th>
                 <th class="l">Winner</th>
+                <th class="l fant-col">f1δ Top</th>
               </tr>
             </thead>
             <tbody>
-              {races.map((r: any) => (
-                <tr>
-                  <td class="pos">{r.round}</td>
-                  <td class="gp"><a href={`/grands-prix/${r.grandPrixId}`}>{r.name}</a></td>
-                  <td class="drv"><a href={`/driver?d=${encodeURIComponent(r.winnerId)}`}>{r.winner}</a></td>
-                </tr>
-              ))}
+              {races.map((r: any) => {
+                const fr = fantRaceByRound.get(r.round);
+                return (
+                  <tr>
+                    <td class="pos">{r.round}</td>
+                    <td class="gp"><a href={`/grands-prix/${r.grandPrixId}`}>{r.name}</a></td>
+                    <td class="drv"><a href={`/driver?d=${encodeURIComponent(r.winnerId)}`}>{r.winner}</a></td>
+                    <td class="drv fant-col">
+                      {fr?.topId
+                        ? <><a href={`/driver?d=${encodeURIComponent(fr.topId)}`}>{fr.topName}</a><span class="fant-pts"> ({fr.topScore}{fr.partial ? "~" : ""})</span></>
+                        : <span class="muted">—</span>}
+                    </td>
+                  </tr>
+                );
+              })}
             </tbody>
           </table>
         </div>
@@ -266,4 +294,7 @@ const fmt = (n: number | null | undefined) => {
     font-feature-settings: "tnum";
   }
   tr.champ td.pts { color: #b8962e; font-weight: 600; }
+
+  .fant-col { color: #6b6b70; font-size: 12px; }
+  .fant-pts { color: #9a9a9e; font-size: 11px; }
 </style>

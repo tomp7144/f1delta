@@ -1,0 +1,23 @@
+{
+  "driverId": "oscar-larrauri",
+  "name": "Oscar Larrauri",
+  "career": {
+    "score": -74,
+    "races": 21,
+    "partial": 8
+  },
+  "seasons": [
+    {
+      "year": 1988,
+      "score": -74,
+      "races": 16,
+      "partial": 3
+    },
+    {
+      "year": 1989,
+      "score": 0,
+      "races": 5,
+      "partial": 5
+    }
+  ]
+}

@@ -1,0 +1,17 @@
+{
+  "driverId": "eric-thompson",
+  "name": "Eric Thompson",
+  "career": {
+    "score": 20,
+    "races": 1,
+    "partial": 0
+  },
+  "seasons": [
+    {
+      "year": 1952,
+      "score": 20,
+      "races": 1,
+      "partial": 0
+    }
+  ]
+}

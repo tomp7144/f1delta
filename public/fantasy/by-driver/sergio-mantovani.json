@@ -1,0 +1,29 @@
+{
+  "driverId": "sergio-mantovani",
+  "name": "Sergio Mantovani",
+  "career": {
+    "score": 51,
+    "races": 9,
+    "partial": 2
+  },
+  "seasons": [
+    {
+      "year": 1953,
+      "score": 16,
+      "races": 1,
+      "partial": 0
+    },
+    {
+      "year": 1954,
+      "score": 49,
+      "races": 6,
+      "partial": 1
+    },
+    {
+      "year": 1955,
+      "score": -14,
+      "races": 2,
+      "partial": 1
+    }
+  ]
+}

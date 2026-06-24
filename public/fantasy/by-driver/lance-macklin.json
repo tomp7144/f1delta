@@ -1,0 +1,35 @@
+{
+  "driverId": "lance-macklin",
+  "name": "Lance Macklin",
+  "career": {
+    "score": -86,
+    "races": 15,
+    "partial": 0
+  },
+  "seasons": [
+    {
+      "year": 1952,
+      "score": 34,
+      "races": 6,
+      "partial": 0
+    },
+    {
+      "year": 1953,
+      "score": -120,
+      "races": 6,
+      "partial": 0
+    },
+    {
+      "year": 1954,
+      "score": -20,
+      "races": 1,
+      "partial": 0
+    },
+    {
+      "year": 1955,
+      "score": 20,
+      "races": 2,
+      "partial": 0
+    }
+  ]
+}

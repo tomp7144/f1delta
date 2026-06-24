@@ -1,0 +1,41 @@
+{
+  "driverId": "bob-veith",
+  "name": "Bob Veith",
+  "career": {
+    "score": 49,
+    "races": 5,
+    "partial": 0
+  },
+  "seasons": [
+    {
+      "year": 1956,
+      "score": 38,
+      "races": 1,
+      "partial": 0
+    },
+    {
+      "year": 1957,
+      "score": 16,
+      "races": 1,
+      "partial": 0
+    },
+    {
+      "year": 1958,
+      "score": -37,
+      "races": 1,
+      "partial": 0
+    },
+    {
+      "year": 1959,
+      "score": -6,
+      "races": 1,
+      "partial": 0
+    },
+    {
+      "year": 1960,
+      "score": 38,
+      "races": 1,
+      "partial": 0
+    }
+  ]
+}

@@ -1,0 +1,23 @@
+{
+  "driverId": "shinji-nakano",
+  "name": "Shinji Nakano",
+  "career": {
+    "score": 15,
+    "races": 33,
+    "partial": 0
+  },
+  "seasons": [
+    {
+      "year": 1997,
+      "score": -41,
+      "races": 17,
+      "partial": 0
+    },
+    {
+      "year": 1998,
+      "score": 56,
+      "races": 16,
+      "partial": 0
+    }
+  ]
+}

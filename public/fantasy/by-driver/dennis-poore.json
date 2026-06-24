@@ -1,0 +1,17 @@
+{
+  "driverId": "dennis-poore",
+  "name": "Dennis Poore",
+  "career": {
+    "score": 37,
+    "races": 2,
+    "partial": 0
+  },
+  "seasons": [
+    {
+      "year": 1952,
+      "score": 37,
+      "races": 2,
+      "partial": 0
+    }
+  ]
+}

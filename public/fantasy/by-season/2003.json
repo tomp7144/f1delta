@@ -1,0 +1,287 @@
+{
+  "year": 2003,
+  "drivers": {
+    "david-coulthard": {
+      "score": 151,
+      "races": 16,
+      "partial": 0
+    },
+    "juan-pablo-montoya": {
+      "score": 272,
+      "races": 16,
+      "partial": 0
+    },
+    "kimi-raikkonen": {
+      "score": 296,
+      "races": 16,
+      "partial": 0
+    },
+    "michael-schumacher": {
+      "score": 366,
+      "races": 16,
+      "partial": 0
+    },
+    "jarno-trulli": {
+      "score": 93,
+      "races": 16,
+      "partial": 0
+    },
+    "heinz-harald-frentzen": {
+      "score": -14,
+      "races": 16,
+      "partial": 0
+    },
+    "fernando-alonso": {
+      "score": 177,
+      "races": 16,
+      "partial": 0
+    },
+    "ralf-schumacher": {
+      "score": 228,
+      "races": 15,
+      "partial": 0
+    },
+    "jacques-villeneuve": {
+      "score": -77,
+      "races": 15,
+      "partial": 0
+    },
+    "jenson-button": {
+      "score": 45,
+      "races": 16,
+      "partial": 1
+    },
+    "jos-verstappen": {
+      "score": -25,
+      "races": 16,
+      "partial": 1
+    },
+    "giancarlo-fisichella": {
+      "score": -72,
+      "races": 16,
+      "partial": 0
+    },
+    "antonio-pizzonia": {
+      "score": -61,
+      "races": 11,
+      "partial": 0
+    },
+    "olivier-panis": {
+      "score": -107,
+      "races": 16,
+      "partial": 0
+    },
+    "nick-heidfeld": {
+      "score": 25,
+      "races": 16,
+      "partial": 0
+    },
+    "justin-wilson": {
+      "score": -113,
+      "races": 16,
+      "partial": 1
+    },
+    "mark-webber": {
+      "score": -16,
+      "races": 16,
+      "partial": 0
+    },
+    "cristiano-da-matta": {
+      "score": 39,
+      "races": 16,
+      "partial": 0
+    },
+    "ralph-firman": {
+      "score": -41,
+      "races": 14,
+      "partial": 0
+    },
+    "rubens-barrichello": {
+      "score": 203,
+      "races": 16,
+      "partial": 0
+    },
+    "nicolas-kiesa": {
+      "score": 66,
+      "races": 5,
+      "partial": 0
+    },
+    "zsolt-baumgartner": {
+      "score": -6,
+      "races": 2,
+      "partial": 0
+    },
+    "marc-gene": {
+      "score": 16,
+      "races": 1,
+      "partial": 0
+    },
+    "takuma-sato": {
+      "score": 22,
+      "races": 1,
+      "partial": 0
+    }
+  },
+  "races": [
+    {
+      "round": 1,
+      "raceId": 698,
+      "gpId": "australia",
+      "name": "Australian GP",
+      "topId": "david-coulthard",
+      "topName": "David Coulthard",
+      "topScore": 45,
+      "partial": true
+    },
+    {
+      "round": 2,
+      "raceId": 699,
+      "gpId": "malaysia",
+      "name": "Malaysian GP",
+      "topId": "kimi-raikkonen",
+      "topName": "Kimi Räikkönen",
+      "topScore": 41,
+      "partial": false
+    },
+    {
+      "round": 3,
+      "raceId": 700,
+      "gpId": "brazil",
+      "name": "Brazilian GP",
+      "topId": "giancarlo-fisichella",
+      "topName": "Giancarlo Fisichella",
+      "topScore": 42,
+      "partial": false
+    },
+    {
+      "round": 4,
+      "raceId": 701,
+      "gpId": "san-marino",
+      "name": "San Marino GP",
+      "topId": "michael-schumacher",
+      "topName": "Michael Schumacher",
+      "topScore": 40,
+      "partial": false
+    },
+    {
+      "round": 5,
+      "raceId": 702,
+      "gpId": "spain",
+      "name": "Spanish GP",
+      "topId": "michael-schumacher",
+      "topName": "Michael Schumacher",
+      "topScore": 35,
+      "partial": false
+    },
+    {
+      "round": 6,
+      "raceId": 703,
+      "gpId": "austria",
+      "name": "Austrian GP",
+      "topId": "michael-schumacher",
+      "topName": "Michael Schumacher",
+      "topScore": 40,
+      "partial": false
+    },
+    {
+      "round": 7,
+      "raceId": 704,
+      "gpId": "monaco",
+      "name": "Monaco GP",
+      "topId": "juan-pablo-montoya",
+      "topName": "Juan Pablo Montoya",
+      "topScore": 37,
+      "partial": true
+    },
+    {
+      "round": 8,
+      "raceId": 705,
+      "gpId": "canada",
+      "name": "Canadian GP",
+      "topId": "michael-schumacher",
+      "topName": "Michael Schumacher",
+      "topScore": 37,
+      "partial": false
+    },
+    {
+      "round": 9,
+      "raceId": 706,
+      "gpId": "europe",
+      "name": "European GP",
+      "topId": "ralf-schumacher",
+      "topName": "Ralf Schumacher",
+      "topScore": 37,
+      "partial": false
+    },
+    {
+      "round": 10,
+      "raceId": 707,
+      "gpId": "france",
+      "name": "French GP",
+      "topId": "ralf-schumacher",
+      "topName": "Ralf Schumacher",
+      "topScore": 35,
+      "partial": false
+    },
+    {
+      "round": 11,
+      "raceId": 708,
+      "gpId": "great-britain",
+      "name": "British GP",
+      "topId": "rubens-barrichello",
+      "topName": "Rubens Barrichello",
+      "topScore": 40,
+      "partial": false
+    },
+    {
+      "round": 12,
+      "raceId": 709,
+      "gpId": "germany",
+      "name": "German GP",
+      "topId": "juan-pablo-montoya",
+      "topName": "Juan Pablo Montoya",
+      "topScore": 40,
+      "partial": false
+    },
+    {
+      "round": 13,
+      "raceId": 710,
+      "gpId": "hungary",
+      "name": "Hungarian GP",
+      "topId": "fernando-alonso",
+      "topName": "Fernando Alonso",
+      "topScore": 35,
+      "partial": false
+    },
+    {
+      "round": 14,
+      "raceId": 711,
+      "gpId": "italy",
+      "name": "Italian GP",
+      "topId": "michael-schumacher",
+      "topName": "Michael Schumacher",
+      "topScore": 40,
+      "partial": false
+    },
+    {
+      "round": 15,
+      "raceId": 712,
+      "gpId": "united-states",
+      "name": "United States GP",
+      "topId": "michael-schumacher",
+      "topName": "Michael Schumacher",
+      "topScore": 46,
+      "partial": false
+    },
+    {
+      "round": 16,
+      "raceId": 713,
+      "gpId": "japan",
+      "name": "Japanese GP",
+      "topId": "jarno-trulli",
+      "topName": "Jarno Trulli",
+      "topScore": 38,
+      "partial": false
+    }
+  ]
+}

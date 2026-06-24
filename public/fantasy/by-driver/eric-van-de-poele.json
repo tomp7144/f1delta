@@ -1,0 +1,23 @@
+{
+  "driverId": "eric-van-de-poele",
+  "name": "Eric van de Poele",
+  "career": {
+    "score": 23,
+    "races": 29,
+    "partial": 7
+  },
+  "seasons": [
+    {
+      "year": 1991,
+      "score": 26,
+      "races": 16,
+      "partial": 7
+    },
+    {
+      "year": 1992,
+      "score": -3,
+      "races": 13,
+      "partial": 0
+    }
+  ]
+}

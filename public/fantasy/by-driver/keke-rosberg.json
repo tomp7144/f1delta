@@ -1,0 +1,65 @@
+{
+  "driverId": "keke-rosberg",
+  "name": "Keke Rosberg",
+  "career": {
+    "score": 288,
+    "races": 128,
+    "partial": 4
+  },
+  "seasons": [
+    {
+      "year": 1978,
+      "score": -65,
+      "races": 14,
+      "partial": 4
+    },
+    {
+      "year": 1979,
+      "score": -101,
+      "races": 8,
+      "partial": 0
+    },
+    {
+      "year": 1980,
+      "score": 28,
+      "races": 14,
+      "partial": 0
+    },
+    {
+      "year": 1981,
+      "score": -82,
+      "races": 14,
+      "partial": 0
+    },
+    {
+      "year": 1982,
+      "score": 211,
+      "races": 15,
+      "partial": 0
+    },
+    {
+      "year": 1983,
+      "score": 166,
+      "races": 15,
+      "partial": 0
+    },
+    {
+      "year": 1984,
+      "score": -20,
+      "races": 16,
+      "partial": 0
+    },
+    {
+      "year": 1985,
+      "score": 135,
+      "races": 16,
+      "partial": 0
+    },
+    {
+      "year": 1986,
+      "score": 16,
+      "races": 16,
+      "partial": 0
+    }
+  ]
+}

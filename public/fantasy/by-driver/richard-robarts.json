@@ -1,0 +1,17 @@
+{
+  "driverId": "richard-robarts",
+  "name": "Richard Robarts",
+  "career": {
+    "score": 10,
+    "races": 4,
+    "partial": 0
+  },
+  "seasons": [
+    {
+      "year": 1974,
+      "score": 10,
+      "races": 4,
+      "partial": 0
+    }
+  ]
+}

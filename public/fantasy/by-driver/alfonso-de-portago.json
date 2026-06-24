@@ -1,0 +1,23 @@
+{
+  "driverId": "alfonso-de-portago",
+  "name": "Alfonso de Portago",
+  "career": {
+    "score": 5,
+    "races": 6,
+    "partial": 1
+  },
+  "seasons": [
+    {
+      "year": 1956,
+      "score": -16,
+      "races": 5,
+      "partial": 1
+    },
+    {
+      "year": 1957,
+      "score": 21,
+      "races": 1,
+      "partial": 0
+    }
+  ]
+}

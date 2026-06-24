@@ -1,0 +1,17 @@
+{
+  "driverId": "riccardo-paletti",
+  "name": "Riccardo Paletti",
+  "career": {
+    "score": -40,
+    "races": 8,
+    "partial": 3
+  },
+  "seasons": [
+    {
+      "year": 1982,
+      "score": -40,
+      "races": 8,
+      "partial": 3
+    }
+  ]
+}

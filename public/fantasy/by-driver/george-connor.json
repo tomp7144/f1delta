@@ -1,0 +1,29 @@
+{
+  "driverId": "george-connor",
+  "name": "George Connor",
+  "career": {
+    "score": 1,
+    "races": 3,
+    "partial": 0
+  },
+  "seasons": [
+    {
+      "year": 1950,
+      "score": 3,
+      "races": 1,
+      "partial": 0
+    },
+    {
+      "year": 1951,
+      "score": -18,
+      "races": 1,
+      "partial": 0
+    },
+    {
+      "year": 1952,
+      "score": 16,
+      "races": 1,
+      "partial": 0
+    }
+  ]
+}

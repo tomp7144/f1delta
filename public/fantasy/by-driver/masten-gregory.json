@@ -1,0 +1,59 @@
+{
+  "driverId": "masten-gregory",
+  "name": "Masten Gregory",
+  "career": {
+    "score": 16,
+    "races": 44,
+    "partial": 1
+  },
+  "seasons": [
+    {
+      "year": 1957,
+      "score": 87,
+      "races": 4,
+      "partial": 0
+    },
+    {
+      "year": 1958,
+      "score": 10,
+      "races": 4,
+      "partial": 0
+    },
+    {
+      "year": 1959,
+      "score": 12,
+      "races": 6,
+      "partial": 0
+    },
+    {
+      "year": 1960,
+      "score": 6,
+      "races": 6,
+      "partial": 0
+    },
+    {
+      "year": 1961,
+      "score": -16,
+      "races": 8,
+      "partial": 1
+    },
+    {
+      "year": 1962,
+      "score": -26,
+      "races": 7,
+      "partial": 0
+    },
+    {
+      "year": 1963,
+      "score": -55,
+      "races": 5,
+      "partial": 0
+    },
+    {
+      "year": 1965,
+      "score": -2,
+      "races": 4,
+      "partial": 0
+    }
+  ]
+}

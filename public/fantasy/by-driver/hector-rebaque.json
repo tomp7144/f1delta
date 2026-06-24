@@ -1,0 +1,41 @@
+{
+  "driverId": "hector-rebaque",
+  "name": "Héctor Rebaque",
+  "career": {
+    "score": -88,
+    "races": 58,
+    "partial": 3
+  },
+  "seasons": [
+    {
+      "year": 1977,
+      "score": -20,
+      "races": 6,
+      "partial": 0
+    },
+    {
+      "year": 1978,
+      "score": -7,
+      "races": 16,
+      "partial": 3
+    },
+    {
+      "year": 1979,
+      "score": -8,
+      "races": 14,
+      "partial": 0
+    },
+    {
+      "year": 1980,
+      "score": -23,
+      "races": 7,
+      "partial": 0
+    },
+    {
+      "year": 1981,
+      "score": -30,
+      "races": 15,
+      "partial": 0
+    }
+  ]
+}

@@ -1,0 +1,29 @@
+{
+  "driverId": "henry-banks",
+  "name": "Henry Banks",
+  "career": {
+    "score": 8,
+    "races": 3,
+    "partial": 0
+  },
+  "seasons": [
+    {
+      "year": 1950,
+      "score": -8,
+      "races": 1,
+      "partial": 0
+    },
+    {
+      "year": 1951,
+      "score": 30,
+      "races": 1,
+      "partial": 0
+    },
+    {
+      "year": 1952,
+      "score": -14,
+      "races": 1,
+      "partial": 0
+    }
+  ]
+}

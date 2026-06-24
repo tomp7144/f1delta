@@ -1,0 +1,53 @@
+{
+  "driverId": "luigi-villoresi",
+  "name": "Luigi Villoresi",
+  "career": {
+    "score": 143,
+    "races": 35,
+    "partial": 2
+  },
+  "seasons": [
+    {
+      "year": 1950,
+      "score": -17,
+      "races": 3,
+      "partial": 0
+    },
+    {
+      "year": 1951,
+      "score": 86,
+      "races": 7,
+      "partial": 0
+    },
+    {
+      "year": 1952,
+      "score": 46,
+      "races": 2,
+      "partial": 0
+    },
+    {
+      "year": 1953,
+      "score": 67,
+      "races": 9,
+      "partial": 1
+    },
+    {
+      "year": 1954,
+      "score": -20,
+      "races": 5,
+      "partial": 0
+    },
+    {
+      "year": 1955,
+      "score": -19,
+      "races": 4,
+      "partial": 1
+    },
+    {
+      "year": 1956,
+      "score": 0,
+      "races": 5,
+      "partial": 0
+    }
+  ]
+}

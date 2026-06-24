@@ -1,0 +1,23 @@
+{
+  "driverId": "david-brabham",
+  "name": "David Brabham",
+  "career": {
+    "score": -173,
+    "races": 30,
+    "partial": 0
+  },
+  "seasons": [
+    {
+      "year": 1990,
+      "score": -120,
+      "races": 14,
+      "partial": 0
+    },
+    {
+      "year": 1994,
+      "score": -53,
+      "races": 16,
+      "partial": 0
+    }
+  ]
+}

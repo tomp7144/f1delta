@@ -1,0 +1,89 @@
+{
+  "driverId": "niki-lauda",
+  "name": "Niki Lauda",
+  "career": {
+    "score": 1101,
+    "races": 176,
+    "partial": 2
+  },
+  "seasons": [
+    {
+      "year": 1971,
+      "score": -20,
+      "races": 1,
+      "partial": 0
+    },
+    {
+      "year": 1972,
+      "score": 50,
+      "races": 12,
+      "partial": 0
+    },
+    {
+      "year": 1973,
+      "score": -105,
+      "races": 15,
+      "partial": 1
+    },
+    {
+      "year": 1974,
+      "score": 70,
+      "races": 15,
+      "partial": 0
+    },
+    {
+      "year": 1975,
+      "score": 298,
+      "races": 14,
+      "partial": 0
+    },
+    {
+      "year": 1976,
+      "score": 289,
+      "races": 14,
+      "partial": 0
+    },
+    {
+      "year": 1977,
+      "score": 356,
+      "races": 15,
+      "partial": 0
+    },
+    {
+      "year": 1978,
+      "score": 112,
+      "races": 16,
+      "partial": 0
+    },
+    {
+      "year": 1979,
+      "score": -150,
+      "races": 13,
+      "partial": 0
+    },
+    {
+      "year": 1982,
+      "score": 56,
+      "races": 15,
+      "partial": 0
+    },
+    {
+      "year": 1983,
+      "score": -39,
+      "races": 15,
+      "partial": 0
+    },
+    {
+      "year": 1984,
+      "score": 285,
+      "races": 16,
+      "partial": 0
+    },
+    {
+      "year": 1985,
+      "score": -101,
+      "races": 15,
+      "partial": 1
+    }
+  ]
+}

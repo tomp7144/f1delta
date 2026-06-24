@@ -1,0 +1,17 @@
+{
+  "driverId": "philippe-adams",
+  "name": "Philippe Adams",
+  "career": {
+    "score": -2,
+    "races": 2,
+    "partial": 0
+  },
+  "seasons": [
+    {
+      "year": 1994,
+      "score": -2,
+      "races": 2,
+      "partial": 0
+    }
+  ]
+}

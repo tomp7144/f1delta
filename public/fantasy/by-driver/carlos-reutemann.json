@@ -1,0 +1,77 @@
+{
+  "driverId": "carlos-reutemann",
+  "name": "Carlos Reutemann",
+  "career": {
+    "score": 1004,
+    "races": 146,
+    "partial": 0
+  },
+  "seasons": [
+    {
+      "year": 1972,
+      "score": -42,
+      "races": 10,
+      "partial": 0
+    },
+    {
+      "year": 1973,
+      "score": 29,
+      "races": 15,
+      "partial": 0
+    },
+    {
+      "year": 1974,
+      "score": 65,
+      "races": 15,
+      "partial": 0
+    },
+    {
+      "year": 1975,
+      "score": 196,
+      "races": 14,
+      "partial": 0
+    },
+    {
+      "year": 1976,
+      "score": -143,
+      "races": 13,
+      "partial": 0
+    },
+    {
+      "year": 1977,
+      "score": 207,
+      "races": 17,
+      "partial": 0
+    },
+    {
+      "year": 1978,
+      "score": 167,
+      "races": 16,
+      "partial": 0
+    },
+    {
+      "year": 1979,
+      "score": 81,
+      "races": 15,
+      "partial": 0
+    },
+    {
+      "year": 1980,
+      "score": 222,
+      "races": 14,
+      "partial": 0
+    },
+    {
+      "year": 1981,
+      "score": 204,
+      "races": 15,
+      "partial": 0
+    },
+    {
+      "year": 1982,
+      "score": 18,
+      "races": 2,
+      "partial": 0
+    }
+  ]
+}

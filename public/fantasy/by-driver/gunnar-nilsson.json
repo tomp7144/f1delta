@@ -1,0 +1,23 @@
+{
+  "driverId": "gunnar-nilsson",
+  "name": "Gunnar Nilsson",
+  "career": {
+    "score": -83,
+    "races": 32,
+    "partial": 0
+  },
+  "seasons": [
+    {
+      "year": 1976,
+      "score": -66,
+      "races": 15,
+      "partial": 0
+    },
+    {
+      "year": 1977,
+      "score": -17,
+      "races": 17,
+      "partial": 0
+    }
+  ]
+}

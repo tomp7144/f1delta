@@ -1,0 +1,23 @@
+{
+  "driverId": "zsolt-baumgartner",
+  "name": "Zsolt Baumgartner",
+  "career": {
+    "score": -39,
+    "races": 20,
+    "partial": 0
+  },
+  "seasons": [
+    {
+      "year": 2003,
+      "score": -6,
+      "races": 2,
+      "partial": 0
+    },
+    {
+      "year": 2004,
+      "score": -33,
+      "races": 18,
+      "partial": 0
+    }
+  ]
+}
