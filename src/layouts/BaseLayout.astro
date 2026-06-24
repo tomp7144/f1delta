@@ -17,6 +17,7 @@ function navKey(p: string): string {
   if (p.startsWith("/grands-prix")) return "gps";
   if (p.startsWith("/circuits")) return "circuits";
   if (p.startsWith("/records")) return "records";
+  if (p.startsWith("/fantasy")) return "fantasy";
   return "";
 }
 const current = navKey(pathname);
@@ -53,6 +54,7 @@ const current = navKey(pathname);
           <a href="/grands-prix" aria-current={current === "gps" ? "page" : undefined}>GPs</a>
           <a href="/circuits" aria-current={current === "circuits" ? "page" : undefined}>Circuits</a>
           <a href="/records" aria-current={current === "records" ? "page" : undefined}>Records</a>
+          <a href="/fantasy" aria-current={current === "fantasy" ? "page" : undefined}>Fantasy</a>
         </div>
       </div>
     </nav>
