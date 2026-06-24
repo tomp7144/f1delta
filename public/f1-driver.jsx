@@ -20,6 +20,163 @@ const fmt = (n) => (n % 1 === 0 ? String(n) : n.toFixed(1));
 const TOKEN_KEY = "f1delta_token"; // matches f1-access.js
 function readToken() { try { return localStorage.getItem(TOKEN_KEY) || ""; } catch (e) { return ""; } }
 
+const RTF1 = {
+  "lando-norris": [
+    ["Karting", "Won the 2013 CIK-FIA KF-Junior European Championship (and the International Super Cup and WSK Euro Series); 2014 CIK-FIA World KF Championship with Ricky Flynn Motorsport, becoming the youngest CIK-FIA KF World champion at the time."],
+    ["Junior single-seaters", "2014 Ginetta Junior Championship (3rd, Rookie Cup); 2015 MSA Formula/British F4 champion with Carlin (8 wins); 2016 Toyota Racing Series champion, Eurocup Formula Renault 2.0 champion and Formula Renault 2.0 NEC champion; 2017 FIA F3 European Championship champion with Carlin (9 wins); 2018 FIA F2 runner-up with Carlin (won the season opener in Bahrain)."],
+    ["Academy", "McLaren young driver programme from 2017; McLaren test & reserve driver in 2018."],
+    ["Highlights", "2016 McLaren Autosport BRDC Award winner; won F4, Formula Renault and F3 titles in successive years."],
+    ["F1 debut", "2019 with McLaren, partnering Carlos Sainz."],
+  ],
+  "oscar-piastri": [
+    ["Karting", "Began karting in Australia in 2011; moved to Europe with Ricky Flynn Motorsport in 2015–16."],
+    ["Junior single-seaters", "2016 Formula 4 UAE (part, 6th); 2017 British F4 runner-up with TRS Arden (6 wins); 2019 Formula Renault Eurocup champion with R-ace GP; 2020 FIA F3 champion with Prema (rookie); 2021 FIA F2 champion with Prema (rookie)."],
+    ["Academy", "Renault Sport Academy/Alpine Academy from January 2020 to 2022; managed by Mark Webber; Alpine and McLaren reserve driver in 2022."],
+    ["Highlights", "Only driver in history to win Formula Renault, F3 and F2 titles in three successive seasons; sixth driver to win F2 as a rookie."],
+    ["F1 debut", "2023 with McLaren, following a contract dispute between Alpine and McLaren resolved in McLaren's favour by the FIA Contract Recognition Board."],
+  ],
+  "charles-leclerc": [
+    ["Karting", "French and Monégasque karting titles; 2011 CIK-FIA KF3 World Cup, Academy Trophy and ERDF Junior Kart Masters; 2013 runner-up to Max Verstappen in the CIK-FIA World KZ Championship. Managed from 2011 by Nicolas Todt."],
+    ["Junior single-seaters", "2014 Formula Renault 2.0 Alps runner-up (and Junior champion) with Fortec; 2015 FIA F3 European Championship 4th (rookie) with Van Amersfoort; 2016 GP3 Series champion with ART (rookie); 2017 FIA F2 champion with Prema (rookie)."],
+    ["Academy", "Ferrari Driver Academy from 2016; Ferrari development and Haas test driver in 2016–17."],
+    ["Highlights", "Won GP3 and F2 titles in consecutive rookie seasons; youngest GP3 champion at the time."],
+    ["F1 debut", "2018 with Sauber (Alfa Romeo Sauber)."],
+  ],
+  "lewis-hamilton": [
+    ["Karting", "British cadet and junior karting champion through the 1990s; 2000 European Formula A champion and World Cup winner; signed to the McLaren–Mercedes young driver support programme in 1998, aged 13."],
+    ["Junior single-seaters", "2001–03 British Formula Renault (champion in 2003 with Manor); 2004 F3 Euro Series 5th with Manor; 2005 F3 Euro Series champion with ASM (15 of 20 wins) plus the Marlboro Masters of F3; 2006 GP2 champion with ART (rookie)."],
+    ["Academy", "McLaren–Mercedes young driver support programme from 1998."],
+    ["Highlights", "Dominant 2005 F3 season; rookie GP2 champion."],
+    ["F1 debut", "2007 with McLaren, partnering reigning champion Fernando Alonso."],
+  ],
+  "george-russell": [
+    ["Karting", "Multiple British karting titles; CIK-FIA KF3 European Champion in 2011 and 2012 — the first driver to defend the Junior European title."],
+    ["Junior single-seaters", "2014 BRDC Formula 4 champion with Lanan (rookie), alongside a Formula Renault 2.0 Alps campaign; 2015–16 FIA F3 European Championship (3rd in 2016 with Hitech); 2017 GP3 champion with ART (rookie); 2018 FIA F2 champion with ART (rookie), beating Lando Norris by 86 points."],
+    ["Academy", "Mercedes Junior Team from January 2017; Mercedes and Force India F1 reserve and FP1 outings."],
+    ["Highlights", "2014 McLaren Autosport BRDC Award; won GP3 and F2 in consecutive rookie seasons."],
+    ["F1 debut", "2019 with Williams, partnering Robert Kubica."],
+  ],
+  "kimi-antonelli": [
+    ["Karting", "Extensive karting titles; back-to-back European Championship (OK class) wins in 2020 and 2021; joined the Mercedes Junior Team in 2019, aged 12."],
+    ["Junior single-seaters", "2021 Italian F4 (part) with Prema; 2022 Italian F4 and ADAC German F4 champion with Prema; 2023 Formula Regional Middle East and Formula Regional European (FRECA) champion; 2024 FIA F2 with Prema (6th, two wins — the Silverstone sprint and Hungary feature)."],
+    ["Academy", "Mercedes Junior Team from 2019."],
+    ["Highlights", "Promoted directly from FRECA to F2, skipping FIA F3; became the youngest multiple race winner in F2 history at the time."],
+    ["F1 debut", "2025 with Mercedes, replacing Lewis Hamilton, aged 18 years 6 months 20 days — the third-youngest driver ever to start an F1 race."],
+  ],
+  "max-verstappen": [
+    ["Karting", "Won numerous karting titles culminating in a record-breaking 2013 season (world and European KZ honours)."],
+    ["Junior single-seaters", "2014 Florida Winter Series (winning races on debut); 2014 FIA F3 European Championship 3rd (rookie) with Van Amersfoort, scoring the most wins of any driver that year (10)."],
+    ["Academy", "Joined the Red Bull Junior Team in August 2014, turning down a Mercedes offer."],
+    ["Highlights", "Made three FP1 appearances in 2014 starting at the Japanese GP, becoming the youngest person to participate in an F1 weekend."],
+    ["F1 debut", "2015 with Toro Rosso, partnering Carlos Sainz. Became the youngest driver to start an F1 race at the 2015 Australian GP, aged 17 years 166 days."],
+  ],
+  "isack-hadjar": [
+    ["Karting", "Began karting in 2012; progressed to international level in 2017; contested the 2018 Karting World Championship."],
+    ["Junior single-seaters", "2019 French F4 (7th); 2020 French F4 3rd with the FFSA Academy; 2021 Formula Regional European 5th with R-ace GP (won the Monaco round) plus F3 Asian; 2022 FIA F3 4th with Hitech (three wins) plus Formula Regional Asian; 2023 FIA F2 with Hitech (14th); 2024 FIA F2 runner-up with Campos, losing to Gabriel Bortoleto."],
+    ["Academy", "Red Bull Junior Team from 2022."],
+    ["Highlights", "Nicknamed \"le Petit Prost\" in the French media; took the 2024 F2 title fight to the final round."],
+    ["F1 debut", "2025 with Racing Bulls (promoted to Red Bull Racing for 2026)."],
+  ],
+  "alexander-albon": [
+    ["Karting", "Began karting aged eight; won the junior World Cup and European titles in 2010; runner-up to Nyck de Vries in the 2011 World Championship."],
+    ["Junior single-seaters", "2012–14 Eurocup Formula Renault 2.0 (3rd in 2014); 2015 FIA F3 European Championship with Signature; 2016 GP3 Series runner-up to Charles Leclerc with ART; 2017 FIA F2 with ART (10th); 2018 FIA F2 3rd with DAMS (four wins)."],
+    ["Academy", "Red Bull Junior Team in 2012 (dropped after one year); later supported by the Lotus junior scheme; rejoined Red Bull for 2019."],
+    ["Highlights", "Won the 2010 junior World Cup; battled Russell and Norris for the 2018 F2 title."],
+    ["F1 debut", "2019 with Toro Rosso (had signed a Formula E deal with Nissan e.dams before being called up)."],
+  ],
+  "carlos-sainz-jr": [
+    ["Karting", "Asia-Pacific KF3 champion in 2008; Monaco Kart Cup KF3 winner in 2009; runner-up in the European and Spanish KF3 championships."],
+    ["Junior single-seaters", "2010 Formula BMW Europe; 2011 Formula Renault 2.0 NEC champion with Koiranen and Eurocup runner-up to Robin Frijns; 2012 British F3, F3 Euro Series and FIA European F3 with Carlin; 2013 GP3 Series 10th with Arden; 2014 Formula Renault 3.5 Series champion with DAMS (seven wins, a series record at the time)."],
+    ["Academy", "Red Bull Junior Team from 2010."],
+    ["Highlights", "Dominant 2014 Formula Renault 3.5 title; son of two-time World Rally Champion Carlos Sainz."],
+    ["F1 debut", "2015 with Toro Rosso, partnering Max Verstappen."],
+  ],
+  "fernando-alonso": [
+    ["Karting", "Multiple Spanish karting titles in the 1990s; 1996 World Junior and CIK-FIA Five Continents karting honours."],
+    ["Junior single-seaters", "1999 Euro Open by Nissan champion with Campos (six wins); 2000 International F3000 4th with Team Astromega (won at Spa-Francorchamps)."],
+    ["Academy", "Managed by Flavio Briatore; Minardi test/reserve driver in 2000; Renault test driver in 2002."],
+    ["Highlights", "Won the Nissan series at the first attempt; took an F3000 win at Spa aged 19."],
+    ["F1 debut", "2001 with Minardi."],
+  ],
+  "lance-stroll": [
+    ["Karting", "Began karting aged 10; numerous North American titles; Quebec Rookie of the Year (2008) and Driver of the Year (2009)."],
+    ["Junior single-seaters", "2014 Italian F4 champion with Prema (rookie); 2015 Toyota Racing Series champion with M2; 2015 F3 European Championship 5th with Prema; 2016 FIA F3 European Championship champion with Prema (14 wins, 187 points clear of runner-up Maximilian Günther)."],
+    ["Academy", "Ferrari Driver Academy from 2010 to 2015; Williams test/development driver from 2016."],
+    ["Highlights", "Dominant 2016 European F3 title; reached F1 in roughly two years of car racing. His podium at the 2017 Azerbaijan GP (aged 18 years 239 days) made him the youngest-ever rookie F1 podium finisher."],
+    ["F1 debut", "2017 with Williams, partnering Felipe Massa."],
+  ],
+  "pierre-gasly": [
+    ["Karting", "Raced karts from 2006 across France and Europe."],
+    ["Junior single-seaters", "2011 French F4 3rd with the FFSA Academy; 2013 Formula Renault Eurocup champion with Tech 1; 2014 Formula Renault 3.5 runner-up to Carlos Sainz with Arden; 2015 GP2 8th with DAMS; 2016 GP2 Series champion with Prema; 2017 Super Formula runner-up with Team Mugen (losing the title by half a point after the finale was cancelled by Typhoon Lan)."],
+    ["Academy", "Red Bull Junior Team from 2014; Red Bull reserve driver from September 2015."],
+    ["Highlights", "2016 GP2 champion; narrowly missed the 2017 Super Formula title."],
+    ["F1 debut", "2017 with Toro Rosso at the Malaysian Grand Prix, replacing Daniil Kvyat."],
+  ],
+  "franco-colapinto": [
+    ["Karting", "Began karting aged nine in Argentina; Argentine titles in 2016 and 2018; won the karting event at the 2018 Youth Olympic Games in Buenos Aires."],
+    ["Junior single-seaters", "2018 F4 Spanish Championship (debut round) with Drivex; 2019 F4 Spanish champion with FA Racing by Drivex (11 wins); 2020 Formula Renault Eurocup 3rd and Toyota Racing Series 3rd; 2021 sportscars (LMP2 in WEC/ELMS/Asian Le Mans with G-Drive) plus Formula Regional European 6th with MP; 2022 FIA F3 with Van Amersfoort (9th); 2023 FIA F3 4th with MP, plus an F2 debut at the season finale; 2024 FIA F2 with MP (first F2 win at the Imola sprint)."],
+    ["Academy", "Williams Driver Academy from January 2023 to 2024."],
+    ["Highlights", "First Argentine F1 driver since Gastón Mazzacane in 2001."],
+    ["F1 debut", "2024 with Williams at the Italian Grand Prix, replacing Logan Sargeant."],
+  ],
+  "liam-lawson": [
+    ["Karting", "Began karting aged six in New Zealand; multiple national titles."],
+    ["Junior single-seaters", "2015 NZ Formula First winner; 2016 NZ F1600 champion; 2017 Australian F4 runner-up; 2018 ADAC German F4 runner-up (won all three races at an Asian F3 round); 2019 Toyota Racing Series champion with M2, Euroformula Open runner-up, FIA F3 debut (11th with MP Motorsport); 2020 FIA F3 5th with Hitech; 2021 FIA F2 with Hitech (9th) and DTM runner-up with Red Bull AF Corse; 2022 FIA F2 3rd with Carlin; 2023 Super Formula runner-up with Mugen (winning on debut)."],
+    ["Academy", "Red Bull Junior Team from 2019."],
+    ["Highlights", "Won on debut in multiple categories — Formula First, F3, F2, DTM, and Super Formula."],
+    ["F1 debut", "2023 with AlphaTauri at the Dutch Grand Prix, replacing the injured Daniel Ricciardo."],
+  ],
+  "arvid-lindblad": [
+    ["Karting", "British Cadet champion in 2018; 2020 WSK Super Master Series (OKJ); 2021 WSK Euro Series and WSK Final Cup (OK)."],
+    ["Junior single-seaters", "2022 Italian F4 debut with Van Amersfoort; 2023 Italian F4 3rd with Prema (also won the Macau F4 race); 2024 FIA F3 4th with Prema (rookie; youngest F3 race winner; Silverstone sprint+feature double); 2025 Formula Regional Oceania champion with M2; 2025 FIA F2 with Campos (youngest race winner in F2 history at the Jeddah sprint, aged 17 years 254 days, plus a feature win in Barcelona)."],
+    ["Academy", "Red Bull Junior Team from 2021."],
+    ["Highlights", "Youngest race winner in both FIA F3 and FIA F2 history; made F1 FP1 appearances for Red Bull in 2025 at the British GP, Mexican GP and Abu Dhabi."],
+    ["F1 debut", "2026 with Racing Bulls — the only true rookie on the 2026 grid."],
+  ],
+  "esteban-ocon": [
+    ["Karting", "French karting titles in the cadet and KF3 classes; runner-up to Max Verstappen in the 2011 WSK Euro Series."],
+    ["Junior single-seaters", "2012–13 Eurocup Formula Renault 2.0 (3rd in 2013 with ART); 2014 FIA F3 European Championship champion with Prema (beating Verstappen and Tom Blomqvist); 2015 GP3 Series champion with ART; 2016 DTM with Mercedes/ART (partial season before his F1 call-up)."],
+    ["Academy", "Gravity/Lotus junior scheme, then Mercedes Junior Team from 2015; Renault reserve in early 2016."],
+    ["Highlights", "Back-to-back F3 (2014) and GP3 (2015) titles."],
+    ["F1 debut", "2016 with Manor at the Belgian Grand Prix, replacing Rio Haryanto."],
+  ],
+  "oliver-bearman": [
+    ["Karting", "British/IAME karting route; Kartmasters British GP winner in 2017; IAME international titles in 2019–20."],
+    ["Junior single-seaters", "2020 ADAC German F4 7th with US Racing; 2021 Italian F4 and ADAC German F4 champion with Van Amersfoort — the first driver to win two F4 titles in a single year; 2022 FIA F3 3rd with Prema (rookie); 2023 FIA F2 6th with Prema (rookie; sprint+feature double in Baku)."],
+    ["Academy", "Ferrari Driver Academy from late 2021; Ferrari and Haas reserve driver in 2024."],
+    ["Highlights", "First driver to win the Italian and ADAC German F4 titles in the same year."],
+    ["F1 debut", "2024 with Ferrari at the Saudi Arabian Grand Prix — a last-minute stand-in for Carlos Sainz (appendicitis), finishing 7th on debut. Later substituted for Kevin Magnussen at Haas before signing full-time."],
+  ],
+  "nico-hulkenberg": [
+    ["Karting", "German Junior Kart champion in 2002; German Kart champion in 2003."],
+    ["Junior single-seaters", "2005 Formula BMW ADAC champion with Josef Kaufmann (rookie); 2006 German F3 5th; 2006–07 A1 Grand Prix champion with A1 Team Germany (nine wins — the most successful driver in A1GP history); 2007 F3 Euro Series 3rd plus a Masters of F3 win; 2008 F3 Euro Series champion with ART; 2009 GP2 Series champion with ART (rookie)."],
+    ["Academy", "Williams F1 test driver from 2007 to 2009."],
+    ["Highlights", "Won a title in essentially every junior series he entered; rookie GP2 champion."],
+    ["F1 debut", "2010 with Williams; took a shock pole position at the 2010 Brazilian GP."],
+  ],
+  "gabriel-bortoleto": [
+    ["Karting", "Brazilian karting from 2011; finished 3rd in the 2018 OK-Junior European and World Championships."],
+    ["Junior single-seaters", "2020 Italian F4 5th with Prema (won at Mugello); 2021–22 Formula Regional European (FRECA) — 6th in 2022 with R-ace GP (two wins); 2023 FIA F3 champion with Trident (rookie); 2024 FIA F2 champion with Invicta (rookie)."],
+    ["Academy", "McLaren Driver Development Programme from October 2023 to 2024; managed by Fernando Alonso's A14 Management."],
+    ["Highlights", "Won F3 and F2 in consecutive rookie seasons. At the 2024 Monza feature race became the first driver to win from last on the grid in F2, starting P22 and winning by 9.4 seconds."],
+    ["F1 debut", "2025 with Sauber, ahead of the team's transition to Audi."],
+  ],
+  "sergio-perez": [
+    ["Karting", "Began karting aged six in Mexico; multiple national titles; backed early by Escudería Telmex."],
+    ["Junior single-seaters", "2004 Skip Barber National (USA); 2005–06 Formula BMW ADAC (6th in 2006); 2007 British F3 National Class champion with T-Sport; 2008 British F3 International Class 4th; 2009 GP2 12th with Arden; 2010 GP2 runner-up with Barwa Addax (five wins), behind Pastor Maldonado."],
+    ["Academy", "Ferrari Driver Academy from October 2010 to 2012."],
+    ["Highlights", "2007 British F3 National Class title; 2010 GP2 runner-up."],
+    ["F1 debut", "2011 with Sauber — the first Mexican in F1 since Héctor Rebaque."],
+  ],
+  "valtteri-bottas": [
+    ["Karting", "Karting from age six; competed in the Formula A World Championship/World Cup in the mid-2000s."],
+    ["Junior single-seaters", "2008 Formula Renault 2.0 Eurocup champion (beating Daniel Ricciardo by three points) and NEC champion with Motopark; 2009–10 F3 Euro Series 3rd with ART (winning the Masters of F3 in both 2009 and 2010); 2011 GP3 Series champion with ART (rookie)."],
+    ["Academy", "Williams F1 test/reserve driver from 2010 to 2012."],
+    ["Highlights", "Eurocup and NEC double in 2008; first driver to win the F3 Masters twice."],
+    ["F1 debut", "2013 with Williams, partnering Pastor Maldonado."],
+  ],
+};
+
 async function fetchDriver(slug) {
   const token = readToken();
   const headers = token ? { authorization: `Bearer ${token}` } : {};
@@ -140,6 +297,12 @@ function Styles() {
       .dp .eng-past{margin-top:10px;border-top:1px solid var(--line);padding-top:8px}
       .dp .eng-past-row{padding:5px 0;border-bottom:1px solid var(--line2)}
       .dp .eng-past-row:last-child{border-bottom:none}
+
+      .dp .rtf1-card{padding:0 14px}
+      .dp .rtf1-row{padding:10px 0;border-bottom:1px solid var(--line2)}
+      .dp .rtf1-row:last-child{border-bottom:none}
+      .dp .rtf1-label{font-family:var(--mono);font-size:9px;letter-spacing:.12em;text-transform:uppercase;color:var(--faint);margin-bottom:4px}
+      .dp .rtf1-text{font-family:var(--body);font-size:13px;color:var(--dim);line-height:1.55;margin:0}
     `}</style>
   );
 }
@@ -336,6 +499,26 @@ function H2HGate({ d }) {
   );
 }
 
+function RoadToF1({ slug }) {
+  const rows = RTF1[slug];
+  if (!rows) return null;
+  return (
+    <section>
+      <div className="sec-h"><h2>Road to Formula 1</h2></div>
+      <div className="card">
+        <div className="rtf1-card">
+          {rows.map(([label, text]) => (
+            <div className="rtf1-row" key={label}>
+              <div className="rtf1-label">{label}</div>
+              <p className="rtf1-text">{text}</p>
+            </div>
+          ))}
+        </div>
+      </div>
+    </section>
+  );
+}
+
 function DriverPage() {
   const [st, setSt] = useState({ s: "loading", d: null });
 
@@ -372,6 +555,7 @@ function DriverPage() {
             <EngineerSection engineer={d.engineer} />
             {!d.pro && <div className="adslot"><span>Advertisement</span></div>}
             {d.pro ? <H2HPro d={d} /> : <H2HGate d={d} />}
+            <RoadToF1 slug={(new URLSearchParams(location.search).get("d") || "").toLowerCase()} />
             <div className="foot">F1 <b>Δ</b> DELTA · data via F1DB · unofficial</div>
           </div>
         </>
