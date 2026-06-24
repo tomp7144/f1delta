@@ -1,38 +1,6 @@
 ---
 export const prerender = true;
-import fs from "node:fs";
-import path from "node:path";
 import BaseLayout from "../layouts/BaseLayout.astro";
-
-let raw: any = { syncedAt: null, season: 2026, assets: [] };
-try {
-  raw = JSON.parse(fs.readFileSync(path.resolve("./data/fantasy/players.json"), "utf8"));
-} catch {}
-
-const assets: any[] = raw.assets ?? [];
-const syncedAt: string | null = raw.syncedAt ?? null;
-
-// Phase 2: swap out the numerator here to change the value metric.
-function ppm(price: number, points: number): number | null {
-  if (!price) return null;
-  return Math.round((points / price) * 10) / 10;
-}
-
-function fmtSync(iso: string | null): string {
-  if (!iso) return "—";
-  const d = new Date(iso);
-  return d.toLocaleString("en-GB", {
-    day: "numeric", month: "short", year: "numeric",
-    hour: "2-digit", minute: "2-digit", timeZone: "UTC"
-  }) + " UTC";
-}
-
-const isEmpty = assets.length === 0;
-const isStale = syncedAt
-  ? Date.now() - new Date(syncedAt).getTime() > 26 * 3600 * 1000
-  : false;
-
-const enriched = assets.map((a: any) => ({ ...a, ppm: ppm(a.price, a.points) }));
 ---
 
 <BaseLayout
@@ -41,212 +9,223 @@ const enriched = assets.map((a: any) => ({ ...a, ppm: ppm(a.price, a.points) }))
   canonical="https://f1delta.com/fantasy"
 >
   <div class="fhub">
-    <div class="page-hd">
-      <h1>F1 Fantasy</h1>
-      {syncedAt && (
-        <span class:list={["sync-ts", { stale: isStale }]}>
-          {isStale ? "⚠ Stale — " : ""}prices as of {fmtSync(syncedAt)}
-        </span>
-      )}
-    </div>
-
-    {isEmpty ? (
-      <div class="empty-state">
-        <p>Fantasy data will appear here once the first sync runs.</p>
-      </div>
-    ) : (
-      <>
-        <div class="controls">
-          <div class="type-filters" id="type-filters">
-            <button class="filt on" data-type="all" type="button">All</button>
-            <button class="filt" data-type="driver" type="button">Drivers</button>
-            <button class="filt" data-type="constructor" type="button">Constructors</button>
-          </div>
-          <select id="team-filter" class="team-sel">
-            <option value="">All teams</option>
-            {[...new Set(enriched.map((a: any) => a.team).filter(Boolean))].sort().map((t: any) => (
-              <option value={t}>{t}</option>
-            ))}
-          </select>
-        </div>
-
-        <div class="count-row">
-          <span id="fant-count">Showing {enriched.length} of {enriched.length}</span>
-        </div>
-
-        <div class="card" id="fantasy-table-card">
-          <table data-fant-table>
-            <thead>
-              <tr>
-                <th class="l" data-sort="name" data-type="text" tabindex="0">Name</th>
-                <th class="l" data-sort="team" data-type="text" tabindex="0">Team</th>
-                <th data-sort="price"  data-type="num"  tabindex="0" aria-sort="descending">Price</th>
-                <th data-sort="points" data-type="num"  tabindex="0">Points</th>
-                <th data-sort="ppm"    data-type="num"  tabindex="0">PPM</th>
-                <th data-sort="delta"  data-type="num"  tabindex="0">&Delta;</th>
-              </tr>
-            </thead>
-            <tbody>
-              {enriched.sort((a: any, b: any) => b.price - a.price).map((a: any) => (
-                <tr
-                  data-name={a.name}
-                  data-assettype={a.type}
-                  data-team={a.team ?? ""}
-                  data-price={a.price ?? 0}
-                  data-points={a.points ?? 0}
-                  data-ppm={a.ppm ?? 0}
-                  data-delta={a.priceDelta ?? 0}
-                >
-                  <td class="nm">
-                    {a.type === "driver"
-                      ? <span class="dot"></span>
-                      : <span class="dot ctor"></span>}
-                    {a.name}
-                  </td>
-                  <td class="tm">{a.team ?? "—"}</td>
-                  <td class="n">£{(a.price ?? 0).toFixed(1)}m</td>
-                  <td class="n">{a.points?.toFixed(1) ?? "—"}</td>
-                  <td class="n">{a.ppm != null ? a.ppm.toFixed(1) : "—"}</td>
-                  <td class:list={["n", "delta", { pos: (a.priceDelta ?? 0) > 0, neg: (a.priceDelta ?? 0) < 0 }]}>
-                    {(a.priceDelta ?? 0) === 0 ? "—"
-                      : (a.priceDelta > 0 ? `+${a.priceDelta.toFixed(1)}` : a.priceDelta.toFixed(1))}
-                  </td>
-                </tr>
-              ))}
-            </tbody>
-          </table>
-        </div>
-      </>
-    )}
+    <div id="fantasy-root"><p class="f-loading">Loading&hellip;</p></div>
   </div>
 
   <script is:inline src="/f1-access.js"></script>
 
   <script is:inline>
   (function () {
-    // ── Sorting + Filtering ──────────────────────────────────────────
-    var table = document.querySelector("[data-fant-table]");
-    if (!table) return;
-    var tbody = table.tBodies[0];
-    var countEl = document.getElementById("fant-count");
-    var total = tbody.rows.length;
+    var root = document.getElementById("fantasy-root");
+    if (!root) return;
 
-    var sortKey = "price";
-    var sortDir = -1;
-    var typeFilter = "all";
-    var teamFilter = "";
+    var TOKEN_KEY = "f1delta_token";
+    function getToken() { try { return localStorage.getItem(TOKEN_KEY) || ""; } catch (e) { return ""; } }
 
-    function rowVisible(r) { return r.style.display !== "none"; }
-
-    function updateCount() {
-      var n = 0;
-      var rows = tbody.rows;
-      for (var i = 0; i < rows.length; i++) {
-        if (rowVisible(rows[i])) n++;
-      }
-      if (countEl) countEl.textContent = "Showing " + n + " of " + total;
+    function esc(s) {
+      return String(s == null ? "" : s)
+        .replace(/&/g, "&amp;").replace(/</g, "&lt;")
+        .replace(/>/g, "&gt;").replace(/"/g, "&quot;");
     }
 
-    function applyFilters() {
-      var rows = tbody.rows;
-      for (var i = 0; i < rows.length; i++) {
-        var r = rows[i];
-        var show = true;
-        if (typeFilter !== "all" && r.getAttribute("data-assettype") !== typeFilter) show = false;
-        if (teamFilter && r.getAttribute("data-team") !== teamFilter) show = false;
-        r.style.display = show ? "" : "none";
-      }
-      updateCount();
+    // Phase 2: swap out the numerator here to change the value metric.
+    function ppm(price, points) {
+      if (!price) return null;
+      return Math.round((points / price) * 10) / 10;
     }
 
-    function sortBy(key, type) {
-      if (sortKey === key) { sortDir = -sortDir; } else { sortKey = key; sortDir = type === "text" ? 1 : -1; }
+    function fmtDate(iso) {
+      if (!iso) return "—";
+      return new Date(iso).toLocaleString("en-GB", {
+        day: "numeric", month: "short", year: "numeric",
+        hour: "2-digit", minute: "2-digit", timeZone: "UTC"
+      }) + " UTC";
+    }
 
-      var rows = Array.prototype.slice.call(tbody.rows);
-      rows.sort(function (a, b) {
-        var av = a.getAttribute("data-" + key) || "";
-        var bv = b.getAttribute("data-" + key) || "";
-        if (type === "num") {
-          av = parseFloat(av) || 0;
-          bv = parseFloat(bv) || 0;
-        } else {
-          av = av.toLowerCase();
-          bv = bv.toLowerCase();
+    function showGate() {
+      root.innerHTML =
+        '<div class="f-gate-wrap">' +
+          '<div class="f-gpanel">' +
+            '<div class="f-lock">Pro Feature</div>' +
+            '<h3>Unlock F1 Fantasy Tracker</h3>' +
+            '<p>Price tracking, value scores, and historical price changes for all 33 F1 Fantasy assets.</p>' +
+            '<a class="f-go" href="/pro">Go Pro \xb7 $9/mo →</a>' +
+            '<div class="f-fine">cancel anytime</div>' +
+          '</div>' +
+        '</div>';
+    }
+
+    function renderTable(data) {
+      var raw = data.assets || [];
+      var syncedAt = data.syncedAt || null;
+      var isStale = syncedAt && (Date.now() - new Date(syncedAt).getTime()) > 26 * 3600 * 1000;
+      var total = raw.length;
+
+      // Enrich with PPM, sort by price desc for initial render
+      var assets = raw.map(function (a) {
+        return { id: a.id, name: a.name, type: a.type, team: a.team,
+                 price: a.price || 0, points: a.points || 0,
+                 ppm: ppm(a.price, a.points), priceDelta: a.priceDelta || 0 };
+      }).sort(function (a, b) { return b.price - a.price; });
+
+      // Unique teams for dropdown
+      var teamsMap = {};
+      assets.forEach(function (a) { if (a.team) teamsMap[a.team] = true; });
+      var teams = Object.keys(teamsMap).sort();
+      var teamOpts = '<option value="">All teams</option>' +
+        teams.map(function (t) { return '<option value="' + esc(t) + '">' + esc(t) + '</option>'; }).join("");
+
+      var tsHtml = syncedAt
+        ? '<span class="sync-ts' + (isStale ? ' stale' : '') + '">' +
+            (isStale ? '⚠ Stale — ' : '') + 'prices as of ' + esc(fmtDate(syncedAt)) + '</span>'
+        : '';
+
+      var rowsHtml = assets.map(function (a) {
+        var d = a.priceDelta;
+        var dText = d === 0 ? "—" : (d > 0 ? "+" + d.toFixed(1) : d.toFixed(1));
+        var dC = d > 0 ? " pos" : d < 0 ? " neg" : "";
+        var dotC = a.type === "constructor" ? "dot ctor" : "dot";
+        return '<tr' +
+          ' data-name="' + esc(a.name) + '"' +
+          ' data-assettype="' + esc(a.type) + '"' +
+          ' data-team="' + esc(a.team) + '"' +
+          ' data-price="' + esc(String(a.price)) + '"' +
+          ' data-points="' + esc(String(a.points)) + '"' +
+          ' data-ppm="' + esc(String(a.ppm != null ? a.ppm : 0)) + '"' +
+          ' data-delta="' + esc(String(d)) + '">' +
+          '<td class="nm"><span class="' + esc(dotC) + '"></span>' + esc(a.name) + '</td>' +
+          '<td class="tm">' + esc(a.team || "—") + '</td>' +
+          '<td class="n">\xa3' + esc(a.price.toFixed(1)) + 'm</td>' +
+          '<td class="n">' + esc(a.points.toFixed(1)) + '</td>' +
+          '<td class="n">' + (a.ppm != null ? esc(a.ppm.toFixed(1)) : "—") + '</td>' +
+          '<td class="n delta' + dC + '">' + esc(dText) + '</td>' +
+          '</tr>';
+      }).join("");
+
+      root.innerHTML =
+        '<div class="page-hd"><h1>F1 Fantasy</h1>' + tsHtml + '</div>' +
+        '<div class="controls">' +
+          '<div id="f-type-btns" class="type-filters">' +
+            '<button class="filt on" data-type="all">All</button>' +
+            '<button class="filt" data-type="driver">Drivers</button>' +
+            '<button class="filt" data-type="constructor">Constructors</button>' +
+          '</div>' +
+          '<select id="f-team" class="team-sel">' + teamOpts + '</select>' +
+        '</div>' +
+        '<div class="count-row"><span id="f-count">Showing ' + total + ' of ' + total + '</span></div>' +
+        '<div class="card">' +
+          '<table id="f-table">' +
+            '<thead><tr>' +
+              '<th class="l" data-sort="name" data-type="text" tabindex="0">Name</th>' +
+              '<th class="l" data-sort="team" data-type="text" tabindex="0">Team</th>' +
+              '<th data-sort="price"  data-type="num" tabindex="0" aria-sort="descending">Price</th>' +
+              '<th data-sort="points" data-type="num" tabindex="0">Points</th>' +
+              '<th data-sort="ppm"    data-type="num" tabindex="0">PPM</th>' +
+              '<th data-sort="delta"  data-type="num" tabindex="0">&Delta;</th>' +
+            '</tr></thead>' +
+            '<tbody id="f-tbody">' + rowsHtml + '</tbody>' +
+          '</table>' +
+        '</div>';
+
+      // ── Sorting + Filtering ──────────────────────────────────────────
+      var table   = document.getElementById("f-table");
+      var tbody   = document.getElementById("f-tbody");
+      var countEl = document.getElementById("f-count");
+      var sortKey = "price";
+      var sortDir = -1;
+      var typeFilter = "all";
+      var teamFilter = "";
+
+      function updateCount() {
+        var n = 0, rows = tbody.rows;
+        for (var i = 0; i < rows.length; i++) if (rows[i].style.display !== "none") n++;
+        if (countEl) countEl.textContent = "Showing " + n + " of " + total;
+      }
+
+      function applyFilters() {
+        var rows = tbody.rows;
+        for (var i = 0; i < rows.length; i++) {
+          var r = rows[i], show = true;
+          if (typeFilter !== "all" && r.getAttribute("data-assettype") !== typeFilter) show = false;
+          if (teamFilter && r.getAttribute("data-team") !== teamFilter) show = false;
+          r.style.display = show ? "" : "none";
         }
-        if (av < bv) return -sortDir;
-        if (av > bv) return sortDir;
-        return 0;
-      });
+        updateCount();
+      }
 
-      var frag = document.createDocumentFragment();
-      rows.forEach(function (r) { frag.appendChild(r); });
-      tbody.appendChild(frag);
+      function doSort(key, type) {
+        if (sortKey === key) { sortDir = -sortDir; } else { sortKey = key; sortDir = type === "text" ? 1 : -1; }
+        var rows = Array.prototype.slice.call(tbody.rows);
+        rows.sort(function (a, b) {
+          var av = a.getAttribute("data-" + key) || "";
+          var bv = b.getAttribute("data-" + key) || "";
+          if (type === "num") { av = parseFloat(av) || 0; bv = parseFloat(bv) || 0; }
+          else { av = av.toLowerCase(); bv = bv.toLowerCase(); }
+          return av < bv ? -sortDir : av > bv ? sortDir : 0;
+        });
+        var frag = document.createDocumentFragment();
+        rows.forEach(function (r) { frag.appendChild(r); });
+        tbody.appendChild(frag);
+        var ths = table.tHead.rows[0].cells;
+        for (var i = 0; i < ths.length; i++) ths[i].removeAttribute("aria-sort");
+        var active = table.querySelector('[data-sort="' + key + '"]');
+        if (active) active.setAttribute("aria-sort", sortDir === 1 ? "ascending" : "descending");
+        applyFilters();
+      }
 
-      var heads = table.tHead.rows[0].cells;
-      for (var i = 0; i < heads.length; i++) heads[i].removeAttribute("aria-sort");
-      var active = table.querySelector('[data-sort="' + key + '"]');
-      if (active) active.setAttribute("aria-sort", sortDir === 1 ? "ascending" : "descending");
+      var ths = table.querySelectorAll("th[data-sort]");
+      for (var i = 0; i < ths.length; i++) {
+        (function (th) {
+          th.addEventListener("click", function () { doSort(th.getAttribute("data-sort"), th.getAttribute("data-type") || "text"); });
+          th.addEventListener("keydown", function (e) {
+            if (e.key === "Enter" || e.key === " ") { e.preventDefault(); doSort(th.getAttribute("data-sort"), th.getAttribute("data-type") || "text"); }
+          });
+        })(ths[i]);
+      }
+
+      var typeBtns = document.querySelectorAll("#f-type-btns .filt");
+      for (var j = 0; j < typeBtns.length; j++) {
+        (function (btn) {
+          btn.addEventListener("click", function () {
+            typeFilter = btn.getAttribute("data-type");
+            for (var k = 0; k < typeBtns.length; k++) typeBtns[k].classList.remove("on");
+            btn.classList.add("on");
+            applyFilters();
+          });
+        })(typeBtns[j]);
+      }
+
+      var teamSel = document.getElementById("f-team");
+      if (teamSel) teamSel.addEventListener("change", function () { teamFilter = teamSel.value; applyFilters(); });
 
       applyFilters();
     }
 
-    var heads = table.querySelectorAll("th[data-sort]");
-    for (var i = 0; i < heads.length; i++) {
-      (function (th) {
-        th.addEventListener("click", function () {
-          sortBy(th.getAttribute("data-sort"), th.getAttribute("data-type") || "text");
-        });
-        th.addEventListener("keydown", function (e) {
-          if (e.key === "Enter" || e.key === " ") { e.preventDefault(); sortBy(th.getAttribute("data-sort"), th.getAttribute("data-type") || "text"); }
-        });
-      })(heads[i]);
-    }
-
-    var typeBtns = document.querySelectorAll("#type-filters .filt");
-    for (var j = 0; j < typeBtns.length; j++) {
-      (function (btn) {
-        btn.addEventListener("click", function () {
-          typeFilter = btn.getAttribute("data-type");
-          for (var k = 0; k < typeBtns.length; k++) typeBtns[k].classList.remove("on");
-          btn.classList.add("on");
-          applyFilters();
-        });
-      })(typeBtns[j]);
-    }
-
-    var teamSel = document.getElementById("team-filter");
-    if (teamSel) teamSel.addEventListener("change", function () { teamFilter = teamSel.value; applyFilters(); });
-
-    applyFilters();
-
-    // ── Pro gate ─────────────────────────────────────────────────────
+    // ── Main flow ────────────────────────────────────────────────────
     var access = window.F1Access;
-    if (!access) return;
+    if (!access) { showGate(); return; }
 
     access.ready.then(function () {
       access.check().then(function (result) {
-        if (result && result.active) return; // Pro user — show everything
+        if (!result || !result.active) { showGate(); return; }
 
-        var card = document.getElementById("fantasy-table-card");
-        if (!card) return;
-
-        var wrap = document.createElement("div");
-        wrap.className = "f-gatewrap";
-        card.parentNode.insertBefore(wrap, card);
-        wrap.appendChild(card);
-        card.classList.add("f-gatecard");
-
-        var gate = document.createElement("div");
-        gate.className = "f-gate";
-        gate.innerHTML =
-          '<div class="f-gpanel">' +
-            '<div class="f-lock">Pro Feature</div>' +
-            '<h3>Unlock F1 Fantasy Tracker</h3>' +
-            '<p>Price tracking, value scores, and historical price changes for all 33 fantasy assets.</p>' +
-            '<a class="f-go" href="/pro">Go Pro · $9/mo →</a>' +
-            '<div class="f-fine">cancel anytime</div>' +
-          '</div>';
-        wrap.appendChild(gate);
+        // Pro confirmed — fetch data from gated endpoint
+        fetch("/api/fantasy-data", {
+          headers: { "Authorization": "Bearer " + getToken() }
+        })
+        .then(function (res) {
+          if (!res.ok) { showGate(); return null; }
+          return res.json();
+        })
+        .then(function (data) {
+          if (!data) return;
+          if (!data.assets || data.assets.length === 0) {
+            root.innerHTML = '<p class="f-empty">Fantasy data will appear here once the first sync runs.</p>';
+            return;
+          }
+          renderTable(data);
+        })
+        .catch(function () { showGate(); });
       });
     });
   })();
@@ -254,20 +233,13 @@ const enriched = assets.map((a: any) => ({ ...a, ppm: ppm(a.price, a.points) }))
 </BaseLayout>
 
 <style is:global>
-  /* Gate styles (applied via JS, so must be global) */
-  .f-gatewrap { position: relative; }
-  .f-gatecard { max-height: 280px; overflow: hidden; }
-  .f-gate {
-    position: absolute; left: 0; right: 0; bottom: 0; top: 100px;
-    background: linear-gradient(180deg, rgba(244,244,241,0) 0%, rgba(244,244,241,.82) 42%, #f4f4f1 70%);
-    display: flex; flex-direction: column; align-items: center;
-    justify-content: flex-end; text-align: center; padding: 0 14px 20px;
-  }
+  /* Gate, loading, and table styles — global because they are injected by JS */
+  .f-gate-wrap { display: flex; justify-content: center; padding: 56px 20px; }
   .f-gpanel {
     background: #fff; border: 1px solid #e4e4df; border-radius: 9px;
     box-shadow: 0 16px 38px -16px rgba(0,0,0,.30);
     padding: 16px 24px 18px; max-width: 340px; width: 100%;
-    display: flex; flex-direction: column; align-items: center;
+    display: flex; flex-direction: column; align-items: center; text-align: center;
   }
   .f-lock {
     font-family: ui-monospace, "JetBrains Mono", monospace;
@@ -276,7 +248,8 @@ const enriched = assets.map((a: any) => ({ ...a, ppm: ppm(a.price, a.points) }))
   }
   .f-gpanel h3 {
     font-family: "Barlow Condensed", "Barlow", system-ui, sans-serif;
-    font-weight: 700; font-size: 21px; letter-spacing: .01em; line-height: 1; margin: 0;
+    font-weight: 700; font-size: 21px; letter-spacing: .01em; line-height: 1.1; margin: 0;
+    color: #16161a;
   }
   .f-gpanel p {
     font-family: system-ui, -apple-system, "Segoe UI", Roboto, sans-serif;
@@ -294,6 +267,77 @@ const enriched = assets.map((a: any) => ({ ...a, ppm: ppm(a.price, a.points) }))
     font-family: ui-monospace, "JetBrains Mono", monospace;
     font-size: 10px; color: #9a9a9e; margin-top: 9px;
   }
+  .f-loading, .f-empty {
+    color: #6b6b70; font-size: 15px; padding: 24px 0;
+    font-family: system-ui, -apple-system, "Segoe UI", Roboto, sans-serif;
+  }
+
+  /* Page header */
+  .fhub .page-hd { display: flex; align-items: baseline; gap: 14px; flex-wrap: wrap; margin-bottom: 16px; }
+  .fhub .page-hd h1 { font-size: 28px; font-weight: 700; margin: 0; letter-spacing: -.01em; color: #16161a; }
+  .fhub .sync-ts { font-size: 12px; color: #9a9a9e; font-variant-numeric: tabular-nums; }
+  .fhub .sync-ts.stale { color: #b85c00; }
+
+  /* Controls */
+  .fhub .controls {
+    display: flex; gap: 8px; flex-wrap: wrap; align-items: center;
+    position: sticky; top: 0; z-index: 5;
+    background: #f4f4f1; padding: 8px 0; border-bottom: 1px solid #e4e4df; margin-bottom: 6px;
+  }
+  .fhub .type-filters { display: flex; gap: 4px; }
+  .fhub .filt {
+    font-family: system-ui, -apple-system, "Segoe UI", Roboto, sans-serif;
+    font-size: 12px; color: #6b6b70;
+    background: #fff; border: 1px solid #e4e4df; border-radius: 4px;
+    padding: 7px 11px; cursor: pointer; transition: .12s; white-space: nowrap;
+  }
+  .fhub .filt:hover { color: #16161a; }
+  .fhub .filt.on { color: #16161a; font-weight: 600; border-color: #16161a; }
+  .fhub .team-sel {
+    font-family: system-ui, -apple-system, "Segoe UI", Roboto, sans-serif;
+    font-size: 13px; color: #16161a;
+    background: #fff; border: 1px solid #e4e4df; border-radius: 4px;
+    padding: 7px 10px; cursor: pointer; outline: none;
+  }
+  .fhub .team-sel:focus { border-color: #16161a; }
+  .fhub .count-row { font-size: 12px; color: #6b6b70; margin: 0 0 6px; font-variant-numeric: tabular-nums; }
+
+  /* Table */
+  .fhub .card { background: #fff; border: 1px solid #e4e4df; border-radius: 8px; overflow: clip; }
+  .fhub table { width: 100%; border-collapse: collapse; font-size: 13px; }
+  .fhub thead { position: sticky; top: 0; z-index: 4; }
+  .fhub th {
+    background: #fff; text-align: right; padding: 8px 10px;
+    font-size: 11px; font-weight: 600; color: #6b6b70;
+    text-transform: uppercase; letter-spacing: .04em;
+    border-bottom: 2px solid #e4e4df;
+    cursor: pointer; user-select: none; white-space: nowrap;
+  }
+  .fhub th:focus-visible { outline: 2px solid #e10600; outline-offset: -2px; }
+  .fhub th.l { text-align: left; }
+  .fhub th[aria-sort="ascending"]::after  { content: " \25B2"; font-size: 8px; color: #e10600; }
+  .fhub th[aria-sort="descending"]::after { content: " \25BC"; font-size: 8px; color: #e10600; }
+  .fhub td { padding: 7px 10px; border-bottom: 1px solid #e4e4df; }
+  .fhub tr:last-child td { border-bottom: none; }
+  .fhub tr:hover td { background: #faf9f6; }
+
+  .fhub td.nm { text-align: left; font-weight: 500; white-space: nowrap; }
+  .fhub td.nm .dot { display: inline-block; width: 7px; height: 7px; border-radius: 50%; background: #e10600; margin-right: 6px; vertical-align: middle; flex-shrink: 0; }
+  .fhub td.nm .dot.ctor { background: #6b6b70; }
+  .fhub td.tm { text-align: left; color: #6b6b70; font-size: 12px; white-space: nowrap; }
+  .fhub td.n {
+    text-align: right; font-variant-numeric: tabular-nums;
+    font-feature-settings: "tnum"; color: #6b6b70; white-space: nowrap;
+    font-family: ui-monospace, "JetBrains Mono", monospace; font-size: 12px;
+  }
+  .fhub td.delta { color: #9a9a9e; }
+  .fhub td.delta.pos { color: #1a7a40; }
+  .fhub td.delta.neg { color: #c0392b; }
+
+  @media (max-width: 600px) {
+    .fhub { padding: 20px 12px; }
+    .fhub .page-hd { gap: 6px; }
+  }
 </style>
 
 <style>
@@ -301,79 +345,5 @@ const enriched = assets.map((a: any) => ({ ...a, ppm: ppm(a.price, a.points) }))
     max-width: 760px; margin: 0 auto; padding: 28px 20px;
     font-family: system-ui, -apple-system, "Segoe UI", Roboto, sans-serif;
     color: #16161a;
-  }
-  .page-hd { display: flex; align-items: baseline; gap: 14px; flex-wrap: wrap; margin-bottom: 16px; }
-  .page-hd h1 { font-size: 28px; font-weight: 700; margin: 0; letter-spacing: -.01em; }
-  .sync-ts { font-size: 12px; color: #9a9a9e; font-variant-numeric: tabular-nums; }
-  .sync-ts.stale { color: #b85c00; }
-
-  .empty-state { color: #6b6b70; font-size: 15px; padding: 24px 0; }
-
-  .controls {
-    display: flex; gap: 8px; flex-wrap: wrap; align-items: center;
-    position: sticky; top: 0; z-index: 5;
-    background: #f4f4f1; padding: 8px 0; border-bottom: 1px solid #e4e4df;
-    margin-bottom: 6px;
-  }
-  .type-filters { display: flex; gap: 4px; }
-  .filt {
-    font-family: inherit; font-size: 12px; color: #6b6b70;
-    background: #fff; border: 1px solid #e4e4df; border-radius: 4px;
-    padding: 7px 11px; cursor: pointer; transition: .12s; white-space: nowrap;
-  }
-  .filt:hover { color: #16161a; }
-  .filt.on { color: #16161a; font-weight: 600; border-color: #16161a; }
-  .team-sel {
-    font-family: inherit; font-size: 13px; color: #16161a;
-    background: #fff; border: 1px solid #e4e4df; border-radius: 4px;
-    padding: 7px 10px; cursor: pointer; outline: none;
-  }
-  .team-sel:focus { border-color: #16161a; }
-
-  .count-row { font-size: 12px; color: #6b6b70; margin: 0 0 6px; font-variant-numeric: tabular-nums; }
-
-  .card { background: #fff; border: 1px solid #e4e4df; border-radius: 8px; overflow: clip; }
-
-  table { width: 100%; border-collapse: collapse; font-size: 13px; }
-  thead { position: sticky; top: 0; z-index: 4; }
-  th {
-    background: #fff; text-align: right; padding: 8px 10px;
-    font-size: 11px; font-weight: 600; color: #6b6b70;
-    text-transform: uppercase; letter-spacing: .04em;
-    border-bottom: 2px solid #e4e4df;
-    cursor: pointer; user-select: none; white-space: nowrap;
-  }
-  th:focus-visible { outline: 2px solid #e10600; outline-offset: -2px; }
-  th.l { text-align: left; }
-  th[aria-sort="ascending"]::after  { content: " \25B2"; font-size: 8px; color: #e10600; }
-  th[aria-sort="descending"]::after { content: " \25BC"; font-size: 8px; color: #e10600; }
-  td { padding: 7px 10px; border-bottom: 1px solid #e4e4df; }
-  tr:last-child td { border-bottom: none; }
-  tr:hover td { background: #faf9f6; }
-
-  td.nm {
-    text-align: left; font-weight: 500; white-space: nowrap;
-    display: flex; align-items: center; gap: 6px;
-  }
-  td.tm { text-align: left; color: #6b6b70; font-size: 12px; white-space: nowrap; }
-  td.n {
-    text-align: right; font-variant-numeric: tabular-nums;
-    font-feature-settings: "tnum"; color: #6b6b70; white-space: nowrap;
-    font-family: ui-monospace, "JetBrains Mono", monospace; font-size: 12px;
-  }
-  td.delta { color: #9a9a9e; }
-  td.delta.pos { color: #1a7a40; }
-  td.delta.neg { color: #c0392b; }
-
-  /* type indicator dot */
-  .dot {
-    width: 7px; height: 7px; border-radius: 50%;
-    background: #e10600; flex-shrink: 0;
-  }
-  .dot.ctor { background: #6b6b70; }
-
-  @media (max-width: 600px) {
-    .page-hd { gap: 6px; }
-    .fhub { padding: 20px 12px; }
   }
 </style>

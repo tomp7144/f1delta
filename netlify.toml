@@ -7,7 +7,7 @@
 
 [functions]
   node_bundler = "esbuild"
-  included_files = ["data/drivers/**", "data/people/**"]
+  included_files = ["data/drivers/**", "data/people/**", "data/fantasy/**"]
 
 [[redirects]]
   from   = "/engineers/:id"
