@@ -177,6 +177,200 @@ const RTF1 = {
   ],
 };
 
+const RTF1_TL = {
+  "lando-norris": {
+    entries: [
+      { year: 2013, series: "Karting (CIK-FIA KF-Junior Europe)", team: "Ricky Flynn", result: "Champion" },
+      { year: 2014, series: "Karting (CIK-FIA World KF)", team: "Ricky Flynn", result: "Champion" },
+      { year: 2015, series: "British F4", team: "Carlin", result: "Champion" },
+      { year: 2016, series: "Formula Renault 2.0 Eurocup", result: "Champion" },
+      { year: 2016, series: "Formula Renault 2.0 NEC", result: "Champion" },
+      { year: 2016, series: "Toyota Racing Series", result: "Champion" },
+      { year: 2017, series: "FIA F3 European Championship", team: "Carlin", result: "Champion" },
+      { year: 2018, series: "FIA F2", team: "Carlin", result: "Runner-up" },
+    ],
+    debut: { year: 2019, team: "McLaren" },
+  },
+  "oscar-piastri": {
+    entries: [
+      { year: 2017, series: "British F4", team: "TRS Arden", result: "Runner-up" },
+      { year: 2019, series: "Formula Renault Eurocup", team: "R-ace GP", result: "Champion" },
+      { year: 2020, series: "FIA F3", team: "Prema", result: "Champion" },
+      { year: 2021, series: "FIA F2", team: "Prema", result: "Champion" },
+    ],
+    debut: { year: 2023, team: "McLaren" },
+  },
+  "charles-leclerc": {
+    entries: [
+      { year: 2014, series: "Formula Renault 2.0 Alps", team: "Fortec", result: "Runner-up" },
+      { year: 2015, series: "FIA F3 European Championship", team: "Van Amersfoort", result: "4th" },
+      { year: 2016, series: "GP3 Series", team: "ART", result: "Champion" },
+      { year: 2017, series: "FIA F2", team: "Prema", result: "Champion" },
+    ],
+    debut: { year: 2018, team: "Sauber" },
+  },
+  "lewis-hamilton": {
+    entries: [
+      { year: 2003, series: "British Formula Renault", team: "Manor", result: "Champion" },
+      { year: 2005, series: "F3 Euro Series", team: "ASM", result: "Champion" },
+      { year: 2006, series: "GP2", team: "ART", result: "Champion" },
+    ],
+    debut: { year: 2007, team: "McLaren" },
+  },
+  "george-russell": {
+    entries: [
+      { year: 2014, series: "BRDC Formula 4", team: "Lanan", result: "Champion" },
+      { year: 2016, series: "FIA F3 European Championship", team: "Hitech", result: "3rd" },
+      { year: 2017, series: "GP3 Series", team: "ART", result: "Champion" },
+      { year: 2018, series: "FIA F2", team: "ART", result: "Champion" },
+    ],
+    debut: { year: 2019, team: "Williams" },
+  },
+  "kimi-antonelli": {
+    entries: [
+      { year: 2022, series: "Italian F4", team: "Prema", result: "Champion" },
+      { year: 2022, series: "ADAC German F4", team: "Prema", result: "Champion" },
+      { year: 2023, series: "Formula Regional European", team: "Prema", result: "Champion" },
+      { year: 2024, series: "FIA F2", team: "Prema", result: "6th" },
+    ],
+    debut: { year: 2025, team: "Mercedes" },
+  },
+  "max-verstappen": {
+    entries: [
+      { year: 2013, series: "Karting (CIK-FIA KZ)", result: "World & European Champion" },
+      { year: 2014, series: "FIA F3 European Championship", team: "Van Amersfoort", result: "3rd" },
+    ],
+    debut: { year: 2015, team: "Toro Rosso" },
+  },
+  "isack-hadjar": {
+    entries: [
+      { year: 2020, series: "French F4", team: "FFSA Academy", result: "3rd" },
+      { year: 2022, series: "FIA F3", team: "Hitech", result: "4th" },
+      { year: 2023, series: "FIA F2", team: "Hitech", result: "14th" },
+      { year: 2024, series: "FIA F2", team: "Campos", result: "Runner-up" },
+    ],
+    debut: { year: 2025, team: "Racing Bulls" },
+  },
+  "alexander-albon": {
+    entries: [
+      { year: 2014, series: "Formula Renault 2.0 Eurocup", result: "3rd" },
+      { year: 2016, series: "GP3 Series", team: "ART", result: "Runner-up" },
+      { year: 2017, series: "FIA F2", team: "ART", result: "10th" },
+      { year: 2018, series: "FIA F2", team: "DAMS", result: "3rd" },
+    ],
+    debut: { year: 2019, team: "Toro Rosso" },
+  },
+  "carlos-sainz-jr": {
+    entries: [
+      { year: 2011, series: "Formula Renault 2.0 NEC", team: "Koiranen", result: "Champion" },
+      { year: 2011, series: "Formula Renault 2.0 Eurocup", team: "Koiranen", result: "Runner-up" },
+      { year: 2013, series: "GP3 Series", team: "Arden", result: "10th" },
+      { year: 2014, series: "Formula Renault 3.5", team: "DAMS", result: "Champion" },
+    ],
+    debut: { year: 2015, team: "Toro Rosso" },
+  },
+  "fernando-alonso": {
+    entries: [
+      { year: 1999, series: "Euro Open by Nissan", team: "Campos", result: "Champion" },
+      { year: 2000, series: "International F3000", team: "Team Astromega", result: "4th" },
+    ],
+    debut: { year: 2001, team: "Minardi" },
+  },
+  "lance-stroll": {
+    entries: [
+      { year: 2014, series: "Italian F4", team: "Prema", result: "Champion" },
+      { year: 2015, series: "Toyota Racing Series", team: "M2", result: "Champion" },
+      { year: 2016, series: "FIA F3 European Championship", team: "Prema", result: "Champion" },
+    ],
+    debut: { year: 2017, team: "Williams" },
+  },
+  "pierre-gasly": {
+    entries: [
+      { year: 2013, series: "Formula Renault Eurocup", team: "Tech 1", result: "Champion" },
+      { year: 2014, series: "Formula Renault 3.5", team: "Arden", result: "Runner-up" },
+      { year: 2015, series: "GP2", team: "DAMS", result: "8th" },
+      { year: 2016, series: "GP2", team: "Prema", result: "Champion" },
+    ],
+    debut: { year: 2017, team: "Toro Rosso" },
+  },
+  "franco-colapinto": {
+    entries: [
+      { year: 2019, series: "F4 Spanish Championship", team: "FA Racing by Drivex", result: "Champion" },
+      { year: 2022, series: "FIA F3", team: "Van Amersfoort", result: "9th" },
+      { year: 2023, series: "FIA F3", team: "MP Motorsport", result: "4th" },
+      { year: 2024, series: "FIA F2", team: "MP Motorsport", result: "Race winner" },
+    ],
+    debut: { year: 2024, team: "Williams" },
+  },
+  "liam-lawson": {
+    entries: [
+      { year: 2019, series: "Toyota Racing Series", team: "M2", result: "Champion" },
+      { year: 2021, series: "FIA F2", team: "Hitech", result: "9th" },
+      { year: 2021, series: "DTM", team: "Red Bull AF Corse", result: "Runner-up" },
+      { year: 2022, series: "FIA F2", team: "Carlin", result: "3rd" },
+      { year: 2023, series: "Super Formula", team: "Mugen", result: "Runner-up" },
+    ],
+    debut: { year: 2023, team: "AlphaTauri" },
+  },
+  "arvid-lindblad": {
+    entries: [
+      { year: 2023, series: "Italian F4", team: "Prema", result: "3rd" },
+      { year: 2024, series: "FIA F3", team: "Prema", result: "4th" },
+      { year: 2025, series: "FIA F2", team: "Campos", result: "Race winner" },
+    ],
+    debut: { year: 2026, team: "Racing Bulls" },
+  },
+  "esteban-ocon": {
+    entries: [
+      { year: 2013, series: "Formula Renault 2.0 Eurocup", team: "ART", result: "3rd" },
+      { year: 2014, series: "FIA F3 European Championship", team: "Prema", result: "Champion" },
+      { year: 2015, series: "GP3 Series", team: "ART", result: "Champion" },
+    ],
+    debut: { year: 2016, team: "Manor" },
+  },
+  "oliver-bearman": {
+    entries: [
+      { year: 2021, series: "Italian F4", team: "Van Amersfoort", result: "Champion" },
+      { year: 2021, series: "ADAC German F4", team: "Van Amersfoort", result: "Champion" },
+      { year: 2022, series: "FIA F3", team: "Prema", result: "3rd" },
+      { year: 2023, series: "FIA F2", team: "Prema", result: "6th" },
+    ],
+    debut: { year: 2024, team: "Ferrari" },
+  },
+  "nico-hulkenberg": {
+    entries: [
+      { year: 2005, series: "Formula BMW ADAC", team: "Josef Kaufmann", result: "Champion" },
+      { year: 2008, series: "F3 Euro Series", team: "ART", result: "Champion" },
+      { year: 2009, series: "GP2", team: "ART", result: "Champion" },
+    ],
+    debut: { year: 2010, team: "Williams" },
+  },
+  "gabriel-bortoleto": {
+    entries: [
+      { year: 2023, series: "FIA F3", team: "Trident", result: "Champion" },
+      { year: 2024, series: "FIA F2", team: "Invicta", result: "Champion" },
+    ],
+    debut: { year: 2025, team: "Sauber" },
+  },
+  "sergio-perez": {
+    entries: [
+      { year: 2007, series: "British F3 National Class", team: "T-Sport", result: "Champion" },
+      { year: 2009, series: "GP2", team: "Arden", result: "12th" },
+      { year: 2010, series: "GP2", team: "Barwa Addax", result: "Runner-up" },
+    ],
+    debut: { year: 2011, team: "Sauber" },
+  },
+  "valtteri-bottas": {
+    entries: [
+      { year: 2008, series: "Formula Renault 2.0 Eurocup", team: "Motopark", result: "Champion" },
+      { year: 2008, series: "Formula Renault 2.0 NEC", team: "Motopark", result: "Champion" },
+      { year: 2010, series: "F3 Euro Series", team: "ART", result: "3rd" },
+      { year: 2011, series: "GP3 Series", team: "ART", result: "Champion" },
+    ],
+    debut: { year: 2013, team: "Williams" },
+  },
+};
+
 async function fetchDriver(slug) {
   const token = readToken();
   const headers = token ? { authorization: `Bearer ${token}` } : {};
@@ -303,6 +497,20 @@ function Styles() {
       .dp .rtf1-row:last-child{border-bottom:none}
       .dp .rtf1-label{font-family:var(--mono);font-size:9px;letter-spacing:.12em;text-transform:uppercase;color:var(--faint);margin-bottom:4px}
       .dp .rtf1-text{font-family:var(--body);font-size:13px;color:var(--dim);line-height:1.55;margin:0}
+
+      .dp .rtf1-tl{position:relative;padding:8px 14px 14px}
+      .dp .rtf1-tl::before{content:'';position:absolute;left:63px;top:0;bottom:0;width:2px;background:var(--line);z-index:0}
+      .dp .rtf1-tl-row{display:flex;align-items:flex-start}
+      .dp .rtf1-tl-yr{width:40px;flex-shrink:0;font-family:var(--mono);font-size:10px;color:var(--faint);text-align:right;padding:1px 8px 12px 0;font-variant-numeric:tabular-nums;line-height:1.2}
+      .dp .rtf1-tl-nd{width:20px;flex-shrink:0;display:flex;justify-content:center;padding-top:1px;padding-bottom:12px;position:relative;z-index:1}
+      .dp .rtf1-tl-ct{flex:1;padding:0 0 12px 8px}
+      .dp .rtf1-tl-row--f1 .rtf1-tl-yr{color:var(--ink);font-weight:700;padding-bottom:0}
+      .dp .rtf1-tl-row--f1 .rtf1-tl-nd{padding-top:0;padding-bottom:0}
+      .dp .rtf1-tl-row--f1 .rtf1-tl-ct{padding-bottom:0}
+      .dp .rtf1-tl-sr{font-family:var(--body);font-size:13px;color:var(--ink);font-weight:500;line-height:1.3}
+      .dp .rtf1-tl-row--f1 .rtf1-tl-sr{font-family:var(--disp);font-size:14px;font-weight:700;letter-spacing:.06em;text-transform:uppercase;color:var(--red)}
+      .dp .rtf1-tl-mt{font-family:var(--mono);font-size:11px;color:var(--faint);margin-top:2px}
+      .dp .rtf1-res-w{color:var(--champ-edge);font-weight:600}
     `}</style>
   );
 }
@@ -499,22 +707,81 @@ function H2HGate({ d }) {
   );
 }
 
+function RoadToF1Timeline({ slug }) {
+  const data = RTF1_TL[slug];
+  if (!data || !data.entries || data.entries.length === 0) return null;
+  let lastYear = null;
+  const rows = data.entries.map(function(e, i) {
+    const show = e.year !== lastYear;
+    lastYear = e.year;
+    return { i: i, show: show, year: e.year, series: e.series, team: e.team, result: e.result };
+  });
+  return (
+    <div className="rtf1-tl">
+      {rows.map(function(r) {
+        return (
+          <div className="rtf1-tl-row" key={r.i}>
+            <span className="rtf1-tl-yr">{r.show ? r.year : ""}</span>
+            <span className="rtf1-tl-nd">
+              <svg width="12" height="12" viewBox="0 0 12 12">
+                <circle cx="6" cy="6" r="4" fill="var(--surface)" stroke="var(--faint)" strokeWidth="1.5" />
+              </svg>
+            </span>
+            <div className="rtf1-tl-ct">
+              <div className="rtf1-tl-sr">{r.series}</div>
+              {(r.team || r.result) && (
+                <div className="rtf1-tl-mt">
+                  {r.team && <span>{r.team}</span>}
+                  {r.team && r.result && <span>{" · "}</span>}
+                  {r.result && (
+                    <span className={r.result === "Champion" ? "rtf1-res-w" : ""}>{r.result}</span>
+                  )}
+                </div>
+              )}
+            </div>
+          </div>
+        );
+      })}
+      <div className="rtf1-tl-row rtf1-tl-row--f1">
+        <span className="rtf1-tl-yr">{data.debut.year}</span>
+        <span className="rtf1-tl-nd">
+          <svg width="16" height="16" viewBox="0 0 16 16">
+            <circle cx="8" cy="8" r="7" fill="var(--red)" />
+          </svg>
+        </span>
+        <div className="rtf1-tl-ct">
+          <div className="rtf1-tl-sr">Formula 1 Debut</div>
+          <div className="rtf1-tl-mt">{data.debut.team}</div>
+        </div>
+      </div>
+    </div>
+  );
+}
+
 function RoadToF1({ slug }) {
   const rows = RTF1[slug];
-  if (!rows) return null;
+  const hasTl = !!RTF1_TL[slug];
+  if (!rows && !hasTl) return null;
   return (
     <section>
       <div className="sec-h"><h2>Road to Formula 1</h2></div>
-      <div className="card">
-        <div className="rtf1-card">
-          {rows.map(([label, text]) => (
-            <div className="rtf1-row" key={label}>
-              <div className="rtf1-label">{label}</div>
-              <p className="rtf1-text">{text}</p>
-            </div>
-          ))}
+      {rows && (
+        <div className="card" style={hasTl ? {marginBottom: "10px"} : null}>
+          <div className="rtf1-card">
+            {rows.map(([label, text]) => (
+              <div className="rtf1-row" key={label}>
+                <div className="rtf1-label">{label}</div>
+                <p className="rtf1-text">{text}</p>
+              </div>
+            ))}
+          </div>
         </div>
-      </div>
+      )}
+      {hasTl && (
+        <div className="card">
+          <RoadToF1Timeline slug={slug} />
+        </div>
+      )}
     </section>
   );
 }
