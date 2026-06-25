@@ -38,6 +38,10 @@ jobs:
         continue-on-error: true
         run: node bake-fantasy-history.mjs
 
+      - name: Bake fantasy prices (live round only — historical rounds are frozen)
+        continue-on-error: true
+        run: node scripts/bake-fantasy-prices.mjs
+
       - name: Commit if anything changed
         run: |
           git config user.name  "f1delta-bot"
@@ -45,6 +49,7 @@ jobs:
           git add public/latest-race.json  public/standings.json public/grid-map.js
           git add data/fantasy/players.json data/fantasy/price-history.json 2>/dev/null || true
           git add public/fantasy/ 2>/dev/null || true
+          git add data/fantasy/prices.source.json 2>/dev/null || true
 
           if git diff --staged --quiet; then
             echo "No change — nothing to commit."
