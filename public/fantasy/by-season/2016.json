@@ -2,22 +2,22 @@
   "year": 2016,
   "drivers": {
     "nico-rosberg": {
-      "score": 574,
+      "score": 584,
       "races": 21,
       "partial": 0
     },
     "lewis-hamilton": {
-      "score": 580,
+      "score": 590,
       "races": 21,
       "partial": 1
     },
     "sebastian-vettel": {
-      "score": 366,
+      "score": 396,
       "races": 21,
       "partial": 0
     },
     "daniel-ricciardo": {
-      "score": 399,
+      "score": 409,
       "races": 21,
       "partial": 0
     },
@@ -27,7 +27,7 @@
       "partial": 1
     },
     "romain-grosjean": {
-      "score": 96,
+      "score": 116,
       "races": 21,
       "partial": 0
     },
@@ -47,7 +47,7 @@
       "partial": 0
     },
     "max-verstappen": {
-      "score": 270,
+      "score": 350,
       "races": 21,
       "partial": 1
     },
@@ -57,12 +57,12 @@
       "partial": 2
     },
     "kevin-magnussen": {
-      "score": 2,
+      "score": 12,
       "races": 21,
       "partial": 2
     },
     "sergio-perez": {
-      "score": 221,
+      "score": 241,
       "races": 21,
       "partial": 0
     },
@@ -87,7 +87,7 @@
       "partial": 2
     },
     "kimi-raikkonen": {
-      "score": 259,
+      "score": 269,
       "races": 21,
       "partial": 0
     },
@@ -107,7 +107,7 @@
       "partial": 1
     },
     "daniil-kvyat": {
-      "score": 10,
+      "score": 20,
       "races": 21,
       "partial": 0
     },
@@ -128,9 +128,9 @@
       "raceId": 936,
       "gpId": "australia",
       "name": "Australian GP",
-      "topId": "nico-rosberg",
-      "topName": "Nico Rosberg",
-      "topScore": 36,
+      "topId": "romain-grosjean",
+      "topName": "Romain Grosjean",
+      "topScore": 44,
       "partial": false
     },
     {
@@ -148,9 +148,9 @@
       "raceId": 938,
       "gpId": "china",
       "name": "Chinese GP",
-      "topId": "nico-rosberg",
-      "topName": "Nico Rosberg",
-      "topScore": 35,
+      "topId": "daniil-kvyat",
+      "topName": "Daniil Kvyat",
+      "topScore": 36,
       "partial": true
     },
     {
@@ -170,7 +170,7 @@
       "name": "Spanish GP",
       "topId": "max-verstappen",
       "topName": "Max Verstappen",
-      "topScore": 38,
+      "topScore": 48,
       "partial": false
     },
     {
@@ -198,9 +198,9 @@
       "raceId": 943,
       "gpId": "europe",
       "name": "European GP",
-      "topId": "nico-rosberg",
-      "topName": "Nico Rosberg",
-      "topScore": 40,
+      "topId": "sergio-perez",
+      "topName": "Sergio Pérez",
+      "topScore": 42,
       "partial": false
     },
     {
@@ -208,9 +208,9 @@
       "raceId": 944,
       "gpId": "austria",
       "name": "Austrian GP",
-      "topId": "lewis-hamilton",
-      "topName": "Lewis Hamilton",
-      "topScore": 40,
+      "topId": "max-verstappen",
+      "topName": "Max Verstappen",
+      "topScore": 42,
       "partial": false
     },
     {
@@ -218,9 +218,9 @@
       "raceId": 945,
       "gpId": "great-britain",
       "name": "British GP",
-      "topId": "lewis-hamilton",
-      "topName": "Lewis Hamilton",
-      "topScore": 35,
+      "topId": "max-verstappen",
+      "topName": "Max Verstappen",
+      "topScore": 38,
       "partial": true
     },
     {
@@ -228,9 +228,9 @@
       "raceId": 946,
       "gpId": "hungary",
       "name": "Hungarian GP",
-      "topId": "lewis-hamilton",
-      "topName": "Lewis Hamilton",
-      "topScore": 36,
+      "topId": "kimi-raikkonen",
+      "topName": "Kimi Räikkönen",
+      "topScore": 41,
       "partial": true
     },
     {
@@ -238,9 +238,9 @@
       "raceId": 947,
       "gpId": "germany",
       "name": "German GP",
-      "topId": "lewis-hamilton",
-      "topName": "Lewis Hamilton",
-      "topScore": 36,
+      "topId": "daniel-ricciardo",
+      "topName": "Daniel Ricciardo",
+      "topScore": 43,
       "partial": false
     },
     {
@@ -250,7 +250,7 @@
       "name": "Belgian GP",
       "topId": "lewis-hamilton",
       "topName": "Lewis Hamilton",
-      "topScore": 56,
+      "topScore": 66,
       "partial": true
     },
     {
@@ -260,7 +260,7 @@
       "name": "Italian GP",
       "topId": "nico-rosberg",
       "topName": "Nico Rosberg",
-      "topScore": 36,
+      "topScore": 46,
       "partial": true
     },
     {
@@ -270,7 +270,7 @@
       "name": "Singapore GP",
       "topId": "sebastian-vettel",
       "topName": "Sebastian Vettel",
-      "topScore": 44,
+      "topScore": 54,
       "partial": false
     },
     {
@@ -288,9 +288,9 @@
       "raceId": 952,
       "gpId": "japan",
       "name": "Japanese GP",
-      "topId": "nico-rosberg",
-      "topName": "Nico Rosberg",
-      "topScore": 35,
+      "topId": "max-verstappen",
+      "topName": "Max Verstappen",
+      "topScore": 36,
       "partial": false
     },
     {
@@ -318,9 +318,9 @@
       "raceId": 955,
       "gpId": "brazil",
       "name": "Brazilian GP",
-      "topId": "lewis-hamilton",
-      "topName": "Lewis Hamilton",
-      "topScore": 35,
+      "topId": "max-verstappen",
+      "topName": "Max Verstappen",
+      "topScore": 39,
       "partial": false
     },
     {
@@ -328,9 +328,9 @@
       "raceId": 956,
       "gpId": "abu-dhabi",
       "name": "Abu Dhabi GP",
-      "topId": "lewis-hamilton",
-      "topName": "Lewis Hamilton",
-      "topScore": 35,
+      "topId": "sebastian-vettel",
+      "topName": "Sebastian Vettel",
+      "topScore": 40,
       "partial": false
     }
   ]

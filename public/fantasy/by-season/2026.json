@@ -7,7 +7,7 @@
       "partial": 0
     },
     "kimi-antonelli": {
-      "score": 223,
+      "score": 243,
       "races": 6,
       "partial": 0
     },
@@ -17,7 +17,7 @@
       "partial": 0
     },
     "lewis-hamilton": {
-      "score": 129,
+      "score": 139,
       "races": 6,
       "partial": 0
     },
@@ -27,7 +27,7 @@
       "partial": 0
     },
     "max-verstappen": {
-      "score": 39,
+      "score": 59,
       "races": 6,
       "partial": 1
     },
@@ -102,7 +102,7 @@
       "partial": 1
     },
     "oscar-piastri": {
-      "score": 78,
+      "score": 88,
       "races": 6,
       "partial": 0
     },
@@ -130,7 +130,7 @@
       "name": "Chinese GP",
       "topId": "kimi-antonelli",
       "topName": "Kimi Antonelli",
-      "topScore": 40,
+      "topScore": 50,
       "partial": false
     },
     {
@@ -170,7 +170,7 @@
       "name": "Monaco GP",
       "topId": "kimi-antonelli",
       "topName": "Kimi Antonelli",
-      "topScore": 40,
+      "topScore": 50,
       "partial": false
     }
   ]

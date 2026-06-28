@@ -2,7 +2,7 @@
   "driverId": "carlos-sainz-jr",
   "name": "Carlos Sainz Jr.",
   "career": {
-    "score": 1762,
+    "score": 1842,
     "races": 238,
     "partial": 5
   },
@@ -45,31 +45,31 @@
     },
     {
       "year": 2021,
-      "score": 325,
+      "score": 335,
       "races": 22,
       "partial": 0
     },
     {
       "year": 2022,
-      "score": 331,
+      "score": 341,
       "races": 22,
       "partial": 0
     },
     {
       "year": 2023,
-      "score": 267,
+      "score": 287,
       "races": 22,
       "partial": 0
     },
     {
       "year": 2024,
-      "score": 362,
+      "score": 392,
       "races": 23,
       "partial": 0
     },
     {
       "year": 2025,
-      "score": 69,
+      "score": 79,
       "races": 24,
       "partial": 1
     },

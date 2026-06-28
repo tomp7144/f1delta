@@ -2,7 +2,7 @@
   "driverId": "sebastian-vettel",
   "name": "Sebastian Vettel",
   "career": {
-    "score": 4847,
+    "score": 5077,
     "races": 300,
     "partial": 5
   },
@@ -63,43 +63,43 @@
     },
     {
       "year": 2016,
-      "score": 366,
+      "score": 396,
       "races": 21,
       "partial": 0
     },
     {
       "year": 2017,
-      "score": 461,
+      "score": 531,
       "races": 20,
       "partial": 1
     },
     {
       "year": 2018,
-      "score": 483,
+      "score": 513,
       "races": 21,
       "partial": 0
     },
     {
       "year": 2019,
-      "score": 294,
+      "score": 324,
       "races": 21,
       "partial": 1
     },
     {
       "year": 2020,
-      "score": 87,
+      "score": 107,
       "races": 17,
       "partial": 0
     },
     {
       "year": 2021,
-      "score": 71,
+      "score": 91,
       "races": 22,
       "partial": 0
     },
     {
       "year": 2022,
-      "score": 120,
+      "score": 150,
       "races": 20,
       "partial": 0
     }

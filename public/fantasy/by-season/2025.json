@@ -2,12 +2,12 @@
   "year": 2025,
   "drivers": {
     "lando-norris": {
-      "score": 566,
+      "score": 576,
       "races": 24,
       "partial": 0
     },
     "max-verstappen": {
-      "score": 555,
+      "score": 635,
       "races": 24,
       "partial": 0
     },
@@ -17,7 +17,7 @@
       "partial": 0
     },
     "kimi-antonelli": {
-      "score": 171,
+      "score": 191,
       "races": 24,
       "partial": 0
     },
@@ -32,22 +32,22 @@
       "partial": 1
     },
     "nico-hulkenberg": {
-      "score": 172,
+      "score": 182,
       "races": 24,
       "partial": 0
     },
     "charles-leclerc": {
-      "score": 321,
+      "score": 341,
       "races": 24,
       "partial": 0
     },
     "oscar-piastri": {
-      "score": 551,
+      "score": 561,
       "races": 24,
       "partial": 0
     },
     "lewis-hamilton": {
-      "score": 257,
+      "score": 277,
       "races": 24,
       "partial": 0
     },
@@ -57,7 +57,7 @@
       "partial": 0
     },
     "yuki-tsunoda": {
-      "score": 30,
+      "score": 40,
       "races": 24,
       "partial": 1
     },
@@ -67,7 +67,7 @@
       "partial": 1
     },
     "oliver-bearman": {
-      "score": 128,
+      "score": 138,
       "races": 24,
       "partial": 1
     },
@@ -77,17 +77,17 @@
       "partial": 0
     },
     "gabriel-bortoleto": {
-      "score": -30,
+      "score": -10,
       "races": 24,
       "partial": 1
     },
     "fernando-alonso": {
-      "score": 13,
+      "score": 23,
       "races": 24,
       "partial": 0
     },
     "carlos-sainz-jr": {
-      "score": 69,
+      "score": 79,
       "races": 24,
       "partial": 1
     },
@@ -97,7 +97,7 @@
       "partial": 0
     },
     "isack-hadjar": {
-      "score": -8,
+      "score": 2,
       "races": 24,
       "partial": 1
     },
@@ -115,7 +115,7 @@
       "name": "Australian GP",
       "topId": "lando-norris",
       "topName": "Lando Norris",
-      "topScore": 40,
+      "topScore": 50,
       "partial": true
     },
     {
@@ -165,7 +165,7 @@
       "name": "Miami GP",
       "topId": "oscar-piastri",
       "topName": "Oscar Piastri",
-      "topScore": 38,
+      "topScore": 48,
       "partial": false
     },
     {
@@ -175,7 +175,7 @@
       "name": "Emilia Romagna GP",
       "topId": "max-verstappen",
       "topName": "Max Verstappen",
-      "topScore": 41,
+      "topScore": 51,
       "partial": true
     },
     {
@@ -225,7 +225,7 @@
       "name": "British GP",
       "topId": "nico-hulkenberg",
       "topName": "Nico Hülkenberg",
-      "topScore": 47,
+      "topScore": 57,
       "partial": false
     },
     {
@@ -265,7 +265,7 @@
       "name": "Italian GP",
       "topId": "max-verstappen",
       "topName": "Max Verstappen",
-      "topScore": 35,
+      "topScore": 45,
       "partial": false
     },
     {
@@ -323,9 +323,9 @@
       "raceId": 1147,
       "gpId": "las-vegas",
       "name": "Las Vegas GP",
-      "topId": "kimi-antonelli",
-      "topName": "Kimi Antonelli",
-      "topScore": 43,
+      "topId": "max-verstappen",
+      "topName": "Max Verstappen",
+      "topScore": 51,
       "partial": false
     },
     {
@@ -335,7 +335,7 @@
       "name": "Qatar GP",
       "topId": "max-verstappen",
       "topName": "Max Verstappen",
-      "topScore": 37,
+      "topScore": 47,
       "partial": false
     },
     {
@@ -345,7 +345,7 @@
       "name": "Abu Dhabi GP",
       "topId": "max-verstappen",
       "topName": "Max Verstappen",
-      "topScore": 35,
+      "topScore": 45,
       "partial": false
     }
   ]

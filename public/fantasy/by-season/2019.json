@@ -2,7 +2,7 @@
   "year": 2019,
   "drivers": {
     "valtteri-bottas": {
-      "score": 502,
+      "score": 522,
       "races": 21,
       "partial": 0
     },
@@ -12,17 +12,17 @@
       "partial": 0
     },
     "max-verstappen": {
-      "score": 421,
+      "score": 491,
       "races": 21,
       "partial": 1
     },
     "sebastian-vettel": {
-      "score": 294,
+      "score": 324,
       "races": 21,
       "partial": 1
     },
     "charles-leclerc": {
-      "score": 362,
+      "score": 402,
       "races": 21,
       "partial": 0
     },
@@ -32,7 +32,7 @@
       "partial": 1
     },
     "nico-hulkenberg": {
-      "score": 49,
+      "score": 59,
       "races": 21,
       "partial": 0
     },
@@ -57,7 +57,7 @@
       "partial": 1
     },
     "lando-norris": {
-      "score": 19,
+      "score": 39,
       "races": 21,
       "partial": 0
     },
@@ -67,7 +67,7 @@
       "partial": 0
     },
     "alexander-albon": {
-      "score": 178,
+      "score": 198,
       "races": 21,
       "partial": 1
     },
@@ -110,7 +110,7 @@
       "name": "Australian GP",
       "topId": "valtteri-bottas",
       "topName": "Valtteri Bottas",
-      "topScore": 41,
+      "topScore": 51,
       "partial": false
     },
     {
@@ -190,7 +190,7 @@
       "name": "Austrian GP",
       "topId": "max-verstappen",
       "topName": "Max Verstappen",
-      "topScore": 40,
+      "topScore": 50,
       "partial": false
     },
     {
@@ -210,7 +210,7 @@
       "name": "German GP",
       "topId": "max-verstappen",
       "topName": "Max Verstappen",
-      "topScore": 41,
+      "topScore": 51,
       "partial": true
     },
     {
@@ -218,9 +218,9 @@
       "raceId": 1009,
       "gpId": "hungary",
       "name": "Hungarian GP",
-      "topId": "lewis-hamilton",
-      "topName": "Lewis Hamilton",
-      "topScore": 37,
+      "topId": "max-verstappen",
+      "topName": "Max Verstappen",
+      "topScore": 41,
       "partial": false
     },
     {
@@ -240,7 +240,7 @@
       "name": "Italian GP",
       "topId": "charles-leclerc",
       "topName": "Charles Leclerc",
-      "topScore": 35,
+      "topScore": 45,
       "partial": true
     },
     {
@@ -250,7 +250,7 @@
       "name": "Singapore GP",
       "topId": "sebastian-vettel",
       "topName": "Sebastian Vettel",
-      "topScore": 37,
+      "topScore": 47,
       "partial": true
     },
     {
@@ -270,7 +270,7 @@
       "name": "Japanese GP",
       "topId": "valtteri-bottas",
       "topName": "Valtteri Bottas",
-      "topScore": 37,
+      "topScore": 47,
       "partial": true
     },
     {
@@ -300,7 +300,7 @@
       "name": "Brazilian GP",
       "topId": "max-verstappen",
       "topName": "Max Verstappen",
-      "topScore": 35,
+      "topScore": 45,
       "partial": true
     },
     {

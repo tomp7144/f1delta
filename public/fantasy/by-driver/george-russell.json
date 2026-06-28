@@ -2,7 +2,7 @@
   "driverId": "george-russell",
   "name": "George Russell",
   "career": {
-    "score": 1518,
+    "score": 1528,
     "races": 158,
     "partial": 0
   },
@@ -15,7 +15,7 @@
     },
     {
       "year": 2020,
-      "score": -46,
+      "score": -36,
       "races": 17,
       "partial": 0
     },

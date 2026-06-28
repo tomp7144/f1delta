@@ -2,27 +2,27 @@
   "year": 2023,
   "drivers": {
     "max-verstappen": {
-      "score": 836,
+      "score": 866,
       "races": 22,
       "partial": 0
     },
     "sergio-perez": {
-      "score": 502,
+      "score": 532,
       "races": 22,
       "partial": 1
     },
     "fernando-alonso": {
-      "score": 277,
+      "score": 297,
       "races": 22,
       "partial": 0
     },
     "carlos-sainz-jr": {
-      "score": 267,
+      "score": 287,
       "races": 22,
       "partial": 0
     },
     "lewis-hamilton": {
-      "score": 370,
+      "score": 380,
       "races": 22,
       "partial": 0
     },
@@ -47,12 +47,12 @@
       "partial": 0
     },
     "alexander-albon": {
-      "score": 18,
+      "score": 28,
       "races": 22,
       "partial": 0
     },
     "yuki-tsunoda": {
-      "score": 95,
+      "score": 105,
       "races": 22,
       "partial": 0
     },
@@ -82,22 +82,22 @@
       "partial": 0
     },
     "lando-norris": {
-      "score": 275,
+      "score": 325,
       "races": 22,
       "partial": 0
     },
     "esteban-ocon": {
-      "score": 55,
+      "score": 65,
       "races": 22,
       "partial": 0
     },
     "charles-leclerc": {
-      "score": 249,
+      "score": 259,
       "races": 22,
       "partial": 0
     },
     "oscar-piastri": {
-      "score": 87,
+      "score": 107,
       "races": 22,
       "partial": 0
     },
@@ -130,7 +130,7 @@
       "name": "Saudi Arabian GP",
       "topId": "max-verstappen",
       "topName": "Max Verstappen",
-      "topScore": 50,
+      "topScore": 60,
       "partial": true
     },
     {
@@ -150,7 +150,7 @@
       "name": "Azerbaijan GP",
       "topId": "sergio-perez",
       "topName": "Sergio Pérez",
-      "topScore": 37,
+      "topScore": 47,
       "partial": true
     },
     {
@@ -160,7 +160,7 @@
       "name": "Miami GP",
       "topId": "max-verstappen",
       "topName": "Max Verstappen",
-      "topScore": 48,
+      "topScore": 58,
       "partial": false
     },
     {
@@ -230,7 +230,7 @@
       "name": "Belgian GP",
       "topId": "max-verstappen",
       "topName": "Max Verstappen",
-      "topScore": 45,
+      "topScore": 55,
       "partial": false
     },
     {
@@ -238,9 +238,9 @@
       "raceId": 1092,
       "gpId": "netherlands",
       "name": "Dutch GP",
-      "topId": "pierre-gasly",
-      "topName": "Pierre Gasly",
-      "topScore": 37,
+      "topId": "fernando-alonso",
+      "topName": "Fernando Alonso",
+      "topScore": 45,
       "partial": false
     },
     {
@@ -260,7 +260,7 @@
       "name": "Singapore GP",
       "topId": "carlos-sainz-jr",
       "topName": "Carlos Sainz Jr.",
-      "topScore": 35,
+      "topScore": 45,
       "partial": false
     },
     {
@@ -278,9 +278,9 @@
       "raceId": 1096,
       "gpId": "qatar",
       "name": "Qatar GP",
-      "topId": "max-verstappen",
-      "topName": "Max Verstappen",
-      "topScore": 40,
+      "topId": "oscar-piastri",
+      "topName": "Oscar Piastri",
+      "topScore": 41,
       "partial": false
     },
     {
@@ -298,9 +298,9 @@
       "raceId": 1098,
       "gpId": "mexico",
       "name": "Mexican GP",
-      "topId": "max-verstappen",
-      "topName": "Max Verstappen",
-      "topScore": 37,
+      "topId": "lando-norris",
+      "topName": "Lando Norris",
+      "topScore": 44,
       "partial": true
     },
     {
@@ -308,9 +308,9 @@
       "raceId": 1099,
       "gpId": "sao-paulo",
       "name": "São Paulo GP",
-      "topId": "max-verstappen",
-      "topName": "Max Verstappen",
-      "topScore": 35,
+      "topId": "lando-norris",
+      "topName": "Lando Norris",
+      "topScore": 45,
       "partial": false
     },
     {

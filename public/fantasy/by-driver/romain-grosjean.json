@@ -2,7 +2,7 @@
   "driverId": "romain-grosjean",
   "name": "Romain Grosjean",
   "career": {
-    "score": 154,
+    "score": 184,
     "races": 181,
     "partial": 3
   },
@@ -39,7 +39,7 @@
     },
     {
       "year": 2016,
-      "score": 96,
+      "score": 116,
       "races": 21,
       "partial": 0
     },
@@ -63,7 +63,7 @@
     },
     {
       "year": 2020,
-      "score": -26,
+      "score": -16,
       "races": 15,
       "partial": 0
     }

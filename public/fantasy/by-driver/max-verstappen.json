@@ -2,7 +2,7 @@
   "driverId": "max-verstappen",
   "name": "Max Verstappen",
   "career": {
-    "score": 4903,
+    "score": 5403,
     "races": 239,
     "partial": 5
   },
@@ -15,67 +15,67 @@
     },
     {
       "year": 2016,
-      "score": 270,
+      "score": 350,
       "races": 21,
       "partial": 1
     },
     {
       "year": 2017,
-      "score": 222,
+      "score": 252,
       "races": 20,
       "partial": 0
     },
     {
       "year": 2018,
-      "score": 388,
+      "score": 448,
       "races": 21,
       "partial": 1
     },
     {
       "year": 2019,
-      "score": 421,
+      "score": 491,
       "races": 21,
       "partial": 1
     },
     {
       "year": 2020,
-      "score": 274,
+      "score": 314,
       "races": 17,
       "partial": 0
     },
     {
       "year": 2021,
-      "score": 588,
+      "score": 618,
       "races": 22,
       "partial": 0
     },
     {
       "year": 2022,
-      "score": 644,
+      "score": 694,
       "races": 22,
       "partial": 0
     },
     {
       "year": 2023,
-      "score": 836,
+      "score": 866,
       "races": 22,
       "partial": 0
     },
     {
       "year": 2024,
-      "score": 622,
+      "score": 632,
       "races": 24,
       "partial": 0
     },
     {
       "year": 2025,
-      "score": 555,
+      "score": 635,
       "races": 24,
       "partial": 0
     },
     {
       "year": 2026,
-      "score": 39,
+      "score": 59,
       "races": 6,
       "partial": 1
     }

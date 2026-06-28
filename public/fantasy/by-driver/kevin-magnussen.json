@@ -2,7 +2,7 @@
   "driverId": "kevin-magnussen",
   "name": "Kevin Magnussen",
   "career": {
-    "score": 12,
+    "score": 22,
     "races": 186,
     "partial": 4
   },
@@ -21,7 +21,7 @@
     },
     {
       "year": 2016,
-      "score": 2,
+      "score": 12,
       "races": 21,
       "partial": 2
     },

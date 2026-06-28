@@ -2,32 +2,32 @@
   "year": 2018,
   "drivers": {
     "sebastian-vettel": {
-      "score": 483,
+      "score": 513,
       "races": 21,
       "partial": 0
     },
     "lewis-hamilton": {
-      "score": 619,
+      "score": 649,
       "races": 21,
       "partial": 0
     },
     "kimi-raikkonen": {
-      "score": 342,
+      "score": 352,
       "races": 21,
       "partial": 0
     },
     "daniel-ricciardo": {
-      "score": 241,
+      "score": 281,
       "races": 21,
       "partial": 0
     },
     "fernando-alonso": {
-      "score": 59,
+      "score": 79,
       "races": 21,
       "partial": 0
     },
     "max-verstappen": {
-      "score": 388,
+      "score": 448,
       "races": 21,
       "partial": 1
     },
@@ -62,7 +62,7 @@
       "partial": 0
     },
     "charles-leclerc": {
-      "score": 49,
+      "score": 59,
       "races": 21,
       "partial": 0
     },
@@ -87,7 +87,7 @@
       "partial": 0
     },
     "pierre-gasly": {
-      "score": 34,
+      "score": 44,
       "races": 21,
       "partial": 0
     },
@@ -130,7 +130,7 @@
       "name": "Chinese GP",
       "topId": "daniel-ricciardo",
       "topName": "Daniel Ricciardo",
-      "topScore": 45,
+      "topScore": 55,
       "partial": false
     },
     {
@@ -150,7 +150,7 @@
       "name": "Spanish GP",
       "topId": "lewis-hamilton",
       "topName": "Lewis Hamilton",
-      "topScore": 35,
+      "topScore": 45,
       "partial": true
     },
     {
@@ -160,7 +160,7 @@
       "name": "Monaco GP",
       "topId": "daniel-ricciardo",
       "topName": "Daniel Ricciardo",
-      "topScore": 35,
+      "topScore": 45,
       "partial": true
     },
     {
@@ -170,7 +170,7 @@
       "name": "Canadian GP",
       "topId": "sebastian-vettel",
       "topName": "Sebastian Vettel",
-      "topScore": 35,
+      "topScore": 45,
       "partial": true
     },
     {
@@ -190,7 +190,7 @@
       "name": "Austrian GP",
       "topId": "max-verstappen",
       "topName": "Max Verstappen",
-      "topScore": 37,
+      "topScore": 47,
       "partial": false
     },
     {
@@ -210,7 +210,7 @@
       "name": "German GP",
       "topId": "lewis-hamilton",
       "topName": "Lewis Hamilton",
-      "topScore": 58,
+      "topScore": 68,
       "partial": false
     },
     {
@@ -220,7 +220,7 @@
       "name": "Hungarian GP",
       "topId": "daniel-ricciardo",
       "topName": "Daniel Ricciardo",
-      "topScore": 37,
+      "topScore": 47,
       "partial": false
     },
     {
@@ -228,9 +228,9 @@
       "raceId": 989,
       "gpId": "belgium",
       "name": "Belgian GP",
-      "topId": "valtteri-bottas",
-      "topName": "Valtteri Bottas",
-      "topScore": 44,
+      "topId": "sebastian-vettel",
+      "topName": "Sebastian Vettel",
+      "topScore": 46,
       "partial": false
     },
     {
@@ -248,9 +248,9 @@
       "raceId": 991,
       "gpId": "singapore",
       "name": "Singapore GP",
-      "topId": "lewis-hamilton",
-      "topName": "Lewis Hamilton",
-      "topScore": 35,
+      "topId": "max-verstappen",
+      "topName": "Max Verstappen",
+      "topScore": 37,
       "partial": false
     },
     {
@@ -260,7 +260,7 @@
       "name": "Russian GP",
       "topId": "max-verstappen",
       "topName": "Max Verstappen",
-      "topScore": 43,
+      "topScore": 53,
       "partial": false
     },
     {
@@ -268,9 +268,9 @@
       "raceId": 993,
       "gpId": "japan",
       "name": "Japanese GP",
-      "topId": "lewis-hamilton",
-      "topName": "Lewis Hamilton",
-      "topScore": 35,
+      "topId": "daniel-ricciardo",
+      "topName": "Daniel Ricciardo",
+      "topScore": 45,
       "partial": false
     },
     {
@@ -280,7 +280,7 @@
       "name": "United States GP",
       "topId": "max-verstappen",
       "topName": "Max Verstappen",
-      "topScore": 51,
+      "topScore": 61,
       "partial": false
     },
     {
@@ -290,7 +290,7 @@
       "name": "Mexican GP",
       "topId": "max-verstappen",
       "topName": "Max Verstappen",
-      "topScore": 36,
+      "topScore": 46,
       "partial": false
     },
     {
@@ -298,9 +298,9 @@
       "raceId": 996,
       "gpId": "brazil",
       "name": "Brazilian GP",
-      "topId": "lewis-hamilton",
-      "topName": "Lewis Hamilton",
-      "topScore": 35,
+      "topId": "max-verstappen",
+      "topName": "Max Verstappen",
+      "topScore": 40,
       "partial": false
     },
     {

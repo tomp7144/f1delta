@@ -2,7 +2,7 @@
   "driverId": "fernando-alonso",
   "name": "Fernando Alonso",
   "career": {
-    "score": 4599,
+    "score": 4669,
     "races": 434,
     "partial": 5
   },
@@ -105,13 +105,13 @@
     },
     {
       "year": 2018,
-      "score": 59,
+      "score": 79,
       "races": 21,
       "partial": 0
     },
     {
       "year": 2021,
-      "score": 136,
+      "score": 156,
       "races": 22,
       "partial": 0
     },
@@ -123,7 +123,7 @@
     },
     {
       "year": 2023,
-      "score": 277,
+      "score": 297,
       "races": 22,
       "partial": 0
     },
@@ -135,7 +135,7 @@
     },
     {
       "year": 2025,
-      "score": 13,
+      "score": 23,
       "races": 24,
       "partial": 0
     },

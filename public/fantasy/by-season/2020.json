@@ -17,7 +17,7 @@
       "partial": 0
     },
     "lewis-hamilton": {
-      "score": 520,
+      "score": 530,
       "races": 16,
       "partial": 0
     },
@@ -27,12 +27,12 @@
       "partial": 0
     },
     "sergio-perez": {
-      "score": 182,
+      "score": 202,
       "races": 15,
       "partial": 0
     },
     "pierre-gasly": {
-      "score": 116,
+      "score": 136,
       "races": 17,
       "partial": 0
     },
@@ -47,7 +47,7 @@
       "partial": 0
     },
     "sebastian-vettel": {
-      "score": 87,
+      "score": 107,
       "races": 17,
       "partial": 0
     },
@@ -62,22 +62,22 @@
       "partial": 0
     },
     "alexander-albon": {
-      "score": 157,
+      "score": 167,
       "races": 17,
       "partial": 0
     },
     "kimi-raikkonen": {
-      "score": 96,
+      "score": 106,
       "races": 17,
       "partial": 0
     },
     "george-russell": {
-      "score": -46,
+      "score": -36,
       "races": 17,
       "partial": 0
     },
     "romain-grosjean": {
-      "score": -26,
+      "score": -16,
       "races": 15,
       "partial": 0
     },
@@ -92,17 +92,17 @@
       "partial": 0
     },
     "daniel-ricciardo": {
-      "score": 200,
+      "score": 210,
       "races": 17,
       "partial": 0
     },
     "max-verstappen": {
-      "score": 274,
+      "score": 314,
       "races": 17,
       "partial": 0
     },
     "nico-hulkenberg": {
-      "score": 37,
+      "score": 47,
       "races": 3,
       "partial": 0
     },
@@ -133,9 +133,9 @@
       "raceId": 1020,
       "gpId": "styria",
       "name": "Styrian GP",
-      "topId": "lewis-hamilton",
-      "topName": "Lewis Hamilton",
-      "topScore": 35,
+      "topId": "sergio-perez",
+      "topName": "Sergio Pérez",
+      "topScore": 40,
       "partial": false
     },
     {
@@ -143,9 +143,9 @@
       "raceId": 1021,
       "gpId": "hungary",
       "name": "Hungarian GP",
-      "topId": "lewis-hamilton",
-      "topName": "Lewis Hamilton",
-      "topScore": 40,
+      "topId": "max-verstappen",
+      "topName": "Max Verstappen",
+      "topScore": 42,
       "partial": false
     },
     {
@@ -155,7 +155,7 @@
       "name": "British GP",
       "topId": "lewis-hamilton",
       "topName": "Lewis Hamilton",
-      "topScore": 35,
+      "topScore": 45,
       "partial": false
     },
     {
@@ -165,7 +165,7 @@
       "name": "70th Anniversary GP",
       "topId": "max-verstappen",
       "topName": "Max Verstappen",
-      "topScore": 38,
+      "topScore": 48,
       "partial": false
     },
     {
@@ -195,7 +195,7 @@
       "name": "Italian GP",
       "topId": "pierre-gasly",
       "topName": "Pierre Gasly",
-      "topScore": 44,
+      "topScore": 54,
       "partial": false
     },
     {
@@ -223,9 +223,9 @@
       "raceId": 1029,
       "gpId": "eifel",
       "name": "Eifel GP",
-      "topId": "lewis-hamilton",
-      "topName": "Lewis Hamilton",
-      "topScore": 36,
+      "topId": "nico-hulkenberg",
+      "topName": "Nico Hülkenberg",
+      "topScore": 38,
       "partial": false
     },
     {
@@ -253,9 +253,9 @@
       "raceId": 1032,
       "gpId": "turkey",
       "name": "Turkish GP",
-      "topId": "lewis-hamilton",
-      "topName": "Lewis Hamilton",
-      "topScore": 40,
+      "topId": "sebastian-vettel",
+      "topName": "Sebastian Vettel",
+      "topScore": 45,
       "partial": false
     },
     {
@@ -285,7 +285,7 @@
       "name": "Abu Dhabi GP",
       "topId": "max-verstappen",
       "topName": "Max Verstappen",
-      "topScore": 35,
+      "topScore": 45,
       "partial": false
     }
   ]

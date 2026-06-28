@@ -1,17 +1,514 @@
 ---
+export const prerender = true;
+import fs from "node:fs";
+import path from "node:path";
+import BaseLayout from "../layouts/BaseLayout.astro";
 
+// ── Read live fantasy data at build time ──────────────────────────────────────
+let players: any   = null;
+let prices: any    = null;
+let raceSummaries: any   = {};
+let races2026: any[]     = [];
+let gpNames: Map<string, string> = new Map();
+
+try { players      = JSON.parse(fs.readFileSync(path.resolve("./data/fantasy/players.json"), "utf8")); } catch {}
+try { prices       = JSON.parse(fs.readFileSync(path.resolve("./data/fantasy/prices.source.json"), "utf8")); } catch {}
+try { raceSummaries = JSON.parse(fs.readFileSync(path.resolve("./public/fantasy/race-summaries.json"), "utf8")); } catch {}
+try {
+  const allRaces = JSON.parse(fs.readFileSync(path.resolve("./data/f1db/f1db-races.json"), "utf8"));
+  races2026 = allRaces.filter((r: any) => r.year === 2026);
+  const gps = JSON.parse(fs.readFileSync(path.resolve("./data/f1db/f1db-grands-prix.json"), "utf8"));
+  for (const g of gps) gpNames.set(g.id, g.shortName ?? g.name);
+} catch {}
+
+// ── Top value by PPM (drivers only) ──────────────────────────────────────────
+const topPPM: { name: string; pageId: string; team: string; price: number; ppm: number }[] = [];
+if (players) {
+  players.assets
+    .filter((a: any) => a.type === "driver" && a.price > 0 && a.points > 0)
+    .map((a: any) => ({
+      name: a.name, pageId: a.pageId, team: a.team, price: a.price,
+      ppm: Math.round((a.points / a.price) * 10) / 10,
+    }))
+    .sort((a: any, b: any) => b.ppm - a.ppm)
+    .slice(0, 3)
+    .forEach((d: any) => topPPM.push(d));
+}
+
+// ── Price movers (last two rounds from prices.source.json) ───────────────────
+const nameToAsset = new Map<string, { pageId: string; type: string }>();
+if (players) {
+  for (const a of players.assets) {
+    nameToAsset.set((a.name || "").toLowerCase(), { pageId: a.pageId, type: a.type });
+  }
+}
+const movers: { name: string; pageId: string | null; type: string | null; price: number; delta: number }[] = [];
+if (prices) {
+  for (const [, rounds] of Object.entries(prices) as [string, any][]) {
+    const ks = Object.keys(rounds).map(Number).sort((a, b) => a - b);
+    if (ks.length < 2) continue;
+    const last = rounds[String(ks[ks.length - 1])];
+    const prev = rounds[String(ks[ks.length - 2])];
+    const delta = Math.round(((last.price ?? 0) - (prev.price ?? 0)) * 10) / 10;
+    if (delta === 0) continue;
+    const lk = nameToAsset.get((last.name || "").toLowerCase());
+    movers.push({ name: last.name, pageId: lk?.pageId ?? null, type: lk?.type ?? null, price: last.price, delta });
+  }
+}
+movers.sort((a, b) => Math.abs(b.delta) - Math.abs(a.delta));
+const risers = movers.filter(m => m.delta > 0).slice(0, 2);
+const fallers = movers.filter(m => m.delta < 0).slice(0, 2);
+
+// ── Latest f1δ race (2026 races that have results) ────────────────────────────
+const race2026Ids = new Set(races2026.map((r: any) => r.id));
+const latestF1dRaceId = Object.keys(raceSummaries)
+  .map(Number)
+  .filter(id => race2026Ids.has(id))
+  .sort((a, b) => b - a)[0] ?? null;
+const latestF1dSummary = latestF1dRaceId ? raceSummaries[String(latestF1dRaceId)] : null;
+const latestF1dRace    = latestF1dRaceId ? races2026.find((r: any) => r.id === latestF1dRaceId) : null;
+const latestF1dGpName  = latestF1dRace ? (gpNames.get(latestF1dRace.grandPrixId) ?? latestF1dRace.grandPrixId) : null;
+
+const hasFant = topPPM.length > 0 || risers.length > 0 || latestF1dSummary;
 ---
 
-<html lang="en">
-	<head>
-		<meta charset="utf-8" />
-		<link rel="icon" type="image/svg+xml" href="/favicon.svg" />
-		<link rel="icon" href="/favicon.ico" />
-		<meta name="viewport" content="width=device-width" />
-		<meta name="generator" content={Astro.generator} />
-		<title>Astro</title>
-	</head>
-	<body>
-		<h1>Astro</h1>
-	</body>
-</html>
+<BaseLayout
+  title="f1delta — F1 Statistics & History"
+  description="Formula 1 statistics and history from 1950 to today. Driver records, team histories, season standings, and circuit data."
+  canonical="https://f1delta.com/"
+>
+  <Fragment slot="head">
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link href="https://fonts.googleapis.com/css2?family=Barlow+Condensed:wght@600;700&family=JetBrains+Mono:wght@400;500;700&display=swap" rel="stylesheet" />
+  </Fragment>
+
+  <div class="home">
+
+    <!-- ── Static: hero ──────────────────────────────────────────────── -->
+    <section class="hero">
+      <h1>The F1 reference <span class="red">desk.</span></h1>
+      <p class="tagline">Every driver, every season, every teammate battle — one fast, clean place to settle it.</p>
+    </section>
+
+    <!-- ── Dynamic: search + latest race + WDC standings ────────────── -->
+    <div id="home-dynamic"></div>
+
+    <!-- ── Static: fantasy teaser ───────────────────────────────────── -->
+    {hasFant && (
+      <section class="fant-module">
+        <div class="module-hd">
+          <span class="module-label">2026 F1 Fantasy</span>
+          <a class="module-all" href="/fantasy">Full tracker →</a>
+        </div>
+
+        {topPPM.length > 0 && (
+          <div class="fcard">
+            <div class="fcard-hd">
+              <span class="fcard-title">Top value</span>
+              <span class="tier real">Live · 2026</span>
+            </div>
+            <table>
+              <thead><tr><th class="l">Driver</th><th class="l">Team</th><th class="r">Price</th><th class="r">PPM</th></tr></thead>
+              <tbody>
+                {topPPM.map(d => (
+                  <tr>
+                    <td class="nm">{d.pageId ? <a href={`/driver?d=${d.pageId}`}>{d.name}</a> : d.name}</td>
+                    <td class="tm">{d.team}</td>
+                    <td class="n">£{d.price.toFixed(1)}m</td>
+                    <td class="n hi">{d.ppm.toFixed(1)}</td>
+                  </tr>
+                ))}
+              </tbody>
+            </table>
+          </div>
+        )}
+
+        {(risers.length > 0 || fallers.length > 0) && (
+          <div class="fcard">
+            <div class="fcard-hd">
+              <span class="fcard-title">Price movers</span>
+              <span class="tier real">Live · 2026</span>
+            </div>
+            <table>
+              <thead><tr><th class="l">Asset</th><th class="r">Price</th><th class="r">Change</th></tr></thead>
+              <tbody>
+                {[...risers, ...fallers].map(m => (
+                  <tr>
+                    <td class="nm">{m.pageId ? <a href={m.type === "constructor" ? `/teams/${m.pageId}` : `/driver?d=${m.pageId}`}>{m.name}</a> : m.name}</td>
+                    <td class="n">£{m.price.toFixed(1)}m</td>
+                    <td class:list={["n delta", m.delta > 0 ? "pos" : "neg"]}>{m.delta > 0 ? "+" : ""}{m.delta.toFixed(1)}</td>
+                  </tr>
+                ))}
+              </tbody>
+            </table>
+          </div>
+        )}
+
+        {latestF1dSummary && (
+          <div class="fcard bridge">
+            <div class="fcard-hd">
+              <span class="fcard-title">f1δ top score{latestF1dGpName ? ` · ${latestF1dGpName}` : ""}</span>
+              <span class="tier derived">f1δ derived</span>
+            </div>
+            <div class="bridge-row">
+              <a class="bridge-name" href={`/driver?d=${latestF1dSummary.topDriverId}`}>{latestF1dSummary.topDriverName}</a>
+              <span class="bridge-score">{latestF1dSummary.topScore} pts</span>
+            </div>
+            <p class="bridge-note">f1δ Score applies current scoring rules to all eras for cross-era comparison — it is not the championship points drivers actually earned.</p>
+          </div>
+        )}
+      </section>
+    )}
+
+    <!-- ── Static: nav grid ─────────────────────────────────────────── -->
+    <section class="nav-grid">
+      <a class="nav-tile" href="/standings"><span class="nt-label">Seasons</span><span class="nt-desc">WDC & WCC standings, 1950–today</span></a>
+      <a class="nav-tile" href="/drivers"><span class="nt-label">Drivers</span><span class="nt-desc">Career stats for every F1 driver</span></a>
+      <a class="nav-tile" href="/teams"><span class="nt-label">Teams</span><span class="nt-desc">Constructor histories & records</span></a>
+      <a class="nav-tile" href="/grands-prix"><span class="nt-label">Grands Prix</span><span class="nt-desc">All races by event, with winners</span></a>
+      <a class="nav-tile" href="/circuits"><span class="nt-label">Circuits</span><span class="nt-desc">Track histories & statistics</span></a>
+      <a class="nav-tile" href="/records"><span class="nt-label">Records</span><span class="nt-desc">All-time leaders across every category</span></a>
+      <a class="nav-tile" href="/fantasy"><span class="nt-label">Fantasy</span><span class="nt-desc">Price tracker, PPM & f1δ scores</span></a>
+      <a class="nav-tile" href="/engineers"><span class="nt-label">Engineers</span><span class="nt-desc">Pitwall pairings, 1950–now</span></a>
+    </section>
+
+  </div>
+
+  <!-- Dynamic home sections: search, latest race, standings -->
+  <script is:inline src="/grid-map.js"></script>
+  <script is:inline src="https://unpkg.com/react@18.3.1/umd/react.development.js" integrity="sha384-hD6/rw4ppMLGNu3tX5cjIb+uRZ7UkRJ6BPkLpg4hAu/6onKUg4lLsHAs9EBPT82L" crossorigin="anonymous"></script>
+  <script is:inline src="https://unpkg.com/react-dom@18.3.1/umd/react-dom.development.js" integrity="sha384-u6aeetuaXnQ38mYT8rp6sbXaQe3NL9t+IBXmnYxwkUI2Hw4bsp2Wvmx4yRQF1uAm" crossorigin="anonymous"></script>
+  <script is:inline src="https://unpkg.com/@babel/standalone@7.29.0/babel.min.js" integrity="sha384-m08KidiNqLdpJqLq95G/LEi8Qvjl/xUYll3QILypMoQ65QorJ9Lvtp2RXYGBFj1y" crossorigin="anonymous"></script>
+  <script type="text/babel" is:inline>
+  (function () {
+    const { useState, useEffect } = React;
+
+    async function loadIndex() {
+      try { const r = await fetch("/api/driver?list=1"); if (!r.ok) return []; return (await r.json()).drivers || []; }
+      catch (e) { return []; }
+    }
+    async function loadLatest() {
+      try { const r = await fetch("/latest-race.json"); if (!r.ok) return null; return await r.json(); }
+      catch (e) { return null; }
+    }
+    async function loadStandings() {
+      try { const r = await fetch("/standings.json"); if (!r.ok) return null; const d = await r.json(); return Array.isArray(d) ? d : (d.standings || null); }
+      catch (e) { return null; }
+    }
+
+    function Search() {
+      const [q, setQ] = useState("");
+      const [index, setIndex] = useState(null);
+      function ensureIndex() { if (index === null) { setIndex([]); loadIndex().then((d) => setIndex(d)); } }
+      const needle = q.trim().toLowerCase();
+      let matches = [];
+      if (needle.length >= 2 && index && index.length) {
+        matches = index
+          .filter((d) => d.name.toLowerCase().includes(needle) || (d.code && d.code.toLowerCase().includes(needle)))
+          .sort((a, b) => (b.lastSeason - a.lastSeason) || a.name.localeCompare(b.name))
+          .slice(0, 8);
+      }
+      function go(id) { window.location.href = `/driver?d=${encodeURIComponent(id)}`; }
+      return (
+        <div className="h-search">
+          <input type="text" placeholder="Search drivers — Verstappen, Senna, HAM…" value={q}
+            onFocus={ensureIndex} onChange={(e) => setQ(e.target.value)}
+            onKeyDown={(e) => { if (e.key === "Enter" && matches[0]) go(matches[0].driverId); }}
+            autoFocus />
+          {matches.length > 0 && (
+            <div className="h-results">
+              {matches.map((d) => (
+                <a key={d.driverId} href={`/driver?d=${d.driverId}`}>
+                  <span className="rc">{d.code || "—"}</span>
+                  <span className="rn">{d.name}</span>
+                  <span className="rs">{d.firstSeason}–{d.lastSeason}</span>
+                </a>
+              ))}
+            </div>
+          )}
+        </div>
+      );
+    }
+
+    function LatestResult({ data, codeMap }) {
+      if (!data || !data.tower) return null;
+      return (
+        <section className="h-sect">
+          <div className="h-sect-hd">
+            <h2>{data.session?.name || "Latest result"}</h2>
+            <span>Round {data.session?.round} · final</span>
+          </div>
+          <div className="h-card">
+            <table>
+              <thead><tr><th className="l">P</th><th className="l">Driver</th><th>Gap</th><th>Pts</th></tr></thead>
+              <tbody>
+                {data.tower.map((r) => {
+                  const slug = codeMap[(r.code || "").toUpperCase()];
+                  const isDnf = r.dnf || r.position == null;
+                  return (
+                    <tr key={r.code} className={slug ? "clik" : ""} onClick={slug ? () => { window.location.href = `/driver?d=${slug}`; } : undefined}>
+                      <td className={"pos" + (isDnf ? " dnf" : "")}>{isDnf ? "—" : r.position}</td>
+                      <td className="drv">
+                        <span className="dot" style={{ background: r.teamColour || "#9aa0ab" }} />
+                        <span className="cc">{r.code}</span>
+                        <span className="tn">{r.teamName}</span>
+                        {slug && <span className="go">→</span>}
+                      </td>
+                      <td className={"gap" + (r.leader ? " lead" : "")}>{r.leader ? "LEADER" : String(r.gap || "")}</td>
+                      <td className={"pts" + (r.points > 0 ? "" : " zero")}>{r.points > 0 ? `+${r.points}` : "0"}</td>
+                    </tr>
+                  );
+                })}
+              </tbody>
+            </table>
+          </div>
+        </section>
+      );
+    }
+
+    function Standings({ rows, codeMap }) {
+      if (!rows || rows.length === 0) return null;
+      return (
+        <section className="h-sect">
+          <div className="h-sect-hd"><h2>2026 Championship</h2><span>WDC standings</span></div>
+          <div className="h-card">
+            <table>
+              <thead><tr><th className="l">P</th><th className="l">Driver</th><th>Pts</th></tr></thead>
+              <tbody>
+                {rows.map((s) => {
+                  const slug = codeMap[(s.code || "").toUpperCase()];
+                  return (
+                    <tr key={s.code} className={slug ? "clik" : ""} onClick={slug ? () => { window.location.href = `/driver?d=${slug}`; } : undefined}>
+                      <td className="pos">{s.pos}</td>
+                      <td className="drv">
+                        <span className="cc">{s.code}</span>
+                        {s.team && <span className="tn">{s.team}</span>}
+                        {slug && <span className="go">→</span>}
+                      </td>
+                      <td className="pts">{s.points}</td>
+                    </tr>
+                  );
+                })}
+              </tbody>
+            </table>
+          </div>
+        </section>
+      );
+    }
+
+    function DynamicHome() {
+      const [latest, setLatest] = useState(null);
+      const [standings, setStandings] = useState(null);
+      const [loaded, setLoaded] = useState(false);
+      const codeMap = window.F1_GRID || {};
+
+      useEffect(() => {
+        let alive = true;
+        Promise.all([loadLatest(), loadStandings()]).then(([lat, std]) => {
+          if (!alive) return;
+          setLatest(lat); setStandings(std); setLoaded(true);
+        });
+        return () => { alive = false; };
+      }, []);
+
+      return (
+        <>
+          <Search />
+          {loaded && <LatestResult data={latest} codeMap={codeMap} />}
+          {loaded && <Standings rows={standings} codeMap={codeMap} />}
+        </>
+      );
+    }
+
+    const el = document.getElementById("home-dynamic");
+    if (el) ReactDOM.createRoot(el).render(<DynamicHome />);
+  })();
+  </script>
+</BaseLayout>
+
+<style>
+  .home {
+    max-width: 760px; margin: 0 auto; padding: 0 20px 56px;
+    font-family: system-ui, -apple-system, "Segoe UI", Roboto, sans-serif;
+    color: #16161a;
+  }
+
+  /* ── Hero ─────────────────────────────────────────────────────────── */
+  .hero {
+    background: #fff; border-bottom: 1px solid #e4e4df;
+    margin: 0 -20px 20px; padding: 32px 20px 28px;
+  }
+  .hero h1 {
+    font-family: "Barlow Condensed", system-ui, sans-serif;
+    font-weight: 700; font-size: clamp(28px, 5vw, 48px);
+    line-height: 1; letter-spacing: -.01em; margin: 0 0 8px;
+  }
+  .red { color: #e10600; }
+  .tagline { font-size: 14px; color: #6b6b70; margin: 0; }
+
+  /* ── Dynamic sections mount point ─────────────────────────────────── */
+  #home-dynamic { margin-bottom: 8px; }
+
+  /* ── Fantasy module ───────────────────────────────────────────────── */
+  .fant-module { margin-bottom: 20px; }
+  .module-hd {
+    display: flex; align-items: baseline; justify-content: space-between;
+    margin-bottom: 8px;
+  }
+  .module-label { font-size: 11px; font-weight: 600; text-transform: uppercase; letter-spacing: .07em; color: #6b6b70; }
+  .module-all { font-size: 12px; color: #6b6b70; text-decoration: none; }
+  .module-all:hover { color: #16161a; text-decoration: underline; }
+
+  .fcard {
+    background: #fff; border: 1px solid #e4e4df; border-radius: 8px;
+    overflow: hidden; margin-bottom: 8px;
+  }
+  .fcard-hd {
+    display: flex; align-items: center; justify-content: space-between;
+    padding: 8px 12px 0;
+  }
+  .fcard-title { font-size: 11px; font-weight: 600; color: #6b6b70; text-transform: uppercase; letter-spacing: .06em; }
+  .tier {
+    font-size: 9px; font-weight: 600; text-transform: uppercase; letter-spacing: .08em;
+    padding: 2px 6px; border-radius: 3px;
+  }
+  .tier.real    { background: #e8f5e9; color: #2e7d32; }
+  .tier.derived { background: #f3f0ff; color: #5c35bf; }
+
+  .fcard table { width: 100%; border-collapse: collapse; font-size: 13px; }
+  .fcard th {
+    text-align: right; padding: 6px 12px 4px;
+    font-size: 10px; font-weight: 600; color: #9a9a9e;
+    text-transform: uppercase; letter-spacing: .04em;
+  }
+  .fcard th.l { text-align: left; }
+  .fcard th.r { text-align: right; }
+  .fcard td { padding: 7px 12px; border-top: 1px solid #e4e4df; }
+  td.nm { text-align: left; font-weight: 500; }
+  td.nm a { color: #16161a; text-decoration: none; }
+  td.nm a:hover { text-decoration: underline; }
+  td.tm { text-align: left; color: #6b6b70; font-size: 12px; }
+  td.n {
+    text-align: right; color: #6b6b70;
+    font-variant-numeric: tabular-nums; font-feature-settings: "tnum";
+    font-family: "JetBrains Mono", ui-monospace, monospace; font-size: 12px;
+  }
+  td.hi { color: #16161a; font-weight: 600; }
+  td.delta.pos { color: #1a7a40; }
+  td.delta.neg { color: #c0392b; }
+
+  .bridge { padding-bottom: 10px; }
+  .bridge-row { display: flex; align-items: baseline; gap: 10px; padding: 8px 12px 4px; }
+  .bridge-name { font-size: 15px; font-weight: 600; color: #16161a; text-decoration: none; }
+  .bridge-name:hover { text-decoration: underline; }
+  .bridge-score { font-size: 14px; color: #6b6b70; font-variant-numeric: tabular-nums; }
+  .bridge-note { font-size: 11px; color: #9a9a9e; margin: 4px 12px 0; line-height: 1.4; font-style: italic; }
+
+  /* ── Nav grid ─────────────────────────────────────────────────────── */
+  .nav-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+    gap: 8px;
+  }
+  .nav-tile {
+    background: #fff; border: 1px solid #e4e4df; border-radius: 8px;
+    padding: 14px 16px; text-decoration: none; color: #16161a;
+    display: flex; flex-direction: column; gap: 3px;
+    transition: border-color .1s;
+  }
+  .nav-tile:hover { border-color: #16161a; }
+  .nt-label { font-size: 14px; font-weight: 600; }
+  .nt-desc  { font-size: 12px; color: #6b6b70; }
+
+  @media (max-width: 500px) {
+    .home { padding-left: 12px; padding-right: 12px; }
+    .hero { margin-left: -12px; margin-right: -12px; padding-left: 12px; padding-right: 12px; }
+    .nav-grid { grid-template-columns: 1fr 1fr; }
+  }
+</style>
+
+<style is:global>
+  /* React-rendered dynamic sections */
+  .h-search { position: relative; margin-bottom: 16px; }
+  .h-search input {
+    width: 100%; box-sizing: border-box;
+    font-family: system-ui, -apple-system, "Segoe UI", Roboto, sans-serif;
+    font-size: 16px; color: #16161a; background: #fff;
+    border: 1px solid #e4e4df; border-radius: 7px;
+    padding: 13px 15px; outline: none; transition: border-color .15s;
+  }
+  .h-search input:focus { border-color: #16161a; }
+  .h-search input::placeholder { color: #9a9a9e; }
+  .h-results {
+    position: absolute; left: 0; right: 0; top: calc(100% + 6px);
+    background: #fff; border: 1px solid #e4e4df; border-radius: 7px;
+    box-shadow: 0 18px 40px -18px rgba(0,0,0,.28); overflow: hidden; z-index: 20;
+  }
+  .h-results a {
+    display: flex; align-items: center; gap: 11px;
+    padding: 11px 14px; border-bottom: 1px solid #f0f0ec;
+    text-decoration: none; color: inherit;
+  }
+  .h-results a:last-child { border-bottom: none; }
+  .h-results a:hover { background: #faf9f6; }
+  .h-results .rc {
+    font-family: "Barlow Condensed", system-ui, sans-serif;
+    font-weight: 700; font-size: 13px; color: #e10600; flex: 0 0 38px; letter-spacing: .03em;
+  }
+  .h-results .rn { font-size: 14px; font-weight: 500; color: #16161a; }
+  .h-results .rs {
+    margin-left: auto;
+    font-family: "JetBrains Mono", ui-monospace, monospace;
+    font-size: 10px; color: #9a9a9e;
+  }
+
+  .h-sect { margin-bottom: 16px; }
+  .h-sect-hd {
+    display: flex; align-items: baseline; justify-content: space-between;
+    padding: 0 2px 7px;
+  }
+  .h-sect-hd h2 {
+    font-family: "Barlow Condensed", system-ui, sans-serif;
+    font-weight: 700; font-size: 15px; letter-spacing: .06em;
+    text-transform: uppercase; margin: 0; color: #16161a;
+  }
+  .h-sect-hd span {
+    font-family: "JetBrains Mono", ui-monospace, monospace;
+    font-size: 10px; letter-spacing: .06em; color: #9a9a9e;
+  }
+  .h-card {
+    background: #fff; border: 1px solid #e4e4df; border-radius: 6px; overflow: hidden;
+  }
+  .h-card table { width: 100%; border-collapse: collapse; font-variant-numeric: tabular-nums; }
+  .h-card thead th {
+    font-family: "JetBrains Mono", ui-monospace, monospace;
+    font-size: 9.5px; font-weight: 500; letter-spacing: .08em; text-transform: uppercase;
+    color: #9a9a9e; text-align: right; padding: 9px 10px;
+    border-bottom: 1px solid #e4e4df; white-space: nowrap;
+  }
+  .h-card thead th.l { text-align: left; }
+  .h-card tbody td {
+    font-family: "JetBrains Mono", ui-monospace, monospace;
+    font-size: 12.5px; padding: 10px; border-bottom: 1px solid #f0f0ec;
+    text-align: right; color: #6b6b70; white-space: nowrap;
+  }
+  .h-card tbody tr:last-child td { border-bottom: none; }
+  .h-card tbody tr.clik { cursor: pointer; }
+  .h-card tbody tr.clik:hover td { background: #faf9f6; }
+  .h-card td.pos { text-align: left; color: #16161a; font-weight: 600; width: 34px; }
+  .h-card td.pos.dnf { color: #9a9a9e; }
+  .h-card td.drv { text-align: left; font-family: system-ui, -apple-system, sans-serif; }
+  .h-card td.drv .dot { display: inline-block; width: 8px; height: 8px; border-radius: 2px; margin-right: 8px; vertical-align: middle; }
+  .h-card td.drv .cc {
+    font-family: "Barlow Condensed", system-ui, sans-serif;
+    font-weight: 700; font-size: 13px; letter-spacing: .03em; color: #16161a;
+  }
+  .h-card td.drv .tn { color: #9a9a9e; font-size: 11px; margin-left: 7px; }
+  .h-card td.drv .go { color: #9a9a9e; font-family: "JetBrains Mono", ui-monospace, monospace; font-size: 11px; margin-left: 6px; opacity: 0; }
+  .h-card tr.clik:hover td.drv .go { opacity: 1; color: #e10600; }
+  .h-card td.gap { color: #6b6b70; }
+  .h-card td.gap.lead { color: #16161a; font-weight: 600; }
+  .h-card td.pts { color: #16161a; font-weight: 600; width: 54px; }
+  .h-card td.pts.zero { color: #9a9a9e; font-weight: 400; }
+</style>

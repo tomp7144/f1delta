@@ -2,7 +2,7 @@
   "driverId": "kimi-raikkonen",
   "name": "Kimi Räikkönen",
   "career": {
-    "score": 4099,
+    "score": 4149,
     "races": 352,
     "partial": 2
   },
@@ -87,19 +87,19 @@
     },
     {
       "year": 2016,
-      "score": 259,
+      "score": 269,
       "races": 21,
       "partial": 0
     },
     {
       "year": 2017,
-      "score": 301,
+      "score": 311,
       "races": 20,
       "partial": 0
     },
     {
       "year": 2018,
-      "score": 342,
+      "score": 352,
       "races": 21,
       "partial": 0
     },
@@ -111,13 +111,13 @@
     },
     {
       "year": 2020,
-      "score": 96,
+      "score": 106,
       "races": 17,
       "partial": 0
     },
     {
       "year": 2021,
-      "score": 68,
+      "score": 78,
       "races": 20,
       "partial": 0
     }

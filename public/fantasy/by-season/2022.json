@@ -2,17 +2,17 @@
   "year": 2022,
   "drivers": {
     "charles-leclerc": {
-      "score": 468,
+      "score": 508,
       "races": 22,
       "partial": 0
     },
     "carlos-sainz-jr": {
-      "score": 331,
+      "score": 341,
       "races": 22,
       "partial": 0
     },
     "lewis-hamilton": {
-      "score": 387,
+      "score": 417,
       "races": 22,
       "partial": 0
     },
@@ -52,7 +52,7 @@
       "partial": 1
     },
     "mick-schumacher": {
-      "score": 20,
+      "score": 30,
       "races": 22,
       "partial": 0
     },
@@ -67,7 +67,7 @@
       "partial": 2
     },
     "daniel-ricciardo": {
-      "score": 29,
+      "score": 39,
       "races": 22,
       "partial": 0
     },
@@ -87,12 +87,12 @@
       "partial": 0
     },
     "sergio-perez": {
-      "score": 439,
+      "score": 469,
       "races": 22,
       "partial": 0
     },
     "max-verstappen": {
-      "score": 644,
+      "score": 694,
       "races": 22,
       "partial": 0
     },
@@ -102,12 +102,12 @@
       "partial": 0
     },
     "sebastian-vettel": {
-      "score": 120,
+      "score": 150,
       "races": 20,
       "partial": 0
     },
     "nyck-de-vries": {
-      "score": 3,
+      "score": 13,
       "races": 1,
       "partial": 0
     }
@@ -120,7 +120,7 @@
       "name": "Bahrain GP",
       "topId": "charles-leclerc",
       "topName": "Charles Leclerc",
-      "topScore": 40,
+      "topScore": 50,
       "partial": false
     },
     {
@@ -128,9 +128,9 @@
       "raceId": 1059,
       "gpId": "saudi-arabia",
       "name": "Saudi Arabian GP",
-      "topId": "max-verstappen",
-      "topName": "Max Verstappen",
-      "topScore": 38,
+      "topId": "charles-leclerc",
+      "topName": "Charles Leclerc",
+      "topScore": 42,
       "partial": true
     },
     {
@@ -140,7 +140,7 @@
       "name": "Australian GP",
       "topId": "charles-leclerc",
       "topName": "Charles Leclerc",
-      "topScore": 40,
+      "topScore": 50,
       "partial": true
     },
     {
@@ -150,7 +150,7 @@
       "name": "Emilia Romagna GP",
       "topId": "max-verstappen",
       "topName": "Max Verstappen",
-      "topScore": 40,
+      "topScore": 50,
       "partial": true
     },
     {
@@ -160,7 +160,7 @@
       "name": "Miami GP",
       "topId": "max-verstappen",
       "topName": "Max Verstappen",
-      "topScore": 42,
+      "topScore": 52,
       "partial": true
     },
     {
@@ -180,7 +180,7 @@
       "name": "Monaco GP",
       "topId": "sergio-perez",
       "topName": "Sergio Pérez",
-      "topScore": 37,
+      "topScore": 47,
       "partial": false
     },
     {
@@ -200,7 +200,7 @@
       "name": "Canadian GP",
       "topId": "charles-leclerc",
       "topName": "Charles Leclerc",
-      "topScore": 39,
+      "topScore": 49,
       "partial": false
     },
     {
@@ -208,9 +208,9 @@
       "raceId": 1067,
       "gpId": "great-britain",
       "name": "British GP",
-      "topId": "carlos-sainz-jr",
-      "topName": "Carlos Sainz Jr.",
-      "topScore": 35,
+      "topId": "sergio-perez",
+      "topName": "Sergio Pérez",
+      "topScore": 39,
       "partial": false
     },
     {
@@ -230,7 +230,7 @@
       "name": "French GP",
       "topId": "carlos-sainz-jr",
       "topName": "Carlos Sainz Jr.",
-      "topScore": 45,
+      "topScore": 55,
       "partial": false
     },
     {
@@ -240,7 +240,7 @@
       "name": "Hungarian GP",
       "topId": "max-verstappen",
       "topName": "Max Verstappen",
-      "topScore": 44,
+      "topScore": 54,
       "partial": false
     },
     {
@@ -250,7 +250,7 @@
       "name": "Belgian GP",
       "topId": "max-verstappen",
       "topName": "Max Verstappen",
-      "topScore": 66,
+      "topScore": 76,
       "partial": false
     },
     {
@@ -260,7 +260,7 @@
       "name": "Dutch GP",
       "topId": "max-verstappen",
       "topName": "Max Verstappen",
-      "topScore": 40,
+      "topScore": 50,
       "partial": false
     },
     {
@@ -280,7 +280,7 @@
       "name": "Singapore GP",
       "topId": "sergio-perez",
       "topName": "Sergio Pérez",
-      "topScore": 36,
+      "topScore": 46,
       "partial": false
     },
     {

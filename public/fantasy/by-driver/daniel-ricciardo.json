@@ -2,7 +2,7 @@
   "driverId": "daniel-ricciardo",
   "name": "Daniel Ricciardo",
   "career": {
-    "score": 2017,
+    "score": 2127,
     "races": 257,
     "partial": 4
   },
@@ -39,19 +39,19 @@
     },
     {
       "year": 2016,
-      "score": 399,
+      "score": 409,
       "races": 21,
       "partial": 0
     },
     {
       "year": 2017,
-      "score": 306,
+      "score": 326,
       "races": 20,
       "partial": 0
     },
     {
       "year": 2018,
-      "score": 241,
+      "score": 281,
       "races": 21,
       "partial": 0
     },
@@ -63,19 +63,19 @@
     },
     {
       "year": 2020,
-      "score": 200,
+      "score": 210,
       "races": 17,
       "partial": 0
     },
     {
       "year": 2021,
-      "score": 244,
+      "score": 254,
       "races": 22,
       "partial": 0
     },
     {
       "year": 2022,
-      "score": 29,
+      "score": 39,
       "races": 22,
       "partial": 0
     },
@@ -87,7 +87,7 @@
     },
     {
       "year": 2024,
-      "score": 27,
+      "score": 37,
       "races": 18,
       "partial": 0
     }

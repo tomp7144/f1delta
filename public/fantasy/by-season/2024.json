@@ -2,7 +2,7 @@
   "year": 2024,
   "drivers": {
     "max-verstappen": {
-      "score": 622,
+      "score": 632,
       "races": 24,
       "partial": 0
     },
@@ -12,12 +12,12 @@
       "partial": 0
     },
     "carlos-sainz-jr": {
-      "score": 362,
+      "score": 392,
       "races": 23,
       "partial": 0
     },
     "charles-leclerc": {
-      "score": 528,
+      "score": 578,
       "races": 24,
       "partial": 0
     },
@@ -27,17 +27,17 @@
       "partial": 0
     },
     "lando-norris": {
-      "score": 508,
+      "score": 578,
       "races": 24,
       "partial": 0
     },
     "lewis-hamilton": {
-      "score": 362,
+      "score": 392,
       "races": 24,
       "partial": 0
     },
     "oscar-piastri": {
-      "score": 419,
+      "score": 439,
       "races": 24,
       "partial": 0
     },
@@ -52,7 +52,7 @@
       "partial": 0
     },
     "guanyu-zhou": {
-      "score": 42,
+      "score": 52,
       "races": 24,
       "partial": 1
     },
@@ -62,7 +62,7 @@
       "partial": 1
     },
     "daniel-ricciardo": {
-      "score": 27,
+      "score": 37,
       "races": 18,
       "partial": 0
     },
@@ -102,7 +102,7 @@
       "partial": 2
     },
     "oliver-bearman": {
-      "score": 31,
+      "score": 41,
       "races": 3,
       "partial": 0
     },
@@ -150,7 +150,7 @@
       "name": "Australian GP",
       "topId": "carlos-sainz-jr",
       "topName": "Carlos Sainz Jr.",
-      "topScore": 36,
+      "topScore": 46,
       "partial": false
     },
     {
@@ -168,9 +168,9 @@
       "raceId": 1106,
       "gpId": "china",
       "name": "Chinese GP",
-      "topId": "max-verstappen",
-      "topName": "Max Verstappen",
-      "topScore": 35,
+      "topId": "lando-norris",
+      "topName": "Lando Norris",
+      "topScore": 39,
       "partial": false
     },
     {
@@ -180,7 +180,7 @@
       "name": "Miami GP",
       "topId": "lando-norris",
       "topName": "Lando Norris",
-      "topScore": 39,
+      "topScore": 49,
       "partial": false
     },
     {
@@ -188,9 +188,9 @@
       "raceId": 1108,
       "gpId": "emilia-romagna",
       "name": "Emilia Romagna GP",
-      "topId": "max-verstappen",
-      "topName": "Max Verstappen",
-      "topScore": 35,
+      "topId": "lando-norris",
+      "topName": "Lando Norris",
+      "topScore": 36,
       "partial": true
     },
     {
@@ -200,7 +200,7 @@
       "name": "Monaco GP",
       "topId": "charles-leclerc",
       "topName": "Charles Leclerc",
-      "topScore": 35,
+      "topScore": 45,
       "partial": true
     },
     {
@@ -208,9 +208,9 @@
       "raceId": 1110,
       "gpId": "canada",
       "name": "Canadian GP",
-      "topId": "max-verstappen",
-      "topName": "Max Verstappen",
-      "topScore": 36,
+      "topId": "lando-norris",
+      "topName": "Lando Norris",
+      "topScore": 38,
       "partial": false
     },
     {
@@ -218,9 +218,9 @@
       "raceId": 1111,
       "gpId": "spain",
       "name": "Spanish GP",
-      "topId": "max-verstappen",
-      "topName": "Max Verstappen",
-      "topScore": 36,
+      "topId": "lando-norris",
+      "topName": "Lando Norris",
+      "topScore": 41,
       "partial": false
     },
     {
@@ -240,7 +240,7 @@
       "name": "British GP",
       "topId": "lewis-hamilton",
       "topName": "Lewis Hamilton",
-      "topScore": 36,
+      "topScore": 46,
       "partial": false
     },
     {
@@ -250,7 +250,7 @@
       "name": "Hungarian GP",
       "topId": "oscar-piastri",
       "topName": "Oscar Piastri",
-      "topScore": 36,
+      "topScore": 46,
       "partial": false
     },
     {
@@ -260,7 +260,7 @@
       "name": "Belgian GP",
       "topId": "lewis-hamilton",
       "topName": "Lewis Hamilton",
-      "topScore": 36,
+      "topScore": 46,
       "partial": false
     },
     {
@@ -270,7 +270,7 @@
       "name": "Dutch GP",
       "topId": "lando-norris",
       "topName": "Lando Norris",
-      "topScore": 40,
+      "topScore": 50,
       "partial": true
     },
     {
@@ -280,7 +280,7 @@
       "name": "Italian GP",
       "topId": "charles-leclerc",
       "topName": "Charles Leclerc",
-      "topScore": 38,
+      "topScore": 48,
       "partial": false
     },
     {
@@ -288,9 +288,9 @@
       "raceId": 1118,
       "gpId": "azerbaijan",
       "name": "Azerbaijan GP",
-      "topId": "lando-norris",
-      "topName": "Lando Norris",
-      "topScore": 39,
+      "topId": "oscar-piastri",
+      "topName": "Oscar Piastri",
+      "topScore": 46,
       "partial": true
     },
     {
@@ -310,7 +310,7 @@
       "name": "United States GP",
       "topId": "charles-leclerc",
       "topName": "Charles Leclerc",
-      "topScore": 38,
+      "topScore": 48,
       "partial": false
     },
     {
@@ -320,7 +320,7 @@
       "name": "Mexican GP",
       "topId": "carlos-sainz-jr",
       "topName": "Carlos Sainz Jr.",
-      "topScore": 35,
+      "topScore": 45,
       "partial": false
     },
     {
@@ -330,7 +330,7 @@
       "name": "São Paulo GP",
       "topId": "max-verstappen",
       "topName": "Max Verstappen",
-      "topScore": 66,
+      "topScore": 76,
       "partial": false
     },
     {
@@ -338,9 +338,9 @@
       "raceId": 1123,
       "gpId": "las-vegas",
       "name": "Las Vegas GP",
-      "topId": "george-russell",
-      "topName": "George Russell",
-      "topScore": 35,
+      "topId": "lewis-hamilton",
+      "topName": "Lewis Hamilton",
+      "topScore": 45,
       "partial": false
     },
     {
@@ -360,7 +360,7 @@
       "name": "Abu Dhabi GP",
       "topId": "charles-leclerc",
       "topName": "Charles Leclerc",
-      "topScore": 49,
+      "topScore": 59,
       "partial": false
     }
   ]

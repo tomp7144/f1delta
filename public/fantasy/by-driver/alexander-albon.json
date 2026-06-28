@@ -2,20 +2,20 @@
   "driverId": "alexander-albon",
   "name": "Alexander Albon",
   "career": {
-    "score": 465,
+    "score": 505,
     "races": 135,
     "partial": 5
   },
   "seasons": [
     {
       "year": 2019,
-      "score": 178,
+      "score": 198,
       "races": 21,
       "partial": 1
     },
     {
       "year": 2020,
-      "score": 157,
+      "score": 167,
       "races": 17,
       "partial": 0
     },
@@ -27,7 +27,7 @@
     },
     {
       "year": 2023,
-      "score": 18,
+      "score": 28,
       "races": 22,
       "partial": 0
     },

@@ -65,7 +65,7 @@ async function main() {
     let raceHasPartial = false;
 
     for (const r of raceResults) {
-      const { score, partial } = driverScore(r, isKO);
+      const { score, partial } = driverScore(r, isKO, !!r.driverOfTheDay);
       const dId = r.driverId;
 
       if (partial) raceHasPartial = true;

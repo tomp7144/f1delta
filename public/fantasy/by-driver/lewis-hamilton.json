@@ -2,7 +2,7 @@
   "driverId": "lewis-hamilton",
   "name": "Lewis Hamilton",
   "career": {
-    "score": 8204,
+    "score": 8404,
     "races": 386,
     "partial": 4
   },
@@ -63,19 +63,19 @@
     },
     {
       "year": 2016,
-      "score": 580,
+      "score": 590,
       "races": 21,
       "partial": 1
     },
     {
       "year": 2017,
-      "score": 568,
+      "score": 598,
       "races": 20,
       "partial": 1
     },
     {
       "year": 2018,
-      "score": 619,
+      "score": 649,
       "races": 21,
       "partial": 0
     },
@@ -87,43 +87,43 @@
     },
     {
       "year": 2020,
-      "score": 520,
+      "score": 530,
       "races": 16,
       "partial": 0
     },
     {
       "year": 2021,
-      "score": 596,
+      "score": 616,
       "races": 22,
       "partial": 0
     },
     {
       "year": 2022,
-      "score": 387,
+      "score": 417,
       "races": 22,
       "partial": 0
     },
     {
       "year": 2023,
-      "score": 370,
+      "score": 380,
       "races": 22,
       "partial": 0
     },
     {
       "year": 2024,
-      "score": 362,
+      "score": 392,
       "races": 24,
       "partial": 0
     },
     {
       "year": 2025,
-      "score": 257,
+      "score": 277,
       "races": 24,
       "partial": 0
     },
     {
       "year": 2026,
-      "score": 129,
+      "score": 139,
       "races": 6,
       "partial": 0
     }

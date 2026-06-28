@@ -2,27 +2,27 @@
   "year": 2017,
   "drivers": {
     "sebastian-vettel": {
-      "score": 461,
+      "score": 531,
       "races": 20,
       "partial": 1
     },
     "lewis-hamilton": {
-      "score": 568,
+      "score": 598,
       "races": 20,
       "partial": 1
     },
     "valtteri-bottas": {
-      "score": 471,
+      "score": 501,
       "races": 20,
       "partial": 0
     },
     "kimi-raikkonen": {
-      "score": 301,
+      "score": 311,
       "races": 20,
       "partial": 0
     },
     "max-verstappen": {
-      "score": 222,
+      "score": 252,
       "races": 20,
       "partial": 0
     },
@@ -77,12 +77,12 @@
       "partial": 0
     },
     "lance-stroll": {
-      "score": 81,
+      "score": 91,
       "races": 20,
       "partial": 0
     },
     "daniel-ricciardo": {
-      "score": 306,
+      "score": 326,
       "races": 20,
       "partial": 0
     },
@@ -135,7 +135,7 @@
       "name": "Australian GP",
       "topId": "sebastian-vettel",
       "topName": "Sebastian Vettel",
-      "topScore": 36,
+      "topScore": 46,
       "partial": false
     },
     {
@@ -145,7 +145,7 @@
       "name": "Chinese GP",
       "topId": "max-verstappen",
       "topName": "Max Verstappen",
-      "topScore": 41,
+      "topScore": 51,
       "partial": false
     },
     {
@@ -155,7 +155,7 @@
       "name": "Bahrain GP",
       "topId": "sebastian-vettel",
       "topName": "Sebastian Vettel",
-      "topScore": 37,
+      "topScore": 47,
       "partial": false
     },
     {
@@ -165,7 +165,7 @@
       "name": "Russian GP",
       "topId": "valtteri-bottas",
       "topName": "Valtteri Bottas",
-      "topScore": 37,
+      "topScore": 47,
       "partial": false
     },
     {
@@ -185,7 +185,7 @@
       "name": "Monaco GP",
       "topId": "sebastian-vettel",
       "topName": "Sebastian Vettel",
-      "topScore": 36,
+      "topScore": 46,
       "partial": false
     },
     {
@@ -215,7 +215,7 @@
       "name": "Austrian GP",
       "topId": "valtteri-bottas",
       "topName": "Valtteri Bottas",
-      "topScore": 35,
+      "topScore": 45,
       "partial": false
     },
     {
@@ -223,9 +223,9 @@
       "raceId": 966,
       "gpId": "great-britain",
       "name": "British GP",
-      "topId": "lewis-hamilton",
-      "topName": "Lewis Hamilton",
-      "topScore": 40,
+      "topId": "daniel-ricciardo",
+      "topName": "Daniel Ricciardo",
+      "topScore": 48,
       "partial": false
     },
     {
@@ -233,9 +233,9 @@
       "raceId": 967,
       "gpId": "hungary",
       "name": "Hungarian GP",
-      "topId": "sebastian-vettel",
-      "topName": "Sebastian Vettel",
-      "topScore": 35,
+      "topId": "kimi-raikkonen",
+      "topName": "Kimi Räikkönen",
+      "topScore": 37,
       "partial": false
     },
     {
@@ -245,7 +245,7 @@
       "name": "Belgian GP",
       "topId": "lewis-hamilton",
       "topName": "Lewis Hamilton",
-      "topScore": 35,
+      "topScore": 45,
       "partial": false
     },
     {
@@ -255,7 +255,7 @@
       "name": "Italian GP",
       "topId": "daniel-ricciardo",
       "topName": "Daniel Ricciardo",
-      "topScore": 49,
+      "topScore": 59,
       "partial": true
     },
     {
@@ -265,7 +265,7 @@
       "name": "Singapore GP",
       "topId": "lewis-hamilton",
       "topName": "Lewis Hamilton",
-      "topScore": 44,
+      "topScore": 54,
       "partial": false
     },
     {
@@ -283,9 +283,9 @@
       "raceId": 972,
       "gpId": "japan",
       "name": "Japanese GP",
-      "topId": "lewis-hamilton",
-      "topName": "Lewis Hamilton",
-      "topScore": 35,
+      "topId": "max-verstappen",
+      "topName": "Max Verstappen",
+      "topScore": 38,
       "partial": false
     },
     {
@@ -295,7 +295,7 @@
       "name": "United States GP",
       "topId": "max-verstappen",
       "topName": "Max Verstappen",
-      "topScore": 41,
+      "topScore": 51,
       "partial": false
     },
     {
@@ -325,7 +325,7 @@
       "name": "Abu Dhabi GP",
       "topId": "valtteri-bottas",
       "topName": "Valtteri Bottas",
-      "topScore": 40,
+      "topScore": 50,
       "partial": false
     }
   ]

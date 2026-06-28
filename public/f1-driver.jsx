@@ -787,7 +787,7 @@ function FantasySection({ slug }) {
     <section>
       <div className="sec-h">
         <h2>f1delta Fantasy Score</h2>
-        <span className="fant-note">position-based · excludes overtakes &amp; DotD</span>
+        <span className="fant-note">position-based · excludes overtakes</span>
       </div>
       <div className="card">
         <table>
@@ -823,7 +823,7 @@ function FantasySection({ slug }) {
         {hasPartial && (
           <p className="fant-partial">~ includes races where qualifying data is unavailable</p>
         )}
-        <p className="fant-note-foot">Scoring: race finish points · qualifying position · positions gained · fastest lap (P1–10). Not the official F1 Fantasy game.</p>
+        <p className="fant-note-foot">Scoring: race finish points · qualifying position · positions gained · fastest lap (P1–10) · Driver of the Day. f1δ Score applies current scoring rules to all eras for cross-era comparison — it is not the championship points drivers actually earned.</p>
       </div>
     </section>
   );

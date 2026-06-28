@@ -5610,9 +5610,9 @@
     "partial": false
   },
   "936": {
-    "topDriverId": "nico-rosberg",
-    "topDriverName": "Nico Rosberg",
-    "topScore": 36,
+    "topDriverId": "romain-grosjean",
+    "topDriverName": "Romain Grosjean",
+    "topScore": 44,
     "partial": false
   },
   "937": {
@@ -5622,9 +5622,9 @@
     "partial": false
   },
   "938": {
-    "topDriverId": "nico-rosberg",
-    "topDriverName": "Nico Rosberg",
-    "topScore": 35,
+    "topDriverId": "daniil-kvyat",
+    "topDriverName": "Daniil Kvyat",
+    "topScore": 36,
     "partial": true
   },
   "939": {
@@ -5636,7 +5636,7 @@
   "940": {
     "topDriverId": "max-verstappen",
     "topDriverName": "Max Verstappen",
-    "topScore": 38,
+    "topScore": 48,
     "partial": false
   },
   "941": {
@@ -5652,51 +5652,51 @@
     "partial": true
   },
   "943": {
-    "topDriverId": "nico-rosberg",
-    "topDriverName": "Nico Rosberg",
-    "topScore": 40,
+    "topDriverId": "sergio-perez",
+    "topDriverName": "Sergio Pérez",
+    "topScore": 42,
     "partial": false
   },
   "944": {
-    "topDriverId": "lewis-hamilton",
-    "topDriverName": "Lewis Hamilton",
-    "topScore": 40,
+    "topDriverId": "max-verstappen",
+    "topDriverName": "Max Verstappen",
+    "topScore": 42,
     "partial": false
   },
   "945": {
-    "topDriverId": "lewis-hamilton",
-    "topDriverName": "Lewis Hamilton",
-    "topScore": 35,
+    "topDriverId": "max-verstappen",
+    "topDriverName": "Max Verstappen",
+    "topScore": 38,
     "partial": true
   },
   "946": {
-    "topDriverId": "lewis-hamilton",
-    "topDriverName": "Lewis Hamilton",
-    "topScore": 36,
+    "topDriverId": "kimi-raikkonen",
+    "topDriverName": "Kimi Räikkönen",
+    "topScore": 41,
     "partial": true
   },
   "947": {
-    "topDriverId": "lewis-hamilton",
-    "topDriverName": "Lewis Hamilton",
-    "topScore": 36,
+    "topDriverId": "daniel-ricciardo",
+    "topDriverName": "Daniel Ricciardo",
+    "topScore": 43,
     "partial": false
   },
   "948": {
     "topDriverId": "lewis-hamilton",
     "topDriverName": "Lewis Hamilton",
-    "topScore": 56,
+    "topScore": 66,
     "partial": true
   },
   "949": {
     "topDriverId": "nico-rosberg",
     "topDriverName": "Nico Rosberg",
-    "topScore": 36,
+    "topScore": 46,
     "partial": true
   },
   "950": {
     "topDriverId": "sebastian-vettel",
     "topDriverName": "Sebastian Vettel",
-    "topScore": 44,
+    "topScore": 54,
     "partial": false
   },
   "951": {
@@ -5706,9 +5706,9 @@
     "partial": false
   },
   "952": {
-    "topDriverId": "nico-rosberg",
-    "topDriverName": "Nico Rosberg",
-    "topScore": 35,
+    "topDriverId": "max-verstappen",
+    "topDriverName": "Max Verstappen",
+    "topScore": 36,
     "partial": false
   },
   "953": {
@@ -5724,39 +5724,39 @@
     "partial": true
   },
   "955": {
-    "topDriverId": "lewis-hamilton",
-    "topDriverName": "Lewis Hamilton",
-    "topScore": 35,
+    "topDriverId": "max-verstappen",
+    "topDriverName": "Max Verstappen",
+    "topScore": 39,
     "partial": false
   },
   "956": {
-    "topDriverId": "lewis-hamilton",
-    "topDriverName": "Lewis Hamilton",
-    "topScore": 35,
+    "topDriverId": "sebastian-vettel",
+    "topDriverName": "Sebastian Vettel",
+    "topScore": 40,
     "partial": false
   },
   "957": {
     "topDriverId": "sebastian-vettel",
     "topDriverName": "Sebastian Vettel",
-    "topScore": 36,
+    "topScore": 46,
     "partial": false
   },
   "958": {
     "topDriverId": "max-verstappen",
     "topDriverName": "Max Verstappen",
-    "topScore": 41,
+    "topScore": 51,
     "partial": false
   },
   "959": {
     "topDriverId": "sebastian-vettel",
     "topDriverName": "Sebastian Vettel",
-    "topScore": 37,
+    "topScore": 47,
     "partial": false
   },
   "960": {
     "topDriverId": "valtteri-bottas",
     "topDriverName": "Valtteri Bottas",
-    "topScore": 37,
+    "topScore": 47,
     "partial": false
   },
   "961": {
@@ -5768,7 +5768,7 @@
   "962": {
     "topDriverId": "sebastian-vettel",
     "topDriverName": "Sebastian Vettel",
-    "topScore": 36,
+    "topScore": 46,
     "partial": false
   },
   "963": {
@@ -5786,37 +5786,37 @@
   "965": {
     "topDriverId": "valtteri-bottas",
     "topDriverName": "Valtteri Bottas",
-    "topScore": 35,
+    "topScore": 45,
     "partial": false
   },
   "966": {
-    "topDriverId": "lewis-hamilton",
-    "topDriverName": "Lewis Hamilton",
-    "topScore": 40,
+    "topDriverId": "daniel-ricciardo",
+    "topDriverName": "Daniel Ricciardo",
+    "topScore": 48,
     "partial": false
   },
   "967": {
-    "topDriverId": "sebastian-vettel",
-    "topDriverName": "Sebastian Vettel",
-    "topScore": 35,
+    "topDriverId": "kimi-raikkonen",
+    "topDriverName": "Kimi Räikkönen",
+    "topScore": 37,
     "partial": false
   },
   "968": {
     "topDriverId": "lewis-hamilton",
     "topDriverName": "Lewis Hamilton",
-    "topScore": 35,
+    "topScore": 45,
     "partial": false
   },
   "969": {
     "topDriverId": "daniel-ricciardo",
     "topDriverName": "Daniel Ricciardo",
-    "topScore": 49,
+    "topScore": 59,
     "partial": true
   },
   "970": {
     "topDriverId": "lewis-hamilton",
     "topDriverName": "Lewis Hamilton",
-    "topScore": 44,
+    "topScore": 54,
     "partial": false
   },
   "971": {
@@ -5826,15 +5826,15 @@
     "partial": true
   },
   "972": {
-    "topDriverId": "lewis-hamilton",
-    "topDriverName": "Lewis Hamilton",
-    "topScore": 35,
+    "topDriverId": "max-verstappen",
+    "topDriverName": "Max Verstappen",
+    "topScore": 38,
     "partial": false
   },
   "973": {
     "topDriverId": "max-verstappen",
     "topDriverName": "Max Verstappen",
-    "topScore": 41,
+    "topScore": 51,
     "partial": false
   },
   "974": {
@@ -5852,7 +5852,7 @@
   "976": {
     "topDriverId": "valtteri-bottas",
     "topDriverName": "Valtteri Bottas",
-    "topScore": 40,
+    "topScore": 50,
     "partial": false
   },
   "977": {
@@ -5870,7 +5870,7 @@
   "979": {
     "topDriverId": "daniel-ricciardo",
     "topDriverName": "Daniel Ricciardo",
-    "topScore": 45,
+    "topScore": 55,
     "partial": false
   },
   "980": {
@@ -5882,19 +5882,19 @@
   "981": {
     "topDriverId": "lewis-hamilton",
     "topDriverName": "Lewis Hamilton",
-    "topScore": 35,
+    "topScore": 45,
     "partial": true
   },
   "982": {
     "topDriverId": "daniel-ricciardo",
     "topDriverName": "Daniel Ricciardo",
-    "topScore": 35,
+    "topScore": 45,
     "partial": true
   },
   "983": {
     "topDriverId": "sebastian-vettel",
     "topDriverName": "Sebastian Vettel",
-    "topScore": 35,
+    "topScore": 45,
     "partial": true
   },
   "984": {
@@ -5906,7 +5906,7 @@
   "985": {
     "topDriverId": "max-verstappen",
     "topDriverName": "Max Verstappen",
-    "topScore": 37,
+    "topScore": 47,
     "partial": false
   },
   "986": {
@@ -5918,19 +5918,19 @@
   "987": {
     "topDriverId": "lewis-hamilton",
     "topDriverName": "Lewis Hamilton",
-    "topScore": 58,
+    "topScore": 68,
     "partial": false
   },
   "988": {
     "topDriverId": "daniel-ricciardo",
     "topDriverName": "Daniel Ricciardo",
-    "topScore": 37,
+    "topScore": 47,
     "partial": false
   },
   "989": {
-    "topDriverId": "valtteri-bottas",
-    "topDriverName": "Valtteri Bottas",
-    "topScore": 44,
+    "topDriverId": "sebastian-vettel",
+    "topDriverName": "Sebastian Vettel",
+    "topScore": 46,
     "partial": false
   },
   "990": {
@@ -5940,39 +5940,39 @@
     "partial": false
   },
   "991": {
-    "topDriverId": "lewis-hamilton",
-    "topDriverName": "Lewis Hamilton",
-    "topScore": 35,
+    "topDriverId": "max-verstappen",
+    "topDriverName": "Max Verstappen",
+    "topScore": 37,
     "partial": false
   },
   "992": {
     "topDriverId": "max-verstappen",
     "topDriverName": "Max Verstappen",
-    "topScore": 43,
+    "topScore": 53,
     "partial": false
   },
   "993": {
-    "topDriverId": "lewis-hamilton",
-    "topDriverName": "Lewis Hamilton",
-    "topScore": 35,
+    "topDriverId": "daniel-ricciardo",
+    "topDriverName": "Daniel Ricciardo",
+    "topScore": 45,
     "partial": false
   },
   "994": {
     "topDriverId": "max-verstappen",
     "topDriverName": "Max Verstappen",
-    "topScore": 51,
+    "topScore": 61,
     "partial": false
   },
   "995": {
     "topDriverId": "max-verstappen",
     "topDriverName": "Max Verstappen",
-    "topScore": 36,
+    "topScore": 46,
     "partial": false
   },
   "996": {
-    "topDriverId": "lewis-hamilton",
-    "topDriverName": "Lewis Hamilton",
-    "topScore": 35,
+    "topDriverId": "max-verstappen",
+    "topDriverName": "Max Verstappen",
+    "topScore": 40,
     "partial": false
   },
   "997": {
@@ -5984,7 +5984,7 @@
   "998": {
     "topDriverId": "valtteri-bottas",
     "topDriverName": "Valtteri Bottas",
-    "topScore": 41,
+    "topScore": 51,
     "partial": false
   },
   "999": {
@@ -6032,7 +6032,7 @@
   "1006": {
     "topDriverId": "max-verstappen",
     "topDriverName": "Max Verstappen",
-    "topScore": 40,
+    "topScore": 50,
     "partial": false
   },
   "1007": {
@@ -6044,13 +6044,13 @@
   "1008": {
     "topDriverId": "max-verstappen",
     "topDriverName": "Max Verstappen",
-    "topScore": 41,
+    "topScore": 51,
     "partial": true
   },
   "1009": {
-    "topDriverId": "lewis-hamilton",
-    "topDriverName": "Lewis Hamilton",
-    "topScore": 37,
+    "topDriverId": "max-verstappen",
+    "topDriverName": "Max Verstappen",
+    "topScore": 41,
     "partial": false
   },
   "1010": {
@@ -6062,13 +6062,13 @@
   "1011": {
     "topDriverId": "charles-leclerc",
     "topDriverName": "Charles Leclerc",
-    "topScore": 35,
+    "topScore": 45,
     "partial": true
   },
   "1012": {
     "topDriverId": "sebastian-vettel",
     "topDriverName": "Sebastian Vettel",
-    "topScore": 37,
+    "topScore": 47,
     "partial": true
   },
   "1013": {
@@ -6080,7 +6080,7 @@
   "1014": {
     "topDriverId": "valtteri-bottas",
     "topDriverName": "Valtteri Bottas",
-    "topScore": 37,
+    "topScore": 47,
     "partial": true
   },
   "1015": {
@@ -6098,7 +6098,7 @@
   "1017": {
     "topDriverId": "max-verstappen",
     "topDriverName": "Max Verstappen",
-    "topScore": 35,
+    "topScore": 45,
     "partial": true
   },
   "1018": {
@@ -6114,27 +6114,27 @@
     "partial": false
   },
   "1020": {
-    "topDriverId": "lewis-hamilton",
-    "topDriverName": "Lewis Hamilton",
-    "topScore": 35,
+    "topDriverId": "sergio-perez",
+    "topDriverName": "Sergio Pérez",
+    "topScore": 40,
     "partial": false
   },
   "1021": {
-    "topDriverId": "lewis-hamilton",
-    "topDriverName": "Lewis Hamilton",
-    "topScore": 40,
+    "topDriverId": "max-verstappen",
+    "topDriverName": "Max Verstappen",
+    "topScore": 42,
     "partial": false
   },
   "1022": {
     "topDriverId": "lewis-hamilton",
     "topDriverName": "Lewis Hamilton",
-    "topScore": 35,
+    "topScore": 45,
     "partial": false
   },
   "1023": {
     "topDriverId": "max-verstappen",
     "topDriverName": "Max Verstappen",
-    "topScore": 38,
+    "topScore": 48,
     "partial": false
   },
   "1024": {
@@ -6152,7 +6152,7 @@
   "1026": {
     "topDriverId": "pierre-gasly",
     "topDriverName": "Pierre Gasly",
-    "topScore": 44,
+    "topScore": 54,
     "partial": false
   },
   "1027": {
@@ -6168,9 +6168,9 @@
     "partial": false
   },
   "1029": {
-    "topDriverId": "lewis-hamilton",
-    "topDriverName": "Lewis Hamilton",
-    "topScore": 36,
+    "topDriverId": "nico-hulkenberg",
+    "topDriverName": "Nico Hülkenberg",
+    "topScore": 38,
     "partial": false
   },
   "1030": {
@@ -6186,9 +6186,9 @@
     "partial": false
   },
   "1032": {
-    "topDriverId": "lewis-hamilton",
-    "topDriverName": "Lewis Hamilton",
-    "topScore": 40,
+    "topDriverId": "sebastian-vettel",
+    "topDriverName": "Sebastian Vettel",
+    "topScore": 45,
     "partial": false
   },
   "1033": {
@@ -6206,7 +6206,7 @@
   "1035": {
     "topDriverId": "max-verstappen",
     "topDriverName": "Max Verstappen",
-    "topScore": 35,
+    "topScore": 45,
     "partial": false
   },
   "1036": {
@@ -6230,7 +6230,7 @@
   "1039": {
     "topDriverId": "lewis-hamilton",
     "topDriverName": "Lewis Hamilton",
-    "topScore": 35,
+    "topScore": 45,
     "partial": false
   },
   "1040": {
@@ -6242,13 +6242,13 @@
   "1041": {
     "topDriverId": "sebastian-vettel",
     "topDriverName": "Sebastian Vettel",
-    "topScore": 41,
+    "topScore": 51,
     "partial": true
   },
   "1042": {
     "topDriverId": "max-verstappen",
     "topDriverName": "Max Verstappen",
-    "topScore": 40,
+    "topScore": 50,
     "partial": true
   },
   "1043": {
@@ -6264,9 +6264,9 @@
     "partial": false
   },
   "1045": {
-    "topDriverId": "lewis-hamilton",
-    "topDriverName": "Lewis Hamilton",
-    "topScore": 36,
+    "topDriverId": "charles-leclerc",
+    "topDriverName": "Charles Leclerc",
+    "topScore": 39,
     "partial": false
   },
   "1046": {
@@ -6308,7 +6308,7 @@
   "1052": {
     "topDriverId": "max-verstappen",
     "topDriverName": "Max Verstappen",
-    "topScore": 35,
+    "topScore": 45,
     "partial": false
   },
   "1053": {
@@ -6320,7 +6320,7 @@
   "1054": {
     "topDriverId": "lewis-hamilton",
     "topDriverName": "Lewis Hamilton",
-    "topScore": 49,
+    "topScore": 59,
     "partial": false
   },
   "1055": {
@@ -6344,31 +6344,31 @@
   "1058": {
     "topDriverId": "charles-leclerc",
     "topDriverName": "Charles Leclerc",
-    "topScore": 40,
+    "topScore": 50,
     "partial": false
   },
   "1059": {
-    "topDriverId": "max-verstappen",
-    "topDriverName": "Max Verstappen",
-    "topScore": 38,
+    "topDriverId": "charles-leclerc",
+    "topDriverName": "Charles Leclerc",
+    "topScore": 42,
     "partial": true
   },
   "1060": {
     "topDriverId": "charles-leclerc",
     "topDriverName": "Charles Leclerc",
-    "topScore": 40,
+    "topScore": 50,
     "partial": true
   },
   "1061": {
     "topDriverId": "max-verstappen",
     "topDriverName": "Max Verstappen",
-    "topScore": 40,
+    "topScore": 50,
     "partial": true
   },
   "1062": {
     "topDriverId": "max-verstappen",
     "topDriverName": "Max Verstappen",
-    "topScore": 42,
+    "topScore": 52,
     "partial": true
   },
   "1063": {
@@ -6380,7 +6380,7 @@
   "1064": {
     "topDriverId": "sergio-perez",
     "topDriverName": "Sergio Pérez",
-    "topScore": 37,
+    "topScore": 47,
     "partial": false
   },
   "1065": {
@@ -6392,13 +6392,13 @@
   "1066": {
     "topDriverId": "charles-leclerc",
     "topDriverName": "Charles Leclerc",
-    "topScore": 39,
+    "topScore": 49,
     "partial": false
   },
   "1067": {
-    "topDriverId": "carlos-sainz-jr",
-    "topDriverName": "Carlos Sainz Jr.",
-    "topScore": 35,
+    "topDriverId": "sergio-perez",
+    "topDriverName": "Sergio Pérez",
+    "topScore": 39,
     "partial": false
   },
   "1068": {
@@ -6410,25 +6410,25 @@
   "1069": {
     "topDriverId": "carlos-sainz-jr",
     "topDriverName": "Carlos Sainz Jr.",
-    "topScore": 45,
+    "topScore": 55,
     "partial": false
   },
   "1070": {
     "topDriverId": "max-verstappen",
     "topDriverName": "Max Verstappen",
-    "topScore": 44,
+    "topScore": 54,
     "partial": false
   },
   "1071": {
     "topDriverId": "max-verstappen",
     "topDriverName": "Max Verstappen",
-    "topScore": 66,
+    "topScore": 76,
     "partial": false
   },
   "1072": {
     "topDriverId": "max-verstappen",
     "topDriverName": "Max Verstappen",
-    "topScore": 40,
+    "topScore": 50,
     "partial": false
   },
   "1073": {
@@ -6440,7 +6440,7 @@
   "1074": {
     "topDriverId": "sergio-perez",
     "topDriverName": "Sergio Pérez",
-    "topScore": 36,
+    "topScore": 46,
     "partial": false
   },
   "1075": {
@@ -6482,7 +6482,7 @@
   "1081": {
     "topDriverId": "max-verstappen",
     "topDriverName": "Max Verstappen",
-    "topScore": 50,
+    "topScore": 60,
     "partial": true
   },
   "1082": {
@@ -6494,13 +6494,13 @@
   "1083": {
     "topDriverId": "sergio-perez",
     "topDriverName": "Sergio Pérez",
-    "topScore": 37,
+    "topScore": 47,
     "partial": true
   },
   "1084": {
     "topDriverId": "max-verstappen",
     "topDriverName": "Max Verstappen",
-    "topScore": 48,
+    "topScore": 58,
     "partial": false
   },
   "1085": {
@@ -6542,13 +6542,13 @@
   "1091": {
     "topDriverId": "max-verstappen",
     "topDriverName": "Max Verstappen",
-    "topScore": 45,
+    "topScore": 55,
     "partial": false
   },
   "1092": {
-    "topDriverId": "pierre-gasly",
-    "topDriverName": "Pierre Gasly",
-    "topScore": 37,
+    "topDriverId": "fernando-alonso",
+    "topDriverName": "Fernando Alonso",
+    "topScore": 45,
     "partial": false
   },
   "1093": {
@@ -6560,7 +6560,7 @@
   "1094": {
     "topDriverId": "carlos-sainz-jr",
     "topDriverName": "Carlos Sainz Jr.",
-    "topScore": 35,
+    "topScore": 45,
     "partial": false
   },
   "1095": {
@@ -6570,9 +6570,9 @@
     "partial": true
   },
   "1096": {
-    "topDriverId": "max-verstappen",
-    "topDriverName": "Max Verstappen",
-    "topScore": 40,
+    "topDriverId": "oscar-piastri",
+    "topDriverName": "Oscar Piastri",
+    "topScore": 41,
     "partial": false
   },
   "1097": {
@@ -6582,15 +6582,15 @@
     "partial": false
   },
   "1098": {
-    "topDriverId": "max-verstappen",
-    "topDriverName": "Max Verstappen",
-    "topScore": 37,
+    "topDriverId": "lando-norris",
+    "topDriverName": "Lando Norris",
+    "topScore": 44,
     "partial": true
   },
   "1099": {
-    "topDriverId": "max-verstappen",
-    "topDriverName": "Max Verstappen",
-    "topScore": 35,
+    "topDriverId": "lando-norris",
+    "topDriverName": "Lando Norris",
+    "topScore": 45,
     "partial": false
   },
   "1100": {
@@ -6620,7 +6620,7 @@
   "1104": {
     "topDriverId": "carlos-sainz-jr",
     "topDriverName": "Carlos Sainz Jr.",
-    "topScore": 36,
+    "topScore": 46,
     "partial": false
   },
   "1105": {
@@ -6630,39 +6630,39 @@
     "partial": false
   },
   "1106": {
-    "topDriverId": "max-verstappen",
-    "topDriverName": "Max Verstappen",
-    "topScore": 35,
-    "partial": false
-  },
-  "1107": {
     "topDriverId": "lando-norris",
     "topDriverName": "Lando Norris",
     "topScore": 39,
     "partial": false
   },
+  "1107": {
+    "topDriverId": "lando-norris",
+    "topDriverName": "Lando Norris",
+    "topScore": 49,
+    "partial": false
+  },
   "1108": {
-    "topDriverId": "max-verstappen",
-    "topDriverName": "Max Verstappen",
-    "topScore": 35,
+    "topDriverId": "lando-norris",
+    "topDriverName": "Lando Norris",
+    "topScore": 36,
     "partial": true
   },
   "1109": {
     "topDriverId": "charles-leclerc",
     "topDriverName": "Charles Leclerc",
-    "topScore": 35,
+    "topScore": 45,
     "partial": true
   },
   "1110": {
-    "topDriverId": "max-verstappen",
-    "topDriverName": "Max Verstappen",
-    "topScore": 36,
+    "topDriverId": "lando-norris",
+    "topDriverName": "Lando Norris",
+    "topScore": 38,
     "partial": false
   },
   "1111": {
-    "topDriverId": "max-verstappen",
-    "topDriverName": "Max Verstappen",
-    "topScore": 36,
+    "topDriverId": "lando-norris",
+    "topDriverName": "Lando Norris",
+    "topScore": 41,
     "partial": false
   },
   "1112": {
@@ -6674,37 +6674,37 @@
   "1113": {
     "topDriverId": "lewis-hamilton",
     "topDriverName": "Lewis Hamilton",
-    "topScore": 36,
+    "topScore": 46,
     "partial": false
   },
   "1114": {
     "topDriverId": "oscar-piastri",
     "topDriverName": "Oscar Piastri",
-    "topScore": 36,
+    "topScore": 46,
     "partial": false
   },
   "1115": {
     "topDriverId": "lewis-hamilton",
     "topDriverName": "Lewis Hamilton",
-    "topScore": 36,
+    "topScore": 46,
     "partial": false
   },
   "1116": {
     "topDriverId": "lando-norris",
     "topDriverName": "Lando Norris",
-    "topScore": 40,
+    "topScore": 50,
     "partial": true
   },
   "1117": {
     "topDriverId": "charles-leclerc",
     "topDriverName": "Charles Leclerc",
-    "topScore": 38,
+    "topScore": 48,
     "partial": false
   },
   "1118": {
-    "topDriverId": "lando-norris",
-    "topDriverName": "Lando Norris",
-    "topScore": 39,
+    "topDriverId": "oscar-piastri",
+    "topDriverName": "Oscar Piastri",
+    "topScore": 46,
     "partial": true
   },
   "1119": {
@@ -6716,25 +6716,25 @@
   "1120": {
     "topDriverId": "charles-leclerc",
     "topDriverName": "Charles Leclerc",
-    "topScore": 38,
+    "topScore": 48,
     "partial": false
   },
   "1121": {
     "topDriverId": "carlos-sainz-jr",
     "topDriverName": "Carlos Sainz Jr.",
-    "topScore": 35,
+    "topScore": 45,
     "partial": false
   },
   "1122": {
     "topDriverId": "max-verstappen",
     "topDriverName": "Max Verstappen",
-    "topScore": 66,
+    "topScore": 76,
     "partial": false
   },
   "1123": {
-    "topDriverId": "george-russell",
-    "topDriverName": "George Russell",
-    "topScore": 35,
+    "topDriverId": "lewis-hamilton",
+    "topDriverName": "Lewis Hamilton",
+    "topScore": 45,
     "partial": false
   },
   "1124": {
@@ -6746,13 +6746,13 @@
   "1125": {
     "topDriverId": "charles-leclerc",
     "topDriverName": "Charles Leclerc",
-    "topScore": 49,
+    "topScore": 59,
     "partial": false
   },
   "1126": {
     "topDriverId": "lando-norris",
     "topDriverName": "Lando Norris",
-    "topScore": 40,
+    "topScore": 50,
     "partial": true
   },
   "1127": {
@@ -6782,13 +6782,13 @@
   "1131": {
     "topDriverId": "oscar-piastri",
     "topDriverName": "Oscar Piastri",
-    "topScore": 38,
+    "topScore": 48,
     "partial": false
   },
   "1132": {
     "topDriverId": "max-verstappen",
     "topDriverName": "Max Verstappen",
-    "topScore": 41,
+    "topScore": 51,
     "partial": true
   },
   "1133": {
@@ -6818,7 +6818,7 @@
   "1137": {
     "topDriverId": "nico-hulkenberg",
     "topDriverName": "Nico Hülkenberg",
-    "topScore": 47,
+    "topScore": 57,
     "partial": false
   },
   "1138": {
@@ -6842,7 +6842,7 @@
   "1141": {
     "topDriverId": "max-verstappen",
     "topDriverName": "Max Verstappen",
-    "topScore": 35,
+    "topScore": 45,
     "partial": false
   },
   "1142": {
@@ -6876,21 +6876,21 @@
     "partial": true
   },
   "1147": {
-    "topDriverId": "kimi-antonelli",
-    "topDriverName": "Kimi Antonelli",
-    "topScore": 43,
+    "topDriverId": "max-verstappen",
+    "topDriverName": "Max Verstappen",
+    "topScore": 51,
     "partial": false
   },
   "1148": {
     "topDriverId": "max-verstappen",
     "topDriverName": "Max Verstappen",
-    "topScore": 37,
+    "topScore": 47,
     "partial": false
   },
   "1149": {
     "topDriverId": "max-verstappen",
     "topDriverName": "Max Verstappen",
-    "topScore": 35,
+    "topScore": 45,
     "partial": false
   },
   "1150": {
@@ -6902,7 +6902,7 @@
   "1151": {
     "topDriverId": "kimi-antonelli",
     "topDriverName": "Kimi Antonelli",
-    "topScore": 40,
+    "topScore": 50,
     "partial": false
   },
   "1152": {
@@ -6926,7 +6926,7 @@
   "1155": {
     "topDriverId": "kimi-antonelli",
     "topDriverName": "Kimi Antonelli",
-    "topScore": 40,
+    "topScore": 50,
     "partial": false
   }
 }

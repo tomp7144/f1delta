@@ -2,12 +2,12 @@
   "year": 2021,
   "drivers": {
     "lewis-hamilton": {
-      "score": 596,
+      "score": 616,
       "races": 22,
       "partial": 0
     },
     "max-verstappen": {
-      "score": 588,
+      "score": 618,
       "races": 22,
       "partial": 0
     },
@@ -17,27 +17,27 @@
       "partial": 0
     },
     "lando-norris": {
-      "score": 261,
+      "score": 291,
       "races": 22,
       "partial": 0
     },
     "sergio-perez": {
-      "score": 272,
+      "score": 312,
       "races": 22,
       "partial": 0
     },
     "charles-leclerc": {
-      "score": 263,
+      "score": 283,
       "races": 22,
       "partial": 0
     },
     "daniel-ricciardo": {
-      "score": 244,
+      "score": 254,
       "races": 22,
       "partial": 0
     },
     "carlos-sainz-jr": {
-      "score": 325,
+      "score": 335,
       "races": 22,
       "partial": 0
     },
@@ -52,7 +52,7 @@
       "partial": 2
     },
     "kimi-raikkonen": {
-      "score": 68,
+      "score": 78,
       "races": 20,
       "partial": 0
     },
@@ -72,7 +72,7 @@
       "partial": 0
     },
     "sebastian-vettel": {
-      "score": 71,
+      "score": 91,
       "races": 22,
       "partial": 0
     },
@@ -92,7 +92,7 @@
       "partial": 0
     },
     "fernando-alonso": {
-      "score": 136,
+      "score": 156,
       "races": 22,
       "partial": 0
     },
@@ -145,7 +145,7 @@
       "name": "Spanish GP",
       "topId": "lewis-hamilton",
       "topName": "Lewis Hamilton",
-      "topScore": 35,
+      "topScore": 45,
       "partial": false
     },
     {
@@ -165,7 +165,7 @@
       "name": "Azerbaijan GP",
       "topId": "sebastian-vettel",
       "topName": "Sebastian Vettel",
-      "topScore": 41,
+      "topScore": 51,
       "partial": true
     },
     {
@@ -175,7 +175,7 @@
       "name": "French GP",
       "topId": "max-verstappen",
       "topName": "Max Verstappen",
-      "topScore": 40,
+      "topScore": 50,
       "partial": true
     },
     {
@@ -203,9 +203,9 @@
       "raceId": 1045,
       "gpId": "great-britain",
       "name": "British GP",
-      "topId": "lewis-hamilton",
-      "topName": "Lewis Hamilton",
-      "topScore": 36,
+      "topId": "charles-leclerc",
+      "topName": "Charles Leclerc",
+      "topScore": 39,
       "partial": false
     },
     {
@@ -275,7 +275,7 @@
       "name": "United States GP",
       "topId": "max-verstappen",
       "topName": "Max Verstappen",
-      "topScore": 35,
+      "topScore": 45,
       "partial": false
     },
     {
@@ -295,7 +295,7 @@
       "name": "São Paulo GP",
       "topId": "lewis-hamilton",
       "topName": "Lewis Hamilton",
-      "topScore": 49,
+      "topScore": 59,
       "partial": false
     },
     {

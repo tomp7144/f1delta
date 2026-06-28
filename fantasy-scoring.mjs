@@ -7,9 +7,9 @@
  *
  * INTENTIONALLY OMITTED (absent from F1DB historical record):
  *   Overtakes    +1 each in the real F1 Fantasy game — no historical overtake data.
- *   Driver of the Day  +10 in real game — not available before 2016, sparse after.
  *
- * Scoring basis: 2026 F1 Fantasy official point table.
+ * Scoring basis: 2026 F1 Fantasy official point table — applied to all eras for
+ * cross-era comparison (not the championship points drivers actually earned).
  * Race position:    P1-10 = 25/18/15/12/10/8/6/4/2/1 · P11+ = 0
  * Qualifying:       KNOCKOUT (2006+): Q3 (P1-10) = 10-1 · Q2 (P11-15) = 5-1 · Q1 (P16+) = 0
  *                   Pre-KNOCKOUT: P1-10 = 10-1 · P11+ = 0
@@ -17,6 +17,7 @@
  * Positions lost:   -2 per position moved backward grid→finish
  * DNF / NC:         -20 · DSQ / EX: -25 · DNS / DNQ / DNP / DNPQ: 0
  * Fastest lap:      +5 if driver finished P1-10 (applied to all eras for consistency)
+ * Driver of the Day: +10 (F1DB supplies this from 2016 onward; no award before 2016)
  * Constructor bonus (KNOCKOUT only): +10 if both drivers reached Q3
  *
  * Phase 1's bake-fantasy.mjs PPM function lives here so live and historical
@@ -36,6 +37,7 @@ const POS_PTS       =  2;   // ± per position gained/lost (grid → finish)
 const DNF_PENALTY   = -20;
 const DSQ_PENALTY   = -25;
 const FL_PTS        =  5;   // fastest lap, P1-10 finish only
+const DOTD_PTS      = 10;   // Driver of the Day (official F1 Fantasy value)
 const BOTH_Q3_PTS   = 10;   // constructor bonus, KNOCKOUT format only
 
 /**
@@ -50,11 +52,13 @@ const BOTH_Q3_PTS   = 10;   // constructor bonus, KNOCKOUT format only
  *     qualificationPositionNumber {number|null} Qualifying position.
  *     fastestLap                {boolean}
  *     positionsGained           {number|null}  Pre-computed by F1DB (grid − finish).
- * @param {boolean} isKnockout  Race used KNOCKOUT qualifying format (2006+).
+ *     driverOfTheDay            {boolean}      F1DB flag; present from 2016 onward.
+ * @param {boolean} isKnockout     Race used KNOCKOUT qualifying format (2006+).
+ * @param {boolean} driverOfTheDay Driver won the fan vote for that race.
  * @returns {{ score: number, partial: boolean, components: object }}
  *   partial = true when qualifying data is absent; score excludes those components.
  */
-export function driverScore(r, isKnockout = false) {
+export function driverScore(r, isKnockout = false, driverOfTheDay = false) {
   const posNum   = r.positionNumber;
   const posText  = r.positionText ?? "";
   const gridPos  = r.gridPositionNumber;
@@ -77,6 +81,9 @@ export function driverScore(r, isKnockout = false) {
 
   // ── Fastest lap (only if classified in P1-10) ────────────────────────────
   const fl = hasFl && isFinished && posNum <= 10 ? FL_PTS : 0;
+
+  // ── Driver of the Day ────────────────────────────────────────────────────
+  const dotd = driverOfTheDay ? DOTD_PTS : 0;
 
   // ── Qualifying + positions gained (requires qualifying data) ─────────────
   const partial = qualiPos == null;
@@ -103,12 +110,12 @@ export function driverScore(r, isKnockout = false) {
     }
   }
 
-  const score = race + quali + positions + penalty + fl;
+  const score = race + quali + positions + penalty + fl + dotd;
 
   return {
     score,
     partial,
-    components: { race, quali, positions, penalty, fl },
+    components: { race, quali, positions, penalty, fl, dotd },
   };
 }
 
