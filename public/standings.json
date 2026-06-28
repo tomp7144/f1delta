@@ -4,61 +4,61 @@
     {
       "pos": 1,
       "code": "ANT",
-      "points": 156,
+      "points": 171,
       "team": "Mercedes"
     },
     {
       "pos": 2,
-      "code": "HAM",
-      "points": 115,
-      "team": "Ferrari"
-    },
-    {
-      "pos": 3,
       "code": "RUS",
-      "points": 106,
+      "points": 131,
       "team": "Mercedes"
     },
     {
-      "pos": 4,
-      "code": "LEC",
-      "points": 75,
+      "pos": 3,
+      "code": "HAM",
+      "points": 125,
       "team": "Ferrari"
+    },
+    {
+      "pos": 4,
+      "code": "PIA",
+      "points": 80,
+      "team": "McLaren"
     },
     {
       "pos": 5,
       "code": "NOR",
-      "points": 73,
+      "points": 79,
       "team": "McLaren"
     },
     {
       "pos": 6,
-      "code": "PIA",
-      "points": 68,
-      "team": "McLaren"
+      "code": "LEC",
+      "points": 79,
+      "team": "Ferrari"
     },
     {
       "pos": 7,
       "code": "VER",
-      "points": 55,
+      "points": 73,
       "team": "Red Bull"
     },
     {
       "pos": 8,
+      "code": "HAD",
+      "points": 42,
+      "team": "Red Bull"
+    },
+    {
+      "pos": 9,
       "code": "GAS",
       "points": 41,
       "team": "Alpine F1 Team"
     },
     {
-      "pos": 9,
-      "code": "HAD",
-      "points": 34,
-      "team": "Red Bull"
-    },
-    {
       "pos": 10,
       "code": "LAW",
-      "points": 28,
+      "points": 30,
       "team": "RB F1 Team"
     },
     {
@@ -76,7 +76,7 @@
     {
       "pos": 13,
       "code": "LIN",
-      "points": 13,
+      "points": 14,
       "team": "RB F1 Team"
     },
     {
@@ -134,5 +134,5 @@
       "team": "Aston Martin"
     }
   ],
-  "baked": "2026-06-28T11:08:18.864Z"
+  "baked": "2026-06-28T16:11:43.509Z"
 }
