@@ -108,8 +108,8 @@ async function main() {
     race = pickLatestRace(sessions);
   }
   if (!race) {
-    console.error("No completed race found. Nothing written.");
-    process.exit(1);
+    console.warn("No completed race found. Nothing written.");
+    process.exit(0); // graceful — let the rest of the cron continue
   }
 
   const sk = race.session_key;
@@ -121,8 +121,8 @@ async function main() {
   ]);
 
   if (!Array.isArray(results) || results.length === 0) {
-    console.error(`session_result for ${sk} is empty — race may not be classified yet. Nothing written.`);
-    process.exit(1);
+    console.warn(`session_result for ${sk} is empty — race may not be classified yet. Nothing written.`);
+    process.exit(0); // graceful — let the rest of the cron continue
   }
 
   const out = {

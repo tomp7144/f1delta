@@ -25,6 +25,7 @@ jobs:
           node-version: "20"
 
       - name: Bake latest race from OpenF1
+        continue-on-error: true
         run: node bake-latest.mjs
 
       - name: Bake standings + grid map
