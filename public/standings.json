@@ -10,26 +10,26 @@
     {
       "pos": 2,
       "code": "RUS",
-      "points": 136,
+      "points": 154,
       "team": "Mercedes"
     },
     {
       "pos": 3,
       "code": "HAM",
-      "points": 132,
+      "points": 147,
       "team": "Ferrari"
     },
     {
       "pos": 4,
-      "code": "NOR",
-      "points": 85,
-      "team": "McLaren"
+      "code": "LEC",
+      "points": 108,
+      "team": "Ferrari"
     },
     {
       "pos": 5,
-      "code": "LEC",
-      "points": 83,
-      "team": "Ferrari"
+      "code": "NOR",
+      "points": 97,
+      "team": "McLaren"
     },
     {
       "pos": 6,
@@ -46,62 +46,62 @@
     {
       "pos": 8,
       "code": "HAD",
-      "points": 42,
+      "points": 52,
       "team": "Red Bull"
     },
     {
       "pos": 9,
       "code": "GAS",
-      "points": 41,
+      "points": 42,
       "team": "Alpine F1 Team"
     },
     {
       "pos": 10,
       "code": "LAW",
-      "points": 31,
+      "points": 39,
       "team": "RB F1 Team"
     },
     {
       "pos": 11,
+      "code": "LIN",
+      "points": 20,
+      "team": "RB F1 Team"
+    },
+    {
+      "pos": 12,
       "code": "BEA",
       "points": 18,
       "team": "Haas F1 Team"
     },
     {
-      "pos": 12,
+      "pos": 13,
       "code": "COL",
-      "points": 16,
+      "points": 18,
       "team": "Alpine F1 Team"
     },
     {
-      "pos": 13,
-      "code": "LIN",
-      "points": 14,
-      "team": "RB F1 Team"
+      "pos": 14,
+      "code": "BOR",
+      "points": 6,
+      "team": "Audi"
     },
     {
-      "pos": 14,
+      "pos": 15,
       "code": "SAI",
       "points": 6,
       "team": "Williams"
     },
     {
-      "pos": 15,
+      "pos": 16,
       "code": "ALB",
       "points": 5,
       "team": "Williams"
     },
     {
-      "pos": 16,
+      "pos": 17,
       "code": "OCO",
       "points": 3,
       "team": "Haas F1 Team"
-    },
-    {
-      "pos": 17,
-      "code": "BOR",
-      "points": 2,
-      "team": "Audi"
     },
     {
       "pos": 18,
@@ -134,5 +134,5 @@
       "team": "Aston Martin"
     }
   ],
-  "baked": "2026-07-05T16:09:43.301Z"
+  "baked": "2026-07-05T19:18:47.356Z"
 }
