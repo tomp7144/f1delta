@@ -1,5 +1,5 @@
 {
-  "syncedAt": "2026-07-05T22:02:15.930Z",
+  "syncedAt": "2026-07-06T03:37:34.861Z",
   "season": 2026,
   "assets": [
     {
@@ -10,7 +10,7 @@
       "price": 25.3,
       "points": 363,
       "pageId": "kimi-antonelli",
-      "priceDelta": -0.1
+      "priceDelta": 0
     },
     {
       "id": "110",
@@ -20,7 +20,7 @@
       "price": 24.8,
       "points": 297,
       "pageId": "lewis-hamilton",
-      "priceDelta": 0.3
+      "priceDelta": 0
     },
     {
       "id": "124",
@@ -30,7 +30,7 @@
       "price": 28.1,
       "points": 264,
       "pageId": "george-russell",
-      "priceDelta": 0.3
+      "priceDelta": 0
     },
     {
       "id": "115",
@@ -40,7 +40,7 @@
       "price": 23.3,
       "points": 215,
       "pageId": "charles-leclerc",
-      "priceDelta": 0.1
+      "priceDelta": 0
     },
     {
       "id": "131",
@@ -50,7 +50,7 @@
       "price": 27.8,
       "points": 206,
       "pageId": "max-verstappen",
-      "priceDelta": -0.1
+      "priceDelta": 0
     },
     {
       "id": "1982",
@@ -60,7 +60,7 @@
       "price": 24.8,
       "points": 152,
       "pageId": "oscar-piastri",
-      "priceDelta": -0.1
+      "priceDelta": 0
     },
     {
       "id": "117",
@@ -70,7 +70,7 @@
       "price": 25.7,
       "points": 150,
       "pageId": "lando-norris",
-      "priceDelta": 0.1
+      "priceDelta": 0
     },
     {
       "id": "18",
@@ -80,7 +80,7 @@
       "price": 13,
       "points": 121,
       "pageId": "pierre-gasly",
-      "priceDelta": 0.2
+      "priceDelta": 0
     },
     {
       "id": "11059",
@@ -90,7 +90,7 @@
       "price": 10.4,
       "points": 112,
       "pageId": "franco-colapinto",
-      "priceDelta": 0.6
+      "priceDelta": 0
     },
     {
       "id": "114",
@@ -100,7 +100,7 @@
       "price": 9.5,
       "points": 112,
       "pageId": "liam-lawson",
-      "priceDelta": 0.6
+      "priceDelta": 0
     },
     {
       "id": "118",
@@ -110,7 +110,7 @@
       "price": 10.3,
       "points": 110,
       "pageId": "esteban-ocon",
-      "priceDelta": 0.2
+      "priceDelta": 0
     },
     {
       "id": "11032",
@@ -120,7 +120,7 @@
       "price": 13.3,
       "points": 85,
       "pageId": "isack-hadjar",
-      "priceDelta": 0.6
+      "priceDelta": 0
     },
     {
       "id": "125",
@@ -130,7 +130,7 @@
       "price": 10.8,
       "points": 70,
       "pageId": "carlos-sainz-jr",
-      "priceDelta": -0.6
+      "priceDelta": 0
     },
     {
       "id": "11031",
@@ -140,7 +140,7 @@
       "price": 7.2,
       "points": 58,
       "pageId": "oliver-bearman",
-      "priceDelta": 0.2
+      "priceDelta": 0
     },
     {
       "id": "11149",
@@ -150,7 +150,7 @@
       "price": 6.8,
       "points": 55,
       "pageId": "arvid-lindblad",
-      "priceDelta": 0.6
+      "priceDelta": 0
     },
     {
       "id": "11051",
@@ -160,7 +160,7 @@
       "price": 6.6,
       "points": 47,
       "pageId": "gabriel-bortoleto",
-      "priceDelta": 0.6
+      "priceDelta": 0
     },
     {
       "id": "121",
@@ -170,7 +170,7 @@
       "price": 5,
       "points": 42,
       "pageId": "sergio-perez",
-      "priceDelta": -0.6
+      "priceDelta": 0
     },
     {
       "id": "11",
@@ -180,7 +180,7 @@
       "price": 7,
       "points": -1,
       "pageId": "alexander-albon",
-      "priceDelta": -0.6
+      "priceDelta": 0
     },
     {
       "id": "12",
@@ -190,7 +190,7 @@
       "price": 5,
       "points": -10,
       "pageId": "fernando-alonso",
-      "priceDelta": -0.6
+      "priceDelta": 0
     },
     {
       "id": "111",
@@ -220,7 +220,7 @@
       "price": 3,
       "points": -76,
       "pageId": "lance-stroll",
-      "priceDelta": -0.6
+      "priceDelta": 0
     },
     {
       "id": "28",
@@ -230,7 +230,7 @@
       "price": 32,
       "points": 769,
       "pageId": "mercedes",
-      "priceDelta": 0.3
+      "priceDelta": 0
     },
     {
       "id": "25",
@@ -240,7 +240,7 @@
       "price": 26,
       "points": 624,
       "pageId": "ferrari",
-      "priceDelta": 0.3
+      "priceDelta": 0
     },
     {
       "id": "27",
@@ -250,7 +250,7 @@
       "price": 30.4,
       "points": 429,
       "pageId": "mclaren",
-      "priceDelta": 0.3
+      "priceDelta": 0
     },
     {
       "id": "29",
@@ -260,7 +260,7 @@
       "price": 30.3,
       "points": 364,
       "pageId": "red-bull",
-      "priceDelta": 0.3
+      "priceDelta": 0
     },
     {
       "id": "23",
@@ -270,7 +270,7 @@
       "price": 17.9,
       "points": 290,
       "pageId": "alpine",
-      "priceDelta": 0.6
+      "priceDelta": 0
     },
     {
       "id": "2636",
@@ -280,7 +280,7 @@
       "price": 11.7,
       "points": 282,
       "pageId": "racing-bulls",
-      "priceDelta": 0.6
+      "priceDelta": 0
     },
     {
       "id": "26",
@@ -290,7 +290,7 @@
       "price": 10.8,
       "points": 191,
       "pageId": "haas",
-      "priceDelta": 0.6
+      "priceDelta": 0
     },
     {
       "id": "210",
@@ -300,7 +300,7 @@
       "price": 13.8,
       "points": 103,
       "pageId": "williams",
-      "priceDelta": -0.6
+      "priceDelta": 0
     },
     {
       "id": "2640",
@@ -310,7 +310,7 @@
       "price": 5.6,
       "points": 58,
       "pageId": "audi",
-      "priceDelta": 0.6
+      "priceDelta": 0
     },
     {
       "id": "2641",
@@ -320,7 +320,7 @@
       "price": 4.2,
       "points": -4,
       "pageId": "cadillac",
-      "priceDelta": -0.6
+      "priceDelta": 0
     },
     {
       "id": "24",
@@ -330,7 +330,7 @@
       "price": 5.7,
       "points": -81,
       "pageId": "aston-martin",
-      "priceDelta": -0.6
+      "priceDelta": 0
     }
   ]
 }
