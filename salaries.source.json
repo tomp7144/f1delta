@@ -1,0 +1,200 @@
+[
+  {
+    "slug": "max_verstappen",
+    "name": "Max Verstappen",
+    "salaryTeam": "Red Bull",
+    "estSalary": "$70M – $95M",
+    "contractThrough": 2028,
+    "baseBonus": "$70M base / Up to $25M bonus",
+    "source": "PaddockIntel / RacingNews365 (Feb–Apr 2026). Exit clause active for Aug 2026."
+  },
+  {
+    "slug": "lewis_hamilton",
+    "name": "Lewis Hamilton",
+    "salaryTeam": "Ferrari",
+    "estSalary": "$70.5M",
+    "contractThrough": 2027,
+    "baseBonus": "$60M base / ~$10.5M bonus",
+    "source": "Forbes / PaddockIntel (Apr 2026)."
+  },
+  {
+    "slug": "lando_norris",
+    "name": "Lando Norris",
+    "salaryTeam": "McLaren",
+    "estSalary": "$57.5M",
+    "contractThrough": 2027,
+    "baseBonus": "$18M–$30M base / ~$27.5M–$39.5M bonus",
+    "source": "PaddockIntel / The Race (Apr–Jun 2026). \"Long-term\" wording implies 2027 end."
+  },
+  {
+    "slug": "oscar_piastri",
+    "name": "Oscar Piastri",
+    "salaryTeam": "McLaren",
+    "estSalary": "$37.5M",
+    "contractThrough": 2028,
+    "baseBonus": "$13M base / ~$24.5M bonus",
+    "source": "PaddockIntel / GPFans (Apr–Jun 2026)."
+  },
+  {
+    "slug": "george_russell",
+    "name": "George Russell",
+    "salaryTeam": "Mercedes",
+    "estSalary": "$34M – $45M",
+    "contractThrough": "2026 or 2027",
+    "baseBonus": "$34M base / Up to $11M bonus",
+    "source": "PaddockIntel / The Race (Apr–Jun 2026). Exact end year is disputed."
+  },
+  {
+    "slug": "charles_leclerc",
+    "name": "Charles Leclerc",
+    "salaryTeam": "Ferrari",
+    "estSalary": "$34M",
+    "contractThrough": "2030+",
+    "baseBonus": "$34M base / UNKNOWN",
+    "source": "PaddockIntel / The Race (Apr–Jun 2026)."
+  },
+  {
+    "slug": "fernando_alonso",
+    "name": "Fernando Alonso",
+    "salaryTeam": "Aston Martin",
+    "estSalary": "$20M – $26.5M",
+    "contractThrough": 2026,
+    "baseBonus": "$20M base / ~$6.5M bonus",
+    "source": "PaddockIntel (Apr 2026)."
+  },
+  {
+    "slug": "carlos_sainz",
+    "name": "Carlos Sainz",
+    "salaryTeam": "Williams",
+    "estSalary": "$13M",
+    "contractThrough": 2026,
+    "baseBonus": "$13M base / UNKNOWN",
+    "source": "PaddockIntel / The Race (Apr–Jun 2026)."
+  },
+  {
+    "slug": "alex_albon",
+    "name": "Alex Albon",
+    "salaryTeam": "Williams",
+    "estSalary": "$12M",
+    "contractThrough": "2026 or 2027",
+    "baseBonus": "$12M base / UNKNOWN",
+    "source": "PaddockIntel / The Race (Apr–Jun 2026). Dependent on options."
+  },
+  {
+    "slug": "pierre_gasly",
+    "name": "Pierre Gasly",
+    "salaryTeam": "Alpine",
+    "estSalary": "$12M",
+    "contractThrough": 2028,
+    "baseBonus": "$12M base / UNKNOWN",
+    "source": "PaddockIntel / GPFans (Apr–Jun 2026)."
+  },
+  {
+    "slug": "lance_stroll",
+    "name": "Lance Stroll",
+    "salaryTeam": "Aston Martin",
+    "estSalary": "$12M – $13.5M",
+    "contractThrough": 2026,
+    "baseBonus": "$12M base / ~$1.5M bonus",
+    "source": "PaddockIntel (Apr 2026)."
+  },
+  {
+    "slug": "sergio_perez",
+    "name": "Sergio Pérez",
+    "salaryTeam": "Cadillac",
+    "estSalary": "$8M",
+    "contractThrough": "2026 or 2027",
+    "baseBonus": "$8M base / UNKNOWN",
+    "source": "PaddockIntel / GPFans (Apr–Jun 2026)."
+  },
+  {
+    "slug": "nico_hulkenberg",
+    "name": "Nico Hülkenberg",
+    "salaryTeam": "Audi",
+    "estSalary": "$7M",
+    "contractThrough": "Multi-year (2026+)",
+    "baseBonus": "$7M base / UNKNOWN",
+    "source": "PaddockIntel / The Race (Apr–Jun 2026)."
+  },
+  {
+    "slug": "esteban_ocon",
+    "name": "Esteban Ocon",
+    "salaryTeam": "Haas",
+    "estSalary": "$7M",
+    "contractThrough": 2026,
+    "baseBonus": "$7M base / UNKNOWN",
+    "source": "PaddockIntel / The Race (Apr–Jun 2026)."
+  },
+  {
+    "slug": "valtteri_bottas",
+    "name": "Valtteri Bottas",
+    "salaryTeam": "Cadillac",
+    "estSalary": "$5M",
+    "contractThrough": "2026 or 2027",
+    "baseBonus": "$5M base / UNKNOWN",
+    "source": "PaddockIntel / GPFans (Apr–Jun 2026)."
+  },
+  {
+    "slug": "isack_hadjar",
+    "name": "Isack Hadjar",
+    "salaryTeam": "Red Bull",
+    "estSalary": "$5M",
+    "contractThrough": 2026,
+    "baseBonus": "$5M base / UNKNOWN",
+    "source": "PaddockIntel / The Race (Apr–Jun 2026). Note: Some financial reports mistakenly list him under Racing Bulls, but his contract is with RBR."
+  },
+  {
+    "slug": "kimi_antonelli",
+    "name": "Kimi Antonelli",
+    "salaryTeam": "Mercedes",
+    "estSalary": "$12.5M",
+    "contractThrough": 2026,
+    "baseBonus": "$2M base / ~$10.5M bonus",
+    "source": "PaddockIntel (Mar–Apr 2026)."
+  },
+  {
+    "slug": "gabriel_bortoleto",
+    "name": "Gabriel Bortoleto",
+    "salaryTeam": "Audi",
+    "estSalary": "$2M",
+    "contractThrough": "Multi-year (2026+)",
+    "baseBonus": "$2M base / UNKNOWN",
+    "source": "PaddockIntel (Apr 2026)."
+  },
+  {
+    "slug": "oliver_bearman",
+    "name": "Oliver Bearman",
+    "salaryTeam": "Haas",
+    "estSalary": "$1M",
+    "contractThrough": 2026,
+    "baseBonus": "$1M base / UNKNOWN",
+    "source": "PaddockIntel (Apr 2026)."
+  },
+  {
+    "slug": "liam_lawson",
+    "name": "Liam Lawson",
+    "salaryTeam": "Racing Bulls",
+    "estSalary": "$1M",
+    "contractThrough": 2026,
+    "baseBonus": "$1M base / UNKNOWN",
+    "source": "PaddockIntel (Apr 2026)."
+  },
+  {
+    "slug": "franco_colapinto",
+    "name": "Franco Colapinto",
+    "salaryTeam": "Alpine",
+    "estSalary": "$0.5M – $1M",
+    "contractThrough": 2026,
+    "baseBonus": "UNKNOWN",
+    "source": "PaddockIntel (Apr 2026)."
+  },
+  {
+    "slug": "arvid_lindblad",
+    "name": "Arvid Lindblad",
+    "salaryTeam": "Racing Bulls",
+    "estSalary": "$0.5M – $1M",
+    "contractThrough": 2026,
+    "baseBonus": "UNKNOWN",
+    "source": "PaddockIntel (Apr 2026)."
+  }
+]

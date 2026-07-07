@@ -519,6 +519,17 @@ function Styles() {
       .dp .rtf1-tl-row--f1 .rtf1-tl-sr{font-family:var(--disp);font-size:14px;font-weight:700;letter-spacing:.06em;text-transform:uppercase;color:var(--red)}
       .dp .rtf1-tl-mt{font-family:var(--mono);font-size:11px;color:var(--faint);margin-top:2px}
       .dp .rtf1-res-w{color:var(--champ-edge);font-weight:600}
+
+      .dp .sal-card{border-color:#d4b87a}
+      .dp .sal-fence{font-family:var(--mono);font-size:9px;letter-spacing:.1em;text-transform:uppercase;color:#8a6a10;background:#fbf3d0;padding:5px 12px;border-bottom:1px solid #d4b87a}
+      .dp .sal-rows{padding:8px 0 2px}
+      .dp .sal-row{display:flex;justify-content:space-between;align-items:baseline;padding:7px 12px;border-bottom:1px solid var(--line)}
+      .dp .sal-row:last-child{border-bottom:none}
+      .dp .sal-label{font-family:var(--mono);font-size:10px;color:var(--faint);letter-spacing:.04em;text-transform:uppercase;flex-shrink:0;padding-right:12px}
+      .dp .sal-val{font-family:var(--mono);font-size:13px;color:var(--ink);font-weight:600;text-align:right}
+      .dp .sal-primary{font-size:15px}
+      .dp .sal-unknown{color:var(--faint);font-weight:400;font-style:italic;font-size:12px}
+      .dp .sal-source{font-family:var(--mono);font-size:10px;color:var(--faint);padding:6px 12px 10px;margin:0;line-height:1.5}
     `}</style>
   );
 }
@@ -829,6 +840,34 @@ function FantasySection({ slug }) {
   );
 }
 
+function SalarySection({ slug }) {
+  const d = (window.F1_SALARIES || {})[slug];
+  if (!d) return null;
+  return (
+    <section>
+      <div className="sec-h"><h2>2026 Salary</h2></div>
+      <div className="card sal-card">
+        <div className="sal-fence">estimated — not officially disclosed</div>
+        <div className="sal-rows">
+          <div className="sal-row">
+            <span className="sal-label">Est. annual</span>
+            <span className="sal-val sal-primary">{d.salary}</span>
+          </div>
+          <div className="sal-row">
+            <span className="sal-label">Contract through</span>
+            <span className="sal-val">{d.through}</span>
+          </div>
+          <div className="sal-row">
+            <span className="sal-label">Base / bonus</span>
+            <span className={d.split === "UNKNOWN" ? "sal-val sal-unknown" : "sal-val"}>{d.split === "UNKNOWN" ? "not reported" : d.split}</span>
+          </div>
+        </div>
+        <p className="sal-source">Source: {d.source}</p>
+      </div>
+    </section>
+  );
+}
+
 function RoadToF1({ slug }) {
   const rows = RTF1[slug];
   const hasTl = !!RTF1_TL[slug];
@@ -895,6 +934,7 @@ function DriverPage() {
             {d.pro ? <H2HPro d={d} /> : <H2HGate d={d} />}
             <RoadToF1 slug={(new URLSearchParams(location.search).get("d") || "").toLowerCase()} />
             <FantasySection slug={(new URLSearchParams(location.search).get("d") || "").toLowerCase()} />
+            <SalarySection slug={(new URLSearchParams(location.search).get("d") || "").toLowerCase()} />
             <div className="foot">F1 <b>Δ</b> DELTA · data via F1DB · unofficial</div>
           </div>
         </>
