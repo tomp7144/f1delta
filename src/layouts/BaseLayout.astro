@@ -33,6 +33,9 @@ const current = navKey(pathname);
     {canonical && <link rel="canonical" href={canonical} />}
     <slot name="head" />
     <script is:inline defer src="https://static.cloudflareinsights.com/beacon.min.js" data-cf-beacon='{"token":"231dcb0acef2461c8d76032d94a31207"}'></script>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Barlow+Condensed:wght@700&family=JetBrains+Mono:wght@400;700&display=swap">
     <!-- Google Consent Mode v2 — defaults set BEFORE gtag loads -->
     <script is:inline>
       window.dataLayer = window.dataLayer || [];
@@ -55,8 +58,7 @@ const current = navKey(pathname);
   <body style="margin:0;background:#f4f4f1">
     <nav class="site-nav">
       <div class="nav-inner">
-        <a class="wordmark" href="/">F1<svg class="wm-tri" aria-hidden="true" width="11" height="10" viewBox="0 0 100 86"><path d="M50 4 L97 82 L3 82 Z" fill="currentColor"/></svg>delta</a>
-        <button class="hamburger" id="nav-hamburger" aria-label="Toggle menu" aria-expanded="false" aria-controls="nav-links">&#9776;</button>
+        <a class="wordmark" href="/">F1<svg class="wm-tri" aria-hidden="true" width="11" height="10" viewBox="0 0 100 86"><path d="M50 4 L97 82 L3 82 Z" fill="currentColor"/></svg>DELTA</a>
         <div class="nav-links" id="nav-links">
           <a href="/drivers" aria-current={current === "drivers" ? "page" : undefined}>Drivers</a>
           <a href="/teams" aria-current={current === "teams" ? "page" : undefined}>Teams</a>
@@ -74,6 +76,8 @@ const current = navKey(pathname);
           <a href="/records" aria-current={current === "records" ? "page" : undefined}>Records</a>
           <a href="/fantasy" aria-current={current === "fantasy" ? "page" : undefined}>Fantasy</a>
         </div>
+        <a class="donate-btn" href="https://ko-fi.com/f1delta" target="_blank" rel="noopener noreferrer">♥ Donate</a>
+        <button class="hamburger" id="nav-hamburger" aria-label="Toggle menu" aria-expanded="false" aria-controls="nav-links">&#9776;</button>
       </div>
     </nav>
     <slot />
@@ -104,8 +108,9 @@ const current = navKey(pathname);
     display: flex; align-items: center; position: relative;
   }
   .wordmark {
-    display: flex; align-items: center; gap: 5px;
-    font-size: 15px; font-weight: 700; color: #16161a; text-decoration: none;
+    display: flex; align-items: center; gap: 6px;
+    font-family: "Barlow Condensed", system-ui, sans-serif;
+    font-size: 18px; font-weight: 700; color: #16161a; text-decoration: none;
     padding: 12px 18px 12px 0; flex-shrink: 0; letter-spacing: .02em;
   }
   .wm-tri { color: #e10600; flex-shrink: 0; }
@@ -114,22 +119,25 @@ const current = navKey(pathname);
     display: flex; align-items: center; gap: 0; flex: 1;
   }
   .nav-links > a {
-    font-size: 14px; color: #6b6b70; text-decoration: none;
+    font-family: "JetBrains Mono", ui-monospace, monospace;
+    font-size: 11px; letter-spacing: .08em; text-transform: uppercase;
+    color: #6b6b70; text-decoration: none;
     padding: 12px 10px; white-space: nowrap;
   }
   .nav-links > a:hover { color: #16161a; }
-  .nav-links > a[aria-current="page"] { color: #16161a; font-weight: 600; }
+  .nav-links > a[aria-current="page"] { color: #16161a; font-weight: 700; }
 
   /* People dropdown */
   .nav-group { position: relative; }
   .nav-group-btn {
-    font-family: inherit; font-size: 14px; color: #6b6b70;
-    background: none; border: none; cursor: pointer;
+    font-family: "JetBrains Mono", ui-monospace, monospace;
+    font-size: 11px; letter-spacing: .08em; text-transform: uppercase;
+    color: #6b6b70; background: none; border: none; cursor: pointer;
     padding: 12px 10px; display: flex; align-items: center; gap: 4px;
     white-space: nowrap;
   }
   .nav-group-btn:hover { color: #16161a; }
-  .nav-group.is-active .nav-group-btn { color: #16161a; font-weight: 600; }
+  .nav-group.is-active .nav-group-btn { color: #16161a; font-weight: 700; }
   .caret { font-size: 8px; }
 
   .nav-group-panel {
@@ -149,9 +157,21 @@ const current = navKey(pathname);
   .nav-group:focus-within .nav-group-panel,
   .nav-group.open .nav-group-panel { display: block; }
 
+  /* Donate button */
+  .donate-btn {
+    display: inline-flex; align-items: center;
+    font-family: "JetBrains Mono", ui-monospace, monospace;
+    font-size: 11px; font-weight: 700; letter-spacing: .06em; text-transform: uppercase;
+    background: #e10600; color: #fff;
+    border-radius: 4px; padding: 6px 12px;
+    text-decoration: none; white-space: nowrap;
+    flex-shrink: 0; margin-left: 12px;
+  }
+  .donate-btn:hover { background: #c00500; color: #fff; }
+
   /* Hamburger — hidden on desktop */
   .hamburger {
-    display: none; margin-left: auto; background: none; border: none;
+    display: none; background: none; border: none;
     font-size: 20px; color: #6b6b70; cursor: pointer; padding: 10px 0 10px 12px;
     line-height: 1;
   }
@@ -182,6 +202,7 @@ const current = navKey(pathname);
 
   @media (max-width: 620px) {
     .hamburger { display: block; }
+    .donate-btn { margin-left: auto; }
 
     .nav-links {
       display: none; flex-direction: column; align-items: stretch; gap: 0;
