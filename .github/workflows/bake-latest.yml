@@ -55,6 +55,6 @@ jobs:
           if git diff --staged --quiet; then
             echo "No change — nothing to commit."
           else
-            git commit -m "Auto-bake latest race [skip ci]"
+            git commit -m "Auto-bake latest race"
             git push
           fi
