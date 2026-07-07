@@ -6928,5 +6928,23 @@
     "topDriverName": "Kimi Antonelli",
     "topScore": 50,
     "partial": false
+  },
+  "1156": {
+    "topDriverId": "lewis-hamilton",
+    "topDriverName": "Lewis Hamilton",
+    "topScore": 51,
+    "partial": false
+  },
+  "1157": {
+    "topDriverId": "max-verstappen",
+    "topDriverName": "Max Verstappen",
+    "topScore": 40,
+    "partial": false
+  },
+  "1158": {
+    "topDriverId": "charles-leclerc",
+    "topDriverName": "Charles Leclerc",
+    "topScore": 46,
+    "partial": false
   }
 }

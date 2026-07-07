@@ -2,8 +2,8 @@
   "driverId": "franco-colapinto",
   "name": "Franco Colapinto",
   "career": {
-    "score": 40,
-    "races": 33,
+    "score": 74,
+    "races": 36,
     "partial": 0
   },
   "seasons": [
@@ -21,8 +21,8 @@
     },
     {
       "year": 2026,
-      "score": 42,
-      "races": 6,
+      "score": 76,
+      "races": 9,
       "partial": 0
     }
   ]

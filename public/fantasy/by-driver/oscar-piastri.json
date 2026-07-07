@@ -2,8 +2,8 @@
   "driverId": "oscar-piastri",
   "name": "Oscar Piastri",
   "career": {
-    "score": 1195,
-    "races": 76,
+    "score": 1232,
+    "races": 79,
     "partial": 0
   },
   "seasons": [
@@ -27,8 +27,8 @@
     },
     {
       "year": 2026,
-      "score": 88,
-      "races": 6,
+      "score": 125,
+      "races": 9,
       "partial": 0
     }
   ]

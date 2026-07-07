@@ -2,8 +2,8 @@
   "driverId": "oliver-bearman",
   "name": "Oliver Bearman",
   "career": {
-    "score": 199,
-    "races": 33,
+    "score": 201,
+    "races": 36,
     "partial": 1
   },
   "seasons": [
@@ -21,8 +21,8 @@
     },
     {
       "year": 2026,
-      "score": 20,
-      "races": 6,
+      "score": 22,
+      "races": 9,
       "partial": 0
     }
   ]

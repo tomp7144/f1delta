@@ -24,6 +24,35 @@ jobs:
         with:
           node-version: "20"
 
+      - name: Update F1DB if new release available
+        id: f1db
+        run: |
+          LATEST=$(curl -s https://api.github.com/repos/f1db/f1db/releases/latest | jq -r .tag_name)
+          CURRENT=$(cat data/f1db/VERSION 2>/dev/null || echo "none")
+          echo "F1DB latest=$LATEST current=$CURRENT"
+          if [ "$LATEST" = "$CURRENT" ]; then
+            echo "F1DB up to date — skipping."
+            echo "updated=false" >> $GITHUB_OUTPUT
+          else
+            echo "Updating F1DB: $CURRENT → $LATEST"
+            curl -sL "https://github.com/f1db/f1db/releases/download/$LATEST/f1db-json-splitted.zip" -o /tmp/f1db.zip
+            unzip -o /tmp/f1db.zip -d data/f1db/
+            echo "$LATEST" > data/f1db/VERSION
+            echo "updated=true" >> $GITHUB_OUTPUT
+          fi
+
+      - name: Re-derive data from updated F1DB
+        if: steps.f1db.outputs.updated == 'true'
+        run: |
+          node derive-f1.mjs
+          node derive-records.mjs
+          node derive-teams.mjs
+          node derive-circuits.mjs
+          node derive-gps.mjs
+          node derive-people.mjs
+          node derive-standings.mjs
+          node bake-fantasy-history.mjs
+
       - name: Bake latest race from OpenF1
         continue-on-error: true
         run: node bake-latest.mjs
@@ -51,6 +80,8 @@ jobs:
           git add data/fantasy/players.json data/fantasy/price-history.json 2>/dev/null || true
           git add public/fantasy/ 2>/dev/null || true
           git add data/fantasy/prices.source.json 2>/dev/null || true
+          # F1DB + derived data (only when F1DB updated — otherwise unchanged, so git add is a no-op)
+          git add data/f1db/ data/drivers/ data/records/ data/teams/ data/circuits/ data/grands-prix/ data/people/ data/standings/ 2>/dev/null || true
 
           if git diff --staged --quiet; then
             echo "No change — nothing to commit."
