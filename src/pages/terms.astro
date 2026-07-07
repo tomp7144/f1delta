@@ -1,0 +1,64 @@
+---
+export const prerender = true;
+import BaseLayout from "../layouts/BaseLayout.astro";
+---
+
+<BaseLayout
+  title="Terms of Service — F1 Delta"
+  description="Terms of Service for F1 Delta (f1delta.com)."
+  canonical="https://f1delta.com/terms"
+>
+  <div class="prose">
+    <h1>Terms of Service</h1>
+    <p class="meta">Last updated: 7 July 2026</p>
+
+    <p>Welcome to F1 Delta (f1delta.com). These Terms of Service ("Terms") govern your use of the site. By accessing or using F1 Delta, you agree to these Terms. If you don't agree, please don't use the site.</p>
+    <p>F1 Delta is operated by an individual based in Michigan, United States ("we," "us," or "the operator").</p>
+
+    <h2>The service</h2>
+    <p>F1 Delta is a free Formula 1 reference and information website. We provide historical data, statistics, records, and related tools for informational and entertainment purposes.</p>
+
+    <h2>Accuracy and "as is" nature</h2>
+    <p>We work hard to keep F1 Delta accurate, drawing on established data sources. Even so, the site is provided <strong>"as is"</strong> and <strong>"as available,"</strong> without warranties of any kind. We don't guarantee that information is complete, current, or error-free. Statistics, records, and derived metrics may contain mistakes or omissions and should not be relied upon as official. For official information, consult Formula 1's official channels.</p>
+
+    <h2>Not affiliated with Formula 1</h2>
+    <p>F1 Delta is an independent, unofficial fan project. It is <strong>not</strong> affiliated with, endorsed by, sponsored by, or connected to Formula 1, the FIA, Formula One World Championship Limited, Formula One Licensing BV, or any related entities. "F1," "FORMULA 1," "GRAND PRIX," and related marks are trademarks of their respective owners, used here for identification and descriptive purposes only.</p>
+
+    <h2>Intellectual property</h2>
+    <p>Historical Formula 1 data is derived in part from <a href="https://github.com/f1db/f1db">F1DB</a>, licensed under <a href="https://creativecommons.org/licenses/by/4.0/">Creative Commons Attribution 4.0 (CC BY 4.0)</a>. Original content, design, and compilations on F1 Delta are the property of the operator. Trademarks, logos, and imagery belonging to third parties remain the property of their respective owners.</p>
+
+    <h2>Advertising and donations</h2>
+    <p><strong>Ads.</strong> F1 Delta is supported by advertising. By using the free site, you understand that ads may be displayed.</p>
+    <p><strong>Ad removal.</strong> You may make a one-time payment to remove ads for your use of the site. Ad-removal purchases are a personal, non-transferable benefit. Because this is a digital benefit delivered immediately, <strong>payments are non-refundable</strong> except where required by law.</p>
+    <p><strong>Donations.</strong> Voluntary donations are exactly that — voluntary and non-refundable. They don't create any obligation or entitlement; they're gratefully appreciated but purchase nothing.</p>
+
+    <h2>Acceptable use</h2>
+    <p>You agree not to misuse the site — including by attempting to disrupt it, scrape it at a scale that burdens the service, circumvent security, or use it for unlawful purposes.</p>
+
+    <h2>Limitation of liability</h2>
+    <p>To the fullest extent permitted by law, the operator will not be liable for any indirect, incidental, or consequential damages arising from your use of, or inability to use, F1 Delta. Your sole remedy if you're dissatisfied with the site is to stop using it.</p>
+
+    <h2>Changes to these Terms</h2>
+    <p>We may update these Terms from time to time. Changes are effective when posted, indicated by the "Last updated" date above. Continued use after changes means you accept the revised Terms.</p>
+
+    <h2>Governing law</h2>
+    <p>These Terms are governed by the laws of the State of Michigan, United States, without regard to its conflict-of-laws rules.</p>
+
+    <h2>Contact</h2>
+    <p>Questions about these Terms: <a href="mailto:f1deltasupport@gmail.com">f1deltasupport@gmail.com</a>.</p>
+  </div>
+</BaseLayout>
+
+<style>
+  .prose {
+    max-width: 760px; margin: 0 auto; padding: 24px 20px 56px;
+    font-family: system-ui, -apple-system, "Segoe UI", Roboto, sans-serif;
+    color: #16161a; line-height: 1.6;
+  }
+  .prose h1 { font-size: 28px; font-weight: 700; margin: 0 0 6px; }
+  .prose .meta { font-size: 13px; color: #6b6b70; margin: 0 0 20px; }
+  .prose h2 { font-size: 16px; font-weight: 700; margin: 28px 0 8px; }
+  .prose p { font-size: 15px; margin: 0 0 14px; }
+  .prose a { color: #e10600; }
+  .prose a:hover { text-decoration: none; }
+</style>

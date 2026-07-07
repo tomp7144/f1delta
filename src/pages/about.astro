@@ -1,0 +1,44 @@
+---
+export const prerender = true;
+import BaseLayout from "../layouts/BaseLayout.astro";
+---
+
+<BaseLayout
+  title="About — F1 Delta"
+  description="F1 Delta is an independent Formula 1 reference site covering every driver, team, circuit, and season from 1950 to today."
+  canonical="https://f1delta.com/about"
+>
+  <div class="prose">
+    <h1>About F1 Delta</h1>
+    <p>F1 Delta (f1delta.com) is a comprehensive, cross-linked reference for Formula 1 — historical results, driver and team records, circuits, grands prix, championship standings, fantasy tools, and more, all in one place.</p>
+    <p>The idea came from a simple frustration: every race weekend, F1 fans bounce between a dozen fragmented sources to answer questions that should live in one spot. F1 Delta aims to be that spot — the place you land first, the way Baseball Reference or HockeyDB are for their sports.</p>
+
+    <h2>Who's behind it</h2>
+    <p>F1 Delta is a solo passion project, built and maintained by one person in Michigan, USA. It isn't a company or a media outlet — just someone who loves the sport and wanted the reference tool that didn't exist yet.</p>
+
+    <h2>Where the data comes from</h2>
+    <p>Accuracy matters here. F1 Delta's historical record is built on <a href="https://github.com/f1db/f1db">F1DB</a>, an open Formula 1 database licensed under CC BY 4.0, supplemented by <a href="https://openf1.org/">OpenF1</a> for session data and the official Formula 1 Fantasy feed for fantasy pricing. Historical facts, standings, and records reflect the real, era-accurate record — that credibility is the whole point.</p>
+
+    <h2>How it's funded</h2>
+    <p>F1 Delta is free. It's supported by unobtrusive advertising and voluntary donations. If you'd prefer an ad-free experience, a small one-time contribution removes ads for you — and if the site has been useful, <a href="https://ko-fi.com/f1delta">a donation of any size</a> helps keep it running and updated. It's one person covering hosting and upkeep, nothing more.</p>
+
+    <h2>Not affiliated with Formula 1</h2>
+    <p>F1 Delta is an independent, unofficial fan project. It is not affiliated with, endorsed by, or connected to Formula 1, the FIA, Formula One World Championship Limited, or any related entities. "F1," "FORMULA 1," "GRAND PRIX," and related marks are trademarks of their respective owners.</p>
+
+    <h2>Get in touch</h2>
+    <p>Questions, corrections, or feedback? Email <a href="mailto:f1deltasupport@gmail.com">f1deltasupport@gmail.com</a>. Spotting and fixing errors is genuinely welcome — it makes the site better for everyone.</p>
+  </div>
+</BaseLayout>
+
+<style>
+  .prose {
+    max-width: 760px; margin: 0 auto; padding: 24px 20px 56px;
+    font-family: system-ui, -apple-system, "Segoe UI", Roboto, sans-serif;
+    color: #16161a; line-height: 1.6;
+  }
+  .prose h1 { font-size: 28px; font-weight: 700; margin: 0 0 20px; }
+  .prose h2 { font-size: 16px; font-weight: 700; margin: 28px 0 8px; }
+  .prose p { font-size: 15px; margin: 0 0 14px; }
+  .prose a { color: #e10600; }
+  .prose a:hover { text-decoration: none; }
+</style>

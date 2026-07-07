@@ -33,6 +33,24 @@ const current = navKey(pathname);
     {canonical && <link rel="canonical" href={canonical} />}
     <slot name="head" />
     <script is:inline defer src="https://static.cloudflareinsights.com/beacon.min.js" data-cf-beacon='{"token":"231dcb0acef2461c8d76032d94a31207"}'></script>
+    <!-- Google Consent Mode v2 — defaults set BEFORE gtag loads -->
+    <script is:inline>
+      window.dataLayer = window.dataLayer || [];
+      function gtag(){dataLayer.push(arguments);}
+      gtag('consent', 'default', {
+        'ad_storage': 'denied',
+        'ad_user_data': 'denied',
+        'ad_personalization': 'denied',
+        'analytics_storage': 'denied',
+        'wait_for_update': 500
+      });
+    </script>
+    <!-- Google Analytics (GA4) -->
+    <script is:inline async src="https://www.googletagmanager.com/gtag/js?id=G-WJ7VNMC69K"></script>
+    <script is:inline>
+      gtag('js', new Date());
+      gtag('config', 'G-WJ7VNMC69K');
+    </script>
   </head>
   <body style="margin:0;background:#f4f4f1">
     <nav class="site-nav">
@@ -59,6 +77,19 @@ const current = navKey(pathname);
       </div>
     </nav>
     <slot />
+    <footer class="site-footer">
+      <div class="footer-inner">
+        <nav class="footer-links">
+          <a href="/about">About</a>
+          <a href="/contact">Contact</a>
+          <a href="/privacy-policy">Privacy Policy</a>
+          <a href="/terms">Terms</a>
+          <a href="https://ko-fi.com/f1delta" target="_blank" rel="noopener">Donate</a>
+        </nav>
+        <p class="footer-copy">&copy; {new Date().getFullYear()} F1 Delta</p>
+        <p class="footer-disclaimer">F1 Delta is an unofficial, independent fan project and is not affiliated with, endorsed by, or connected to Formula 1, the FIA, or related entities. F1 and FORMULA 1 are trademarks of their respective owners.</p>
+      </div>
+    </footer>
   </body>
 </html>
 
@@ -125,6 +156,29 @@ const current = navKey(pathname);
     line-height: 1;
   }
   .hamburger:hover { color: #16161a; }
+
+  /* Footer */
+  .site-footer {
+    border-top: 1px solid #e4e4df;
+    margin-top: 48px;
+    font-family: system-ui, -apple-system, "Segoe UI", Roboto, sans-serif;
+  }
+  .footer-inner {
+    max-width: 760px; margin: 0 auto; padding: 20px 20px 28px;
+  }
+  .footer-links {
+    display: flex; flex-wrap: wrap; gap: 4px 16px; margin-bottom: 12px;
+  }
+  .footer-links a {
+    font-size: 13px; color: #6b6b70; text-decoration: none;
+  }
+  .footer-links a:hover { color: #16161a; }
+  .footer-copy {
+    font-size: 12px; color: #9a9a9e; margin: 0 0 8px;
+  }
+  .footer-disclaimer {
+    font-size: 11px; color: #9a9a9e; margin: 0; line-height: 1.5;
+  }
 
   @media (max-width: 620px) {
     .hamburger { display: block; }
