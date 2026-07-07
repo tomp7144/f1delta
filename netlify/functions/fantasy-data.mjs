@@ -8,7 +8,7 @@
    ============================================================ */
 import { readFile } from "node:fs/promises";
 import path from "node:path";
-import { verifyToken, isAdmin, readSub, isActive } from "./lib/access.mjs";
+import { GATING_ENABLED, verifyToken, isAdmin, readSub, isActive } from "./lib/access.mjs";
 
 const PLAYERS_FILE = path.join(process.cwd(), "data", "fantasy", "players.json");
 
@@ -18,6 +18,7 @@ function bearer(req) {
 }
 
 async function hasAccess(req) {
+  if (!GATING_ENABLED) return true;
   const payload = verifyToken(bearer(req));
   if (!payload || !payload.email) return false;
   if (isAdmin(payload.email)) return true;
@@ -36,7 +37,7 @@ export default async (req) => {
   if (req.method !== "GET") return json(405, { error: "method_not_allowed" });
 
   const pro = await hasAccess(req);
-  if (!pro) return json(403, { error: "pro_required" });
+  if (GATING_ENABLED && !pro) return json(403, { error: "pro_required" });
 
   try {
     const raw = await readFile(PLAYERS_FILE, "utf8");

@@ -7,6 +7,12 @@
 import crypto from "node:crypto";
 import { getStore } from "@netlify/blobs";
 
+// GATING_ENABLED — single server-side kill-switch for all Pro gates.
+// false → everyone gets Pro-tier data (no subscriber check).
+// true  → normal gated behaviour (verifyToken → readSub → isActive).
+// To re-gate: set to true here AND update the matching const in src/pages/fantasy.astro.
+export const GATING_ENABLED = false;
+
 const b64url = (buf) =>
   Buffer.from(buf)
     .toString("base64")

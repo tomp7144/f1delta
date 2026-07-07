@@ -1,6 +1,9 @@
 ---
 export const prerender = true;
 import BaseLayout from "../layouts/BaseLayout.astro";
+// Keep in sync with netlify/functions/lib/access.mjs → GATING_ENABLED.
+// To re-gate: set both to true.
+const GATING_ENABLED = false;
 ---
 
 <BaseLayout
@@ -14,7 +17,7 @@ import BaseLayout from "../layouts/BaseLayout.astro";
 
   <script is:inline src="/f1-access.js"></script>
 
-  <script is:inline>
+  <script is:inline define:vars={{ GATING_ENABLED }}>
   (function () {
     var root = document.getElementById("fantasy-root");
     if (!root) return;
@@ -206,32 +209,39 @@ import BaseLayout from "../layouts/BaseLayout.astro";
     }
 
     // ── Main flow ────────────────────────────────────────────────────
-    var access = window.F1Access;
-    if (!access) { showGate(); return; }
+    function fetchAndRender() {
+      fetch("/api/fantasy-data", {
+        headers: { "Authorization": "Bearer " + getToken() }
+      })
+      .then(function (res) {
+        if (!res.ok) { showGate(); return null; }
+        return res.json();
+      })
+      .then(function (data) {
+        if (!data) return;
+        if (!data.assets || data.assets.length === 0) {
+          root.innerHTML = '<p class="f-empty">Fantasy data will appear here once the first sync runs.</p>';
+          return;
+        }
+        renderTable(data);
+      })
+      .catch(function () { showGate(); });
+    }
 
-    access.ready.then(function () {
-      access.check().then(function (result) {
-        if (!result || !result.active) { showGate(); return; }
-
-        // Pro confirmed — fetch data from gated endpoint
-        fetch("/api/fantasy-data", {
-          headers: { "Authorization": "Bearer " + getToken() }
-        })
-        .then(function (res) {
-          if (!res.ok) { showGate(); return null; }
-          return res.json();
-        })
-        .then(function (data) {
-          if (!data) return;
-          if (!data.assets || data.assets.length === 0) {
-            root.innerHTML = '<p class="f-empty">Fantasy data will appear here once the first sync runs.</p>';
-            return;
-          }
-          renderTable(data);
-        })
-        .catch(function () { showGate(); });
+    if (!GATING_ENABLED) {
+      // Gating off — fetch directly; server accepts all requests.
+      // Re-gate: set GATING_ENABLED = true in lib/access.mjs + this file's frontmatter.
+      fetchAndRender();
+    } else {
+      var access = window.F1Access;
+      if (!access) { showGate(); return; }
+      access.ready.then(function () {
+        access.check().then(function (result) {
+          if (!result || !result.active) { showGate(); return; }
+          fetchAndRender();
+        });
       });
-    });
+    }
   })();
   </script>
 </BaseLayout>

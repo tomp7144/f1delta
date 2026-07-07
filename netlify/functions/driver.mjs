@@ -14,7 +14,7 @@
    ============================================================ */
 import { readFile } from "node:fs/promises";
 import path from "node:path";
-import { verifyToken, isAdmin, readSub, isActive } from "./lib/access.mjs";
+import { GATING_ENABLED, verifyToken, isAdmin, readSub, isActive } from "./lib/access.mjs";
 
 const DRIVERS_DIR   = path.join(process.cwd(), "data", "drivers");
 const PEOPLE_BY_DRIVER = path.join(process.cwd(), "data", "people", "by-driver.json");
@@ -43,6 +43,7 @@ function bearer(req) {
 }
 
 async function hasAccess(req) {
+  if (!GATING_ENABLED) return true;
   const payload = verifyToken(bearer(req));
   if (!payload || !payload.email) return false;
   if (isAdmin(payload.email)) return true;
