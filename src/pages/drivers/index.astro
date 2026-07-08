@@ -7,6 +7,7 @@ import BaseLayout from "../../layouts/BaseLayout.astro";
 const raw = JSON.parse(fs.readFileSync(path.resolve("./data/drivers/index.json"), "utf8"));
 const drivers = (raw.drivers ?? []).slice().sort((a: any, b: any) => (b.races ?? 0) - (a.races ?? 0));
 const total = drivers.length;
+const latestSeason = Math.max(...drivers.map((d: any) => d.lastSeason ?? 0));
 
 function fmtYears(first: number | undefined, last: number | undefined): string {
   if (first == null) return "";
@@ -33,7 +34,7 @@ function fmtPts(n: number | undefined): string {
       <div class="filters">
         <button id="filter-champions" class="filt" type="button">Champions only</button>
         <button id="filter-winners"   class="filt" type="button">Race winners</button>
-        <button id="filter-active"    class="filt" type="button">Active (2025+)</button>
+        <button id="filter-active"    class="filt" type="button" data-latest={latestSeason}>Active ({latestSeason}+)</button>
       </div>
     </div>
     <div class="count-row">
@@ -96,6 +97,8 @@ function fmtPts(n: number | undefined): string {
     var searchEl = document.getElementById("driver-search");
     var total = tbody.rows.length;
 
+    var activeThreshold = +(document.getElementById("filter-active").getAttribute("data-latest") || 0);
+
     var sortKey = "races";
     var sortDir = -1; // -1 = desc, 1 = asc
 
@@ -127,7 +130,7 @@ function fmtPts(n: number | undefined): string {
         }
         if (show && filters.champions && +r.getAttribute("data-championships") === 0) show = false;
         if (show && filters.winners   && +r.getAttribute("data-wins")          === 0) show = false;
-        if (show && filters.active    && +r.getAttribute("data-last")          < 2025) show = false;
+        if (show && filters.active    && +r.getAttribute("data-last")          < activeThreshold) show = false;
         r.style.display = show ? "" : "none";
       }
       updateCount();
