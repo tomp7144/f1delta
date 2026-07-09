@@ -112,6 +112,17 @@
   overscroll-behavior-x: contain;
 }
 
+/* ─── Sticky header row ──────────────────────────────────────────────────── */
+[data-record-table] thead th,
+[data-f1-table]     thead th,
+[data-driver-table] thead th,
+[data-standings-table] thead th {
+  position: sticky;
+  top: 0;
+  z-index: 2;
+  /* background: #fff already set by shared th rule above */
+}
+
 /* ─── Freeze first column ────────────────────────────────────────────────── */
 [data-record-table] th:first-child,
 [data-f1-table]     th:first-child,
@@ -119,7 +130,7 @@
 [data-standings-table] th:first-child {
   position: sticky;
   left: 0;
-  z-index: 2;
+  z-index: 3; /* corner: above both sticky column (z:1) and sticky header row (z:2) */
   /* background already #fff from shared th rule */
   box-shadow: inset -1px 0 0 var(--line, #e4e4df);
 }
