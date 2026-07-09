@@ -73,7 +73,7 @@ const active = (d: { firstYear: number | null; lastYear: number | null }) =>
               data-teams={d.teams.join(", ")}
               data-reason={d.reason}
             >
-              <td class="drv">{d.name}</td>
+              <td class="drv"><a href={`/driver?d=${d.id}`}>{d.name}</a></td>
               <td class="nat">{d.nat ?? "—"}</td>
               <td class="yrs">{active(d)}</td>
               <td class="num">{d.entries || "—"}</td>
@@ -122,6 +122,8 @@ const active = (d: { firstYear: number | null; lastYear: number | null }) =>
   .yrs  { color: #6b6b70; font-variant-numeric: tabular-nums; white-space: nowrap; }
   .nat  { color: #6b6b70; font-size: 13px; }
   .drv  { font-weight: 500; }
+  .drv a { color: #16161a; text-decoration: none; }
+  .drv a:hover { text-decoration: underline; }
   .teams { color: #6b6b70; font-size: 13px; }
   .foot {
     font-size: 12px; color: #9a9a9e; text-align: center;

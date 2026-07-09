@@ -46,14 +46,14 @@ for (const r of runningsList) {
     {stats.mostWinsDriver && (
       <div class="callout">
         <span class="cl-label">Most wins</span>
-        <span class="cl-value">{stats.mostWinsDriver.name}</span>
+        <a class="cl-value cl-link" href={`/driver?d=${stats.mostWinsDriver.id}`}>{stats.mostWinsDriver.name}</a>
         <span class="cl-sub">{stats.mostWinsDriver.wins}×</span>
       </div>
     )}
     {stats.mostPolesDriver && (
       <div class="callout">
         <span class="cl-label">Most poles</span>
-        <span class="cl-value">{stats.mostPolesDriver.name}</span>
+        <a class="cl-value cl-link" href={`/driver?d=${stats.mostPolesDriver.id}`}>{stats.mostPolesDriver.name}</a>
         <span class="cl-sub">{stats.mostPolesDriver.poles}×</span>
       </div>
     )}
