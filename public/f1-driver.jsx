@@ -384,7 +384,6 @@ async function fetchDriver(slug) {
 function Styles() {
   return (
     <style>{`
-      :root{--bg:#f4f4f1;--surface:#fff;--ink:#15171c;--dim:#5b606b;--faint:#9398a3;--line:#e4e4de;--line2:#eeeee9;--red:#e10600;--champ:#fbf5e3;--champ-edge:#c9a227;--disp:"Barlow Condensed",system-ui,sans-serif;--body:"Inter",system-ui,sans-serif;--mono:"JetBrains Mono",ui-monospace,monospace;}
       .dp *{box-sizing:border-box}
       .dp{background:var(--bg);color:var(--ink);font-family:var(--body);-webkit-font-smoothing:antialiased;line-height:1.4;min-height:100vh}
       .dp a{color:inherit;text-decoration:none}
@@ -425,7 +424,7 @@ function Styles() {
       .dp thead th.s{color:var(--ink)}
       .dp tbody td{font-family:var(--mono);font-size:12.5px;padding:9px 8px;border-bottom:1px solid var(--line2);text-align:right;color:var(--dim);white-space:nowrap}
       .dp tbody tr:last-child td{border-bottom:0}
-      .dp tbody tr:hover td{background:#faf9f6}
+      .dp tbody tr:hover td{background:var(--hover)}
       .dp td.yr{text-align:left;color:var(--ink);font-weight:500}
       .dp td.yr a{color:inherit;text-decoration:none}
       .dp td.yr a:hover{color:var(--red)}

@@ -1,0 +1,32 @@
+:root {
+  /* ── Surface ─────────────────────────────────── */
+  --bg:           #f4f4f1;
+  --surface:      #fff;
+  --hover:        #faf9f6;
+
+  /* ── Text ────────────────────────────────────── */
+  --ink:          #15171c;
+  --dim:          #5b606b;
+  --faint:        #9398a3;
+
+  /* ── Borders ─────────────────────────────────── */
+  --line:         #e4e4de;
+  --line2:        #eeeee9;
+
+  /* ── Accent ──────────────────────────────────── */
+  --red:          #e10600;
+
+  /* ── Championship ────────────────────────────── */
+  --champ:        #fbf5e3;
+  --champ-edge:   #c9a227;
+
+  /* ── Typography ──────────────────────────────── */
+  --disp: "Barlow Condensed", system-ui, sans-serif;
+  --body: "Inter", system-ui, sans-serif;
+  --mono: "JetBrains Mono", ui-monospace, monospace;
+
+  /* ── Nav type ────────────────────────────────── */
+  --nav-wordmark-size:  18px;
+  --nav-link-size:      11px;
+  --nav-link-spacing:   .08em;
+}
