@@ -119,18 +119,6 @@ const active = (d: { firstYear: number | null; lastYear: number | null }) =>
   .r-test-reserve { background: #f0f0f0; color: #555; }
 
   .card { background: #fff; border: 1px solid #e4e4df; border-radius: 8px; overflow: hidden; }
-  table { width: 100%; border-collapse: collapse; font-size: 14px; }
-  th {
-    text-align: left; padding: 8px 12px; font-size: 11px; font-weight: 600;
-    color: #6b6b70; text-transform: uppercase; letter-spacing: .04em;
-    border-bottom: 2px solid #e4e4df; cursor: pointer; user-select: none;
-    white-space: nowrap;
-  }
-  th:focus-visible { outline: 2px solid #e10600; outline-offset: -2px; }
-  th[aria-sort="ascending"]::after  { content: " \25B2"; }
-  th[aria-sort="descending"]::after { content: " \25BC"; }
-  td { padding: 8px 12px; border-bottom: 1px solid #e4e4df; }
-  .num  { text-align: right; font-variant-numeric: tabular-nums; font-feature-settings: "tnum"; }
   .yrs  { color: #6b6b70; font-variant-numeric: tabular-nums; white-space: nowrap; }
   .nat  { color: #6b6b70; font-size: 13px; }
   .drv  { font-weight: 500; }

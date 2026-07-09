@@ -1,0 +1,101 @@
+/* ─── f1delta canonical table chrome ───────────────────────────────────────
+   Single definition for every Astro-rendered data table on the site.
+   Attribute selectors used as styling hooks so specificity is predictable
+   and per-component overrides (row highlights, cell colours) win cleanly.
+
+   [data-record-table]   — sortable via /public/f1-records.js
+   [data-f1-table]       — static / non-sortable
+   [data-driver-table]   — drivers index (custom sort + search/filter)
+   [data-standings-table]— standings index (custom inline sort)
+─────────────────────────────────────────────────────────────────────────── */
+
+/* Base */
+[data-record-table],
+[data-f1-table],
+[data-driver-table],
+[data-standings-table] {
+  width: 100%;
+  border-collapse: collapse;
+  font-size: 13px;
+  font-family: system-ui, -apple-system, "Segoe UI", Roboto, sans-serif;
+}
+
+/* Headers */
+[data-record-table] th,
+[data-f1-table] th,
+[data-driver-table] th,
+[data-standings-table] th {
+  text-align: left;
+  padding: 8px 12px;
+  font-size: 11px;
+  font-weight: 600;
+  color: var(--dim, #6b6b70);
+  text-transform: uppercase;
+  letter-spacing: .04em;
+  border-bottom: 2px solid var(--line, #e4e4df);
+  white-space: nowrap;
+  background: #fff;
+}
+
+/* Sort affordance — sortable tables only */
+[data-record-table] th[data-sort],
+[data-driver-table] th[data-sort],
+[data-standings-table] th[data-sort] {
+  cursor: pointer;
+  user-select: none;
+}
+
+[data-record-table] th:focus-visible,
+[data-f1-table] th:focus-visible,
+[data-driver-table] th:focus-visible,
+[data-standings-table] th:focus-visible {
+  outline: 2px solid var(--red, #e10600);
+  outline-offset: -2px;
+}
+
+[data-record-table] th[aria-sort="ascending"]::after,
+[data-driver-table] th[aria-sort="ascending"]::after,
+[data-standings-table] th[aria-sort="ascending"]::after {
+  content: " \25B2";
+  font-size: 8px;
+  color: var(--red, #e10600);
+}
+[data-record-table] th[aria-sort="descending"]::after,
+[data-driver-table] th[aria-sort="descending"]::after,
+[data-standings-table] th[aria-sort="descending"]::after {
+  content: " \25BC";
+  font-size: 8px;
+  color: var(--red, #e10600);
+}
+
+/* Cells */
+[data-record-table] td,
+[data-f1-table] td,
+[data-driver-table] td,
+[data-standings-table] td {
+  padding: 8px 12px;
+  border-bottom: 1px solid var(--line, #e4e4df);
+}
+
+[data-record-table] tr:last-child td,
+[data-f1-table] tr:last-child td,
+[data-driver-table] tr:last-child td,
+[data-standings-table] tr:last-child td {
+  border-bottom: none;
+}
+
+/* Hover */
+[data-record-table] tbody tr:hover td,
+[data-f1-table] tbody tr:hover td,
+[data-driver-table] tbody tr:hover td,
+[data-standings-table] tbody tr:hover td {
+  background: #faf9f6;
+}
+
+/* Numeric columns — right-aligned tabular mono */
+[data-record-table] .num,
+[data-f1-table] .num {
+  text-align: right;
+  font-variant-numeric: tabular-nums;
+  font-feature-settings: "tnum";
+}

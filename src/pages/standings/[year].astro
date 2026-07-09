@@ -89,7 +89,7 @@ const fmt = (n: number | null | undefined) => {
       <h2 class="sec-h">Drivers' Championship</h2>
       <p class="fant-method">f1δ Score applies current scoring rules to all eras for cross-era comparison — it is not the championship points drivers actually earned.</p>
       <div class="card">
-        <table>
+        <table data-f1-table>
           <thead>
             <tr>
               <th class="pos">Pos</th>
@@ -126,7 +126,7 @@ const fmt = (n: number | null | undefined) => {
       <section>
         <h2 class="sec-h">Constructors' Championship</h2>
         <div class="card">
-          <table>
+          <table data-f1-table>
             <thead>
               <tr>
                 <th class="pos">Pos</th>
@@ -156,7 +156,7 @@ const fmt = (n: number | null | undefined) => {
       <section>
         <h2 class="sec-h">Races</h2>
         <div class="card">
-          <table>
+          <table data-f1-table>
             <thead>
               <tr>
                 <th class="pos">Rd</th>
@@ -254,22 +254,12 @@ const fmt = (n: number | null | undefined) => {
     border-radius: 8px; overflow: clip;
   }
 
-  table { width: 100%; border-collapse: collapse; font-size: 13px; }
-  th {
-    text-align: right; padding: 8px 12px; font-size: 11px; font-weight: 600;
-    color: #6b6b70; text-transform: uppercase; letter-spacing: .04em;
-    border-bottom: 2px solid #e4e4df; white-space: nowrap; background: #fff;
-  }
+  th { text-align: right; }
   th.pos { text-align: left; width: 36px; }
   th.l   { text-align: left; }
   th.r   { text-align: right; }
-  td {
-    padding: 8px 12px; border-bottom: 1px solid #e4e4df;
-    font-variant-numeric: tabular-nums; white-space: nowrap;
-  }
-  tr:last-child td { border-bottom: none; }
+  td { font-variant-numeric: tabular-nums; white-space: nowrap; }
   tr.champ td { background: #fbf3d0; }
-  tr:hover td { background: #faf9f6; }
   tr.champ:hover td { background: #f5ecbf; }
 
   td.pos {

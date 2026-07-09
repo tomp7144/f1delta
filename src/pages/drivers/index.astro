@@ -243,21 +243,11 @@ function fmtPts(n: number | undefined): string {
 
   .card { background: #fff; border: 1px solid #e4e4df; border-radius: 8px; overflow: clip; }
 
-  table { width: 100%; border-collapse: collapse; font-size: 13px; }
   thead { position: sticky; top: 0; z-index: 4; }
-  th { background: #fff; text-align: right; padding: 8px 10px;
-    font-size: 11px; font-weight: 600; color: #6b6b70;
-    text-transform: uppercase; letter-spacing: .04em;
-    border-bottom: 2px solid #e4e4df;
-    cursor: pointer; user-select: none; white-space: nowrap; }
-  th:focus-visible { outline: 2px solid #e10600; outline-offset: -2px; }
+  th { text-align: right; padding: 8px 10px; }
   th.l { text-align: left; }
-  th[aria-sort="ascending"]::after  { content: " \25B2"; font-size: 8px; color: #e10600; }
-  th[aria-sort="descending"]::after { content: " \25BC"; font-size: 8px; color: #e10600; }
-  td { padding: 7px 10px; border-bottom: 1px solid #e4e4df; }
-  tr:last-child td { border-bottom: none; }
+  td { padding: 7px 10px; }
   tr.champ td { background: #fbf3d0; }
-  tr:hover td { background: #faf9f6; }
   tr.champ:hover td { background: #f5ecbf; }
 
   td.drv { text-align: left; }
