@@ -74,9 +74,9 @@ async function loadJSON(name) {
 
 function newSeasonH2H(year) {
   return {
-    year, races: 0,
+    year, races: 0, excluded: 0,
     bothQualified: 0, qualiAhead: 0, qualiBehind: 0,
-    bothClassified: 0, raceAhead: 0, raceBehind: 0,
+    raceAhead: 0, raceBehind: 0,
     dnfSelf: 0, dnfMate: 0,
     pointsSelf: 0, pointsMate: 0,
   };
@@ -99,6 +99,7 @@ async function main() {
     meta.set(d.id, {
       driverId: d.id, code: d.abbreviation, name: d.name,
       totals: {
+        entries: d.totalRaceEntries ?? 0,
         races: d.totalRaceStarts ?? 0,
         wins: d.totalRaceWins ?? 0,
         podiums: d.totalPodiums ?? 0,
@@ -131,6 +132,7 @@ async function main() {
     const m = get(careerByDriver, s.driverId, () => new Map());
     m.set(s.year, {
       season: s.year,
+      entries: s.totalRaceEntries ?? 0,
       races: s.totalRaceStarts ?? 0,
       wins: s.totalRaceWins ?? 0,
       podiums: s.totalPodiums ?? 0,
@@ -178,7 +180,19 @@ async function main() {
           const seasons = get(byMate, mate.driverId, () => new Map());
           const s = get(seasons, year, () => newSeasonH2H(year));
 
-          s.races++;
+          const selfFinished = self.positionNumber != null && self.reasonRetired == null;
+          const mateFinished = mate.positionNumber != null && mate.reasonRetired == null;
+          // shared-car entries give identical positionNumbers — not comparable
+          const comparable = selfFinished && mateFinished
+            && self.positionNumber !== mate.positionNumber;
+          if (comparable) {
+            s.races++;
+            if (self.positionNumber < mate.positionNumber) s.raceAhead++;
+            else if (self.positionNumber > mate.positionNumber) s.raceBehind++;
+          } else {
+            s.excluded++;
+          }
+
           s.pointsSelf += self.points ?? 0;
           s.pointsMate += mate.points ?? 0;
           if (isDNF(self)) s.dnfSelf++;
@@ -190,13 +204,6 @@ async function main() {
             s.bothQualified++;
             if (qs < qm) s.qualiAhead++;
             else if (qs > qm) s.qualiBehind++;
-          }
-
-          // race H2H — both must be classified; DNFs excluded
-          if (isClassified(self) && isClassified(mate)) {
-            s.bothClassified++;
-            if (self.positionNumber < mate.positionNumber) s.raceAhead++;
-            else if (self.positionNumber > mate.positionNumber) s.raceBehind++;
           }
         }
       }
@@ -239,8 +246,8 @@ async function main() {
       .map(([mateId, seasonsMap]) => {
         const seasons = [...seasonsMap.values()].sort((a, b) => a.year - b.year);
         const agg = seasons.reduce((a, s) => {
-          for (const k of ["races", "bothQualified", "qualiAhead", "qualiBehind",
-            "bothClassified", "raceAhead", "raceBehind", "dnfSelf", "dnfMate",
+          for (const k of ["races", "excluded", "bothQualified", "qualiAhead", "qualiBehind",
+            "raceAhead", "raceBehind", "dnfSelf", "dnfMate",
             "pointsSelf", "pointsMate"]) a[k] += s[k];
           return a;
         }, newSeasonH2H(null));

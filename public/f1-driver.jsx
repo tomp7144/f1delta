@@ -480,6 +480,7 @@ function Styles() {
       .dp .ham{display:none;background:none;border:none;font-size:20px;color:var(--dim);cursor:pointer;padding:10px 0 10px 12px;line-height:1;margin-left:auto;flex-shrink:0}
       .dp .ham:hover{color:var(--ink)}
       @media(max-width:620px){
+        .dp th.ent,.dp td.ent{display:none}
         .dp .top .wrap{height:auto;padding:0 12px;flex-wrap:wrap}
         .dp .ham{display:block}
         .dp .topnav{display:none;flex-direction:column;align-items:stretch;width:100%;order:3;padding:4px 0;border-top:1px solid var(--line);gap:0}
@@ -566,7 +567,8 @@ function Identity({ d }) {
 
 const CAREER_COLS = [
   { k: "season", label: "Season", cls: "l" }, { k: "team", label: "Team", cls: "l" },
-  { k: "races", label: "R" }, { k: "wins", label: "Win" }, { k: "podiums", label: "Pod" },
+  { k: "entries", label: "ENT", cls: "ent" }, { k: "races", label: "R" },
+  { k: "wins", label: "Win" }, { k: "podiums", label: "Pod" },
   { k: "poles", label: "Pole" }, { k: "points", label: "Pts" }, { k: "wdc", label: "WDC" },
 ];
 
@@ -579,7 +581,7 @@ function CareerTable({ d }) {
   const rows = [...d.career].sort((a, b) => {
     const { k, asc } = sort;
     if (k === "team") { const r = a.primaryTeam.localeCompare(b.primaryTeam); return asc ? r : -r; }
-    const map = { season: "season", races: "races", wins: "wins", podiums: "podiums", poles: "poles", points: "points", wdc: "wdcFinish" };
+    const map = { season: "season", entries: "entries", races: "races", wins: "wins", podiums: "podiums", poles: "poles", points: "points", wdc: "wdcFinish" };
     return asc ? a[map[k]] - b[map[k]] : b[map[k]] - a[map[k]];
   });
   return (
@@ -599,6 +601,7 @@ function CareerTable({ d }) {
               <tr key={s.season} className={champ ? "champ" : ""}>
                 <td className="yr"><a href={`/standings/${s.season}`}>{s.season}</a></td>
                 <td className="tm"><span className="dot" style={{ background: ac(s.primaryTeamId) }} /><a href={"/teams/" + s.primaryTeamId}>{s.primaryTeam}</a>{others.length ? <span className="alt"> +{others.map((t, i) => <span key={t.constructorId}>{i > 0 ? ", " : ""}<a href={"/teams/" + t.constructorId}>{t.constructor}</a></span>)}</span> : null}</td>
+                <td className="n ent">{s.entries ?? 0}</td>
                 <td className="n">{s.races}</td>
                 <td className={"n" + (s.wins ? " hot" : "")}>{s.wins}</td>
                 <td className="n">{s.podiums}</td>
@@ -624,7 +627,7 @@ function H2HRow({ code, t }) {
   const rp = a.raceAhead + a.raceBehind ? Math.round(a.raceAhead / (a.raceAhead + a.raceBehind) * 100) : 50;
   return (
     <tr>
-      <td className="who"><a href={`/driver?d=${t.teammateId}`}>{t.teammate}</a><span className="ys">{yrRange(t.seasonsShared)} · {a.races}r</span></td>
+      <td className="who"><a href={`/driver?d=${t.teammateId}`}>{t.teammate}</a><span className="ys">{yrRange(t.seasonsShared)} · {a.races}r compared{a.excluded > 0 ? `, ${a.excluded} excl.` : ""}</span></td>
       <td className="h2"><span className="sc"><b>{a.qualiAhead}</b>–{a.qualiBehind}</span><span className="bar"><i style={{ width: qp + "%" }} /></span></td>
       <td className="h2"><span className="sc"><b>{a.raceAhead}</b>–{a.raceBehind}</span><span className="bar"><i style={{ width: rp + "%" }} /></span></td>
       <td className="pts"><b>{fmt(a.pointsSelf)}</b><span className="vs">{fmt(a.pointsMate)}</span></td>
