@@ -34,10 +34,11 @@ const seasons = raw.seasons as any[];
           {seasons.map((s: any) => {
             const wccName = s.wccChampion?.name ?? "—";
             const wccId   = s.wccChampion?.constructorId ?? null;
+            const wdcName = s.wdcChampion?.name ?? "—";
             return (
               <tr
                 data-year={s.year}
-                data-wdc={s.wdcChampion.name}
+                data-wdc={wdcName}
                 data-wcc={wccName}
                 data-drivers={s.driverCount}
                 class={s.year >= 1958 && s.wccChampion ? "champ-row" : ""}
@@ -46,10 +47,15 @@ const seasons = raw.seasons as any[];
                   <a href={`/standings/${s.year}`}>{s.year}</a>
                 </td>
                 <td class="drv">
-                  <a href={`/driver?d=${encodeURIComponent(s.wdcChampion.driverId)}`}>
-                    {s.wdcChampion.name}
-                  </a>
-                  {s.wdcChampion.code && <span class="code">{s.wdcChampion.code}</span>}
+                  {s.wdcChampion
+                    ? (<>
+                        <a href={`/driver?d=${encodeURIComponent(s.wdcChampion.driverId)}`}>
+                          {s.wdcChampion.name}
+                        </a>
+                        {s.wdcChampion.code && <span class="code">{s.wdcChampion.code}</span>}
+                      </>)
+                    : <span class="dash">—</span>
+                  }
                 </td>
                 <td class="con">
                   {wccId

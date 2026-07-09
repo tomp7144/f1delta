@@ -45,7 +45,7 @@ const fmt = (n: number | null | undefined) => {
 
 <BaseLayout
   title={`${year} F1 Championship Standings | f1delta`}
-  description={`${year} Formula 1 championship standings. World Champion: ${wdcChampion.name}${wccChampion ? `. Constructors' Champion: ${wccChampion.name}.` : "."}`}
+  description={`${year} Formula 1 championship standings.${wdcChampion ? ` World Champion: ${wdcChampion.name}.` : ""}${wccChampion ? ` Constructors' Champion: ${wccChampion.name}.` : ""}`}
   canonical={`https://f1delta.com/standings/${year}`}
 >
   <div class="hub">
@@ -62,18 +62,22 @@ const fmt = (n: number | null | undefined) => {
 
     <h1>{year}</h1>
 
-    <div class="champ-strip">
-      <div class="champ-item">
-        <span class="champ-label">World Champion</span>
-        <a class="champ-name" href={`/driver?d=${wdcChampion.driverId}`}>{wdcChampion.name}</a>
+    {(wdcChampion || wccChampion) && (
+      <div class="champ-strip">
+        {wdcChampion && (
+          <div class="champ-item">
+            <span class="champ-label">World Champion</span>
+            <a class="champ-name" href={`/driver?d=${wdcChampion.driverId}`}>{wdcChampion.name}</a>
+          </div>
+        )}
+        {wccChampion && (
+          <div class="champ-item">
+            <span class="champ-label">Constructors' Champion</span>
+            <a class="champ-name" href={`/teams/${wccChampion.constructorId}`}>{wccChampion.name}</a>
+          </div>
+        )}
       </div>
-      {wccChampion && (
-        <div class="champ-item">
-          <span class="champ-label">Constructors' Champion</span>
-          <a class="champ-name" href={`/teams/${wccChampion.constructorId}`}>{wccChampion.name}</a>
-        </div>
-      )}
-    </div>
+    )}
 
     {notes && (
       <div class="notes-block">
@@ -99,7 +103,7 @@ const fmt = (n: number | null | undefined) => {
             {(wdc ?? []).map((row: any) => {
               const fd = fantDrivers[row.driverId];
               return (
-                <tr class={row.position === 1 ? "champ" : ""}>
+                <tr class={row.position === 1 && wdcChampion ? "champ" : ""}>
                   <td class="pos">{row.position}</td>
                   <td class="drv">
                     <a href={`/driver?d=${encodeURIComponent(row.driverId)}`}>{row.name}</a>

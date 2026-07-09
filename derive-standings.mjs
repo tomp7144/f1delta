@@ -145,7 +145,11 @@ async function main() {
     wcc.sort((a, b) => (a.position ?? 999) - (b.position ?? 999));
 
     const hasWCC = year >= WCC_FIRST_YEAR;
-    const wdcChampion = wdc.find((r) => r.position === 1) ?? null;
+    // A season is complete once any constructor has won the WCC (both titles are
+    // settled by the same final round). Pre-1958 seasons have no WCC but are all
+    // historical; treat them as complete.
+    const isComplete = !hasWCC || wcc.some((r) => r.championshipWon === true);
+    const wdcChampion = isComplete ? (wdc.find((r) => r.position === 1) ?? null) : null;
     const wccChampion = hasWCC ? (wcc.find((r) => r.championshipWon) ?? null) : null;
 
     await writeJSON(path.join(OUT_DIR, `${year}.json`), {

@@ -1,11 +1,7 @@
 {
   "year": 2026,
   "wccExists": true,
-  "wdcChampion": {
-    "driverId": "kimi-antonelli",
-    "name": "Kimi Antonelli",
-    "code": "ANT"
-  },
+  "wdcChampion": null,
   "wccChampion": null,
   "wdc": [
     {
@@ -443,5 +439,5 @@
     }
   ],
   "notes": null,
-  "updated": "2026-07-07"
+  "updated": "2026-07-09"
 }

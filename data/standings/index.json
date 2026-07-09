@@ -1,14 +1,10 @@
 {
   "count": 77,
-  "updated": "2026-07-07",
+  "updated": "2026-07-09",
   "seasons": [
     {
       "year": 2026,
-      "wdcChampion": {
-        "driverId": "kimi-antonelli",
-        "name": "Kimi Antonelli",
-        "code": "ANT"
-      },
+      "wdcChampion": null,
       "wccChampion": null,
       "driverCount": 22,
       "hasNotes": false

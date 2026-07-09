@@ -546,7 +546,7 @@ function TopBar() {
 }
 
 function Identity({ d }) {
-  const titles = d.career.filter((s) => s.wdcFinish === 1).length;
+  const titles = d.totals.championships ?? 0;
   const active = d.lastSeason >= 2026;
   const stats = [
     ["Starts", d.totals.races, false], ["Wins", d.totals.wins, false], ["Podiums", d.totals.podiums, false],
