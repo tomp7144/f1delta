@@ -11,7 +11,7 @@ const data = JSON.parse(fs.readFileSync(path.join(PEOPLE_DIR, "principals.json")
 const people = data.people.map((p: any) => {
   const full = JSON.parse(fs.readFileSync(path.join(PEOPLE_DIR, `${p.id}.json`), "utf8"));
   const tpRoles = full.roles.filter((r: any) => r.type === "team-principal");
-  const teams   = [...new Set(tpRoles.map((r: any) => r.teamName as string))];
+  const teams   = [...new Map(tpRoles.map((r: any) => [r.teamId as string, r.teamName as string])).entries()].map(([id, name]) => ({ id, name }));
   const lastYear = tpRoles.every((r: any) => r.toYear === null) ? null
     : Math.max(...tpRoles.map((r: any) => r.toYear ?? 0).filter((y: number) => y > 0));
   return { ...p, teams, lastYear };

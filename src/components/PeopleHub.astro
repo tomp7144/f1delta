@@ -20,13 +20,13 @@ const { people, title, lede } = Astro.props;
       </thead>
       <tbody>
         {people.map((p: any) => (
-          <tr data-name={p.name} data-team={p.teams.join(", ")}
+          <tr data-name={p.name} data-team={p.teams.map((t: any) => t.name).join(", ")}
               data-from={p.firstYear ?? 0} data-to={p.lastYear ?? 0}>
             <td>
               <a class="ent" href={`/people/${p.id}`}>{p.name}</a>
               {p.aka && <span class="aka">"{p.aka}"</span>}
             </td>
-            <td class="teams">{p.teams.join(", ")}</td>
+            <td class="teams">{p.teams.map((t: any, i: number) => <><a class="team-link" href={`/teams/${t.id}`}>{t.name}</a>{i < p.teams.length - 1 ? ", " : ""}</>)}</td>
             <td class="num">{p.firstYear ?? "—"}</td>
             <td class="num">{p.status === "active" ? <span class="active">present</span> : (p.lastYear ?? "—")}</td>
           </tr>
@@ -47,5 +47,7 @@ const { people, title, lede } = Astro.props;
   .ent:hover { text-decoration: underline; }
   .aka { color: #6b6b70; font-size: 12px; margin-left: 6px; font-style: italic; }
   .teams { color: #6b6b70; font-size: 13px; }
+  .team-link { color: #6b6b70; text-decoration: none; }
+  .team-link:hover { color: #16161a; text-decoration: underline; }
   .active { color: #2a7a3b; font-weight: 500; }
 </style>
