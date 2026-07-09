@@ -91,6 +91,7 @@ const activeSpan = circuit.runningsList[0]?.year === circuit.runningsList[circui
     <div class="layouts-section">
       <h2 class="section-title">Layout History</h2>
       <div class="card">
+        <div class="table-scroll">
         <table data-f1-table>
           <thead>
             <tr>
@@ -111,12 +112,14 @@ const activeSpan = circuit.runningsList[0]?.year === circuit.runningsList[circui
             ))}
           </tbody>
         </table>
+        </div>
       </div>
     </div>
   )}
 
   {/* Per-running table */}
   <div class="card">
+    <div class="table-scroll">
     <table data-record-table>
       <thead>
         <tr>
@@ -181,6 +184,7 @@ const activeSpan = circuit.runningsList[0]?.year === circuit.runningsList[circui
         ))}
       </tbody>
     </table>
+    </div>
   </div>
 
   <p class="foot">Data: <a href="https://github.com/f1db/f1db">F1DB</a> (CC BY 4.0) · f1delta unofficial</p>

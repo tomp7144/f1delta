@@ -8,6 +8,7 @@ const { people, title, lede } = Astro.props;
   <p class="lede">{lede}</p>
 
   <div class="card">
+    <div class="table-scroll">
     <table data-record-table>
       <thead>
         <tr>
@@ -32,6 +33,7 @@ const { people, title, lede } = Astro.props;
         ))}
       </tbody>
     </table>
+    </div>
   </div>
 </section>
 

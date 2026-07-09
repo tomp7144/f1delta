@@ -44,6 +44,7 @@ const STATS = [
 
   <h2>Season by season</h2>
   <div class="card">
+    <div class="table-scroll">
     <table data-record-table>
       <thead>
         <tr>
@@ -70,10 +71,12 @@ const STATS = [
         ))}
       </tbody>
     </table>
+    </div>
   </div>
 
   <h2>Drivers <span class="count">({drivers.length})</span></h2>
   <div class="card">
+    <div class="table-scroll">
     <table data-record-table>
       <thead>
         <tr>
@@ -102,12 +105,14 @@ const STATS = [
         ))}
       </tbody>
     </table>
+    </div>
   </div>
 
   {engineers.length > 0 && (
     <>
       <h2>Race engineers <span class="count">({engineers.length})</span></h2>
       <div class="card">
+        <div class="table-scroll">
         <table data-f1-table>
           <thead>
             <tr>
@@ -128,6 +133,7 @@ const STATS = [
             ))}
           </tbody>
         </table>
+        </div>
       </div>
     </>
   )}
@@ -163,7 +169,7 @@ const STATS = [
   tr.champ td.yr-lnk a { color: #b8962e; }
   tr.champ td.yr-lnk a:hover { color: #e10600; }
   .nat { color: #6b6b70; font-size: 12px; margin-left: 8px; white-space: nowrap; }
-  tr.champ { background: #fbf3d0; }
+  tr.champ td { background: #fbf3d0; }
   tr.cur-eng td { background: #fbf3d0; }
   .dim-link { color: #6b6b70; text-decoration: none; }
   .dim-link:hover { color: #16161a; text-decoration: underline; }

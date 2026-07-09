@@ -99,3 +99,38 @@
   font-variant-numeric: tabular-nums;
   font-feature-settings: "tnum";
 }
+
+/* ─── Responsive scroll container ───────────────────────────────────────────
+   Tables scroll horizontally inside this wrapper. overflow-y: clip avoids
+   creating a y-axis scroll container so `thead { position: sticky; top }` in
+   drivers/index still sticks to the viewport instead of the container.
+─────────────────────────────────────────────────────────────────────────── */
+.table-scroll {
+  overflow-x: auto;
+  overflow-y: clip;
+  -webkit-overflow-scrolling: touch;
+  overscroll-behavior-x: contain;
+}
+
+/* ─── Freeze first column ────────────────────────────────────────────────── */
+[data-record-table] th:first-child,
+[data-f1-table]     th:first-child,
+[data-driver-table] th:first-child,
+[data-standings-table] th:first-child {
+  position: sticky;
+  left: 0;
+  z-index: 2;
+  /* background already #fff from shared th rule */
+  box-shadow: inset -1px 0 0 var(--line, #e4e4df);
+}
+
+[data-record-table] td:first-child,
+[data-f1-table]     td:first-child,
+[data-driver-table] td:first-child,
+[data-standings-table] td:first-child {
+  position: sticky;
+  left: 0;
+  background: var(--surface, #fff);
+  z-index: 1;
+  box-shadow: inset -1px 0 0 var(--line, #e4e4df);
+}

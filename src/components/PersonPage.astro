@@ -82,6 +82,7 @@ const backLabel = roleTypes.includes("race-engineer")
     <>
       <h2>Race engineering career <span class="count">({reRoles.length})</span></h2>
       <div class="card">
+        <div class="table-scroll">
         <table data-record-table>
           <thead>
             <tr>
@@ -126,6 +127,7 @@ const backLabel = roleTypes.includes("race-engineer")
             })}
           </tbody>
         </table>
+        </div>
       </div>
     </>
   )}
@@ -134,6 +136,7 @@ const backLabel = roleTypes.includes("race-engineer")
     <>
       <h2 class={hasRE ? "mt" : undefined}>Leadership roles <span class="count">({sortedOther.length})</span></h2>
       <div class="card">
+        <div class="table-scroll">
         <table data-f1-table>
           <thead>
             <tr>
@@ -163,6 +166,7 @@ const backLabel = roleTypes.includes("race-engineer")
             ))}
           </tbody>
         </table>
+        </div>
       </div>
       {sortedOther.some((r: any) => r.confidence === "moderate") && (
         <p class="conf-note">* Dates or title have moderate confidence — sources conflict.</p>

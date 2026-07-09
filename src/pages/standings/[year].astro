@@ -89,6 +89,7 @@ const fmt = (n: number | null | undefined) => {
       <h2 class="sec-h">Drivers' Championship</h2>
       <p class="fant-method">f1δ Score applies current scoring rules to all eras for cross-era comparison — it is not the championship points drivers actually earned.</p>
       <div class="card">
+        <div class="table-scroll">
         <table data-f1-table>
           <thead>
             <tr>
@@ -119,6 +120,7 @@ const fmt = (n: number | null | undefined) => {
             })}
           </tbody>
         </table>
+        </div>
       </div>
     </section>
 
@@ -126,6 +128,7 @@ const fmt = (n: number | null | undefined) => {
       <section>
         <h2 class="sec-h">Constructors' Championship</h2>
         <div class="card">
+          <div class="table-scroll">
           <table data-f1-table>
             <thead>
               <tr>
@@ -146,6 +149,7 @@ const fmt = (n: number | null | undefined) => {
               ))}
             </tbody>
           </table>
+          </div>
         </div>
       </section>
     ) : (
@@ -156,6 +160,7 @@ const fmt = (n: number | null | undefined) => {
       <section>
         <h2 class="sec-h">Races</h2>
         <div class="card">
+          <div class="table-scroll">
           <table data-f1-table>
             <thead>
               <tr>
@@ -183,6 +188,7 @@ const fmt = (n: number | null | undefined) => {
               })}
             </tbody>
           </table>
+          </div>
         </div>
       </section>
     )}

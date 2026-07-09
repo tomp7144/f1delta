@@ -26,6 +26,7 @@ const fmt = (v) => (isRate ? v.toFixed(2) + "%" : typeof v === "number" ? v.toLo
   {meta.blurb && <p class="blurb">{meta.blurb}</p>}
 
   <div class="card">
+    <div class="table-scroll">
     <table data-record-table>
       <thead>
         <tr>
@@ -58,6 +59,7 @@ const fmt = (v) => (isRate ? v.toFixed(2) + "%" : typeof v === "number" ? v.toLo
         ))}
       </tbody>
     </table>
+    </div>
   </div>
 
   {meta.methodology && (
@@ -85,7 +87,7 @@ const fmt = (v) => (isRate ? v.toFixed(2) + "%" : typeof v === "number" ? v.toLo
   .ctx { color: #6b6b70; font-size: 14px; }
   .ctx-link { color: #6b6b70; text-decoration: none; }
   .ctx-link:hover { color: #16161a; text-decoration: underline; }
-  tr.leader { background: #fbf3d0; }
+  tr.leader td { background: #fbf3d0; }
   tr.leader .ent { font-weight: 700; }
   .method { color: #6b6b70; font-size: 12.5px; margin: 12px 2px 0; line-height: 1.5; }
 </style>
