@@ -1,0 +1,569 @@
+---
+export const prerender = true;
+import fs from "node:fs";
+import path from "node:path";
+import BaseLayout from "../../layouts/BaseLayout.astro";
+
+export function getStaticPaths() {
+  const { drivers } = JSON.parse(
+    fs.readFileSync(path.resolve("./data/drivers/index.json"), "utf8")
+  );
+  const salaries = JSON.parse(fs.readFileSync(path.resolve("./data/salaries.json"), "utf8"));
+  const rtf1All  = JSON.parse(fs.readFileSync(path.resolve("./data/rtf1.json"), "utf8"));
+  const byDriver = JSON.parse(fs.readFileSync(path.resolve("./data/people/by-driver.json"), "utf8"));
+  return drivers.map((dr: any) => ({
+    params: { id: dr.driverId },
+    props: {
+      salary:   salaries[dr.driverId] ?? null,
+      rtf1:     rtf1All[dr.driverId]  ?? null,
+      engineer: byDriver[dr.driverId] ?? null,
+    },
+  }));
+}
+
+const { id } = Astro.params as { id: string };
+const { salary, rtf1, engineer } = Astro.props as {
+  salary: any; rtf1: any; engineer: any;
+};
+
+const d = JSON.parse(
+  fs.readFileSync(path.resolve(`./data/drivers/${id}.json`), "utf8")
+);
+
+const fantasyPath = path.resolve(`./public/fantasy/by-driver/${id}.json`);
+const fantasy: any = fs.existsSync(fantasyPath)
+  ? JSON.parse(fs.readFileSync(fantasyPath, "utf8"))
+  : null;
+
+const active = d.lastSeason >= 2026;
+const titles: number = d.totals.championships ?? 0;
+
+function fmt(n: number | null | undefined): string {
+  if (n == null) return "";
+  return n % 1 === 0 ? String(n) : n.toFixed(1);
+}
+
+const TEAM_COLOR: Record<string, string> = {
+  "red-bull": "#3671C6", "toro-rosso": "#4562FF", "rb": "#6692FF", "ferrari": "#E8002D",
+  "mclaren": "#FF8000", "mercedes": "#27F4D2", "williams": "#64C4FF", "aston-martin": "#229971",
+  "alpine": "#0093CC", "haas": "#B6BABD", "sauber": "#52E252", "renault": "#FFF500",
+  "racing-point": "#F596C8", "force-india": "#F596C8", "lotus-f1": "#FFB800", "brawn": "#B8FD6E",
+  "alfa-romeo": "#C92D4B", "jordan": "#E8B432", "benetton": "#00A650", "bmw-sauber": "#2E4BB1",
+  "bar": "#C8102E", "toyota": "#E00F3A", "minardi": "#1e1e1e", "jaguar": "#006540",
+  "arrows": "#F28A17", "prost": "#00488B", "stewart": "#D6001C",
+};
+const ac = (tid: string) => TEAM_COLOR[tid] || "#9aa0ab";
+
+function yrRange(ys: number[] | undefined): string {
+  if (!ys?.length) return "";
+  const mn = Math.min(...ys), mx = Math.max(...ys);
+  return ys.length === 1
+    ? `'${String(mn).slice(2)}`
+    : `'${String(mn).slice(2)}–'${String(mx).slice(2)}`;
+}
+
+const career = [...(d.career ?? [])].sort((a: any, b: any) => a.season - b.season);
+const teammates = [...(d.teammates ?? [])].sort(
+  (a: any, b: any) => b.aggregate.races - a.aggregate.races
+);
+
+const yearSpan = active ? `${d.firstSeason}–present` : `${d.firstSeason}–${d.lastSeason}`;
+const titleStr = `${d.name} | F1 Driver | f1delta`;
+const descStr = `Career stats for ${d.name}: ${d.totals.races ?? 0} races, ${d.totals.wins ?? 0} wins${titles > 0 ? `, ${titles} World Championship${titles > 1 ? "s" : ""}` : ""}. F1DB data, 1950–present.`;
+
+const hasFantasy = fantasy && Array.isArray(fantasy.seasons) && fantasy.seasons.length > 0;
+---
+
+<BaseLayout
+  title={titleStr}
+  description={descStr}
+  canonical={`https://f1delta.com/drivers/${id}`}
+>
+
+  <!-- ── Identity header ───────────────────────────────────────────── -->
+  <div class="drv-id">
+    <div class="drv-wrap">
+      <div class="id-row">
+        <span class="code">{d.code || "—"}</span>
+        <h1>{d.name}</h1>
+      </div>
+      <div class="meta">{yearSpan}</div>
+      <div class="totals">
+        {([
+          ["Starts",  d.totals.races    ?? 0],
+          ["Wins",    d.totals.wins     ?? 0],
+          ["Podiums", d.totals.podiums  ?? 0],
+          ["Poles",   d.totals.poles    ?? 0],
+          ["Titles",  titles],
+          ["Points",  fmt(d.totals.points)],
+        ] as [string, string | number][]).map(([k, v]) => (
+          <div class="tot">
+            <div class:list={["v", { gold: k === "Titles" && titles > 0 }]}>{v}</div>
+            <div class="k">{k}</div>
+          </div>
+        ))}
+      </div>
+    </div>
+  </div>
+
+  <!-- ── Body ─────────────────────────────────────────────────────── -->
+  <div class="drv-wrap drv-body">
+
+    <!-- Season-by-season ─────────────────────────────────────────── -->
+    <section class="drv-sec">
+      <div class="sec-h">
+        <h2>Season by season</h2>
+        <span class="hint">tap a header to sort</span>
+      </div>
+      <div class="card">
+        <div class="table-scroll">
+          <table data-record-table>
+            <thead>
+              <tr>
+                <th class="l" data-sort="season" data-type="num" aria-sort="ascending">Season</th>
+                <th class="l">Team</th>
+                <th class="ent" data-sort="ent" data-type="num">ENT</th>
+                <th data-sort="races"   data-type="num">R</th>
+                <th data-sort="wins"    data-type="num">Win</th>
+                <th data-sort="podiums" data-type="num">Pod</th>
+                <th data-sort="poles"   data-type="num">Pole</th>
+                <th data-sort="points"  data-type="num">Pts</th>
+                <th data-sort="wdc"     data-type="num">WDC</th>
+              </tr>
+            </thead>
+            <tbody>
+              {career.map((s: any) => {
+                const champ = s.wdcFinish === 1;
+                const others = (s.teams ?? []).filter(
+                  (t: any) => t.constructorId !== s.primaryTeamId
+                );
+                return (
+                  <tr
+                    data-season={s.season}
+                    data-ent={s.entries ?? 0}
+                    data-races={s.races ?? 0}
+                    data-wins={s.wins ?? 0}
+                    data-podiums={s.podiums ?? 0}
+                    data-poles={s.poles ?? 0}
+                    data-points={s.points ?? 0}
+                    data-wdc={s.wdcFinish ?? 999}
+                    class={champ ? "champ" : ""}
+                  >
+                    <td class="yr">
+                      <a href={`/standings/${s.season}`}>{s.season}</a>
+                    </td>
+                    <td class="tm">
+                      <span class="dot" style={`background:${ac(s.primaryTeamId)}`}></span>
+                      <a href={`/teams/${s.primaryTeamId}`}>{s.primaryTeam}</a>
+                      {others.length > 0 && (
+                        <span class="alt">
+                          {" +"}
+                          {others.map((t: any, i: number) => (
+                            <>
+                              {i > 0 ? ", " : ""}
+                              <a href={`/teams/${t.constructorId}`}>{t.constructor}</a>
+                            </>
+                          ))}
+                        </span>
+                      )}
+                    </td>
+                    <td class="n ent">{s.entries ?? ""}</td>
+                    <td class="n">{s.races ?? ""}</td>
+                    <td class:list={["n", { hot: (s.wins ?? 0) > 0 }]}>{s.wins ?? 0}</td>
+                    <td class="n">{s.podiums ?? 0}</td>
+                    <td class="n">{s.poles ?? 0}</td>
+                    <td class="n strong">{fmt(s.points)}</td>
+                    <td class:list={["wdc", { t: champ }]}>
+                      {s.wdcFinish != null ? `P${s.wdcFinish}` : "—"}
+                    </td>
+                  </tr>
+                );
+              })}
+            </tbody>
+          </table>
+        </div>
+      </div>
+    </section>
+
+    <!-- Race engineer ────────────────────────────────────────────── -->
+    {engineer && (engineer.current || engineer.past?.length > 0) && (
+      <section class="drv-sec">
+        <div class="sec-h"><h2>Race engineer</h2></div>
+        <div class="card eng-card">
+          {engineer.current && (
+            <div class="eng-cur">
+              <a class="eng-name" href={`/people/${engineer.current.personId}`}>
+                {engineer.current.personName}
+                {engineer.current.aka ? ` "${engineer.current.aka}"` : ""}
+              </a>
+              <span class="eng-meta">
+                <a href={`/teams/${engineer.current.teamId}`}>{engineer.current.teamName}</a>
+                {" · since "}{engineer.current.fromYear}
+              </span>
+              {engineer.current.notes && (
+                <span class="eng-note">{engineer.current.notes}</span>
+              )}
+            </div>
+          )}
+          {engineer.past?.length > 0 && (
+            <div class="eng-past">
+              {engineer.past.map((p: any) => (
+                <div class="eng-past-row">
+                  <a class="eng-name" href={`/people/${p.personId}`}>
+                    {p.personName}{p.aka ? ` "${p.aka}"` : ""}
+                  </a>
+                  <span class="eng-meta">
+                    <a href={`/teams/${p.teamId}`}>{p.teamName}</a>
+                    {" · "}
+                    {p.fromYear === p.toYear ? p.fromYear : `${p.fromYear}–${p.toYear}`}
+                  </span>
+                </div>
+              ))}
+            </div>
+          )}
+        </div>
+      </section>
+    )}
+
+    <!-- Ad slot ──────────────────────────────────────────────────── -->
+    <div class="ad-slot" id="driver-ad-slot" data-ad-slot></div>
+
+    <!-- Teammates, head to head ──────────────────────────────────── -->
+    {teammates.length > 0 && (
+      <section class="drv-sec">
+        <div class="sec-h">
+          <h2>Teammates, head to head</h2>
+          <span class="hint">most races first</span>
+        </div>
+        <div class="card">
+          <div class="table-scroll">
+            <table data-f1-table>
+              <thead>
+                <tr>
+                  <th class="l">Teammate</th>
+                  <th class="l">Qualifying</th>
+                  <th class="l">Race</th>
+                  <th class="l">Points</th>
+                </tr>
+              </thead>
+              <tbody>
+                {teammates.map((t: any) => {
+                  const a = t.aggregate;
+                  const qTot = (a.qualiAhead ?? 0) + (a.qualiBehind ?? 0);
+                  const rTot = (a.raceAhead  ?? 0) + (a.raceBehind  ?? 0);
+                  const qp = qTot ? Math.round(a.qualiAhead / qTot * 100) : 50;
+                  const rp = rTot ? Math.round(a.raceAhead  / rTot * 100) : 50;
+                  return (
+                    <tr>
+                      <td class="who">
+                        <a href={`/drivers/${t.teammateId}`}>{t.teammate}</a>
+                        <span class="ys">
+                          {yrRange(t.seasonsShared)}{" · "}{a.races}r compared
+                          {(a.excluded ?? 0) > 0 ? `, ${a.excluded} excl.` : ""}
+                        </span>
+                      </td>
+                      <td class="h2">
+                        <span class="sc"><b>{a.qualiAhead}</b>–{a.qualiBehind}</span>
+                        <span class="bar"><i style={`width:${qp}%`}></i></span>
+                      </td>
+                      <td class="h2">
+                        <span class="sc"><b>{a.raceAhead}</b>–{a.raceBehind}</span>
+                        <span class="bar"><i style={`width:${rp}%`}></i></span>
+                      </td>
+                      <td class="pts">
+                        <b>{fmt(a.pointsSelf)}</b>
+                        <span class="vs">{fmt(a.pointsMate)}</span>
+                      </td>
+                    </tr>
+                  );
+                })}
+              </tbody>
+            </table>
+          </div>
+        </div>
+      </section>
+    )}
+
+    <!-- Road to Formula 1 ───────────────────────────────────────── -->
+    {rtf1 && (
+      <section class="drv-sec">
+        <div class="sec-h"><h2>Road to Formula 1</h2></div>
+        {rtf1.prose?.length > 0 && (
+          <div class:list={["card", { "card-gap": !!rtf1.timeline }]}>
+            <div class="rtf1-card">
+              {(rtf1.prose as [string, string][]).map(([label, text]) => (
+                <div class="rtf1-row">
+                  <div class="rtf1-label">{label}</div>
+                  <p class="rtf1-text">{text}</p>
+                </div>
+              ))}
+            </div>
+          </div>
+        )}
+        {rtf1.timeline && (
+          <div class="card">
+            <div class="rtf1-tl">
+              {rtf1.timeline.entries.map((e: any, i: number) => {
+                const prevYear = i > 0 ? rtf1.timeline.entries[i - 1].year : null;
+                const showYr = prevYear !== e.year;
+                return (
+                  <div class="rtf1-tl-row">
+                    <span class="rtf1-tl-yr">{showYr ? e.year : ""}</span>
+                    <span class="rtf1-tl-nd">
+                      <svg width="12" height="12" viewBox="0 0 12 12">
+                        <circle cx="6" cy="6" r="4" fill="var(--surface)" stroke="var(--faint)" stroke-width="1.5" />
+                      </svg>
+                    </span>
+                    <div class="rtf1-tl-ct">
+                      <div class="rtf1-tl-sr">{e.series}</div>
+                      {(e.team || e.result) && (
+                        <div class="rtf1-tl-mt">
+                          {e.team && <span>{e.team}</span>}
+                          {e.team && e.result && <span>{" · "}</span>}
+                          {e.result && (
+                            <span class:list={[{ "rtf1-res-w": e.result === "Champion" }]}>
+                              {e.result}
+                            </span>
+                          )}
+                        </div>
+                      )}
+                    </div>
+                  </div>
+                );
+              })}
+              <div class="rtf1-tl-row rtf1-tl-row--f1">
+                <span class="rtf1-tl-yr">{rtf1.timeline.debut.year}</span>
+                <span class="rtf1-tl-nd">
+                  <svg width="16" height="16" viewBox="0 0 16 16">
+                    <circle cx="8" cy="8" r="7" fill="var(--red)" />
+                  </svg>
+                </span>
+                <div class="rtf1-tl-ct">
+                  <div class="rtf1-tl-sr">Formula 1 Debut</div>
+                  <div class="rtf1-tl-mt">{rtf1.timeline.debut.team}</div>
+                </div>
+              </div>
+            </div>
+          </div>
+        )}
+      </section>
+    )}
+
+    <!-- f1delta Fantasy Score ────────────────────────────────────── -->
+    {hasFantasy && (
+      <section class="drv-sec">
+        <div class="sec-h">
+          <h2>f1delta Fantasy Score</h2>
+          <span class="hint">position-based · excludes overtakes</span>
+        </div>
+        <div class="card">
+          <div class="table-scroll">
+            <table data-f1-table>
+              <thead>
+                <tr>
+                  <th class="l">Year</th>
+                  <th>Races</th>
+                  <th>Score</th>
+                  <th>Avg</th>
+                </tr>
+              </thead>
+              <tbody>
+                {fantasy.seasons.map((s: any) => (
+                  <tr>
+                    <td class="yr"><a href={`/standings/${s.year}`}>{s.year}</a></td>
+                    <td class="n">{s.races}</td>
+                    <td class="n">{s.partial > 0 ? "~" : ""}{s.score}</td>
+                    <td class="n">{s.races > 0 ? (s.score / s.races).toFixed(1) : "—"}</td>
+                  </tr>
+                ))}
+              </tbody>
+              <tfoot>
+                <tr class="career-row">
+                  <td class="yr"><strong>Career</strong></td>
+                  <td class="n">{fantasy.career.races}</td>
+                  <td class="n">{fantasy.career.partial > 0 ? "~" : ""}{fantasy.career.score}</td>
+                  <td class="n">
+                    {fantasy.career.races > 0
+                      ? (fantasy.career.score / fantasy.career.races).toFixed(1)
+                      : "—"}
+                  </td>
+                </tr>
+              </tfoot>
+            </table>
+          </div>
+          {fantasy.career.partial > 0 && (
+            <p class="fant-partial">~ includes races where qualifying data is unavailable</p>
+          )}
+          <p class="fant-note-foot">
+            Scoring: race finish points · qualifying position · positions gained · fastest lap
+            (P1–10) · Driver of the Day. f1δ Score applies current scoring rules to all eras
+            for cross-era comparison — it is not the championship points drivers actually earned.
+          </p>
+        </div>
+      </section>
+    )}
+
+    <!-- 2026 Salary ─────────────────────────────────────────────── -->
+    {salary && (
+      <section class="drv-sec">
+        <div class="sec-h"><h2>2026 Salary</h2></div>
+        <div class="card sal-card">
+          <div class="sal-fence">estimated — not officially disclosed</div>
+          <div class="sal-rows">
+            <div class="sal-row">
+              <span class="sal-label">Est. annual</span>
+              <span class="sal-val sal-primary">{salary.salary}</span>
+            </div>
+            <div class="sal-row">
+              <span class="sal-label">Contract through</span>
+              <span class="sal-val">{salary.through}</span>
+            </div>
+            <div class="sal-row">
+              <span class="sal-label">Base / bonus</span>
+              <span class:list={["sal-val", { "sal-unknown": salary.split === "UNKNOWN" }]}>
+                {salary.split === "UNKNOWN" ? "not reported" : salary.split}
+              </span>
+            </div>
+          </div>
+          <p class="sal-source">Source: {salary.source}</p>
+        </div>
+      </section>
+    )}
+
+  </div>
+
+  <script src="/f1-records.js" defer is:inline></script>
+
+</BaseLayout>
+
+<style>
+  /* ── Layout ───────────────────────────────────────────────────────── */
+  .drv-wrap { max-width: 760px; margin: 0 auto; padding: 0 20px; }
+  .drv-body { padding-top: 4px; padding-bottom: 40px; }
+  .drv-sec  { margin-top: 20px; }
+
+  /* ── Identity header ──────────────────────────────────────────────── */
+  .drv-id { background: var(--surface); border-bottom: 1px solid var(--line); }
+  .drv-id .drv-wrap { padding-top: 16px; padding-bottom: 14px; }
+  .id-row  { display: flex; align-items: baseline; gap: 12px; flex-wrap: wrap; }
+  .code    { font-family: var(--disp); font-weight: 700; font-size: 34px; line-height: 1; color: var(--red); }
+  h1       { font-family: var(--disp); font-weight: 700; font-size: 34px; line-height: 1; letter-spacing: -.01em; margin: 0; }
+  .meta    { font-family: var(--mono); font-size: 11px; color: var(--dim); margin-top: 8px; }
+
+  .totals { display: flex; flex-wrap: wrap; margin-top: 14px; border: 1px solid var(--line); border-radius: 5px; overflow: hidden; background: var(--surface); }
+  .tot    { flex: 1 1 0; min-width: 62px; padding: 9px 10px; border-right: 1px solid var(--line2); }
+  .tot:last-child { border-right: 0; }
+  .tot .v { font-family: var(--disp); font-weight: 700; font-size: 22px; line-height: 1; }
+  .tot .v.gold { color: var(--champ-edge); }
+  .tot .k { font-family: var(--mono); font-size: 9px; letter-spacing: .12em; text-transform: uppercase; color: var(--faint); margin-top: 4px; }
+
+  /* ── Section headers ──────────────────────────────────────────────── */
+  .sec-h    { display: flex; align-items: baseline; justify-content: space-between; padding: 0 2px 7px; }
+  .sec-h h2 { font-family: var(--disp); font-weight: 700; font-size: 15px; letter-spacing: .06em; text-transform: uppercase; margin: 0; color: var(--ink); }
+  .hint     { font-family: var(--mono); font-size: 10px; color: var(--faint); }
+
+  /* ── Card ─────────────────────────────────────────────────────────── */
+  .card     { background: var(--surface); border: 1px solid var(--line); border-radius: 6px; overflow: clip; }
+  .card-gap { margin-bottom: 10px; }
+
+  /* ── Career table: column-specific ───────────────────────────────── */
+  th.l { text-align: left; }
+  td.yr { text-align: left; }
+  td.yr a { color: var(--ink); text-decoration: none; font-weight: 500; }
+  td.yr a:hover { color: var(--red); }
+
+  td.tm { text-align: left; font-family: var(--body); font-size: 13px; color: var(--ink); overflow: hidden; text-overflow: ellipsis; white-space: nowrap; max-width: 0; }
+  td.tm a { color: inherit; text-decoration: none; }
+  td.tm a:hover { color: var(--red); }
+  td.tm .dot { display: inline-block; width: 8px; height: 8px; border-radius: 2px; margin-right: 7px; vertical-align: middle; }
+  td.tm .alt { color: var(--faint); font-size: 11px; }
+
+  td.n { text-align: right; font-family: var(--mono); font-size: 12.5px; color: var(--dim); white-space: nowrap; }
+  td.n.hot    { color: var(--ink); font-weight: 600; }
+  td.n.strong { color: var(--ink); font-weight: 600; }
+
+  td.wdc   { text-align: right; font-family: var(--mono); font-size: 12.5px; color: var(--ink); }
+  td.wdc.t { color: var(--champ-edge); font-weight: 700; }
+
+  tr.champ td { background: var(--champ); }
+  tr.champ td:first-child {
+    box-shadow: inset 3px 0 0 var(--champ-edge), inset -1px 0 0 var(--line);
+  }
+
+  @media (max-width: 620px) { th.ent, td.ent { display: none; } }
+  @media (min-width: 560px) { .code, h1 { font-size: 42px; } }
+
+  /* ── H2H table: column-specific ──────────────────────────────────── */
+  td.who { text-align: left; font-family: var(--body); font-size: 13px; color: var(--ink); line-height: 1.25; max-width: 0; overflow: hidden; }
+  td.who a { font-weight: 600; color: var(--ink); text-decoration: none; }
+  td.who a:hover { color: var(--red); }
+  td.who .ys { display: block; font-family: var(--mono); font-size: 10px; color: var(--faint); margin-top: 2px; }
+
+  td.h2 { text-align: left; min-width: 74px; }
+  td.h2 .sc { font-family: var(--mono); font-size: 12.5px; color: var(--dim); }
+  td.h2 .sc b { color: var(--ink); font-weight: 700; }
+  td.h2 .bar { display: block; height: 4px; border-radius: 2px; background: var(--line); margin-top: 5px; overflow: hidden; max-width: 70px; }
+  td.h2 .bar i { display: block; height: 100%; background: var(--red); opacity: .78; }
+
+  td.pts { text-align: right; min-width: 64px; font-family: var(--mono); font-size: 12.5px; }
+  td.pts b { color: var(--ink); font-weight: 700; }
+  td.pts .vs { display: block; color: var(--faint); font-size: 11px; margin-top: 2px; }
+  td.pts .vs::before { content: "vs "; }
+
+  /* ── Ad slot ──────────────────────────────────────────────────────── */
+  .ad-slot {
+    margin-top: 20px; height: 96px; border: 1px dashed var(--line); border-radius: 6px;
+    background: repeating-linear-gradient(45deg,#fff,#fff 10px,#fbfbf9 10px,#fbfbf9 20px);
+  }
+
+  /* ── Engineer section ─────────────────────────────────────────────── */
+  .eng-card     { padding: 12px 14px; }
+  .eng-cur      { border-left: 3px solid var(--red); padding-left: 10px; margin-bottom: 2px; }
+  .eng-name     { font-family: var(--body); font-size: 13px; color: var(--ink); font-weight: 600; text-decoration: none; display: block; }
+  .eng-name:hover { color: var(--red); }
+  .eng-meta     { font-family: var(--mono); font-size: 11px; color: var(--dim); display: block; margin-top: 2px; }
+  .eng-meta a   { color: var(--dim); text-decoration: none; }
+  .eng-meta a:hover { color: var(--ink); }
+  .eng-note     { font-family: var(--body); font-size: 12px; color: var(--faint); font-style: italic; display: block; margin-top: 5px; }
+  .eng-past     { margin-top: 10px; border-top: 1px solid var(--line); padding-top: 8px; }
+  .eng-past-row { padding: 5px 0; border-bottom: 1px solid var(--line2); }
+  .eng-past-row:last-child { border-bottom: none; }
+
+  /* ── Road to F1 ───────────────────────────────────────────────────── */
+  .rtf1-card { padding: 0 14px; }
+  .rtf1-row  { padding: 10px 0; border-bottom: 1px solid var(--line2); }
+  .rtf1-row:last-child { border-bottom: none; }
+  .rtf1-label { font-family: var(--mono); font-size: 9px; letter-spacing: .12em; text-transform: uppercase; color: var(--faint); margin-bottom: 4px; }
+  .rtf1-text  { font-family: var(--body); font-size: 13px; color: var(--dim); line-height: 1.55; margin: 0; }
+
+  .rtf1-tl        { position: relative; padding: 8px 14px 14px; }
+  .rtf1-tl::before { content: ''; position: absolute; left: 63px; top: 0; bottom: 0; width: 2px; background: var(--line); z-index: 0; }
+  .rtf1-tl-row    { display: flex; align-items: flex-start; }
+  .rtf1-tl-yr     { width: 40px; flex-shrink: 0; font-family: var(--mono); font-size: 10px; color: var(--faint); text-align: right; padding: 1px 8px 12px 0; font-variant-numeric: tabular-nums; line-height: 1.2; }
+  .rtf1-tl-nd     { width: 20px; flex-shrink: 0; display: flex; justify-content: center; padding-top: 1px; padding-bottom: 12px; position: relative; z-index: 1; }
+  .rtf1-tl-ct     { flex: 1; padding: 0 0 12px 8px; }
+  .rtf1-tl-row--f1 .rtf1-tl-yr { color: var(--ink); font-weight: 700; padding-bottom: 0; }
+  .rtf1-tl-row--f1 .rtf1-tl-nd { padding-top: 0; padding-bottom: 0; }
+  .rtf1-tl-row--f1 .rtf1-tl-ct { padding-bottom: 0; }
+  .rtf1-tl-sr     { font-family: var(--body); font-size: 13px; color: var(--ink); font-weight: 500; line-height: 1.3; }
+  .rtf1-tl-row--f1 .rtf1-tl-sr { font-family: var(--disp); font-size: 14px; font-weight: 700; letter-spacing: .06em; text-transform: uppercase; color: var(--red); }
+  .rtf1-tl-mt     { font-family: var(--mono); font-size: 11px; color: var(--faint); margin-top: 2px; }
+  .rtf1-res-w     { color: var(--champ-edge); font-weight: 600; }
+
+  /* ── Fantasy section ──────────────────────────────────────────────── */
+  .fant-partial   { font-size: 11px; color: var(--faint); padding: 6px 12px 0; margin: 0; }
+  .fant-note-foot { font-size: 11px; color: var(--faint); padding: 4px 12px 10px; margin: 0; border-top: 1px solid var(--line); line-height: 1.5; }
+  tfoot .career-row td { font-weight: 600; color: var(--dim); border-top: 2px solid var(--line); }
+
+  /* ── Salary card ──────────────────────────────────────────────────── */
+  .sal-card    { border-color: #d4b87a; }
+  .sal-fence   { font-family: var(--mono); font-size: 9px; letter-spacing: .1em; text-transform: uppercase; color: #8a6a10; background: #fbf3d0; padding: 5px 12px; border-bottom: 1px solid #d4b87a; }
+  .sal-rows    { padding: 8px 0 2px; }
+  .sal-row     { display: flex; justify-content: space-between; align-items: baseline; padding: 7px 12px; border-bottom: 1px solid var(--line); }
+  .sal-row:last-child { border-bottom: none; }
+  .sal-label   { font-family: var(--mono); font-size: 10px; color: var(--faint); letter-spacing: .04em; text-transform: uppercase; flex-shrink: 0; padding-right: 12px; }
+  .sal-val     { font-family: var(--mono); font-size: 13px; color: var(--ink); font-weight: 600; text-align: right; }
+  .sal-primary { font-size: 15px; }
+  .sal-unknown { color: var(--faint); font-weight: 400; font-style: italic; font-size: 12px; }
+  .sal-source  { font-family: var(--mono); font-size: 10px; color: var(--faint); padding: 6px 12px 10px; margin: 0; line-height: 1.5; }
+</style>
