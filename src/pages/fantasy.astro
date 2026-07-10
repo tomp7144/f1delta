@@ -99,7 +99,7 @@ const GATING_ENABLED = false;
           ' data-delta="' + esc(String(d)) + '">' +
           '<td class="nm"><span class="' + esc(dotC) + '"></span>' +
             (a.pageId
-              ? '<a class="nm-link" href="' + esc(a.type === 'constructor' ? '/teams/' + a.pageId : '/driver?d=' + a.pageId) + '">' + esc(a.name) + '</a>'
+              ? '<a class="nm-link" href="' + esc(a.type === 'constructor' ? '/teams/' + a.pageId : '/drivers/' + a.pageId) + '">' + esc(a.name) + '</a>'
               : esc(a.name)) + '</td>' +
           '<td class="tm">' + esc(a.team || "—") + '</td>' +
           '<td class="n">\xa3' + esc(a.price.toFixed(1)) + 'm</td>' +

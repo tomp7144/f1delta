@@ -8,8 +8,8 @@ const entityLabel = columns[0];                 // "Driver" | "Constructor"
 const valueLabel = columns[1];
 const contextLabel = columns[2] || null;        // "Season" | "Grand Prix" | "Circuit" | "Raw" | null
 const isDriver = entityLabel === "Driver";
-// Drivers -> /driver?d=<id>; constructors -> /teams/<id> (now that team pages exist).
-const hrefFor = (id) => (isDriver ? `/driver?d=${id}` : `/teams/${id}`);
+// Drivers -> /drivers/<id>; constructors -> /teams/<id> (now that team pages exist).
+const hrefFor = (id) => (isDriver ? `/drivers/${id}` : `/teams/${id}`);
 const isRate = meta.scope === "rate";
 
 function flag(a2) {

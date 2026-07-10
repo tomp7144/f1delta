@@ -46,14 +46,14 @@ for (const r of runningsList) {
     {stats.mostWinsDriver && (
       <div class="callout">
         <span class="cl-label">Most wins</span>
-        <a class="cl-value cl-link" href={`/driver?d=${stats.mostWinsDriver.id}`}>{stats.mostWinsDriver.name}</a>
+        <a class="cl-value cl-link" href={`/drivers/${stats.mostWinsDriver.id}`}>{stats.mostWinsDriver.name}</a>
         <span class="cl-sub">{stats.mostWinsDriver.wins}×</span>
       </div>
     )}
     {stats.mostPolesDriver && (
       <div class="callout">
         <span class="cl-label">Most poles</span>
-        <a class="cl-value cl-link" href={`/driver?d=${stats.mostPolesDriver.id}`}>{stats.mostPolesDriver.name}</a>
+        <a class="cl-value cl-link" href={`/drivers/${stats.mostPolesDriver.id}`}>{stats.mostPolesDriver.name}</a>
         <span class="cl-sub">{stats.mostPolesDriver.poles}×</span>
       </div>
     )}
@@ -128,7 +128,7 @@ for (const r of runningsList) {
             {circuits.length > 1 && <td class="circ">{r.circuit}</td>}
             <td>
               {r.winnerId
-                ? <a class="drv" href={`/driver?d=${r.winnerId}`}>{r.winner}</a>
+                ? <a class="drv" href={`/drivers/${r.winnerId}`}>{r.winner}</a>
                 : <span class="muted">{r.winner ?? "—"}</span>}
             </td>
             <td>
@@ -138,19 +138,19 @@ for (const r of runningsList) {
             </td>
             <td>
               {r.poleId
-                ? <a class="drv" href={`/driver?d=${r.poleId}`}>{r.pole}</a>
+                ? <a class="drv" href={`/drivers/${r.poleId}`}>{r.pole}</a>
                 : <span class="muted">{r.pole ?? "—"}</span>}
             </td>
             <td>
               {r.fastestLapId
-                ? <a class="drv" href={`/driver?d=${r.fastestLapId}`}>{r.fastestLap}</a>
+                ? <a class="drv" href={`/drivers/${r.fastestLapId}`}>{r.fastestLap}</a>
                 : <span class="muted">{r.fastestLap ?? "—"}</span>}
             </td>
             <td class="num margin">{r.winningMarginText ?? "—"}</td>
             <td class="num muted">{r.laps ?? "—"}</td>
             <td class="num fant-col">
               {fant
-                ? <a class="drv" href={`/driver?d=${fant.topDriverId}`}>{fant.topScore}{fant.partial ? "~" : ""}</a>
+                ? <a class="drv" href={`/drivers/${fant.topDriverId}`}>{fant.topScore}{fant.partial ? "~" : ""}</a>
                 : <span class="muted">—</span>}
             </td>
           </tr>

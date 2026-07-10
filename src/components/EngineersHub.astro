@@ -29,7 +29,7 @@ const { engineers } = Astro.props;
               {e.aka && <span class="aka">"{e.aka}"</span>}
             </td>
             <td>{e.currentDriverName
-              ? <a class="dim-link" href={`/driver?d=${e.currentDriverId}`}>{e.currentDriverName}</a>
+              ? <a class="dim-link" href={`/drivers/${e.currentDriverId}`}>{e.currentDriverName}</a>
               : <span class="muted">—</span>}
             </td>
             <td>{e.currentTeamId

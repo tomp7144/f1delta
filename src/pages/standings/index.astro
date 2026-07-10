@@ -50,7 +50,7 @@ const seasons = raw.seasons as any[];
                 <td class="drv">
                   {s.wdcChampion
                     ? (<>
-                        <a href={`/driver?d=${encodeURIComponent(s.wdcChampion.driverId)}`}>
+                        <a href={`/drivers/${encodeURIComponent(s.wdcChampion.driverId)}`}>
                           {s.wdcChampion.name}
                         </a>
                         {s.wdcChampion.code && <span class="code">{s.wdcChampion.code}</span>}

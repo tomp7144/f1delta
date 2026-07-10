@@ -113,7 +113,7 @@ const hasFant = topPPM.length > 0 || risers.length > 0 || latestF1dSummary;
               <tbody>
                 {topPPM.map(d => (
                   <tr>
-                    <td class="nm">{d.pageId ? <a href={`/driver?d=${d.pageId}`}>{d.name}</a> : d.name}</td>
+                    <td class="nm">{d.pageId ? <a href={`/drivers/${d.pageId}`}>{d.name}</a> : d.name}</td>
                     <td class="tm">{d.team}</td>
                     <td class="n">£{d.price.toFixed(1)}m</td>
                     <td class="n hi">{d.ppm.toFixed(1)}</td>
@@ -135,7 +135,7 @@ const hasFant = topPPM.length > 0 || risers.length > 0 || latestF1dSummary;
               <tbody>
                 {[...risers, ...fallers].map(m => (
                   <tr>
-                    <td class="nm">{m.pageId ? <a href={m.type === "constructor" ? `/teams/${m.pageId}` : `/driver?d=${m.pageId}`}>{m.name}</a> : m.name}</td>
+                    <td class="nm">{m.pageId ? <a href={m.type === "constructor" ? `/teams/${m.pageId}` : `/drivers/${m.pageId}`}>{m.name}</a> : m.name}</td>
                     <td class="n">£{m.price.toFixed(1)}m</td>
                     <td class:list={["n delta", m.delta > 0 ? "pos" : "neg"]}>{m.delta > 0 ? "+" : ""}{m.delta.toFixed(1)}</td>
                   </tr>
@@ -152,7 +152,7 @@ const hasFant = topPPM.length > 0 || risers.length > 0 || latestF1dSummary;
               <span class="tier derived">f1δ derived</span>
             </div>
             <div class="bridge-row">
-              <a class="bridge-name" href={`/driver?d=${latestF1dSummary.topDriverId}`}>{latestF1dSummary.topDriverName}</a>
+              <a class="bridge-name" href={`/drivers/${latestF1dSummary.topDriverId}`}>{latestF1dSummary.topDriverName}</a>
               <span class="bridge-score">{latestF1dSummary.topScore} pts</span>
             </div>
             <p class="bridge-note">f1δ Score applies current scoring rules to all eras for cross-era comparison — it is not the championship points drivers actually earned.</p>
@@ -209,7 +209,7 @@ const hasFant = topPPM.length > 0 || risers.length > 0 || latestF1dSummary;
           .sort((a, b) => (b.lastSeason - a.lastSeason) || a.name.localeCompare(b.name))
           .slice(0, 8);
       }
-      function go(id) { window.location.href = `/driver?d=${encodeURIComponent(id)}`; }
+      function go(id) { window.location.href = `/drivers/${encodeURIComponent(id)}`; }
       return (
         <div className="h-search">
           <input type="text" placeholder="Search drivers — Verstappen, Senna, HAM…" value={q}
@@ -219,7 +219,7 @@ const hasFant = topPPM.length > 0 || risers.length > 0 || latestF1dSummary;
           {matches.length > 0 && (
             <div className="h-results">
               {matches.map((d) => (
-                <a key={d.driverId} href={`/driver?d=${d.driverId}`}>
+                <a key={d.driverId} href={`/drivers/${d.driverId}`}>
                   <span className="rc">{d.code || "—"}</span>
                   <span className="rn">{d.name}</span>
                   <span className="rs">{d.firstSeason}–{d.lastSeason}</span>
@@ -247,7 +247,7 @@ const hasFant = topPPM.length > 0 || risers.length > 0 || latestF1dSummary;
                   const slug = codeMap[(r.code || "").toUpperCase()];
                   const isDnf = r.dnf || r.position == null;
                   return (
-                    <tr key={r.code} className={slug ? "clik" : ""} onClick={slug ? () => { window.location.href = `/driver?d=${slug}`; } : undefined}>
+                    <tr key={r.code} className={slug ? "clik" : ""} onClick={slug ? () => { window.location.href = `/drivers/${slug}`; } : undefined}>
                       <td className={"pos" + (isDnf ? " dnf" : "")}>{isDnf ? "—" : r.position}</td>
                       <td className="drv">
                         <span className="dot" style={{ background: r.teamColour || "#9aa0ab" }} />
@@ -279,7 +279,7 @@ const hasFant = topPPM.length > 0 || risers.length > 0 || latestF1dSummary;
                 {rows.map((s) => {
                   const slug = codeMap[(s.code || "").toUpperCase()];
                   return (
-                    <tr key={s.code} className={slug ? "clik" : ""} onClick={slug ? () => { window.location.href = `/driver?d=${slug}`; } : undefined}>
+                    <tr key={s.code} className={slug ? "clik" : ""} onClick={slug ? () => { window.location.href = `/drivers/${slug}`; } : undefined}>
                       <td className="pos">{s.pos}</td>
                       <td className="drv">
                         <span className="cc">{s.code}</span>

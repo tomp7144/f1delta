@@ -52,14 +52,14 @@ const activeSpan = circuit.runningsList[0]?.year === circuit.runningsList[circui
     {stats.mostWinsDriver && (
       <div class="callout">
         <span class="cl-label">Most wins</span>
-        <a class="cl-value cl-link" href={`/driver?d=${stats.mostWinsDriver.id}`}>{stats.mostWinsDriver.name}</a>
+        <a class="cl-value cl-link" href={`/drivers/${stats.mostWinsDriver.id}`}>{stats.mostWinsDriver.name}</a>
         <span class="cl-sub">{stats.mostWinsDriver.wins}×</span>
       </div>
     )}
     {stats.mostPolesDriver && (
       <div class="callout">
         <span class="cl-label">Most poles</span>
-        <a class="cl-value cl-link" href={`/driver?d=${stats.mostPolesDriver.id}`}>{stats.mostPolesDriver.name}</a>
+        <a class="cl-value cl-link" href={`/drivers/${stats.mostPolesDriver.id}`}>{stats.mostPolesDriver.name}</a>
         <span class="cl-sub">{stats.mostPolesDriver.poles}×</span>
       </div>
     )}
@@ -159,7 +159,7 @@ const activeSpan = circuit.runningsList[0]?.year === circuit.runningsList[circui
             )}
             <td>
               {r.winnerId
-                ? <a class="drv" href={`/driver?d=${r.winnerId}`}>{r.winner}</a>
+                ? <a class="drv" href={`/drivers/${r.winnerId}`}>{r.winner}</a>
                 : <span class="muted">{r.winner ?? "—"}</span>}
             </td>
             <td>
@@ -169,12 +169,12 @@ const activeSpan = circuit.runningsList[0]?.year === circuit.runningsList[circui
             </td>
             <td>
               {r.poleId
-                ? <a class="drv" href={`/driver?d=${r.poleId}`}>{r.pole}</a>
+                ? <a class="drv" href={`/drivers/${r.poleId}`}>{r.pole}</a>
                 : <span class="muted">{r.pole ?? "—"}</span>}
             </td>
             <td>
               {r.fastestLapId
-                ? <a class="drv" href={`/driver?d=${r.fastestLapId}`}>{r.fastestLap}</a>
+                ? <a class="drv" href={`/drivers/${r.fastestLapId}`}>{r.fastestLap}</a>
                 : <span class="muted">{r.fastestLap ?? "—"}</span>}
               {r.fastestLapTime && <span class="fl-time"> {r.fastestLapTime}</span>}
             </td>

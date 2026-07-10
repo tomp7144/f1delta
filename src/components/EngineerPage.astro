@@ -47,7 +47,7 @@ const statusClass: Record<string, string> = { active: "st-active", retired: "st-
     <div class="current-card">
       <span class="cur-label">Current</span>
       <span class="cur-body">
-        <a class="cur-driver" href={`/driver?d=${current.driverId}`}>{current.driverName}</a>
+        <a class="cur-driver" href={`/drivers/${current.driverId}`}>{current.driverName}</a>
         {" · "}
         <a class="cur-team" href={`/teams/${current.teamId}`}>{current.teamName}</a>
         {" · since "}
@@ -79,7 +79,7 @@ const statusClass: Record<string, string> = { active: "st-active", retired: "st-
               <tr class={isCurrent ? "cur-row" : undefined}
                   data-driver={p.driverName} data-team={p.teamName} data-from={p.fromYear ?? 0}
                   data-races={s.races} data-wins={s.wins} data-titles={s.championships}>
-                <td><a class="ent" href={`/driver?d=${p.driverId}`}>{p.driverName}</a></td>
+                <td><a class="ent" href={`/drivers/${p.driverId}`}>{p.driverName}</a></td>
                 <td><a class="team-link" href={`/teams/${p.teamId}`}>{p.teamName}</a></td>
                 <td class="yrs">
                   {yrs(p)}

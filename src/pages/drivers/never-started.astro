@@ -74,7 +74,7 @@ const active = (d: { firstYear: number | null; lastYear: number | null }) =>
               data-teams={d.teams.join(", ")}
               data-reason={d.reason}
             >
-              <td class="drv"><a href={`/driver?d=${d.id}`}>{d.name}</a></td>
+              <td class="drv"><a href={`/drivers/${d.id}`}>{d.name}</a></td>
               <td class="nat">{d.nat ?? "—"}</td>
               <td class="yrs">{active(d)}</td>
               <td class="num">{d.entries || "—"}</td>

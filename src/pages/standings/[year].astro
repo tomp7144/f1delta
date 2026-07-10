@@ -67,7 +67,7 @@ const fmt = (n: number | null | undefined) => {
         {wdcChampion && (
           <div class="champ-item">
             <span class="champ-label">World Champion</span>
-            <a class="champ-name" href={`/driver?d=${wdcChampion.driverId}`}>{wdcChampion.name}</a>
+            <a class="champ-name" href={`/drivers/${wdcChampion.driverId}`}>{wdcChampion.name}</a>
           </div>
         )}
         {wccChampion && (
@@ -107,7 +107,7 @@ const fmt = (n: number | null | undefined) => {
                 <tr class={row.position === 1 && wdcChampion ? "champ" : ""}>
                   <td class="pos">{row.position}</td>
                   <td class="drv">
-                    <a href={`/driver?d=${encodeURIComponent(row.driverId)}`}>{row.name}</a>
+                    <a href={`/drivers/${encodeURIComponent(row.driverId)}`}>{row.name}</a>
                     {row.code && <span class="code">{row.code}</span>}
                   </td>
                   <td class="team">
@@ -177,10 +177,10 @@ const fmt = (n: number | null | undefined) => {
                   <tr>
                     <td class="pos">{r.round}</td>
                     <td class="gp"><a href={`/grands-prix/${r.grandPrixId}`}>{r.name}</a></td>
-                    <td class="drv"><a href={`/driver?d=${encodeURIComponent(r.winnerId)}`}>{r.winner}</a></td>
+                    <td class="drv"><a href={`/drivers/${encodeURIComponent(r.winnerId)}`}>{r.winner}</a></td>
                     <td class="drv fant-col">
                       {fr?.topId
-                        ? <><a href={`/driver?d=${encodeURIComponent(fr.topId)}`}>{fr.topName}</a><span class="fant-pts"> ({fr.topScore}{fr.partial ? "~" : ""})</span></>
+                        ? <><a href={`/drivers/${encodeURIComponent(fr.topId)}`}>{fr.topName}</a><span class="fant-pts"> ({fr.topScore}{fr.partial ? "~" : ""})</span></>
                         : <span class="muted">—</span>}
                     </td>
                   </tr>

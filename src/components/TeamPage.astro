@@ -93,7 +93,7 @@ const STATS = [
           <tr data-name={d.name} data-first={d.first ?? 0} data-races={d.races}
               data-wins={d.wins} data-podiums={d.podiums} data-points={d.points}>
             <td>
-              <a class="ent" href={`/driver?d=${d.id}`}>{d.name}</a>
+              <a class="ent" href={`/drivers/${d.id}`}>{d.name}</a>
               {d.nat && <span class="nat">{flag(d.nat.a2)}{d.nat.code || d.nat.id}</span>}
             </td>
             <td class="yrs">{driverYears(d)}</td>
@@ -127,7 +127,7 @@ const STATS = [
                 <td>
                   <a class="ent" href={`/people/${e.personId}`}>{e.personName}</a>
                 </td>
-                <td><a class="dim-link" href={`/driver?d=${e.driverId}`}>{e.driverName}</a></td>
+                <td><a class="dim-link" href={`/drivers/${e.driverId}`}>{e.driverName}</a></td>
                 <td class="yrs">{e.fromYear === e.toYear ? e.fromYear : e.toYear === null ? `${e.fromYear}–present` : `${e.fromYear}–${e.toYear}`}</td>
               </tr>
             ))}

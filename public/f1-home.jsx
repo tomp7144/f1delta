@@ -172,7 +172,7 @@ function Search() {
       .sort((a, b) => (b.lastSeason - a.lastSeason) || a.name.localeCompare(b.name))
       .slice(0, 8);
   }
-  function go(id) { window.location.href = `/driver?d=${encodeURIComponent(id)}`; }
+  function go(id) { window.location.href = `/drivers/${encodeURIComponent(id)}`; }
   function onKey(e) { if (e.key === "Enter" && matches[0]) go(matches[0].driverId); }
   return (
     <div className="search">
@@ -181,7 +181,7 @@ function Search() {
       {matches.length > 0 && (
         <div className="results">
           {matches.map((d) => (
-            <a key={d.driverId} href={`/driver?d=${d.driverId}`}>
+            <a key={d.driverId} href={`/drivers/${d.driverId}`}>
               <span className="rc">{d.code || "—"}</span>
               <span className="rn">{d.name}</span>
               <span className="rs">{d.firstSeason}–{d.lastSeason}</span>
@@ -198,7 +198,7 @@ function ResultRow({ r, slug }) {
   const pos = isDnf ? "—" : r.position;
   const gap = r.leader ? "LEADER" : String(r.gap || "");
   const clickable = !!slug;
-  const onClick = clickable ? () => { window.location.href = `/driver?d=${slug}`; } : undefined;
+  const onClick = clickable ? () => { window.location.href = `/drivers/${slug}`; } : undefined;
   return (
     <tr className={clickable ? "clik" : ""} onClick={onClick}>
       <td className={"pos" + (isDnf ? " dnf" : "")}>{pos}</td>
@@ -224,7 +224,7 @@ function LatestResult({ data, codeMap }) {
 
 function StandingsRow({ s, slug }) {
   const clickable = !!slug;
-  const onClick = clickable ? () => { window.location.href = `/driver?d=${slug}`; } : undefined;
+  const onClick = clickable ? () => { window.location.href = `/drivers/${slug}`; } : undefined;
   return (
     <tr className={clickable ? "clik" : ""} onClick={onClick}>
       <td className="pos">{s.pos}</td>

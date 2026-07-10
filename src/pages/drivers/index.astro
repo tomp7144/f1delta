@@ -72,7 +72,7 @@ function fmtPts(n: number | undefined): string {
               class={(d.championships ?? 0) > 0 ? "champ" : ""}
             >
               <td class="drv">
-                <a href={`/driver?d=${encodeURIComponent(d.driverId)}`}>{d.name}</a>
+                <a href={`/drivers/${encodeURIComponent(d.driverId)}`}>{d.name}</a>
                 {d.code && <span class="code">{d.code}</span>}
               </td>
               <td class="yr">{fmtYears(d.firstSeason, d.lastSeason)}</td>
