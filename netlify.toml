@@ -3,7 +3,8 @@
 # so anything in it is downloadable source — never put secrets there).
 
 [build]
-  functions = "netlify/functions"
+  functions    = "netlify/functions"
+  edge_functions = "netlify/edge-functions"
 
 [functions]
   node_bundler = "esbuild"
