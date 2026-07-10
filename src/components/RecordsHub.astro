@@ -1,58 +1,235 @@
 ---
-// RecordsHub.astro — the /records directory, fully static. Groups boards by
-// entity -> scope from index.json.
 const { index } = Astro.props;
 
-const SCOPE_ORDER = ["career", "season", "grand-prix", "circuit", "rate", "streak"];
-const SCOPE_LABEL = {
-  career: "All-Time", season: "Single Season", "grand-prix": "At a Grand Prix",
-  circuit: "At a Circuit", rate: "Rates", streak: "Streaks",
-};
-const boardUrl = (b) => `/records/${b.entity}/${b.slug.replace("-by-", "/by-")}`;
+const boardUrl = (b: any) => `/records/${b.entity}/${b.slug.replace("-by-", "/by-")}`;
 
-const groups = {};
-for (const b of index.boards) {
-  (groups[b.entity] ??= {});
-  (groups[b.entity][b.scope] ??= []).push(b);
+function metricOf(b: any): string {
+  if (b.scope === "career") return b.slug;
+  return (b.slug as string).replace(/-by-.+$/, "");
 }
-const entities = ["drivers", "constructors"].filter((e) => groups[e]);
+
+const lookup: Record<string, Record<string, Record<string, any>>> = {};
+for (const b of index.boards) {
+  (lookup[b.entity] ??= {});
+  (lookup[b.entity][b.scope] ??= {});
+  lookup[b.entity][b.scope][metricOf(b)] = b;
+}
+
+const D_SCOPES: [string, string][] = [
+  ["career",     "All-Time"],
+  ["season",     "Season"],
+  ["grand-prix", "At a GP"],
+  ["circuit",    "At a Circuit"],
+];
+const D_METRICS: [string, string][] = [
+  ["wins",              "Wins"],
+  ["pole-positions",    "Poles"],
+  ["podiums",           "Podiums"],
+  ["fastest-laps",      "Fastest Laps"],
+  ["points",            "Points"],
+  ["championships",     "Titles"],
+  ["race-starts",       "Race Starts"],
+  ["race-entries",      "Race Entries"],
+  ["laps-raced",        "Laps Raced"],
+  ["sprint-wins",       "Sprint Wins"],
+  ["driver-of-the-day", "DOTD"],
+  ["grand-slams",       "Grand Slams"],
+];
+
+const C_SCOPES: [string, string][] = [
+  ["career", "All-Time"],
+  ["season", "Season"],
+];
+const C_METRICS: [string, string][] = [
+  ["wins",             "Wins"],
+  ["pole-positions",   "Poles"],
+  ["podiums",          "Podiums"],
+  ["fastest-laps",     "Fastest Laps"],
+  ["points",           "Points"],
+  ["championships",    "Titles"],
+  ["race-starts",      "Race Starts"],
+  ["race-entries",     "Race Entries"],
+  ["laps-raced",       "Laps Raced"],
+  ["sprint-wins",      "Sprint Wins"],
+  ["one-two-finishes", "1–2 Finishes"],
+];
+
+const RATE_LABEL: Record<string, string> = {
+  "win-rate":           "Win %",
+  "pole-rate":          "Pole %",
+  "podium-rate":        "Podium %",
+  "points-finish-rate": "Points Finish %",
+  "dnf-rate":           "DNF %",
+};
+const STREAK_LABEL: Record<string, string> = {
+  "consecutive-wins":            "Consec. Wins",
+  "consecutive-podiums":         "Consec. Podiums",
+  "consecutive-points-finishes": "Consec. Points Finishes",
+  "consecutive-pole-positions":  "Consec. Poles",
+};
+
+const rateBoards   = index.boards.filter((b: any) => b.entity === "drivers" && b.scope === "rate");
+const streakBoards = index.boards.filter((b: any) => b.entity === "drivers" && b.scope === "streak");
 ---
 
 <section class="hub">
   <h1>F1 Records</h1>
   <p class="lede">All-time leaderboards across every era, 1950&ndash;present.</p>
 
-  {entities.map((entity) => (
-    <div class="ent-block">
-      <h2>{entity === "drivers" ? "Drivers" : "Constructors"}</h2>
-      {SCOPE_ORDER.filter((s) => groups[entity][s]).map((scope) => (
-        <div class="scope">
-          <div class="scope-label">{SCOPE_LABEL[scope]}</div>
-          <div class="chips">
-            {groups[entity][scope].map((b) => (
-              <a class="chip" href={boardUrl(b)}>{b.title.replace(/ \u2014 .*/, "")}</a>
-            ))}
-          </div>
-        </div>
-      ))}
+  {/* ── Drivers ───────────────────────────────────────────────────────── */}
+  <h2 class="ent-head">Drivers</h2>
+
+  <div class="card">
+    <div class="table-scroll">
+    <table data-f1-table>
+      <thead>
+        <tr>
+          <th class="metric-col">Metric</th>
+          {D_SCOPES.map(([scope, label]) => (
+            <th class:list={["scope-col", { "alltime-hd": scope === "career" }]}>{label}</th>
+          ))}
+        </tr>
+      </thead>
+      <tbody>
+        {D_METRICS.map(([metric, label]) => (
+          <tr>
+            <td class="metric-name">{label}</td>
+            {D_SCOPES.map(([scope, scopeLabel]) => {
+              const b = (lookup["drivers"]?.[scope] ?? {})[metric];
+              return (
+                <td class:list={["scope-cell", { "alltime-cell": scope === "career" }]}>
+                  {b
+                    ? <a class="board-link" href={boardUrl(b)} aria-label={`${label} — ${scopeLabel}`}>&rarr;</a>
+                    : <span class="empty">&mdash;</span>}
+                </td>
+              );
+            })}
+          </tr>
+        ))}
+      </tbody>
+    </table>
     </div>
-  ))}
+  </div>
+
+  {/* ── Rates + Streaks ───────────────────────────────────────────────── */}
+  <div class="sub-pair">
+    <div class="sub-block">
+      <h3 class="sub-head">Rates <span class="qualifier">min. 40 entries</span></h3>
+      <div class="card">
+        <table data-f1-table>
+          <tbody>
+            {rateBoards.map((b: any) => (
+              <tr>
+                <td><a class="sub-link" href={boardUrl(b)}>{RATE_LABEL[b.slug] ?? b.slug}</a></td>
+              </tr>
+            ))}
+          </tbody>
+        </table>
+      </div>
+    </div>
+    <div class="sub-block">
+      <h3 class="sub-head">Streaks</h3>
+      <div class="card">
+        <table data-f1-table>
+          <tbody>
+            {streakBoards.map((b: any) => (
+              <tr>
+                <td><a class="sub-link" href={boardUrl(b)}>{STREAK_LABEL[b.slug] ?? b.slug}</a></td>
+              </tr>
+            ))}
+          </tbody>
+        </table>
+      </div>
+    </div>
+  </div>
 
   <div id="records-ad-slot" data-ad-slot></div>
+
+  {/* ── Constructors ──────────────────────────────────────────────────── */}
+  <h2 class="ent-head">Constructors</h2>
+
+  <div class="card">
+    <div class="table-scroll">
+    <table data-f1-table>
+      <thead>
+        <tr>
+          <th class="metric-col">Metric</th>
+          {C_SCOPES.map(([scope, label]) => (
+            <th class:list={["scope-col", { "alltime-hd": scope === "career" }]}>{label}</th>
+          ))}
+        </tr>
+      </thead>
+      <tbody>
+        {C_METRICS.map(([metric, label]) => (
+          <tr>
+            <td class="metric-name">{label}</td>
+            {C_SCOPES.map(([scope, scopeLabel]) => {
+              const b = (lookup["constructors"]?.[scope] ?? {})[metric];
+              return (
+                <td class:list={["scope-cell", { "alltime-cell": scope === "career" }]}>
+                  {b
+                    ? <a class="board-link" href={boardUrl(b)} aria-label={`${label} — ${scopeLabel}`}>&rarr;</a>
+                    : <span class="empty">&mdash;</span>}
+                </td>
+              );
+            })}
+          </tr>
+        ))}
+      </tbody>
+    </table>
+    </div>
+  </div>
+
 </section>
 
 <style>
-  .hub { max-width: 760px; margin: 0 auto; padding: 28px 20px;
-    font-family: system-ui, -apple-system, "Segoe UI", Roboto, sans-serif; color: #16161a; }
+  .hub {
+    max-width: 760px; margin: 0 auto; padding: 28px 20px;
+    font-family: system-ui, -apple-system, "Segoe UI", Roboto, sans-serif;
+    color: var(--ink, #16161a);
+  }
   .hub h1 { font-size: 28px; font-weight: 700; margin: 0 0 4px; letter-spacing: -.01em; }
-  .lede { color: #6b6b70; margin: 0 0 8px; font-size: 15px; }
-  .ent-block { margin-top: 24px; }
-  .ent-block h2 { font-size: 20px; font-weight: 700; margin: 0 0 2px;
-    border-left: 3px solid #e10600; padding-left: 10px; }
-  .scope-label { font-size: 13px; font-weight: 600; color: #6b6b70; text-transform: uppercase;
-    letter-spacing: .05em; margin: 20px 0 8px; }
-  .chips { display: flex; flex-wrap: wrap; gap: 8px; }
-  .chip { background: #fff; border: 1px solid #e4e4df; border-radius: 6px; padding: 8px 12px;
-    font-size: 14px; color: #16161a; text-decoration: none; }
-  .chip:hover { border-color: #16161a; }
+  .lede { color: var(--dim, #6b6b70); margin: 0 0 8px; font-size: 15px; }
+
+  .ent-head {
+    font-size: 20px; font-weight: 700; margin: 28px 0 10px;
+    border-left: 3px solid var(--red, #e10600); padding-left: 10px;
+  }
+
+  .card {
+    background: var(--surface, #fff); border: 1px solid var(--line, #e4e4df);
+    border-radius: 8px; overflow: clip;
+  }
+
+  /* Matrix header */
+  .metric-col { min-width: 110px; }
+  .scope-col  { text-align: center; min-width: 76px; }
+  .alltime-hd { color: var(--ink, #16161a); }
+
+  /* Metric name cells (first col, frozen by f1-table.css) */
+  .metric-name { font-weight: 500; white-space: nowrap; }
+
+  /* Scope data cells */
+  .scope-cell   { text-align: center; }
+  .alltime-cell { background: var(--bg, #f4f4f1); }
+
+  /* Board links */
+  .board-link { color: var(--dim, #6b6b70); text-decoration: none; font-size: 15px; }
+  td.alltime-cell .board-link { color: var(--ink, #16161a); font-weight: 700; }
+  .board-link:hover { color: var(--red, #e10600); }
+  .empty { color: #c4c4c9; font-size: 12px; }
+
+  /* Rates + Streaks side-by-side, stack on mobile */
+  .sub-pair { display: flex; gap: 16px; margin-top: 20px; flex-wrap: wrap; }
+  .sub-block { flex: 1 1 180px; min-width: 0; }
+  .sub-head {
+    font-size: 12px; font-weight: 600; color: var(--dim, #6b6b70);
+    text-transform: uppercase; letter-spacing: .05em; margin: 0 0 7px;
+  }
+  .qualifier {
+    font-size: 10px; font-weight: 400; text-transform: none;
+    letter-spacing: normal; color: #9a9a9e; margin-left: 4px;
+  }
+  .sub-link { color: var(--ink, #16161a); text-decoration: none; font-weight: 500; }
+  .sub-link:hover { text-decoration: underline; }
 </style>
