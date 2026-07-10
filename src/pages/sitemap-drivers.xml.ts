@@ -9,7 +9,7 @@ export const GET: APIRoute = () => {
     fs.readFileSync(path.resolve("./data/drivers/index.json"), "utf8")
   );
   const urls = drivers
-    .map((d) => `  <url><loc>https://f1delta.com/driver?d=${d.driverId}</loc></url>`)
+    .map((d) => `  <url><loc>https://f1delta.com/drivers/${d.driverId}</loc></url>`)
     .join("\n");
   const xml = `<?xml version="1.0" encoding="UTF-8"?>
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
