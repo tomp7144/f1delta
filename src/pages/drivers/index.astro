@@ -202,15 +202,6 @@ function fmtPts(n: number | undefined): string {
     });
 
     updateCount();
-
-    // Pin thead below the sticky controls bar (height varies with wrap on narrow screens)
-    var controlsEl = document.querySelector(".controls");
-    var theadEl = table.tHead;
-    function pinThead() {
-      if (controlsEl && theadEl) theadEl.style.top = controlsEl.offsetHeight + "px";
-    }
-    pinThead();
-    window.addEventListener("resize", pinThead);
   })();
   </script>
 </BaseLayout>
@@ -245,7 +236,6 @@ function fmtPts(n: number | undefined): string {
 
   .card { background: #fff; border: 1px solid #e4e4df; border-radius: 8px; overflow: clip; }
 
-  thead { position: sticky; top: 0; z-index: 4; }
   th { text-align: right; padding: 8px 10px; }
   th.l { text-align: left; }
   td { padding: 7px 10px; }
