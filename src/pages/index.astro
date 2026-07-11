@@ -203,6 +203,7 @@ const hasFant = topPPM.length > 0 || risers.length > 0 || latestF1dSummary;
       { type: "race",    label: "Races",        cap: 5 },
       { type: "season",  label: "Seasons",      cap: 3 },
       { type: "record",  label: "Records",      cap: 5 },
+      { type: "h2h",    label: "Head-to-Head", cap: 3 },
     ];
     const ROLE_LABELS = {
       "race-engineer": "Race Engineer",
@@ -227,6 +228,7 @@ const hasFant = topPPM.length > 0 || risers.length > 0 || latestF1dSummary;
         e.type === "gp"      ? [e.label, e.short, e.country] :
         e.type === "race"    ? [e.label, String(e.year), e.country] :
         e.type === "season"  ? [String(e.year), e.champion, e.ccode] :
+        e.type === "h2h"     ? [e.label, ...(e.terms || [])] :
         /* record */           [e.label];
       return Math.max(0, ...f.filter(Boolean).map(s => matchScore(s, needle)));
     }
@@ -238,6 +240,7 @@ const hasFant = topPPM.length > 0 || risers.length > 0 || latestF1dSummary;
       if (e.type === "gp")      return e.country || "";
       if (e.type === "race")    return e.country || "";
       if (e.type === "season")  return e.champion ? e.champion + (e.ccode ? " · " + e.ccode : "") : "In progress";
+      if (e.type === "h2h")     return "";
       return "";
     }
 
@@ -269,6 +272,7 @@ const hasFant = topPPM.length > 0 || risers.length > 0 || latestF1dSummary;
       useEffect(() => { setActiveIdx(-1); }, [q]);
 
       const needle = q.trim().toLowerCase();
+      const needleWords = needle.split(/\s+/).filter(Boolean);
       const groups = [];
       const flat = [];
 
@@ -276,7 +280,11 @@ const hasFant = topPPM.length > 0 || risers.length > 0 || latestF1dSummary;
         for (const cfg of GROUPS) {
           const matches = index
             .filter(e => e.type === cfg.type)
-            .map(e => ({ e, s: scoreEntry(e, needle) }))
+            .map(e => {
+              const scores = needleWords.map(w => scoreEntry(e, w));
+              const s = scores.length > 0 && scores.every(sc => sc > 0) ? Math.min(...scores) : 0;
+              return { e, s };
+            })
             .filter(({ s }) => s > 0)
             .sort((a, b) => {
               if (b.s !== a.s) return b.s - a.s;

@@ -90,6 +90,25 @@ for (const b of r("data/records/index.json").boards) {
   });
 }
 
+// H2H pairings
+{
+  const { pairings } = r("data/h2h-pairings.json");
+  const nameMap = new Map();
+  for (const d of r("data/drivers/index.json").drivers) nameMap.set(d.driverId, d.name);
+  for (const p of pairings) {
+    const aName = nameMap.get(p.a) ?? p.a;
+    const bName = nameMap.get(p.b) ?? p.b;
+    const aSurname = aName.split(" ").at(-1);
+    const bSurname = bName.split(" ").at(-1);
+    entries.push({
+      type: "h2h",
+      label: `${aName} vs ${bName}`,
+      url: `/h2h/${p.slug}`,
+      terms: [aName, bName, aSurname, bSurname],
+    });
+  }
+}
+
 const out = JSON.stringify(entries);
 fs.writeFileSync(path.join(root, "public/search-index.json"), out);
 console.log(`search-index.json: ${entries.length} entries, ${Math.round(out.length / 1024)}KB raw`);
