@@ -1,0 +1,500 @@
+---
+export const prerender = true;
+import fs from "node:fs";
+import path from "node:path";
+import BaseLayout from "../../layouts/BaseLayout.astro";
+
+export function getStaticPaths() {
+  const DRIVERS_DIR = path.resolve("./data/drivers");
+  const census = JSON.parse(fs.readFileSync(path.resolve("./data/h2h-pairings.json"), "utf8"));
+
+  // Load all 792 driver files upfront — far cheaper than 6K+ per-pairing reads
+  const allDrivers = new Map<string, any>();
+  const idx = JSON.parse(fs.readFileSync(path.join(DRIVERS_DIR, "index.json"), "utf8"));
+  for (const entry of idx.drivers) {
+    const d = JSON.parse(fs.readFileSync(path.join(DRIVERS_DIR, `${entry.driverId}.json`), "utf8"));
+    allDrivers.set(entry.driverId, d);
+  }
+
+  return census.pairings.map((p: any) => {
+    const driverA = allDrivers.get(p.a)!;
+    const driverB = allDrivers.get(p.b)!;
+    // Always read from A's perspective (A = alpha-first ID, raceAhead = A beats B)
+    const pairingEntry = driverA.teammates.find((t: any) => t.teammateId === p.b);
+
+    // Shared teams: intersect career team sets per shared season
+    const teamNameMap = new Map<string, string>();
+    for (const drv of [driverA, driverB]) {
+      for (const s of drv.career ?? []) {
+        for (const t of s.teams ?? []) {
+          if (!teamNameMap.has(t.constructorId)) teamNameMap.set(t.constructorId, t.constructor);
+        }
+      }
+    }
+    const sharedTeamIds = new Set<string>();
+    for (const yr of pairingEntry.seasonsShared) {
+      const aT = new Set<string>((driverA.career?.find((s: any) => s.season === yr)?.teams ?? []).map((t: any) => t.constructorId));
+      const bT = new Set<string>((driverB.career?.find((s: any) => s.season === yr)?.teams ?? []).map((t: any) => t.constructorId));
+      for (const t of aT) if (bT.has(t)) sharedTeamIds.add(t);
+    }
+    const sharedTeams = [...sharedTeamIds].map(id => ({ constructorId: id, name: teamNameMap.get(id) ?? id }));
+
+    return {
+      params: { pairing: p.slug },
+      props: {
+        aId: p.a, bId: p.b,
+        aName: driverA.name, bName: driverB.name,
+        aTotals: driverA.totals, bTotals: driverB.totals,
+        pairingEntry, sharedTeams,
+      },
+    };
+  });
+}
+
+const { pairing } = Astro.params;
+const { aId, bId, aName, bName, aTotals, bTotals, pairingEntry, sharedTeams } = Astro.props as {
+  aId: string; bId: string;
+  aName: string; bName: string;
+  aTotals: any; bTotals: any;
+  pairingEntry: any;
+  sharedTeams: { constructorId: string; name: string }[];
+};
+
+const { aggregate: agg, seasons, seasonsShared } = pairingEntry;
+const firstYear = seasonsShared[0];
+const lastYear  = seasonsShared[seasonsShared.length - 1];
+const yearSpan  = firstYear === lastYear ? `${firstYear}` : `${firstYear}–${lastYear}`;
+
+const rate = (n: number, d: number) => d > 0 ? (n / d * 100).toFixed(1) : "—";
+const fmt  = (n: number | null | undefined) => n == null ? "" : n % 1 === 0 ? String(n) : n.toFixed(1);
+
+const aRates = {
+  win:    rate(aTotals.wins    ?? 0, aTotals.races ?? 0),
+  podium: rate(aTotals.podiums ?? 0, aTotals.races ?? 0),
+  pole:   rate(aTotals.poles   ?? 0, aTotals.races ?? 0),
+};
+const bRates = {
+  win:    rate(bTotals.wins    ?? 0, bTotals.races ?? 0),
+  podium: rate(bTotals.podiums ?? 0, bTotals.races ?? 0),
+  pole:   rate(bTotals.poles   ?? 0, bTotals.races ?? 0),
+};
+
+const qTot = (agg.qualiAhead ?? 0) + (agg.qualiBehind ?? 0);
+const qPct = qTot > 0 ? Math.round(agg.qualiAhead / qTot * 100) : 50;
+const rTot = (agg.raceAhead  ?? 0) + (agg.raceBehind  ?? 0);
+const rPct = rTot > 0 ? Math.round(agg.raceAhead  / rTot * 100) : 50;
+
+const TEAM_COLOR: Record<string, string> = {
+  "red-bull": "#3671C6", "toro-rosso": "#4562FF", "rb": "#6692FF", "ferrari": "#E8002D",
+  "mclaren": "#FF8000", "mercedes": "#27F4D2", "williams": "#64C4FF", "aston-martin": "#229971",
+  "alpine": "#0093CC", "haas": "#B6BABD", "sauber": "#52E252", "renault": "#FFF500",
+  "racing-point": "#F596C8", "force-india": "#F596C8", "lotus-f1": "#FFB800", "brawn": "#B8FD6E",
+  "alfa-romeo": "#C92D4B", "jordan": "#E8B432", "benetton": "#00A650", "bmw-sauber": "#2E4BB1",
+  "bar": "#C8102E", "toyota": "#E00F3A", "minardi": "#1e1e1e", "jaguar": "#006540",
+  "arrows": "#F28A17", "prost": "#00488B", "stewart": "#D6001C",
+};
+const ac = (tid: string) => TEAM_COLOR[tid] ?? "#9aa0ab";
+
+const hasExcl = (agg.excl_selfWinDNF + agg.excl_mateWinDNF + agg.excl_tiedDNF + agg.excl_dns) > 0;
+
+// Inline toggle data — aggregate + per-season for client JS recompute
+const toggleData = {
+  agg: {
+    raceAhead: agg.raceAhead, raceBehind: agg.raceBehind, races: agg.races,
+    excl_selfWinDNF: agg.excl_selfWinDNF, excl_mateWinDNF: agg.excl_mateWinDNF,
+    excl_tiedDNF: agg.excl_tiedDNF, excl_dns: agg.excl_dns, excluded: agg.excluded,
+  },
+  seasons: (seasons as any[]).map(s => ({
+    year: s.year,
+    raceAhead: s.raceAhead, raceBehind: s.raceBehind, races: s.races,
+    excl_selfWinDNF: s.excl_selfWinDNF, excl_mateWinDNF: s.excl_mateWinDNF,
+    excl_tiedDNF: s.excl_tiedDNF, excl_dns: s.excl_dns, excluded: s.excluded,
+  })),
+};
+
+const title = `${aName} vs ${bName} — Teammate H2H | f1delta`;
+const desc  = `${aName} vs ${bName}: teammate head-to-head qualifying and race comparison${seasonsShared.length > 1 ? ` across ${seasonsShared.length} seasons` : ""} (${yearSpan}).`;
+---
+
+<BaseLayout
+  title={title}
+  description={desc}
+  canonical={`https://f1delta.com/h2h/${pairing}`}
+>
+  <div class="h2h-wrap">
+
+    <!-- Header -->
+    <div class="h2h-header">
+      <div class="h2h-meta">
+        {sharedTeams.map((t, i) => (
+          <>
+            <span class="dot" style={`background:${ac(t.constructorId)}`}></span>
+            <a class="team-link" href={`/teams/${t.constructorId}`}>{t.name}</a>
+            {i < sharedTeams.length - 1 && <span class="team-sep"> · </span>}
+          </>
+        ))}
+        <span class="meta-sep">·</span>
+        <span class="year-span">{yearSpan}</span>
+        <span class="meta-sep">·</span>
+        <span class="season-count">{seasonsShared.length} season{seasonsShared.length > 1 ? "s" : ""}</span>
+      </div>
+      <h1>
+        <a href={`/drivers/${aId}`} class="h2h-name">{aName}</a>
+        <span class="h2h-vs">vs</span>
+        <a href={`/drivers/${bId}`} class="h2h-name">{bName}</a>
+      </h1>
+    </div>
+
+    <!-- Career callout strip -->
+    <div class="h2h-callouts">
+      <div class="callout">
+        <span class="cl-label">Qualifying</span>
+        <div class="cl-h2">
+          <span class="sc">
+            {agg.qualiAhead > agg.qualiBehind
+              ? <><b>{agg.qualiAhead}</b>–{agg.qualiBehind}</>
+              : agg.qualiAhead < agg.qualiBehind
+                ? <>{agg.qualiAhead}–<b>{agg.qualiBehind}</b></>
+                : <>{agg.qualiAhead}–{agg.qualiBehind}</>}
+          </span>
+          <span class="bar"><i style={`width:${qPct}%`}></i></span>
+        </div>
+        <span class="cl-sub">{agg.bothQualified}r compared</span>
+      </div>
+
+      <div class="callout">
+        <span class="cl-label">Race</span>
+        <div class="cl-h2">
+          <span class="sc" id="h2h-race-score">
+            {agg.raceAhead > agg.raceBehind
+              ? <><b>{agg.raceAhead}</b>–{agg.raceBehind}</>
+              : agg.raceAhead < agg.raceBehind
+                ? <>{agg.raceAhead}–<b>{agg.raceBehind}</b></>
+                : <>{agg.raceAhead}–{agg.raceBehind}</>}
+          </span>
+          <span class="bar"><i id="h2h-race-bar" style={`width:${rPct}%`}></i></span>
+        </div>
+        <span class="cl-sub" id="h2h-race-sub">
+          {agg.races}r compared{agg.excluded > 0 ? `, ${agg.excluded} excl.` : ""}
+        </span>
+      </div>
+
+      <div class="callout">
+        <span class="cl-label">Points (shared seasons)</span>
+        <span class="cl-value">{fmt(agg.pointsSelf)}</span>
+        <span class="cl-sub">vs {fmt(agg.pointsMate)}</span>
+      </div>
+    </div>
+
+    <!-- Career rates — labeled explicitly as career-wide -->
+    <div class="h2h-rates">
+      <div class="rate-box">
+        <div class="rate-head">
+          <a href={`/drivers/${aId}`} class="rate-name">{aName}</a>
+          <span class="rate-label">career rate</span>
+        </div>
+        <div class="rate-row"><span class="rk">Win</span><span class="rv">{aRates.win}%</span></div>
+        <div class="rate-row"><span class="rk">Podium</span><span class="rv">{aRates.podium}%</span></div>
+        <div class="rate-row"><span class="rk">Pole</span><span class="rv">{aRates.pole}%</span></div>
+      </div>
+      <div class="rate-box">
+        <div class="rate-head">
+          <a href={`/drivers/${bId}`} class="rate-name">{bName}</a>
+          <span class="rate-label">career rate</span>
+        </div>
+        <div class="rate-row"><span class="rk">Win</span><span class="rv">{bRates.win}%</span></div>
+        <div class="rate-row"><span class="rk">Podium</span><span class="rv">{bRates.podium}%</span></div>
+        <div class="rate-row"><span class="rk">Pole</span><span class="rv">{bRates.pole}%</span></div>
+      </div>
+    </div>
+
+    <!-- Ad slot — between callout and season table (E2) -->
+    <div id="h2h-ad-slot" data-ad-slot></div>
+
+    <!-- Toggles -->
+    {hasExcl && (
+      <div class="h2h-toggles">
+        <div class="tgl-group">
+          <button class="tgl active" data-mode="default">Default</button>
+          <button class="tgl" data-mode="dnf">+DNF</button>
+          <button class="tgl" data-mode="dns">+DNS</button>
+        </div>
+        <span class="tgl-hint">+DNF counts classified retirements · +DNS adds all contested races</span>
+      </div>
+    )}
+
+    <!-- Season-by-season table -->
+    <div class="card">
+      <div class="table-scroll">
+        <table data-f1-table>
+          <thead>
+            <tr>
+              <th class="th-yr">Season</th>
+              <th class="th-h2">Qualifying</th>
+              <th class="th-h2">Race</th>
+              <th class="th-pts">Points</th>
+            </tr>
+          </thead>
+          <tbody>
+            {(seasons as any[]).map((s) => {
+              const sqTot = (s.qualiAhead ?? 0) + (s.qualiBehind ?? 0);
+              const sqPct = sqTot > 0 ? Math.round(s.qualiAhead / sqTot * 100) : 50;
+              const srTot = (s.raceAhead ?? 0) + (s.raceBehind ?? 0);
+              const srPct = srTot > 0 ? Math.round(s.raceAhead / srTot * 100) : 50;
+              return (
+                <tr data-season={s.year}>
+                  <td class="td-yr"><a href={`/standings/${s.year}`}>{s.year}</a></td>
+                  <td class="td-h2">
+                    <span class="sc">
+                      {s.qualiAhead > s.qualiBehind
+                        ? <><b>{s.qualiAhead}</b>–{s.qualiBehind}</>
+                        : s.qualiAhead < s.qualiBehind
+                          ? <>{s.qualiAhead}–<b>{s.qualiBehind}</b></>
+                          : <>{s.qualiAhead}–{s.qualiBehind}</>}
+                    </span>
+                    <span class="bar"><i style={`width:${sqPct}%`}></i></span>
+                  </td>
+                  <td class="td-h2">
+                    <span class="sc h2h-s-score"
+                      data-ra={s.raceAhead} data-rb={s.raceBehind} data-rc={s.races}
+                      data-esw={s.excl_selfWinDNF} data-emw={s.excl_mateWinDNF}
+                      data-etd={s.excl_tiedDNF} data-ed={s.excl_dns}>
+                      {s.raceAhead > s.raceBehind
+                        ? <><b>{s.raceAhead}</b>–{s.raceBehind}</>
+                        : s.raceAhead < s.raceBehind
+                          ? <>{s.raceAhead}–<b>{s.raceBehind}</b></>
+                          : <>{s.raceAhead}–{s.raceBehind}</>}
+                    </span>
+                    <span class="bar">
+                      <i class="h2h-s-bar"
+                        data-ra={s.raceAhead} data-rb={s.raceBehind}
+                        data-esw={s.excl_selfWinDNF} data-emw={s.excl_mateWinDNF}
+                        style={`width:${srPct}%`}></i>
+                    </span>
+                  </td>
+                  <td class="td-pts">
+                    <b>{fmt(s.pointsSelf)}</b>
+                    <span class="vs">{fmt(s.pointsMate)}</span>
+                  </td>
+                </tr>
+              );
+            })}
+          </tbody>
+        </table>
+      </div>
+    </div>
+
+    <p class="foot">Data: <a href="https://github.com/f1db/f1db">F1DB</a> (CC BY 4.0) · f1delta unofficial · Career rates span full career, not shared stint only.</p>
+
+  </div>
+</BaseLayout>
+
+<script define:vars={{ toggleData }}>
+  function compute(entry, mode) {
+    const ra = entry.raceAhead, rb = entry.raceBehind, rc = entry.races;
+    const esw = entry.excl_selfWinDNF, emw = entry.excl_mateWinDNF;
+    const etd = entry.excl_tiedDNF, ed = entry.excl_dns;
+    let sw = ra, mw = rb, total = rc;
+    if (mode === "dnf" || mode === "dns") { sw = ra + esw; mw = rb + emw; total = rc + esw + emw; }
+    const contested = mode === "dns" ? total + etd + ed : total;
+    const pct = (sw + mw) > 0 ? Math.round(sw / (sw + mw) * 100) : 50;
+    return { sw, mw, total, contested, pct };
+  }
+
+  function scoreHTML(sw, mw) {
+    if (sw > mw) return `<b>${sw}</b>–${mw}`;
+    if (mw > sw) return `${sw}–<b>${mw}</b>`;
+    return `${sw}–${mw}`;
+  }
+
+  function update(mode) {
+    // Career race callout
+    const { sw, mw, total, contested, pct } = compute(toggleData.agg, mode);
+    const scoreEl = document.getElementById("h2h-race-score");
+    const barEl   = document.getElementById("h2h-race-bar");
+    const subEl   = document.getElementById("h2h-race-sub");
+    if (scoreEl) scoreEl.innerHTML = scoreHTML(sw, mw);
+    if (barEl)   barEl.style.width = pct + "%";
+    if (subEl) {
+      const excl = toggleData.agg.excluded - (sw - toggleData.agg.raceAhead) - (mw - toggleData.agg.raceBehind);
+      const base = `${total}r compared`;
+      const contStr = mode === "dns" && contested > total ? `, ${contested} contested` : "";
+      const exclStr = excl > 0 && mode !== "dns" ? `, ${excl} excl.` : "";
+      subEl.textContent = base + contStr + exclStr;
+    }
+
+    // Season rows
+    for (const sEl of document.querySelectorAll(".h2h-s-score")) {
+      const ra = +sEl.dataset.ra, rb = +sEl.dataset.rb, rc = +sEl.dataset.rc;
+      const esw = +sEl.dataset.esw, emw = +sEl.dataset.emw;
+      const etd = +sEl.dataset.etd, ed = +sEl.dataset.ed;
+      const s = { raceAhead: ra, raceBehind: rb, races: rc,
+        excl_selfWinDNF: esw, excl_mateWinDNF: emw, excl_tiedDNF: etd, excl_dns: ed };
+      const { sw: sw2, mw: mw2, pct: pct2 } = compute(s, mode);
+      sEl.innerHTML = scoreHTML(sw2, mw2);
+    }
+    for (const bEl of document.querySelectorAll(".h2h-s-bar")) {
+      const ra = +bEl.dataset.ra, rb = +bEl.dataset.rb;
+      const esw = +bEl.dataset.esw, emw = +bEl.dataset.emw;
+      const s = { raceAhead: ra, raceBehind: rb, races: 0,
+        excl_selfWinDNF: esw, excl_mateWinDNF: emw, excl_tiedDNF: 0, excl_dns: 0 };
+      const { pct: pct2 } = compute(s, mode);
+      bEl.style.width = pct2 + "%";
+    }
+
+    // Active button
+    for (const btn of document.querySelectorAll("[data-mode]")) {
+      btn.classList.toggle("active", btn.dataset.mode === mode);
+    }
+  }
+
+  for (const btn of document.querySelectorAll("[data-mode]")) {
+    btn.addEventListener("click", () => update(btn.dataset.mode));
+  }
+</script>
+
+<style>
+  .h2h-wrap {
+    max-width: 760px; margin: 0 auto; padding: 20px 20px 56px;
+    font-family: system-ui, -apple-system, "Segoe UI", Roboto, sans-serif;
+    color: var(--ink, #16161a);
+  }
+
+  /* Header */
+  .h2h-header { margin-bottom: 22px; }
+  .h2h-meta {
+    display: flex; align-items: center; gap: 7px; flex-wrap: wrap;
+    font-size: 12px; color: var(--dim, #6b6b70); margin-bottom: 8px;
+  }
+  .dot { display: inline-block; width: 8px; height: 8px; border-radius: 50%; flex-shrink: 0; }
+  .team-link { color: var(--dim, #6b6b70); text-decoration: none; font-weight: 500; }
+  .team-link:hover { color: var(--ink, #16161a); }
+  .team-sep, .meta-sep { color: var(--faint, #9398a3); }
+  .year-span { font-weight: 500; }
+  .season-count { color: var(--faint, #9398a3); }
+
+  h1 {
+    font-size: clamp(20px, 4vw, 28px); font-weight: 700; margin: 0;
+    letter-spacing: -.01em; line-height: 1.15; display: flex;
+    align-items: baseline; flex-wrap: wrap; gap: 8px;
+  }
+  .h2h-name {
+    color: var(--red, #e10600); text-decoration: none; font-weight: 700;
+  }
+  .h2h-name:hover { color: #b80500; }
+  .h2h-vs {
+    font-size: 14px; font-weight: 400; color: var(--dim, #6b6b70);
+    text-transform: uppercase; letter-spacing: .08em;
+  }
+
+  /* Career callout strip */
+  .h2h-callouts {
+    display: grid; grid-template-columns: repeat(auto-fill, minmax(150px, 1fr));
+    gap: 8px; margin-bottom: 12px;
+  }
+  .callout {
+    background: #fff; border: 1px solid var(--line, #e4e4df); border-radius: 6px;
+    padding: 10px 12px; display: flex; flex-direction: column; gap: 2px;
+  }
+  .cl-label {
+    font-size: 10px; font-weight: 600; text-transform: uppercase;
+    letter-spacing: .06em; color: var(--dim, #6b6b70);
+  }
+  .cl-h2 { display: flex; flex-direction: column; gap: 5px; }
+  .cl-value { font-size: 18px; font-weight: 700; color: var(--ink, #16161a); line-height: 1.1; }
+  .cl-sub { font-size: 11px; color: var(--faint, #9398a3); }
+
+  .sc { font-family: "JetBrains Mono", ui-monospace, monospace; font-size: 13px; color: var(--dim, #6b6b70); }
+  .sc b { color: var(--ink, #16161a); font-weight: 700; }
+  .bar {
+    display: block; height: 4px; border-radius: 2px;
+    background: var(--line, #e4e4df); overflow: hidden; max-width: 80px;
+  }
+  .bar i {
+    display: block; height: 100%; background: var(--red, #e10600); opacity: .78;
+    transition: width .25s ease;
+  }
+
+  /* Career rates */
+  .h2h-rates {
+    display: grid; grid-template-columns: 1fr 1fr; gap: 8px; margin-bottom: 14px;
+  }
+  .rate-box {
+    background: #fff; border: 1px solid var(--line, #e4e4df); border-radius: 6px;
+    padding: 10px 12px;
+  }
+  .rate-head {
+    display: flex; align-items: baseline; justify-content: space-between;
+    gap: 6px; margin-bottom: 8px;
+  }
+  .rate-name {
+    font-size: 12px; font-weight: 600; color: var(--ink, #16161a);
+    text-decoration: none; white-space: nowrap; overflow: hidden; text-overflow: ellipsis;
+  }
+  .rate-name:hover { color: var(--red, #e10600); }
+  .rate-label {
+    font-size: 9px; font-weight: 600; text-transform: uppercase; letter-spacing: .06em;
+    color: var(--faint, #9398a3); flex-shrink: 0;
+  }
+  .rate-row { display: flex; justify-content: space-between; align-items: baseline; padding: 2px 0; }
+  .rk { font-size: 11px; color: var(--dim, #6b6b70); }
+  .rv { font-family: "JetBrains Mono", ui-monospace, monospace; font-size: 12px; font-weight: 600; color: var(--ink, #16161a); }
+
+  /* Ad slot */
+  #h2h-ad-slot {
+    margin: 14px 0; min-height: 0;
+  }
+
+  /* Toggles */
+  .h2h-toggles {
+    display: flex; align-items: center; gap: 10px; flex-wrap: wrap;
+    margin-bottom: 10px;
+  }
+  .tgl-group { display: flex; gap: 4px; }
+  .tgl {
+    font-size: 11px; font-weight: 600; padding: 4px 10px;
+    border: 1px solid var(--line, #e4e4df); border-radius: 4px;
+    background: #fff; color: var(--dim, #6b6b70); cursor: pointer;
+    letter-spacing: .03em; transition: background .15s, color .15s, border-color .15s;
+  }
+  .tgl:hover { border-color: var(--red, #e10600); color: var(--red, #e10600); }
+  .tgl.active { background: var(--red, #e10600); color: #fff; border-color: var(--red, #e10600); }
+  .tgl-hint { font-size: 11px; color: var(--faint, #9398a3); }
+
+  /* Season table */
+  .card {
+    background: #fff; border: 1px solid var(--line, #e4e4df);
+    border-radius: 8px; overflow: clip;
+  }
+  .th-yr, .td-yr { width: 68px; }
+  .th-h2, .td-h2 { min-width: 90px; }
+  .th-pts, .td-pts { text-align: right; min-width: 80px; }
+
+  .td-yr a { color: var(--red, #e10600); text-decoration: none; font-weight: 600; font-size: 13px; }
+  .td-yr a:hover { color: #b80500; }
+
+  .td-h2 { text-align: left; }
+  .td-h2 .sc { font-size: 12px; }
+  .td-h2 .bar { margin-top: 4px; max-width: 60px; }
+
+  .td-pts {
+    font-family: "JetBrains Mono", ui-monospace, monospace;
+    font-size: 12px; color: var(--dim, #6b6b70); text-align: right;
+  }
+  .td-pts b { color: var(--ink, #16161a); font-weight: 700; display: block; }
+  .td-pts .vs { display: block; font-size: 11px; color: var(--faint, #9398a3); margin-top: 1px; }
+  .td-pts .vs::before { content: "vs "; }
+
+  /* Foot */
+  .foot {
+    font-size: 11px; color: var(--faint, #9398a3); text-align: center;
+    padding: 16px 0 0; line-height: 1.5;
+  }
+  .foot a { color: var(--faint, #9398a3); }
+  .foot a:hover { color: var(--ink, #16161a); }
+
+  @media (max-width: 500px) {
+    .h2h-wrap { padding: 12px 12px 48px; }
+    .h2h-rates { grid-template-columns: 1fr; }
+  }
+</style>
