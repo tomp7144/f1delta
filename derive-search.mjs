@@ -65,6 +65,17 @@ for (const s of r("data/standings/index.json").seasons) {
   });
 }
 
+// Races
+for (const race of r("data/races/index.json").races) {
+  entries.push({
+    type: "race",
+    label: `${race.year} ${race.gpName}`,
+    url: `/races/${race.slug}`,
+    year: race.year,
+    country: race.gpCountry ?? null,
+  });
+}
+
 // Records boards
 const SCOPE_LABELS = {
   career: "All-Time", season: "Single Season",

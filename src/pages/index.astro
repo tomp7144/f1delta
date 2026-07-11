@@ -200,6 +200,7 @@ const hasFant = topPPM.length > 0 || risers.length > 0 || latestF1dSummary;
       { type: "person",  label: "People",       cap: 4 },
       { type: "circuit", label: "Circuits",     cap: 3 },
       { type: "gp",      label: "Grands Prix",  cap: 3 },
+      { type: "race",    label: "Races",        cap: 5 },
       { type: "season",  label: "Seasons",      cap: 3 },
       { type: "record",  label: "Records",      cap: 5 },
     ];
@@ -224,6 +225,7 @@ const hasFant = topPPM.length > 0 || risers.length > 0 || latestF1dSummary;
         e.type === "person"  ? [e.label, ...(e.roles || [])] :
         e.type === "circuit" ? [e.label, e.country, e.place] :
         e.type === "gp"      ? [e.label, e.short, e.country] :
+        e.type === "race"    ? [e.label, String(e.year), e.country] :
         e.type === "season"  ? [String(e.year), e.champion, e.ccode] :
         /* record */           [e.label];
       return Math.max(0, ...f.filter(Boolean).map(s => matchScore(s, needle)));
@@ -234,6 +236,7 @@ const hasFant = topPPM.length > 0 || risers.length > 0 || latestF1dSummary;
       if (e.type === "person")  return (e.roles || []).map(r => ROLE_LABELS[r] || r).join(", ");
       if (e.type === "circuit") return e.country || "";
       if (e.type === "gp")      return e.country || "";
+      if (e.type === "race")    return e.country || "";
       if (e.type === "season")  return e.champion ? e.champion + (e.ccode ? " · " + e.ccode : "") : "In progress";
       return "";
     }

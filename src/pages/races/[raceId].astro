@@ -1,0 +1,294 @@
+---
+export const prerender = true;
+import fs from "node:fs";
+import path from "node:path";
+import BaseLayout from "../../layouts/BaseLayout.astro";
+
+export function getStaticPaths() {
+  const { races } = JSON.parse(
+    fs.readFileSync(path.resolve("./data/races/index.json"), "utf8")
+  );
+  return races.map((r: any) => ({ params: { raceId: r.slug } }));
+}
+
+const { raceId } = Astro.params;
+const race = JSON.parse(
+  fs.readFileSync(path.resolve(`./data/races/${raceId}.json`), "utf8")
+);
+
+const dateFormatted = new Date(race.date + "T00:00:00Z").toLocaleDateString("en-GB", {
+  year: "numeric", month: "long", day: "numeric", timeZone: "UTC",
+});
+
+const FORMAT_LABELS: Record<string, string> = {
+  KNOCKOUT: "Q1 / Q2 / Q3 knockout",
+  TWO_SESSION: "Two-session",
+  ONE_SESSION: "One-session",
+  FOUR_LAPS: "Four-lap",
+  ONE_LAP: "One-lap",
+  AGGREGATE: "Aggregate",
+  ELIMINATION: "Elimination",
+  SPRINT_RACE: "Sprint qualifying",
+};
+const qualLabel = FORMAT_LABELS[race.qualifyingFormat ?? ""] ?? (race.qualifyingFormat ?? "");
+const isKnockout = race.qualifyingFormat === "KNOCKOUT" || race.qualifyingFormat === "ELIMINATION";
+
+const NON_NUMERIC = new Set(["DNF","DNS","DSQ","DNQ","DNPQ","DNP","EX","NC"]);
+const isNonFinisher = (posText: string) => NON_NUMERIC.has(posText);
+
+const title = `${race.year} ${race.gpName} — Race Result | f1delta`;
+const desc = `Full results for the ${race.year} ${race.gpName}: finishing order, qualifying, fastest lap, and race details. Round ${race.round} of ${race.totalRounds}.`;
+---
+
+<BaseLayout
+  title={title}
+  description={desc}
+  canonical={`https://f1delta.com/races/${raceId}`}
+>
+  <div class="rp-wrap">
+
+    <div class="rp-header">
+      <h1>{race.gpName} <span class="rp-year">{race.year}</span></h1>
+      <p class="rp-meta">
+        Round {race.round} of {race.totalRounds}
+        &nbsp;·&nbsp;{dateFormatted}
+        &nbsp;·&nbsp;<a href={`/circuits/${race.circuitId}`}>{race.circuitName}</a>
+        {race.laps && <>&nbsp;·&nbsp;{race.laps} laps</>}
+      </p>
+      {(race.wdcDecider || race.wccDecider) && (
+        <p class="rp-badges">
+          {race.wdcDecider && <span class="rp-badge">WDC Decider</span>}
+          {race.wccDecider && <span class="rp-badge">WCC Decider</span>}
+        </p>
+      )}
+    </div>
+
+    <h2 class="rp-section-head">Race Result</h2>
+    <div class="table-scroll">
+      <table data-f1-table class="rp-table">
+        <thead>
+          <tr>
+            <th>Pos</th>
+            <th class="rp-th-driver">Driver</th>
+            <th class="rp-th-team">Team</th>
+            <th class="rp-th-num">Grid</th>
+            <th class="rp-th-gap">Time / Gap</th>
+            <th class="rp-th-num">Pts</th>
+          </tr>
+        </thead>
+        <tbody>
+          {race.results.map((r: any) => {
+            const dnf = isNonFinisher(r.posText);
+            const gapCell = r.gap
+              ? r.gap
+              : r.gapLaps
+                ? `+${r.gapLaps} Lap${r.gapLaps > 1 ? "s" : ""}`
+                : r.time
+                  ? r.time
+                  : r.reasonRetired
+                    ? r.reasonRetired
+                    : "—";
+            return (
+              <tr class={dnf ? "rp-dnf" : ""}>
+                <td class="rp-pos">{r.posText}</td>
+                <td>
+                  {r.code && <span class="rp-code">{r.code}</span>}
+                  <a href={`/drivers/${r.driverId}`}>{r.driverName}</a>
+                  {r.fastestLap && <span class="rp-fl">FL</span>}
+                  {r.grandSlam && <span class="rp-gs">GS</span>}
+                </td>
+                <td><a href={`/teams/${r.constructorId}`}>{r.constructorName}</a></td>
+                <td class="rp-num">{r.gridText ?? "—"}</td>
+                <td class={"rp-gap" + (dnf && r.reasonRetired ? " rp-reason" : "")}>{gapCell}</td>
+                <td class="rp-num">{r.points > 0 ? r.points : "—"}</td>
+              </tr>
+            );
+          })}
+        </tbody>
+      </table>
+    </div>
+
+    {race.qualifying && race.qualifying.length > 0 && (
+      <>
+        <h2 class="rp-section-head">Qualifying{qualLabel ? ` — ${qualLabel}` : ""}</h2>
+        <div class="table-scroll">
+          <table data-f1-table class="rp-table rp-qual">
+            <thead>
+              <tr>
+                <th>Pos</th>
+                <th class="rp-th-driver">Driver</th>
+                <th class="rp-th-team">Team</th>
+                {isKnockout ? (
+                  <>
+                    <th class="rp-th-time">Q1</th>
+                    <th class="rp-th-time">Q2</th>
+                    <th class="rp-th-time">Q3</th>
+                  </>
+                ) : (
+                  <th class="rp-th-time">Time</th>
+                )}
+              </tr>
+            </thead>
+            <tbody>
+              {race.qualifying.map((q: any) => {
+                const nonQ = isNonFinisher(q.posText);
+                return (
+                  <tr class={nonQ ? "rp-dnf" : ""}>
+                    <td class="rp-pos">{q.posText}</td>
+                    <td>
+                      {q.code && <span class="rp-code">{q.code}</span>}
+                      <a href={`/drivers/${q.driverId}`}>{q.driverName}</a>
+                    </td>
+                    <td><a href={`/teams/${q.constructorId}`}>{q.constructorName}</a></td>
+                    {isKnockout ? (
+                      <>
+                        <td class="rp-time">{q.q1 ?? "—"}</td>
+                        <td class="rp-time">{q.q2 ?? "—"}</td>
+                        <td class="rp-time">{q.q3 ?? "—"}</td>
+                      </>
+                    ) : (
+                      <td class="rp-time">{q.time ?? "—"}</td>
+                    )}
+                  </tr>
+                );
+              })}
+            </tbody>
+          </table>
+        </div>
+      </>
+    )}
+
+    {(race.fastestLap || race.dotd) && (
+      <p class="rp-footnotes">
+        {race.fastestLap && (
+          <span>
+            Fastest lap:&nbsp;<a href={`/drivers/${race.fastestLap.driverId}`}>{race.fastestLap.driverName}</a>
+            &nbsp;{race.fastestLap.time}{race.fastestLap.lap != null ? ` (lap ${race.fastestLap.lap})` : ""}
+          </span>
+        )}
+        {race.fastestLap && race.dotd && <span class="rp-sep">&nbsp;·&nbsp;</span>}
+        {race.dotd && (
+          <span>
+            Driver of the Day:&nbsp;<a href={`/drivers/${race.dotd.driverId}`}>{race.dotd.driverName}</a>
+          </span>
+        )}
+      </p>
+    )}
+
+  </div>
+</BaseLayout>
+
+<style>
+  .rp-wrap {
+    max-width: 860px;
+    margin: 0 auto;
+    padding: 0 20px 48px;
+  }
+  .rp-header { margin-bottom: 28px; }
+  .rp-header h1 {
+    font-family: var(--disp);
+    font-size: clamp(22px, 4vw, 30px);
+    font-weight: 700;
+    letter-spacing: .01em;
+    color: var(--ink);
+    margin-bottom: 6px;
+  }
+  .rp-year { color: var(--red); }
+  .rp-meta {
+    font-size: 13px;
+    color: var(--dim);
+    margin: 0;
+  }
+  .rp-meta a { color: inherit; text-decoration: underline; text-underline-offset: 2px; }
+  .rp-badges { margin-top: 8px; }
+  .rp-badge {
+    display: inline-block;
+    font-size: 10px;
+    font-weight: 700;
+    letter-spacing: .06em;
+    text-transform: uppercase;
+    background: var(--champ);
+    color: var(--ink);
+    border-radius: 3px;
+    padding: 2px 7px;
+    margin-right: 6px;
+  }
+  .rp-section-head {
+    font-family: var(--disp);
+    font-size: 14px;
+    font-weight: 700;
+    letter-spacing: .06em;
+    text-transform: uppercase;
+    color: var(--dim);
+    margin: 28px 0 8px;
+  }
+
+  .rp-table { width: 100%; }
+  .rp-pos  { width: 42px; text-align: center; font-variant-numeric: tabular-nums; }
+  .rp-num  { width: 48px; text-align: right;  font-variant-numeric: tabular-nums; font-family: var(--mono); font-size: 12px; color: var(--dim); }
+  .rp-gap  { font-family: var(--mono); font-size: 12px; }
+  .rp-time { font-family: var(--mono); font-size: 12px; }
+  .rp-reason { color: var(--faint); font-style: italic; }
+
+  .rp-th-driver { min-width: 140px; }
+  .rp-th-team   { min-width: 110px; }
+  .rp-th-num    { width: 48px; text-align: right; }
+  .rp-th-gap    { min-width: 110px; }
+  .rp-th-time   { min-width: 80px; }
+
+  .rp-code {
+    font-family: var(--disp);
+    font-weight: 700;
+    font-size: 11px;
+    color: var(--red);
+    margin-right: 6px;
+    letter-spacing: .03em;
+  }
+  .rp-fl {
+    display: inline-block;
+    font-size: 9px;
+    font-weight: 700;
+    letter-spacing: .04em;
+    color: #7c3aed;
+    border: 1px solid #7c3aed;
+    border-radius: 2px;
+    padding: 0 3px;
+    margin-left: 5px;
+    vertical-align: middle;
+  }
+  .rp-gs {
+    display: inline-block;
+    font-size: 9px;
+    font-weight: 700;
+    letter-spacing: .04em;
+    color: var(--red);
+    border: 1px solid var(--red);
+    border-radius: 2px;
+    padding: 0 3px;
+    margin-left: 5px;
+    vertical-align: middle;
+  }
+  .rp-dnf td { color: var(--faint); }
+  .rp-dnf td a { color: var(--faint); }
+
+  .rp-footnotes {
+    font-size: 12px;
+    color: var(--dim);
+    margin-top: 14px;
+  }
+  .rp-footnotes a { color: inherit; text-decoration: underline; text-underline-offset: 2px; }
+  .rp-sep { color: var(--line); }
+
+  /* Frozen first column on horizontal scroll */
+  .table-scroll .rp-table th:first-child,
+  .table-scroll .rp-table td:first-child {
+    position: sticky;
+    left: 0;
+    background: var(--surface);
+    z-index: 1;
+  }
+
+  @media (max-width: 500px) {
+    .rp-wrap { padding: 0 12px 40px; }
+  }
+</style>
