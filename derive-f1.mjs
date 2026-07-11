@@ -79,6 +79,11 @@ function newSeasonH2H(year) {
     raceAhead: 0, raceBehind: 0,
     dnfSelf: 0, dnfMate: 0,
     pointsSelf: 0, pointsMate: 0,
+    // excl_* repartition `excluded` for client-side toggle variants (no refetch)
+    excl_selfWinDNF: 0, // both classified (posN != null), self ahead, but ≥1 retired
+    excl_mateWinDNF: 0, // both classified, mate ahead, but ≥1 retired
+    excl_tiedDNF: 0,    // both classified, same posN (shared car)
+    excl_dns: 0,         // ≥1 unclassified (posN == null) — DNS/collision DNF/DSQ
   };
 }
 
@@ -191,6 +196,15 @@ async function main() {
             else if (self.positionNumber > mate.positionNumber) s.raceBehind++;
           } else {
             s.excluded++;
+            const sPos = self.positionNumber;
+            const mPos = mate.positionNumber;
+            if (sPos != null && mPos != null) {
+              if (sPos < mPos)      s.excl_selfWinDNF++;
+              else if (sPos > mPos) s.excl_mateWinDNF++;
+              else                  s.excl_tiedDNF++;
+            } else {
+              s.excl_dns++;
+            }
           }
 
           s.pointsSelf += self.points ?? 0;
@@ -248,12 +262,21 @@ async function main() {
         const agg = seasons.reduce((a, s) => {
           for (const k of ["races", "excluded", "bothQualified", "qualiAhead", "qualiBehind",
             "raceAhead", "raceBehind", "dnfSelf", "dnfMate",
-            "pointsSelf", "pointsMate"]) a[k] += s[k];
+            "pointsSelf", "pointsMate",
+            "excl_selfWinDNF", "excl_mateWinDNF", "excl_tiedDNF", "excl_dns"]) a[k] += s[k];
           return a;
         }, newSeasonH2H(null));
         delete agg.year;
         agg.pointsSelf = round1(agg.pointsSelf);
         agg.pointsMate = round1(agg.pointsMate);
+        // Invariant: four buckets must exactly repartition excluded (Rule D1)
+        for (const [entry, label] of [...seasons.map((s) => [s, `${driverId} vs ${mateId} ${s.year}`]), [agg, `${driverId} vs ${mateId} agg`]]) {
+          const sub = entry.excl_selfWinDNF + entry.excl_mateWinDNF + entry.excl_tiedDNF + entry.excl_dns;
+          if (sub !== entry.excluded) {
+            console.error(`INVARIANT FAIL ${label}: excl_* sum=${sub} but excluded=${entry.excluded}`);
+            process.exit(1);
+          }
+        }
         return {
           teammateId: mateId,
           teammate: meta.get(mateId)?.name ?? mateId,
@@ -347,8 +370,41 @@ async function main() {
     JSON.stringify({ count: neverStarted.length, drivers: neverStarted })
   );
 
+  // ---- h2h-pairings.json — pairing census for Brief 14's getStaticPaths ----
+  // Inclusion floor: ≥1 comparable race in any toggle mode
+  // (default raceAhead+raceBehind, or classified-DNF excl_selfWinDNF+excl_mateWinDNF).
+  // Contested-only or qualifying-only pairings are intentionally excluded.
+  const pairingMap = new Map(); // slug -> entry
+  for (const drvFile of index) {
+    const driverId = drvFile.driverId;
+    let driverData;
+    try {
+      driverData = JSON.parse(await readFile(path.join(OUT_DIR, `${driverId}.json`), "utf8"));
+    } catch { continue; }
+    for (const tm of (driverData.teammates ?? [])) {
+      const mateId = tm.teammateId;
+      const [a, b] = [driverId, mateId].sort();
+      const slug = `${a}-vs-${b}`;
+      if (pairingMap.has(slug)) continue; // already seen from other direction
+      const agg = tm.aggregate;
+      // read from A's perspective (A = alphabetically first driver)
+      const aIsFirst = a === driverId;
+      const defaultRaces = (agg.raceAhead ?? 0) + (agg.raceBehind ?? 0);
+      const dnfComparable = (agg.excl_selfWinDNF ?? 0) + (agg.excl_mateWinDNF ?? 0);
+      const totalComparable = defaultRaces + dnfComparable;
+      if (totalComparable < 1) continue; // below inclusion floor
+      pairingMap.set(slug, { slug, a, b, defaultRaces, dnfComparable, totalComparable });
+    }
+  }
+  const pairings = [...pairingMap.values()].sort((a, b) => a.slug.localeCompare(b.slug));
+  await writeFile(
+    path.join(path.resolve("./data"), "h2h-pairings.json"),
+    JSON.stringify({ count: pairings.length, pairings })
+  );
+
   console.log(`Derived ${index.length} drivers from F1DB -> ${OUT_DIR}`);
   console.log(`Never-started: ${neverStarted.length} drivers -> ${OUT_DIR}/never-started.json`);
+  console.log(`H2H pairing census: ${pairings.length} pairings -> data/h2h-pairings.json`);
 }
 
 main();
