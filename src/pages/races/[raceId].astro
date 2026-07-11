@@ -8,10 +8,19 @@ export function getStaticPaths() {
   const { races } = JSON.parse(
     fs.readFileSync(path.resolve("./data/races/index.json"), "utf8")
   );
-  return races.map((r: any) => ({ params: { raceId: r.slug } }));
+  // Chronological order (oldest first) for prev/next across season boundaries
+  const chrono = [...races].reverse();
+  return chrono.map((r: any, i: number) => {
+    const shortLabel = (entry: any) =>
+      `${entry.year} ${(entry.gpName as string).replace(" Grand Prix", " GP")}`;
+    const prev = i > 0 ? { slug: chrono[i - 1].slug, label: shortLabel(chrono[i - 1]) } : null;
+    const next = i < chrono.length - 1 ? { slug: chrono[i + 1].slug, label: shortLabel(chrono[i + 1]) } : null;
+    return { params: { raceId: r.slug }, props: { prevRace: prev, nextRace: next } };
+  });
 }
 
 const { raceId } = Astro.params;
+const { prevRace, nextRace } = Astro.props as { prevRace: { slug: string; label: string } | null; nextRace: { slug: string; label: string } | null };
 const race = JSON.parse(
   fs.readFileSync(path.resolve(`./data/races/${raceId}.json`), "utf8")
 );
@@ -47,8 +56,21 @@ const desc = `Full results for the ${race.year} ${race.gpName}: finishing order,
 >
   <div class="rp-wrap">
 
+    <div class="season-nav">
+      {prevRace
+        ? <a href={`/races/${prevRace.slug}`} class="snav-link">&#8592; {prevRace.label}</a>
+        : <span class="snav-blank"></span>}
+      <a href={`/standings/${race.year}`} class="snav-index">{race.year} Season</a>
+      {nextRace
+        ? <a href={`/races/${nextRace.slug}`} class="snav-link">{nextRace.label} &#8594;</a>
+        : <span class="snav-blank"></span>}
+    </div>
+
     <div class="rp-header">
-      <h1>{race.gpName} <span class="rp-year">{race.year}</span></h1>
+      <h1>
+        <a href={`/grands-prix/${race.grandPrixId}`} class="rp-gp-link">{race.gpName}</a>
+        <a href={`/standings/${race.year}`} class="rp-year">{race.year}</a>
+      </h1>
       <p class="rp-meta">
         Round {race.round} of {race.totalRounds}
         &nbsp;·&nbsp;{dateFormatted}
@@ -130,6 +152,8 @@ const desc = `Full results for the ${race.year} ${race.gpName}: finishing order,
       </table>
     </div>
 
+    <div class="rp-ad-slot" data-ad-slot></div>
+
     {race.qualifying && race.qualifying.length > 0 && (
       <>
         <h2 class="rp-section-head">Qualifying{qualLabel ? ` — ${qualLabel}` : ""}</h2>
@@ -180,7 +204,6 @@ const desc = `Full results for the ${race.year} ${race.gpName}: finishing order,
       </>
     )}
 
-
   </div>
 </BaseLayout>
 
@@ -188,7 +211,7 @@ const desc = `Full results for the ${race.year} ${race.gpName}: finishing order,
   .rp-wrap {
     max-width: 860px;
     margin: 0 auto;
-    padding: 0 20px 48px;
+    padding: 20px 20px 48px;
   }
   .rp-header { margin-bottom: 28px; }
   .rp-header h1 {
@@ -199,7 +222,17 @@ const desc = `Full results for the ${race.year} ${race.gpName}: finishing order,
     color: var(--ink);
     margin-bottom: 6px;
   }
-  .rp-year { color: var(--red); }
+  .rp-gp-link {
+    color: var(--ink);
+    text-decoration: none;
+  }
+  .rp-gp-link:hover { color: var(--red); }
+  .rp-year {
+    color: var(--red);
+    text-decoration: none;
+    margin-left: 6px;
+  }
+  .rp-year:hover { color: #b80500; }
   .rp-meta {
     font-size: 13px;
     color: var(--dim);
@@ -229,7 +262,7 @@ const desc = `Full results for the ${race.year} ${race.gpName}: finishing order,
     margin: 28px 0 8px;
   }
 
-  .rp-table { width: 100%; } /* f1-table.css handles base chrome; this keeps explicit width safe */
+  .rp-table { width: 100%; }
   .rp-pos  { width: 42px; text-align: center; font-variant-numeric: tabular-nums; }
   .rp-num  { width: 48px; text-align: right;  font-variant-numeric: tabular-nums; font-family: var(--mono); font-size: 12px; color: var(--dim); }
   .rp-gap  { font-family: var(--mono); font-size: 12px; }
@@ -241,6 +274,20 @@ const desc = `Full results for the ${race.year} ${race.gpName}: finishing order,
   .rp-th-num    { width: 48px; text-align: right; }
   .rp-th-gap    { min-width: 110px; }
   .rp-th-time   { min-width: 80px; }
+
+  /* Visible link treatment in result/qualifying rows */
+  .rp-table td a {
+    color: var(--ink);
+    text-decoration: none;
+    font-weight: 500;
+  }
+  .rp-table td a:hover {
+    color: var(--red);
+    text-decoration: underline;
+    text-underline-offset: 2px;
+  }
+  .rp-dnf td a { color: var(--faint); font-weight: 400; }
+  .rp-dnf td a:hover { color: var(--dim); text-decoration: underline; }
 
   .rp-code {
     font-family: var(--disp);
@@ -275,7 +322,6 @@ const desc = `Full results for the ${race.year} ${race.gpName}: finishing order,
     vertical-align: middle;
   }
   .rp-dnf td { color: var(--faint); }
-  .rp-dnf td a { color: var(--faint); }
 
   .rp-highlights {
     display: flex;
@@ -309,7 +355,12 @@ const desc = `Full results for the ${race.year} ${race.gpName}: finishing order,
     font-weight: 400;
   }
 
+  .rp-ad-slot {
+    margin: 20px 0;
+    min-height: 0;
+  }
+
   @media (max-width: 500px) {
-    .rp-wrap { padding: 0 12px 40px; }
+    .rp-wrap { padding: 12px 12px 40px; }
   }
 </style>

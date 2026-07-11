@@ -134,3 +134,20 @@
   z-index: 1;
   box-shadow: inset -1px 0 0 var(--line, #e4e4df);
 }
+
+/* ─── Prev / next season + race navigation ──────────────────────────────── */
+.season-nav {
+  display: flex; align-items: center; justify-content: space-between;
+  margin-bottom: 14px;
+}
+.snav-link {
+  font-size: 15px; color: var(--red); text-decoration: none;
+  padding: 4px 0; font-weight: 600;
+}
+.snav-link:hover { color: #b80500; }
+.snav-index {
+  font-size: 12px; color: var(--dim); text-decoration: none;
+  letter-spacing: .04em;
+}
+.snav-index:hover { color: var(--ink); }
+.snav-blank { display: inline-block; min-width: 80px; }
