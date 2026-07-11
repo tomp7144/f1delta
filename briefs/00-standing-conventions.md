@@ -26,6 +26,27 @@ Real queries are typed loosely: "malaysia 2016", "2016 malaysia", "hamilton 2016
 
 ---
 
+## ENGAGEMENT & MONETIZATION
+
+### RULE E1 — Connections must be visibly clickable, not just present
+The site's engine is engagement → pages viewed → occasional ad click. A link that's technically in the HTML but visually invisible (e.g. gray-on-gray) is functionally NOT there — it's a lost pageview and a lost ad impression.
+
+> **Every link/navigation element must be obviously clickable and easy to see.** Interconnection only pays off if people can see the connections and follow them. When adding links, make them invite the next click — clear affordance, sufficient contrast/size, use the red accent for primary navigation (prev/next arrows, "see all X" links). Discoverability is a first-class feature, not polish.
+
+Concretely: prev/next arrows are **red and prominent** (season + race, consistent). Driver/team/circuit names in tables read as tappable. "See all races" type links stand out. The goal is a rabbit hole people fall down — that's what keeps them on-site long enough to eventually click an ad.
+
+### RULE E2 — Design ad slots INTO the page rhythm, never bolted on
+Ads are the revenue, but retrofitting them into a finished layout produces the annoying, stupid-looking placements that drive people away. Avoid that by designing slots in as pages are built.
+
+> **When building any page, place ad slots at natural breaks — between logical sections, after the primary content, or in sensible gaps — NEVER mid-table, never between a heading and its content, never interrupting a data flow, never stacked. An ad should read as part of the page's rhythm, not landed on top of it.**
+
+- One or two tasteful slots per page max (per the free + ad-supported model — unobtrusive by design).
+- Reuse the established slot pattern (`#records-ad-slot`, race-page ad slot) so placement is consistent.
+- The paid "Go Ad-Free" option (Rule D2 payment stack) removes these for supporters.
+- Ads don't serve until AdSense approves — but the SLOTS should be designed in now so approval just lights them up cleanly, no retrofit.
+
+---
+
 ## URLS / SEO
 
 ### RULE U1 — Lock URL structure before generating pages at scale
