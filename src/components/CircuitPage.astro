@@ -1,6 +1,12 @@
 ---
+import fs from "node:fs";
+import path from "node:path";
 const { circuit } = Astro.props;
 const { stats, runningsList, layouts, grandsPrix } = circuit;
+// Build race slug lookup: "year:grandPrixId" → slug
+const { races: _allRaces } = JSON.parse(fs.readFileSync(path.resolve("./data/races/index.json"), "utf8"));
+const raceSlugMap = new Map<string, string>();
+for (const _r of _allRaces) raceSlugMap.set(`${_r.year}:${_r.grandPrixId}`, _r.slug);
 const multiLayout = layouts.length > 1;
 const multiGP = grandsPrix.length > 1;
 
@@ -147,7 +153,9 @@ const activeSpan = circuit.runningsList[0]?.year === circuit.runningsList[circui
             class:list={[{ "champ-row": r.champDecider }]}
           >
             <td class="yr">
-              <a href={`/standings/${r.year}`}>{r.year}</a>
+              {raceSlugMap.get(`${r.year}:${r.grandPrixId}`)
+                ? <a href={`/races/${raceSlugMap.get(`${r.year}:${r.grandPrixId}`)}`}>{r.year}</a>
+                : <a href={`/standings/${r.year}`}>{r.year}</a>}
               {r.grandSlam && <span class="badge gs" title="Grand Slam">GS</span>}
               {r.wdcDecider && <span class="badge wdc" title="WDC title decided here">WDC</span>}
               {r.wccDecider && <span class="badge wcc" title="WCC title decided here">WCC</span>}

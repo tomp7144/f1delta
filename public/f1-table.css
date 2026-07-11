@@ -146,8 +146,8 @@
 }
 .snav-link:hover { color: #b80500; }
 .snav-index {
-  font-size: 12px; color: var(--dim); text-decoration: none;
-  letter-spacing: .04em;
+  font-size: 15px; color: var(--red); text-decoration: none;
+  font-weight: 600;
 }
-.snav-index:hover { color: var(--ink); }
+.snav-index:hover { color: #b80500; }
 .snav-blank { display: inline-block; min-width: 80px; }

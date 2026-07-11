@@ -1,6 +1,12 @@
 ---
+import fs from "node:fs";
+import path from "node:path";
 const { gp, fantSummaries = {} } = Astro.props;
 const { stats, runningsList, circuits } = gp;
+// Build race slug lookup: raceId (numeric) → slug
+const { races: _allRaces } = JSON.parse(fs.readFileSync(path.resolve("./data/races/index.json"), "utf8"));
+const raceSlugMap = new Map<number, string>();
+for (const _r of _allRaces) raceSlugMap.set(_r.raceId, _r.slug);
 
 function flag(a2: string | null | undefined) {
   if (!a2 || a2.length !== 2) return "";
@@ -120,7 +126,9 @@ for (const r of runningsList) {
             class:list={[{ "champ-row": r.champDecider }]}
           >
             <td class="yr">
-              <a href={`/standings/${r.year}`}>{r.year}</a>
+              {raceSlugMap.get(r.raceId)
+                ? <a href={`/races/${raceSlugMap.get(r.raceId)}`}>{r.year}</a>
+                : <a href={`/standings/${r.year}`}>{r.year}</a>}
               {r.grandSlam && <span class="badge gs" title="Grand Slam">GS</span>}
               {r.wdcDecider && <span class="badge wdc" title="WDC title decided here">WDC</span>}
               {r.wccDecider && <span class="badge wcc" title="WCC title decided here">WCC</span>}

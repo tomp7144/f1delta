@@ -9,22 +9,28 @@ export function getStaticPaths() {
   const FANT_DIR = path.resolve("./public/fantasy/by-season");
   const index    = JSON.parse(fs.readFileSync(path.join(DIR, "index.json"), "utf8"));
   const allYears: number[] = index.seasons.map((s: any) => s.year);
+  // Build global race slug lookup: "year:grandPrixId" → slug
+  const { races: allRaces } = JSON.parse(fs.readFileSync(path.resolve("./data/races/index.json"), "utf8"));
+  const raceSlugs = new Map<string, string>();
+  for (const r of allRaces) raceSlugs.set(`${r.year}:${r.grandPrixId}`, r.slug);
   return index.seasons.map((s: any) => {
     let fantasyData: any = null;
     try { fantasyData = JSON.parse(fs.readFileSync(path.join(FANT_DIR, `${s.year}.json`), "utf8")); }
     catch { /* first build before history is generated */ }
+    const season = JSON.parse(fs.readFileSync(path.join(DIR, `${s.year}.json`), "utf8"));
+    const seasonRaceSlugs: Record<string, string> = {};
+    for (const r of (season.races ?? [])) {
+      const slug = raceSlugs.get(`${s.year}:${r.grandPrixId}`);
+      if (slug) seasonRaceSlugs[r.grandPrixId] = slug;
+    }
     return {
       params: { year: String(s.year) },
-      props: {
-        season: JSON.parse(fs.readFileSync(path.join(DIR, `${s.year}.json`), "utf8")),
-        allYears,
-        fantasyData,
-      },
+      props: { season, allYears, fantasyData, seasonRaceSlugs },
     };
   });
 }
 
-const { season, allYears, fantasyData } = Astro.props as { season: any; allYears: number[]; fantasyData: any };
+const { season, allYears, fantasyData, seasonRaceSlugs } = Astro.props as { season: any; allYears: number[]; fantasyData: any; seasonRaceSlugs: Record<string, string> };
 const { year, wccExists, wdcChampion, wccChampion, wdc, wcc, races, notes } = season;
 
 const prevYear = allYears.includes(year - 1) ? year - 1 : null;
@@ -176,7 +182,11 @@ const fmt = (n: number | null | undefined) => {
                 return (
                   <tr>
                     <td class="pos">{r.round}</td>
-                    <td class="gp"><a href={`/grands-prix/${r.grandPrixId}`}>{r.name}</a></td>
+                    <td class="gp">
+                      {seasonRaceSlugs[r.grandPrixId]
+                        ? <a href={`/races/${seasonRaceSlugs[r.grandPrixId]}`}>{r.name}</a>
+                        : <a href={`/grands-prix/${r.grandPrixId}`}>{r.name}</a>}
+                    </td>
                     <td class="drv"><a href={`/drivers/${encodeURIComponent(r.winnerId)}`}>{r.winner}</a></td>
                     <td class="drv fant-col">
                       {fr?.topId
