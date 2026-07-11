@@ -26,6 +26,11 @@ const { salary, rtf1, engineer } = Astro.props as {
   salary: any; rtf1: any; engineer: any;
 };
 
+const { pairings: _h2hPairings } = JSON.parse(
+  fs.readFileSync(path.resolve("./data/h2h-pairings.json"), "utf8")
+);
+const h2hSlugs = new Set<string>((_h2hPairings as any[]).map((p: any) => p.slug));
+
 const d = JSON.parse(
   fs.readFileSync(path.resolve(`./data/drivers/${id}.json`), "utf8")
 );
@@ -261,6 +266,12 @@ const hasFantasy = fantasy && Array.isArray(fantasy.seasons) && fantasy.seasons.
                           {yrRange(t.seasonsShared)}{" · "}{a.races}r compared
                           {(a.excluded ?? 0) > 0 ? `, ${a.excluded} excl.` : ""}
                         </span>
+                        {(() => {
+                          const slug = [id, t.teammateId].sort().join("-vs-");
+                          return h2hSlugs.has(slug)
+                            ? <a class="h2h-link" href={`/h2h/${slug}`}>→ Full breakdown</a>
+                            : null;
+                        })()}
                       </td>
                       <td class="h2">
                         <span class="sc"><b>{a.qualiAhead}</b>–{a.qualiBehind}</span>
@@ -498,6 +509,8 @@ const hasFantasy = fantasy && Array.isArray(fantasy.seasons) && fantasy.seasons.
   td.who a { font-weight: 600; color: var(--ink); text-decoration: none; }
   td.who a:hover { color: var(--red); }
   td.who .ys { display: block; font-family: var(--mono); font-size: 10px; color: var(--faint); margin-top: 2px; }
+  td.who .h2h-link { display: inline-block; margin-top: 3px; font-size: 11px; color: var(--red); text-decoration: none; font-weight: 600; }
+  td.who .h2h-link:hover { text-decoration: underline; }
 
   td.h2 { text-align: left; min-width: 74px; }
   td.h2 .sc { font-family: var(--mono); font-size: 12.5px; color: var(--dim); }
