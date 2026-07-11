@@ -70,6 +70,15 @@ const latestF1dRace    = latestF1dRaceId ? races2026.find((r: any) => r.id === l
 const latestF1dGpName  = latestF1dRace ? (gpNames.get(latestF1dRace.grandPrixId) ?? latestF1dRace.grandPrixId) : null;
 
 const hasFant = topPPM.length > 0 || risers.length > 0 || latestF1dSummary;
+
+// ── Driver search index (baked at build time) ─────────────────────────────────
+const { drivers: _allDrivers } = JSON.parse(
+  fs.readFileSync(path.resolve("./data/drivers/index.json"), "utf8")
+);
+const driverSearchIndex = _allDrivers.map((d: any) => ({
+  driverId: d.driverId, name: d.name, code: d.code ?? null,
+  firstSeason: d.firstSeason, lastSeason: d.lastSeason,
+}));
 ---
 
 <BaseLayout
@@ -176,6 +185,7 @@ const hasFant = topPPM.length > 0 || risers.length > 0 || latestF1dSummary;
   </div>
 
   <!-- Dynamic home sections: search, latest race, standings -->
+  <script is:inline define:vars={{ driverSearchIndex }}>window.F1_DRIVER_INDEX = driverSearchIndex;</script>
   <script is:inline src="/grid-map.js"></script>
   <script is:inline src="https://unpkg.com/react@18.3.1/umd/react.development.js" integrity="sha384-hD6/rw4ppMLGNu3tX5cjIb+uRZ7UkRJ6BPkLpg4hAu/6onKUg4lLsHAs9EBPT82L" crossorigin="anonymous"></script>
   <script is:inline src="https://unpkg.com/react-dom@18.3.1/umd/react-dom.development.js" integrity="sha384-u6aeetuaXnQ38mYT8rp6sbXaQe3NL9t+IBXmnYxwkUI2Hw4bsp2Wvmx4yRQF1uAm" crossorigin="anonymous"></script>
@@ -184,10 +194,6 @@ const hasFant = topPPM.length > 0 || risers.length > 0 || latestF1dSummary;
   (function () {
     const { useState, useEffect } = React;
 
-    async function loadIndex() {
-      try { const r = await fetch("/api/driver?list=1"); if (!r.ok) return []; return (await r.json()).drivers || []; }
-      catch (e) { return []; }
-    }
     async function loadLatest() {
       try { const r = await fetch("/latest-race.json"); if (!r.ok) return null; return await r.json(); }
       catch (e) { return null; }
@@ -200,7 +206,7 @@ const hasFant = topPPM.length > 0 || risers.length > 0 || latestF1dSummary;
     function Search() {
       const [q, setQ] = useState("");
       const [index, setIndex] = useState(null);
-      function ensureIndex() { if (index === null) { setIndex([]); loadIndex().then((d) => setIndex(d)); } }
+      function ensureIndex() { if (index === null) setIndex(window.F1_DRIVER_INDEX || []); }
       const needle = q.trim().toLowerCase();
       let matches = [];
       if (needle.length >= 2 && index && index.length) {
@@ -215,7 +221,7 @@ const hasFant = topPPM.length > 0 || risers.length > 0 || latestF1dSummary;
           <input type="text" placeholder="Search drivers — Verstappen, Senna, HAM…" value={q}
             onFocus={ensureIndex} onChange={(e) => setQ(e.target.value)}
             onKeyDown={(e) => { if (e.key === "Enter" && matches[0]) go(matches[0].driverId); }}
-            autoFocus />
+            />
           {matches.length > 0 && (
             <div className="h-results">
               {matches.map((d) => (
