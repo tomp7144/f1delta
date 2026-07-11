@@ -63,6 +63,28 @@ const desc = `Full results for the ${race.year} ${race.gpName}: finishing order,
       )}
     </div>
 
+    {(race.fastestLap || race.dotd) && (
+      <div class="rp-highlights">
+        {race.fastestLap && (
+          <div class="rp-hl-item">
+            <span class="rp-hl-label">Fastest Lap</span>
+            <span class="rp-hl-val">
+              <a href={`/drivers/${race.fastestLap.driverId}`}>{race.fastestLap.driverName}</a>
+              <span class="rp-hl-time"> {race.fastestLap.time}{race.fastestLap.lap != null ? ` (lap ${race.fastestLap.lap})` : ""}</span>
+            </span>
+          </div>
+        )}
+        {race.dotd && (
+          <div class="rp-hl-item">
+            <span class="rp-hl-label">Driver of the Day</span>
+            <span class="rp-hl-val">
+              <a href={`/drivers/${race.dotd.driverId}`}>{race.dotd.driverName}</a>
+            </span>
+          </div>
+        )}
+      </div>
+    )}
+
     <h2 class="rp-section-head">Race Result</h2>
     <div class="table-scroll">
       <table data-f1-table class="rp-table">
@@ -158,22 +180,6 @@ const desc = `Full results for the ${race.year} ${race.gpName}: finishing order,
       </>
     )}
 
-    {(race.fastestLap || race.dotd) && (
-      <p class="rp-footnotes">
-        {race.fastestLap && (
-          <span>
-            Fastest lap:&nbsp;<a href={`/drivers/${race.fastestLap.driverId}`}>{race.fastestLap.driverName}</a>
-            &nbsp;{race.fastestLap.time}{race.fastestLap.lap != null ? ` (lap ${race.fastestLap.lap})` : ""}
-          </span>
-        )}
-        {race.fastestLap && race.dotd && <span class="rp-sep">&nbsp;·&nbsp;</span>}
-        {race.dotd && (
-          <span>
-            Driver of the Day:&nbsp;<a href={`/drivers/${race.dotd.driverId}`}>{race.dotd.driverName}</a>
-          </span>
-        )}
-      </p>
-    )}
 
   </div>
 </BaseLayout>
@@ -223,7 +229,7 @@ const desc = `Full results for the ${race.year} ${race.gpName}: finishing order,
     margin: 28px 0 8px;
   }
 
-  .rp-table { width: 100%; }
+  .rp-table { width: 100%; } /* f1-table.css handles base chrome; this keeps explicit width safe */
   .rp-pos  { width: 42px; text-align: center; font-variant-numeric: tabular-nums; }
   .rp-num  { width: 48px; text-align: right;  font-variant-numeric: tabular-nums; font-family: var(--mono); font-size: 12px; color: var(--dim); }
   .rp-gap  { font-family: var(--mono); font-size: 12px; }
@@ -271,21 +277,36 @@ const desc = `Full results for the ${race.year} ${race.gpName}: finishing order,
   .rp-dnf td { color: var(--faint); }
   .rp-dnf td a { color: var(--faint); }
 
-  .rp-footnotes {
+  .rp-highlights {
+    display: flex;
+    gap: 24px;
+    flex-wrap: wrap;
+    margin-bottom: 24px;
+    padding: 12px 16px;
+    background: var(--surface);
+    border: 1px solid var(--line);
+    border-radius: 6px;
+  }
+  .rp-hl-item { display: flex; flex-direction: column; gap: 3px; }
+  .rp-hl-label {
+    font-size: 10px;
+    font-weight: 600;
+    text-transform: uppercase;
+    letter-spacing: .06em;
+    color: var(--dim);
+  }
+  .rp-hl-val {
+    font-size: 14px;
+    font-weight: 500;
+    color: var(--ink);
+  }
+  .rp-hl-val a { color: var(--ink); text-decoration: none; }
+  .rp-hl-val a:hover { color: var(--red); }
+  .rp-hl-time {
+    font-family: var(--mono);
     font-size: 12px;
     color: var(--dim);
-    margin-top: 14px;
-  }
-  .rp-footnotes a { color: inherit; text-decoration: underline; text-underline-offset: 2px; }
-  .rp-sep { color: var(--line); }
-
-  /* Frozen first column on horizontal scroll */
-  .table-scroll .rp-table th:first-child,
-  .table-scroll .rp-table td:first-child {
-    position: sticky;
-    left: 0;
-    background: var(--surface);
-    z-index: 1;
+    font-weight: 400;
   }
 
   @media (max-width: 500px) {
