@@ -295,6 +295,119 @@ const hasFantasy = fantasy && Array.isArray(fantasy.seasons) && fantasy.seasons.
       </section>
     )}
 
+    <!-- Compare with any driver ────────────────────────────────── -->
+    <section class="drv-sec">
+      <div class="sec-h">
+        <h2>Compare with any driver</h2>
+        <span class="hint">career records side by side · any era</span>
+      </div>
+      <div class="card cmp-card">
+        <div id="drv-cmp-ctrl" class="drv-cmp-ctrl">
+          <input
+            id="drv-cmp-input"
+            type="text"
+            class="drv-cmp-input"
+            placeholder={`Compare ${d.name} with…`}
+            autocomplete="off"
+          />
+          <div id="drv-cmp-results" class="drv-cmp-results" hidden></div>
+        </div>
+        <p class="drv-cmp-note">
+          Teammate Head-to-Head (above) covers same-car seasons only.
+          Compare reaches across any era — pick any driver.
+        </p>
+      </div>
+    </section>
+    <script define:vars={{ driverId: id }} is:inline>
+    (function () {
+      var SELF = driverId;
+      var _index = null;
+
+      var ctrl    = document.getElementById("drv-cmp-ctrl");
+      var input   = document.getElementById("drv-cmp-input");
+      var results = document.getElementById("drv-cmp-results");
+
+      function filterDrivers(q) {
+        if (!_index || !q.trim()) return [];
+        var n = q.trim().toLowerCase();
+        return _index
+          .filter(function (d) {
+            if (d.type !== "driver" || d.id === SELF) return false;
+            var lbl = d.label.toLowerCase();
+            return lbl.startsWith(n) ||
+                   lbl.split(/\s+/).some(function (w) { return w.startsWith(n); }) ||
+                   (d.code || "").toLowerCase().startsWith(n);
+          })
+          .sort(function (a, b) {
+            var n2 = q.trim().toLowerCase();
+            var as = a.label.toLowerCase().startsWith(n2);
+            var bs = b.label.toLowerCase().startsWith(n2);
+            if (as && !bs) return -1;
+            if (bs && !as) return  1;
+            return (b.ly || 0) - (a.ly || 0);
+          })
+          .slice(0, 8);
+      }
+
+      function renderResults(matches) {
+        if (!matches.length) { results.hidden = true; return; }
+        results.innerHTML = matches.map(function (d) {
+          return '<button class="drv-cmp-opt" data-id="' + d.id + '">' +
+            '<span class="drv-cmp-opt-name">' + d.label + '</span>' +
+            '<span class="drv-cmp-opt-yr">' + d.fy + '–' + d.ly + '</span>' +
+            '</button>';
+        }).join("");
+        results.hidden = false;
+      }
+
+      async function ensureIndex() {
+        if (_index) return;
+        var r = await fetch("/search-index.json");
+        _index = await r.json();
+      }
+
+      input.addEventListener("input", async function () {
+        await ensureIndex();
+        renderResults(filterDrivers(input.value));
+      });
+
+      input.addEventListener("focus", async function () {
+        await ensureIndex();
+        if (input.value) renderResults(filterDrivers(input.value));
+      });
+
+      results.addEventListener("click", function (e) {
+        var btn = e.target.closest(".drv-cmp-opt");
+        if (!btn) return;
+        var otherId = btn.dataset.id;
+        var slug = [SELF, otherId].sort().join("-vs-");
+        window.location.href = "/compare/" + slug;
+      });
+
+      input.addEventListener("keydown", function (e) {
+        var btns = Array.from(results.querySelectorAll(".drv-cmp-opt"));
+        var fi = btns.indexOf(document.activeElement);
+        if (e.key === "ArrowDown") {
+          e.preventDefault();
+          if (fi < 0) btns[0] && btns[0].focus();
+          else if (fi < btns.length - 1) btns[fi + 1].focus();
+        } else if (e.key === "ArrowUp") {
+          e.preventDefault();
+          if (fi > 0) btns[fi - 1].focus();
+          else input.focus();
+        } else if (e.key === "Enter" && fi < 0 && btns.length) {
+          btns[0].click();
+        } else if (e.key === "Escape") {
+          results.hidden = true; input.focus();
+        }
+      });
+
+      document.addEventListener("click", function (e) {
+        if (!ctrl.contains(e.target)) results.hidden = true;
+      });
+    })();
+    </script>
+
     <!-- Road to Formula 1 ───────────────────────────────────────── -->
     {rtf1 && (
       <section class="drv-sec">
@@ -579,4 +692,31 @@ const hasFantasy = fantasy && Array.isArray(fantasy.seasons) && fantasy.seasons.
   .sal-primary { font-size: 15px; }
   .sal-unknown { color: var(--faint); font-weight: 400; font-style: italic; font-size: 12px; }
   .sal-source  { font-family: var(--mono); font-size: 10px; color: var(--faint); padding: 6px 12px 10px; margin: 0; line-height: 1.5; }
+
+  /* ── Compare control ─────────────────────────────────────────────── */
+  .cmp-card { padding: 12px 14px 10px; }
+  .drv-cmp-ctrl { position: relative; margin-bottom: 8px; }
+  .drv-cmp-input {
+    width: 100%; box-sizing: border-box;
+    font-family: var(--body); font-size: 14px; color: var(--ink);
+    background: var(--bg); border: 1px solid var(--line); border-radius: 6px;
+    padding: 10px 12px; outline: none; transition: border-color .15s;
+  }
+  .drv-cmp-input:focus { border-color: var(--ink); background: var(--surface); }
+  .drv-cmp-input::placeholder { color: var(--faint); }
+  .drv-cmp-results {
+    position: absolute; top: calc(100% + 4px); left: 0; right: 0; z-index: 20;
+    background: var(--surface); border: 1px solid var(--line); border-radius: 6px;
+    overflow: hidden; box-shadow: 0 8px 24px -8px rgba(0,0,0,.18);
+  }
+  .drv-cmp-opt {
+    display: flex; align-items: center; justify-content: space-between;
+    width: 100%; padding: 8px 12px; border: none; border-bottom: 1px solid var(--line);
+    background: none; cursor: pointer; text-align: left; gap: 8px;
+  }
+  .drv-cmp-opt:last-child { border-bottom: none; }
+  .drv-cmp-opt:hover, .drv-cmp-opt:focus { background: var(--bg); outline: none; }
+  .drv-cmp-opt-name { font-size: 13px; font-weight: 500; color: var(--ink); }
+  .drv-cmp-opt-yr { font-family: var(--mono); font-size: 10px; color: var(--faint); flex-shrink: 0; }
+  .drv-cmp-note { font-size: 11px; color: var(--faint); margin: 0; line-height: 1.5; }
 </style>
