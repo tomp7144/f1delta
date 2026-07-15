@@ -15,6 +15,7 @@
     "refresh": "npm run derive && node bake-latest.mjs"
   },
   "dependencies": {
+    "@astrojs/netlify": "^7.0.13",
     "@astrojs/sitemap": "^3.7.3",
     "@netlify/blobs": "^10.7.9",
     "astro": "^6.4.4",

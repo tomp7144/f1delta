@@ -6,9 +6,12 @@
   functions    = "netlify/functions"
   edge_functions = "netlify/edge-functions"
 
+[build.environment]
+  NODE_VERSION = "22"
+
 [functions]
   node_bundler = "esbuild"
-  included_files = ["data/drivers/**", "data/people/**", "data/fantasy/**"]
+  included_files = ["data/drivers/**", "data/people/**", "data/fantasy/**", "data/h2h-pairings.json", "data/records/drivers/points-finish-rate.json"]
 
 [[redirects]]
   from   = "/engineers/:id"
