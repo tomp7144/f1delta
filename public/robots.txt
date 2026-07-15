@@ -3,3 +3,4 @@ Allow: /
 
 Sitemap: https://f1delta.com/sitemap-index.xml
 Sitemap: https://f1delta.com/sitemap-drivers.xml
+Sitemap: https://f1delta.com/sitemap-compare.xml
