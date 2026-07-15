@@ -109,6 +109,14 @@ for (const b of r("data/records/index.json").boards) {
   }
 }
 
+// Compare tool (one entry — pairs go to sitemap only)
+entries.push({
+  type: "tool",
+  label: "Driver Comparison",
+  url: "/compare",
+  terms: ["compare", "comparison", "versus", "vs"],
+});
+
 const out = JSON.stringify(entries);
 fs.writeFileSync(path.join(root, "public/search-index.json"), out);
 console.log(`search-index.json: ${entries.length} entries, ${Math.round(out.length / 1024)}KB raw`);

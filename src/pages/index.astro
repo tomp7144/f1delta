@@ -204,6 +204,7 @@ const hasFant = topPPM.length > 0 || risers.length > 0 || latestF1dSummary;
       { type: "season",  label: "Seasons",      cap: 3 },
       { type: "record",  label: "Records",      cap: 5 },
       { type: "h2h",    label: "Head-to-Head", cap: 3 },
+      { type: "tool",   label: "Tools",        cap: 2 },
     ];
     const ROLE_LABELS = {
       "race-engineer": "Race Engineer",
@@ -229,6 +230,7 @@ const hasFant = topPPM.length > 0 || risers.length > 0 || latestF1dSummary;
         e.type === "race"    ? [e.label, String(e.year), e.country] :
         e.type === "season"  ? [String(e.year), e.champion, e.ccode] :
         e.type === "h2h"     ? [e.label, ...(e.terms || [])] :
+        e.type === "tool"    ? [e.label, ...(e.terms || [])] :
         /* record */           [e.label];
       return Math.max(0, ...f.filter(Boolean).map(s => matchScore(s, needle)));
     }
@@ -241,6 +243,7 @@ const hasFant = topPPM.length > 0 || risers.length > 0 || latestF1dSummary;
       if (e.type === "race")    return e.country || "";
       if (e.type === "season")  return e.champion ? e.champion + (e.ccode ? " · " + e.ccode : "") : "In progress";
       if (e.type === "h2h")     return "";
+      if (e.type === "tool")    return "";
       return "";
     }
 
