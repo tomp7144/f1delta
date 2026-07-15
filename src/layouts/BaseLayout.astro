@@ -32,6 +32,9 @@ const current = navKey(pathname);
     <title>{pageTitle}</title>
     {description && <meta name="description" content={description} />}
     {canonical && <link rel="canonical" href={canonical} />}
+    <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
+    <link rel="icon" type="image/x-icon" href="/favicon.ico" sizes="any" />
+    <link rel="apple-touch-icon" href="/apple-touch-icon.png" />
     <link rel="stylesheet" href="/tokens.css">
     <link rel="stylesheet" href="/f1-table.css">
     <slot name="head" />
