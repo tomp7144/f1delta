@@ -22,10 +22,11 @@ jobs:
       - name: Set up Node
         uses: actions/setup-node@v4
         with:
-          node-version: "20"
+          node-version: "22"
 
       - name: Update F1DB if new release available
         id: f1db
+        continue-on-error: true
         run: |
           LATEST=$(curl -s https://api.github.com/repos/f1db/f1db/releases/latest | jq -r .tag_name)
           CURRENT=$(cat data/f1db/VERSION 2>/dev/null || echo "none")
@@ -35,7 +36,7 @@ jobs:
             echo "updated=false" >> $GITHUB_OUTPUT
           else
             echo "Updating F1DB: $CURRENT → $LATEST"
-            curl -sL "https://github.com/f1db/f1db/releases/download/$LATEST/f1db-json-splitted.zip" -o /tmp/f1db.zip
+            curl -sL --fail "https://github.com/f1db/f1db/releases/download/$LATEST/f1db-json-splitted.zip" -o /tmp/f1db.zip
             unzip -o /tmp/f1db.zip -d data/f1db/
             echo "$LATEST" > data/f1db/VERSION
             echo "updated=true" >> $GITHUB_OUTPUT
