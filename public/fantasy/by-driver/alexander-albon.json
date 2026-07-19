@@ -3,7 +3,7 @@
   "name": "Alexander Albon",
   "career": {
     "score": 467,
-    "races": 138,
+    "races": 139,
     "partial": 5
   },
   "seasons": [
@@ -46,7 +46,7 @@
     {
       "year": 2026,
       "score": -30,
-      "races": 9,
+      "races": 10,
       "partial": 0
     }
   ]

@@ -2,7 +2,7 @@
   "year": 2022,
   "drivers": {
     "charles-leclerc": {
-      "score": 508,
+      "score": 498,
       "races": 22,
       "partial": 0
     },
@@ -77,7 +77,7 @@
       "partial": 0
     },
     "nicholas-latifi": {
-      "score": -21,
+      "score": -11,
       "races": 22,
       "partial": 0
     },
@@ -200,7 +200,7 @@
       "name": "Canadian GP",
       "topId": "charles-leclerc",
       "topName": "Charles Leclerc",
-      "topScore": 49,
+      "topScore": 39,
       "partial": false
     },
     {

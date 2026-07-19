@@ -6032,7 +6032,7 @@
   "1006": {
     "topDriverId": "max-verstappen",
     "topDriverName": "Max Verstappen",
-    "topScore": 50,
+    "topScore": 40,
     "partial": false
   },
   "1007": {
@@ -6128,7 +6128,7 @@
   "1022": {
     "topDriverId": "lewis-hamilton",
     "topDriverName": "Lewis Hamilton",
-    "topScore": 45,
+    "topScore": 35,
     "partial": false
   },
   "1023": {
@@ -6392,7 +6392,7 @@
   "1066": {
     "topDriverId": "charles-leclerc",
     "topDriverName": "Charles Leclerc",
-    "topScore": 49,
+    "topScore": 39,
     "partial": false
   },
   "1067": {
@@ -6945,6 +6945,12 @@
     "topDriverId": "charles-leclerc",
     "topDriverName": "Charles Leclerc",
     "topScore": 46,
+    "partial": false
+  },
+  "1159": {
+    "topDriverId": "isack-hadjar",
+    "topDriverName": "Isack Hadjar",
+    "topScore": 39,
     "partial": false
   }
 }

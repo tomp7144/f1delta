@@ -17,7 +17,7 @@
       "partial": 0
     },
     "lewis-hamilton": {
-      "score": 530,
+      "score": 520,
       "races": 16,
       "partial": 0
     },
@@ -102,7 +102,7 @@
       "partial": 0
     },
     "nico-hulkenberg": {
-      "score": 47,
+      "score": 57,
       "races": 3,
       "partial": 0
     },
@@ -155,7 +155,7 @@
       "name": "British GP",
       "topId": "lewis-hamilton",
       "topName": "Lewis Hamilton",
-      "topScore": 45,
+      "topScore": 35,
       "partial": false
     },
     {
