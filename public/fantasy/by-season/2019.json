@@ -12,7 +12,7 @@
       "partial": 0
     },
     "max-verstappen": {
-      "score": 491,
+      "score": 481,
       "races": 21,
       "partial": 1
     },
@@ -82,7 +82,7 @@
       "partial": 0
     },
     "robert-kubica": {
-      "score": 13,
+      "score": 23,
       "races": 21,
       "partial": 2
     },
@@ -190,7 +190,7 @@
       "name": "Austrian GP",
       "topId": "max-verstappen",
       "topName": "Max Verstappen",
-      "topScore": 50,
+      "topScore": 40,
       "partial": false
     },
     {

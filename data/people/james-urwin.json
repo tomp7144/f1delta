@@ -11,7 +11,7 @@
   "totals": {
     "seasons": 5,
     "drivers": 1,
-    "races": 100,
+    "races": 101,
     "wins": 0,
     "podiums": 0,
     "poles": 0,
@@ -28,7 +28,7 @@
       "driverId": "alexander-albon",
       "driverName": "Alexander Albon",
       "stats": {
-        "races": 100,
+        "races": 101,
         "wins": 0,
         "podiums": 0,
         "poles": 0,
@@ -36,5 +36,5 @@
       }
     }
   ],
-  "updated": "2026-07-07"
+  "updated": "2026-07-19"
 }

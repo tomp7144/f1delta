@@ -11,7 +11,7 @@
   "totals": {
     "seasons": 1,
     "drivers": 1,
-    "races": 9,
+    "races": 10,
     "wins": 0,
     "podiums": 0,
     "poles": 0,
@@ -28,7 +28,7 @@
       "driverId": "sergio-perez",
       "driverName": "Sergio Pérez",
       "stats": {
-        "races": 9,
+        "races": 10,
         "wins": 0,
         "podiums": 0,
         "poles": 0,
@@ -36,5 +36,5 @@
       }
     }
   ],
-  "updated": "2026-07-07"
+  "updated": "2026-07-19"
 }

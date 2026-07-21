@@ -9,12 +9,21 @@
       "driverId": "kimi-antonelli",
       "name": "Kimi Antonelli",
       "code": "ANT",
-      "points": 179,
+      "points": 204,
       "teamId": "mercedes",
       "team": "Mercedes"
     },
     {
       "position": 2,
+      "driverId": "lewis-hamilton",
+      "name": "Lewis Hamilton",
+      "code": "HAM",
+      "points": 159,
+      "teamId": "ferrari",
+      "team": "Ferrari"
+    },
+    {
+      "position": 3,
       "driverId": "george-russell",
       "name": "George Russell",
       "code": "RUS",
@@ -23,20 +32,11 @@
       "team": "Mercedes"
     },
     {
-      "position": 3,
-      "driverId": "lewis-hamilton",
-      "name": "Lewis Hamilton",
-      "code": "HAM",
-      "points": 147,
-      "teamId": "ferrari",
-      "team": "Ferrari"
-    },
-    {
       "position": 4,
       "driverId": "charles-leclerc",
       "name": "Charles Leclerc",
       "code": "LEC",
-      "points": 108,
+      "points": 126,
       "teamId": "ferrari",
       "team": "Ferrari"
     },
@@ -45,7 +45,7 @@
       "driverId": "lando-norris",
       "name": "Lando Norris",
       "code": "NOR",
-      "points": 97,
+      "points": 103,
       "teamId": "mclaren",
       "team": "McLaren"
     },
@@ -54,7 +54,7 @@
       "driverId": "oscar-piastri",
       "name": "Oscar Piastri",
       "code": "PIA",
-      "points": 82,
+      "points": 92,
       "teamId": "mclaren",
       "team": "McLaren"
     },
@@ -63,7 +63,7 @@
       "driverId": "max-verstappen",
       "name": "Max Verstappen",
       "code": "VER",
-      "points": 76,
+      "points": 91,
       "teamId": "red-bull",
       "team": "Red Bull"
     },
@@ -72,7 +72,7 @@
       "driverId": "isack-hadjar",
       "name": "Isack Hadjar",
       "code": "HAD",
-      "points": 52,
+      "points": 60,
       "teamId": "red-bull",
       "team": "Red Bull"
     },
@@ -99,12 +99,21 @@
       "driverId": "arvid-lindblad",
       "name": "Arvid Lindblad",
       "code": "LIN",
-      "points": 20,
+      "points": 22,
       "teamId": "racing-bulls",
       "team": "Racing Bulls"
     },
     {
       "position": 12,
+      "driverId": "franco-colapinto",
+      "name": "Franco Colapinto",
+      "code": "COL",
+      "points": 19,
+      "teamId": "alpine",
+      "team": "Alpine"
+    },
+    {
+      "position": 13,
       "driverId": "oliver-bearman",
       "name": "Oliver Bearman",
       "code": "BEA",
@@ -113,20 +122,11 @@
       "team": "Haas"
     },
     {
-      "position": 13,
-      "driverId": "franco-colapinto",
-      "name": "Franco Colapinto",
-      "code": "COL",
-      "points": 18,
-      "teamId": "alpine",
-      "team": "Alpine"
-    },
-    {
       "position": 14,
       "driverId": "gabriel-bortoleto",
       "name": "Gabriel Bortoleto",
       "code": "BOR",
-      "points": 6,
+      "points": 10,
       "teamId": "audi",
       "team": "Audi"
     },
@@ -350,8 +350,8 @@
       "round": 10,
       "grandPrixId": "belgium",
       "name": "Belgian GP",
-      "winnerId": null,
-      "winner": null
+      "winnerId": "kimi-antonelli",
+      "winner": "Kimi Antonelli"
     },
     {
       "round": 11,
@@ -439,5 +439,5 @@
     }
   ],
   "notes": null,
-  "updated": "2026-07-09"
+  "updated": "2026-07-19"
 }

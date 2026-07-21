@@ -11,7 +11,7 @@
   "totals": {
     "seasons": 2,
     "drivers": 1,
-    "races": 27,
+    "races": 28,
     "wins": 0,
     "podiums": 0,
     "poles": 0,
@@ -28,7 +28,7 @@
       "driverId": "franco-colapinto",
       "driverName": "Franco Colapinto",
       "stats": {
-        "races": 27,
+        "races": 28,
         "wins": 0,
         "podiums": 0,
         "poles": 0,
@@ -36,5 +36,5 @@
       }
     }
   ],
-  "updated": "2026-07-07"
+  "updated": "2026-07-19"
 }
