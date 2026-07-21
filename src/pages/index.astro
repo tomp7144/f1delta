@@ -162,14 +162,14 @@ const hasFant = topPPM.length > 0 || risers.length > 0 || latestF1dSummary;
         {latestF1dSummary && (
           <div class="fcard bridge">
             <div class="fcard-hd">
-              <span class="fcard-title">f1δ top score{latestF1dGpName ? ` · ${latestF1dGpName}` : ""}</span>
+              <span class="fcard-title">Fantasy top score{latestF1dGpName ? ` · ${latestF1dGpName}` : ""}</span>
               <span class="tier derived">f1δ derived</span>
             </div>
             <div class="bridge-row">
               <a class="bridge-name" href={`/drivers/${latestF1dSummary.topDriverId}`}>{latestF1dSummary.topDriverName}</a>
               <span class="bridge-score">{latestF1dSummary.topScore} pts</span>
             </div>
-            <p class="bridge-note">f1δ Score applies current scoring rules to all eras for cross-era comparison — it is not the championship points drivers actually earned.</p>
+            <p class="bridge-note">Fantasy scoring applies current game rules to all eras — not the championship points drivers actually earned.</p>
           </div>
         )}
       </section>

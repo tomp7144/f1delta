@@ -35,11 +35,6 @@ const d = JSON.parse(
   fs.readFileSync(path.resolve(`./data/drivers/${id}.json`), "utf8")
 );
 
-const fantasyPath = path.resolve(`./public/fantasy/by-driver/${id}.json`);
-const fantasy: any = fs.existsSync(fantasyPath)
-  ? JSON.parse(fs.readFileSync(fantasyPath, "utf8"))
-  : null;
-
 const active = d.lastSeason >= 2026;
 const titles: number = d.totals.championships ?? 0;
 
@@ -76,7 +71,6 @@ const yearSpan = active ? `${d.firstSeason}–present` : `${d.firstSeason}–${d
 const titleStr = `${d.name} | F1 Driver | f1delta`;
 const descStr = `Career stats for ${d.name}: ${d.totals.races ?? 0} races, ${d.totals.wins ?? 0} wins${titles > 0 ? `, ${titles} World Championship${titles > 1 ? "s" : ""}` : ""}. F1DB data, 1950–present.`;
 
-const hasFantasy = fantasy && Array.isArray(fantasy.seasons) && fantasy.seasons.length > 0;
 ---
 
 <BaseLayout
@@ -473,56 +467,29 @@ const hasFantasy = fantasy && Array.isArray(fantasy.seasons) && fantasy.seasons.
       </section>
     )}
 
-    <!-- f1delta Fantasy Score ────────────────────────────────────── -->
-    {hasFantasy && (
+    <!-- f1δ Score ──────────────────────────────────────────────── -->
+    {d.f1delta && (
       <section class="drv-sec">
         <div class="sec-h">
-          <h2>f1delta Fantasy Score</h2>
-          <span class="hint">position-based · excludes overtakes</span>
+          <h2>f1δ Score</h2>
+          <span class="hint">era-fair · % of max · career sum · <a href="/methodology" class="hint-link">what is this?</a></span>
         </div>
-        <div class="card">
-          <div class="table-scroll">
-            <table data-f1-table>
-              <thead>
-                <tr>
-                  <th class="l">Year</th>
-                  <th>Races</th>
-                  <th>Score</th>
-                  <th>Avg</th>
-                </tr>
-              </thead>
-              <tbody>
-                {fantasy.seasons.map((s: any) => (
-                  <tr>
-                    <td class="yr"><a href={`/standings/${s.year}`}>{s.year}</a></td>
-                    <td class="n">{s.races}</td>
-                    <td class="n">{s.partial > 0 ? "~" : ""}{s.score}</td>
-                    <td class="n">{s.races > 0 ? (s.score / s.races).toFixed(1) : "—"}</td>
-                  </tr>
-                ))}
-              </tbody>
-              <tfoot>
-                <tr class="career-row">
-                  <td class="yr"><strong>Career</strong></td>
-                  <td class="n">{fantasy.career.races}</td>
-                  <td class="n">{fantasy.career.partial > 0 ? "~" : ""}{fantasy.career.score}</td>
-                  <td class="n">
-                    {fantasy.career.races > 0
-                      ? (fantasy.career.score / fantasy.career.races).toFixed(1)
-                      : "—"}
-                  </td>
-                </tr>
-              </tfoot>
-            </table>
+        <div class="card f1d-card">
+          <div class="f1d-hero">
+            <span class="f1d-career">{(d.f1delta.career as number).toFixed(1)}</span>
+            <span class="f1d-career-label">career total</span>
           </div>
-          {fantasy.career.partial > 0 && (
-            <p class="fant-partial">~ includes races where qualifying data is unavailable</p>
-          )}
-          <p class="fant-note-foot">
-            Scoring: race finish points · qualifying position · positions gained · fastest lap
-            (P1–10) · Driver of the Day. f1δ Score applies current scoring rules to all eras
-            for cross-era comparison — it is not the championship points drivers actually earned.
-          </p>
+          <div class="f1d-strip">
+            {(d.f1delta.seasons as any[]).map((s: any) => (
+              <div class="f1d-row">
+                <a class="f1d-yr" href={`/standings/${s.year}`}>{s.year}</a>
+                <div class="f1d-bar-wrap">
+                  <span class="f1d-bar" style={`width:${Math.min(s.f1delta, 100)}%`}></span>
+                </div>
+                <span class="f1d-val">{(s.f1delta as number).toFixed(1)}</span>
+              </div>
+            ))}
+          </div>
         </div>
       </section>
     )}
@@ -676,10 +643,44 @@ const hasFantasy = fantasy && Array.isArray(fantasy.seasons) && fantasy.seasons.
   .rtf1-tl-mt     { font-family: var(--mono); font-size: 11px; color: var(--faint); margin-top: 2px; }
   .rtf1-res-w     { color: var(--champ-edge); font-weight: 600; }
 
-  /* ── Fantasy section ──────────────────────────────────────────────── */
-  .fant-partial   { font-size: 11px; color: var(--faint); padding: 6px 12px 0; margin: 0; }
-  .fant-note-foot { font-size: 11px; color: var(--faint); padding: 4px 12px 10px; margin: 0; border-top: 1px solid var(--line); line-height: 1.5; }
-  tfoot .career-row td { font-weight: 600; color: var(--dim); border-top: 2px solid var(--line); }
+  /* ── f1δ Score section ────────────────────────────────────────────── */
+  .hint-link { color: var(--dim); text-decoration: none; font-weight: 400; }
+  .hint-link:hover { color: var(--ink); text-decoration: underline; }
+  .f1d-card { padding: 0; overflow: hidden; }
+  .f1d-hero {
+    display: flex; align-items: baseline; gap: 8px;
+    padding: 14px 14px 10px; border-bottom: 1px solid var(--line);
+  }
+  .f1d-career {
+    font-family: var(--disp); font-size: 28px; font-weight: 700;
+    color: var(--ink); letter-spacing: -.01em;
+  }
+  .f1d-career-label {
+    font-family: var(--mono); font-size: 10px; color: var(--faint);
+    text-transform: uppercase; letter-spacing: .06em;
+  }
+  .f1d-strip { padding: 8px 0 6px; }
+  .f1d-row {
+    display: flex; align-items: center; gap: 10px;
+    padding: 3px 14px;
+  }
+  .f1d-yr {
+    font-family: var(--mono); font-size: 11px; color: var(--dim);
+    width: 38px; flex-shrink: 0; text-decoration: none;
+  }
+  .f1d-yr:hover { color: var(--ink); }
+  .f1d-bar-wrap {
+    flex: 1; height: 5px; background: var(--line); border-radius: 3px;
+    overflow: hidden;
+  }
+  .f1d-bar {
+    display: block; height: 100%; background: var(--red); border-radius: 3px;
+    min-width: 1px;
+  }
+  .f1d-val {
+    font-family: var(--mono); font-size: 11px; color: var(--ink);
+    width: 36px; text-align: right; flex-shrink: 0;
+  }
 
   /* ── Salary card ──────────────────────────────────────────────────── */
   .sal-card    { border-color: #d4b87a; }
