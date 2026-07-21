@@ -117,6 +117,14 @@ entries.push({
   terms: ["compare", "comparison", "versus", "vs"],
 });
 
+// Static pages
+entries.push({
+  type: "tool",
+  label: "About F1 Delta",
+  url: "/about",
+  terms: ["about", "tom", "payment", "author", "who"],
+});
+
 const out = JSON.stringify(entries);
 fs.writeFileSync(path.join(root, "public/search-index.json"), out);
 console.log(`search-index.json: ${entries.length} entries, ${Math.round(out.length / 1024)}KB raw`);

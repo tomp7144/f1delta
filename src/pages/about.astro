@@ -5,22 +5,38 @@ import BaseLayout from "../layouts/BaseLayout.astro";
 
 <BaseLayout
   title="About — F1 Delta"
-  description="F1 Delta is an independent Formula 1 reference site covering every driver, team, circuit, and season from 1950 to today."
+  description="Tom Payment built F1 Delta as the all-in-one F1 reference he went looking for and couldn't find — every driver, team, circuit, and season, easy to get lost in."
   canonical="https://f1delta.com/about"
 >
   <div class="prose">
-    <h1>About F1 Delta</h1>
-    <p>F1 Delta (f1delta.com) is a comprehensive, cross-linked reference for Formula 1 — historical results, driver and team records, circuits, grands prix, championship standings, fantasy tools, and more, all in one place.</p>
-    <p>The idea came from a simple frustration: every race weekend, F1 fans bounce between a dozen fragmented sources to answer questions that should live in one spot. F1 Delta aims to be that spot — the place you land first, the way Baseball Reference or HockeyDB are for their sports.</p>
+    <h1>About</h1>
 
-    <h2>Who's behind it</h2>
-    <p>F1 Delta is a solo passion project, built and maintained by one person in Michigan, USA. It isn't a company or a media outlet — just someone who loves the sport and wanted the reference tool that didn't exist yet.</p>
+    <p class="lede">Racing was the family thing long before Formula 1 was mine.</p>
+
+    <p>Growing up, Sundays meant the local Sands Speedway — my uncle out on track, my dad on his pit crew, both of them race fans right down to the bone. Dad ran off-road trucks himself a time or two, but mostly he was a pit-crew guy, and some of my favorite memories anywhere are the Bark River off-road races we'd go to together nearly every summer, always right around my birthday.</p>
+
+    <p>So I came to racing honestly, even if I came to Formula 1 late. For years it was NASCAR — a die-hard Jeff Gordon fan through the '90s and 2000s, and later Jimmie Johnson, mostly because Gordon co-owned the team.</p>
+
+    <p>F1 didn't grab me until the 2021 offseason. I'll own it: Drive to Survive pulled me in, right as the Verstappen–Hamilton title fight was tearing itself apart. But once I was in, I was <em>all</em> in — and the first thing I realized was how much I'd missed. Decades of it.</p>
+
+    <p>So I started working backward, rewatching old seasons on F1TV, and I kept slamming into the same wall: there was nowhere to just <em>see it all</em>. I'd have five browser tabs open trying to line up two drivers' careers. I'd catch some detail and have no way to chase it — wait, they had the same race engineer? Rosberg raced against <em>both</em> Hamilton and Schumacher? Alonso sat out 2002 completely? Every one of those was a rabbit hole I wanted to fall into, and nothing would let me.</p>
+
+    <p>F1 Delta is the site I went looking for and couldn't find. What makes it different is simple: everything F1 has, in one place, easy to actually understand — and built so you can get lost in it. Start on a driver and follow the threads: teammates, race engineers, circuits, team principals, Grands Prix, whole seasons, careers side by side. The connections are the point — the ones you'd never stumble on with ten tabs open — and the whole thing stays uncluttered and easy to move through while you find them.</p>
+
+    <p>I'm still catching up on the seasons I missed. This is me building the map as I go.</p>
+
+    <p class="byline">— Tom Payment</p>
+
+    <hr />
+
+    <h2>About the site</h2>
+    <p>F1 Delta (f1delta.com) is a comprehensive, cross-linked reference for Formula 1 — historical results, driver and team records, circuits, grands prix, championship standings, and more, all in one place. It's a solo passion project, built and maintained in Michigan, USA. Not a company, not a media outlet — just someone who loves the sport and wanted the reference tool that didn't exist yet.</p>
 
     <h2>Where the data comes from</h2>
     <p>Accuracy matters here. F1 Delta's historical record is built on <a href="https://github.com/f1db/f1db">F1DB</a>, an open Formula 1 database licensed under CC BY 4.0, supplemented by <a href="https://openf1.org/">OpenF1</a> for session data and the official Formula 1 Fantasy feed for fantasy pricing. Historical facts, standings, and records reflect the real, era-accurate record — that credibility is the whole point.</p>
 
     <h2>How it's funded</h2>
-    <p>F1 Delta is free. It's supported by unobtrusive advertising and voluntary donations. If you'd prefer an ad-free experience, a small one-time contribution removes ads for you — and if the site has been useful, <a href="https://ko-fi.com/f1delta">a donation of any size</a> helps keep it running and updated. It's one person covering hosting and upkeep, nothing more.</p>
+    <p>F1 Delta is free. It's supported by unobtrusive advertising and voluntary donations. If the site has been useful, <a href="https://ko-fi.com/f1delta">a donation of any size</a> helps keep it running and updated.</p>
 
     <h2>Not affiliated with Formula 1</h2>
     <p>F1 Delta is an independent, unofficial fan project. It is not affiliated with, endorsed by, or connected to Formula 1, the FIA, Formula One World Championship Limited, or any related entities. "F1," "FORMULA 1," "GRAND PRIX," and related marks are trademarks of their respective owners.</p>
@@ -32,13 +48,39 @@ import BaseLayout from "../layouts/BaseLayout.astro";
 
 <style>
   .prose {
-    max-width: 760px; margin: 0 auto; padding: 24px 20px 56px;
+    max-width: 680px; margin: 0 auto; padding: 32px 20px 56px;
     font-family: system-ui, -apple-system, "Segoe UI", Roboto, sans-serif;
-    color: #16161a; line-height: 1.6;
+    color: var(--ink); line-height: 1.7;
   }
-  .prose h1 { font-size: 28px; font-weight: 700; margin: 0 0 20px; }
-  .prose h2 { font-size: 16px; font-weight: 700; margin: 28px 0 8px; }
-  .prose p { font-size: 15px; margin: 0 0 14px; }
-  .prose a { color: #e10600; }
-  .prose a:hover { text-decoration: none; }
+  .prose h1 {
+    font-family: var(--disp);
+    font-size: clamp(28px, 5vw, 42px); font-weight: 700;
+    letter-spacing: -.01em; margin: 0 0 24px; color: var(--ink);
+  }
+  .lede {
+    font-size: 18px; font-weight: 500; color: var(--ink);
+    margin: 0 0 18px; line-height: 1.5;
+  }
+  .prose p { font-size: 15px; margin: 0 0 16px; color: var(--ink); }
+  .prose em { font-style: italic; }
+  .byline {
+    font-size: 15px; font-weight: 600; color: var(--dim);
+    margin: 24px 0 0 !important;
+  }
+  .prose hr {
+    border: none; border-top: 1px solid var(--line);
+    margin: 36px 0;
+  }
+  .prose h2 {
+    font-size: 15px; font-weight: 700; color: var(--ink);
+    margin: 28px 0 8px; text-transform: uppercase;
+    letter-spacing: .04em; font-family: var(--mono);
+  }
+  .prose a { color: var(--red); text-decoration: none; }
+  .prose a:hover { text-decoration: underline; }
+
+  @media (max-width: 500px) {
+    .prose { padding-left: 16px; padding-right: 16px; }
+    .lede { font-size: 16px; }
+  }
 </style>
