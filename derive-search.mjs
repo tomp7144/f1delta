@@ -124,6 +124,12 @@ entries.push({
   url: "/about",
   terms: ["about", "tom", "payment", "author", "who"],
 });
+entries.push({
+  type: "tool",
+  label: "f1δ Score Leaderboard",
+  url: "/f1delta",
+  terms: ["f1delta", "f1δ", "score", "leaderboard", "era", "fair", "ranking"],
+});
 
 const out = JSON.stringify(entries);
 fs.writeFileSync(path.join(root, "public/search-index.json"), out);

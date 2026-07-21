@@ -1,0 +1,124 @@
+---
+export const prerender = true;
+import fs from "node:fs";
+import path from "node:path";
+import BaseLayout from "../layouts/BaseLayout.astro";
+
+const MIN_RACES = 15;
+
+const { drivers: allDrivers } = JSON.parse(
+  fs.readFileSync(path.resolve("./data/f1delta/index.json"), "utf8")
+) as { drivers: { driverId: string; name: string; career: number; seasons: number; races: number; firstSeason: number; lastSeason: number }[] };
+
+const drivers = allDrivers.filter(d => d.races >= MIN_RACES);
+---
+
+<BaseLayout
+  title="f1δ Score — All-Time Leaderboard | f1delta"
+  description="All-time f1δ leaderboard: career era-fair scores for every F1 driver with 15+ starts. f1δ = % of max points winnable each season, summed across a career."
+  canonical="https://f1delta.com/f1delta"
+>
+  <div class="f1d-wrap">
+    <div class="f1d-head">
+      <h1>f1δ Score — All-Time</h1>
+      <p class="f1d-sub">Era-fair career score: each season's points as a % of the maximum winnable that season, summed across a full career. <a href="/methodology">How it's calculated →</a></p>
+    </div>
+
+    <div class="card">
+      <div class="table-scroll">
+        <table data-record-table>
+          <thead>
+            <tr>
+              <th class="l" data-sort="rank" data-type="num">#</th>
+              <th class="l" data-sort="name" data-type="text">Driver</th>
+              <th data-sort="f1delta" data-type="num">f1δ</th>
+              <th data-sort="seasons" data-type="num">Seasons</th>
+              <th data-sort="races" data-type="num">Races</th>
+              <th class="l" data-sort="span" data-type="text">Era</th>
+            </tr>
+          </thead>
+          <tbody>
+            {drivers.map((d, i) => (
+              <tr
+                data-rank={i + 1}
+                data-name={d.name}
+                data-f1delta={d.career}
+                data-seasons={d.seasons}
+                data-races={d.races}
+                data-span={`${d.firstSeason}–${d.lastSeason}`}
+              >
+                <td class="rk">{i + 1}</td>
+                <td class="nm"><a href={`/drivers/${d.driverId}`}>{d.name}</a></td>
+                <td class="sc">{d.career.toFixed(1)}</td>
+                <td class="n">{d.seasons}</td>
+                <td class="n">{d.races}</td>
+                <td class="era">{d.firstSeason}–{d.lastSeason}</td>
+              </tr>
+            ))}
+          </tbody>
+        </table>
+      </div>
+      <p class="tbl-note">Minimum {MIN_RACES} race starts · {drivers.length} drivers · Indy 500 excluded from all seasons</p>
+    </div>
+  </div>
+
+  <script src="/f1-records.js" defer is:inline></script>
+</BaseLayout>
+
+<style>
+  .f1d-wrap {
+    max-width: 760px; margin: 0 auto; padding: 0 20px 56px;
+    font-family: system-ui, -apple-system, "Segoe UI", Roboto, sans-serif;
+  }
+  .f1d-head {
+    background: var(--surface); border-bottom: 1px solid var(--line);
+    margin: 0 -20px 20px; padding: 32px 20px 24px;
+  }
+  .f1d-head h1 {
+    font-family: var(--disp);
+    font-size: clamp(22px, 4vw, 36px); font-weight: 700;
+    letter-spacing: -.01em; margin: 0 0 8px; color: var(--ink);
+  }
+  .f1d-sub { font-size: 13px; color: var(--dim); margin: 0; line-height: 1.5; }
+  .f1d-sub a { color: var(--red); text-decoration: none; font-weight: 600; }
+  .f1d-sub a:hover { text-decoration: underline; }
+
+  .card {
+    background: var(--surface); border: 1px solid var(--line);
+    border-radius: 8px; overflow: hidden;
+  }
+  .table-scroll { overflow-x: auto; }
+  table { width: 100%; border-collapse: collapse; font-size: 13px; }
+  thead th {
+    font-family: var(--mono);
+    font-size: 10px; font-weight: 600; letter-spacing: .06em;
+    text-transform: uppercase; color: var(--faint);
+    text-align: right; padding: 9px 10px;
+    border-bottom: 1px solid var(--line);
+    white-space: nowrap; cursor: pointer; user-select: none;
+  }
+  thead th.l { text-align: left; }
+  tbody td {
+    font-variant-numeric: tabular-nums;
+    padding: 8px 10px; border-bottom: 1px solid var(--line2, #f0f0ed);
+    text-align: right; color: var(--dim); white-space: nowrap;
+  }
+  tbody tr:last-child td { border-bottom: none; }
+  tbody tr:hover td { background: var(--hover, #f4f4f1); }
+  td.rk  { text-align: left; font-family: var(--mono); font-size: 11px; color: var(--faint); width: 36px; }
+  td.nm  { text-align: left; font-weight: 600; color: var(--ink); }
+  td.nm a { color: var(--ink); text-decoration: none; }
+  td.nm a:hover { text-decoration: underline; }
+  td.sc  { color: var(--ink); font-weight: 700; font-family: var(--mono); font-size: 14px; }
+  td.n   { font-family: var(--mono); }
+  td.era { text-align: left; font-family: var(--mono); font-size: 11px; color: var(--faint); }
+  .tbl-note {
+    font-size: 11px; color: var(--faint); padding: 8px 12px 10px;
+    margin: 0; border-top: 1px solid var(--line); line-height: 1.5;
+  }
+
+  @media (max-width: 500px) {
+    .f1d-wrap  { padding-left: 12px; padding-right: 12px; }
+    .f1d-head  { margin-left: -12px; margin-right: -12px; padding-left: 12px; padding-right: 12px; }
+  }
+</style>
