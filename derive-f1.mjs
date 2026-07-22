@@ -58,6 +58,8 @@ const isClassified = (r) => r.positionNumber != null;
 // old Ergast posText === "R" rule: a late retirement that was still classified
 // counts as classified, not as a DNF.
 const isDNF = (r) => r.positionNumber == null && r.reasonRetired != null;
+// Statuses that mean the driver never took to the grid (excluded from start denominator).
+const NOT_START = new Set(['DNS', 'DNQ', 'DNP', 'DNPQ', 'EX']);
 
 async function loadJSON(name) {
   const fp = path.join(F1DB_DIR, name);
@@ -159,11 +161,33 @@ async function main() {
   // bucket race results by race and by driver; tally per-season team participation
   const resultsByRace = new Map();   // raceId -> [rows]
   const resultsByDriver = new Map(); // driverId -> [rows] (used for never-started reason)
+  // reliability accumulators: populated alongside the main race-result scan below
+  const careerRel = new Map(); // driverId -> { starts, dnfCount, pointsFinishes, fastestLaps, bestFinish, bestGrid }
+  const seasonRel = new Map(); // driverId -> Map(year -> same shape)
+  const mkRel = () => ({ starts: 0, dnfCount: 0, pointsFinishes: 0, fastestLaps: 0, bestFinish: Infinity, bestGrid: Infinity });
   for (const r of raceRes) {
     get(resultsByRace, r.raceId, () => []).push(r);
     get(resultsByDriver, r.driverId, () => []).push(r);
     const cs = careerByDriver.get(r.driverId)?.get(r.year);
     if (cs) cs._teamRaces.set(r.constructorId, (cs._teamRaces.get(r.constructorId) ?? 0) + 1);
+    // reliability: only count entries where the driver actually took to the grid
+    if (!NOT_START.has(r.positionText)) {
+      const relC = get(careerRel, r.driverId, mkRel);
+      const relS = get(get(seasonRel, r.driverId, () => new Map()), r.year, mkRel);
+      relC.starts++; relS.starts++;
+      // DNF = started but no classified finish; DSQ excluded per brief (counted as "finished, scored 0")
+      if (r.positionNumber == null && r.positionText !== 'DSQ') { relC.dnfCount++; relS.dnfCount++; }
+      if ((r.points ?? 0) > 0) { relC.pointsFinishes++; relS.pointsFinishes++; }
+      if (r.fastestLap === true) { relC.fastestLaps++; relS.fastestLaps++; }
+      if (r.positionNumber != null) {
+        if (r.positionNumber < relC.bestFinish) relC.bestFinish = r.positionNumber;
+        if (r.positionNumber < relS.bestFinish) relS.bestFinish = r.positionNumber;
+      }
+      if (r.gridPositionNumber != null && r.gridPositionNumber >= 1) {
+        if (r.gridPositionNumber < relC.bestGrid) relC.bestGrid = r.gridPositionNumber;
+        if (r.gridPositionNumber < relS.bestGrid) relS.bestGrid = r.gridPositionNumber;
+      }
+    }
   }
 
   // teammate H2H: driverId -> Map(mateId -> Map(year -> h2h))
@@ -232,6 +256,7 @@ async function main() {
     const info = meta.get(driverId)
       ?? { driverId, code: driverId.slice(0, 3).toUpperCase(), name: driverId, totals: {} };
 
+    const sRelMap = seasonRel.get(driverId);
     const career = [...seasonMap.values()]
       .filter((cs) => (cs.races ?? 0) > 0) // only seasons where the driver actually started a race
       .sort((a, b) => a.season - b.season)
@@ -244,11 +269,17 @@ async function main() {
           }))
           .sort((a, b) => b.races - a.races);
         const { _teamRaces, ...row } = cs;
+        const sRel = sRelMap?.get(cs.season);
         return {
           ...row,
           teams,
           primaryTeamId: teams[0]?.constructorId ?? null,
           primaryTeam: teams[0]?.constructor ?? null,
+          dnfCount: sRel?.dnfCount ?? 0,
+          pointsFinishes: sRel?.pointsFinishes ?? 0,
+          fastestLaps: sRel?.fastestLaps ?? 0,
+          bestFinish: sRel && sRel.bestFinish !== Infinity ? sRel.bestFinish : null,
+          bestGrid: sRel && sRel.bestGrid !== Infinity ? sRel.bestGrid : null,
         };
       });
 
@@ -291,13 +322,20 @@ async function main() {
       })
       .sort((a, b) => b.aggregate.races - a.aggregate.races); // rivalries first
 
+    const cRel = careerRel.get(driverId);
     const out = {
       driverId,
       code: info.code,
       name: info.name,
       firstSeason: career[0]?.season ?? null,
       lastSeason: career[career.length - 1]?.season ?? null,
-      totals: info.totals,
+      totals: {
+        ...info.totals,
+        dnfCount: cRel?.dnfCount ?? 0,
+        pointsFinishes: cRel?.pointsFinishes ?? 0,
+        bestFinish: cRel && cRel.bestFinish !== Infinity ? cRel.bestFinish : null,
+        bestGrid: cRel && cRel.bestGrid !== Infinity ? cRel.bestGrid : null,
+      },
       career,
       teammates,
     };
@@ -310,6 +348,16 @@ async function main() {
       podiums: info.totals.podiums ?? 0, poles: info.totals.poles ?? 0,
       championships: info.totals.championships ?? 0, points: info.totals.points ?? 0,
     });
+  }
+
+  // Sanity check: print reliability for a few known drivers
+  for (const id of ['lewis-hamilton', 'juan-manuel-fangio', 'max-verstappen']) {
+    const r = careerRel.get(id);
+    if (r) {
+      const dnfPct = r.starts > 0 ? (r.dnfCount / r.starts * 100).toFixed(1) : 'N/A';
+      const ptsPct = r.starts > 0 ? (r.pointsFinishes / r.starts * 100).toFixed(1) : 'N/A';
+      console.log(`[rel] ${id}: starts=${r.starts} dnf=${r.dnfCount}(${dnfPct}%) pts=${r.pointsFinishes}(${ptsPct}%) bestF=${r.bestFinish} bestG=${r.bestGrid}`);
+    }
   }
 
   index.sort((a, b) => a.name.localeCompare(b.name));
