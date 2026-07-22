@@ -178,10 +178,26 @@ const relRows = [
   },
 ];
 
-// Season-shape strip (career-season alignment)
+// Season-shape strip — raw seasons
 const stripA = (f1dA.seasons ?? []) as any[];
 const stripB = (f1dB.seasons ?? []) as any[];
 const stripCols = Math.max(stripA.length, stripB.length);
+
+// Age alignment: age = season_year - birth_year (conventional BB-Ref "age you turn that year")
+const birthYearA = dA.dateOfBirth ? parseInt((dA.dateOfBirth as string).slice(0, 4)) : null;
+const birthYearB = dB.dateOfBirth ? parseInt((dB.dateOfBirth as string).slice(0, 4)) : null;
+const stripAWithAge = stripA.map((s: any) => ({
+  year: s.year as number,
+  f1delta: s.f1delta as number,
+  rank: s.rank as number | null,
+  age: birthYearA != null ? (s.year as number) - birthYearA : null,
+}));
+const stripBWithAge = stripB.map((s: any) => ({
+  year: s.year as number,
+  f1delta: s.f1delta as number,
+  rank: s.rank as number | null,
+  age: birthYearB != null ? (s.year as number) - birthYearB : null,
+}));
 
 // ── Page meta ─────────────────────────────────────────────────────────────
 const pageTitle = `${dA.name} vs ${dB.name} — f1delta`;
@@ -375,34 +391,34 @@ const canonical = `https://f1delta.com/compare/${slug}`;
         <div class="f1ds-section">
           <div class="f1ds-hd">
             <span class="f1ds-title">f1δ season shape</span>
-            <span class="f1ds-hint">career-season alignment · each bar = one season</span>
+            <div class="f1dt-row">
+              <button class="f1dt active" data-align="career">career</button>
+              <button class="f1dt" data-align="age">age</button>
+              <button class="f1dt" data-align="calendar">calendar</button>
+            </div>
           </div>
-          <div class="f1ds-body">
-            {([
-              { drv: dA, id: idA, strip: stripA },
-              { drv: dB, id: idB, strip: stripB },
-            ] as { drv: any; id: string; strip: any[] }[]).map(({ drv, id, strip }) => (
-              <div class="f1ds-drv">
-                <a class="f1ds-dname" href={"/drivers/" + id}>{drv.name}</a>
-                <div class="f1ds-bars">
-                  {strip.map((s: any) => (
-                    <div class="f1ds-col" title={s.year + ": " + (s.f1delta as number).toFixed(1) + " f1delta, rank " + (s.rank ?? "-")}>
-                      <span class={"f1ds-rnk " + (s.rank === 1 ? "r1" : s.rank <= 3 ? "r3" : "rout")}>
-                        {s.rank <= 3 ? "#" + s.rank : ""}
-                      </span>
-                      <div class="f1ds-bw">
-                        <span class="f1ds-b" style={"height:" + (s.f1delta as number).toFixed(1) + "%"}></span>
-                      </div>
-                      <span class="f1ds-yr">{String(s.year).slice(2)}</span>
-                    </div>
-                  ))}
-                  {Array.from({ length: stripCols - strip.length }).map(() => (
-                    <div class="f1ds-col f1ds-phantom"></div>
-                  ))}
-                </div>
-              </div>
-            ))}
+          <div class="f1ds-legend">
+            <span class="f1ds-leg">
+              <svg width="16" height="3" aria-hidden="true" class="f1ds-lsvg">
+                <line x1="0" y1="1.5" x2="16" y2="1.5" stroke="#e10600" stroke-width="2"/>
+              </svg>
+              <a href={"/drivers/" + idA} class="f1ds-lname">{dA.name}</a>
+            </span>
+            <span class="f1ds-leg">
+              <svg width="16" height="3" aria-hidden="true" class="f1ds-lsvg">
+                <line x1="0" y1="1.5" x2="16" y2="1.5" stroke="#6b6b70" stroke-width="2" stroke-dasharray="4 2"/>
+              </svg>
+              <a href={"/drivers/" + idB} class="f1ds-lname">{dB.name}</a>
+            </span>
           </div>
+          <div
+            class="f1ds-chart"
+            id="f1ds-chart"
+            data-a={JSON.stringify(stripAWithAge)}
+            data-b={JSON.stringify(stripBWithAge)}
+            data-na={dA.name}
+            data-nb={dB.name}
+          ></div>
           <F1DeltaExplain compareNote={true} />
         </div>
       )}
@@ -432,6 +448,132 @@ const canonical = `https://f1delta.com/compare/${slug}`;
   </div>
 
 </BaseLayout>
+
+<script is:inline>
+(function () {
+  var el = document.getElementById('f1ds-chart');
+  if (!el) return;
+
+  var stripA = JSON.parse(el.dataset.a);
+  var stripB = JSON.parse(el.dataset.b);
+
+  var W = 560, CH = 60, LH = 14, H = CH + LH;
+
+  function py(v) { return +(CH - v * CH / 100).toFixed(2); }
+
+  function rankFill(r) {
+    if (r === 1) return '#b8952a';
+    if (r <= 3) return '#e10600';
+    if (r != null) return '#9398a3';
+    return '#c0c4c8';
+  }
+
+  function buildCols(mode) {
+    if (mode === 'career') {
+      var len = Math.max(stripA.length, stripB.length);
+      return Array.from({ length: len }, function (_, i) {
+        return { aData: stripA[i] || null, bData: stripB[i] || null, label: String(i + 1) };
+      });
+    }
+    if (mode === 'age') {
+      var ages = stripA.concat(stripB).map(function (s) { return s.age; }).filter(function (a) { return a != null; });
+      if (!ages.length) return buildCols('career');
+      var lo = Math.min.apply(null, ages), hi = Math.max.apply(null, ages);
+      return Array.from({ length: hi - lo + 1 }, function (_, i) {
+        var age = lo + i;
+        return {
+          aData: stripA.find(function (s) { return s.age === age; }) || null,
+          bData: stripB.find(function (s) { return s.age === age; }) || null,
+          label: String(age),
+        };
+      });
+    }
+    // calendar
+    var years = stripA.concat(stripB).map(function (s) { return s.year; });
+    var lo2 = Math.min.apply(null, years), hi2 = Math.max.apply(null, years);
+    return Array.from({ length: hi2 - lo2 + 1 }, function (_, i) {
+      var yr = lo2 + i;
+      return {
+        aData: stripA.find(function (s) { return s.year === yr; }) || null,
+        bData: stripB.find(function (s) { return s.year === yr; }) || null,
+        label: "'" + String(yr).slice(2),
+      };
+    });
+  }
+
+  function pathFor(cols, key) {
+    var cw = W / cols.length;
+    var d = '', prevHad = false;
+    cols.forEach(function (col, i) {
+      var s = col[key];
+      if (!s) { prevHad = false; return; }
+      var x = ((i + 0.5) * cw).toFixed(1);
+      var y = py(s.f1delta);
+      d += (prevHad ? ' L' : ' M') + x + ',' + y;
+      prevHad = true;
+    });
+    return d.trim();
+  }
+
+  function esc(v) { return String(v).replace(/&/g,'&amp;').replace(/</g,'&lt;').replace(/>/g,'&gt;'); }
+
+  function render(mode) {
+    var cols = buildCols(mode);
+    var n = cols.length;
+    if (!n) return;
+    var cw = W / n;
+    var skip = Math.max(1, Math.ceil(n / 15));
+    var svg = '<svg viewBox="0 0 ' + W + ' ' + H + '" style="width:100%;display:block;overflow:visible" aria-hidden="true">';
+
+    // grid lines
+    [25, 50, 75].forEach(function (v) {
+      svg += '<line x1="0" y1="' + py(v) + '" x2="' + W + '" y2="' + py(v) + '" stroke="#e4e4df" stroke-width="0.5"/>';
+    });
+
+    // paths
+    var pa = pathFor(cols, 'aData');
+    if (pa) svg += '<path d="' + pa + '" fill="none" stroke="#e10600" stroke-width="1.5" stroke-linejoin="round" stroke-linecap="round"/>';
+    var pb = pathFor(cols, 'bData');
+    if (pb) svg += '<path d="' + pb + '" fill="none" stroke="#6b6b70" stroke-width="1.5" stroke-linejoin="round" stroke-linecap="round" stroke-dasharray="4 2"/>';
+
+    // B dots first so A appears on top
+    cols.forEach(function (col, i) {
+      if (!col.bData) return;
+      var x = ((i + 0.5) * cw).toFixed(1), y = py(col.bData.f1delta);
+      var tip = esc(col.bData.year + ': ' + col.bData.f1delta.toFixed(1) + ' f1δ' + (col.bData.rank ? ' \xb7 #' + col.bData.rank : ''));
+      svg += '<circle cx="' + x + '" cy="' + y + '" r="3" fill="' + rankFill(col.bData.rank) + '" stroke="#fff" stroke-width="1" opacity="0.9"><title>' + tip + '</title></circle>';
+    });
+    cols.forEach(function (col, i) {
+      if (!col.aData) return;
+      var x = ((i + 0.5) * cw).toFixed(1), y = py(col.aData.f1delta);
+      var tip = esc(col.aData.year + ': ' + col.aData.f1delta.toFixed(1) + ' f1δ' + (col.aData.rank ? ' \xb7 #' + col.aData.rank : ''));
+      svg += '<circle cx="' + x + '" cy="' + y + '" r="3.5" fill="' + rankFill(col.aData.rank) + '" stroke="#fff" stroke-width="1"><title>' + tip + '</title></circle>';
+    });
+
+    // x-axis labels
+    cols.forEach(function (col, i) {
+      if (i % skip !== 0 && i !== n - 1) return;
+      var x = ((i + 0.5) * cw).toFixed(1);
+      svg += '<text x="' + x + '" y="' + (H - 2) + '" text-anchor="middle" font-size="7" font-family="monospace" fill="#9398a3">' + esc(col.label) + '</text>';
+    });
+
+    svg += '</svg>';
+    el.innerHTML = svg;
+  }
+
+  var mode = 'career';
+  render(mode);
+
+  document.querySelectorAll('.f1dt[data-align]').forEach(function (btn) {
+    btn.addEventListener('click', function () {
+      document.querySelectorAll('.f1dt[data-align]').forEach(function (b) { b.classList.remove('active'); });
+      btn.classList.add('active');
+      mode = btn.dataset.align;
+      render(mode);
+    });
+  });
+}());
+</script>
 
 <style>
   .cmp {
@@ -547,7 +689,7 @@ const canonical = `https://f1delta.com/compare/${slug}`;
   .grp-link { color: var(--faint); text-decoration: none; font-weight: 400; font-size: 9.5px; }
   .grp-link:hover { color: var(--ink); text-decoration: underline; }
 
-  /* ── f1δ season shape strip ──────────────────────────────────── */
+  /* ── f1δ season shape chart ──────────────────────────────────── */
   .f1ds-section { border-top: 2px solid var(--line); }
   .f1ds-hd {
     display: flex; align-items: center; gap: 10px;
@@ -559,37 +701,29 @@ const canonical = `https://f1delta.com/compare/${slug}`;
     text-transform: uppercase; color: var(--faint);
     font-family: var(--mono);
   }
-  .f1ds-hint { font-family: var(--mono); font-size: 9px; color: var(--faint); }
-  .f1ds-body { padding: 10px 12px; display: flex; flex-direction: column; gap: 10px; }
-  .f1ds-drv { display: flex; flex-direction: column; gap: 3px; }
-  .f1ds-dname {
+  /* alignment toggle */
+  .f1dt-row { display: flex; gap: 4px; margin-left: auto; }
+  .f1dt {
+    font-family: var(--mono); font-size: 9px; font-weight: 600;
+    text-transform: uppercase; letter-spacing: .06em;
+    padding: 3px 8px; border: 1px solid var(--line);
+    background: transparent; color: var(--dim); cursor: pointer;
+    border-radius: 3px; line-height: 1;
+  }
+  .f1dt.active { background: var(--ink); color: var(--bg); border-color: var(--ink); }
+  .f1dt:hover:not(.active) { background: var(--line); }
+  /* legend */
+  .f1ds-legend {
+    display: flex; gap: 16px; padding: 6px 12px;
+    border-bottom: 1px solid var(--line); align-items: center;
+  }
+  .f1ds-leg { display: flex; align-items: center; gap: 5px; }
+  .f1ds-lsvg { display: block; flex-shrink: 0; }
+  .f1ds-lname {
     font-family: var(--mono); font-size: 10px; color: var(--dim);
     font-weight: 600; text-decoration: none; letter-spacing: .02em;
   }
-  .f1ds-dname:hover { color: var(--ink); }
-  .f1ds-bars { display: flex; gap: 2px; width: 100%; }
-  .f1ds-col {
-    flex: 1 1 0; min-width: 0;
-    display: flex; flex-direction: column; align-items: center; gap: 1px;
-  }
-  .f1ds-phantom { visibility: hidden; }
-  .f1ds-rnk {
-    font-family: var(--mono); font-size: 7px; height: 10px; line-height: 10px;
-    white-space: nowrap;
-  }
-  .f1ds-rnk.r1   { color: #7a5c00; font-weight: 700; }
-  .f1ds-rnk.r3   { color: var(--red); }
-  .f1ds-rnk.rout { visibility: hidden; }
-  .f1ds-bw {
-    width: 80%; height: 44px; background: var(--line);
-    border-radius: 2px; display: flex; align-items: flex-end; overflow: hidden;
-  }
-  .f1ds-b {
-    width: 100%; background: var(--red);
-    border-radius: 1px 1px 0 0; min-height: 1px;
-  }
-  .f1ds-yr {
-    font-family: var(--mono); font-size: 7px; color: var(--faint);
-    white-space: nowrap; overflow: hidden;
-  }
+  .f1ds-lname:hover { color: var(--ink); }
+  /* chart container */
+  .f1ds-chart { padding: 10px 12px 4px; }
 </style>

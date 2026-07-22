@@ -105,6 +105,7 @@ async function main() {
   for (const d of drvArr) {
     meta.set(d.id, {
       driverId: d.id, code: d.abbreviation, name: d.name,
+      dateOfBirth: d.dateOfBirth ?? null,
       totals: {
         entries: d.totalRaceEntries ?? 0,
         races: d.totalRaceStarts ?? 0,
@@ -327,6 +328,7 @@ async function main() {
       driverId,
       code: info.code,
       name: info.name,
+      dateOfBirth: info.dateOfBirth ?? null,
       firstSeason: career[0]?.season ?? null,
       lastSeason: career[career.length - 1]?.season ?? null,
       totals: {

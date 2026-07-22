@@ -1,14 +1,14 @@
-import { c as createComponent } from './astro-component_aSvImiOh.mjs';
+import { c as createComponent } from './astro-component_D-Wa7gUh.mjs';
 import 'piccolore';
-import { r as renderTemplate, i as renderSlot, f as addAttribute, j as renderHead, m as maybeRenderHead, k as renderComponent, l as Fragment } from './ssr-function_z_qVvn7N.mjs';
+import { r as renderTemplate, i as renderSlot, f as addAttribute, j as renderHead, m as maybeRenderHead, k as renderComponent, l as Fragment } from './ssr-function_BPWFIaI1.mjs';
 import fs from 'node:fs';
 import path from 'node:path';
 import 'clsx';
 
-var __freeze = Object.freeze;
-var __defProp = Object.defineProperty;
-var __template = (cooked, raw) => __freeze(__defProp(cooked, "raw", { value: __freeze(cooked.slice()) }));
-var _a;
+var __freeze$1 = Object.freeze;
+var __defProp$1 = Object.defineProperty;
+var __template$1 = (cooked, raw) => __freeze$1(__defProp$1(cooked, "raw", { value: __freeze$1(cooked.slice()) }));
+var _a$1;
 const $$BaseLayout = createComponent(($$result, $$props, $$slots) => {
   const Astro2 = $$result.createAstro($$props, $$slots);
   Astro2.self = $$BaseLayout;
@@ -28,7 +28,7 @@ const $$BaseLayout = createComponent(($$result, $$props, $$slots) => {
     return "";
   }
   const current = navKey(pathname);
-  return renderTemplate(_a || (_a = __template(['<html lang="en" data-astro-cid-37fxchfa> <head><meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1"><title>', "</title>", "", '<link rel="icon" type="image/svg+xml" href="/favicon.svg"><link rel="icon" type="image/x-icon" href="/favicon.ico" sizes="any"><link rel="apple-touch-icon" href="/apple-touch-icon.png"><link rel="stylesheet" href="/tokens.css"><link rel="stylesheet" href="/f1-table.css">', `<script defer src="https://static.cloudflareinsights.com/beacon.min.js" data-cf-beacon="{&quot;token&quot;:&quot;231dcb0acef2461c8d76032d94a31207&quot;}"><\/script><link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin><link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Barlow+Condensed:wght@700&family=JetBrains+Mono:wght@400;700&display=swap"><!-- AdSense site verification --><script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-6298973348658731" crossorigin="anonymous"><\/script><!-- Google Consent Mode v2 — defaults set BEFORE gtag loads --><script>
+  return renderTemplate(_a$1 || (_a$1 = __template$1(['<html lang="en" data-astro-cid-37fxchfa> <head><meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1"><title>', "</title>", "", '<link rel="icon" type="image/svg+xml" href="/favicon.svg"><link rel="icon" type="image/x-icon" href="/favicon.ico" sizes="any"><link rel="apple-touch-icon" href="/apple-touch-icon.png"><link rel="stylesheet" href="/tokens.css"><link rel="stylesheet" href="/f1-table.css">', `<script defer src="https://static.cloudflareinsights.com/beacon.min.js" data-cf-beacon="{&quot;token&quot;:&quot;231dcb0acef2461c8d76032d94a31207&quot;}"><\/script><link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin><link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Barlow+Condensed:wght@700&family=JetBrains+Mono:wght@400;700&display=swap"><!-- AdSense site verification --><script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-6298973348658731" crossorigin="anonymous"><\/script><!-- Google Consent Mode v2 — defaults set BEFORE gtag loads --><script>
       window.dataLayer = window.dataLayer || [];
       function gtag(){dataLayer.push(arguments);}
       gtag('consent', 'default', {
@@ -48,13 +48,17 @@ const $$F1DeltaExplain = createComponent(($$result, $$props, $$slots) => {
   const Astro2 = $$result.createAstro($$props, $$slots);
   Astro2.self = $$F1DeltaExplain;
   const { compareNote = false } = Astro2.props;
-  return renderTemplate`${maybeRenderHead()}<details class="f1d-explain" data-astro-cid-wh272q75> <summary data-astro-cid-wh272q75>How is f1δ calculated?</summary> <div class="f1d-xbody" data-astro-cid-wh272q75> ${compareNote && renderTemplate`<p class="f1d-compare-note" data-astro-cid-wh272q75>Each bar is one season, scored against that season's maximum possible points. Careers are lined up by season number — each driver's first season, second season, and so on — so two careers from different eras can be compared by shape.</p>`} <h4 data-astro-cid-wh272q75>Career f1δ — who accumulated the most?</h4> <p data-astro-cid-wh272q75>Every season is scored as a share of that year's maximum possible points, on a 0–100 scale, then summed across a whole career. <strong data-astro-cid-wh272q75>Formula:</strong> season f1δ = (points scored ÷ maximum points winnable that season) × 100; career f1δ = the sum of every season. <strong data-astro-cid-wh272q75>Worked example:</strong> Verstappen's 2023 = 575 ÷ 620 × 100 = <strong data-astro-cid-wh272q75>92.7</strong>. <strong data-astro-cid-wh272q75>Why:</strong> dividing each season by its own era's maximum makes eras comparable — dominating a 7-race 1950 season and a 24-race 2024 season both come out near 100%, even though a win was worth 8 points then and 25 now. Summing rewards longevity. Indy 500 excluded; a DNF is simply a zero.</p> <h4 data-astro-cid-wh272q75>Peak f1δ — whose single best season was most dominant?</h4> <p data-astro-cid-wh272q75>A driver's highest single-season f1δ — their most dominant year, on its own. <strong data-astro-cid-wh272q75>Formula:</strong> the maximum of a driver's season scores. <strong data-astro-cid-wh272q75>Worked example:</strong> Verstappen's peak is his 2023 season — <strong data-astro-cid-wh272q75>92.7</strong>. <strong data-astro-cid-wh272q75>Why:</strong> the career total rewards longevity, so a short, ferocious peak can hide inside a lower lifetime sum. Peak isolates the single best year, so a driver whose brilliance was intense but brief stands where they belong.</p> <h4 data-astro-cid-wh272q75>Seasonal podiums &amp; dominant stretch — who stayed at the top longest?</h4> <p data-astro-cid-wh272q75>Rank every driver by f1δ each season. Finishing top-3 that year is a <strong data-astro-cid-wh272q75>seasonal podium</strong>; finishing 1st is a <strong data-astro-cid-wh272q75>seasonal win</strong>. A <strong data-astro-cid-wh272q75>dominant stretch</strong> is the longest run of consecutive seasons at top-3. <strong data-astro-cid-wh272q75>Formula:</strong> for each season, rank all drivers by f1δ; seasonal podium = f1δ rank ≤ 3; dominant stretch = longest run of consecutive seasonal podiums. <strong data-astro-cid-wh272q75>Worked example:</strong> Hamilton holds the record — 8 straight seasonal podiums (2014–2021). Schumacher ran 7 in a row (2000–2006); Verstappen's run stands at 7 (2019–2025). <strong data-astro-cid-wh272q75>Why:</strong> dominance is where you placed among the field, not your raw score. Hamilton in 2016 lost the title by five points but still scored a top-3 f1δ — something a binary "champion / not champion" would miss.</p> </div> </details>`;
+  return renderTemplate`${maybeRenderHead()}<details class="f1d-explain" data-astro-cid-wh272q75> <summary data-astro-cid-wh272q75>How is f1δ calculated?</summary> <div class="f1d-xbody" data-astro-cid-wh272q75> ${compareNote && renderTemplate`<p class="f1d-compare-note" data-astro-cid-wh272q75>Each point is one season, scored against that season's maximum possible points. The two careers can be lined up three ways — by season number, by the driver's age, or by calendar year — because "whose trajectory was better," "who was better at 27," and "what happened that year" are three different questions. Age alignment matters because drivers debut at very different ages: lining up two rookie seasons can otherwise compare a driver in his late thirties to one in his early twenties.</p>`} <h4 data-astro-cid-wh272q75>Career f1δ — who accumulated the most?</h4> <p data-astro-cid-wh272q75>Every season is scored as a share of that year's maximum possible points, on a 0–100 scale, then summed across a whole career. <strong data-astro-cid-wh272q75>Formula:</strong> season f1δ = (points scored ÷ maximum points winnable that season) × 100; career f1δ = the sum of every season. <strong data-astro-cid-wh272q75>Worked example:</strong> Verstappen's 2023 = 575 ÷ 620 × 100 = <strong data-astro-cid-wh272q75>92.7</strong>. <strong data-astro-cid-wh272q75>Why:</strong> dividing each season by its own era's maximum makes eras comparable — dominating a 7-race 1950 season and a 24-race 2024 season both come out near 100%, even though a win was worth 8 points then and 25 now. Summing rewards longevity. Indy 500 excluded; a DNF is simply a zero.</p> <h4 data-astro-cid-wh272q75>Peak f1δ — whose single best season was most dominant?</h4> <p data-astro-cid-wh272q75>A driver's highest single-season f1δ — their most dominant year, on its own. <strong data-astro-cid-wh272q75>Formula:</strong> the maximum of a driver's season scores. <strong data-astro-cid-wh272q75>Worked example:</strong> Verstappen's peak is his 2023 season — <strong data-astro-cid-wh272q75>92.7</strong>. <strong data-astro-cid-wh272q75>Why:</strong> the career total rewards longevity, so a short, ferocious peak can hide inside a lower lifetime sum. Peak isolates the single best year, so a driver whose brilliance was intense but brief stands where they belong.</p> <h4 data-astro-cid-wh272q75>Seasonal podiums &amp; dominant stretch — who stayed at the top longest?</h4> <p data-astro-cid-wh272q75>Rank every driver by f1δ each season. Finishing top-3 that year is a <strong data-astro-cid-wh272q75>seasonal podium</strong>; finishing 1st is a <strong data-astro-cid-wh272q75>seasonal win</strong>. A <strong data-astro-cid-wh272q75>dominant stretch</strong> is the longest run of consecutive seasons at top-3. <strong data-astro-cid-wh272q75>Formula:</strong> for each season, rank all drivers by f1δ; seasonal podium = f1δ rank ≤ 3; dominant stretch = longest run of consecutive seasonal podiums. <strong data-astro-cid-wh272q75>Worked example:</strong> Hamilton holds the record — 8 straight seasonal podiums (2014–2021). Schumacher ran 7 in a row (2000–2006); Verstappen's run stands at 7 (2019–2025). <strong data-astro-cid-wh272q75>Why:</strong> dominance is where you placed among the field, not your raw score. Hamilton in 2016 lost the title by five points but still scored a top-3 f1δ — something a binary "champion / not champion" would miss.</p> </div> </details>`;
 }, "/Users/thomaspayment/f1delta/src/components/F1DeltaExplain.astro", void 0);
 
 const $$ReliabilityExplain = createComponent(($$result, $$props, $$slots) => {
   return renderTemplate`${maybeRenderHead()}<details class="rel-explain" data-astro-cid-ez5qnbff> <summary data-astro-cid-ez5qnbff>DNF rate &amp; points-finish rate</summary> <div class="rel-xbody" data-astro-cid-ez5qnbff> <h4 data-astro-cid-ez5qnbff>DNF rate — "how often did they not finish?"</h4> <p data-astro-cid-ez5qnbff>The share of race starts that ended without a classified finish. <strong data-astro-cid-ez5qnbff>Formula:</strong> races not finished ÷ race starts × 100. Races the driver did not start are excluded from both sides. A disqualification counts as a finish that scored nothing, not a DNF. <strong data-astro-cid-ez5qnbff>Why it sits apart from the era-fair rates:</strong> unlike a win or a podium, <em data-astro-cid-ez5qnbff>finishing</em> meant something very different in different eras. Cars in the 1950s–70s broke constantly; modern cars almost always reach the flag. A high DNF rate in 1955 says far more about the machinery than the driver. Comparing two drivers within the same season is meaningful — they faced the same conditions. Across eras it's context, not a verdict.</p> <h4 data-astro-cid-ez5qnbff>Points-finish rate — "how often did they score?"</h4> <p data-astro-cid-ez5qnbff>The share of race starts that ended in a points-paying position. <strong data-astro-cid-ez5qnbff>Formula:</strong> races finished in a scoring position ÷ race starts × 100, using that season's real points system. <strong data-astro-cid-ez5qnbff>Why it's era-dependent:</strong> the number of positions that pay points has changed repeatedly — the top five scored in 1950, the top ten score today. A modern driver has roughly twice as many scoring positions available for the same relative performance, so a higher percentage doesn't necessarily mean a better driver. Like DNF rate, it's shown as context.</p> </div> </details>`;
 }, "/Users/thomaspayment/f1delta/src/components/ReliabilityExplain.astro", void 0);
 
+var __freeze = Object.freeze;
+var __defProp = Object.defineProperty;
+var __template = (cooked, raw) => __freeze(__defProp(cooked, "raw", { value: __freeze(raw || cooked.slice()) }));
+var _a;
 const prerender = false;
 const $$slug = createComponent(($$result, $$props, $$slots) => {
   const Astro2 = $$result.createAstro($$props, $$slots);
@@ -201,10 +205,272 @@ const $$slug = createComponent(($$result, $$props, $$slots) => {
   const stripA = f1dA.seasons ?? [];
   const stripB = f1dB.seasons ?? [];
   const stripCols = Math.max(stripA.length, stripB.length);
+  const birthYearA = dA.dateOfBirth ? parseInt(dA.dateOfBirth.slice(0, 4)) : null;
+  const birthYearB = dB.dateOfBirth ? parseInt(dB.dateOfBirth.slice(0, 4)) : null;
+  const stripAWithAge = stripA.map((s) => ({
+    year: s.year,
+    f1delta: s.f1delta,
+    rank: s.rank,
+    age: birthYearA != null ? s.year - birthYearA : null
+  }));
+  const stripBWithAge = stripB.map((s) => ({
+    year: s.year,
+    f1delta: s.f1delta,
+    rank: s.rank,
+    age: birthYearB != null ? s.year - birthYearB : null
+  }));
   const pageTitle = `${dA.name} vs ${dB.name} — f1delta`;
   const pageDesc = `Compare ${dA.name} and ${dB.name}: championships, wins, podiums, poles, and career rates.`;
   const canonical = `https://f1delta.com/compare/${slug}`;
-  return renderTemplate`${renderComponent($$result, "BaseLayout", $$BaseLayout, { "title": pageTitle, "description": pageDesc, "canonical": canonical, "data-astro-cid-bdsczzry": true }, { "default": ($$result2) => renderTemplate` ${maybeRenderHead()}<div class="cmp" data-astro-cid-bdsczzry> <!-- Header --> <div class="cmp-hd" data-astro-cid-bdsczzry> <div class="cmp-names" data-astro-cid-bdsczzry> <a class="cmp-name"${addAttribute(`/drivers/${idA}`, "href")} data-astro-cid-bdsczzry>${dA.name}</a> <span class="cmp-sep" data-astro-cid-bdsczzry>vs</span> <a class="cmp-name"${addAttribute(`/drivers/${idB}`, "href")} data-astro-cid-bdsczzry>${dB.name}</a> </div> <p class="cmp-back" data-astro-cid-bdsczzry><a href="/compare" data-astro-cid-bdsczzry>← Compare another pair</a></p> </div> <!-- Comparison grid --> <div class="card" data-astro-cid-bdsczzry> <div class="table-scroll" data-astro-cid-bdsczzry> <table class="cmp-tbl" data-astro-cid-bdsczzry> <thead data-astro-cid-bdsczzry> <tr data-astro-cid-bdsczzry> <th class="lbl" data-astro-cid-bdsczzry></th> <th class="drv-col" data-astro-cid-bdsczzry><a${addAttribute(`/drivers/${idA}`, "href")} data-astro-cid-bdsczzry>${dA.name}</a></th> <th class="drv-col" data-astro-cid-bdsczzry><a${addAttribute(`/drivers/${idB}`, "href")} data-astro-cid-bdsczzry>${dB.name}</a></th> </tr> </thead> <tbody data-astro-cid-bdsczzry> <!-- ── CAREER ──────────────────────────────────────── --> <tr class="grp-hd" data-astro-cid-bdsczzry><th colspan="3" data-astro-cid-bdsczzry>Career</th></tr> <!-- Championships (directional: more = better) --> ${(() => {
+  return renderTemplate(_a || (_a = __template(["", ` <script>
+(function () {
+  var el = document.getElementById('f1ds-chart');
+  if (!el) return;
+
+  var stripA = JSON.parse(el.dataset.a);
+  var stripB = JSON.parse(el.dataset.b);
+
+  var W = 560, CH = 60, LH = 14, H = CH + LH;
+
+  function py(v) { return +(CH - v * CH / 100).toFixed(2); }
+
+  function rankFill(r) {
+    if (r === 1) return '#b8952a';
+    if (r <= 3) return '#e10600';
+    if (r != null) return '#9398a3';
+    return '#c0c4c8';
+  }
+
+  function buildCols(mode) {
+    if (mode === 'career') {
+      var len = Math.max(stripA.length, stripB.length);
+      return Array.from({ length: len }, function (_, i) {
+        return { aData: stripA[i] || null, bData: stripB[i] || null, label: String(i + 1) };
+      });
+    }
+    if (mode === 'age') {
+      var ages = stripA.concat(stripB).map(function (s) { return s.age; }).filter(function (a) { return a != null; });
+      if (!ages.length) return buildCols('career');
+      var lo = Math.min.apply(null, ages), hi = Math.max.apply(null, ages);
+      return Array.from({ length: hi - lo + 1 }, function (_, i) {
+        var age = lo + i;
+        return {
+          aData: stripA.find(function (s) { return s.age === age; }) || null,
+          bData: stripB.find(function (s) { return s.age === age; }) || null,
+          label: String(age),
+        };
+      });
+    }
+    // calendar
+    var years = stripA.concat(stripB).map(function (s) { return s.year; });
+    var lo2 = Math.min.apply(null, years), hi2 = Math.max.apply(null, years);
+    return Array.from({ length: hi2 - lo2 + 1 }, function (_, i) {
+      var yr = lo2 + i;
+      return {
+        aData: stripA.find(function (s) { return s.year === yr; }) || null,
+        bData: stripB.find(function (s) { return s.year === yr; }) || null,
+        label: "'" + String(yr).slice(2),
+      };
+    });
+  }
+
+  function pathFor(cols, key) {
+    var cw = W / cols.length;
+    var d = '', prevHad = false;
+    cols.forEach(function (col, i) {
+      var s = col[key];
+      if (!s) { prevHad = false; return; }
+      var x = ((i + 0.5) * cw).toFixed(1);
+      var y = py(s.f1delta);
+      d += (prevHad ? ' L' : ' M') + x + ',' + y;
+      prevHad = true;
+    });
+    return d.trim();
+  }
+
+  function esc(v) { return String(v).replace(/&/g,'&amp;').replace(/</g,'&lt;').replace(/>/g,'&gt;'); }
+
+  function render(mode) {
+    var cols = buildCols(mode);
+    var n = cols.length;
+    if (!n) return;
+    var cw = W / n;
+    var skip = Math.max(1, Math.ceil(n / 15));
+    var svg = '<svg viewBox="0 0 ' + W + ' ' + H + '" style="width:100%;display:block;overflow:visible" aria-hidden="true">';
+
+    // grid lines
+    [25, 50, 75].forEach(function (v) {
+      svg += '<line x1="0" y1="' + py(v) + '" x2="' + W + '" y2="' + py(v) + '" stroke="#e4e4df" stroke-width="0.5"/>';
+    });
+
+    // paths
+    var pa = pathFor(cols, 'aData');
+    if (pa) svg += '<path d="' + pa + '" fill="none" stroke="#e10600" stroke-width="1.5" stroke-linejoin="round" stroke-linecap="round"/>';
+    var pb = pathFor(cols, 'bData');
+    if (pb) svg += '<path d="' + pb + '" fill="none" stroke="#6b6b70" stroke-width="1.5" stroke-linejoin="round" stroke-linecap="round" stroke-dasharray="4 2"/>';
+
+    // B dots first so A appears on top
+    cols.forEach(function (col, i) {
+      if (!col.bData) return;
+      var x = ((i + 0.5) * cw).toFixed(1), y = py(col.bData.f1delta);
+      var tip = esc(col.bData.year + ': ' + col.bData.f1delta.toFixed(1) + ' f1δ' + (col.bData.rank ? ' \\xb7 #' + col.bData.rank : ''));
+      svg += '<circle cx="' + x + '" cy="' + y + '" r="3" fill="' + rankFill(col.bData.rank) + '" stroke="#fff" stroke-width="1" opacity="0.9"><title>' + tip + '</title></circle>';
+    });
+    cols.forEach(function (col, i) {
+      if (!col.aData) return;
+      var x = ((i + 0.5) * cw).toFixed(1), y = py(col.aData.f1delta);
+      var tip = esc(col.aData.year + ': ' + col.aData.f1delta.toFixed(1) + ' f1δ' + (col.aData.rank ? ' \\xb7 #' + col.aData.rank : ''));
+      svg += '<circle cx="' + x + '" cy="' + y + '" r="3.5" fill="' + rankFill(col.aData.rank) + '" stroke="#fff" stroke-width="1"><title>' + tip + '</title></circle>';
+    });
+
+    // x-axis labels
+    cols.forEach(function (col, i) {
+      if (i % skip !== 0 && i !== n - 1) return;
+      var x = ((i + 0.5) * cw).toFixed(1);
+      svg += '<text x="' + x + '" y="' + (H - 2) + '" text-anchor="middle" font-size="7" font-family="monospace" fill="#9398a3">' + esc(col.label) + '</text>';
+    });
+
+    svg += '</svg>';
+    el.innerHTML = svg;
+  }
+
+  var mode = 'career';
+  render(mode);
+
+  document.querySelectorAll('.f1dt[data-align]').forEach(function (btn) {
+    btn.addEventListener('click', function () {
+      document.querySelectorAll('.f1dt[data-align]').forEach(function (b) { b.classList.remove('active'); });
+      btn.classList.add('active');
+      mode = btn.dataset.align;
+      render(mode);
+    });
+  });
+}());
+<\/script>`], ["", ` <script>
+(function () {
+  var el = document.getElementById('f1ds-chart');
+  if (!el) return;
+
+  var stripA = JSON.parse(el.dataset.a);
+  var stripB = JSON.parse(el.dataset.b);
+
+  var W = 560, CH = 60, LH = 14, H = CH + LH;
+
+  function py(v) { return +(CH - v * CH / 100).toFixed(2); }
+
+  function rankFill(r) {
+    if (r === 1) return '#b8952a';
+    if (r <= 3) return '#e10600';
+    if (r != null) return '#9398a3';
+    return '#c0c4c8';
+  }
+
+  function buildCols(mode) {
+    if (mode === 'career') {
+      var len = Math.max(stripA.length, stripB.length);
+      return Array.from({ length: len }, function (_, i) {
+        return { aData: stripA[i] || null, bData: stripB[i] || null, label: String(i + 1) };
+      });
+    }
+    if (mode === 'age') {
+      var ages = stripA.concat(stripB).map(function (s) { return s.age; }).filter(function (a) { return a != null; });
+      if (!ages.length) return buildCols('career');
+      var lo = Math.min.apply(null, ages), hi = Math.max.apply(null, ages);
+      return Array.from({ length: hi - lo + 1 }, function (_, i) {
+        var age = lo + i;
+        return {
+          aData: stripA.find(function (s) { return s.age === age; }) || null,
+          bData: stripB.find(function (s) { return s.age === age; }) || null,
+          label: String(age),
+        };
+      });
+    }
+    // calendar
+    var years = stripA.concat(stripB).map(function (s) { return s.year; });
+    var lo2 = Math.min.apply(null, years), hi2 = Math.max.apply(null, years);
+    return Array.from({ length: hi2 - lo2 + 1 }, function (_, i) {
+      var yr = lo2 + i;
+      return {
+        aData: stripA.find(function (s) { return s.year === yr; }) || null,
+        bData: stripB.find(function (s) { return s.year === yr; }) || null,
+        label: "'" + String(yr).slice(2),
+      };
+    });
+  }
+
+  function pathFor(cols, key) {
+    var cw = W / cols.length;
+    var d = '', prevHad = false;
+    cols.forEach(function (col, i) {
+      var s = col[key];
+      if (!s) { prevHad = false; return; }
+      var x = ((i + 0.5) * cw).toFixed(1);
+      var y = py(s.f1delta);
+      d += (prevHad ? ' L' : ' M') + x + ',' + y;
+      prevHad = true;
+    });
+    return d.trim();
+  }
+
+  function esc(v) { return String(v).replace(/&/g,'&amp;').replace(/</g,'&lt;').replace(/>/g,'&gt;'); }
+
+  function render(mode) {
+    var cols = buildCols(mode);
+    var n = cols.length;
+    if (!n) return;
+    var cw = W / n;
+    var skip = Math.max(1, Math.ceil(n / 15));
+    var svg = '<svg viewBox="0 0 ' + W + ' ' + H + '" style="width:100%;display:block;overflow:visible" aria-hidden="true">';
+
+    // grid lines
+    [25, 50, 75].forEach(function (v) {
+      svg += '<line x1="0" y1="' + py(v) + '" x2="' + W + '" y2="' + py(v) + '" stroke="#e4e4df" stroke-width="0.5"/>';
+    });
+
+    // paths
+    var pa = pathFor(cols, 'aData');
+    if (pa) svg += '<path d="' + pa + '" fill="none" stroke="#e10600" stroke-width="1.5" stroke-linejoin="round" stroke-linecap="round"/>';
+    var pb = pathFor(cols, 'bData');
+    if (pb) svg += '<path d="' + pb + '" fill="none" stroke="#6b6b70" stroke-width="1.5" stroke-linejoin="round" stroke-linecap="round" stroke-dasharray="4 2"/>';
+
+    // B dots first so A appears on top
+    cols.forEach(function (col, i) {
+      if (!col.bData) return;
+      var x = ((i + 0.5) * cw).toFixed(1), y = py(col.bData.f1delta);
+      var tip = esc(col.bData.year + ': ' + col.bData.f1delta.toFixed(1) + ' f1δ' + (col.bData.rank ? ' \\\\xb7 #' + col.bData.rank : ''));
+      svg += '<circle cx="' + x + '" cy="' + y + '" r="3" fill="' + rankFill(col.bData.rank) + '" stroke="#fff" stroke-width="1" opacity="0.9"><title>' + tip + '</title></circle>';
+    });
+    cols.forEach(function (col, i) {
+      if (!col.aData) return;
+      var x = ((i + 0.5) * cw).toFixed(1), y = py(col.aData.f1delta);
+      var tip = esc(col.aData.year + ': ' + col.aData.f1delta.toFixed(1) + ' f1δ' + (col.aData.rank ? ' \\\\xb7 #' + col.aData.rank : ''));
+      svg += '<circle cx="' + x + '" cy="' + y + '" r="3.5" fill="' + rankFill(col.aData.rank) + '" stroke="#fff" stroke-width="1"><title>' + tip + '</title></circle>';
+    });
+
+    // x-axis labels
+    cols.forEach(function (col, i) {
+      if (i % skip !== 0 && i !== n - 1) return;
+      var x = ((i + 0.5) * cw).toFixed(1);
+      svg += '<text x="' + x + '" y="' + (H - 2) + '" text-anchor="middle" font-size="7" font-family="monospace" fill="#9398a3">' + esc(col.label) + '</text>';
+    });
+
+    svg += '</svg>';
+    el.innerHTML = svg;
+  }
+
+  var mode = 'career';
+  render(mode);
+
+  document.querySelectorAll('.f1dt[data-align]').forEach(function (btn) {
+    btn.addEventListener('click', function () {
+      document.querySelectorAll('.f1dt[data-align]').forEach(function (b) { b.classList.remove('active'); });
+      btn.classList.add('active');
+      mode = btn.dataset.align;
+      render(mode);
+    });
+  });
+}());
+<\/script>`])), renderComponent($$result, "BaseLayout", $$BaseLayout, { "title": pageTitle, "description": pageDesc, "canonical": canonical, "data-astro-cid-bdsczzry": true }, { "default": ($$result2) => renderTemplate` ${maybeRenderHead()}<div class="cmp" data-astro-cid-bdsczzry> <!-- Header --> <div class="cmp-hd" data-astro-cid-bdsczzry> <div class="cmp-names" data-astro-cid-bdsczzry> <a class="cmp-name"${addAttribute(`/drivers/${idA}`, "href")} data-astro-cid-bdsczzry>${dA.name}</a> <span class="cmp-sep" data-astro-cid-bdsczzry>vs</span> <a class="cmp-name"${addAttribute(`/drivers/${idB}`, "href")} data-astro-cid-bdsczzry>${dB.name}</a> </div> <p class="cmp-back" data-astro-cid-bdsczzry><a href="/compare" data-astro-cid-bdsczzry>← Compare another pair</a></p> </div> <!-- Comparison grid --> <div class="card" data-astro-cid-bdsczzry> <div class="table-scroll" data-astro-cid-bdsczzry> <table class="cmp-tbl" data-astro-cid-bdsczzry> <thead data-astro-cid-bdsczzry> <tr data-astro-cid-bdsczzry> <th class="lbl" data-astro-cid-bdsczzry></th> <th class="drv-col" data-astro-cid-bdsczzry><a${addAttribute(`/drivers/${idA}`, "href")} data-astro-cid-bdsczzry>${dA.name}</a></th> <th class="drv-col" data-astro-cid-bdsczzry><a${addAttribute(`/drivers/${idB}`, "href")} data-astro-cid-bdsczzry>${dB.name}</a></th> </tr> </thead> <tbody data-astro-cid-bdsczzry> <!-- ── CAREER ──────────────────────────────────────── --> <tr class="grp-hd" data-astro-cid-bdsczzry><th colspan="3" data-astro-cid-bdsczzry>Career</th></tr> <!-- Championships (directional: more = better) --> ${(() => {
     const a = tA.championships ?? 0, b = tB.championships ?? 0;
     const aWin = a > b, bWin = b > a;
     return renderTemplate`<tr data-astro-cid-bdsczzry> <td class="lbl" data-astro-cid-bdsczzry>Championships</td> <td${addAttribute(["val", { win: aWin, lose: bWin && !aWin }], "class:list")} data-astro-cid-bdsczzry>${a || "—"}</td> <td${addAttribute(["val", { win: bWin, lose: aWin && !bWin }], "class:list")} data-astro-cid-bdsczzry>${b || "—"}</td> </tr>`;
@@ -226,10 +492,7 @@ Era-fair rates
 Reliability &amp; consistency
 <span class="grp-note" data-astro-cid-bdsczzry>era-dependent · see explanation</span> </th> </tr> ${relRows.map((row) => renderTemplate`<tr data-astro-cid-bdsczzry> <td class="lbl" data-astro-cid-bdsczzry>${row.label}</td> <td class="val neutral" data-astro-cid-bdsczzry>${row.aVal}</td> <td class="val neutral" data-astro-cid-bdsczzry>${row.bVal}</td> </tr>`)} <!-- ── POINTS ──────────────────────────────────────── --> <tr class="grp-hd" data-astro-cid-bdsczzry> <th colspan="3" data-astro-cid-bdsczzry>
 Points
-<span class="grp-note" data-astro-cid-bdsczzry>scoring-era variable · not directly comparable</span> </th> </tr> <tr data-astro-cid-bdsczzry> <td class="lbl" data-astro-cid-bdsczzry>Career total</td> <td class="val neutral" data-astro-cid-bdsczzry>${fmt(tA.points)}</td> <td class="val neutral" data-astro-cid-bdsczzry>${fmt(tB.points)}</td> </tr> </tbody> </table> </div> ${stripCols > 0 && renderTemplate`<div class="f1ds-section" data-astro-cid-bdsczzry> <div class="f1ds-hd" data-astro-cid-bdsczzry> <span class="f1ds-title" data-astro-cid-bdsczzry>f1δ season shape</span> <span class="f1ds-hint" data-astro-cid-bdsczzry>career-season alignment · each bar = one season</span> </div> <div class="f1ds-body" data-astro-cid-bdsczzry> ${[
-    { drv: dA, id: idA, strip: stripA },
-    { drv: dB, id: idB, strip: stripB }
-  ].map(({ drv, id, strip }) => renderTemplate`<div class="f1ds-drv" data-astro-cid-bdsczzry> <a class="f1ds-dname"${addAttribute("/drivers/" + id, "href")} data-astro-cid-bdsczzry>${drv.name}</a> <div class="f1ds-bars" data-astro-cid-bdsczzry> ${strip.map((s) => renderTemplate`<div class="f1ds-col"${addAttribute(s.year + ": " + s.f1delta.toFixed(1) + " f1delta, rank " + (s.rank ?? "-"), "title")} data-astro-cid-bdsczzry> <span${addAttribute("f1ds-rnk " + (s.rank === 1 ? "r1" : s.rank <= 3 ? "r3" : "rout"), "class")} data-astro-cid-bdsczzry> ${s.rank <= 3 ? "#" + s.rank : ""} </span> <div class="f1ds-bw" data-astro-cid-bdsczzry> <span class="f1ds-b"${addAttribute("height:" + s.f1delta.toFixed(1) + "%", "style")} data-astro-cid-bdsczzry></span> </div> <span class="f1ds-yr" data-astro-cid-bdsczzry>${String(s.year).slice(2)}</span> </div>`)} ${Array.from({ length: stripCols - strip.length }).map(() => renderTemplate`<div class="f1ds-col f1ds-phantom" data-astro-cid-bdsczzry></div>`)} </div> </div>`)} </div> ${renderComponent($$result2, "F1DeltaExplain", $$F1DeltaExplain, { "compareNote": true, "data-astro-cid-bdsczzry": true })} </div>`} ${renderComponent($$result2, "ReliabilityExplain", $$ReliabilityExplain, { "data-astro-cid-bdsczzry": true })} </div> <!-- Ad slot (E2): after table, before footer links --> <div id="cmp-ad-slot" data-ad-slot data-astro-cid-bdsczzry></div> <!-- H2H cross-link (E1): only if they were teammates with a race-comparable pairing --> ${hasH2H && renderTemplate`<div class="h2h-xlink" data-astro-cid-bdsczzry> <span class="h2h-xlink-icon" data-astro-cid-bdsczzry>🏎</span> <div data-astro-cid-bdsczzry> <strong data-astro-cid-bdsczzry>They shared a car.</strong> <a class="h2h-xlink-a"${addAttribute(`/h2h/${h2hSlug}`, "href")} data-astro-cid-bdsczzry>See the teammate head-to-head →</a> </div> </div>`} <!-- Footer links (E1) --> <div class="cmp-foot" data-astro-cid-bdsczzry> <a${addAttribute(`/drivers/${idA}`, "href")} data-astro-cid-bdsczzry>${dA.name} career page →</a> <a${addAttribute(`/drivers/${idB}`, "href")} data-astro-cid-bdsczzry>${dB.name} career page →</a> </div> </div> ` })}`;
+<span class="grp-note" data-astro-cid-bdsczzry>scoring-era variable · not directly comparable</span> </th> </tr> <tr data-astro-cid-bdsczzry> <td class="lbl" data-astro-cid-bdsczzry>Career total</td> <td class="val neutral" data-astro-cid-bdsczzry>${fmt(tA.points)}</td> <td class="val neutral" data-astro-cid-bdsczzry>${fmt(tB.points)}</td> </tr> </tbody> </table> </div> ${stripCols > 0 && renderTemplate`<div class="f1ds-section" data-astro-cid-bdsczzry> <div class="f1ds-hd" data-astro-cid-bdsczzry> <span class="f1ds-title" data-astro-cid-bdsczzry>f1δ season shape</span> <div class="f1dt-row" data-astro-cid-bdsczzry> <button class="f1dt active" data-align="career" data-astro-cid-bdsczzry>career</button> <button class="f1dt" data-align="age" data-astro-cid-bdsczzry>age</button> <button class="f1dt" data-align="calendar" data-astro-cid-bdsczzry>calendar</button> </div> </div> <div class="f1ds-legend" data-astro-cid-bdsczzry> <span class="f1ds-leg" data-astro-cid-bdsczzry> <svg width="16" height="3" aria-hidden="true" class="f1ds-lsvg" data-astro-cid-bdsczzry> <line x1="0" y1="1.5" x2="16" y2="1.5" stroke="#e10600" stroke-width="2" data-astro-cid-bdsczzry></line> </svg> <a${addAttribute("/drivers/" + idA, "href")} class="f1ds-lname" data-astro-cid-bdsczzry>${dA.name}</a> </span> <span class="f1ds-leg" data-astro-cid-bdsczzry> <svg width="16" height="3" aria-hidden="true" class="f1ds-lsvg" data-astro-cid-bdsczzry> <line x1="0" y1="1.5" x2="16" y2="1.5" stroke="#6b6b70" stroke-width="2" stroke-dasharray="4 2" data-astro-cid-bdsczzry></line> </svg> <a${addAttribute("/drivers/" + idB, "href")} class="f1ds-lname" data-astro-cid-bdsczzry>${dB.name}</a> </span> </div> <div class="f1ds-chart" id="f1ds-chart"${addAttribute(JSON.stringify(stripAWithAge), "data-a")}${addAttribute(JSON.stringify(stripBWithAge), "data-b")}${addAttribute(dA.name, "data-na")}${addAttribute(dB.name, "data-nb")} data-astro-cid-bdsczzry></div> ${renderComponent($$result2, "F1DeltaExplain", $$F1DeltaExplain, { "compareNote": true, "data-astro-cid-bdsczzry": true })} </div>`} ${renderComponent($$result2, "ReliabilityExplain", $$ReliabilityExplain, { "data-astro-cid-bdsczzry": true })} </div> <!-- Ad slot (E2): after table, before footer links --> <div id="cmp-ad-slot" data-ad-slot data-astro-cid-bdsczzry></div> <!-- H2H cross-link (E1): only if they were teammates with a race-comparable pairing --> ${hasH2H && renderTemplate`<div class="h2h-xlink" data-astro-cid-bdsczzry> <span class="h2h-xlink-icon" data-astro-cid-bdsczzry>🏎</span> <div data-astro-cid-bdsczzry> <strong data-astro-cid-bdsczzry>They shared a car.</strong> <a class="h2h-xlink-a"${addAttribute(`/h2h/${h2hSlug}`, "href")} data-astro-cid-bdsczzry>See the teammate head-to-head →</a> </div> </div>`} <!-- Footer links (E1) --> <div class="cmp-foot" data-astro-cid-bdsczzry> <a${addAttribute(`/drivers/${idA}`, "href")} data-astro-cid-bdsczzry>${dA.name} career page →</a> <a${addAttribute(`/drivers/${idB}`, "href")} data-astro-cid-bdsczzry>${dB.name} career page →</a> </div> </div> ` }));
 }, "/Users/thomaspayment/f1delta/src/pages/compare/[slug].astro", void 0);
 
 const $$file = "/Users/thomaspayment/f1delta/src/pages/compare/[slug].astro";
