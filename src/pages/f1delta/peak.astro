@@ -2,29 +2,34 @@
 export const prerender = true;
 import fs from "node:fs";
 import path from "node:path";
-import BaseLayout from "../layouts/BaseLayout.astro";
+import BaseLayout from "../../layouts/BaseLayout.astro";
 
 const MIN_RACES = 15;
 
 const { drivers: allDrivers } = JSON.parse(
-  fs.readFileSync(path.resolve("./data/f1delta/index.json"), "utf8")
-) as { drivers: { driverId: string; name: string; career: number; seasons: number; races: number; firstSeason: number; lastSeason: number }[] };
+  fs.readFileSync(path.resolve("./data/f1delta/peak.json"), "utf8")
+) as {
+  drivers: {
+    driverId: string; name: string; career: number; peak: number; peakYear: number;
+    seasons: number; races: number; firstSeason: number; lastSeason: number;
+  }[];
+};
 
-const drivers = allDrivers.filter(d => d.races >= MIN_RACES);
+const drivers = allDrivers.filter((d) => d.races >= MIN_RACES && d.peak != null);
 ---
 
 <BaseLayout
-  title="f1δ Score — All-Time Leaderboard | f1delta"
-  description="All-time f1δ leaderboard: career era-fair scores for every F1 driver with 15+ starts. f1δ = % of max points winnable each season, summed across a career."
-  canonical="https://f1delta.com/f1delta"
+  title="f1δ Score — Peak Season | f1delta"
+  description="Peak f1δ leaderboard: each driver's most dominant single season, ranked. f1δ = % of max points winnable that season."
+  canonical="https://f1delta.com/f1delta/peak"
 >
   <div class="f1d-wrap">
     <div class="f1d-head">
-      <h1>f1δ Score — All-Time</h1>
-      <p class="f1d-sub">Era-fair career score: each season's points as a % of the maximum winnable that season, summed across a full career. <a href="/methodology">How it's calculated →</a></p>
+      <h1>f1δ Score — Peak Season</h1>
+      <p class="f1d-sub">Each driver's best single-season f1δ — their most dominant year, on its own. The career board rewards longevity; peak rescues the short, ferocious careers it buries. <a href="/methodology">How it's calculated →</a></p>
       <nav class="f1d-nav">
-        <a class="f1d-tab active" href="/f1delta">Career</a>
-        <a class="f1d-tab" href="/f1delta/peak">Peak Season</a>
+        <a class="f1d-tab" href="/f1delta">Career</a>
+        <a class="f1d-tab active" href="/f1delta/peak">Peak Season</a>
         <a class="f1d-tab" href="/f1delta/dominant">Dominant Stretch</a>
       </nav>
     </div>
@@ -36,9 +41,9 @@ const drivers = allDrivers.filter(d => d.races >= MIN_RACES);
             <tr>
               <th class="l" data-sort="rank" data-type="num">#</th>
               <th class="l" data-sort="name" data-type="text">Driver</th>
-              <th data-sort="f1delta" data-type="num">f1δ</th>
-              <th data-sort="seasons" data-type="num">Seasons</th>
-              <th data-sort="races" data-type="num">Races</th>
+              <th data-sort="peak" data-type="num">Peak f1δ</th>
+              <th data-sort="year" data-type="num">Year</th>
+              <th data-sort="career" data-type="num">Career f1δ</th>
               <th class="l" data-sort="span" data-type="text">Era</th>
             </tr>
           </thead>
@@ -47,16 +52,16 @@ const drivers = allDrivers.filter(d => d.races >= MIN_RACES);
               <tr
                 data-rank={i + 1}
                 data-name={d.name}
-                data-f1delta={d.career}
-                data-seasons={d.seasons}
-                data-races={d.races}
+                data-peak={d.peak}
+                data-year={d.peakYear}
+                data-career={d.career}
                 data-span={`${d.firstSeason}–${d.lastSeason}`}
               >
                 <td class="rk">{i + 1}</td>
                 <td class="nm"><a href={`/drivers/${d.driverId}`}>{d.name}</a></td>
-                <td class="sc">{d.career.toFixed(1)}</td>
-                <td class="n">{d.seasons}</td>
-                <td class="n">{d.races}</td>
+                <td class="sc">{d.peak.toFixed(1)}</td>
+                <td class="yr">{d.peakYear}</td>
+                <td class="n">{d.career.toFixed(1)}</td>
                 <td class="era">{d.firstSeason}–{d.lastSeason}</td>
               </tr>
             ))}
@@ -87,11 +92,15 @@ const drivers = allDrivers.filter(d => d.races >= MIN_RACES);
   .f1d-sub { font-size: 13px; color: var(--dim); margin: 0 0 20px; line-height: 1.5; }
   .f1d-sub a { color: var(--red); text-decoration: none; font-weight: 600; }
   .f1d-sub a:hover { text-decoration: underline; }
-  .f1d-nav { display: flex; gap: 0; border-top: 1px solid var(--line); }
+
+  .f1d-nav {
+    display: flex; gap: 0; border-top: 1px solid var(--line);
+  }
   .f1d-tab {
     font-family: var(--mono); font-size: 11px; font-weight: 600;
     text-decoration: none; color: var(--dim);
-    padding: 9px 14px; border-bottom: 2px solid transparent; letter-spacing: .03em;
+    padding: 9px 14px; border-bottom: 2px solid transparent;
+    letter-spacing: .03em;
   }
   .f1d-tab:hover { color: var(--ink); }
   .f1d-tab.active { color: var(--red); border-bottom-color: var(--red); }
@@ -123,7 +132,8 @@ const drivers = allDrivers.filter(d => d.races >= MIN_RACES);
   td.nm a { color: var(--ink); text-decoration: none; }
   td.nm a:hover { text-decoration: underline; }
   td.sc  { color: var(--ink); font-weight: 700; font-family: var(--mono); font-size: 14px; }
-  td.n   { font-family: var(--mono); }
+  td.yr  { font-family: var(--mono); color: var(--dim); }
+  td.n   { font-family: var(--mono); color: var(--dim); }
   td.era { text-align: left; font-family: var(--mono); font-size: 11px; color: var(--faint); }
   .tbl-note {
     font-size: 11px; color: var(--faint); padding: 8px 12px 10px;

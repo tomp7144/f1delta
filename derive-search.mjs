@@ -126,9 +126,21 @@ entries.push({
 });
 entries.push({
   type: "tool",
-  label: "f1δ Score Leaderboard",
+  label: "f1δ Score — Career Leaderboard",
   url: "/f1delta",
-  terms: ["f1delta", "f1δ", "score", "leaderboard", "era", "fair", "ranking"],
+  terms: ["f1delta", "f1δ", "score", "leaderboard", "era", "fair", "ranking", "career"],
+});
+entries.push({
+  type: "tool",
+  label: "f1δ Score — Peak Season",
+  url: "/f1delta/peak",
+  terms: ["f1delta", "f1δ", "peak", "season", "best", "dominant", "single"],
+});
+entries.push({
+  type: "tool",
+  label: "f1δ Score — Dominant Stretch",
+  url: "/f1delta/dominant",
+  terms: ["f1delta", "f1δ", "dominant", "stretch", "streak", "consecutive", "podiums"],
 });
 
 const out = JSON.stringify(entries);
