@@ -3,6 +3,7 @@ export const prerender = false;
 import fs from "node:fs";
 import path from "node:path";
 import BaseLayout from "../../layouts/BaseLayout.astro";
+import F1DeltaExplain from "../../components/F1DeltaExplain.astro";
 
 // ── Module-level init (cold start, not per-request) ────────────────────────
 const _root = path.resolve(".");
@@ -114,6 +115,58 @@ const rateRows = [
 const h2hSlug = [idA, idB].sort().join("-vs-");
 const hasH2H = h2hSlugs.has(h2hSlug);
 
+// ── f1δ lenses ────────────────────────────────────────────────────────────
+const f1dA = (dA.f1delta ?? {}) as any;
+const f1dB = (dB.f1delta ?? {}) as any;
+const hasF1D = f1dA.career != null || f1dB.career != null;
+
+const f1dRows = [
+  {
+    label: "Career f1δ",
+    aVal: f1dA.career != null ? (f1dA.career as number).toFixed(1) : "—",
+    bVal: f1dB.career != null ? (f1dB.career as number).toFixed(1) : "—",
+    aRaw: f1dA.career ?? 0,
+    bRaw: f1dB.career ?? 0,
+  },
+  {
+    label: "Peak season",
+    aVal: f1dA.peak != null ? `${(f1dA.peak as number).toFixed(1)} (${f1dA.peakYear})` : "—",
+    bVal: f1dB.peak != null ? `${(f1dB.peak as number).toFixed(1)} (${f1dB.peakYear})` : "—",
+    aRaw: f1dA.peak ?? 0,
+    bRaw: f1dB.peak ?? 0,
+  },
+  {
+    label: "Seasonal wins",
+    aVal: f1dA.seasonalWins != null ? String(f1dA.seasonalWins) : "—",
+    bVal: f1dB.seasonalWins != null ? String(f1dB.seasonalWins) : "—",
+    aRaw: f1dA.seasonalWins ?? 0,
+    bRaw: f1dB.seasonalWins ?? 0,
+  },
+  {
+    label: "Seasonal podiums",
+    aVal: f1dA.seasonalPodiums != null ? String(f1dA.seasonalPodiums) : "—",
+    bVal: f1dB.seasonalPodiums != null ? String(f1dB.seasonalPodiums) : "—",
+    aRaw: f1dA.seasonalPodiums ?? 0,
+    bRaw: f1dB.seasonalPodiums ?? 0,
+  },
+  {
+    label: "Longest stretch",
+    aVal: f1dA.dominantStretch > 0
+      ? `${f1dA.dominantStretch} · ${f1dA.stretchStart}–${f1dA.stretchEnd}`
+      : f1dA.career != null ? "0" : "—",
+    bVal: f1dB.dominantStretch > 0
+      ? `${f1dB.dominantStretch} · ${f1dB.stretchStart}–${f1dB.stretchEnd}`
+      : f1dB.career != null ? "0" : "—",
+    aRaw: f1dA.dominantStretch ?? 0,
+    bRaw: f1dB.dominantStretch ?? 0,
+  },
+];
+
+// Season-shape strip (career-season alignment)
+const stripA = (f1dA.seasons ?? []) as any[];
+const stripB = (f1dB.seasons ?? []) as any[];
+const stripCols = Math.max(stripA.length, stripB.length);
+
 // ── Page meta ─────────────────────────────────────────────────────────────
 const pageTitle = `${dA.name} vs ${dB.name} — f1delta`;
 const pageDesc  = `Compare ${dA.name} and ${dB.name}: championships, wins, podiums, poles, and career rates.`;
@@ -198,6 +251,29 @@ const canonical = `https://f1delta.com/compare/${slug}`;
               </td>
             </tr>
 
+            <!-- ── f1δ SCORE ──────────────────────────────────── -->
+            {hasF1D && (
+              <>
+                <tr class="grp-hd">
+                  <th colspan="3">
+                    f1δ Score
+                    <span class="grp-note">era-fair dominance · <a href="/methodology" class="grp-link">what is this?</a></span>
+                  </th>
+                </tr>
+                {f1dRows.map(row => {
+                  const aWin = row.aRaw > row.bRaw;
+                  const bWin = row.bRaw > row.aRaw;
+                  return (
+                    <tr>
+                      <td class="lbl">{row.label}</td>
+                      <td class:list={["val", { win: aWin, lose: bWin && !aWin }]}>{row.aVal}</td>
+                      <td class:list={["val", { win: bWin, lose: aWin && !bWin }]}>{row.bVal}</td>
+                    </tr>
+                  );
+                })}
+              </>
+            )}
+
             <!-- ── WINS & PODIUMS (era-dependent) ─────────────── -->
             <tr class="grp-hd">
               <th colspan="3">
@@ -263,6 +339,42 @@ const canonical = `https://f1delta.com/compare/${slug}`;
           </tbody>
         </table>
       </div>
+
+      {stripCols > 0 && (
+        <div class="f1ds-section">
+          <div class="f1ds-hd">
+            <span class="f1ds-title">f1δ season shape</span>
+            <span class="f1ds-hint">career-season alignment · each bar = one season</span>
+          </div>
+          <div class="f1ds-body">
+            {([
+              { drv: dA, id: idA, strip: stripA },
+              { drv: dB, id: idB, strip: stripB },
+            ] as { drv: any; id: string; strip: any[] }[]).map(({ drv, id, strip }) => (
+              <div class="f1ds-drv">
+                <a class="f1ds-dname" href={"/drivers/" + id}>{drv.name}</a>
+                <div class="f1ds-bars">
+                  {strip.map((s: any) => (
+                    <div class="f1ds-col" title={s.year + ": " + (s.f1delta as number).toFixed(1) + " f1delta, rank " + (s.rank ?? "-")}>
+                      <span class={"f1ds-rnk " + (s.rank === 1 ? "r1" : s.rank <= 3 ? "r3" : "rout")}>
+                        {s.rank <= 3 ? "#" + s.rank : ""}
+                      </span>
+                      <div class="f1ds-bw">
+                        <span class="f1ds-b" style={"height:" + (s.f1delta as number).toFixed(1) + "%"}></span>
+                      </div>
+                      <span class="f1ds-yr">{String(s.year).slice(2)}</span>
+                    </div>
+                  ))}
+                  {Array.from({ length: stripCols - strip.length }).map(() => (
+                    <div class="f1ds-col f1ds-phantom"></div>
+                  ))}
+                </div>
+              </div>
+            ))}
+          </div>
+          <F1DeltaExplain compareNote={true} />
+        </div>
+      )}
     </div>
 
     <!-- Ad slot (E2): after table, before footer links -->
@@ -398,4 +510,54 @@ const canonical = `https://f1delta.com/compare/${slug}`;
   }
   .cmp-foot a { font-size: 13px; color: var(--red); text-decoration: none; font-weight: 600; }
   .cmp-foot a:hover { text-decoration: underline; }
+
+  /* ── f1δ group header link ───────────────────────────────────── */
+  .grp-link { color: var(--faint); text-decoration: none; font-weight: 400; font-size: 9.5px; }
+  .grp-link:hover { color: var(--ink); text-decoration: underline; }
+
+  /* ── f1δ season shape strip ──────────────────────────────────── */
+  .f1ds-section { border-top: 2px solid var(--line); }
+  .f1ds-hd {
+    display: flex; align-items: center; gap: 10px;
+    padding: 7px 12px; background: var(--bg);
+    border-bottom: 1px solid var(--line);
+  }
+  .f1ds-title {
+    font-size: 9.5px; font-weight: 700; letter-spacing: .08em;
+    text-transform: uppercase; color: var(--faint);
+    font-family: var(--mono);
+  }
+  .f1ds-hint { font-family: var(--mono); font-size: 9px; color: var(--faint); }
+  .f1ds-body { padding: 10px 12px; display: flex; flex-direction: column; gap: 10px; }
+  .f1ds-drv { display: flex; flex-direction: column; gap: 3px; }
+  .f1ds-dname {
+    font-family: var(--mono); font-size: 10px; color: var(--dim);
+    font-weight: 600; text-decoration: none; letter-spacing: .02em;
+  }
+  .f1ds-dname:hover { color: var(--ink); }
+  .f1ds-bars { display: flex; gap: 2px; width: 100%; }
+  .f1ds-col {
+    flex: 1 1 0; min-width: 0;
+    display: flex; flex-direction: column; align-items: center; gap: 1px;
+  }
+  .f1ds-phantom { visibility: hidden; }
+  .f1ds-rnk {
+    font-family: var(--mono); font-size: 7px; height: 10px; line-height: 10px;
+    white-space: nowrap;
+  }
+  .f1ds-rnk.r1   { color: #7a5c00; font-weight: 700; }
+  .f1ds-rnk.r3   { color: var(--red); }
+  .f1ds-rnk.rout { visibility: hidden; }
+  .f1ds-bw {
+    width: 80%; height: 44px; background: var(--line);
+    border-radius: 2px; display: flex; align-items: flex-end; overflow: hidden;
+  }
+  .f1ds-b {
+    width: 100%; background: var(--red);
+    border-radius: 1px 1px 0 0; min-height: 1px;
+  }
+  .f1ds-yr {
+    font-family: var(--mono); font-size: 7px; color: var(--faint);
+    white-space: nowrap; overflow: hidden;
+  }
 </style>
