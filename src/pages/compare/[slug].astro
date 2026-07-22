@@ -4,6 +4,7 @@ import fs from "node:fs";
 import path from "node:path";
 import BaseLayout from "../../layouts/BaseLayout.astro";
 import F1DeltaExplain from "../../components/F1DeltaExplain.astro";
+import ReliabilityExplain from "../../components/ReliabilityExplain.astro";
 
 // ── Module-level init (cold start, not per-request) ────────────────────────
 const _root = path.resolve(".");
@@ -159,6 +160,21 @@ const f1dRows = [
       : f1dB.career != null ? "0" : "—",
     aRaw: f1dA.dominantStretch ?? 0,
     bRaw: f1dB.dominantStretch ?? 0,
+  },
+];
+
+// ── Reliability rows (neutral in career mode — era-dependent) ─────────────
+const relPct = (n: number, d: number) => d > 0 ? (n / d * 100).toFixed(1) + "%" : "—";
+const relRows = [
+  {
+    label: "DNF rate",
+    aVal: relPct(tA.dnfCount ?? 0, tA.races ?? 0),
+    bVal: relPct(tB.dnfCount ?? 0, tB.races ?? 0),
+  },
+  {
+    label: "Points-finish rate",
+    aVal: relPct(tA.pointsFinishes ?? 0, tA.races ?? 0),
+    bVal: relPct(tB.pointsFinishes ?? 0, tB.races ?? 0),
   },
 ];
 
@@ -323,6 +339,21 @@ const canonical = `https://f1delta.com/compare/${slug}`;
               );
             })}
 
+            <!-- ── RELIABILITY & CONSISTENCY ──────────────────── -->
+            <tr class="grp-hd">
+              <th colspan="3">
+                Reliability &amp; consistency
+                <span class="grp-note">era-dependent · see explanation</span>
+              </th>
+            </tr>
+            {relRows.map(row => (
+              <tr>
+                <td class="lbl">{row.label}</td>
+                <td class="val neutral">{row.aVal}</td>
+                <td class="val neutral">{row.bVal}</td>
+              </tr>
+            ))}
+
             <!-- ── POINTS ──────────────────────────────────────── -->
             <tr class="grp-hd">
               <th colspan="3">
@@ -375,6 +406,7 @@ const canonical = `https://f1delta.com/compare/${slug}`;
           <F1DeltaExplain compareNote={true} />
         </div>
       )}
+      <ReliabilityExplain />
     </div>
 
     <!-- Ad slot (E2): after table, before footer links -->

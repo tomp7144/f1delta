@@ -4,6 +4,7 @@ import fs from "node:fs";
 import path from "node:path";
 import BaseLayout from "../../layouts/BaseLayout.astro";
 import F1DeltaExplain from "../../components/F1DeltaExplain.astro";
+import ReliabilityExplain from "../../components/ReliabilityExplain.astro";
 
 export function getStaticPaths() {
   const { drivers } = JSON.parse(
@@ -69,6 +70,10 @@ const teammates = [...(d.teammates ?? [])].sort(
 );
 
 const yearSpan = active ? `${d.firstSeason}–present` : `${d.firstSeason}–${d.lastSeason}`;
+
+const starts: number = d.totals.races ?? 0;
+const dnfPct = starts > 0 ? ((d.totals.dnfCount / starts) * 100).toFixed(1) + "%" : "—";
+const ptsPct = starts > 0 ? ((d.totals.pointsFinishes / starts) * 100).toFixed(1) + "%" : "—";
 const titleStr = `${d.name} | F1 Driver | f1delta`;
 const descStr = `Career stats for ${d.name}: ${d.totals.races ?? 0} races, ${d.totals.wins ?? 0} wins${titles > 0 ? `, ${titles} World Championship${titles > 1 ? "s" : ""}` : ""}. F1DB data, 1950–present.`;
 
@@ -527,6 +532,43 @@ const descStr = `Career stats for ${d.name}: ${d.totals.races ?? 0} races, ${d.t
       </section>
     )}
 
+    <!-- Reliability & Consistency ───────────────────────────────── -->
+    {starts > 0 && (
+      <section class="drv-sec">
+        <div class="sec-h">
+          <h2>Reliability &amp; consistency</h2>
+          <span class="hint">era-dependent · see explanation</span>
+        </div>
+        <div class="card rel-card">
+          <div class="rel-stats">
+            <div class="rel-stat">
+              <span class="rel-val">{dnfPct}</span>
+              <span class="rel-label">DNF rate</span>
+              <span class="rel-sub">{d.totals.dnfCount} in {starts} starts</span>
+            </div>
+            <div class="rel-stat">
+              <span class="rel-val">{ptsPct}</span>
+              <span class="rel-label">points-finish rate</span>
+              <span class="rel-sub">{d.totals.pointsFinishes} in {starts} starts</span>
+            </div>
+            {d.totals.bestFinish != null && (
+              <div class="rel-stat">
+                <span class="rel-val">P{d.totals.bestFinish}</span>
+                <span class="rel-label">best finish</span>
+              </div>
+            )}
+            {d.totals.bestGrid != null && (
+              <div class="rel-stat">
+                <span class="rel-val">P{d.totals.bestGrid}</span>
+                <span class="rel-label">best grid</span>
+              </div>
+            )}
+          </div>
+          <ReliabilityExplain />
+        </div>
+      </section>
+    )}
+
     <!-- 2026 Salary ─────────────────────────────────────────────── -->
     {salary && (
       <section class="drv-sec">
@@ -737,6 +779,28 @@ const descStr = `Career stats for ${d.name}: ${d.totals.races ?? 0} races, ${d.t
   .f1d-rank.r1   { color: #7a5c00; font-weight: 700; }
   .f1d-rank.r3   { color: var(--red); }
   .f1d-rank.rout { color: var(--faint); }
+  /* ── Reliability card ─────────────────────────────────────────────── */
+  .rel-card { padding: 0; overflow: hidden; }
+  .rel-stats {
+    display: flex; flex-wrap: wrap; gap: 0;
+    border-bottom: 1px solid var(--line);
+  }
+  .rel-stat {
+    flex: 1 1 120px; min-width: 100px;
+    display: flex; flex-direction: column; gap: 2px;
+    padding: 12px 16px; border-right: 1px solid var(--line);
+  }
+  .rel-stat:last-child { border-right: none; }
+  .rel-val {
+    font-family: var(--mono); font-size: 20px; font-weight: 600;
+    color: var(--ink); font-variant-numeric: tabular-nums;
+  }
+  .rel-label {
+    font-family: var(--mono); font-size: 10px; color: var(--dim);
+    text-transform: uppercase; letter-spacing: .05em;
+  }
+  .rel-sub { font-size: 11px; color: var(--faint); margin-top: 1px; }
+
   /* ── Salary card ──────────────────────────────────────────────────── */
   .sal-card    { border-color: #d4b87a; }
   .sal-fence   { font-family: var(--mono); font-size: 9px; letter-spacing: .1em; text-transform: uppercase; color: #8a6a10; background: #fbf3d0; padding: 5px 12px; border-bottom: 1px solid #d4b87a; }
