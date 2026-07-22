@@ -1,4 +1,10 @@
-<details class="rel-explain">
+---
+interface Props {
+  open?: boolean;
+}
+const { open = false } = Astro.props;
+---
+<details class="rel-explain" open={open || undefined}>
   <summary>DNF rate &amp; points-finish rate</summary>
   <div class="rel-xbody">
     <h4>DNF rate — "how often did they not finish?"</h4>

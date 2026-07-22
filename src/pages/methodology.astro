@@ -1,0 +1,264 @@
+---
+export const prerender = true;
+import BaseLayout from "../layouts/BaseLayout.astro";
+import F1DeltaExplain from "../components/F1DeltaExplain.astro";
+import ReliabilityExplain from "../components/ReliabilityExplain.astro";
+import RatesExplain from "../components/RatesExplain.astro";
+---
+
+<BaseLayout
+  title="Methodology — F1 Delta"
+  description="How every derived number on F1 Delta is calculated: the f1δ Score formula, era-fair rates, reliability metrics, the three chart alignments, and the teammate head-to-head rules."
+  canonical="https://f1delta.com/methodology"
+>
+  <div class="meth">
+
+    <h1>Methodology</h1>
+    <p class="lede">How every derived number on this site is calculated, where the data comes from, and what each metric can and cannot claim.</p>
+    <p class="byline-note">By <a href="/about">Tom Payment</a></p>
+
+    <nav class="meth-toc">
+      <a href="#why">Why this page</a>
+      <a href="#data">Data provenance</a>
+      <a href="#f1delta">f1δ Score &amp; lenses</a>
+      <a href="#rates">Era-fair rates</a>
+      <a href="#reliability">Reliability</a>
+      <a href="#alignments">Chart alignments</a>
+      <a href="#h2h">Teammate H2H</a>
+      <a href="#limits">Limits</a>
+      <a href="#corrections">Corrections</a>
+    </nav>
+
+    <hr />
+
+    <!-- § 1 -->
+    <section class="meth-sec" id="why">
+      <h2>1 — Why this page exists</h2>
+      <p>Every number on this site that isn't a plain historical fact is calculated, and every calculation involves choices. This page documents those choices: the formulas, the edge cases, the things deliberately excluded, and the questions each metric can and cannot answer. If a number here can't be explained, it shouldn't be on the site.</p>
+    </section>
+
+    <!-- § 2 -->
+    <section class="meth-sec" id="data">
+      <h2>2 — Where the data comes from</h2>
+      <p>Historical results come from <strong><a href="https://github.com/f1db/f1db">F1DB</a></strong>, an open Formula 1 database released under <strong>CC BY 4.0</strong>. The version currently in use is <strong>v2026.10.0</strong>. Nothing on this site is hand-entered from memory or estimated — every lap count, grid position, and finishing order comes from that source.</p>
+      <p>Everything beyond the raw results — the f1δ Score, the rates, head-to-head records — is derived from that data by scripts run at build time. A cron job checks for a new F1DB release every three hours; when one is found, it pulls the update and re-derives all computed data automatically. Historical seasons don't change, so those figures are stable; current-season figures update as the season runs.</p>
+      <p>The derive scripts are: <code>derive-f1.mjs</code> (career stats and H2H), <code>derive-f1delta.mjs</code> and <code>derive-f1delta-lenses.mjs</code> (f1δ scores and their lenses), plus scripts for records, teams, circuits, grands prix, standings, people, and races. All are pure, network-free, and idempotent — they can be re-run any time the source data changes.</p>
+    </section>
+
+    <!-- § 3 + 4 -->
+    <section class="meth-sec" id="f1delta">
+      <h2>3 &amp; 4 — The f1δ Score and its lenses</h2>
+
+      <div class="meth-card">
+        <F1DeltaExplain open={true} />
+      </div>
+
+      <h3>The problem it solves</h3>
+      <p>A win was worth 8 points in 1950, 10 through the 1990s, and 25 today — and seasons have grown from 7 races to 24 plus sprints. The total points available in a season have gone from roughly 150 to over 600. Career points totals therefore say more about <em>when</em> a driver raced than <em>how well</em>.</p>
+      <p>f1δ scores each season as a share of what was actually winnable <em>that year</em>, then adds those seasons up. A dominant 15-race season and a dominant 24-race season both land near 100, because each is measured against its own ceiling.</p>
+
+      <h3>Worked examples</h3>
+      <p>Verstappen's 2023: 575 points from a possible 620 → <strong>92.7</strong>. Schumacher's 2004: 148 from 180 → <strong>82.2</strong>. Farina's 1950: 30 from 54 → <strong>55.6</strong>. These figures are drawn from the same data pipeline that drives every driver page — they update automatically when the source changes.</p>
+
+      <h3>Edge cases, stated plainly</h3>
+      <ul>
+        <li><strong>The Indianapolis 500 (1950–1960) is excluded.</strong> It awarded World Championship points but ran to American AAA regulations and was contested almost entirely by drivers who never appeared elsewhere in F1. Including it would credit a different series.</li>
+        <li><strong>A DNF is a zero.</strong> No distinction is made between mechanical failure and driver error — that judgment would be subjective across 75 years of racing. A race that scored nothing contributes nothing.</li>
+        <li><strong>Every race counts.</strong> Several early seasons only counted a driver's best few results toward the championship. f1δ counts them all, so a driver's score can reflect races the official standings discarded.</li>
+      </ul>
+    </section>
+
+    <!-- § 5 -->
+    <section class="meth-sec" id="rates">
+      <h2>5 — Era-fair rates</h2>
+      <div class="meth-card">
+        <RatesExplain open={true} />
+      </div>
+      <p>Win %, podium %, and pole % normalise for career length — a driver with 250 starts had more chances than one with 50 — but they do not normalise across eras. The f1δ Score is the better cross-era comparator; the rates are most meaningful within a single era or when comparing drivers who shared a grid.</p>
+    </section>
+
+    <!-- § 6 -->
+    <section class="meth-sec" id="reliability">
+      <h2>6 — Reliability &amp; consistency</h2>
+      <div class="meth-card">
+        <ReliabilityExplain open={true} />
+      </div>
+      <p>These two rates are deliberately shown apart from the era-fair rates, because unlike a win or a podium, their meaning has changed dramatically over time. The gradient is stark: Fangio failed to finish <strong>24.1%</strong> of his starts; Verstappen, <strong>12.8%</strong>; Hamilton, <strong>7.7%</strong>. That difference is mostly machinery, not driver.</p>
+      <p>This is why, on the <a href="/compare">compare tool</a>, the reliability rows only show a winner in season-vs-season mode — when both drivers raced under the same conditions.</p>
+    </section>
+
+    <!-- § 7 -->
+    <section class="meth-sec" id="alignments">
+      <h2>7 — Comparing careers: the three chart alignments</h2>
+      <p>The career-shape chart on the <a href="/compare">compare tool</a> can align two careers three ways. Each answers a different question:</p>
+      <table class="meth-tbl">
+        <thead>
+          <tr><th>Alignment</th><th>Question it answers</th><th>X-axis</th></tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td><strong>Career season</strong> <span class="tbl-note">(default)</span></td>
+            <td>"Whose trajectory was better?"</td>
+            <td>1st season, 2nd, 3rd…</td>
+          </tr>
+          <tr>
+            <td><strong>Age</strong></td>
+            <td>"Who was better at 27?"</td>
+            <td>Driver's age that season</td>
+          </tr>
+          <tr>
+            <td><strong>Calendar year</strong></td>
+            <td>"What was happening that year?"</td>
+            <td>Real timeline</td>
+          </tr>
+        </tbody>
+      </table>
+      <p>Lining two careers up by season number seems neutral, but it isn't. Fangio's first F1 season came at age 39; Hamilton's at 22. Aligned by season number, a rookie year at 39 sits directly against a rookie year at 22 as though they were the same thing. Age alignment corrects that. In calendar alignment, careers that never overlapped appear as two non-overlapping series — that's accurate, not a bug.</p>
+      <p>Age is computed as the calendar year of the season minus the driver's birth year — the same convention used by Baseball-Reference, the North Star for this site's analytical approach.</p>
+    </section>
+
+    <!-- § 8 -->
+    <section class="meth-sec" id="h2h">
+      <h2>8 — Teammate head-to-head</h2>
+      <p>A teammate H2H page exists for every pairing where a meaningful race comparison is possible. "Meaningful" has a precise definition:</p>
+      <ul>
+        <li><strong>Default count:</strong> races where <em>both</em> drivers received a numeric finishing position (classified). The default score is who finished ahead.</li>
+        <li><strong>DNF-comparable:</strong> races where both were classified, but at least one retired during the race (a classified retirement). These can be included via the toggle on the H2H page — if your teammate retires but you finish, that's a legitimate comparison.</li>
+        <li><strong>Excluded (excl_dns):</strong> races where at least one driver was unclassified — DNS, collision DNF, or DSQ. When neither driver reached a classified result, no comparison is possible, so these are removed from both counts.</li>
+      </ul>
+      <p>A pairing gets a page only when the combined total of default plus DNF-comparable races is at least one. Pairings where the two drivers shared a team but no qualifying race comparison exists have no page.</p>
+    </section>
+
+    <!-- § 9 -->
+    <section class="meth-sec" id="limits">
+      <h2>9 — What these numbers don't claim</h2>
+      <p><strong>f1δ measures how much of the available success a driver actually took, in their own era. It does not claim to say who would win in equal machinery, or who was more talented.</strong></p>
+      <p>A dominant season reflects a driver <em>and</em> a car — Formula 1 has never been a single-variable sport, and a great driver in a midfield car will always score lower than an equal driver in the best car of the year. No points-based metric can separate those, and this one doesn't pretend to.</p>
+      <p>What f1δ does remove are the distortions that make raw points meaningless across eras: different scoring systems, different calendar lengths, different numbers of points-paying positions. What's left is an honest measure of how completely a driver beat the field in front of them.</p>
+    </section>
+
+    <!-- § 10 -->
+    <section class="meth-sec" id="corrections">
+      <h2>10 — Corrections</h2>
+      <p>If a number here looks wrong, it may be. The data pipeline covers 75 years of records and is automated — errors are possible. Reporting one is welcome. See the <a href="/about">About page</a> for contact details.</p>
+    </section>
+
+    <hr />
+
+    <p class="foot-links">
+      <a href="/f1delta">f1δ Career Leaderboard</a> ·
+      <a href="/f1delta/peak">Peak f1δ</a> ·
+      <a href="/f1delta/dominant">Dominant Stretches</a> ·
+      <a href="/compare">Compare Drivers</a> ·
+      <a href="/about">About</a>
+    </p>
+
+  </div>
+</BaseLayout>
+
+<style>
+  .meth {
+    max-width: 680px; margin: 0 auto; padding: 32px 20px 56px;
+    font-family: system-ui, -apple-system, "Segoe UI", Roboto, sans-serif;
+    color: var(--ink); line-height: 1.7;
+  }
+
+  h1 {
+    font-family: var(--disp);
+    font-size: clamp(26px, 5vw, 40px); font-weight: 700;
+    letter-spacing: -.01em; margin: 0 0 16px; color: var(--ink);
+  }
+  .lede {
+    font-size: 16px; font-weight: 500; color: var(--ink);
+    margin: 0 0 8px; line-height: 1.5;
+  }
+  .byline-note {
+    font-size: 13px; color: var(--dim); margin: 0 0 24px;
+  }
+  .byline-note a { color: var(--dim); text-decoration: none; border-bottom: 1px solid var(--line); }
+  .byline-note a:hover { color: var(--ink); }
+
+  /* TOC */
+  .meth-toc {
+    display: flex; flex-wrap: wrap; gap: 6px 12px;
+    margin-bottom: 28px;
+  }
+  .meth-toc a {
+    font-family: var(--mono); font-size: 10px; font-weight: 600;
+    text-transform: uppercase; letter-spacing: .06em;
+    color: var(--dim); text-decoration: none;
+    border-bottom: 1px solid var(--line); padding-bottom: 1px;
+  }
+  .meth-toc a:hover { color: var(--red); border-color: var(--red); }
+
+  hr {
+    border: none; border-top: 1px solid var(--line); margin: 32px 0;
+  }
+
+  /* Sections */
+  .meth-sec { margin-bottom: 40px; }
+  .meth-sec h2 {
+    font-size: 13px; font-weight: 700; color: var(--ink);
+    margin: 0 0 14px; text-transform: uppercase;
+    letter-spacing: .05em; font-family: var(--mono);
+    padding-bottom: 6px; border-bottom: 2px solid var(--line);
+  }
+  .meth-sec h3 {
+    font-size: 12px; font-weight: 700; color: var(--dim);
+    margin: 20px 0 6px; text-transform: uppercase;
+    letter-spacing: .04em; font-family: var(--mono);
+  }
+  .meth-sec p {
+    font-size: 14px; margin: 0 0 14px; color: var(--ink);
+  }
+  .meth-sec a { color: var(--red); text-decoration: none; }
+  .meth-sec a:hover { text-decoration: underline; }
+  .meth-sec ul {
+    margin: 0 0 14px; padding-left: 20px;
+  }
+  .meth-sec ul li {
+    font-size: 14px; margin-bottom: 8px; color: var(--ink);
+  }
+  .meth-sec code {
+    font-family: var(--mono); font-size: 12px;
+    background: var(--bg); border: 1px solid var(--line);
+    border-radius: 3px; padding: 1px 4px;
+  }
+
+  /* Embedded component card */
+  .meth-card {
+    background: var(--surface); border: 1px solid var(--line);
+    border-radius: 6px; overflow: hidden; margin-bottom: 16px;
+  }
+
+  /* Alignment table */
+  .meth-tbl {
+    width: 100%; border-collapse: collapse; font-size: 13px;
+    margin-bottom: 14px;
+  }
+  .meth-tbl th {
+    text-align: left; padding: 7px 10px;
+    font-family: var(--mono); font-size: 10px; font-weight: 700;
+    text-transform: uppercase; letter-spacing: .06em; color: var(--faint);
+    background: var(--bg); border-bottom: 1px solid var(--line);
+  }
+  .meth-tbl td {
+    padding: 8px 10px; border-bottom: 1px solid var(--line);
+    vertical-align: top;
+  }
+  .meth-tbl tr:last-child td { border-bottom: none; }
+  .tbl-note { font-size: 11px; color: var(--faint); }
+
+  /* Footer links */
+  .foot-links {
+    font-size: 13px; color: var(--dim);
+  }
+  .foot-links a { color: var(--red); text-decoration: none; font-weight: 600; }
+  .foot-links a:hover { text-decoration: underline; }
+
+  @media (max-width: 500px) {
+    .meth { padding-left: 16px; padding-right: 16px; }
+    .meth-tbl { font-size: 12px; }
+    .meth-tbl th, .meth-tbl td { padding: 6px 8px; }
+  }
+</style>

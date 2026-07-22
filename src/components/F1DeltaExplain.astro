@@ -2,11 +2,12 @@
 interface Props {
   compareNote?: boolean;
   seasonNote?: boolean;
+  open?: boolean;
 }
-const { compareNote = false, seasonNote = false } = Astro.props;
+const { compareNote = false, seasonNote = false, open = false } = Astro.props;
 ---
 
-<details class="f1d-explain">
+<details class="f1d-explain" open={open || undefined}>
   <summary>{seasonNote ? "Season f1δ explained" : "How is f1δ calculated?"}</summary>
   <div class="f1d-xbody">
     {compareNote && (

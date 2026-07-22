@@ -120,6 +120,12 @@ entries.push({
 // Static pages
 entries.push({
   type: "tool",
+  label: "Methodology — how F1 Delta calculates everything",
+  url: "/methodology",
+  terms: ["methodology", "how it works", "f1delta", "f1δ", "score", "formula", "calculation", "explained", "era", "fair", "dnf", "rates", "h2h", "head-to-head"],
+});
+entries.push({
+  type: "tool",
   label: "About F1 Delta",
   url: "/about",
   terms: ["about", "tom", "payment", "author", "who"],
