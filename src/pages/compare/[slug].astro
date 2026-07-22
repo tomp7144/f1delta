@@ -30,17 +30,30 @@ const rawB = slug.slice(vsIdx + 4);
 
 if (!rawA || !rawB) return new Response(null, { status: 404 });
 
-// Canonical redirect: IDs must be alphabetically sorted
-const sorted = [rawA, rawB].sort();
-if (sorted[0] !== rawA || sorted[1] !== rawB) {
-  return Astro.redirect(`/compare/${sorted.join("-vs-")}`, 301);
-}
+// Season mode: trailing -YYYY on each half (e.g. "ayrton-senna-1992")
+// No driver ID ends in 4 digits (confirmed), so this is unambiguous.
+const yearRe = /-(\d{4})$/;
+const mA = rawA.match(yearRe);
+const mB = rawB.match(yearRe);
+// Mixed career/season not permitted — one has year, other doesn't → 404 (invalid ID fails validIds below)
+const isSeasonMode = mA != null && mB != null;
+const idA = isSeasonMode ? rawA.slice(0, mA!.index) : rawA;
+const idB = isSeasonMode ? rawB.slice(0, mB!.index) : rawB;
+const yearA: number | null = isSeasonMode ? parseInt(mA![1]) : null;
+const yearB: number | null = isSeasonMode ? parseInt(mB![1]) : null;
 
-const idA = rawA, idB = rawB;
 if (idA === idB) return new Response(null, { status: 404 });
 
 if (!validIds.has(idA) || !validIds.has(idB)) {
   return new Response(null, { status: 404 });
+}
+
+// Canonical: alphabetical by driver ID; years travel with their drivers
+if (idA > idB) {
+  const canonical = isSeasonMode
+    ? `/compare/${idB}-${yearB}-vs-${idA}-${yearA}`
+    : `/compare/${idB}-vs-${idA}`;
+  return Astro.redirect(canonical, 301);
 }
 
 let dA: any, dB: any;
@@ -50,6 +63,15 @@ try {
 } catch {
   return new Response(null, { status: 404 });
 }
+
+// Season-specific career rows — 404 if driver didn't race that year
+const csA: any = isSeasonMode
+  ? ((dA.career as any[]).find((c: any) => c.season === yearA) ?? null)
+  : null;
+const csB: any = isSeasonMode
+  ? ((dB.career as any[]).find((c: any) => c.season === yearB) ?? null)
+  : null;
+if (isSeasonMode && (!csA || !csB)) return new Response(null, { status: 404 });
 
 // CDN-cacheable: 1-hour browser, 7-day Netlify/Cloudflare, 1-day SWR
 // Purge-on-deploy busts the CDN cache automatically.
@@ -163,6 +185,20 @@ const f1dRows = [
   },
 ];
 
+// Season f1δ lookup (only used in season mode)
+const f1dSeasonA = isSeasonMode
+  ? ((f1dA.seasons as any[] | undefined)?.find((s: any) => s.year === yearA) ?? null)
+  : null;
+const f1dSeasonB = isSeasonMode
+  ? ((f1dB.seasons as any[] | undefined)?.find((s: any) => s.year === yearB) ?? null)
+  : null;
+
+// Mode toggle URLs
+const peakYearA: number = (f1dA.peakYear as number | undefined) ?? (dA.firstSeason as number);
+const peakYearB: number = (f1dB.peakYear as number | undefined) ?? (dB.firstSeason as number);
+const careerUrl = "/compare/" + idA + "-vs-" + idB;
+const toSeasonUrl = "/compare/" + idA + "-" + peakYearA + "-vs-" + idB + "-" + peakYearB;
+
 // ── Reliability rows (neutral in career mode — era-dependent) ─────────────
 const relPct = (n: number, d: number) => d > 0 ? (n / d * 100).toFixed(1) + "%" : "—";
 const relRows = [
@@ -200,8 +236,12 @@ const stripBWithAge = stripB.map((s: any) => ({
 }));
 
 // ── Page meta ─────────────────────────────────────────────────────────────
-const pageTitle = `${dA.name} vs ${dB.name} — f1delta`;
-const pageDesc  = `Compare ${dA.name} and ${dB.name}: championships, wins, podiums, poles, and career rates.`;
+const pageTitle = isSeasonMode
+  ? `${dA.name} ${yearA} vs ${dB.name} ${yearB} — f1delta`
+  : `${dA.name} vs ${dB.name} — f1delta`;
+const pageDesc = isSeasonMode
+  ? `Compare ${dA.name}'s ${yearA} season against ${dB.name}'s ${yearB} season: f1δ scores, wins, podiums, and rates.`
+  : `Compare ${dA.name} and ${dB.name}: championships, wins, podiums, poles, and career rates.`;
 const canonical = `https://f1delta.com/compare/${slug}`;
 ---
 
@@ -212,11 +252,17 @@ const canonical = `https://f1delta.com/compare/${slug}`;
     <!-- Header -->
     <div class="cmp-hd">
       <div class="cmp-names">
-        <a class="cmp-name" href={`/drivers/${idA}`}>{dA.name}</a>
+        <a class="cmp-name" href={"/drivers/" + idA}>{dA.name}</a>
         <span class="cmp-sep">vs</span>
-        <a class="cmp-name" href={`/drivers/${idB}`}>{dB.name}</a>
+        <a class="cmp-name" href={"/drivers/" + idB}>{dB.name}</a>
       </div>
       <p class="cmp-back"><a href="/compare">← Compare another pair</a></p>
+    </div>
+
+    <!-- Mode toggle -->
+    <div class="mode-ctrl">
+      <a href={careerUrl} class:list={["mode-btn", { "mode-active": !isSeasonMode }]}>Career</a>
+      <a href={toSeasonUrl} class:list={["mode-btn", { "mode-active": isSeasonMode }]}>Season</a>
     </div>
 
     <!-- Comparison grid -->
@@ -226,75 +272,202 @@ const canonical = `https://f1delta.com/compare/${slug}`;
           <thead>
             <tr>
               <th class="lbl"></th>
-              <th class="drv-col"><a href={`/drivers/${idA}`}>{dA.name}</a></th>
-              <th class="drv-col"><a href={`/drivers/${idB}`}>{dB.name}</a></th>
+              <th class="drv-col">
+                <a href={"/drivers/" + idA}>{dA.name}</a>
+                {isSeasonMode && (
+                  <select class="yr-sel" data-side="a" data-aid={idA} data-bid={idB} data-ayear={yearA} data-byear={yearB}>
+                    {(dA.career as any[]).slice().sort((a: any, b: any) => b.season - a.season).map((c: any) => (
+                      <option value={c.season} selected={c.season === yearA}>{c.season}</option>
+                    ))}
+                  </select>
+                )}
+              </th>
+              <th class="drv-col">
+                <a href={"/drivers/" + idB}>{dB.name}</a>
+                {isSeasonMode && (
+                  <select class="yr-sel" data-side="b" data-aid={idA} data-bid={idB} data-ayear={yearA} data-byear={yearB}>
+                    {(dB.career as any[]).slice().sort((a: any, b: any) => b.season - a.season).map((c: any) => (
+                      <option value={c.season} selected={c.season === yearB}>{c.season}</option>
+                    ))}
+                  </select>
+                )}
+              </th>
             </tr>
           </thead>
           <tbody>
 
-            <!-- ── CAREER ──────────────────────────────────────── -->
-            <tr class="grp-hd"><th colspan="3">Career</th></tr>
-
-            <!-- Championships (directional: more = better) -->
-            {(() => {
-              const a = tA.championships ?? 0, b = tB.championships ?? 0;
-              const aWin = a > b, bWin = b > a;
-              return (
+            <!-- ── CAREER / SEASON ────────────────────────────── -->
+            {isSeasonMode ? (
+              <>
+                <tr class="grp-hd"><th colspan="3">Season</th></tr>
                 <tr>
-                  <td class="lbl">Championships</td>
-                  <td class:list={["val", { win: aWin, lose: bWin && !aWin }]}>{a || "—"}</td>
-                  <td class:list={["val", { win: bWin, lose: aWin && !bWin }]}>{b || "—"}</td>
+                  <td class="lbl">Season</td>
+                  <td class="val neutral"><a href={"/standings/" + yearA}>{yearA}</a></td>
+                  <td class="val neutral"><a href={"/standings/" + yearB}>{yearB}</a></td>
                 </tr>
-              );
-            })()}
-
-            <tr>
-              <td class="lbl">Career span</td>
-              <td class="val neutral">{dA.firstSeason}–{dA.lastSeason}</td>
-              <td class="val neutral">{dB.firstSeason}–{dB.lastSeason}</td>
-            </tr>
-            <tr>
-              <td class="lbl">Seasons</td>
-              <td class="val neutral">{seasonsA}</td>
-              <td class="val neutral">{seasonsB}</td>
-            </tr>
-            <tr>
-              <td class="lbl">Race starts</td>
-              <td class="val neutral">{tA.races ?? "—"}</td>
-              <td class="val neutral">{tB.races ?? "—"}</td>
-            </tr>
-            <tr class="teams-row">
-              <td class="lbl">Teams</td>
-              <td class="val neutral teams">
-                {teamsA.map((t, i) => (
-                  <>
-                    {i > 0 && <span class="tsep">, </span>}
-                    <a href={`/teams/${t.id}`}>{t.name}</a>
-                  </>
-                ))}
-              </td>
-              <td class="val neutral teams">
-                {teamsB.map((t, i) => (
-                  <>
-                    {i > 0 && <span class="tsep">, </span>}
-                    <a href={`/teams/${t.id}`}>{t.name}</a>
-                  </>
-                ))}
-              </td>
-            </tr>
+                <tr class="teams-row">
+                  <td class="lbl">Team</td>
+                  <td class="val neutral teams">
+                    {(csA.teams as any[]).map((t: any, i: number) => (
+                      <>{i > 0 && <span class="tsep">, </span>}<a href={"/teams/" + t.constructorId}>{t.constructor}</a></>
+                    ))}
+                  </td>
+                  <td class="val neutral teams">
+                    {(csB.teams as any[]).map((t: any, i: number) => (
+                      <>{i > 0 && <span class="tsep">, </span>}<a href={"/teams/" + t.constructorId}>{t.constructor}</a></>
+                    ))}
+                  </td>
+                </tr>
+                <tr>
+                  <td class="lbl">Races</td>
+                  <td class="val neutral">{csA.races ?? "—"}</td>
+                  <td class="val neutral">{csB.races ?? "—"}</td>
+                </tr>
+                {(() => {
+                  const aPos = csA.wdcFinish ?? 99, bPos = csB.wdcFinish ?? 99;
+                  return (
+                    <tr>
+                      <td class="lbl">WDC finish</td>
+                      <td class:list={["val", { win: aPos < bPos && aPos < 99, lose: bPos < aPos && bPos < 99 }]}>
+                        {csA.wdcFinish ? "P" + csA.wdcFinish : "—"}
+                      </td>
+                      <td class:list={["val", { win: bPos < aPos && bPos < 99, lose: aPos < bPos && aPos < 99 }]}>
+                        {csB.wdcFinish ? "P" + csB.wdcFinish : "—"}
+                      </td>
+                    </tr>
+                  );
+                })()}
+              </>
+            ) : (
+              <>
+                <tr class="grp-hd"><th colspan="3">Career</th></tr>
+                {(() => {
+                  const a = tA.championships ?? 0, b = tB.championships ?? 0;
+                  const aWin = a > b, bWin = b > a;
+                  return (
+                    <tr>
+                      <td class="lbl">Championships</td>
+                      <td class:list={["val", { win: aWin, lose: bWin && !aWin }]}>{a || "—"}</td>
+                      <td class:list={["val", { win: bWin, lose: aWin && !bWin }]}>{b || "—"}</td>
+                    </tr>
+                  );
+                })()}
+                <tr><td class="lbl">Career span</td><td class="val neutral">{dA.firstSeason}–{dA.lastSeason}</td><td class="val neutral">{dB.firstSeason}–{dB.lastSeason}</td></tr>
+                <tr><td class="lbl">Seasons</td><td class="val neutral">{seasonsA}</td><td class="val neutral">{seasonsB}</td></tr>
+                <tr><td class="lbl">Race starts</td><td class="val neutral">{tA.races ?? "—"}</td><td class="val neutral">{tB.races ?? "—"}</td></tr>
+                <tr class="teams-row">
+                  <td class="lbl">Teams</td>
+                  <td class="val neutral teams">
+                    {teamsA.map((t, i) => (
+                      <>{i > 0 && <span class="tsep">, </span>}<a href={"/teams/" + t.id}>{t.name}</a></>
+                    ))}
+                  </td>
+                  <td class="val neutral teams">
+                    {teamsB.map((t, i) => (
+                      <>{i > 0 && <span class="tsep">, </span>}<a href={"/teams/" + t.id}>{t.name}</a></>
+                    ))}
+                  </td>
+                </tr>
+              </>
+            )}
 
             <!-- ── f1δ SCORE ──────────────────────────────────── -->
-            {hasF1D && (
+            {hasF1D && (isSeasonMode ? (
               <>
                 <tr class="grp-hd">
-                  <th colspan="3">
-                    f1δ Score
-                    <span class="grp-note">era-fair dominance · <a href="/methodology" class="grp-link">what is this?</a></span>
-                  </th>
+                  <th colspan="3">f1δ Score <span class="grp-note">era-fair · season vs season · <a href="/methodology" class="grp-link">what is this?</a></span></th>
+                </tr>
+                {(() => {
+                  const aV = f1dSeasonA?.f1delta ?? null;
+                  const bV = f1dSeasonB?.f1delta ?? null;
+                  const aWin = aV != null && bV != null && aV > bV;
+                  const bWin = aV != null && bV != null && bV > aV;
+                  return (
+                    <tr>
+                      <td class="lbl">Season f1δ · rank</td>
+                      <td class:list={["val", { win: aWin, lose: bWin && !aWin }]}>
+                        {aV != null ? (aV as number).toFixed(1) + " · #" + (f1dSeasonA as any).rank : "—"}
+                      </td>
+                      <td class:list={["val", { win: bWin, lose: aWin && !bWin }]}>
+                        {bV != null ? (bV as number).toFixed(1) + " · #" + (f1dSeasonB as any).rank : "—"}
+                      </td>
+                    </tr>
+                  );
+                })()}
+              </>
+            ) : (
+              <>
+                <tr class="grp-hd">
+                  <th colspan="3">f1δ Score <span class="grp-note">era-fair dominance · <a href="/methodology" class="grp-link">what is this?</a></span></th>
                 </tr>
                 {f1dRows.map(row => {
-                  const aWin = row.aRaw > row.bRaw;
-                  const bWin = row.bRaw > row.aRaw;
+                  const aWin = row.aRaw > row.bRaw, bWin = row.bRaw > row.aRaw;
+                  return (
+                    <tr>
+                      <td class="lbl">{row.label}</td>
+                      <td class:list={["val", { win: aWin, lose: bWin && !aWin }]}>{row.aVal}</td>
+                      <td class:list={["val", { win: bWin, lose: aWin && !bWin }]}>{row.bVal}</td>
+                    </tr>
+                  );
+                })}
+              </>
+            ))}
+
+            <!-- ── WINS & PODIUMS ──────────────────────────────── -->
+            {isSeasonMode ? (
+              <>
+                <tr class="grp-hd"><th colspan="3">Wins &amp; podiums <span class="grp-note">that season · era-dependent</span></th></tr>
+                {([
+                  { label: "Wins",         aRaw: csA.wins ?? 0,        bRaw: csB.wins ?? 0 },
+                  { label: "Podiums",      aRaw: csA.podiums ?? 0,     bRaw: csB.podiums ?? 0 },
+                  { label: "Poles",        aRaw: csA.poles ?? 0,       bRaw: csB.poles ?? 0 },
+                  { label: "Fastest laps", aRaw: csA.fastestLaps ?? 0, bRaw: csB.fastestLaps ?? 0 },
+                ] as { label: string; aRaw: number; bRaw: number }[]).map(row => {
+                  const aWin = row.aRaw > row.bRaw, bWin = row.bRaw > row.aRaw;
+                  return (
+                    <tr>
+                      <td class="lbl">{row.label}</td>
+                      <td class:list={["val", { win: aWin, lose: !aWin && bWin }]}>{row.aRaw}</td>
+                      <td class:list={["val", { win: bWin, lose: !bWin && aWin }]}>{row.bRaw}</td>
+                    </tr>
+                  );
+                })}
+              </>
+            ) : (
+              <>
+                <tr class="grp-hd"><th colspan="3">Wins &amp; podiums <span class="grp-note">era-dependent · not directly comparable across eras</span></th></tr>
+                <tr><td class="lbl">Wins</td><td class="val neutral">{fmt(tA.wins)}</td><td class="val neutral">{fmt(tB.wins)}</td></tr>
+                <tr><td class="lbl">Podiums</td><td class="val neutral">{fmt(tA.podiums)}</td><td class="val neutral">{fmt(tB.podiums)}</td></tr>
+                <tr><td class="lbl">Poles</td><td class="val neutral">{fmt(tA.poles)}</td><td class="val neutral">{fmt(tB.poles)}</td></tr>
+                <tr><td class="lbl">Fastest laps</td><td class="val neutral">{fmt(tA.fastestLaps)}</td><td class="val neutral">{fmt(tB.fastestLaps)}</td></tr>
+              </>
+            )}
+
+            <!-- ── RATES ──────────────────────────────────────── -->
+            {isSeasonMode ? (
+              <>
+                <tr class="grp-hd"><th colspan="3">Season rates <span class="grp-note">that season · same conditions</span></th></tr>
+                {([
+                  { label: "Win %",    aNum: csA.wins ?? 0,    bNum: csB.wins ?? 0 },
+                  { label: "Podium %", aNum: csA.podiums ?? 0, bNum: csB.podiums ?? 0 },
+                  { label: "Pole %",   aNum: csA.poles ?? 0,   bNum: csB.poles ?? 0 },
+                ] as { label: string; aNum: number; bNum: number }[]).map(row => {
+                  const aR = row.aNum / (csA.races || 1), bR = row.bNum / (csB.races || 1);
+                  const aWin = aR > bR, bWin = bR > aR;
+                  return (
+                    <tr>
+                      <td class="lbl">{row.label}</td>
+                      <td class:list={["val", { win: aWin, lose: !aWin && bWin }]}>{pct(row.aNum, csA.races ?? 0)}</td>
+                      <td class:list={["val", { win: bWin, lose: !bWin && aWin }]}>{pct(row.bNum, csB.races ?? 0)}</td>
+                    </tr>
+                  );
+                })}
+              </>
+            ) : (
+              <>
+                <tr class="grp-hd"><th colspan="3">Era-fair rates <span class="grp-note">career rate · across all seasons</span></th></tr>
+                {rateRows.map(row => {
+                  const aWin = row.aRaw > row.bRaw, bWin = row.bRaw > row.aRaw;
                   return (
                     <tr>
                       <td class="lbl">{row.label}</td>
@@ -306,86 +479,73 @@ const canonical = `https://f1delta.com/compare/${slug}`;
               </>
             )}
 
-            <!-- ── WINS & PODIUMS (era-dependent) ─────────────── -->
-            <tr class="grp-hd">
-              <th colspan="3">
-                Wins &amp; podiums
-                <span class="grp-note">era-dependent · not directly comparable across eras</span>
-              </th>
-            </tr>
-
-            <tr>
-              <td class="lbl">Wins</td>
-              <td class="val neutral">{fmt(tA.wins)}</td>
-              <td class="val neutral">{fmt(tB.wins)}</td>
-            </tr>
-            <tr>
-              <td class="lbl">Podiums</td>
-              <td class="val neutral">{fmt(tA.podiums)}</td>
-              <td class="val neutral">{fmt(tB.podiums)}</td>
-            </tr>
-            <tr>
-              <td class="lbl">Poles</td>
-              <td class="val neutral">{fmt(tA.poles)}</td>
-              <td class="val neutral">{fmt(tB.poles)}</td>
-            </tr>
-            <tr>
-              <td class="lbl">Fastest laps</td>
-              <td class="val neutral">{fmt(tA.fastestLaps)}</td>
-              <td class="val neutral">{fmt(tB.fastestLaps)}</td>
-            </tr>
-
-            <!-- ── ERA-FAIR RATES ──────────────────────────────── -->
-            <tr class="grp-hd">
-              <th colspan="3">
-                Era-fair rates
-                <span class="grp-note">career rate · across all seasons</span>
-              </th>
-            </tr>
-
-            {rateRows.map(row => {
-              const aWin = row.aRaw > row.bRaw;
-              const bWin = row.bRaw > row.aRaw;
-              return (
-                <tr>
-                  <td class="lbl">{row.label}</td>
-                  <td class:list={["val", { win: aWin, lose: bWin && !aWin }]}>{row.aVal}</td>
-                  <td class:list={["val", { win: bWin, lose: aWin && !bWin }]}>{row.bVal}</td>
-                </tr>
-              );
-            })}
-
             <!-- ── RELIABILITY & CONSISTENCY ──────────────────── -->
-            <tr class="grp-hd">
-              <th colspan="3">
-                Reliability &amp; consistency
-                <span class="grp-note">era-dependent · see explanation</span>
-              </th>
-            </tr>
-            {relRows.map(row => (
-              <tr>
-                <td class="lbl">{row.label}</td>
-                <td class="val neutral">{row.aVal}</td>
-                <td class="val neutral">{row.bVal}</td>
-              </tr>
-            ))}
+            {isSeasonMode ? (
+              <>
+                <tr class="grp-hd"><th colspan="3">Reliability &amp; consistency <span class="grp-note">that season · conditions matched</span></th></tr>
+                {(() => {
+                  const aS = csA.races ?? 0, bS = csB.races ?? 0;
+                  const dA2 = csA.dnfCount ?? 0, dB2 = csB.dnfCount ?? 0;
+                  const pA = csA.pointsFinishes ?? 0, pB = csB.pointsFinishes ?? 0;
+                  const dnfRA = aS > 0 ? dA2 / aS : 0, dnfRB = bS > 0 ? dB2 / bS : 0;
+                  const pRA  = aS > 0 ? pA / aS : 0,  pRB  = bS > 0 ? pB / bS : 0;
+                  return (
+                    <>
+                      <tr>
+                        <td class="lbl">DNF rate</td>
+                        <td class:list={["val", { win: aS > 0 && dnfRA < dnfRB, lose: dnfRA > dnfRB }]}>{relPct(dA2, aS)}</td>
+                        <td class:list={["val", { win: bS > 0 && dnfRB < dnfRA, lose: dnfRB > dnfRA }]}>{relPct(dB2, bS)}</td>
+                      </tr>
+                      <tr>
+                        <td class="lbl">Points-finish rate</td>
+                        <td class:list={["val", { win: pRA > pRB, lose: aS > 0 && pRA < pRB }]}>{relPct(pA, aS)}</td>
+                        <td class:list={["val", { win: pRB > pRA, lose: bS > 0 && pRB < pRA }]}>{relPct(pB, bS)}</td>
+                      </tr>
+                    </>
+                  );
+                })()}
+              </>
+            ) : (
+              <>
+                <tr class="grp-hd"><th colspan="3">Reliability &amp; consistency <span class="grp-note">era-dependent · see explanation</span></th></tr>
+                {relRows.map(row => (
+                  <tr>
+                    <td class="lbl">{row.label}</td>
+                    <td class="val neutral">{row.aVal}</td>
+                    <td class="val neutral">{row.bVal}</td>
+                  </tr>
+                ))}
+              </>
+            )}
 
             <!-- ── POINTS ──────────────────────────────────────── -->
-            <tr class="grp-hd">
-              <th colspan="3">
-                Points
-                <span class="grp-note">scoring-era variable · not directly comparable</span>
-              </th>
-            </tr>
-            <tr>
-              <td class="lbl">Career total</td>
-              <td class="val neutral">{fmt(tA.points)}</td>
-              <td class="val neutral">{fmt(tB.points)}</td>
-            </tr>
+            {isSeasonMode ? (
+              <>
+                <tr class="grp-hd"><th colspan="3">Points <span class="grp-note">that season · scoring-era variable</span></th></tr>
+                {(() => {
+                  const aV = csA.points ?? 0, bV = csB.points ?? 0;
+                  const aWin = aV > bV, bWin = bV > aV;
+                  return (
+                    <tr>
+                      <td class="lbl">Season total</td>
+                      <td class:list={["val", { win: aWin, lose: bWin && !aWin }]}>{fmt(csA.points)}</td>
+                      <td class:list={["val", { win: bWin, lose: aWin && !bWin }]}>{fmt(csB.points)}</td>
+                    </tr>
+                  );
+                })()}
+              </>
+            ) : (
+              <>
+                <tr class="grp-hd"><th colspan="3">Points <span class="grp-note">scoring-era variable · not directly comparable</span></th></tr>
+                <tr><td class="lbl">Career total</td><td class="val neutral">{fmt(tA.points)}</td><td class="val neutral">{fmt(tB.points)}</td></tr>
+              </>
+            )}
 
           </tbody>
         </table>
       </div>
+
+      {isSeasonMode && <F1DeltaExplain seasonNote={true} />}
 
       {stripCols > 0 && (
         <div class="f1ds-section">
@@ -418,6 +578,8 @@ const canonical = `https://f1delta.com/compare/${slug}`;
             data-b={JSON.stringify(stripBWithAge)}
             data-na={dA.name}
             data-nb={dB.name}
+            data-ha={isSeasonMode ? String(yearA) : ""}
+            data-hb={isSeasonMode ? String(yearB) : ""}
           ></div>
           <F1DeltaExplain compareNote={true} />
         </div>
@@ -456,6 +618,8 @@ const canonical = `https://f1delta.com/compare/${slug}`;
 
   var stripA = JSON.parse(el.dataset.a);
   var stripB = JSON.parse(el.dataset.b);
+  var highlightA = parseInt(el.dataset.ha) || null;
+  var highlightB = parseInt(el.dataset.hb) || null;
 
   var W = 560, CH = 60, LH = 14, H = CH + LH;
 
@@ -550,6 +714,19 @@ const canonical = `https://f1delta.com/compare/${slug}`;
       svg += '<circle cx="' + x + '" cy="' + y + '" r="3.5" fill="' + rankFill(col.aData.rank) + '" stroke="#fff" stroke-width="1"><title>' + tip + '</title></circle>';
     });
 
+    // highlight rings for season-mode selected years
+    if (highlightA || highlightB) {
+      cols.forEach(function (col, i) {
+        var x = ((i + 0.5) * cw).toFixed(1);
+        if (highlightA && col.aData && col.aData.year === highlightA) {
+          svg += '<circle cx="' + x + '" cy="' + py(col.aData.f1delta) + '" r="6.5" fill="none" stroke="#e10600" stroke-width="1.5" opacity="0.6"/>';
+        }
+        if (highlightB && col.bData && col.bData.year === highlightB) {
+          svg += '<circle cx="' + x + '" cy="' + py(col.bData.f1delta) + '" r="6.5" fill="none" stroke="#6b6b70" stroke-width="1.5" stroke-dasharray="3 1" opacity="0.6"/>';
+        }
+      });
+    }
+
     // x-axis labels
     cols.forEach(function (col, i) {
       if (i % skip !== 0 && i !== n - 1) return;
@@ -573,6 +750,18 @@ const canonical = `https://f1delta.com/compare/${slug}`;
     });
   });
 }());
+
+document.querySelectorAll('.yr-sel').forEach(function (sel) {
+  sel.addEventListener('change', function () {
+    var side = sel.dataset.side;
+    var yr = sel.value;
+    var aId = sel.dataset.aid, bId = sel.dataset.bid;
+    var aYr = sel.dataset.ayear, bYr = sel.dataset.byear;
+    var newA = side === 'a' ? yr : aYr;
+    var newB = side === 'b' ? yr : bYr;
+    window.location = '/compare/' + aId + '-' + newA + '-vs-' + bId + '-' + newB;
+  });
+});
 </script>
 
 <style>
@@ -684,6 +873,26 @@ const canonical = `https://f1delta.com/compare/${slug}`;
   }
   .cmp-foot a { font-size: 13px; color: var(--red); text-decoration: none; font-weight: 600; }
   .cmp-foot a:hover { text-decoration: underline; }
+
+  /* ── Mode toggle ─────────────────────────────────────────────── */
+  .mode-ctrl { display: flex; gap: 6px; margin-bottom: 12px; }
+  .mode-btn {
+    font-family: var(--mono); font-size: 10px; font-weight: 600;
+    text-transform: uppercase; letter-spacing: .06em;
+    padding: 5px 12px; border: 1px solid var(--line);
+    background: transparent; color: var(--dim);
+    border-radius: 3px; text-decoration: none; line-height: 1;
+  }
+  .mode-btn.mode-active { background: var(--ink); color: var(--bg); border-color: var(--ink); }
+  .mode-btn:hover:not(.mode-active) { background: var(--line); color: var(--ink); }
+
+  /* Year dropdown in thead */
+  .yr-sel {
+    display: block; width: 100%; margin-top: 4px;
+    font-family: var(--mono); font-size: 11px; color: var(--dim);
+    border: 1px solid var(--line); border-radius: 3px;
+    padding: 2px 4px; background: var(--bg); cursor: pointer;
+  }
 
   /* ── f1δ group header link ───────────────────────────────────── */
   .grp-link { color: var(--faint); text-decoration: none; font-weight: 400; font-size: 9.5px; }

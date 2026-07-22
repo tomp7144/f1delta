@@ -1,15 +1,19 @@
 ---
 interface Props {
   compareNote?: boolean;
+  seasonNote?: boolean;
 }
-const { compareNote = false } = Astro.props;
+const { compareNote = false, seasonNote = false } = Astro.props;
 ---
 
 <details class="f1d-explain">
-  <summary>How is f1δ calculated?</summary>
+  <summary>{seasonNote ? "Season f1δ explained" : "How is f1δ calculated?"}</summary>
   <div class="f1d-xbody">
     {compareNote && (
       <p class="f1d-compare-note">Each point is one season, scored against that season's maximum possible points. The two careers can be lined up three ways — by season number, by the driver's age, or by calendar year — because "whose trajectory was better," "who was better at 27," and "what happened that year" are three different questions. Age alignment matters because drivers debut at very different ages: lining up two rookie seasons can otherwise compare a driver in his late thirties to one in his early twenties.</p>
+    )}
+    {seasonNote && (
+      <p class="f1d-compare-note">Each season is scored against the maximum points available that year, on a 0–100 scale. Comparing two seasons this way is era-fair: a dominant 1950 season and a dominant 2024 season both score near 100, regardless of the points system in use. The rank shown is where each driver finished in the global f1δ standings that year.</p>
     )}
     <h4>Career f1δ — who accumulated the most?</h4>
     <p>Every season is scored as a share of that year's maximum possible points, on a 0–100 scale, then summed across a whole career. <strong>Formula:</strong> season f1δ = (points scored ÷ maximum points winnable that season) × 100; career f1δ = the sum of every season. <strong>Worked example:</strong> Verstappen's 2023 = 575 ÷ 620 × 100 = <strong>92.7</strong>. <strong>Why:</strong> dividing each season by its own era's maximum makes eras comparable — dominating a 7-race 1950 season and a 24-race 2024 season both come out near 100%, even though a win was worth 8 points then and 25 now. Summing rewards longevity. Indy 500 excluded; a DNF is simply a zero.</p>
