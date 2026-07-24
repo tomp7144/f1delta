@@ -208,42 +208,42 @@
       "position": 1,
       "constructorId": "mercedes",
       "name": "Mercedes",
-      "points": 333,
+      "points": 358,
       "championshipWon": false
     },
     {
       "position": 2,
       "constructorId": "ferrari",
       "name": "Ferrari",
-      "points": 255,
+      "points": 285,
       "championshipWon": false
     },
     {
       "position": 3,
       "constructorId": "mclaren",
       "name": "McLaren",
-      "points": 179,
+      "points": 195,
       "championshipWon": false
     },
     {
       "position": 4,
       "constructorId": "red-bull",
       "name": "Red Bull",
-      "points": 128,
+      "points": 151,
       "championshipWon": false
     },
     {
       "position": 5,
       "constructorId": "alpine",
       "name": "Alpine",
-      "points": 60,
+      "points": 61,
       "championshipWon": false
     },
     {
       "position": 6,
       "constructorId": "racing-bulls",
       "name": "Racing Bulls",
-      "points": 59,
+      "points": 61,
       "championshipWon": false
     },
     {
@@ -264,7 +264,7 @@
       "position": 9,
       "constructorId": "audi",
       "name": "Audi",
-      "points": 6,
+      "points": 10,
       "championshipWon": false
     },
     {
@@ -439,5 +439,5 @@
     }
   ],
   "notes": null,
-  "updated": "2026-07-19"
+  "updated": "2026-07-24"
 }
