@@ -2,8 +2,8 @@
   "driverId": "valtteri-bottas",
   "name": "Valtteri Bottas",
   "career": {
-    "score": 2572,
-    "races": 257,
+    "score": 2552,
+    "races": 258,
     "partial": 1
   },
   "seasons": [
@@ -81,8 +81,8 @@
     },
     {
       "year": 2026,
-      "score": -52,
-      "races": 10,
+      "score": -72,
+      "races": 11,
       "partial": 0
     }
   ]

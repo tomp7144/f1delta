@@ -2,113 +2,113 @@
   "year": 2026,
   "drivers": {
     "george-russell": {
-      "score": 159,
-      "races": 10,
+      "score": 167,
+      "races": 11,
       "partial": 0
     },
     "kimi-antonelli": {
-      "score": 271,
-      "races": 10,
+      "score": 301,
+      "races": 11,
       "partial": 0
     },
     "charles-leclerc": {
-      "score": 155,
-      "races": 10,
+      "score": 176,
+      "races": 11,
       "partial": 0
     },
     "lewis-hamilton": {
-      "score": 246,
-      "races": 10,
+      "score": 265,
+      "races": 11,
       "partial": 0
     },
     "lando-norris": {
-      "score": 128,
-      "races": 10,
+      "score": 163,
+      "races": 11,
       "partial": 0
     },
     "max-verstappen": {
-      "score": 119,
-      "races": 10,
+      "score": 156,
+      "races": 11,
       "partial": 1
     },
     "oliver-bearman": {
-      "score": 22,
-      "races": 10,
+      "score": 18,
+      "races": 11,
       "partial": 0
     },
     "arvid-lindblad": {
-      "score": 63,
-      "races": 10,
+      "score": 64,
+      "races": 11,
       "partial": 0
     },
     "gabriel-bortoleto": {
-      "score": 53,
-      "races": 10,
+      "score": 61,
+      "races": 11,
       "partial": 0
     },
     "pierre-gasly": {
-      "score": 104,
-      "races": 10,
+      "score": 108,
+      "races": 11,
       "partial": 0
     },
     "esteban-ocon": {
-      "score": 58,
-      "races": 10,
+      "score": 57,
+      "races": 11,
       "partial": 0
     },
     "alexander-albon": {
-      "score": -30,
-      "races": 10,
+      "score": -26,
+      "races": 11,
       "partial": 0
     },
     "liam-lawson": {
-      "score": 78,
-      "races": 10,
+      "score": 93,
+      "races": 11,
       "partial": 0
     },
     "franco-colapinto": {
-      "score": 82,
-      "races": 10,
+      "score": 81,
+      "races": 11,
       "partial": 0
     },
     "carlos-sainz-jr": {
       "score": 34,
-      "races": 10,
+      "races": 11,
       "partial": 1
     },
     "sergio-perez": {
-      "score": -4,
-      "races": 10,
+      "score": -24,
+      "races": 11,
       "partial": 0
     },
     "lance-stroll": {
-      "score": -132,
-      "races": 10,
+      "score": -118,
+      "races": 11,
       "partial": 1
     },
     "fernando-alonso": {
-      "score": -35,
-      "races": 10,
+      "score": -31,
+      "races": 11,
       "partial": 0
     },
     "valtteri-bottas": {
-      "score": -52,
-      "races": 10,
+      "score": -72,
+      "races": 11,
       "partial": 0
     },
     "isack-hadjar": {
-      "score": 92,
-      "races": 10,
+      "score": 107,
+      "races": 11,
       "partial": 1
     },
     "oscar-piastri": {
-      "score": 141,
-      "races": 10,
+      "score": 127,
+      "races": 11,
       "partial": 0
     },
     "nico-hulkenberg": {
-      "score": -25,
-      "races": 10,
+      "score": -20,
+      "races": 11,
       "partial": 0
     }
   },
@@ -211,6 +211,16 @@
       "topId": "isack-hadjar",
       "topName": "Isack Hadjar",
       "topScore": 39,
+      "partial": false
+    },
+    {
+      "round": 11,
+      "raceId": 1160,
+      "gpId": "hungary",
+      "name": "Hungarian GP",
+      "topId": "max-verstappen",
+      "topName": "Max Verstappen",
+      "topScore": 37,
       "partial": false
     }
   ]

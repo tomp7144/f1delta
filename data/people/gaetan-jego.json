@@ -11,7 +11,7 @@
   "totals": {
     "seasons": 1,
     "drivers": 1,
-    "races": 10,
+    "races": 11,
     "wins": 0,
     "podiums": 0,
     "poles": 0,
@@ -27,7 +27,7 @@
       "driverId": "carlos-sainz-jr",
       "driverName": "Carlos Sainz Jr.",
       "stats": {
-        "races": 10,
+        "races": 11,
         "wins": 0,
         "podiums": 0,
         "poles": 0,
@@ -35,5 +35,5 @@
       }
     }
   ],
-  "updated": "2026-07-24"
+  "updated": "2026-07-26"
 }

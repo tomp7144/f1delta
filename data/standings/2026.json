@@ -9,7 +9,7 @@
       "driverId": "kimi-antonelli",
       "name": "Kimi Antonelli",
       "code": "ANT",
-      "points": 204,
+      "points": 219,
       "teamId": "mercedes",
       "team": "Mercedes"
     },
@@ -18,7 +18,7 @@
       "driverId": "lewis-hamilton",
       "name": "Lewis Hamilton",
       "code": "HAM",
-      "points": 159,
+      "points": 169,
       "teamId": "ferrari",
       "team": "Ferrari"
     },
@@ -27,7 +27,7 @@
       "driverId": "george-russell",
       "name": "George Russell",
       "code": "RUS",
-      "points": 154,
+      "points": 160,
       "teamId": "mercedes",
       "team": "Mercedes"
     },
@@ -36,7 +36,7 @@
       "driverId": "charles-leclerc",
       "name": "Charles Leclerc",
       "code": "LEC",
-      "points": 126,
+      "points": 138,
       "teamId": "ferrari",
       "team": "Ferrari"
     },
@@ -45,12 +45,21 @@
       "driverId": "lando-norris",
       "name": "Lando Norris",
       "code": "NOR",
-      "points": 103,
+      "points": 128,
       "teamId": "mclaren",
       "team": "McLaren"
     },
     {
       "position": 6,
+      "driverId": "max-verstappen",
+      "name": "Max Verstappen",
+      "code": "VER",
+      "points": 109,
+      "teamId": "red-bull",
+      "team": "Red Bull"
+    },
+    {
+      "position": 7,
       "driverId": "oscar-piastri",
       "name": "Oscar Piastri",
       "code": "PIA",
@@ -59,25 +68,25 @@
       "team": "McLaren"
     },
     {
-      "position": 7,
-      "driverId": "max-verstappen",
-      "name": "Max Verstappen",
-      "code": "VER",
-      "points": 91,
-      "teamId": "red-bull",
-      "team": "Red Bull"
-    },
-    {
       "position": 8,
       "driverId": "isack-hadjar",
       "name": "Isack Hadjar",
       "code": "HAD",
-      "points": 60,
+      "points": 68,
       "teamId": "red-bull",
       "team": "Red Bull"
     },
     {
       "position": 9,
+      "driverId": "liam-lawson",
+      "name": "Liam Lawson",
+      "code": "LAW",
+      "points": 43,
+      "teamId": "racing-bulls",
+      "team": "Racing Bulls"
+    },
+    {
+      "position": 10,
       "driverId": "pierre-gasly",
       "name": "Pierre Gasly",
       "code": "GAS",
@@ -86,20 +95,11 @@
       "team": "Alpine"
     },
     {
-      "position": 10,
-      "driverId": "liam-lawson",
-      "name": "Liam Lawson",
-      "code": "LAW",
-      "points": 39,
-      "teamId": "racing-bulls",
-      "team": "Racing Bulls"
-    },
-    {
       "position": 11,
       "driverId": "arvid-lindblad",
       "name": "Arvid Lindblad",
       "code": "LIN",
-      "points": 22,
+      "points": 23,
       "teamId": "racing-bulls",
       "team": "Racing Bulls"
     },
@@ -159,6 +159,15 @@
     },
     {
       "position": 18,
+      "driverId": "nico-hulkenberg",
+      "name": "Nico Hülkenberg",
+      "code": "HUL",
+      "points": 2,
+      "teamId": "audi",
+      "team": "Audi"
+    },
+    {
+      "position": 19,
       "driverId": "fernando-alonso",
       "name": "Fernando Alonso",
       "code": "ALO",
@@ -167,16 +176,16 @@
       "team": "Aston Martin"
     },
     {
-      "position": 19,
-      "driverId": "nico-hulkenberg",
-      "name": "Nico Hülkenberg",
-      "code": "HUL",
+      "position": 20,
+      "driverId": "lance-stroll",
+      "name": "Lance Stroll",
+      "code": "STR",
       "points": 0,
-      "teamId": "audi",
-      "team": "Audi"
+      "teamId": "aston-martin",
+      "team": "Aston Martin"
     },
     {
-      "position": 20,
+      "position": 21,
       "driverId": "valtteri-bottas",
       "name": "Valtteri Bottas",
       "code": "BOT",
@@ -185,22 +194,13 @@
       "team": "Cadillac"
     },
     {
-      "position": 21,
+      "position": 22,
       "driverId": "sergio-perez",
       "name": "Sergio Pérez",
       "code": "PER",
       "points": 0,
       "teamId": "cadillac",
       "team": "Cadillac"
-    },
-    {
-      "position": 22,
-      "driverId": "lance-stroll",
-      "name": "Lance Stroll",
-      "code": "STR",
-      "points": 0,
-      "teamId": "aston-martin",
-      "team": "Aston Martin"
     }
   ],
   "wcc": [
@@ -208,41 +208,41 @@
       "position": 1,
       "constructorId": "mercedes",
       "name": "Mercedes",
-      "points": 358,
+      "points": 379,
       "championshipWon": false
     },
     {
       "position": 2,
       "constructorId": "ferrari",
       "name": "Ferrari",
-      "points": 285,
+      "points": 307,
       "championshipWon": false
     },
     {
       "position": 3,
       "constructorId": "mclaren",
       "name": "McLaren",
-      "points": 195,
+      "points": 220,
       "championshipWon": false
     },
     {
       "position": 4,
       "constructorId": "red-bull",
       "name": "Red Bull",
-      "points": 151,
+      "points": 177,
       "championshipWon": false
     },
     {
       "position": 5,
-      "constructorId": "alpine",
-      "name": "Alpine",
-      "points": 61,
+      "constructorId": "racing-bulls",
+      "name": "Racing Bulls",
+      "points": 66,
       "championshipWon": false
     },
     {
       "position": 6,
-      "constructorId": "racing-bulls",
-      "name": "Racing Bulls",
+      "constructorId": "alpine",
+      "name": "Alpine",
       "points": 61,
       "championshipWon": false
     },
@@ -255,16 +255,16 @@
     },
     {
       "position": 8,
-      "constructorId": "williams",
-      "name": "Williams",
-      "points": 11,
+      "constructorId": "audi",
+      "name": "Audi",
+      "points": 12,
       "championshipWon": false
     },
     {
       "position": 9,
-      "constructorId": "audi",
-      "name": "Audi",
-      "points": 10,
+      "constructorId": "williams",
+      "name": "Williams",
+      "points": 11,
       "championshipWon": false
     },
     {
@@ -357,8 +357,8 @@
       "round": 11,
       "grandPrixId": "hungary",
       "name": "Hungarian GP",
-      "winnerId": null,
-      "winner": null
+      "winnerId": "lando-norris",
+      "winner": "Lando Norris"
     },
     {
       "round": 12,
@@ -439,5 +439,5 @@
     }
   ],
   "notes": null,
-  "updated": "2026-07-24"
+  "updated": "2026-07-26"
 }

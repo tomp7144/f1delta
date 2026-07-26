@@ -2,8 +2,8 @@
   "driverId": "gabriel-bortoleto",
   "name": "Gabriel Bortoleto",
   "career": {
-    "score": 43,
-    "races": 34,
+    "score": 51,
+    "races": 35,
     "partial": 1
   },
   "seasons": [
@@ -15,8 +15,8 @@
     },
     {
       "year": 2026,
-      "score": 53,
-      "races": 10,
+      "score": 61,
+      "races": 11,
       "partial": 0
     }
   ]

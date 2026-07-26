@@ -11,7 +11,7 @@
   "totals": {
     "seasons": 7,
     "drivers": 1,
-    "races": 124,
+    "races": 125,
     "wins": 0,
     "podiums": 0,
     "poles": 0,
@@ -28,7 +28,7 @@
       "driverId": "lance-stroll",
       "driverName": "Lance Stroll",
       "stats": {
-        "races": 124,
+        "races": 125,
         "wins": 0,
         "podiums": 0,
         "poles": 0,
@@ -36,5 +36,5 @@
       }
     }
   ],
-  "updated": "2026-07-24"
+  "updated": "2026-07-26"
 }

@@ -2,8 +2,8 @@
   "driverId": "isack-hadjar",
   "name": "Isack Hadjar",
   "career": {
-    "score": 94,
-    "races": 34,
+    "score": 109,
+    "races": 35,
     "partial": 2
   },
   "seasons": [
@@ -15,8 +15,8 @@
     },
     {
       "year": 2026,
-      "score": 92,
-      "races": 10,
+      "score": 107,
+      "races": 11,
       "partial": 1
     }
   ]

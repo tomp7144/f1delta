@@ -6952,5 +6952,11 @@
     "topDriverName": "Isack Hadjar",
     "topScore": 39,
     "partial": false
+  },
+  "1160": {
+    "topDriverId": "max-verstappen",
+    "topDriverName": "Max Verstappen",
+    "topScore": 37,
+    "partial": false
   }
 }
