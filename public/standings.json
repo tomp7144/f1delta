@@ -4,67 +4,67 @@
     {
       "pos": 1,
       "code": "ANT",
-      "points": 204,
+      "points": 219,
       "team": "Mercedes"
     },
     {
       "pos": 2,
       "code": "HAM",
-      "points": 159,
+      "points": 169,
       "team": "Ferrari"
     },
     {
       "pos": 3,
       "code": "RUS",
-      "points": 154,
+      "points": 160,
       "team": "Mercedes"
     },
     {
       "pos": 4,
       "code": "LEC",
-      "points": 126,
+      "points": 138,
       "team": "Ferrari"
     },
     {
       "pos": 5,
       "code": "NOR",
-      "points": 103,
+      "points": 128,
       "team": "McLaren"
     },
     {
       "pos": 6,
+      "code": "VER",
+      "points": 109,
+      "team": "Red Bull"
+    },
+    {
+      "pos": 7,
       "code": "PIA",
       "points": 92,
       "team": "McLaren"
     },
     {
-      "pos": 7,
-      "code": "VER",
-      "points": 91,
-      "team": "Red Bull"
-    },
-    {
       "pos": 8,
       "code": "HAD",
-      "points": 60,
+      "points": 68,
       "team": "Red Bull"
     },
     {
       "pos": 9,
+      "code": "LAW",
+      "points": 43,
+      "team": "RB F1 Team"
+    },
+    {
+      "pos": 10,
       "code": "GAS",
       "points": 42,
       "team": "Alpine F1 Team"
     },
     {
-      "pos": 10,
-      "code": "LAW",
-      "points": 39,
-      "team": "RB F1 Team"
-    },
-    {
       "pos": 11,
       "code": "LIN",
-      "points": 22,
+      "points": 23,
       "team": "RB F1 Team"
     },
     {
@@ -105,34 +105,34 @@
     },
     {
       "pos": 18,
+      "code": "HUL",
+      "points": 2,
+      "team": "Audi"
+    },
+    {
+      "pos": 19,
       "code": "ALO",
       "points": 1,
       "team": "Aston Martin"
     },
     {
-      "pos": 19,
-      "code": "HUL",
+      "pos": 20,
+      "code": "STR",
       "points": 0,
-      "team": "Audi"
+      "team": "Aston Martin"
     },
     {
-      "pos": 20,
+      "pos": 21,
       "code": "BOT",
       "points": 0,
       "team": "Cadillac F1 Team"
     },
     {
-      "pos": 21,
+      "pos": 22,
       "code": "PER",
       "points": 0,
       "team": "Cadillac F1 Team"
-    },
-    {
-      "pos": 22,
-      "code": "STR",
-      "points": 0,
-      "team": "Aston Martin"
     }
   ],
-  "baked": "2026-07-26T16:01:35.658Z"
+  "baked": "2026-07-26T19:11:30.661Z"
 }
