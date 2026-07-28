@@ -42,10 +42,7 @@ const current = navKey(pathname);
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Barlow+Condensed:wght@700&family=JetBrains+Mono:wght@400;700&display=swap">
-    <!-- AdSense site verification -->
-    <script is:inline async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-6298973348658731"
-         crossorigin="anonymous"></script>
-    <!-- Google Consent Mode v2 — defaults set BEFORE gtag loads -->
+    <!-- Google Consent Mode v2 — must fire BEFORE any Google tag (AdSense, GA4) -->
     <script is:inline>
       window.dataLayer = window.dataLayer || [];
       function gtag(){dataLayer.push(arguments);}
@@ -57,6 +54,9 @@ const current = navKey(pathname);
         'wait_for_update': 500
       });
     </script>
+    <!-- AdSense -->
+    <script is:inline async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-6298973348658731"
+         crossorigin="anonymous"></script>
     <!-- Google Analytics (GA4) -->
     <script is:inline async src="https://www.googletagmanager.com/gtag/js?id=G-WJ7VNMC69K"></script>
     <script is:inline>
