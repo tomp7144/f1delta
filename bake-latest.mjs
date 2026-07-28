@@ -136,7 +136,6 @@ async function main() {
       status: "FINISHED",
     },
     tower: buildTower(results, drivers, stints),
-    baked: new Date().toISOString(),
   };
 
   await mkdir(path.dirname(OUT), { recursive: true });

@@ -28,7 +28,7 @@ try {
   await mkdir("public", { recursive: true });
   await writeFile(
     "public/standings.json",
-    JSON.stringify({ season: SEASON, standings, baked: new Date().toISOString() }, null, 2)
+    JSON.stringify({ season: SEASON, standings }, null, 2)
   );
   console.log(`[F1Delta] baked ${standings.length} standings -> public/standings.json`);
 } catch (err) {
