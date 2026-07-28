@@ -118,11 +118,21 @@ async function main() {
     priceDelta: prevPrices.has(a.id) ? +(a.price - prevPrices.get(a.id)).toFixed(1) : 0,
   }));
 
-  const syncedAt = new Date().toISOString();
-
-  // 6. Write players.json (always — it's the current-state snapshot).
+  // 6. Write players.json only when assets actually changed.
+  // On a no-change run, preserve the existing syncedAt so the file is byte-identical → diff gate works.
   await mkdir(path.dirname(PLAYERS_OUT), { recursive: true });
-  await writeFile(PLAYERS_OUT, JSON.stringify({ syncedAt, season: 2026, assets: stamped }, null, 2));
+  let existingPlayers = null;
+  try { existingPlayers = JSON.parse(await readFile(PLAYERS_OUT, "utf8")); } catch { /* first run */ }
+
+  const assetsChanged = !existingPlayers || JSON.stringify(stamped) !== JSON.stringify(existingPlayers.assets ?? []);
+  const syncedAt = assetsChanged ? new Date().toISOString() : (existingPlayers?.syncedAt ?? new Date().toISOString());
+
+  if (assetsChanged) {
+    await writeFile(PLAYERS_OUT, JSON.stringify({ syncedAt, season: 2026, assets: stamped }, null, 2));
+    console.log(`Updated players.json — data changed, fresh syncedAt (${stamped.length} assets).`);
+  } else {
+    console.log(`No change in fantasy assets — players.json unchanged, syncedAt preserved.`);
+  }
 
   // 7. Append to history only if any price or points changed vs the last snapshot.
   const lastMap    = new Map((history[history.length - 1]?.assets ?? []).map(a => [a.id, a]));
