@@ -46,12 +46,23 @@ const current = navKey(pathname);
     <script is:inline>
       window.dataLayer = window.dataLayer || [];
       function gtag(){dataLayer.push(arguments);}
+      // EEA + UK: denied pending consent banner (GDPR requires prior opt-in)
       gtag('consent', 'default', {
         'ad_storage': 'denied',
         'ad_user_data': 'denied',
         'ad_personalization': 'denied',
         'analytics_storage': 'denied',
-        'wait_for_update': 500
+        'wait_for_update': 500,
+        'region': ['AT','BE','BG','HR','CY','CZ','DK','EE','FI','FR','DE','GR',
+                   'HU','IE','IT','LV','LT','LU','MT','NL','PL','PT','RO','SK',
+                   'SI','ES','SE','IS','LI','NO','GB']
+      });
+      // Rest of world (US, etc.): granted — no prior-consent legal requirement
+      gtag('consent', 'default', {
+        'ad_storage': 'granted',
+        'ad_user_data': 'granted',
+        'ad_personalization': 'granted',
+        'analytics_storage': 'granted'
       });
     </script>
     <!-- AdSense -->
