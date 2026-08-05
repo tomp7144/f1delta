@@ -98,7 +98,21 @@ const current = navKey(pathname);
           <a href="/fantasy" aria-current={current === "fantasy" ? "page" : undefined}>Fantasy</a>
         </div>
         <a class="donate-btn" href="https://ko-fi.com/f1delta" target="_blank" rel="noopener noreferrer">♥ Donate</a>
+        <button class="nav-srch-btn" id="nav-srch-btn" aria-label="Search" aria-expanded="false">
+          <svg width="15" height="15" viewBox="0 0 15 15" fill="none" aria-hidden="true">
+            <circle cx="6.5" cy="6.5" r="4.5" stroke="currentColor" stroke-width="1.5"/>
+            <line x1="10" y1="10" x2="14" y2="14" stroke="currentColor" stroke-width="1.5" stroke-linecap="round"/>
+          </svg>
+        </button>
         <button class="hamburger" id="nav-hamburger" aria-label="Toggle menu" aria-expanded="false" aria-controls="nav-links">&#9776;</button>
+      </div>
+      <!-- Search panel — drops below nav, full-width -->
+      <div class="nav-srch-panel" id="nav-srch-panel" hidden>
+        <div class="nav-srch-inner">
+          <input type="text" id="nav-srch-in" class="nav-srch-in" placeholder="Search drivers, teams, circuits…" autocomplete="off" spellcheck="false" />
+          <button class="nav-srch-close" id="nav-srch-close" aria-label="Close search">✕</button>
+        </div>
+        <div class="nav-srch-res" id="nav-srch-res" hidden></div>
       </div>
     </nav>
     <slot />
@@ -178,6 +192,51 @@ const current = navKey(pathname);
   .nav-group:hover .nav-group-panel,
   .nav-group:focus-within .nav-group-panel,
   .nav-group.open .nav-group-panel { display: block; }
+
+  /* Search button */
+  .nav-srch-btn {
+    display: inline-flex; align-items: center; justify-content: center;
+    background: none; border: none; cursor: pointer;
+    color: var(--dim); padding: 10px 6px 10px 10px;
+    flex-shrink: 0;
+  }
+  .nav-srch-btn:hover { color: var(--ink); }
+
+  /* Search panel */
+  .nav-srch-panel {
+    position: absolute; left: 0; right: 0; top: 100%; z-index: 300;
+    background: var(--surface); border-bottom: 1px solid var(--line);
+    box-shadow: 0 4px 12px rgba(0,0,0,.08);
+  }
+  .nav-srch-inner {
+    max-width: 760px; margin: 0 auto; padding: 8px 20px;
+    display: flex; align-items: center; gap: 8px;
+  }
+  .nav-srch-in {
+    flex: 1; font-family: var(--body); font-size: 14px; color: var(--ink);
+    background: var(--bg); border: 1px solid var(--line); border-radius: 6px;
+    padding: 8px 12px; outline: none;
+  }
+  .nav-srch-in:focus { border-color: var(--ink); }
+  .nav-srch-in::placeholder { color: var(--faint); }
+  .nav-srch-close {
+    background: none; border: none; cursor: pointer; font-size: 14px;
+    color: var(--dim); padding: 6px 4px; flex-shrink: 0; line-height: 1;
+  }
+  .nav-srch-close:hover { color: var(--ink); }
+  .nav-srch-res {
+    max-width: 760px; margin: 0 auto; padding: 0 20px 8px;
+    display: flex; flex-direction: column; gap: 1px;
+  }
+  .srch-opt {
+    display: flex; align-items: baseline; justify-content: space-between; gap: 8px;
+    padding: 7px 10px; border-radius: 4px; cursor: pointer;
+    background: none; border: none; text-align: left; width: 100%; color: var(--ink);
+    text-decoration: none;
+  }
+  .srch-opt:hover, .srch-opt:focus { background: var(--bg); outline: none; }
+  .srch-opt-label { font-size: 13px; font-weight: 500; }
+  .srch-opt-meta  { font-family: var(--mono); font-size: 10px; color: var(--faint); flex-shrink: 0; }
 
   /* Donate button */
   .donate-btn {
@@ -261,7 +320,7 @@ const current = navKey(pathname);
 <script is:inline>
 (function () {
   var burger = document.getElementById("nav-hamburger");
-  var links = document.getElementById("nav-links");
+  var links  = document.getElementById("nav-links");
   if (burger && links) {
     burger.addEventListener("click", function () {
       var open = links.classList.toggle("open");
@@ -291,6 +350,105 @@ const current = navKey(pathname);
       grp.classList.remove("open");
       var btn = grp.querySelector(".nav-group-btn");
       if (btn) btn.setAttribute("aria-expanded", "false");
+    }
+  });
+
+  // ── Nav search ──────────────────────────────────────────────────────
+  var srchBtn   = document.getElementById("nav-srch-btn");
+  var srchPanel = document.getElementById("nav-srch-panel");
+  var srchIn    = document.getElementById("nav-srch-in");
+  var srchRes   = document.getElementById("nav-srch-res");
+  var srchClose = document.getElementById("nav-srch-close");
+  var _idx = null;
+
+  function openSearch() {
+    if (!srchPanel) return;
+    srchPanel.hidden = false;
+    srchBtn && srchBtn.setAttribute("aria-expanded", "true");
+    srchIn && srchIn.focus();
+  }
+  function closeSearch() {
+    if (!srchPanel) return;
+    srchPanel.hidden = true;
+    srchBtn && srchBtn.setAttribute("aria-expanded", "false");
+    if (srchIn) srchIn.value = "";
+    if (srchRes) srchRes.hidden = true;
+  }
+
+  async function ensureIdx() {
+    if (_idx) return;
+    try { _idx = await fetch("/search-index.json").then(function(r){ return r.json(); }); } catch(e){}
+  }
+
+  function matchIdx(q) {
+    if (!_idx || !q.trim()) return [];
+    var n = q.trim().toLowerCase();
+    return _idx
+      .filter(function(e) {
+        var lbl = (e.label || "").toLowerCase();
+        return lbl.startsWith(n)
+          || lbl.split(/\s+/).some(function(w){ return w.startsWith(n); })
+          || (e.code || "").toLowerCase().startsWith(n)
+          || (e.terms || []).some(function(t){ return t.startsWith(n); });
+      })
+      .sort(function(a, b) {
+        var as = (a.label||"").toLowerCase().startsWith(n);
+        var bs = (b.label||"").toLowerCase().startsWith(n);
+        if (as && !bs) return -1; if (bs && !as) return 1;
+        return (b.ly||0) - (a.ly||0);
+      })
+      .slice(0, 7);
+  }
+
+  function renderRes(matches) {
+    if (!srchRes) return;
+    if (!matches.length) { srchRes.hidden = true; return; }
+    srchRes.innerHTML = matches.map(function(e) {
+      var meta = e.fy ? (e.fy === e.ly ? e.fy : e.fy + "–" + e.ly) : (e.type || "");
+      return '<a class="srch-opt" href="' + e.url + '">'
+        + '<span class="srch-opt-label">' + e.label + '</span>'
+        + '<span class="srch-opt-meta">' + meta + '</span>'
+        + '</a>';
+    }).join("");
+    srchRes.hidden = false;
+  }
+
+  if (srchBtn) {
+    srchBtn.addEventListener("click", function(e) {
+      e.stopPropagation();
+      srchPanel && srchPanel.hidden ? openSearch() : closeSearch();
+    });
+  }
+  if (srchClose) srchClose.addEventListener("click", closeSearch);
+
+  if (srchIn) {
+    srchIn.addEventListener("input", async function() {
+      await ensureIdx();
+      renderRes(matchIdx(srchIn.value));
+    });
+    srchIn.addEventListener("keydown", function(e) {
+      var opts = srchRes ? Array.from(srchRes.querySelectorAll(".srch-opt")) : [];
+      var fi = opts.indexOf(document.activeElement);
+      if (e.key === "ArrowDown") {
+        e.preventDefault();
+        if (fi < 0 && opts[0]) opts[0].focus();
+        else if (fi < opts.length - 1) opts[fi+1].focus();
+      } else if (e.key === "ArrowUp") {
+        e.preventDefault();
+        if (fi > 0) opts[fi-1].focus();
+        else srchIn.focus();
+      } else if (e.key === "Escape") {
+        closeSearch();
+      } else if (e.key === "Enter" && fi < 0 && opts.length) {
+        opts[0].click();
+      }
+    });
+  }
+
+  // Close search when clicking outside the panel
+  document.addEventListener("click", function(e) {
+    if (srchPanel && !srchPanel.hidden && srchBtn && !srchPanel.contains(e.target) && !srchBtn.contains(e.target)) {
+      closeSearch();
     }
   });
 })();
