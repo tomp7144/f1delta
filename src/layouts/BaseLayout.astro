@@ -98,23 +98,15 @@ const current = navKey(pathname);
           <a href="/compare" aria-current={current === "compare" ? "page" : undefined}>Compare</a>
           <a href="/fantasy" aria-current={current === "fantasy" ? "page" : undefined}>Fantasy</a>
           <a href="/trivia" aria-current={current === "trivia" ? "page" : undefined}>Quiz</a>
+          <!-- Inline search — always visible on desktop, in dropdown on mobile -->
+          <div class="nav-srch-wrap" id="nav-srch-wrap">
+            <input type="text" id="nav-srch-in" class="nav-srch-in"
+              placeholder="Search…" autocomplete="off" spellcheck="false" aria-label="Search" />
+            <div class="nav-srch-res" id="nav-srch-res" hidden></div>
+          </div>
         </div>
         <a class="donate-btn" href="https://ko-fi.com/f1delta" target="_blank" rel="noopener noreferrer">♥ Donate</a>
-        <button class="nav-srch-btn" id="nav-srch-btn" aria-label="Search" aria-expanded="false">
-          <svg width="15" height="15" viewBox="0 0 15 15" fill="none" aria-hidden="true">
-            <circle cx="6.5" cy="6.5" r="4.5" stroke="currentColor" stroke-width="1.5"/>
-            <line x1="10" y1="10" x2="14" y2="14" stroke="currentColor" stroke-width="1.5" stroke-linecap="round"/>
-          </svg>
-        </button>
         <button class="hamburger" id="nav-hamburger" aria-label="Toggle menu" aria-expanded="false" aria-controls="nav-links">&#9776;</button>
-      </div>
-      <!-- Search panel — drops below nav, full-width -->
-      <div class="nav-srch-panel" id="nav-srch-panel" hidden>
-        <div class="nav-srch-inner">
-          <input type="text" id="nav-srch-in" class="nav-srch-in" placeholder="Search drivers, teams, circuits…" autocomplete="off" spellcheck="false" />
-          <button class="nav-srch-close" id="nav-srch-close" aria-label="Close search">✕</button>
-        </div>
-        <div class="nav-srch-res" id="nav-srch-res" hidden></div>
       </div>
     </nav>
     <slot />
@@ -195,50 +187,34 @@ const current = navKey(pathname);
   .nav-group:focus-within .nav-group-panel,
   .nav-group.open .nav-group-panel { display: block; }
 
-  /* Search button */
-  .nav-srch-btn {
-    display: inline-flex; align-items: center; justify-content: center;
-    background: none; border: none; cursor: pointer;
-    color: var(--dim); padding: 10px 6px 10px 10px;
-    flex-shrink: 0;
-  }
-  .nav-srch-btn:hover { color: var(--ink); }
-
-  /* Search panel */
-  .nav-srch-panel {
-    position: absolute; left: 0; right: 0; top: 100%; z-index: 300;
-    background: var(--surface); border-bottom: 1px solid var(--line);
-    box-shadow: 0 4px 12px rgba(0,0,0,.08);
-  }
-  .nav-srch-inner {
-    max-width: 760px; margin: 0 auto; padding: 8px 20px;
-    display: flex; align-items: center; gap: 8px;
+  /* Inline search (always visible on desktop, in mobile dropdown) */
+  .nav-srch-wrap {
+    margin-left: auto; position: relative;
+    display: flex; align-items: center;
+    padding: 4px 0 4px 10px; flex-shrink: 0;
   }
   .nav-srch-in {
-    flex: 1; font-family: var(--body); font-size: 14px; color: var(--ink);
-    background: var(--bg); border: 1px solid var(--line); border-radius: 6px;
-    padding: 8px 12px; outline: none;
+    width: 148px; font-family: var(--body); font-size: 12px; color: var(--ink);
+    background: var(--bg); border: 1px solid var(--line); border-radius: 5px;
+    padding: 5px 9px; outline: none; transition: border-color .15s, width .2s;
   }
-  .nav-srch-in:focus { border-color: var(--ink); }
+  .nav-srch-in:focus { border-color: var(--dim); width: 200px; }
   .nav-srch-in::placeholder { color: var(--faint); }
-  .nav-srch-close {
-    background: none; border: none; cursor: pointer; font-size: 14px;
-    color: var(--dim); padding: 6px 4px; flex-shrink: 0; line-height: 1;
-  }
-  .nav-srch-close:hover { color: var(--ink); }
   .nav-srch-res {
-    max-width: 760px; margin: 0 auto; padding: 0 20px 8px;
-    display: flex; flex-direction: column; gap: 1px;
+    position: absolute; right: 0; top: calc(100% + 4px);
+    min-width: 280px; background: var(--surface);
+    border: 1px solid var(--line); border-radius: 6px;
+    box-shadow: 0 4px 12px rgba(0,0,0,.08); z-index: 300; overflow: hidden;
   }
   .srch-opt {
     display: flex; align-items: baseline; justify-content: space-between; gap: 8px;
-    padding: 7px 10px; border-radius: 4px; cursor: pointer;
-    background: none; border: none; text-align: left; width: 100%; color: var(--ink);
-    text-decoration: none;
+    padding: 8px 12px; color: var(--ink); text-decoration: none;
+    border-bottom: 1px solid var(--line);
   }
+  .srch-opt:last-child { border-bottom: none; }
   .srch-opt:hover, .srch-opt:focus { background: var(--bg); outline: none; }
   .srch-opt-label { font-size: 13px; font-weight: 500; }
-  .srch-opt-meta  { font-family: var(--mono); font-size: 10px; color: var(--faint); flex-shrink: 0; }
+  .srch-opt-meta  { font-family: var(--mono); font-size: 10px; color: var(--faint); flex-shrink: 0; white-space: nowrap; }
 
   /* Donate button */
   .donate-btn {
@@ -316,6 +292,18 @@ const current = navKey(pathname);
       padding: 9px 20px 9px 32px; font-size: 15px;
     }
     .nav-group-panel a:hover { background: var(--bg); }
+
+    /* Search in mobile dropdown */
+    .nav-srch-wrap {
+      margin-left: 0; width: 100%; padding: 8px 16px 10px;
+      border-top: 1px solid var(--line);
+    }
+    .nav-srch-in { width: 100%; box-sizing: border-box; font-size: 14px; }
+    .nav-srch-in:focus { width: 100%; }
+    .nav-srch-res {
+      position: static; min-width: 0; margin-top: 4px;
+      box-shadow: none; border-radius: 6px;
+    }
   }
 </style>
 
@@ -355,27 +343,11 @@ const current = navKey(pathname);
     }
   });
 
-  // ── Nav search ──────────────────────────────────────────────────────
-  var srchBtn   = document.getElementById("nav-srch-btn");
-  var srchPanel = document.getElementById("nav-srch-panel");
-  var srchIn    = document.getElementById("nav-srch-in");
-  var srchRes   = document.getElementById("nav-srch-res");
-  var srchClose = document.getElementById("nav-srch-close");
+  // ── Inline nav search ────────────────────────────────────────────────
+  var srchWrap = document.getElementById("nav-srch-wrap");
+  var srchIn   = document.getElementById("nav-srch-in");
+  var srchRes  = document.getElementById("nav-srch-res");
   var _idx = null;
-
-  function openSearch() {
-    if (!srchPanel) return;
-    srchPanel.hidden = false;
-    srchBtn && srchBtn.setAttribute("aria-expanded", "true");
-    srchIn && srchIn.focus();
-  }
-  function closeSearch() {
-    if (!srchPanel) return;
-    srchPanel.hidden = true;
-    srchBtn && srchBtn.setAttribute("aria-expanded", "false");
-    if (srchIn) srchIn.value = "";
-    if (srchRes) srchRes.hidden = true;
-  }
 
   async function ensureIdx() {
     if (_idx) return;
@@ -415,14 +387,6 @@ const current = navKey(pathname);
     srchRes.hidden = false;
   }
 
-  if (srchBtn) {
-    srchBtn.addEventListener("click", function(e) {
-      e.stopPropagation();
-      srchPanel && srchPanel.hidden ? openSearch() : closeSearch();
-    });
-  }
-  if (srchClose) srchClose.addEventListener("click", closeSearch);
-
   if (srchIn) {
     srchIn.addEventListener("input", async function() {
       await ensureIdx();
@@ -440,17 +404,18 @@ const current = navKey(pathname);
         if (fi > 0) opts[fi-1].focus();
         else srchIn.focus();
       } else if (e.key === "Escape") {
-        closeSearch();
+        if (srchRes) srchRes.hidden = true;
+        srchIn.blur();
       } else if (e.key === "Enter" && fi < 0 && opts.length) {
         opts[0].click();
       }
     });
   }
 
-  // Close search when clicking outside the panel
+  // Hide results when clicking outside the search wrapper
   document.addEventListener("click", function(e) {
-    if (srchPanel && !srchPanel.hidden && srchBtn && !srchPanel.contains(e.target) && !srchBtn.contains(e.target)) {
-      closeSearch();
+    if (srchWrap && srchRes && !srchRes.hidden && !srchWrap.contains(e.target)) {
+      srchRes.hidden = true;
     }
   });
 })();
