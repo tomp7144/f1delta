@@ -139,9 +139,8 @@ const descStr = `Career stats for ${d.name}: ${d.totals.races ?? 0} races, ${d.t
             <tbody>
               {career.map((s: any) => {
                 const champ = s.wdcFinish === 1;
-                const others = (s.teams ?? []).filter(
-                  (t: any) => t.constructorId !== s.primaryTeamId
-                );
+                const teams: any[] = s.teams ?? [{ constructorId: s.primaryTeamId, constructor: s.primaryTeam, races: s.races }];
+                const multiTeam = teams.length > 1;
                 return (
                   <tr
                     data-season={s.season}
@@ -158,19 +157,14 @@ const descStr = `Career stats for ${d.name}: ${d.totals.races ?? 0} races, ${d.t
                       <a href={`/standings/${s.season}`}>{s.season}</a>
                     </td>
                     <td class="tm">
-                      <span class="dot" style={`background:${ac(s.primaryTeamId)}`}></span>
-                      <a href={`/teams/${s.primaryTeamId}`}>{s.primaryTeam}</a>
-                      {others.length > 0 && (
-                        <span class="alt">
-                          {" +"}
-                          {others.map((t: any, i: number) => (
-                            <>
-                              {i > 0 ? ", " : ""}
-                              <a href={`/teams/${t.constructorId}`}>{t.constructor}</a>
-                            </>
-                          ))}
-                        </span>
-                      )}
+                      {teams.map((t: any, i: number) => (
+                        <>
+                          {i > 0 && <span class="tm-sep"> · </span>}
+                          <span class="dot" style={`background:${ac(t.constructorId)}`}></span>
+                          <a href={`/teams/${t.constructorId}`}>{t.constructor}</a>
+                          {multiTeam && <span class="tm-ct"> ({t.races})</span>}
+                        </>
+                      ))}
                     </td>
                     <td class="n ent">{s.entries ?? ""}</td>
                     <td class="n">{s.races ?? ""}</td>
@@ -238,7 +232,7 @@ const descStr = `Career stats for ${d.name}: ${d.totals.races ?? 0} races, ${d.t
       <section class="drv-sec">
         <div class="sec-h">
           <h2>Teammates, head to head</h2>
-          <span class="hint">most races first</span>
+          <span class="hint">most races first · default: both classified</span>
         </div>
         <div class="card">
           <div class="table-scroll">
@@ -249,41 +243,33 @@ const descStr = `Career stats for ${d.name}: ${d.totals.races ?? 0} races, ${d.t
                   <th class="l">Qualifying</th>
                   <th class="l">Race</th>
                   <th class="l">Points</th>
+                  <th></th>
                 </tr>
               </thead>
               <tbody>
                 {teammates.map((t: any) => {
                   const a = t.aggregate;
-                  const qTot = (a.qualiAhead ?? 0) + (a.qualiBehind ?? 0);
-                  const rTot = (a.raceAhead  ?? 0) + (a.raceBehind  ?? 0);
-                  const qp = qTot ? Math.round(a.qualiAhead / qTot * 100) : 50;
-                  const rp = rTot ? Math.round(a.raceAhead  / rTot * 100) : 50;
+                  const slug = [id, t.teammateId].sort().join("-vs-");
                   return (
                     <tr>
                       <td class="who">
                         <a href={`/drivers/${t.teammateId}`}>{t.teammate}</a>
-                        <span class="ys">
-                          {yrRange(t.seasonsShared)}{" · "}{a.races}r compared
-                          {(a.excluded ?? 0) > 0 ? `, ${a.excluded} excl.` : ""}
-                        </span>
-                        {(() => {
-                          const slug = [id, t.teammateId].sort().join("-vs-");
-                          return h2hSlugs.has(slug)
-                            ? <a class="h2h-link" href={`/h2h/${slug}`}>→ Full breakdown</a>
-                            : null;
-                        })()}
+                        <span class="ys">{yrRange(t.seasonsShared)}</span>
                       </td>
-                      <td class="h2">
+                      <td class="h2s">
                         <span class="sc"><b>{a.qualiAhead}</b>–{a.qualiBehind}</span>
-                        <span class="bar"><i style={`width:${qp}%`}></i></span>
                       </td>
-                      <td class="h2">
+                      <td class="h2s">
                         <span class="sc"><b>{a.raceAhead}</b>–{a.raceBehind}</span>
-                        <span class="bar"><i style={`width:${rp}%`}></i></span>
                       </td>
                       <td class="pts">
                         <b>{fmt(a.pointsSelf)}</b>
                         <span class="vs">{fmt(a.pointsMate)}</span>
+                      </td>
+                      <td class="bdl">
+                        {h2hSlugs.has(slug)
+                          ? <a class="h2h-link" href={`/h2h/${slug}`}>→</a>
+                          : null}
                       </td>
                     </tr>
                   );
@@ -642,7 +628,8 @@ const descStr = `Career stats for ${d.name}: ${d.totals.races ?? 0} races, ${d.t
   td.tm a { color: inherit; text-decoration: none; }
   td.tm a:hover { color: var(--red); }
   td.tm .dot { display: inline-block; width: 8px; height: 8px; border-radius: 2px; margin-right: 7px; vertical-align: middle; }
-  td.tm .alt { color: var(--faint); font-size: 11px; }
+  td.tm .tm-sep { color: var(--faint); }
+  td.tm .tm-ct  { color: var(--faint); font-size: 11px; }
 
   td.n { text-align: right; font-family: var(--mono); font-size: 12.5px; color: var(--dim); white-space: nowrap; }
   td.n.hot    { color: var(--ink); font-weight: 600; }
@@ -664,19 +651,19 @@ const descStr = `Career stats for ${d.name}: ${d.totals.races ?? 0} races, ${d.t
   td.who a { font-weight: 600; color: var(--ink); text-decoration: none; }
   td.who a:hover { color: var(--red); }
   td.who .ys { display: block; font-family: var(--mono); font-size: 10px; color: var(--faint); margin-top: 2px; }
-  td.who .h2h-link { display: inline-block; margin-top: 3px; font-size: 11px; color: var(--red); text-decoration: none; font-weight: 600; }
-  td.who .h2h-link:hover { text-decoration: underline; }
 
-  td.h2 { text-align: left; min-width: 74px; }
-  td.h2 .sc { font-family: var(--mono); font-size: 12.5px; color: var(--dim); }
-  td.h2 .sc b { color: var(--ink); font-weight: 700; }
-  td.h2 .bar { display: block; height: 4px; border-radius: 2px; background: var(--line); margin-top: 5px; overflow: hidden; max-width: 70px; }
-  td.h2 .bar i { display: block; height: 100%; background: var(--red); opacity: .78; }
+  td.h2s { text-align: left; min-width: 60px; white-space: nowrap; }
+  td.h2s .sc { font-family: var(--mono); font-size: 12.5px; color: var(--dim); }
+  td.h2s .sc b { color: var(--ink); font-weight: 700; }
 
   td.pts { text-align: right; min-width: 64px; font-family: var(--mono); font-size: 12.5px; }
   td.pts b { color: var(--ink); font-weight: 700; }
   td.pts .vs { display: block; color: var(--faint); font-size: 11px; margin-top: 2px; }
   td.pts .vs::before { content: "vs "; }
+
+  td.bdl { text-align: right; white-space: nowrap; padding-left: 4px; }
+  td.bdl .h2h-link { font-family: var(--mono); font-size: 12px; color: var(--red); text-decoration: none; font-weight: 700; }
+  td.bdl .h2h-link:hover { text-decoration: underline; }
 
   /* ── Ad slot ──────────────────────────────────────────────────────── */
   .ad-slot {
