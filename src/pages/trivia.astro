@@ -1,0 +1,768 @@
+---
+export const prerender = true;
+import BaseLayout from "../layouts/BaseLayout.astro";
+---
+
+<BaseLayout
+  title="Guess the Driver — F1 Career Chain Quiz"
+  description="Identify the F1 driver from their career team progression. Multiple choice arcade, daily challenge, or free-text casual mode."
+  canonical="https://f1delta.com/trivia"
+>
+
+<style>
+  /* ── page layout ── */
+  .trivia-wrap { max-width: 680px; margin: 0 auto; padding: 28px 16px 60px; }
+  h1.trivia-h1 { font-size: 22px; font-weight: 700; margin: 0 0 4px; color: var(--ink); }
+  .trivia-sub { color: var(--dim); font-size: 14px; margin: 0 0 28px; }
+
+  /* ── mode selector ── */
+  .mode-grid { display: flex; flex-direction: column; gap: 10px; max-width: 400px; }
+  .mode-btn {
+    display: flex; flex-direction: column; gap: 3px;
+    padding: 14px 18px; border: 1.5px solid var(--line); border-radius: 8px;
+    background: var(--surface); cursor: pointer; text-align: left;
+    font-family: var(--body); transition: border-color .15s, background .15s;
+  }
+  .mode-btn:hover { border-color: var(--red); background: #fff; }
+  .mode-btn .mb-title { font-size: 15px; font-weight: 600; color: var(--ink); }
+  .mode-btn .mb-desc  { font-size: 12px; color: var(--dim); }
+
+  /* ── game header ── */
+  .game-header { display: flex; align-items: center; justify-content: space-between; margin-bottom: 18px; }
+  .game-label { font-size: 11px; font-weight: 600; letter-spacing: .06em;
+    text-transform: uppercase; color: var(--dim); }
+  .score-chip { font-family: var(--mono); font-size: 13px; color: var(--ink);
+    background: var(--bg); border: 1px solid var(--line); border-radius: 20px;
+    padding: 3px 10px; display: flex; align-items: center; gap: 6px; }
+  .score-chip .streak { color: var(--red); font-weight: 700; }
+
+  /* ── chain display ── */
+  .chain-box {
+    background: var(--surface); border: 1px solid var(--line); border-radius: 10px;
+    padding: 20px 18px; margin-bottom: 18px;
+  }
+  .chain-q { font-size: 11px; font-weight: 600; letter-spacing: .06em;
+    text-transform: uppercase; color: var(--dim); margin-bottom: 12px; }
+  .chain-links {
+    display: flex; flex-wrap: wrap; align-items: center; gap: 6px;
+    font-family: var(--mono);
+  }
+  .chain-team {
+    background: var(--bg); border: 1px solid var(--line); border-radius: 5px;
+    padding: 5px 10px; font-size: 13px; font-weight: 600; color: var(--ink);
+    white-space: nowrap;
+  }
+  .chain-arr { color: var(--faint); font-size: 14px; flex-shrink: 0; }
+
+  /* ── timer bar ── */
+  .timer-wrap { margin-bottom: 14px; }
+  .timer-track { height: 4px; background: var(--line); border-radius: 2px; overflow: hidden; }
+  .timer-fill { height: 100%; background: var(--red); border-radius: 2px; }
+  .timer-row { display: flex; align-items: center; justify-content: space-between; margin-bottom: 4px; }
+  .timer-pts { font-family: var(--mono); font-size: 12px; color: var(--red); font-weight: 700; }
+  .timer-sec { font-family: var(--mono); font-size: 11px; color: var(--dim); }
+
+  /* ── multiple-choice options ── */
+  .mc-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 8px; margin-bottom: 16px; }
+  @media (max-width: 480px) { .mc-grid { grid-template-columns: 1fr; } }
+  .mc-btn {
+    padding: 13px 14px; border: 1.5px solid var(--line); border-radius: 8px;
+    background: var(--surface); cursor: pointer; text-align: left;
+    font-family: var(--body); font-size: 13px; font-weight: 500; color: var(--ink);
+    transition: border-color .1s, background .1s; min-height: 48px; line-height: 1.3;
+  }
+  .mc-btn:hover:not(:disabled) { border-color: var(--dim); background: var(--bg); }
+  .mc-btn.correct  { border-color: #3a9a3a; background: #edfaed; color: #1a6e1a; }
+  .mc-btn.wrong    { border-color: var(--red); background: #fef0f0; color: var(--red); }
+  .mc-btn:disabled { cursor: default; }
+
+  /* ── free-text input ── */
+  .ft-wrap { position: relative; margin-bottom: 16px; }
+  .ft-in {
+    width: 100%; font-family: var(--body); font-size: 14px; color: var(--ink);
+    background: var(--surface); border: 1.5px solid var(--line); border-radius: 8px;
+    padding: 12px 14px; box-sizing: border-box; outline: none;
+  }
+  .ft-in:focus { border-color: var(--dim); }
+  .ft-suggest {
+    position: absolute; left: 0; right: 0; top: calc(100% + 2px);
+    background: var(--surface); border: 1px solid var(--line); border-radius: 8px;
+    box-shadow: 0 4px 12px rgba(0,0,0,.07); z-index: 100;
+    max-height: 240px; overflow-y: auto;
+  }
+  .ft-opt {
+    padding: 9px 14px; font-size: 13px; color: var(--ink); cursor: pointer;
+    border-bottom: 1px solid var(--line); white-space: nowrap; overflow: hidden;
+    text-overflow: ellipsis;
+  }
+  .ft-opt:last-child { border-bottom: none; }
+  .ft-opt:hover, .ft-opt.active { background: var(--bg); }
+  .ft-hint { font-size: 11px; color: var(--dim); margin-top: 4px; }
+
+  /* ── feedback panel ── */
+  .feedback-box {
+    padding: 14px 18px; border-radius: 8px; margin-bottom: 14px;
+    border: 1px solid var(--line);
+  }
+  .feedback-box.correct { background: #edfaed; border-color: #3a9a3a; }
+  .feedback-box.wrong   { background: #fef0f0; border-color: var(--red); }
+  .feedback-box.timeout { background: #fef8ed; border-color: #c4952a; }
+  .fb-verdict { font-weight: 700; font-size: 15px; margin-bottom: 4px; }
+  .fb-name    { font-size: 13px; color: var(--ink); }
+  .fb-name a  { color: var(--red); font-weight: 600; text-decoration: none; }
+  .fb-name a:hover { text-decoration: underline; }
+
+  /* ── action buttons ── */
+  .action-row { display: flex; gap: 8px; flex-wrap: wrap; margin-bottom: 10px; }
+  .next-btn {
+    padding: 10px 20px; background: var(--ink); color: #fff; border: none;
+    border-radius: 7px; cursor: pointer; font-family: var(--body); font-size: 13px;
+    font-weight: 600;
+  }
+  .next-btn:hover { background: #2a2a30; }
+  .skip-btn {
+    padding: 10px 16px; background: none; border: 1px solid var(--line);
+    border-radius: 7px; cursor: pointer; font-family: var(--body); font-size: 13px;
+    color: var(--dim);
+  }
+  .skip-btn:hover { border-color: var(--dim); color: var(--ink); }
+
+  /* ── end screen ── */
+  .end-box { text-align: center; padding: 32px 16px; }
+  .end-score { font-size: 56px; font-weight: 800; font-family: var(--mono); color: var(--ink);
+    line-height: 1; margin-bottom: 8px; }
+  .end-label { font-size: 11px; font-weight: 600; letter-spacing: .06em;
+    text-transform: uppercase; color: var(--dim); margin-bottom: 6px; }
+  .end-streak { font-size: 16px; color: var(--dim); margin-bottom: 24px; }
+  .end-share  { margin-bottom: 20px; }
+  .share-text {
+    font-family: var(--mono); font-size: 12px; background: var(--bg);
+    border: 1px solid var(--line); border-radius: 6px; padding: 10px 12px;
+    white-space: pre-wrap; text-align: left; margin-bottom: 8px; word-break: break-all;
+    max-width: 380px; margin-left: auto; margin-right: auto;
+  }
+  .copy-btn {
+    padding: 8px 16px; background: var(--surface); border: 1px solid var(--line);
+    border-radius: 6px; cursor: pointer; font-family: var(--body); font-size: 12px;
+    color: var(--dim); transition: all .15s;
+  }
+  .copy-btn.copied { background: #edfaed; border-color: #3a9a3a; color: #1a6e1a; }
+  .play-again {
+    display: inline-block; padding: 11px 24px; background: var(--red); color: #fff;
+    border: none; border-radius: 7px; cursor: pointer; font-family: var(--body);
+    font-size: 14px; font-weight: 700; margin-top: 4px;
+  }
+  .play-again:hover { background: #c20500; }
+
+  /* ── difficulty row ── */
+  .diff-row { display: flex; align-items: center; gap: 8px; margin-bottom: 18px;
+    font-size: 12px; color: var(--dim); }
+  .diff-btn {
+    padding: 4px 10px; border: 1px solid var(--line); border-radius: 20px;
+    background: var(--surface); cursor: pointer; font-family: var(--body);
+    font-size: 12px; color: var(--dim); transition: all .15s;
+  }
+  .diff-btn.active { border-color: var(--ink); background: var(--ink); color: #fff; }
+
+  /* ── daily meta ── */
+  .daily-meta { font-size: 12px; color: var(--dim); margin-bottom: 10px; }
+
+  /* ── back btn ── */
+  .back-btn {
+    display: inline-flex; align-items: center; gap: 4px; font-size: 12px;
+    color: var(--dim); background: none; border: none; cursor: pointer;
+    padding: 0; margin-bottom: 16px; font-family: var(--body);
+  }
+  .back-btn:hover { color: var(--ink); }
+
+  [hidden] { display: none !important; }
+</style>
+
+<div class="trivia-wrap">
+
+  <!-- Landing -->
+  <div id="landing">
+    <h1 class="trivia-h1">Guess the Driver</h1>
+    <p class="trivia-sub">Identify the F1 driver from their career team progression</p>
+    <div class="mode-grid">
+      <button class="mode-btn" id="btn-arcade">
+        <span class="mb-title">⏱ Arcade</span>
+        <span class="mb-desc">Multiple choice · 10s timer · score decays · one wrong ends the run</span>
+      </button>
+      <button class="mode-btn" id="btn-daily">
+        <span class="mb-title">📅 Daily Challenge</span>
+        <span class="mb-desc">Same chain for everyone today · shareable result</span>
+      </button>
+      <button class="mode-btn" id="btn-casual">
+        <span class="mb-title">💬 Casual</span>
+        <span class="mb-desc">Free-text · untimed · guess and learn at your own pace</span>
+      </button>
+    </div>
+  </div>
+
+  <!-- Game -->
+  <div id="game" hidden>
+    <button class="back-btn" id="back-btn">← Back</button>
+    <div class="game-header">
+      <span class="game-label" id="mode-label">Arcade</span>
+      <span class="score-chip" id="score-chip">
+        Score: <b id="score-val">0</b>&nbsp;·&nbsp;<span class="streak" id="streak-val">0</span> ✓
+      </span>
+    </div>
+
+    <div class="diff-row" id="diff-row">
+      Difficulty:
+      <button class="diff-btn active" id="diff-famous">Famous</button>
+      <button class="diff-btn" id="diff-deep">Deep cut</button>
+    </div>
+
+    <div class="chain-box">
+      <div class="chain-q">Who drove for…</div>
+      <div class="chain-links" id="chain-links"></div>
+    </div>
+
+    <div class="timer-wrap" id="timer-wrap" hidden>
+      <div class="timer-row">
+        <span class="timer-pts" id="timer-pts">+1000</span>
+        <span class="timer-sec" id="timer-sec">10.0s</span>
+      </div>
+      <div class="timer-track"><div class="timer-fill" id="timer-fill"></div></div>
+    </div>
+
+    <div class="mc-grid" id="mc-grid" hidden></div>
+
+    <div class="ft-wrap" id="ft-wrap" hidden>
+      <input class="ft-in" id="ft-in" type="text"
+        placeholder="Type a driver name…" autocomplete="off" spellcheck="false" />
+      <div class="ft-suggest" id="ft-suggest" hidden></div>
+      <p class="ft-hint">Surname or full name — pick from the dropdown</p>
+    </div>
+
+    <div class="daily-meta" id="daily-meta" hidden></div>
+
+    <div class="feedback-box" id="feedback" hidden>
+      <div class="fb-verdict" id="fb-verdict"></div>
+      <div class="fb-name" id="fb-name"></div>
+    </div>
+
+    <div class="action-row" id="action-row" hidden>
+      <button class="next-btn" id="next-btn">Next chain →</button>
+      <button class="skip-btn" id="skip-btn">Skip</button>
+    </div>
+  </div>
+
+  <!-- End screen -->
+  <div id="endscreen" hidden>
+    <div class="end-box">
+      <div class="end-label" id="end-label">Final Score</div>
+      <div class="end-score" id="end-score">0</div>
+      <div class="end-streak" id="end-streak"></div>
+      <div class="end-share" id="end-share" hidden>
+        <div class="share-text" id="share-text"></div>
+        <button class="copy-btn" id="copy-btn">Copy result</button>
+      </div>
+      <button class="play-again" id="play-again">Play again</button>
+    </div>
+  </div>
+
+</div>
+
+<script is:inline>
+(function () {
+  // ── State ──────────────────────────────────────────────────────────────────
+  var MODE = null;
+  var DIFF = 'famous';
+  var triviaData = null;
+  var pool = [];
+  var used = new Set();
+  var currentQ = null;
+  var score = 0;
+  var streak = 0;
+  var timerRAF = null;
+  var timerStart = 0;
+  var TIMER_MS = 10000;
+  var answered = false;
+  var dailyDriver = null;
+  var dailyDecoys = [];
+
+  // ── DOM refs ───────────────────────────────────────────────────────────────
+  var landing   = document.getElementById('landing');
+  var game      = document.getElementById('game');
+  var endscreen = document.getElementById('endscreen');
+  var backBtn   = document.getElementById('back-btn');
+  var modeLabel = document.getElementById('mode-label');
+  var scoreVal  = document.getElementById('score-val');
+  var streakVal = document.getElementById('streak-val');
+  var diffRow   = document.getElementById('diff-row');
+  var diffFamous = document.getElementById('diff-famous');
+  var diffDeep  = document.getElementById('diff-deep');
+  var chainLinks = document.getElementById('chain-links');
+  var timerWrap = document.getElementById('timer-wrap');
+  var timerPts  = document.getElementById('timer-pts');
+  var timerSec  = document.getElementById('timer-sec');
+  var timerFill = document.getElementById('timer-fill');
+  var mcGrid    = document.getElementById('mc-grid');
+  var ftWrap    = document.getElementById('ft-wrap');
+  var ftIn      = document.getElementById('ft-in');
+  var ftSuggest = document.getElementById('ft-suggest');
+  var feedback  = document.getElementById('feedback');
+  var fbVerdict = document.getElementById('fb-verdict');
+  var fbName    = document.getElementById('fb-name');
+  var dailyMeta = document.getElementById('daily-meta');
+  var actionRow = document.getElementById('action-row');
+  var nextBtn   = document.getElementById('next-btn');
+  var skipBtn   = document.getElementById('skip-btn');
+  var endLabel  = document.getElementById('end-label');
+  var endScore  = document.getElementById('end-score');
+  var endStreak = document.getElementById('end-streak');
+  var endShare  = document.getElementById('end-share');
+  var shareText = document.getElementById('share-text');
+  var copyBtn   = document.getElementById('copy-btn');
+  var playAgain = document.getElementById('play-again');
+
+  // ── Mode buttons ───────────────────────────────────────────────────────────
+  document.getElementById('btn-arcade').addEventListener('click', function () { startMode('arcade'); });
+  document.getElementById('btn-daily').addEventListener('click', function () { startMode('daily'); });
+  document.getElementById('btn-casual').addEventListener('click', function () { startMode('casual'); });
+
+  backBtn.addEventListener('click', function () {
+    stopTimer();
+    landing.hidden = false; game.hidden = true; endscreen.hidden = true;
+    reset();
+  });
+
+  playAgain.addEventListener('click', function () {
+    endscreen.hidden = true; landing.hidden = false; reset();
+  });
+
+  // ── Difficulty ─────────────────────────────────────────────────────────────
+  diffFamous.addEventListener('click', function () {
+    DIFF = 'famous'; diffFamous.classList.add('active'); diffDeep.classList.remove('active');
+    if (triviaData) buildPool();
+  });
+  diffDeep.addEventListener('click', function () {
+    DIFF = 'deepcut'; diffDeep.classList.add('active'); diffFamous.classList.remove('active');
+    if (triviaData) buildPool();
+  });
+
+  // ── Data loading ───────────────────────────────────────────────────────────
+  async function loadData() {
+    if (triviaData) return;
+    var res = await fetch('/trivia.json');
+    triviaData = await res.json();
+  }
+
+  function buildPool() {
+    pool = DIFF === 'famous'
+      ? triviaData.drivers.filter(function (d) { return d.tier === 'famous'; })
+      : triviaData.drivers.slice();
+    used.clear();
+  }
+
+  // ── Seeded RNG (daily determinism) ─────────────────────────────────────────
+  function seededRNG(seed) {
+    var s = seed >>> 0;
+    return function () {
+      s = (Math.imul(s, 1664525) + 1013904223) >>> 0;
+      return s / 4294967296;
+    };
+  }
+
+  function seededShuffle(arr, rng) {
+    var a = arr.slice();
+    for (var i = a.length - 1; i > 0; i--) {
+      var j = Math.floor(rng() * (i + 1));
+      var tmp = a[i]; a[i] = a[j]; a[j] = tmp;
+    }
+    return a;
+  }
+
+  function dayIndex() {
+    var epoch = Date.UTC(2025, 0, 1);
+    var d = new Date();
+    var now = Date.UTC(d.getFullYear(), d.getMonth(), d.getDate());
+    return Math.floor((now - epoch) / 86400000);
+  }
+
+  // ── Distractor generation ──────────────────────────────────────────────────
+  function pickDecoys(answer, sourcePool, rng) {
+    var answerKey = answer.chainIds.join(',');
+    var candidates = sourcePool
+      .filter(function (d) {
+        return d.id !== answer.id && d.chainIds.join(',') !== answerKey;
+      })
+      .map(function (d) {
+        var shared = 0;
+        for (var i = 0; i < d.chainIds.length; i++) {
+          if (answer.chainIds.indexOf(d.chainIds[i]) >= 0) shared++;
+        }
+        var eraOverlap = Math.max(0, Math.min(d.ly, answer.ly) - Math.max(d.fy, answer.fy) + 1);
+        var lenSim = Math.max(0, 5 - Math.abs(d.chain.length - answer.chain.length));
+        return { d: d, score: shared * 100 + eraOverlap * 5 + lenSim };
+      });
+
+    candidates.sort(function (a, b) { return b.score - a.score; });
+    var top = candidates.slice(0, 20).map(function (x) { return x.d; });
+
+    if (rng) {
+      top = seededShuffle(top, rng);
+    } else {
+      // Random shuffle for arcade/casual
+      for (var i = top.length - 1; i > 0; i--) {
+        var j = Math.floor(Math.random() * (i + 1));
+        var tmp = top[i]; top[i] = top[j]; top[j] = tmp;
+      }
+    }
+    return top.slice(0, 3);
+  }
+
+  // ── Chain rendering ────────────────────────────────────────────────────────
+  function renderChain(driver) {
+    chainLinks.innerHTML = '';
+    driver.chain.forEach(function (team, i) {
+      if (i > 0) {
+        var arr = document.createElement('span');
+        arr.className = 'chain-arr'; arr.textContent = '→';
+        chainLinks.appendChild(arr);
+      }
+      var t = document.createElement('span');
+      t.className = 'chain-team'; t.textContent = team;
+      chainLinks.appendChild(t);
+    });
+  }
+
+  // ── Start mode ─────────────────────────────────────────────────────────────
+  async function startMode(m) {
+    MODE = m;
+    reset();
+    landing.hidden = true; game.hidden = false; endscreen.hidden = true;
+
+    modeLabel.textContent = m === 'arcade' ? '⏱ Arcade' : m === 'daily' ? '📅 Daily' : '💬 Casual';
+    diffRow.hidden = (m === 'daily');
+    timerWrap.hidden = (m !== 'arcade');
+
+    try {
+      await loadData();
+    } catch (e) {
+      chainLinks.textContent = 'Failed to load game data. Please refresh.';
+      return;
+    }
+
+    buildPool();
+
+    if (m === 'daily') {
+      setupDaily();
+    } else {
+      showNextQuestion();
+    }
+  }
+
+  // ── Daily setup ────────────────────────────────────────────────────────────
+  function setupDaily() {
+    var idx = dayIndex();
+    var dailyPool = triviaData.drivers.filter(function (d) { return d.tier === 'famous'; });
+    var shuffled = seededShuffle(dailyPool, seededRNG(idx * 31337));
+    dailyDriver = shuffled[idx % shuffled.length];
+    dailyDecoys = pickDecoys(dailyDriver, dailyPool, seededRNG(idx * 7919 + 999));
+
+    var today = new Date();
+    dailyMeta.hidden = false;
+    dailyMeta.textContent = 'Daily #' + idx + ' · ' +
+      today.toLocaleDateString('en-GB', { month: 'short', day: 'numeric', year: 'numeric' });
+
+    renderChain(dailyDriver);
+    feedback.hidden = true;
+    actionRow.hidden = true;
+    answered = false;
+    showMC(dailyDriver, dailyDecoys);
+  }
+
+  // ── Next question (arcade / casual) ────────────────────────────────────────
+  function showNextQuestion() {
+    var available = pool.filter(function (d) { return !used.has(d.id); });
+    if (!available.length) { used.clear(); available = pool.slice(); }
+
+    var driver = available[Math.floor(Math.random() * available.length)];
+    used.add(driver.id);
+
+    var decoys = pickDecoys(driver, pool, null);
+    currentQ = { driver: driver, decoys: decoys };
+
+    renderChain(driver);
+    feedback.hidden = true;
+    actionRow.hidden = true;
+    dailyMeta.hidden = true;
+    answered = false;
+
+    if (MODE === 'casual') {
+      mcGrid.hidden = true; ftWrap.hidden = false;
+      ftIn.value = ''; ftSuggest.hidden = true;
+      setTimeout(function () { ftIn.focus(); }, 50);
+    } else {
+      showMC(driver, decoys);
+      if (MODE === 'arcade') startTimer();
+    }
+  }
+
+  // ── MC rendering ───────────────────────────────────────────────────────────
+  function showMC(driver, decoys) {
+    var options = [driver].concat(decoys).sort(function () { return Math.random() - 0.5; });
+    mcGrid.hidden = false; ftWrap.hidden = true;
+    mcGrid.innerHTML = '';
+    options.forEach(function (d) {
+      var btn = document.createElement('button');
+      btn.className = 'mc-btn'; btn.textContent = d.name;
+      btn.addEventListener('click', function () { handleMCAnswer(d, driver); });
+      mcGrid.appendChild(btn);
+    });
+  }
+
+  // ── MC answer ──────────────────────────────────────────────────────────────
+  function handleMCAnswer(chosen, correctDriver) {
+    if (answered) return;
+    answered = true;
+    stopTimer();
+
+    var correct = chosen.id === correctDriver.id;
+
+    Array.from(mcGrid.children).forEach(function (b) {
+      b.disabled = true;
+      if (b.textContent === correctDriver.name) b.classList.add('correct');
+      else if (b.textContent === chosen.name && !correct) b.classList.add('wrong');
+    });
+
+    if (correct) {
+      var pts = 0;
+      if (MODE === 'arcade') {
+        var elapsed = Date.now() - timerStart;
+        pts = Math.round(100 + 900 * Math.max(0, 1 - elapsed / TIMER_MS));
+      }
+      score += pts; streak++;
+      updateScoreDisplay();
+      showFeedback('correct', correctDriver, pts);
+
+      if (MODE === 'daily') {
+        showDailyEnd(true, correctDriver);
+      } else {
+        actionRow.hidden = false; nextBtn.textContent = 'Next chain →';
+        skipBtn.hidden = true; nextBtn.onclick = null;
+      }
+    } else {
+      showFeedback('wrong', correctDriver, 0);
+      if (MODE === 'arcade') {
+        actionRow.hidden = false; nextBtn.textContent = 'View score';
+        skipBtn.hidden = true; nextBtn.onclick = endRun;
+      } else if (MODE === 'daily') {
+        showDailyEnd(false, correctDriver);
+      } else {
+        actionRow.hidden = false; nextBtn.textContent = 'Next chain →';
+        skipBtn.hidden = true; nextBtn.onclick = null;
+      }
+    }
+  }
+
+  // ── Feedback ───────────────────────────────────────────────────────────────
+  function showFeedback(type, driver, pts) {
+    feedback.className = 'feedback-box ' + type;
+    fbVerdict.textContent = type === 'correct'
+      ? (pts ? '✓ Correct! +' + pts + ' pts' : '✓ Correct!')
+      : type === 'timeout' ? '⏱ Time\'s up!'
+      : '✗ Wrong';
+    fbName.innerHTML = 'It was <a href="/drivers/' + driver.id + '">' + driver.name + '</a>';
+    feedback.hidden = false;
+  }
+
+  // ── Arcade timer ───────────────────────────────────────────────────────────
+  function startTimer() {
+    timerStart = Date.now();
+    timerFill.style.width = '100%';
+
+    function tick() {
+      var elapsed = Date.now() - timerStart;
+      var remaining = Math.max(0, TIMER_MS - elapsed);
+      var pct = remaining / TIMER_MS;
+      var pts = Math.round(100 + 900 * pct);
+
+      timerFill.style.width = (pct * 100) + '%';
+      timerFill.style.background = pct > 0.4 ? 'var(--red)' : '#c4952a';
+      timerPts.textContent = '+' + pts;
+      timerSec.textContent = (remaining / 1000).toFixed(1) + 's';
+
+      if (elapsed >= TIMER_MS) { handleTimeout(currentQ.driver); return; }
+      timerRAF = requestAnimationFrame(tick);
+    }
+    timerRAF = requestAnimationFrame(tick);
+  }
+
+  function stopTimer() {
+    if (timerRAF) { cancelAnimationFrame(timerRAF); timerRAF = null; }
+  }
+
+  function handleTimeout(driver) {
+    if (answered) return;
+    answered = true;
+    Array.from(mcGrid.children).forEach(function (b) {
+      b.disabled = true;
+      if (b.textContent === driver.name) b.classList.add('correct');
+    });
+    showFeedback('timeout', driver, 0);
+    actionRow.hidden = false; nextBtn.textContent = 'View score';
+    skipBtn.hidden = true; nextBtn.onclick = endRun;
+  }
+
+  // ── Score display ──────────────────────────────────────────────────────────
+  function updateScoreDisplay() {
+    scoreVal.textContent = score;
+    streakVal.textContent = streak;
+  }
+
+  // ── End run ────────────────────────────────────────────────────────────────
+  function endRun() {
+    stopTimer();
+    game.hidden = true; endscreen.hidden = false;
+    endLabel.textContent = 'Arcade Score';
+    endScore.textContent = score;
+    endStreak.textContent = streak + ' chain' + (streak !== 1 ? 's' : '') + ' correct';
+    endShare.hidden = true;
+  }
+
+  // ── Daily end ──────────────────────────────────────────────────────────────
+  function showDailyEnd(won, driver) {
+    var idx = dayIndex();
+    var today = new Date();
+    var dateStr = today.toLocaleDateString('en-GB', { month: 'short', day: 'numeric', year: 'numeric' });
+    var chain = driver.chain.join(' → ');
+    var text = 'F1 Daily Chain #' + idx + ' (' + dateStr + ')\n' +
+      chain + '\n' + (won ? '✓ Got it!' : '✗ Missed it') + '\nf1delta.com/trivia';
+
+    shareText.textContent = text;
+
+    setTimeout(function () {
+      game.hidden = true; endscreen.hidden = false;
+      endLabel.textContent = '📅 Daily #' + idx;
+      endScore.textContent = won ? '✓' : '✗';
+      endStreak.textContent = won ? 'Correct!' : 'Better luck tomorrow';
+      endShare.hidden = false;
+    }, 1200);
+  }
+
+  copyBtn.addEventListener('click', function () {
+    navigator.clipboard.writeText(shareText.textContent).then(function () {
+      copyBtn.textContent = 'Copied!'; copyBtn.classList.add('copied');
+      setTimeout(function () {
+        copyBtn.textContent = 'Copy result'; copyBtn.classList.remove('copied');
+      }, 2000);
+    });
+  });
+
+  // ── Next/Skip ──────────────────────────────────────────────────────────────
+  nextBtn.addEventListener('click', function () {
+    if (nextBtn.onclick) return;
+    if (MODE === 'daily') {
+      game.hidden = true; endscreen.hidden = false;
+    } else {
+      showNextQuestion();
+    }
+  });
+
+  skipBtn.addEventListener('click', function () {
+    if (answered || !currentQ) return;
+    answered = true;
+    showFeedback('wrong', currentQ.driver, 0);
+    actionRow.hidden = false; nextBtn.textContent = 'Next chain →';
+    skipBtn.hidden = true; nextBtn.onclick = null;
+  });
+
+  // ── Free-text (casual mode) ────────────────────────────────────────────────
+  var ftActiveIdx = -1;
+
+  ftIn.addEventListener('input', function () {
+    var q = ftIn.value.trim().toLowerCase();
+    if (!q) { ftSuggest.hidden = true; return; }
+
+    var matches = pool
+      .filter(function (d) {
+        var n = d.name.toLowerCase();
+        return n.startsWith(q) || n.split(/\s+/).some(function (p) { return p.startsWith(q); });
+      })
+      .slice(0, 8);
+
+    renderSuggestions(matches);
+  });
+
+  function renderSuggestions(matches) {
+    ftSuggest._matches = matches;
+    ftActiveIdx = -1;
+    if (!matches.length) { ftSuggest.hidden = true; return; }
+    ftSuggest.innerHTML = '';
+    matches.forEach(function (d) {
+      var opt = document.createElement('div');
+      opt.className = 'ft-opt'; opt.textContent = d.name;
+      opt.addEventListener('mousedown', function (e) {
+        e.preventDefault(); selectFTDriver(d);
+      });
+      ftSuggest.appendChild(opt);
+    });
+    ftSuggest.hidden = false;
+  }
+
+  ftIn.addEventListener('keydown', function (e) {
+    var opts = Array.from(ftSuggest.querySelectorAll('.ft-opt'));
+    if (e.key === 'ArrowDown') {
+      e.preventDefault();
+      ftActiveIdx = Math.min(ftActiveIdx + 1, opts.length - 1);
+      opts.forEach(function (o, i) { o.classList.toggle('active', i === ftActiveIdx); });
+    } else if (e.key === 'ArrowUp') {
+      e.preventDefault();
+      ftActiveIdx = Math.max(ftActiveIdx - 1, -1);
+      opts.forEach(function (o, i) { o.classList.toggle('active', i === ftActiveIdx); });
+    } else if (e.key === 'Enter') {
+      e.preventDefault();
+      var matches = ftSuggest._matches || [];
+      if (ftActiveIdx >= 0 && matches[ftActiveIdx]) {
+        selectFTDriver(matches[ftActiveIdx]);
+      } else if (matches.length === 1) {
+        selectFTDriver(matches[0]);
+      } else {
+        // Ambiguous — keep dropdown visible
+        ftSuggest.hidden = false;
+      }
+    } else if (e.key === 'Escape') {
+      ftSuggest.hidden = true; ftActiveIdx = -1;
+    }
+  });
+
+  ftIn.addEventListener('blur', function () {
+    setTimeout(function () { ftSuggest.hidden = true; ftActiveIdx = -1; }, 160);
+  });
+
+  function selectFTDriver(d) {
+    ftSuggest.hidden = true;
+    ftIn.value = d.name;
+    if (!currentQ || answered) return;
+    answered = true;
+    var correct = d.id === currentQ.driver.id;
+    if (correct) streak++;
+    updateScoreDisplay();
+    showFeedback(correct ? 'correct' : 'wrong', currentQ.driver, 0);
+    actionRow.hidden = false; nextBtn.textContent = 'Next chain →';
+    skipBtn.hidden = true; nextBtn.onclick = null;
+  }
+
+  // ── Reset ──────────────────────────────────────────────────────────────────
+  function reset() {
+    stopTimer();
+    score = 0; streak = 0; answered = false; currentQ = null;
+    used.clear();
+    updateScoreDisplay();
+    feedback.hidden = true; actionRow.hidden = true;
+    mcGrid.hidden = true; ftWrap.hidden = true;
+    timerWrap.hidden = true; dailyMeta.hidden = true;
+    nextBtn.onclick = null; skipBtn.hidden = false;
+    endShare.hidden = true;
+  }
+
+})();
+</script>
+
+</BaseLayout>
