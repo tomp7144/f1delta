@@ -16,13 +16,11 @@
  * shows a stale team mapping.
  */
 
-import { mkdir, writeFile } from "node:fs/promises";
+import { mkdir, writeFile, readFile } from "node:fs/promises";
 import path from "node:path";
 
 const BASE = "https://api.openf1.org/v1";
 const OUT = path.resolve("./public/latest-race.json");
-
-const COMPOUND_MAP = { SOFT: "S", MEDIUM: "M", HARD: "H", INTERMEDIATE: "I", WET: "W" };
 
 // ---------- pure transforms (exported for tests) ----------
 
@@ -53,32 +51,20 @@ function formatGap(r, winnerLaps) {
   return typeof r.gap_to_leader === "number" ? `+${r.gap_to_leader.toFixed(3)}` : String(r.gap_to_leader);
 }
 
-/** Build the tower rows from OpenF1 session_result + drivers (+ optional stints). */
-export function buildTower(results, drivers, stints = []) {
+/** Build the tower rows from OpenF1 session_result + drivers. */
+export function buildTower(results, drivers) {
   const drv = new Map(drivers.map((d) => [d.driver_number, d]));
-
-  // final compound = compound of each driver's last stint
-  const lastCompound = new Map();
-  for (const st of stints) {
-    const prev = lastCompound.get(st.driver_number);
-    if (!prev || (st.lap_end ?? st.stint_number ?? 0) >= (prev.lap_end ?? prev.stint_number ?? 0)) {
-      lastCompound.set(st.driver_number, st);
-    }
-  }
-
   const winnerLaps = Math.max(...results.map((r) => r.number_of_laps ?? 0), 0);
 
   return results
     .map((r) => {
       const d = drv.get(r.driver_number) ?? {};
-      const comp = lastCompound.get(r.driver_number)?.compound;
       return {
         position: r.position ?? null,
         code: d.name_acronym ?? String(r.driver_number),
         driverNumber: r.driver_number,
         teamName: d.team_name ?? null,
         teamColour: d.team_colour ? `#${d.team_colour}` : null,
-        compound: comp ? (COMPOUND_MAP[comp] ?? comp[0]) : null,
         points: r.points ?? 0,
         gap: formatGap(r, winnerLaps),
         leader: r.position === 1,
@@ -99,35 +85,56 @@ async function getJSON(url) {
 async function main() {
   const year = Number(process.argv[2]) || new Date().getFullYear();
 
-  // try this year, then fall back one year (handles the pre-season gap)
-  let sessions = await getJSON(`${BASE}/sessions?year=${year}&session_name=Race`);
-  let race = pickLatestRace(sessions);
-  if (!race) {
-    console.warn(`No completed race in ${year}; trying ${year - 1}.`);
-    sessions = await getJSON(`${BASE}/sessions?year=${year - 1}&session_name=Race`);
+  // Read existing file so we can merge-over: never replace a real value with null/empty.
+  let existing = null;
+  try {
+    existing = JSON.parse(await readFile(OUT, "utf8"));
+  } catch {}
+
+  // Try this year, then fall back one year (handles the pre-season gap).
+  // Wrap in try-catch: if OpenF1 is down, keep existing data and exit cleanly.
+  let sessions, race;
+  try {
+    sessions = await getJSON(`${BASE}/sessions?year=${year}&session_name=Race`);
     race = pickLatestRace(sessions);
+    if (!race) {
+      console.warn(`No completed race in ${year}; trying ${year - 1}.`);
+      sessions = await getJSON(`${BASE}/sessions?year=${year - 1}&session_name=Race`);
+      race = pickLatestRace(sessions);
+    }
+  } catch (err) {
+    console.warn(`OpenF1 sessions fetch failed: ${err.message}. Keeping existing data.`);
+    process.exit(0);
   }
   if (!race) {
     console.warn("No completed race found. Nothing written.");
-    process.exit(0); // graceful — let the rest of the cron continue
+    process.exit(0);
   }
 
   const sk = race.session_key;
-  const [results, drivers, stints, meetings] = await Promise.all([
-    getJSON(`${BASE}/session_result?session_key=${sk}`),
-    getJSON(`${BASE}/drivers?session_key=${sk}`),
-    getJSON(`${BASE}/stints?session_key=${sk}`).catch(() => []), // compound is a nice-to-have
-    getJSON(`${BASE}/meetings?meeting_key=${race.meeting_key}`).catch(() => []),
-  ]);
+  let results, drivers, meetings;
+  try {
+    [results, drivers, meetings] = await Promise.all([
+      getJSON(`${BASE}/session_result?session_key=${sk}`),
+      getJSON(`${BASE}/drivers?session_key=${sk}`),
+      getJSON(`${BASE}/meetings?meeting_key=${race.meeting_key}`).catch(() => []),
+    ]);
+  } catch (err) {
+    console.warn(`OpenF1 data fetch failed: ${err.message}. Keeping existing data.`);
+    process.exit(0);
+  }
 
   if (!Array.isArray(results) || results.length === 0) {
     console.warn(`session_result for ${sk} is empty — race may not be classified yet. Nothing written.`);
-    process.exit(0); // graceful — let the rest of the cron continue
+    process.exit(0);
   }
+
+  // Null-guard: prefer the meetings API name; if absent, keep last-committed name; last resort: country fallback.
+  const sessionName = meetings[0]?.meeting_name || existing?.session?.name || `${race.country_name} GP`;
 
   const out = {
     session: {
-      name: meetings[0]?.meeting_name ?? `${race.country_name} GP`,
+      name: sessionName,
       country: race.country_name,
       round: roundFor(sessions, race),
       date: race.date_start?.slice(0, 10) ?? null,
@@ -135,7 +142,7 @@ async function main() {
       meetingKey: race.meeting_key,
       status: "FINISHED",
     },
-    tower: buildTower(results, drivers, stints),
+    tower: buildTower(results, drivers),
   };
 
   await mkdir(path.dirname(OUT), { recursive: true });

@@ -7,9 +7,9 @@ on:
     # Covers FP1/FP2/FP3/Quali/Race + result window across all race-hosting time zones.
     # Step 1 diff-gate means a no-change run exits without committing — no deploy cost.
     - cron: "0 6,8,10,12,14,16,18,20,22 * * 5,6,0"
-    # Mon–Thu: once daily at noon UTC.
-    # Catches mid-week events: F1DB releases, DSQ verdicts, late standings corrections.
-    - cron: "0 12 * * 1,2,3,4"
+    # Wednesday: mid-week checkpoint for DSQ verdicts, penalties, F1DB updates.
+    # (Sunday is already covered by the Fri-Sun race-weekend burst above.)
+    - cron: "0 12 * * 3"
   workflow_dispatch: {}   # manual trigger from the GitHub Actions tab — use for urgent rebuilds
 
 # allow the action to commit the refreshed file back to the repo
@@ -59,8 +59,10 @@ jobs:
           node bake-fantasy-history.mjs
 
       - name: Bake latest race from OpenF1
-        continue-on-error: true
-        run: node bake-latest.mjs
+        run: |
+          node bake-latest.mjs || {
+            echo "::error title=bake-latest failed::bake-latest.mjs exited with error — check step output above"
+          }
 
       - name: Bake standings + grid map
         run: node bake-standings.mjs && node gen-grid-map.mjs
