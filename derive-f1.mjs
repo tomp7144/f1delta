@@ -76,16 +76,16 @@ async function loadJSON(name) {
 
 function newSeasonH2H(year) {
   return {
-    year, races: 0, excluded: 0,
+    year,
     bothQualified: 0, qualiAhead: 0, qualiBehind: 0,
-    raceAhead: 0, raceBehind: 0,
-    dnfSelf: 0, dnfMate: 0,
     pointsSelf: 0, pointsMate: 0,
-    // excl_* repartition `excluded` for client-side toggle variants (no refetch)
-    excl_selfWinDNF: 0, // both classified (posN != null), self ahead, but ≥1 retired
-    excl_mateWinDNF: 0, // both classified, mate ahead, but ≥1 retired
-    excl_tiedDNF: 0,    // both classified, same posN (shared car)
-    excl_dns: 0,         // ≥1 unclassified (posN == null) — DNS/collision DNF/DSQ
+    dnfSelf: 0, dnfMate: 0,
+    // Default: both classified (positionNumber != null); lower position wins
+    races: 0, raceAhead: 0, raceBehind: 0,
+    // +DNF delta: rounds both started but ≥1 unclassified
+    dnfRaces: 0, dnfAhead: 0, dnfBehind: 0,
+    // +DNS delta: rounds ≥1 didn't start (DNS/DNQ/DNP)
+    dnsRounds: 0, dnsAhead: 0, dnsBehind: 0,
   };
 }
 
@@ -210,26 +210,28 @@ async function main() {
           const seasons = get(byMate, mate.driverId, () => new Map());
           const s = get(seasons, year, () => newSeasonH2H(year));
 
-          const selfFinished = self.positionNumber != null && self.reasonRetired == null;
-          const mateFinished = mate.positionNumber != null && mate.reasonRetired == null;
-          // shared-car entries give identical positionNumbers — not comparable
-          const comparable = selfFinished && mateFinished
-            && self.positionNumber !== mate.positionNumber;
-          if (comparable) {
+          const selfClass = self.positionNumber != null;
+          const mateClass = mate.positionNumber != null;
+          const selfDNS = NOT_START.has(self.positionText);
+          const mateDNS = NOT_START.has(mate.positionText);
+
+          if (selfClass && mateClass && self.positionNumber !== mate.positionNumber) {
+            // Default: both classified, distinct positions (not a shared-car tie)
             s.races++;
             if (self.positionNumber < mate.positionNumber) s.raceAhead++;
-            else if (self.positionNumber > mate.positionNumber) s.raceBehind++;
+            else s.raceBehind++;
+          } else if (!selfDNS && !mateDNS) {
+            // +DNF: both started, but ≥1 unclassified (or tied shared-car)
+            s.dnfRaces++;
+            if (selfClass && !mateClass)      s.dnfAhead++;
+            else if (!selfClass && mateClass) s.dnfBehind++;
+            // else both unclassified or tied → dnfRaces++ but no win credited
           } else {
-            s.excluded++;
-            const sPos = self.positionNumber;
-            const mPos = mate.positionNumber;
-            if (sPos != null && mPos != null) {
-              if (sPos < mPos)      s.excl_selfWinDNF++;
-              else if (sPos > mPos) s.excl_mateWinDNF++;
-              else                  s.excl_tiedDNF++;
-            } else {
-              s.excl_dns++;
-            }
+            // +DNS: ≥1 didn't start this round
+            s.dnsRounds++;
+            if (!selfDNS && mateDNS)       s.dnsAhead++;
+            else if (selfDNS && !mateDNS)  s.dnsBehind++;
+            // else both DNS → tie
           }
 
           s.pointsSelf += self.points ?? 0;
@@ -292,23 +294,17 @@ async function main() {
       .map(([mateId, seasonsMap]) => {
         const seasons = [...seasonsMap.values()].sort((a, b) => a.year - b.year);
         const agg = seasons.reduce((a, s) => {
-          for (const k of ["races", "excluded", "bothQualified", "qualiAhead", "qualiBehind",
-            "raceAhead", "raceBehind", "dnfSelf", "dnfMate",
-            "pointsSelf", "pointsMate",
-            "excl_selfWinDNF", "excl_mateWinDNF", "excl_tiedDNF", "excl_dns"]) a[k] += s[k];
+          for (const k of ["races", "raceAhead", "raceBehind",
+            "dnfRaces", "dnfAhead", "dnfBehind",
+            "dnsRounds", "dnsAhead", "dnsBehind",
+            "bothQualified", "qualiAhead", "qualiBehind",
+            "dnfSelf", "dnfMate",
+            "pointsSelf", "pointsMate"]) a[k] += s[k];
           return a;
         }, newSeasonH2H(null));
         delete agg.year;
         agg.pointsSelf = round1(agg.pointsSelf);
         agg.pointsMate = round1(agg.pointsMate);
-        // Invariant: four buckets must exactly repartition excluded (Rule D1)
-        for (const [entry, label] of [...seasons.map((s) => [s, `${driverId} vs ${mateId} ${s.year}`]), [agg, `${driverId} vs ${mateId} agg`]]) {
-          const sub = entry.excl_selfWinDNF + entry.excl_mateWinDNF + entry.excl_tiedDNF + entry.excl_dns;
-          if (sub !== entry.excluded) {
-            console.error(`INVARIANT FAIL ${label}: excl_* sum=${sub} but excluded=${entry.excluded}`);
-            process.exit(1);
-          }
-        }
         return {
           teammateId: mateId,
           teammate: meta.get(mateId)?.name ?? mateId,
@@ -440,7 +436,7 @@ async function main() {
       // read from A's perspective (A = alphabetically first driver)
       const aIsFirst = a === driverId;
       const defaultRaces = (agg.raceAhead ?? 0) + (agg.raceBehind ?? 0);
-      const dnfComparable = (agg.excl_selfWinDNF ?? 0) + (agg.excl_mateWinDNF ?? 0);
+      const dnfComparable = agg.dnfRaces ?? 0;
       const totalComparable = defaultRaces + dnfComparable;
       if (totalComparable < 1) continue; // below inclusion floor
       pairingMap.set(slug, { slug, a, b, defaultRaces, dnfComparable, totalComparable });

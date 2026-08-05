@@ -95,20 +95,20 @@ const TEAM_COLOR: Record<string, string> = {
 };
 const ac = (tid: string) => TEAM_COLOR[tid] ?? "#9aa0ab";
 
-const hasExcl = (agg.excl_selfWinDNF + agg.excl_mateWinDNF + agg.excl_tiedDNF + agg.excl_dns) > 0;
+const hasExcl = (agg.dnfRaces ?? 0) + (agg.dnsRounds ?? 0) > 0;
 
-// Inline toggle data — aggregate + per-season for client JS recompute
+// Inline toggle data — pre-computed tallies, toggle just picks one
 const toggleData = {
   agg: {
     raceAhead: agg.raceAhead, raceBehind: agg.raceBehind, races: agg.races,
-    excl_selfWinDNF: agg.excl_selfWinDNF, excl_mateWinDNF: agg.excl_mateWinDNF,
-    excl_tiedDNF: agg.excl_tiedDNF, excl_dns: agg.excl_dns, excluded: agg.excluded,
+    dnfAhead: agg.dnfAhead, dnfBehind: agg.dnfBehind, dnfRaces: agg.dnfRaces,
+    dnsAhead: agg.dnsAhead, dnsBehind: agg.dnsBehind, dnsRounds: agg.dnsRounds,
   },
   seasons: (seasons as any[]).map(s => ({
     year: s.year,
     raceAhead: s.raceAhead, raceBehind: s.raceBehind, races: s.races,
-    excl_selfWinDNF: s.excl_selfWinDNF, excl_mateWinDNF: s.excl_mateWinDNF,
-    excl_tiedDNF: s.excl_tiedDNF, excl_dns: s.excl_dns, excluded: s.excluded,
+    dnfAhead: s.dnfAhead, dnfBehind: s.dnfBehind, dnfRaces: s.dnfRaces,
+    dnsAhead: s.dnsAhead, dnsBehind: s.dnsBehind, dnsRounds: s.dnsRounds,
   })),
 };
 
@@ -219,7 +219,7 @@ const desc  = `${aName} vs ${bName}: teammate head-to-head qualifying and race c
           <button class="tgl" data-mode="dnf">+DNF</button>
           <button class="tgl" data-mode="dns">+DNS</button>
         </div>
-        <span class="tgl-hint">+DNF counts classified retirements · +DNS adds all contested races</span>
+        <span class="tgl-hint">+DNF adds races ≥1 didn't classify · +DNS adds rounds ≥1 didn't start</span>
       </div>
     )}
 
@@ -257,8 +257,8 @@ const desc  = `${aName} vs ${bName}: teammate head-to-head qualifying and race c
                   <td class="td-h2">
                     <span class="sc h2h-s-score"
                       data-ra={s.raceAhead} data-rb={s.raceBehind} data-rc={s.races}
-                      data-esw={s.excl_selfWinDNF} data-emw={s.excl_mateWinDNF}
-                      data-etd={s.excl_tiedDNF} data-ed={s.excl_dns}>
+                      data-da={s.dnfAhead} data-db={s.dnfBehind} data-dr={s.dnfRaces}
+                      data-nsa={s.dnsAhead} data-nsb={s.dnsBehind} data-nsr={s.dnsRounds}>
                       {s.raceAhead > s.raceBehind
                         ? <><b>{s.raceAhead}</b>–{s.raceBehind}</>
                         : s.raceAhead < s.raceBehind
@@ -268,7 +268,8 @@ const desc  = `${aName} vs ${bName}: teammate head-to-head qualifying and race c
                     <span class="bar">
                       <i class="h2h-s-bar"
                         data-ra={s.raceAhead} data-rb={s.raceBehind}
-                        data-esw={s.excl_selfWinDNF} data-emw={s.excl_mateWinDNF}
+                        data-da={s.dnfAhead} data-db={s.dnfBehind}
+                        data-nsa={s.dnsAhead} data-nsb={s.dnsBehind}
                         style={`width:${srPct}%`}></i>
                     </span>
                   </td>
@@ -289,67 +290,65 @@ const desc  = `${aName} vs ${bName}: teammate head-to-head qualifying and race c
   </div>
 </BaseLayout>
 
-<script define:vars={{ toggleData }}>
-  function compute(entry, mode) {
-    const ra = entry.raceAhead, rb = entry.raceBehind, rc = entry.races;
-    const esw = entry.excl_selfWinDNF, emw = entry.excl_mateWinDNF;
-    const etd = entry.excl_tiedDNF, ed = entry.excl_dns;
-    let sw = ra, mw = rb, total = rc;
-    if (mode === "dnf" || mode === "dns") { sw = ra + esw; mw = rb + emw; total = rc + esw + emw; }
-    const contested = mode === "dns" ? total + etd + ed : total;
-    const pct = (sw + mw) > 0 ? Math.round(sw / (sw + mw) * 100) : 50;
-    return { sw, mw, total, contested, pct };
+<script define:vars={{ toggleData }} is:inline>
+  function tally(entry, mode) {
+    var sw = entry.raceAhead, mw = entry.raceBehind, total = entry.races;
+    if (mode === 'dnf' || mode === 'dns') {
+      sw += entry.dnfAhead; mw += entry.dnfBehind; total += entry.dnfRaces;
+    }
+    if (mode === 'dns') {
+      sw += entry.dnsAhead; mw += entry.dnsBehind; total += entry.dnsRounds;
+    }
+    var pct = (sw + mw) > 0 ? Math.round(sw / (sw + mw) * 100) : 50;
+    return { sw: sw, mw: mw, total: total, pct: pct };
   }
 
   function scoreHTML(sw, mw) {
-    if (sw > mw) return `<b>${sw}</b>–${mw}`;
-    if (mw > sw) return `${sw}–<b>${mw}</b>`;
-    return `${sw}–${mw}`;
+    if (sw > mw) return '<b>' + sw + '</b>–' + mw;
+    if (mw > sw) return sw + '–<b>' + mw + '</b>';
+    return sw + '–' + mw;
   }
 
   function update(mode) {
-    // Career race callout
-    const { sw, mw, total, contested, pct } = compute(toggleData.agg, mode);
-    const scoreEl = document.getElementById("h2h-race-score");
-    const barEl   = document.getElementById("h2h-race-bar");
-    const subEl   = document.getElementById("h2h-race-sub");
-    if (scoreEl) scoreEl.innerHTML = scoreHTML(sw, mw);
-    if (barEl)   barEl.style.width = pct + "%";
+    var t = tally(toggleData.agg, mode);
+    var scoreEl = document.getElementById('h2h-race-score');
+    var barEl   = document.getElementById('h2h-race-bar');
+    var subEl   = document.getElementById('h2h-race-sub');
+    if (scoreEl) scoreEl.innerHTML = scoreHTML(t.sw, t.mw);
+    if (barEl)   barEl.style.width = t.pct + '%';
     if (subEl) {
-      const excl = toggleData.agg.excluded - (sw - toggleData.agg.raceAhead) - (mw - toggleData.agg.raceBehind);
-      const base = `${total}r compared`;
-      const contStr = mode === "dns" && contested > total ? `, ${contested} contested` : "";
-      const exclStr = excl > 0 && mode !== "dns" ? `, ${excl} excl.` : "";
-      subEl.textContent = base + contStr + exclStr;
+      var agg = toggleData.agg;
+      var remaining = (agg.dnfRaces + agg.dnsRounds)
+        - (mode === 'dnf' ? agg.dnfRaces : 0)
+        - (mode === 'dns' ? agg.dnfRaces + agg.dnsRounds : 0);
+      subEl.textContent = t.total + 'r compared' + (remaining > 0 ? ', ' + remaining + ' excl.' : '');
     }
 
-    // Season rows
-    for (const sEl of document.querySelectorAll(".h2h-s-score")) {
-      const ra = +sEl.dataset.ra, rb = +sEl.dataset.rb, rc = +sEl.dataset.rc;
-      const esw = +sEl.dataset.esw, emw = +sEl.dataset.emw;
-      const etd = +sEl.dataset.etd, ed = +sEl.dataset.ed;
-      const s = { raceAhead: ra, raceBehind: rb, races: rc,
-        excl_selfWinDNF: esw, excl_mateWinDNF: emw, excl_tiedDNF: etd, excl_dns: ed };
-      const { sw: sw2, mw: mw2, pct: pct2 } = compute(s, mode);
-      sEl.innerHTML = scoreHTML(sw2, mw2);
+    for (var sEl of document.querySelectorAll('.h2h-s-score')) {
+      var s = {
+        raceAhead: +sEl.dataset.ra, raceBehind: +sEl.dataset.rb, races: +sEl.dataset.rc,
+        dnfAhead: +sEl.dataset.da, dnfBehind: +sEl.dataset.db, dnfRaces: +sEl.dataset.dr,
+        dnsAhead: +sEl.dataset.nsa, dnsBehind: +sEl.dataset.nsb, dnsRounds: +sEl.dataset.nsr,
+      };
+      var st = tally(s, mode);
+      sEl.innerHTML = scoreHTML(st.sw, st.mw);
     }
-    for (const bEl of document.querySelectorAll(".h2h-s-bar")) {
-      const ra = +bEl.dataset.ra, rb = +bEl.dataset.rb;
-      const esw = +bEl.dataset.esw, emw = +bEl.dataset.emw;
-      const s = { raceAhead: ra, raceBehind: rb, races: 0,
-        excl_selfWinDNF: esw, excl_mateWinDNF: emw, excl_tiedDNF: 0, excl_dns: 0 };
-      const { pct: pct2 } = compute(s, mode);
-      bEl.style.width = pct2 + "%";
+    for (var bEl of document.querySelectorAll('.h2h-s-bar')) {
+      var b = {
+        raceAhead: +bEl.dataset.ra, raceBehind: +bEl.dataset.rb, races: 0,
+        dnfAhead: +bEl.dataset.da, dnfBehind: +bEl.dataset.db, dnfRaces: 0,
+        dnsAhead: +bEl.dataset.nsa, dnsBehind: +bEl.dataset.nsb, dnsRounds: 0,
+      };
+      bEl.style.width = tally(b, mode).pct + '%';
     }
 
-    // Active button
-    for (const btn of document.querySelectorAll("[data-mode]")) {
-      btn.classList.toggle("active", btn.dataset.mode === mode);
+    for (var btn of document.querySelectorAll('[data-mode]')) {
+      btn.classList.toggle('active', btn.dataset.mode === mode);
     }
   }
 
-  for (const btn of document.querySelectorAll("[data-mode]")) {
-    btn.addEventListener("click", () => update(btn.dataset.mode));
+  for (var btn of document.querySelectorAll('[data-mode]')) {
+    btn.addEventListener('click', function() { update(this.dataset.mode); });
   }
 </script>
 
