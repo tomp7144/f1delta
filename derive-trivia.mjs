@@ -61,7 +61,7 @@ for (const entry of idx) {
   if (chain.length < 2) continue; // single-team careers skipped for both tiers
 
   const wins = d.totals?.wins ?? 0;
-  const tier = wins >= 1 ? "famous" : "deepcut";
+  const races = entry.races ?? 0; // total career race starts (from index)
   const fy = career[0].season;
   const ly = career[career.length - 1].season;
 
@@ -70,10 +70,10 @@ for (const entry of idx) {
     name: entry.name,
     chain: chain.map((t) => t.name),
     chainIds: chain.map((t) => t.id),
-    tier,
     fy,
     ly,
     wins,
+    races,
   });
 }
 
@@ -93,18 +93,18 @@ for (const id of checks) {
 }
 
 // ── Tier counts ────────────────────────────────────────────────────────────────
-const famous = drivers.filter((d) => d.tier === "famous");
-const deepcut = drivers.filter((d) => d.tier === "deepcut");
+const easy   = drivers.filter((d) => d.races >= 100);
+const medium = drivers.filter((d) => d.wins >= 1);
 console.log(`\n── Tiers ──`);
-console.log(`  Famous (≥1 win):   ${famous.length}`);
-console.log(`  Deep-cut (≥2 teams, no wins): ${deepcut.length} additional`);
-console.log(`  Total eligible:    ${drivers.length}`);
+console.log(`  Easy   (100+ races): ${easy.length}`);
+console.log(`  Medium (≥1 win):     ${medium.length}`);
+console.log(`  Hard   (all):        ${drivers.length}`);
 
 // ── Distractor sample: Verstappen ─────────────────────────────────────────────
 const vmax = drivers.find((d) => d.id === "max-verstappen");
 if (vmax) {
   const answerKey = vmax.chainIds.join(",");
-  const pool = famous.filter((d) => d.id !== vmax.id && d.chainIds.join(",") !== answerKey);
+  const pool = medium.filter((d) => d.id !== vmax.id && d.chainIds.join(",") !== answerKey);
   const scored = pool.map((d) => {
     const shared = d.chainIds.filter((id) => vmax.chainIds.includes(id)).length;
     const eraOverlap = Math.max(0, Math.min(d.ly, vmax.ly) - Math.max(d.fy, vmax.fy) + 1);
