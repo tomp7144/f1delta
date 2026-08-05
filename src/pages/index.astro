@@ -4,15 +4,13 @@ import fs from "node:fs";
 import path from "node:path";
 import BaseLayout from "../layouts/BaseLayout.astro";
 
-// ── Read live fantasy data at build time ──────────────────────────────────────
+// ── Fantasy data ──────────────────────────────────────────────────────
 let players: any   = null;
-let prices: any    = null;
 let raceSummaries: any   = {};
 let races2026: any[]     = [];
 let gpNames: Map<string, string> = new Map();
 
-try { players      = JSON.parse(fs.readFileSync(path.resolve("./data/fantasy/players.json"), "utf8")); } catch {}
-try { prices       = JSON.parse(fs.readFileSync(path.resolve("./data/fantasy/prices.source.json"), "utf8")); } catch {}
+try { players = JSON.parse(fs.readFileSync(path.resolve("./data/fantasy/players.json"), "utf8")); } catch {}
 try { raceSummaries = JSON.parse(fs.readFileSync(path.resolve("./public/fantasy/race-summaries.json"), "utf8")); } catch {}
 try {
   const allRaces = JSON.parse(fs.readFileSync(path.resolve("./data/f1db/f1db-races.json"), "utf8"));
@@ -21,56 +19,145 @@ try {
   for (const g of gps) gpNames.set(g.id, g.shortName ?? g.name);
 } catch {}
 
-// ── Top value by PPM (drivers only) ──────────────────────────────────────────
-const topPPM: { name: string; pageId: string; team: string; price: number; ppm: number }[] = [];
-if (players) {
-  players.assets
-    .filter((a: any) => a.type === "driver" && a.price > 0 && a.points > 0)
-    .map((a: any) => ({
-      name: a.name, pageId: a.pageId, team: a.team, price: a.price,
-      ppm: Math.round((a.points / a.price) * 10) / 10,
-    }))
-    .sort((a: any, b: any) => b.ppm - a.ppm)
-    .slice(0, 3)
-    .forEach((d: any) => topPPM.push(d));
-}
+// ── f1δ leaderboard: top 5 drivers by cumulative points ──────────────
+const ldrTop5: { name: string; pageId: string; points: number }[] = players
+  ? (players.assets as any[])
+      .filter((a: any) => a.type === "driver" && (a.points ?? 0) > 0)
+      .sort((a: any, b: any) => b.points - a.points)
+      .slice(0, 5)
+      .map((a: any) => ({ name: a.name, pageId: a.pageId, points: a.points }))
+  : [];
 
-// ── Price movers (last two rounds from prices.source.json) ───────────────────
-const nameToAsset = new Map<string, { pageId: string; type: string }>();
-if (players) {
-  for (const a of players.assets) {
-    nameToAsset.set((a.name || "").toLowerCase(), { pageId: a.pageId, type: a.type });
-  }
-}
-const movers: { name: string; pageId: string | null; type: string | null; price: number; delta: number }[] = [];
-if (prices) {
-  for (const [, rounds] of Object.entries(prices) as [string, any][]) {
-    const ks = Object.keys(rounds).map(Number).sort((a, b) => a - b);
-    if (ks.length < 2) continue;
-    const last = rounds[String(ks[ks.length - 1])];
-    const prev = rounds[String(ks[ks.length - 2])];
-    const delta = Math.round(((last.price ?? 0) - (prev.price ?? 0)) * 10) / 10;
-    if (delta === 0) continue;
-    const lk = nameToAsset.get((last.name || "").toLowerCase());
-    movers.push({ name: last.name, pageId: lk?.pageId ?? null, type: lk?.type ?? null, price: last.price, delta });
-  }
-}
-movers.sort((a, b) => Math.abs(b.delta) - Math.abs(a.delta));
-const risers = movers.filter(m => m.delta > 0).slice(0, 2);
-const fallers = movers.filter(m => m.delta < 0).slice(0, 2);
-
-// ── Latest f1δ race (2026 races that have results) ────────────────────────────
 const race2026Ids = new Set(races2026.map((r: any) => r.id));
 const latestF1dRaceId = Object.keys(raceSummaries)
   .map(Number)
   .filter(id => race2026Ids.has(id))
   .sort((a, b) => b - a)[0] ?? null;
-const latestF1dSummary = latestF1dRaceId ? raceSummaries[String(latestF1dRaceId)] : null;
-const latestF1dRace    = latestF1dRaceId ? races2026.find((r: any) => r.id === latestF1dRaceId) : null;
-const latestF1dGpName  = latestF1dRace ? (gpNames.get(latestF1dRace.grandPrixId) ?? latestF1dRace.grandPrixId) : null;
+const latestF1dRace = latestF1dRaceId ? races2026.find((r: any) => r.id === latestF1dRaceId) : null;
+const latestF1dGpName = latestF1dRace ? (gpNames.get(latestF1dRace.grandPrixId) ?? latestF1dRace.grandPrixId) : null;
 
-const hasFant = topPPM.length > 0 || risers.length > 0 || latestF1dSummary;
+// ── Hero pool: all 100+ race drivers with connection threads ──────────
+type Thread = { rel: string; label: string; url: string; meta: string };
+type Hero = { id: string; name: string; url: string; era: string; races: number; wins: number; threads: Thread[] };
 
+let heroPool: Hero[] = [];
+try {
+  const byDriver: Record<string, any> = (() => {
+    try { return JSON.parse(fs.readFileSync(path.resolve("./data/people/by-driver.json"), "utf8")); }
+    catch { return {}; }
+  })();
+  const driverIdx: any[] = JSON.parse(
+    fs.readFileSync(path.resolve("./data/drivers/index.json"), "utf8")
+  ).drivers;
+
+  for (const entry of driverIdx.filter((d: any) => (d.races ?? 0) >= 100)) {
+    try {
+      const d: any = JSON.parse(
+        fs.readFileSync(path.resolve(`./data/drivers/${entry.driverId}.json`), "utf8")
+      );
+      const threads: Thread[] = [];
+
+      // Top 2 teammates by seasons shared
+      const mates: any[] = (d.teammates || []).slice().sort(
+        (a: any, b: any) => (b.seasonsShared?.length ?? 0) - (a.seasonsShared?.length ?? 0)
+      );
+      for (const m of mates.slice(0, 2)) {
+        const n = m.seasonsShared?.length ?? 1;
+        threads.push({
+          rel: "Teammate",
+          label: m.teammate,
+          url: `/h2h/${[entry.driverId, m.teammateId].sort().join("-vs-")}`,
+          meta: n + (n === 1 ? " season" : " seasons"),
+        });
+      }
+
+      // Top 2 career teams by seasons
+      const teamSeas = new Map<string, { name: string; n: number }>();
+      for (const s of d.career || []) {
+        const t = s.teams?.[0];
+        if (!t) continue;
+        const prev = teamSeas.get(t.constructorId);
+        if (prev) prev.n++;
+        else teamSeas.set(t.constructorId, { name: t.constructor, n: 1 });
+      }
+      for (const [cid, { name, n }] of [...teamSeas.entries()]
+        .sort((a, b) => b[1].n - a[1].n)
+        .slice(0, 2)) {
+        threads.push({
+          rel: "Team",
+          label: name,
+          url: `/teams/${cid}`,
+          meta: n + (n === 1 ? " season" : " seasons"),
+        });
+      }
+
+      // Race engineer (if known)
+      const eng = byDriver[entry.driverId];
+      if (eng?.current) {
+        threads.push({
+          rel: "Engineer",
+          label: eng.current.personName,
+          url: `/people/${eng.current.personId}`,
+          meta: String(eng.current.fromYear) + "–",
+        });
+      } else if (eng?.past?.[0]) {
+        const e = eng.past[0];
+        threads.push({
+          rel: "Engineer",
+          label: e.personName,
+          url: `/people/${e.personId}`,
+          meta: (e.fromYear ?? "") + "–" + (e.toYear ?? ""),
+        });
+      }
+
+      if (threads.length < 2) continue;
+
+      heroPool.push({
+        id: entry.driverId,
+        name: entry.name,
+        url: `/drivers/${entry.driverId}`,
+        era:
+          entry.firstSeason === entry.lastSeason
+            ? String(entry.firstSeason)
+            : `${entry.firstSeason}–${entry.lastSeason}`,
+        races: entry.races,
+        wins: entry.wins ?? 0,
+        threads: threads.slice(0, 4),
+      });
+    } catch {}
+  }
+} catch {}
+
+// ── Build-time trivia question (changes per deploy) ───────────────────
+type TriviaQ = {
+  chain: string;
+  answerId: string;
+  answerName: string;
+  options: { id: string; name: string }[];
+};
+let triviaQ: TriviaQ | null = null;
+try {
+  const td: any = JSON.parse(fs.readFileSync(path.resolve("./public/trivia.json"), "utf8"));
+  const easy: any[] = td.drivers.filter(
+    (d: any) => (d.races ?? 0) >= 100 && (d.chain?.length ?? 0) >= 2
+  );
+  if (easy.length >= 4) {
+    const ai = Math.floor(Math.random() * easy.length);
+    const answer = easy[ai];
+    const decoys = easy
+      .filter((_: any, i: number) => i !== ai)
+      .sort(() => Math.random() - 0.5)
+      .slice(0, 3);
+    triviaQ = {
+      chain: answer.chain.join(" → "),
+      answerId: answer.id,
+      answerName: answer.name,
+      options: [answer, ...decoys]
+        .sort(() => Math.random() - 0.5)
+        .map((d: any) => ({ id: d.id, name: d.name })),
+    };
+  }
+} catch {}
 ---
 
 <BaseLayout
@@ -86,316 +173,171 @@ const hasFant = topPPM.length > 0 || risers.length > 0 || latestF1dSummary;
 
   <div class="home">
 
-    <!-- ── Compare hero ──────────────────────────────────────────────── -->
-    <section class="cmp-hero-sec">
-      <h2 class="cmp-hl">Compare <span class="red">any two</span> drivers of any era</h2>
-      <p class="cmp-hl-sub">Career stats and era-fair rates, any two drivers, any era — side by side.</p>
-      <div id="home-cmp"></div>
-      <div class="cmp-chips">
-        <a class="cmp-chip" href="/compare/ayrton-senna-vs-lewis-hamilton">Senna vs Hamilton</a>
-        <a class="cmp-chip" href="/compare/lewis-hamilton-vs-max-verstappen">Hamilton vs Verstappen</a>
-        <a class="cmp-chip" href="/compare/alain-prost-vs-ayrton-senna">Prost vs Senna</a>
-        <a class="cmp-chip" href="/compare/max-verstappen-vs-michael-schumacher">Schumacher vs Verstappen</a>
-      </div>
-    </section>
+    <!-- ── Box grid ─────────────────────────────────────────────────── -->
+    <div class="hgrid">
 
-    <!-- ── Static: hero ──────────────────────────────────────────────── -->
-    <section class="hero">
-      <h1>The F1 reference <span class="red">desk.</span></h1>
-      <p class="tagline">Every driver, every season, every teammate battle — one fast, clean place to settle it.</p>
-    </section>
-
-    <!-- ── Dynamic: search + latest race + WDC standings ────────────── -->
-    <div id="home-dynamic"></div>
-
-    <!-- ── Static: fantasy teaser ───────────────────────────────────── -->
-    {hasFant && (
-      <section class="fant-module">
-        <div class="module-hd">
-          <span class="module-label">2026 F1 Fantasy</span>
-          <a class="module-all" href="/fantasy">Full tracker →</a>
+      <!-- Hero tile: random driver, filled by JS -->
+      <div class="tile tile-hero" id="hero-tile">
+        <div class="tile-hd">
+          <span class="tile-label">Featured</span>
         </div>
+        <div class="hero-loading">Loading…</div>
+      </div>
 
-        {topPPM.length > 0 && (
-          <div class="fcard">
-            <div class="fcard-hd">
-              <span class="fcard-title">Top value</span>
-              <span class="tier real">Live · 2026</span>
+      <!-- Results tile: last race from OpenF1 bake, filled by React -->
+      <div class="tile tile-results" id="res-tile">
+        <div class="tile-hd">
+          <span class="tile-label">Last result</span>
+        </div>
+      </div>
+
+      <!-- Trivia tile: build-time question, vanilla JS handles interaction -->
+      <div class="tile tile-trivia">
+        <div class="tile-hd">
+          <span class="tile-label">Trivia</span>
+          <a class="tile-more" href="/trivia">Full game →</a>
+        </div>
+        {triviaQ ? (
+          <div class="triv-body">
+            <p class="triv-prompt">Guess the driver by their team chain:</p>
+            <p class="triv-chain">{triviaQ.chain}</p>
+            <div class="triv-opts" id="triv-opts">
+              {triviaQ.options.map(opt => (
+                <button class="triv-opt" data-id={opt.id}>{opt.name}</button>
+              ))}
             </div>
-            <table>
-              <thead><tr><th class="l">Driver</th><th class="l">Team</th><th class="r">Price</th><th class="r">PPM</th></tr></thead>
-              <tbody>
-                {topPPM.map(d => (
-                  <tr>
-                    <td class="nm">{d.pageId ? <a href={`/drivers/${d.pageId}`}>{d.name}</a> : d.name}</td>
-                    <td class="tm">{d.team}</td>
-                    <td class="n">£{d.price.toFixed(1)}m</td>
-                    <td class="n hi">{d.ppm.toFixed(1)}</td>
-                  </tr>
-                ))}
-              </tbody>
-            </table>
+            <div class="triv-result" id="triv-result" style="display:none"></div>
+            <a class="triv-more" id="triv-more" href="/trivia" style="display:none">Play more →</a>
+          </div>
+        ) : (
+          <div class="triv-body">
+            <p class="triv-prompt">Chain-based driver guessing game.</p>
+            <a class="triv-more" href="/trivia">Play now →</a>
           </div>
         )}
+      </div>
 
-        {(risers.length > 0 || fallers.length > 0) && (
-          <div class="fcard">
-            <div class="fcard-hd">
-              <span class="fcard-title">Price movers</span>
-              <span class="tier real">Live · 2026</span>
-            </div>
-            <table>
-              <thead><tr><th class="l">Asset</th><th class="r">Price</th><th class="r">Change</th></tr></thead>
-              <tbody>
-                {[...risers, ...fallers].map(m => (
-                  <tr>
-                    <td class="nm">{m.pageId ? <a href={m.type === "constructor" ? `/teams/${m.pageId}` : `/drivers/${m.pageId}`}>{m.name}</a> : m.name}</td>
-                    <td class="n">£{m.price.toFixed(1)}m</td>
-                    <td class:list={["n delta", m.delta > 0 ? "pos" : "neg"]}>{m.delta > 0 ? "+" : ""}{m.delta.toFixed(1)}</td>
-                  </tr>
-                ))}
-              </tbody>
-            </table>
-          </div>
+      <!-- Compare tile: compact picker, filled by React -->
+      <div class="tile tile-cmp">
+        <div class="tile-hd">
+          <span class="tile-label">Compare</span>
+          <a class="tile-more" href="/compare/lewis-hamilton-vs-max-verstappen">example →</a>
+        </div>
+        <div id="cmp-tile-inner"></div>
+      </div>
+
+      <!-- f1δ leaderboard tile: static from fantasy data -->
+      <div class="tile tile-ldr">
+        <div class="tile-hd">
+          <span class="tile-label">f1δ 2026</span>
+          <a class="tile-more" href="/fantasy">Full →</a>
+        </div>
+        {ldrTop5.length > 0 ? (
+          <ol class="ldr-list">
+            {ldrTop5.map((d, i) => (
+              <li class="ldr-row">
+                <span class="ldr-pos">{i + 1}</span>
+                <a class="ldr-name" href={`/drivers/${d.pageId}`}>{d.name}</a>
+                <span class="ldr-pts">{d.points}</span>
+              </li>
+            ))}
+          </ol>
+        ) : (
+          <p class="ldr-empty">No data yet.</p>
         )}
-
-        {latestF1dSummary && (
-          <div class="fcard bridge">
-            <div class="fcard-hd">
-              <span class="fcard-title">Fantasy top score{latestF1dGpName ? ` · ${latestF1dGpName}` : ""}</span>
-              <span class="tier derived">f1δ derived</span>
-            </div>
-            <div class="bridge-row">
-              <a class="bridge-name" href={`/drivers/${latestF1dSummary.topDriverId}`}>{latestF1dSummary.topDriverName}</a>
-              <span class="bridge-score">{latestF1dSummary.topScore} pts</span>
-            </div>
-            <p class="bridge-note">Fantasy scoring applies current game rules to all eras — not the championship points drivers actually earned.</p>
-          </div>
+        {latestF1dGpName && (
+          <p class="ldr-note">Latest: {latestF1dGpName}</p>
         )}
-      </section>
-    )}
+      </div>
 
-    <!-- ── Static: nav grid ─────────────────────────────────────────── -->
+      <!-- Editorial slot: reserved for future /stories content -->
+      <div class="tile tile-ed">
+        <div class="tile-hd">
+          <span class="tile-label">Stories</span>
+        </div>
+        <p class="ed-coming">In-depth features and analysis coming soon.</p>
+        <a class="ed-link" href="/about">About f1delta →</a>
+      </div>
+
+    </div><!-- /.hgrid -->
+
+    <!-- ── Nav tiles ─────────────────────────────────────────────────── -->
     <section class="nav-grid">
-      <a class="nav-tile" href="/standings"><span class="nt-label">Seasons</span><span class="nt-desc">WDC & WCC standings, 1950–today</span></a>
+      <a class="nav-tile" href="/standings"><span class="nt-label">Seasons</span><span class="nt-desc">WDC &amp; WCC standings, 1950–today</span></a>
       <a class="nav-tile" href="/drivers"><span class="nt-label">Drivers</span><span class="nt-desc">Career stats for every F1 driver</span></a>
-      <a class="nav-tile" href="/teams"><span class="nt-label">Teams</span><span class="nt-desc">Constructor histories & records</span></a>
+      <a class="nav-tile" href="/teams"><span class="nt-label">Teams</span><span class="nt-desc">Constructor histories &amp; records</span></a>
       <a class="nav-tile" href="/grands-prix"><span class="nt-label">Grands Prix</span><span class="nt-desc">All races by event, with winners</span></a>
-      <a class="nav-tile" href="/circuits"><span class="nt-label">Circuits</span><span class="nt-desc">Track histories & statistics</span></a>
+      <a class="nav-tile" href="/circuits"><span class="nt-label">Circuits</span><span class="nt-desc">Track histories &amp; statistics</span></a>
       <a class="nav-tile" href="/records"><span class="nt-label">Records</span><span class="nt-desc">All-time leaders across every category</span></a>
-      <a class="nav-tile" href="/fantasy"><span class="nt-label">Fantasy</span><span class="nt-desc">Price tracker, PPM & f1δ scores</span></a>
+      <a class="nav-tile" href="/fantasy"><span class="nt-label">Fantasy</span><span class="nt-desc">Price tracker, PPM &amp; f1δ scores</span></a>
       <a class="nav-tile" href="/engineers"><span class="nt-label">Engineers</span><span class="nt-desc">Pitwall pairings, 1950–now</span></a>
     </section>
 
-  </div>
+  </div><!-- /.home -->
 
-  <!-- Dynamic home sections: search, latest race, standings -->
+  <!-- CDN scripts for React + Babel -->
   <script is:inline src="/grid-map.js"></script>
   <script is:inline src="https://unpkg.com/react@18.3.1/umd/react.development.js" integrity="sha384-hD6/rw4ppMLGNu3tX5cjIb+uRZ7UkRJ6BPkLpg4hAu/6onKUg4lLsHAs9EBPT82L" crossorigin="anonymous"></script>
   <script is:inline src="https://unpkg.com/react-dom@18.3.1/umd/react-dom.development.js" integrity="sha384-u6aeetuaXnQ38mYT8rp6sbXaQe3NL9t+IBXmnYxwkUI2Hw4bsp2Wvmx4yRQF1uAm" crossorigin="anonymous"></script>
   <script is:inline src="https://unpkg.com/@babel/standalone@7.29.0/babel.min.js" integrity="sha384-m08KidiNqLdpJqLq95G/LEi8Qvjl/xUYll3QILypMoQ65QorJ9Lvtp2RXYGBFj1y" crossorigin="anonymous"></script>
+
+  <!-- React: results card + compare picker -->
   <script type="text/babel" is:inline>
   (function () {
     const { useState, useEffect, useRef } = React;
 
     async function loadLatest() {
       try { const r = await fetch("/latest-race.json"); if (!r.ok) return null; return await r.json(); }
-      catch (e) { return null; }
-    }
-    async function loadStandings() {
-      try { const r = await fetch("/standings.json"); if (!r.ok) return null; const d = await r.json(); return Array.isArray(d) ? d : (d.standings || null); }
-      catch (e) { return null; }
+      catch { return null; }
     }
 
-    const GROUPS = [
-      { type: "driver",  label: "Drivers",     cap: 5 },
-      { type: "team",    label: "Teams",        cap: 4 },
-      { type: "person",  label: "People",       cap: 4 },
-      { type: "circuit", label: "Circuits",     cap: 3 },
-      { type: "gp",      label: "Grands Prix",  cap: 3 },
-      { type: "race",    label: "Races",        cap: 5 },
-      { type: "season",  label: "Seasons",      cap: 3 },
-      { type: "record",  label: "Records",      cap: 5 },
-      { type: "h2h",    label: "Head-to-Head", cap: 3 },
-      { type: "tool",   label: "Tools",        cap: 2 },
-    ];
-    const ROLE_LABELS = {
-      "race-engineer": "Race Engineer",
-      "technical-director": "Technical Director",
-      "team-principal": "Team Principal",
-    };
-
-    function matchScore(str, needle) {
-      if (!str) return 0;
-      const s = String(str).toLowerCase();
-      if (s === needle) return 4;
-      if (s.startsWith(needle)) return 3;
-      if (s.split(/[\s\-\/\.]+/).some(w => w.startsWith(needle))) return 2;
-      return 0;
-    }
-    function scoreEntry(e, needle) {
-      const f =
-        e.type === "driver"  ? [e.label, e.code] :
-        e.type === "team"    ? [e.label, e.nat, e.natId] :
-        e.type === "person"  ? [e.label, ...(e.roles || [])] :
-        e.type === "circuit" ? [e.label, e.country, e.place] :
-        e.type === "gp"      ? [e.label, e.short, e.country] :
-        e.type === "race"    ? [e.label, String(e.year), e.country] :
-        e.type === "season"  ? [String(e.year), e.champion, e.ccode] :
-        e.type === "h2h"     ? [e.label, ...(e.terms || [])] :
-        e.type === "tool"    ? [e.label, ...(e.terms || [])] :
-        /* record */           [e.label];
-      return Math.max(0, ...f.filter(Boolean).map(s => matchScore(s, needle)));
-    }
-    function rowSecondary(e) {
-      if (e.type === "driver")  return (e.code ? e.code + " · " : "") + e.fy + "–" + e.ly;
-      if (e.type === "team")    return (e.nat ? e.nat + " · " : "") + e.fy + "–" + e.ly;
-      if (e.type === "person")  return (e.roles || []).map(r => ROLE_LABELS[r] || r).join(", ");
-      if (e.type === "circuit") return e.country || "";
-      if (e.type === "gp")      return e.country || "";
-      if (e.type === "race")    return e.country || "";
-      if (e.type === "season")  return e.champion ? e.champion + (e.ccode ? " · " + e.ccode : "") : "In progress";
-      if (e.type === "h2h")     return "";
-      if (e.type === "tool")    return "";
-      return "";
-    }
-
-    function Search() {
-      const [q, setQ] = useState("");
-      const [index, setIndex] = useState(null);
-      const [loading, setLoading] = useState(false);
-      const [activeIdx, setActiveIdx] = useState(-1);
-      const wrapRef = useRef(null);
-
-      function ensureIndex() {
-        if (index !== null || loading) return;
-        setLoading(true);
-        fetch("/search-index.json").then(r => r.json())
-          .then(d => { setIndex(d); setLoading(false); })
-          .catch(() => { setIndex([]); setLoading(false); });
-      }
+    // ── Results card ───────────────────────────────────────────────────
+    function ResultsCard() {
+      const [data, setData] = useState(null);
+      const [loaded, setLoaded] = useState(false);
+      const codeMap = window.F1_GRID || {};
 
       useEffect(() => {
-        function onDown(e) {
-          if (wrapRef.current && !wrapRef.current.contains(e.target)) {
-            setQ(""); setActiveIdx(-1);
-          }
-        }
-        document.addEventListener("mousedown", onDown);
-        return () => document.removeEventListener("mousedown", onDown);
+        let alive = true;
+        loadLatest().then(d => { if (alive) { setData(d); setLoaded(true); } });
+        return () => { alive = false; };
       }, []);
 
-      useEffect(() => { setActiveIdx(-1); }, [q]);
-
-      const needle = q.trim().toLowerCase();
-      const needleWords = needle.split(/\s+/).filter(Boolean);
-      const groups = [];
-      const flat = [];
-
-      if (needle.length >= 2 && index && index.length) {
-        for (const cfg of GROUPS) {
-          const matches = index
-            .filter(e => e.type === cfg.type)
-            .map(e => {
-              const scores = needleWords.map(w => scoreEntry(e, w));
-              const s = scores.length > 0 && scores.every(sc => sc > 0) ? Math.min(...scores) : 0;
-              return { e, s };
-            })
-            .filter(({ s }) => s > 0)
-            .sort((a, b) => {
-              if (b.s !== a.s) return b.s - a.s;
-              if (cfg.type === "driver" || cfg.type === "team") return (b.e.ly || 0) - (a.e.ly || 0);
-              if (cfg.type === "season") return b.e.year - a.e.year;
-              return (a.e.label || "").localeCompare(b.e.label || "");
-            })
-            .slice(0, cfg.cap)
-            .map(({ e }) => e);
-          if (matches.length) {
-            const startIdx = flat.length;
-            flat.push(...matches);
-            groups.push({ cfg, results: matches, startIdx });
-          }
-        }
-      }
-
-      function onKeyDown(e) {
-        if (e.key === "ArrowDown" && flat.length) {
-          e.preventDefault();
-          setActiveIdx(i => i < flat.length - 1 ? i + 1 : 0);
-        } else if (e.key === "ArrowUp" && flat.length) {
-          e.preventDefault();
-          setActiveIdx(i => i > 0 ? i - 1 : flat.length - 1);
-        } else if (e.key === "Enter") {
-          const target = activeIdx >= 0 ? flat[activeIdx] : flat[0];
-          if (target) window.location.href = target.url;
-        } else if (e.key === "Escape") {
-          setQ(""); setActiveIdx(-1);
-        }
-      }
-
-      const open = needle.length >= 2 && (loading || groups.length > 0);
-
-      return (
-        <div className="h-search" ref={wrapRef}>
-          <input
-            type="text"
-            placeholder="Search drivers, teams, circuits…"
-            value={q}
-            onFocus={ensureIndex}
-            onChange={(e) => setQ(e.target.value)}
-            onKeyDown={onKeyDown}
-          />
-          {open && (
-            <div className="h-results">
-              {loading && !groups.length && <div className="h-loading">Loading…</div>}
-              {groups.map(({ cfg, results, startIdx }) => (
-                <div key={cfg.type} className="h-group">
-                  <div className="h-group-label">{cfg.label}</div>
-                  {results.map((entry, i) => {
-                    const fi = startIdx + i;
-                    const sec = rowSecondary(entry);
-                    return (
-                      <a key={entry.url} href={entry.url}
-                         className={"h-row" + (fi === activeIdx ? " active" : "")}
-                         onMouseEnter={() => setActiveIdx(fi)}>
-                        <span className="rn">{entry.label}</span>
-                        {sec && <span className="rs">{sec}</span>}
-                      </a>
-                    );
-                  })}
-                </div>
-              ))}
-            </div>
-          )}
-        </div>
+      if (!loaded) return null;
+      if (!data || !data.tower) return (
+        <div className="h-empty">No result yet.</div>
       );
-    }
 
-    function LatestResult({ data, codeMap }) {
-      if (!data || !data.tower) return null;
       return (
-        <section className="h-sect">
-          <div className="h-sect-hd">
-            <h2>{data.session?.name || "Latest result"}</h2>
-            <span>Round {data.session?.round} · final</span>
+        <>
+          <div className="res-hd">
+            <span className="res-name">{data.session?.name || "Latest result"}</span>
+            <span className="res-rnd">Rd {data.session?.round}</span>
           </div>
           <div className="h-card">
             <table>
-              <thead><tr><th className="l">P</th><th className="l">Driver</th><th>Gap</th><th>Pts</th></tr></thead>
+              <thead>
+                <tr>
+                  <th className="l">P</th>
+                  <th className="l">Driver</th>
+                  <th>Gap</th>
+                  <th>Pts</th>
+                </tr>
+              </thead>
               <tbody>
                 {data.tower.map((r) => {
                   const slug = codeMap[(r.code || "").toUpperCase()];
                   const isDnf = r.dnf || r.position == null;
                   return (
-                    <tr key={r.code} className={slug ? "clik" : ""} onClick={slug ? () => { window.location.href = `/drivers/${slug}`; } : undefined}>
+                    <tr key={r.code}
+                      className={slug ? "clik" : ""}
+                      onClick={slug ? () => { window.location.href = `/drivers/${slug}`; } : undefined}>
                       <td className={"pos" + (isDnf ? " dnf" : "")}>{isDnf ? "—" : r.position}</td>
                       <td className="drv">
                         <span className="dot" style={{ background: r.teamColour || "#9aa0ab" }} />
                         <span className="cc">{r.code}</span>
-                        <span className="tn">{r.teamName}</span>
-                        {slug && <span className="go">→</span>}
                       </td>
-                      <td className={"gap" + (r.leader ? " lead" : "")}>{r.leader ? "LEADER" : String(r.gap || "")}</td>
+                      <td className={"gap" + (r.leader ? " lead" : "")}>{r.leader ? "LEAD" : String(r.gap || "")}</td>
                       <td className={"pts" + (r.points > 0 ? "" : " zero")}>{r.points > 0 ? `+${r.points}` : "0"}</td>
                     </tr>
                   );
@@ -403,65 +345,11 @@ const hasFant = topPPM.length > 0 || risers.length > 0 || latestF1dSummary;
               </tbody>
             </table>
           </div>
-        </section>
-      );
-    }
-
-    function Standings({ rows, codeMap }) {
-      if (!rows || rows.length === 0) return null;
-      return (
-        <section className="h-sect">
-          <div className="h-sect-hd"><h2>2026 Championship</h2><span>WDC standings</span></div>
-          <div className="h-card">
-            <table>
-              <thead><tr><th className="l">P</th><th className="l">Driver</th><th>Pts</th></tr></thead>
-              <tbody>
-                {rows.map((s) => {
-                  const slug = codeMap[(s.code || "").toUpperCase()];
-                  return (
-                    <tr key={s.code} className={slug ? "clik" : ""} onClick={slug ? () => { window.location.href = `/drivers/${slug}`; } : undefined}>
-                      <td className="pos">{s.pos}</td>
-                      <td className="drv">
-                        <span className="cc">{s.code}</span>
-                        {s.team && <span className="tn">{s.team}</span>}
-                        {slug && <span className="go">→</span>}
-                      </td>
-                      <td className="pts">{s.points}</td>
-                    </tr>
-                  );
-                })}
-              </tbody>
-            </table>
-          </div>
-        </section>
-      );
-    }
-
-    function DynamicHome() {
-      const [latest, setLatest] = useState(null);
-      const [standings, setStandings] = useState(null);
-      const [loaded, setLoaded] = useState(false);
-      const codeMap = window.F1_GRID || {};
-
-      useEffect(() => {
-        let alive = true;
-        Promise.all([loadLatest(), loadStandings()]).then(([lat, std]) => {
-          if (!alive) return;
-          setLatest(lat); setStandings(std); setLoaded(true);
-        });
-        return () => { alive = false; };
-      }, []);
-
-      return (
-        <>
-          <Search />
-          {loaded && <LatestResult data={latest} codeMap={codeMap} />}
-          {loaded && <Standings rows={standings} codeMap={codeMap} />}
         </>
       );
     }
 
-    // ── Compare picker (home hero) ────────────────────────────────────────
+    // ── Compare picker ─────────────────────────────────────────────────
     let _drivers = null;
     async function loadDrivers() {
       if (_drivers) return _drivers;
@@ -529,7 +417,7 @@ const hasFant = topPPM.length > 0 || risers.length > 0 || latestF1dSummary;
             <div className="di-sel">
               <span className="di-name">{selected.label}</span>
               <span className="di-years">{selected.fy}–{selected.ly}</span>
-              <button className="di-clear" onClick={clear} aria-label="Clear">×</button>
+              <button className="di-clear" onClick={clear} aria-label="Clear">&times;</button>
             </div>
           ) : (
             <div className="di-box">
@@ -573,7 +461,6 @@ const hasFant = topPPM.length > 0 || risers.length > 0 || latestF1dSummary;
         <div className="cmp-picker">
           <div className="cmp-row">
             <DriverInput label="Driver A" selected={selA} onSelect={setSelA} otherId={selB?.id} />
-            <div className="cmp-vs">vs</div>
             <DriverInput label="Driver B" selected={selB} onSelect={setSelB} otherId={selA?.id} />
           </div>
           {sameDriver && <p className="cmp-warn">Pick two different drivers.</p>}
@@ -586,12 +473,99 @@ const hasFant = topPPM.length > 0 || risers.length > 0 || latestF1dSummary;
       );
     }
 
-    const el = document.getElementById("home-dynamic");
-    if (el) ReactDOM.createRoot(el).render(<DynamicHome />);
-    const cpEl = document.getElementById("home-cmp");
-    if (cpEl) ReactDOM.createRoot(cpEl).render(<ComparePicker />);
+    // ── Mount ──────────────────────────────────────────────────────────
+    const resTile = document.getElementById("res-tile");
+    if (resTile) ReactDOM.createRoot(resTile).render(
+      React.createElement(React.Fragment, null,
+        React.createElement("div", { className: "tile-hd" },
+          React.createElement("span", { className: "tile-label" }, "Last result")
+        ),
+        React.createElement(ResultsCard)
+      )
+    );
+    const cmpTile = document.getElementById("cmp-tile-inner");
+    if (cmpTile) ReactDOM.createRoot(cmpTile).render(<ComparePicker />);
   })();
   </script>
+
+  <!-- Vanilla JS: hero selection + trivia interaction -->
+  <script is:inline define:vars={{ heroPool, triviaQ }}>
+  (function () {
+    // ── Hero tile ──────────────────────────────────────────────────────
+    var pool = heroPool;
+    var heroTile = document.getElementById("hero-tile");
+
+    if (pool && pool.length && heroTile) {
+      var lastIdx = -1;
+
+      function pickIdx() {
+        if (pool.length === 1) return 0;
+        var idx;
+        do { idx = Math.floor(Math.random() * pool.length); } while (idx === lastIdx);
+        lastIdx = idx;
+        return idx;
+      }
+
+      function renderHero() {
+        var h = pool[pickIdx()];
+        var sub = "Driver · " + h.era + " · " + h.races + " races"
+          + (h.wins > 0 ? " · " + h.wins + (h.wins === 1 ? " win" : " wins") : "");
+
+        var threadsHtml = h.threads.map(function (t) {
+          return '<a href="' + t.url + '" class="thread">'
+            + '<span class="thread-rel">' + t.rel + '</span>'
+            + '<span class="thread-label">' + t.label + '</span>'
+            + '<span class="thread-meta">' + t.meta + '</span>'
+            + '</a>';
+        }).join("");
+
+        heroTile.innerHTML =
+          '<div class="tile-hd">'
+          + '<span class="tile-label">Featured driver</span>'
+          + '<button class="hero-reroll" id="hero-reroll">different person</button>'
+          + '</div>'
+          + '<div class="hero-body">'
+          + '<a href="' + h.url + '" class="hero-name">' + h.name + '</a>'
+          + '<div class="hero-sub">' + sub + '</div>'
+          + '<div class="hero-threads">' + threadsHtml + '</div>'
+          + '</div>';
+
+        var btn = document.getElementById("hero-reroll");
+        if (btn) btn.addEventListener("click", renderHero);
+      }
+
+      renderHero();
+    }
+
+    // ── Trivia teaser ──────────────────────────────────────────────────
+    var TQ = triviaQ;
+    var optsEl = document.getElementById("triv-opts");
+    var resultEl = document.getElementById("triv-result");
+    var moreEl = document.getElementById("triv-more");
+
+    if (TQ && optsEl) {
+      optsEl.querySelectorAll(".triv-opt").forEach(function (btn) {
+        btn.addEventListener("click", function () {
+          var isCorrect = btn.dataset.id === TQ.answerId;
+          optsEl.querySelectorAll(".triv-opt").forEach(function (b) {
+            b.disabled = true;
+            if (b.dataset.id === TQ.answerId) b.classList.add("correct");
+            else if (b === btn && !isCorrect) b.classList.add("wrong");
+          });
+          if (resultEl) {
+            resultEl.textContent = isCorrect
+              ? "Correct! That's " + TQ.answerName + "."
+              : "Not quite — it was " + TQ.answerName + ".";
+            resultEl.className = "triv-result " + (isCorrect ? "ok" : "no");
+            resultEl.style.display = "block";
+          }
+          if (moreEl) moreEl.style.display = "inline";
+        });
+      });
+    }
+  })();
+  </script>
+
 </BaseLayout>
 
 <style>
@@ -601,100 +575,136 @@ const hasFant = topPPM.length > 0 || risers.length > 0 || latestF1dSummary;
     color: var(--ink);
   }
 
-  /* ── Hero ─────────────────────────────────────────────────────────── */
-  .hero {
-    background: var(--surface); border-bottom: 1px solid var(--line);
-    margin: 0 -20px 20px; padding: 32px 20px 28px;
+  /* ── Box grid ──────────────────────────────────────────────────────── */
+  .hgrid {
+    display: grid;
+    grid-template-columns: repeat(6, 1fr);
+    grid-template-rows: auto;
+    gap: 10px;
+    margin-bottom: 24px;
   }
-  .hero h1 {
-    font-family: var(--disp);
-    font-weight: 700; font-size: clamp(28px, 5vw, 48px);
-    line-height: 1; letter-spacing: -.01em; margin: 0 0 8px;
+  .tile {
+    background: var(--surface);
+    border: 1px solid var(--line);
+    border-radius: 8px;
+    padding: 14px 16px;
+    min-width: 0;
+    overflow: hidden;
   }
-  .red { color: var(--red); }
-  .tagline { font-size: 14px; color: var(--dim); margin: 0; }
+  .tile-hero    { grid-column: span 4; }
+  .tile-results { grid-column: span 2; padding: 0; overflow: hidden; }
+  .tile-trivia  { grid-column: span 2; }
+  .tile-cmp     { grid-column: span 2; }
+  .tile-ldr     { grid-column: span 2; }
+  .tile-ed      { grid-column: span 6; }
 
-  /* ── Compare hero ─────────────────────────────────────────────────── */
-  .cmp-hero-sec {
-    background: var(--surface); border-bottom: 1px solid var(--line);
-    margin: 0 -20px 20px; padding: 32px 20px 24px;
-  }
-  .cmp-hl {
-    font-family: var(--disp);
-    font-weight: 700; font-size: clamp(22px, 4.5vw, 36px);
-    text-transform: uppercase; letter-spacing: .01em;
-    margin: 0 0 6px; line-height: 1.1; color: var(--ink);
-  }
-  .cmp-hl-sub { font-size: 13px; color: var(--dim); margin: 0 0 18px; }
-  #home-cmp { margin-bottom: 16px; }
-  .cmp-chips { display: flex; flex-wrap: wrap; gap: 6px; }
-  .cmp-chip {
-    font-size: 12px; font-weight: 500;
-    padding: 5px 12px; border-radius: 20px;
-    border: 1px solid var(--line); background: var(--bg);
-    color: var(--ink); text-decoration: none; white-space: nowrap;
-  }
-  .cmp-chip:hover { border-color: var(--red); color: var(--red); }
-
-  /* ── Dynamic sections mount point ─────────────────────────────────── */
-  #home-dynamic { margin-bottom: 8px; }
-
-  /* ── Fantasy module ───────────────────────────────────────────────── */
-  .fant-module { margin-bottom: 20px; }
-  .module-hd {
-    display: flex; align-items: baseline; justify-content: space-between;
-    margin-bottom: 8px;
-  }
-  .module-label { font-size: 11px; font-weight: 600; text-transform: uppercase; letter-spacing: .07em; color: var(--dim); }
-  .module-all { font-size: 12px; color: var(--dim); text-decoration: none; }
-  .module-all:hover { color: var(--ink); text-decoration: underline; }
-
-  .fcard {
-    background: var(--surface); border: 1px solid var(--line); border-radius: 8px;
-    overflow: hidden; margin-bottom: 8px;
-  }
-  .fcard-hd {
+  /* ── Tile header ────────────────────────────────────────────────────── */
+  .tile-hd {
     display: flex; align-items: center; justify-content: space-between;
-    padding: 8px 12px 0;
+    margin-bottom: 12px;
   }
-  .fcard-title { font-size: 11px; font-weight: 600; color: var(--dim); text-transform: uppercase; letter-spacing: .06em; }
-  .tier {
-    font-size: 9px; font-weight: 600; text-transform: uppercase; letter-spacing: .08em;
-    padding: 2px 6px; border-radius: 3px;
+  .tile-label {
+    font-size: 10px; font-weight: 700; text-transform: uppercase;
+    letter-spacing: .08em; color: var(--faint);
   }
-  .tier.real    { background: #e8f5e9; color: #2e7d32; }
-  .tier.derived { background: #f3f0ff; color: #5c35bf; }
+  .tile-more {
+    font-size: 11px; color: var(--dim); text-decoration: none;
+    font-family: var(--mono);
+  }
+  .tile-more:hover { color: var(--ink); text-decoration: underline; }
 
-  .fcard table { width: 100%; border-collapse: collapse; font-size: 13px; }
-  .fcard th {
-    text-align: right; padding: 6px 12px 4px;
-    font-size: 10px; font-weight: 600; color: var(--faint);
-    text-transform: uppercase; letter-spacing: .04em;
+  /* ── Hero tile ─────────────────────────────────────────────────────── */
+  .hero-loading { font-size: 13px; color: var(--faint); }
+  .hero-body    { display: flex; flex-direction: column; gap: 6px; }
+  .hero-name {
+    font-family: var(--disp);
+    font-weight: 700; font-size: clamp(22px, 4vw, 34px);
+    letter-spacing: -.01em; line-height: 1.1;
+    color: var(--ink); text-decoration: none;
   }
-  .fcard th.l { text-align: left; }
-  .fcard th.r { text-align: right; }
-  .fcard td { padding: 7px 12px; border-top: 1px solid var(--line); }
-  td.nm { text-align: left; font-weight: 500; }
-  td.nm a { color: var(--ink); text-decoration: none; }
-  td.nm a:hover { text-decoration: underline; }
-  td.tm { text-align: left; color: var(--dim); font-size: 12px; }
-  td.n {
-    text-align: right; color: var(--dim);
-    font-variant-numeric: tabular-nums; font-feature-settings: "tnum";
-    font-family: var(--mono); font-size: 12px;
+  .hero-name:hover { color: var(--red); }
+  .hero-sub {
+    font-size: 12px; color: var(--dim); font-family: var(--mono);
+    margin-bottom: 6px;
   }
-  td.hi { color: var(--ink); font-weight: 600; }
-  td.delta.pos { color: #1a7a40; }
-  td.delta.neg { color: #c0392b; }
+  .hero-reroll {
+    font-size: 11px; color: var(--dim); background: none; border: none;
+    cursor: pointer; padding: 0; font-family: var(--mono);
+    text-decoration: underline; text-underline-offset: 2px;
+  }
+  .hero-reroll:hover { color: var(--ink); }
+  .hero-threads { display: flex; flex-direction: column; gap: 1px; }
+  .thread {
+    display: grid;
+    grid-template-columns: 76px 1fr auto;
+    gap: 8px; align-items: baseline;
+    padding: 7px 10px; margin: 0 -10px;
+    text-decoration: none; color: var(--ink);
+    border-radius: 4px;
+  }
+  .thread:hover { background: var(--bg); }
+  .thread-rel {
+    font-size: 10px; font-weight: 600; text-transform: uppercase;
+    letter-spacing: .06em; color: var(--faint); flex-shrink: 0;
+  }
+  .thread-label { font-size: 13px; font-weight: 500; color: var(--ink); }
+  .thread-meta  {
+    font-size: 11px; color: var(--dim); font-family: var(--mono);
+    white-space: nowrap; flex-shrink: 0;
+  }
 
-  .bridge { padding-bottom: 10px; }
-  .bridge-row { display: flex; align-items: baseline; gap: 10px; padding: 8px 12px 4px; }
-  .bridge-name { font-size: 15px; font-weight: 600; color: var(--ink); text-decoration: none; }
-  .bridge-name:hover { text-decoration: underline; }
-  .bridge-score { font-size: 14px; color: var(--dim); font-variant-numeric: tabular-nums; }
-  .bridge-note { font-size: 11px; color: var(--faint); margin: 4px 12px 0; line-height: 1.4; font-style: italic; }
+  /* ── Trivia tile ────────────────────────────────────────────────────── */
+  .triv-body    { display: flex; flex-direction: column; gap: 8px; }
+  .triv-prompt  { font-size: 12px; color: var(--dim); margin: 0; }
+  .triv-chain   {
+    font-size: 13px; font-weight: 500; color: var(--ink);
+    line-height: 1.5; margin: 0;
+  }
+  .triv-opts    { display: flex; flex-direction: column; gap: 5px; margin-top: 4px; }
+  .triv-opt {
+    text-align: left; background: var(--bg); border: 1px solid var(--line);
+    border-radius: 5px; padding: 8px 12px; font-size: 13px; font-weight: 500;
+    color: var(--ink); cursor: pointer; transition: border-color .1s;
+  }
+  .triv-opt:hover:not(:disabled) { border-color: var(--dim); }
+  .triv-opt:disabled { cursor: default; }
+  .triv-opt.correct { background: #e8f5e9; border-color: #2e7d32; color: #1a5f33; }
+  .triv-opt.wrong   { background: #fdecea; border-color: #c0392b; color: #922b21; }
+  .triv-result {
+    font-size: 13px; font-weight: 500; padding: 6px 10px;
+    border-radius: 5px; margin-top: 2px;
+  }
+  .triv-result.ok { background: #e8f5e9; color: #1a5f33; }
+  .triv-result.no { background: #fdecea; color: #922b21; }
+  .triv-more {
+    font-size: 12px; color: var(--red); text-decoration: none; font-weight: 600;
+  }
+  .triv-more:hover { text-decoration: underline; }
 
-  /* ── Nav grid ─────────────────────────────────────────────────────── */
+  /* ── f1δ leaderboard tile ───────────────────────────────────────────── */
+  .ldr-list { list-style: none; margin: 0; padding: 0; display: flex; flex-direction: column; gap: 1px; }
+  .ldr-row  {
+    display: grid; grid-template-columns: 18px 1fr auto;
+    gap: 8px; align-items: baseline;
+    padding: 6px 0; border-bottom: 1px solid var(--line);
+    font-size: 13px;
+  }
+  .ldr-row:last-child { border-bottom: none; }
+  .ldr-pos  { font-size: 11px; color: var(--faint); font-family: var(--mono); text-align: right; }
+  .ldr-name { color: var(--ink); text-decoration: none; font-weight: 500; }
+  .ldr-name:hover { text-decoration: underline; }
+  .ldr-pts  { font-family: var(--mono); font-size: 12px; color: var(--dim); font-variant-numeric: tabular-nums; }
+  .ldr-empty { font-size: 13px; color: var(--faint); margin: 0; }
+  .ldr-note  { font-size: 11px; color: var(--faint); margin: 10px 0 0; font-style: italic; }
+
+  /* ── Editorial slot ─────────────────────────────────────────────────── */
+  .tile-ed { display: flex; align-items: center; gap: 16px; }
+  .tile-ed .tile-hd { margin-bottom: 0; flex-shrink: 0; }
+  .ed-coming { font-size: 13px; color: var(--dim); margin: 0; flex: 1; }
+  .ed-link   { font-size: 12px; color: var(--dim); text-decoration: none; flex-shrink: 0; white-space: nowrap; }
+  .ed-link:hover { color: var(--ink); text-decoration: underline; }
+
+  /* ── Nav grid ───────────────────────────────────────────────────────── */
   .nav-grid {
     display: grid;
     grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
@@ -710,129 +720,86 @@ const hasFant = topPPM.length > 0 || risers.length > 0 || latestF1dSummary;
   .nt-label { font-size: 14px; font-weight: 600; }
   .nt-desc  { font-size: 12px; color: var(--dim); }
 
+  /* ── Responsive ─────────────────────────────────────────────────────── */
+  @media (max-width: 640px) {
+    .tile-hero, .tile-results, .tile-trivia, .tile-cmp, .tile-ldr, .tile-ed {
+      grid-column: span 6;
+    }
+    .tile-ed { flex-direction: column; align-items: flex-start; gap: 6px; }
+  }
   @media (max-width: 500px) {
     .home { padding-left: 12px; padding-right: 12px; }
-    .cmp-hero-sec { margin-left: -12px; margin-right: -12px; padding-left: 12px; padding-right: 12px; }
-    .hero { margin-left: -12px; margin-right: -12px; padding-left: 12px; padding-right: 12px; }
     .nav-grid { grid-template-columns: 1fr 1fr; }
   }
 </style>
 
 <style is:global>
-  /* React-rendered dynamic sections */
-  .h-search { position: relative; margin-bottom: 16px; }
-  .h-search input {
-    width: 100%; box-sizing: border-box;
-    font-family: system-ui, -apple-system, "Segoe UI", Roboto, sans-serif;
-    font-size: 16px; color: var(--ink); background: var(--surface);
-    border: 1px solid var(--line); border-radius: 7px;
-    padding: 13px 15px; outline: none; transition: border-color .15s;
-  }
-  .h-search input:focus { border-color: var(--ink); }
-  .h-search input::placeholder { color: var(--faint); }
-  .h-results {
-    position: absolute; left: 0; right: 0; top: calc(100% + 6px);
-    background: var(--surface); border: 1px solid var(--line); border-radius: 7px;
-    box-shadow: 0 18px 40px -18px rgba(0,0,0,.28); overflow: hidden; z-index: 20;
-    max-height: 70vh; overflow-y: auto;
-  }
-  .h-group { border-bottom: 1px solid var(--line2); }
-  .h-group:last-child { border-bottom: none; }
-  .h-group-label {
-    font-size: 10px; font-weight: 700; letter-spacing: .07em; text-transform: uppercase;
-    color: var(--faint); padding: 7px 14px 3px;
-  }
-  .h-row {
-    display: flex; align-items: center; justify-content: space-between; gap: 11px;
-    padding: 9px 14px; text-decoration: none; color: inherit;
-  }
-  .h-row:hover, .h-row.active { background: var(--hover); }
-  .h-row .rn { font-size: 13px; font-weight: 500; color: var(--ink); min-width: 0; }
-  .h-row .rs {
-    flex-shrink: 0; font-family: var(--mono); font-size: 10px; color: var(--faint);
-  }
-  .h-loading { padding: 12px 14px; font-size: 13px; color: var(--faint); }
-
-  .h-sect { margin-bottom: 16px; }
-  .h-sect-hd {
+  /* Results card (React-rendered, no CID) */
+  .res-hd {
     display: flex; align-items: baseline; justify-content: space-between;
-    padding: 0 2px 7px;
+    padding: 14px 14px 8px;
   }
-  .h-sect-hd h2 {
-    font-family: var(--disp);
-    font-weight: 700; font-size: 15px; letter-spacing: .06em;
-    text-transform: uppercase; margin: 0; color: var(--ink);
-  }
-  .h-sect-hd span {
-    font-family: var(--mono);
-    font-size: 10px; letter-spacing: .06em; color: var(--faint);
-  }
-  .h-card {
-    background: var(--surface); border: 1px solid var(--line); border-radius: 6px; overflow: hidden;
-  }
+  .res-name { font-size: 13px; font-weight: 600; color: var(--ink); }
+  .res-rnd  { font-family: var(--mono); font-size: 10px; color: var(--faint); }
+  .h-empty  { padding: 14px; font-size: 13px; color: var(--faint); }
+
+  .h-card { overflow: hidden; }
   .h-card table { width: 100%; border-collapse: collapse; font-variant-numeric: tabular-nums; }
   .h-card thead th {
     font-family: var(--mono);
-    font-size: 9.5px; font-weight: 500; letter-spacing: .08em; text-transform: uppercase;
-    color: var(--faint); text-align: right; padding: 9px 10px;
+    font-size: 9px; font-weight: 500; letter-spacing: .08em; text-transform: uppercase;
+    color: var(--faint); text-align: right; padding: 6px 8px;
     border-bottom: 1px solid var(--line); white-space: nowrap;
   }
   .h-card thead th.l { text-align: left; }
   .h-card tbody td {
     font-family: var(--mono);
-    font-size: 12.5px; padding: 10px; border-bottom: 1px solid var(--line2);
+    font-size: 11.5px; padding: 7px 8px; border-bottom: 1px solid var(--line);
     text-align: right; color: var(--dim); white-space: nowrap;
   }
   .h-card tbody tr:last-child td { border-bottom: none; }
   .h-card tbody tr.clik { cursor: pointer; }
   .h-card tbody tr.clik:hover td { background: var(--hover); }
-  .h-card td.pos { text-align: left; color: var(--ink); font-weight: 600; width: 34px; }
+  .h-card td.pos { text-align: left; color: var(--ink); font-weight: 600; width: 24px; }
   .h-card td.pos.dnf { color: var(--faint); }
-  .h-card td.drv { text-align: left; font-family: system-ui, -apple-system, sans-serif; }
-  .h-card td.drv .dot { display: inline-block; width: 8px; height: 8px; border-radius: 2px; margin-right: 8px; vertical-align: middle; }
+  .h-card td.drv { text-align: left; }
+  .h-card td.drv .dot { display: inline-block; width: 7px; height: 7px; border-radius: 2px; margin-right: 6px; vertical-align: middle; }
   .h-card td.drv .cc {
     font-family: var(--disp);
-    font-weight: 700; font-size: 13px; letter-spacing: .03em; color: var(--ink);
+    font-weight: 700; font-size: 12px; letter-spacing: .03em; color: var(--ink);
   }
-  .h-card td.drv .tn { color: var(--faint); font-size: 11px; margin-left: 7px; }
-  .h-card td.drv .go { color: var(--faint); font-family: var(--mono); font-size: 11px; margin-left: 6px; opacity: 0; }
-  .h-card tr.clik:hover td.drv .go { opacity: 1; color: var(--red); }
-  .h-card td.gap { color: var(--dim); }
+  .h-card td.gap { color: var(--dim); font-size: 11px; }
   .h-card td.gap.lead { color: var(--ink); font-weight: 600; }
-  .h-card td.pts { color: var(--ink); font-weight: 600; width: 54px; }
+  .h-card td.pts { color: var(--ink); font-weight: 600; width: 40px; }
   .h-card td.pts.zero { color: var(--faint); font-weight: 400; }
 
-  /* ── Compare picker (home hero + /compare page share these) ───────── */
-  .cmp-picker { margin-top: 8px; }
-  .cmp-row { display: flex; align-items: flex-start; gap: 12px; flex-wrap: wrap; }
-  .cmp-vs {
-    font-family: var(--disp); font-weight: 700; font-size: 18px;
-    color: var(--faint); padding-top: 34px; flex-shrink: 0;
-  }
-  .di-wrap { flex: 1; min-width: 200px; }
+  /* Compare picker (React-rendered) */
+  .cmp-picker { }
+  .cmp-row { display: flex; flex-direction: column; gap: 8px; }
+  .di-wrap { }
   .di-label {
     font-size: 10px; font-weight: 700; text-transform: uppercase;
-    letter-spacing: .07em; color: var(--faint); margin-bottom: 6px;
+    letter-spacing: .07em; color: var(--faint); margin-bottom: 5px;
   }
   .di-sel {
     display: flex; align-items: center; gap: 8px;
     background: var(--surface); border: 1px solid var(--line);
-    border-radius: 7px; padding: 10px 12px; min-height: 44px;
+    border-radius: 7px; padding: 9px 12px; min-height: 40px;
   }
-  .di-name { font-size: 14px; font-weight: 600; color: var(--red); flex: 1; }
+  .di-name  { font-size: 13px; font-weight: 600; color: var(--red); flex: 1; }
   .di-years { font-family: var(--mono); font-size: 11px; color: var(--faint); }
   .di-clear {
     background: none; border: none; cursor: pointer;
-    font-size: 18px; color: var(--faint); padding: 0 2px; line-height: 1;
+    font-size: 16px; color: var(--faint); padding: 0 2px; line-height: 1;
   }
   .di-clear:hover { color: var(--ink); }
   .di-box { position: relative; }
   .di-box input {
     width: 100%; box-sizing: border-box;
     font-family: system-ui, -apple-system, sans-serif;
-    font-size: 14px; color: var(--ink); background: var(--surface);
+    font-size: 13px; color: var(--ink); background: var(--surface);
     border: 1px solid var(--line); border-radius: 7px;
-    padding: 11px 13px; outline: none; transition: border-color .15s;
+    padding: 9px 12px; outline: none; transition: border-color .15s;
   }
   .di-box input:focus { border-color: var(--ink); }
   .di-box input::placeholder { color: var(--faint); }
@@ -844,28 +811,23 @@ const hasFant = topPPM.length > 0 || risers.length > 0 || latestF1dSummary;
   }
   .di-opt {
     display: flex; align-items: center; justify-content: space-between;
-    width: 100%; padding: 9px 13px; background: none; border: none;
+    width: 100%; padding: 8px 12px; background: none; border: none;
     cursor: pointer; text-align: left; border-bottom: 1px solid var(--line);
     gap: 8px;
   }
   .di-opt:last-child { border-bottom: none; }
   .di-opt:hover, .di-opt.active { background: var(--hover, #f0f0ed); }
-  .di-opt-name { font-size: 13px; font-weight: 500; color: var(--ink); }
-  .di-opt-yr { font-family: var(--mono); font-size: 10px; color: var(--faint); }
-  .cmp-warn { font-size: 13px; color: var(--red); margin: 10px 0 0; }
-  .cmp-actions { margin-top: 20px; }
+  .di-opt-name { font-size: 12px; font-weight: 500; color: var(--ink); }
+  .di-opt-yr   { font-family: var(--mono); font-size: 10px; color: var(--faint); }
+  .cmp-warn    { font-size: 12px; color: var(--red); margin: 8px 0 0; }
+  .cmp-actions { margin-top: 12px; }
   .cmp-btn {
     background: var(--red); color: #fff;
     border: none; border-radius: 7px; cursor: pointer;
     font-family: system-ui, -apple-system, sans-serif;
-    font-size: 14px; font-weight: 600;
-    padding: 11px 28px; transition: background .15s;
+    font-size: 13px; font-weight: 600;
+    padding: 9px 20px; transition: background .15s; width: 100%;
   }
   .cmp-btn:disabled { background: var(--line); color: var(--faint); cursor: not-allowed; }
   .cmp-btn:not(:disabled):hover { background: #b80500; }
-  @media (max-width: 500px) {
-    #home-cmp .cmp-row { flex-direction: column; }
-    #home-cmp .cmp-vs { display: none; }
-    #home-cmp .di-wrap { min-width: 0; }
-  }
 </style>
