@@ -1,15 +1,15 @@
-import { c as createComponent } from './astro-component_BfjQzaFp.mjs';
+import { c as createComponent } from './astro-component_CAMRepV7.mjs';
 import 'piccolore';
-import { r as renderTemplate, i as renderSlot, f as addAttribute, j as renderHead, m as maybeRenderHead, k as renderComponent, l as Fragment } from './ssr-function_BdGwNJjg.mjs';
+import { r as renderTemplate, i as renderSlot, f as addAttribute, j as renderHead, m as maybeRenderHead, k as renderComponent, l as Fragment } from './ssr-function_pDsPU1C-.mjs';
 import fs from 'node:fs';
 import path from 'node:path';
 import 'clsx';
 
 var __freeze$1 = Object.freeze;
 var __defProp$1 = Object.defineProperty;
-var __template$1 = (cooked, raw) => __freeze$1(__defProp$1(cooked, "raw", { value: __freeze$1(cooked.slice()) }));
+var __template$1 = (cooked, raw) => __freeze$1(__defProp$1(cooked, "raw", { value: __freeze$1(raw || cooked.slice()) }));
 var _a$1;
-const $$BaseLayout = createComponent(($$result, $$props, $$slots) => {
+const $$BaseLayout = createComponent(async ($$result, $$props, $$slots) => {
   const Astro2 = $$result.createAstro($$props, $$slots);
   Astro2.self = $$BaseLayout;
   const { title, description, canonical } = Astro2.props;
@@ -25,6 +25,7 @@ const $$BaseLayout = createComponent(($$result, $$props, $$slots) => {
     if (p.startsWith("/records")) return "records";
     if (p.startsWith("/fantasy")) return "fantasy";
     if (p.startsWith("/compare")) return "compare";
+    if (p.startsWith("/trivia")) return "trivia";
     return "";
   }
   const current = navKey(pathname);
@@ -52,7 +53,255 @@ const $$BaseLayout = createComponent(($$result, $$props, $$slots) => {
     <\/script><!-- AdSense --><script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-6298973348658731" crossorigin="anonymous"><\/script><!-- Google Analytics (GA4) --><script async src="https://www.googletagmanager.com/gtag/js?id=G-WJ7VNMC69K"><\/script><script>
       gtag('js', new Date());
       gtag('config', 'G-WJ7VNMC69K');
-    <\/script>`, '</head> <body style="margin:0;background:#f4f4f1" data-astro-cid-37fxchfa> <nav class="site-nav" data-astro-cid-37fxchfa> <div class="nav-inner" data-astro-cid-37fxchfa> <a class="wordmark" href="/" data-astro-cid-37fxchfa>F1<svg class="wm-tri" aria-hidden="true" width="11" height="10" viewBox="0 0 100 86" data-astro-cid-37fxchfa><path d="M50 4 L97 82 L3 82 Z" fill="currentColor" data-astro-cid-37fxchfa></path></svg>DELTA</a> <div class="nav-links" id="nav-links" data-astro-cid-37fxchfa> <a href="/drivers"', ' data-astro-cid-37fxchfa>Drivers</a> <a href="/teams"', " data-astro-cid-37fxchfa>Teams</a> <div", ' data-astro-cid-37fxchfa> <button class="nav-group-btn" aria-haspopup="true" aria-expanded="false" data-astro-cid-37fxchfa>People <span class="caret" aria-hidden="true" data-astro-cid-37fxchfa>&#9660;</span></button> <div class="nav-group-panel" role="menu" data-astro-cid-37fxchfa> <a href="/engineers" role="menuitem"', ' data-astro-cid-37fxchfa>Engineers</a> <a href="/principals" role="menuitem"', ' data-astro-cid-37fxchfa>Team Principals</a> <a href="/technical-directors" role="menuitem"', ' data-astro-cid-37fxchfa>Technical Directors</a> </div> </div> <a href="/standings"', ' data-astro-cid-37fxchfa>Seasons</a> <a href="/grands-prix"', ' data-astro-cid-37fxchfa>GPs</a> <a href="/circuits"', ' data-astro-cid-37fxchfa>Circuits</a> <a href="/records"', ' data-astro-cid-37fxchfa>Records</a> <a href="/compare"', ' data-astro-cid-37fxchfa>Compare</a> <a href="/fantasy"', ' data-astro-cid-37fxchfa>Fantasy</a> </div> <a class="donate-btn" href="https://ko-fi.com/f1delta" target="_blank" rel="noopener noreferrer" data-astro-cid-37fxchfa>♥ Donate</a> <button class="hamburger" id="nav-hamburger" aria-label="Toggle menu" aria-expanded="false" aria-controls="nav-links" data-astro-cid-37fxchfa>&#9776;</button> </div> </nav> ', ' <footer class="site-footer" data-astro-cid-37fxchfa> <div class="footer-inner" data-astro-cid-37fxchfa> <nav class="footer-links" data-astro-cid-37fxchfa> <a href="/about" data-astro-cid-37fxchfa>About</a> <a href="/methodology" data-astro-cid-37fxchfa>Methodology</a> <a href="/contact" data-astro-cid-37fxchfa>Contact</a> <a href="/privacy-policy" data-astro-cid-37fxchfa>Privacy Policy</a> <a href="/terms" data-astro-cid-37fxchfa>Terms</a> <a href="https://ko-fi.com/f1delta" target="_blank" rel="noopener" data-astro-cid-37fxchfa>Donate</a> </nav> <p class="footer-copy" data-astro-cid-37fxchfa>&copy; ', ' F1 Delta</p> <p class="footer-disclaimer" data-astro-cid-37fxchfa>F1 Delta is an unofficial, independent fan project and is not affiliated with, endorsed by, or connected to Formula 1, the FIA, or related entities. F1 and FORMULA 1 are trademarks of their respective owners.</p> </div> </footer>  <script>\n(function () {\n  var burger = document.getElementById("nav-hamburger");\n  var links = document.getElementById("nav-links");\n  if (burger && links) {\n    burger.addEventListener("click", function () {\n      var open = links.classList.toggle("open");\n      burger.setAttribute("aria-expanded", open ? "true" : "false");\n    });\n  }\n\n  // Desktop: People dropdown click-open (for touch/hybrid devices)\n  var gpBtn = document.querySelector(".nav-group-btn");\n  if (gpBtn) {\n    gpBtn.addEventListener("click", function () {\n      if (window.innerWidth > 620) {\n        var grp = gpBtn.closest(".nav-group");\n        if (grp) {\n          var wasOpen = grp.classList.contains("open");\n          grp.classList.toggle("open");\n          gpBtn.setAttribute("aria-expanded", wasOpen ? "false" : "true");\n        }\n      }\n    });\n  }\n\n  // Close dropdown when clicking outside\n  document.addEventListener("click", function (e) {\n    var grp = document.querySelector(".nav-group.open");\n    if (grp && !grp.contains(e.target)) {\n      grp.classList.remove("open");\n      var btn = grp.querySelector(".nav-group-btn");\n      if (btn) btn.setAttribute("aria-expanded", "false");\n    }\n  });\n})();\n<\/script></body></html>'])), pageTitle, description && renderTemplate`<meta name="description"${addAttribute(description, "content")}>`, canonical && renderTemplate`<link rel="canonical"${addAttribute(canonical, "href")}>`, renderSlot($$result, $$slots["head"]), renderHead(), addAttribute(current === "drivers" ? "page" : void 0, "aria-current"), addAttribute(current === "teams" ? "page" : void 0, "aria-current"), addAttribute(["nav-group", { "is-active": current === "people" }], "class:list"), addAttribute(pathname.startsWith("/engineers") ? "page" : void 0, "aria-current"), addAttribute(pathname.startsWith("/principals") ? "page" : void 0, "aria-current"), addAttribute(pathname.startsWith("/technical-directors") ? "page" : void 0, "aria-current"), addAttribute(current === "standings" ? "page" : void 0, "aria-current"), addAttribute(current === "gps" ? "page" : void 0, "aria-current"), addAttribute(current === "circuits" ? "page" : void 0, "aria-current"), addAttribute(current === "records" ? "page" : void 0, "aria-current"), addAttribute(current === "compare" ? "page" : void 0, "aria-current"), addAttribute(current === "fantasy" ? "page" : void 0, "aria-current"), renderSlot($$result, $$slots["default"]), (/* @__PURE__ */ new Date()).getFullYear());
+    <\/script>`, '</head> <body style="margin:0;background:#f4f4f1" data-astro-cid-37fxchfa> <nav class="site-nav" data-astro-cid-37fxchfa> <div class="nav-inner" data-astro-cid-37fxchfa> <a class="wordmark" href="/" data-astro-cid-37fxchfa>F1<svg class="wm-tri" aria-hidden="true" width="11" height="10" viewBox="0 0 100 86" data-astro-cid-37fxchfa><path d="M50 4 L97 82 L3 82 Z" fill="currentColor" data-astro-cid-37fxchfa></path></svg>DELTA</a> <div class="nav-links" id="nav-links" data-astro-cid-37fxchfa> <a href="/drivers"', ' data-astro-cid-37fxchfa>Drivers</a> <a href="/teams"', " data-astro-cid-37fxchfa>Teams</a> <div", ' data-astro-cid-37fxchfa> <button class="nav-group-btn" aria-haspopup="true" aria-expanded="false" data-astro-cid-37fxchfa>People <span class="caret" aria-hidden="true" data-astro-cid-37fxchfa>&#9660;</span></button> <div class="nav-group-panel" role="menu" data-astro-cid-37fxchfa> <a href="/engineers" role="menuitem"', ' data-astro-cid-37fxchfa>Engineers</a> <a href="/principals" role="menuitem"', ' data-astro-cid-37fxchfa>Team Principals</a> <a href="/technical-directors" role="menuitem"', ' data-astro-cid-37fxchfa>Technical Directors</a> </div> </div> <a href="/standings"', ' data-astro-cid-37fxchfa>Seasons</a> <a href="/grands-prix"', ' data-astro-cid-37fxchfa>GPs</a> <a href="/circuits"', ' data-astro-cid-37fxchfa>Circuits</a> <a href="/records"', ' data-astro-cid-37fxchfa>Records</a> <a href="/compare"', ' data-astro-cid-37fxchfa>Compare</a> <a href="/fantasy"', ' data-astro-cid-37fxchfa>Fantasy</a> <a href="/trivia"', ' data-astro-cid-37fxchfa>Quiz</a> <!-- Inline search — always visible on desktop, in dropdown on mobile --> <div class="nav-srch-wrap" id="nav-srch-wrap" data-astro-cid-37fxchfa> <input type="text" id="nav-srch-in" class="nav-srch-in" placeholder="Search…" autocomplete="off" spellcheck="false" aria-label="Search" data-astro-cid-37fxchfa> <div class="nav-srch-res" id="nav-srch-res" hidden data-astro-cid-37fxchfa></div> </div> </div> <a class="donate-btn" href="https://ko-fi.com/f1delta" target="_blank" rel="noopener noreferrer" data-astro-cid-37fxchfa>♥ Donate</a> <button class="hamburger" id="nav-hamburger" aria-label="Toggle menu" aria-expanded="false" aria-controls="nav-links" data-astro-cid-37fxchfa>&#9776;</button> </div> </nav> ', ' <footer class="site-footer" data-astro-cid-37fxchfa> <div class="footer-inner" data-astro-cid-37fxchfa> <nav class="footer-links" data-astro-cid-37fxchfa> <a href="/about" data-astro-cid-37fxchfa>About</a> <a href="/methodology" data-astro-cid-37fxchfa>Methodology</a> <a href="/contact" data-astro-cid-37fxchfa>Contact</a> <a href="/privacy-policy" data-astro-cid-37fxchfa>Privacy Policy</a> <a href="/terms" data-astro-cid-37fxchfa>Terms</a> <a href="https://ko-fi.com/f1delta" target="_blank" rel="noopener" data-astro-cid-37fxchfa>Donate</a> </nav> <p class="footer-copy" data-astro-cid-37fxchfa>&copy; ', ` F1 Delta</p> <p class="footer-disclaimer" data-astro-cid-37fxchfa>F1 Delta is an unofficial, independent fan project and is not affiliated with, endorsed by, or connected to Formula 1, the FIA, or related entities. F1 and FORMULA 1 are trademarks of their respective owners.</p> </div> </footer>  <script>
+(function () {
+  var burger = document.getElementById("nav-hamburger");
+  var links  = document.getElementById("nav-links");
+  if (burger && links) {
+    burger.addEventListener("click", function () {
+      var open = links.classList.toggle("open");
+      burger.setAttribute("aria-expanded", open ? "true" : "false");
+    });
+  }
+
+  // Desktop: People dropdown click-open (for touch/hybrid devices)
+  var gpBtn = document.querySelector(".nav-group-btn");
+  if (gpBtn) {
+    gpBtn.addEventListener("click", function () {
+      if (window.innerWidth > 620) {
+        var grp = gpBtn.closest(".nav-group");
+        if (grp) {
+          var wasOpen = grp.classList.contains("open");
+          grp.classList.toggle("open");
+          gpBtn.setAttribute("aria-expanded", wasOpen ? "false" : "true");
+        }
+      }
+    });
+  }
+
+  // Close dropdown when clicking outside
+  document.addEventListener("click", function (e) {
+    var grp = document.querySelector(".nav-group.open");
+    if (grp && !grp.contains(e.target)) {
+      grp.classList.remove("open");
+      var btn = grp.querySelector(".nav-group-btn");
+      if (btn) btn.setAttribute("aria-expanded", "false");
+    }
+  });
+
+  // ── Inline nav search ────────────────────────────────────────────────
+  var srchWrap = document.getElementById("nav-srch-wrap");
+  var srchIn   = document.getElementById("nav-srch-in");
+  var srchRes  = document.getElementById("nav-srch-res");
+  var _idx = null;
+
+  async function ensureIdx() {
+    if (_idx) return;
+    try { _idx = await fetch("/search-index.json").then(function(r){ return r.json(); }); } catch(e){}
+  }
+
+  function matchIdx(q) {
+    if (!_idx || !q.trim()) return [];
+    var n = q.trim().toLowerCase();
+    return _idx
+      .filter(function(e) {
+        var lbl = (e.label || "").toLowerCase();
+        return lbl.startsWith(n)
+          || lbl.split(/\\s+/).some(function(w){ return w.startsWith(n); })
+          || (e.code || "").toLowerCase().startsWith(n)
+          || (e.terms || []).some(function(t){ return t.startsWith(n); });
+      })
+      .sort(function(a, b) {
+        var as = (a.label||"").toLowerCase().startsWith(n);
+        var bs = (b.label||"").toLowerCase().startsWith(n);
+        if (as && !bs) return -1; if (bs && !as) return 1;
+        return (b.ly||0) - (a.ly||0);
+      })
+      .slice(0, 7);
+  }
+
+  function renderRes(matches) {
+    if (!srchRes) return;
+    if (!matches.length) { srchRes.hidden = true; return; }
+    srchRes.innerHTML = matches.map(function(e) {
+      var meta = e.fy ? (e.fy === e.ly ? e.fy : e.fy + "–" + e.ly) : (e.type || "");
+      return '<a class="srch-opt" href="' + e.url + '">'
+        + '<span class="srch-opt-label">' + e.label + '</span>'
+        + '<span class="srch-opt-meta">' + meta + '</span>'
+        + '</a>';
+    }).join("");
+    srchRes.hidden = false;
+  }
+
+  if (srchIn) {
+    srchIn.addEventListener("input", async function() {
+      await ensureIdx();
+      renderRes(matchIdx(srchIn.value));
+    });
+    srchIn.addEventListener("keydown", function(e) {
+      var opts = srchRes ? Array.from(srchRes.querySelectorAll(".srch-opt")) : [];
+      var fi = opts.indexOf(document.activeElement);
+      if (e.key === "ArrowDown") {
+        e.preventDefault();
+        if (fi < 0 && opts[0]) opts[0].focus();
+        else if (fi < opts.length - 1) opts[fi+1].focus();
+      } else if (e.key === "ArrowUp") {
+        e.preventDefault();
+        if (fi > 0) opts[fi-1].focus();
+        else srchIn.focus();
+      } else if (e.key === "Escape") {
+        if (srchRes) srchRes.hidden = true;
+        srchIn.blur();
+      } else if (e.key === "Enter" && fi < 0 && opts.length) {
+        opts[0].click();
+      }
+    });
+  }
+
+  // Hide results when clicking outside the search wrapper
+  document.addEventListener("click", function(e) {
+    if (srchWrap && srchRes && !srchRes.hidden && !srchWrap.contains(e.target)) {
+      srchRes.hidden = true;
+    }
+  });
+})();
+<\/script></body></html>`], ['<html lang="en" data-astro-cid-37fxchfa> <head><meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1"><title>', "</title>", "", '<link rel="icon" type="image/svg+xml" href="/favicon.svg"><link rel="icon" type="image/x-icon" href="/favicon.ico" sizes="any"><link rel="apple-touch-icon" href="/apple-touch-icon.png"><link rel="stylesheet" href="/tokens.css"><link rel="stylesheet" href="/f1-table.css">', `<script defer src="https://static.cloudflareinsights.com/beacon.min.js" data-cf-beacon="{&quot;token&quot;:&quot;231dcb0acef2461c8d76032d94a31207&quot;}"><\/script><link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin><link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Barlow+Condensed:wght@700&family=JetBrains+Mono:wght@400;700&display=swap"><!-- Google Consent Mode v2 — must fire BEFORE any Google tag (AdSense, GA4) --><script>
+      window.dataLayer = window.dataLayer || [];
+      function gtag(){dataLayer.push(arguments);}
+      // EEA + UK: denied pending consent banner (GDPR requires prior opt-in)
+      gtag('consent', 'default', {
+        'ad_storage': 'denied',
+        'ad_user_data': 'denied',
+        'ad_personalization': 'denied',
+        'analytics_storage': 'denied',
+        'wait_for_update': 500,
+        'region': ['AT','BE','BG','HR','CY','CZ','DK','EE','FI','FR','DE','GR',
+                   'HU','IE','IT','LV','LT','LU','MT','NL','PL','PT','RO','SK',
+                   'SI','ES','SE','IS','LI','NO','GB']
+      });
+      // Rest of world (US, etc.): granted — no prior-consent legal requirement
+      gtag('consent', 'default', {
+        'ad_storage': 'granted',
+        'ad_user_data': 'granted',
+        'ad_personalization': 'granted',
+        'analytics_storage': 'granted'
+      });
+    <\/script><!-- AdSense --><script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-6298973348658731" crossorigin="anonymous"><\/script><!-- Google Analytics (GA4) --><script async src="https://www.googletagmanager.com/gtag/js?id=G-WJ7VNMC69K"><\/script><script>
+      gtag('js', new Date());
+      gtag('config', 'G-WJ7VNMC69K');
+    <\/script>`, '</head> <body style="margin:0;background:#f4f4f1" data-astro-cid-37fxchfa> <nav class="site-nav" data-astro-cid-37fxchfa> <div class="nav-inner" data-astro-cid-37fxchfa> <a class="wordmark" href="/" data-astro-cid-37fxchfa>F1<svg class="wm-tri" aria-hidden="true" width="11" height="10" viewBox="0 0 100 86" data-astro-cid-37fxchfa><path d="M50 4 L97 82 L3 82 Z" fill="currentColor" data-astro-cid-37fxchfa></path></svg>DELTA</a> <div class="nav-links" id="nav-links" data-astro-cid-37fxchfa> <a href="/drivers"', ' data-astro-cid-37fxchfa>Drivers</a> <a href="/teams"', " data-astro-cid-37fxchfa>Teams</a> <div", ' data-astro-cid-37fxchfa> <button class="nav-group-btn" aria-haspopup="true" aria-expanded="false" data-astro-cid-37fxchfa>People <span class="caret" aria-hidden="true" data-astro-cid-37fxchfa>&#9660;</span></button> <div class="nav-group-panel" role="menu" data-astro-cid-37fxchfa> <a href="/engineers" role="menuitem"', ' data-astro-cid-37fxchfa>Engineers</a> <a href="/principals" role="menuitem"', ' data-astro-cid-37fxchfa>Team Principals</a> <a href="/technical-directors" role="menuitem"', ' data-astro-cid-37fxchfa>Technical Directors</a> </div> </div> <a href="/standings"', ' data-astro-cid-37fxchfa>Seasons</a> <a href="/grands-prix"', ' data-astro-cid-37fxchfa>GPs</a> <a href="/circuits"', ' data-astro-cid-37fxchfa>Circuits</a> <a href="/records"', ' data-astro-cid-37fxchfa>Records</a> <a href="/compare"', ' data-astro-cid-37fxchfa>Compare</a> <a href="/fantasy"', ' data-astro-cid-37fxchfa>Fantasy</a> <a href="/trivia"', ' data-astro-cid-37fxchfa>Quiz</a> <!-- Inline search — always visible on desktop, in dropdown on mobile --> <div class="nav-srch-wrap" id="nav-srch-wrap" data-astro-cid-37fxchfa> <input type="text" id="nav-srch-in" class="nav-srch-in" placeholder="Search…" autocomplete="off" spellcheck="false" aria-label="Search" data-astro-cid-37fxchfa> <div class="nav-srch-res" id="nav-srch-res" hidden data-astro-cid-37fxchfa></div> </div> </div> <a class="donate-btn" href="https://ko-fi.com/f1delta" target="_blank" rel="noopener noreferrer" data-astro-cid-37fxchfa>♥ Donate</a> <button class="hamburger" id="nav-hamburger" aria-label="Toggle menu" aria-expanded="false" aria-controls="nav-links" data-astro-cid-37fxchfa>&#9776;</button> </div> </nav> ', ' <footer class="site-footer" data-astro-cid-37fxchfa> <div class="footer-inner" data-astro-cid-37fxchfa> <nav class="footer-links" data-astro-cid-37fxchfa> <a href="/about" data-astro-cid-37fxchfa>About</a> <a href="/methodology" data-astro-cid-37fxchfa>Methodology</a> <a href="/contact" data-astro-cid-37fxchfa>Contact</a> <a href="/privacy-policy" data-astro-cid-37fxchfa>Privacy Policy</a> <a href="/terms" data-astro-cid-37fxchfa>Terms</a> <a href="https://ko-fi.com/f1delta" target="_blank" rel="noopener" data-astro-cid-37fxchfa>Donate</a> </nav> <p class="footer-copy" data-astro-cid-37fxchfa>&copy; ', ` F1 Delta</p> <p class="footer-disclaimer" data-astro-cid-37fxchfa>F1 Delta is an unofficial, independent fan project and is not affiliated with, endorsed by, or connected to Formula 1, the FIA, or related entities. F1 and FORMULA 1 are trademarks of their respective owners.</p> </div> </footer>  <script>
+(function () {
+  var burger = document.getElementById("nav-hamburger");
+  var links  = document.getElementById("nav-links");
+  if (burger && links) {
+    burger.addEventListener("click", function () {
+      var open = links.classList.toggle("open");
+      burger.setAttribute("aria-expanded", open ? "true" : "false");
+    });
+  }
+
+  // Desktop: People dropdown click-open (for touch/hybrid devices)
+  var gpBtn = document.querySelector(".nav-group-btn");
+  if (gpBtn) {
+    gpBtn.addEventListener("click", function () {
+      if (window.innerWidth > 620) {
+        var grp = gpBtn.closest(".nav-group");
+        if (grp) {
+          var wasOpen = grp.classList.contains("open");
+          grp.classList.toggle("open");
+          gpBtn.setAttribute("aria-expanded", wasOpen ? "false" : "true");
+        }
+      }
+    });
+  }
+
+  // Close dropdown when clicking outside
+  document.addEventListener("click", function (e) {
+    var grp = document.querySelector(".nav-group.open");
+    if (grp && !grp.contains(e.target)) {
+      grp.classList.remove("open");
+      var btn = grp.querySelector(".nav-group-btn");
+      if (btn) btn.setAttribute("aria-expanded", "false");
+    }
+  });
+
+  // ── Inline nav search ────────────────────────────────────────────────
+  var srchWrap = document.getElementById("nav-srch-wrap");
+  var srchIn   = document.getElementById("nav-srch-in");
+  var srchRes  = document.getElementById("nav-srch-res");
+  var _idx = null;
+
+  async function ensureIdx() {
+    if (_idx) return;
+    try { _idx = await fetch("/search-index.json").then(function(r){ return r.json(); }); } catch(e){}
+  }
+
+  function matchIdx(q) {
+    if (!_idx || !q.trim()) return [];
+    var n = q.trim().toLowerCase();
+    return _idx
+      .filter(function(e) {
+        var lbl = (e.label || "").toLowerCase();
+        return lbl.startsWith(n)
+          || lbl.split(/\\\\s+/).some(function(w){ return w.startsWith(n); })
+          || (e.code || "").toLowerCase().startsWith(n)
+          || (e.terms || []).some(function(t){ return t.startsWith(n); });
+      })
+      .sort(function(a, b) {
+        var as = (a.label||"").toLowerCase().startsWith(n);
+        var bs = (b.label||"").toLowerCase().startsWith(n);
+        if (as && !bs) return -1; if (bs && !as) return 1;
+        return (b.ly||0) - (a.ly||0);
+      })
+      .slice(0, 7);
+  }
+
+  function renderRes(matches) {
+    if (!srchRes) return;
+    if (!matches.length) { srchRes.hidden = true; return; }
+    srchRes.innerHTML = matches.map(function(e) {
+      var meta = e.fy ? (e.fy === e.ly ? e.fy : e.fy + "–" + e.ly) : (e.type || "");
+      return '<a class="srch-opt" href="' + e.url + '">'
+        + '<span class="srch-opt-label">' + e.label + '</span>'
+        + '<span class="srch-opt-meta">' + meta + '</span>'
+        + '</a>';
+    }).join("");
+    srchRes.hidden = false;
+  }
+
+  if (srchIn) {
+    srchIn.addEventListener("input", async function() {
+      await ensureIdx();
+      renderRes(matchIdx(srchIn.value));
+    });
+    srchIn.addEventListener("keydown", function(e) {
+      var opts = srchRes ? Array.from(srchRes.querySelectorAll(".srch-opt")) : [];
+      var fi = opts.indexOf(document.activeElement);
+      if (e.key === "ArrowDown") {
+        e.preventDefault();
+        if (fi < 0 && opts[0]) opts[0].focus();
+        else if (fi < opts.length - 1) opts[fi+1].focus();
+      } else if (e.key === "ArrowUp") {
+        e.preventDefault();
+        if (fi > 0) opts[fi-1].focus();
+        else srchIn.focus();
+      } else if (e.key === "Escape") {
+        if (srchRes) srchRes.hidden = true;
+        srchIn.blur();
+      } else if (e.key === "Enter" && fi < 0 && opts.length) {
+        opts[0].click();
+      }
+    });
+  }
+
+  // Hide results when clicking outside the search wrapper
+  document.addEventListener("click", function(e) {
+    if (srchWrap && srchRes && !srchRes.hidden && !srchWrap.contains(e.target)) {
+      srchRes.hidden = true;
+    }
+  });
+})();
+<\/script></body></html>`])), pageTitle, description && renderTemplate`<meta name="description"${addAttribute(description, "content")}>`, canonical && renderTemplate`<link rel="canonical"${addAttribute(canonical, "href")}>`, renderSlot($$result, $$slots["head"]), renderHead(), addAttribute(current === "drivers" ? "page" : void 0, "aria-current"), addAttribute(current === "teams" ? "page" : void 0, "aria-current"), addAttribute(["nav-group", { "is-active": current === "people" }], "class:list"), addAttribute(pathname.startsWith("/engineers") ? "page" : void 0, "aria-current"), addAttribute(pathname.startsWith("/principals") ? "page" : void 0, "aria-current"), addAttribute(pathname.startsWith("/technical-directors") ? "page" : void 0, "aria-current"), addAttribute(current === "standings" ? "page" : void 0, "aria-current"), addAttribute(current === "gps" ? "page" : void 0, "aria-current"), addAttribute(current === "circuits" ? "page" : void 0, "aria-current"), addAttribute(current === "records" ? "page" : void 0, "aria-current"), addAttribute(current === "compare" ? "page" : void 0, "aria-current"), addAttribute(current === "fantasy" ? "page" : void 0, "aria-current"), addAttribute(current === "trivia" ? "page" : void 0, "aria-current"), renderSlot($$result, $$slots["default"]), (/* @__PURE__ */ new Date()).getFullYear());
 }, "/Users/thomaspayment/f1delta/src/layouts/BaseLayout.astro", void 0);
 
 const $$F1DeltaExplain = createComponent(($$result, $$props, $$slots) => {
@@ -134,12 +383,12 @@ const $$slug = createComponent(($$result, $$props, $$slots) => {
   function careerTeams(d) {
     const seen = /* @__PURE__ */ new Set();
     const result = [];
-    for (const s of Object.values(d.career ?? {})) {
-      const id = s.primaryTeamId;
-      const name = s.primaryTeam;
-      if (id && !seen.has(id)) {
-        seen.add(id);
-        result.push({ id, name });
+    for (const s of d.career ?? []) {
+      for (const t of s.teams ?? []) {
+        if (t.constructorId && !seen.has(t.constructorId)) {
+          seen.add(t.constructorId);
+          result.push({ id: t.constructorId, name: t.constructor });
+        }
       }
     }
     return result;

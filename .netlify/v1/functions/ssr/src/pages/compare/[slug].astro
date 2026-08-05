@@ -92,14 +92,17 @@ function fmt(n: number | null | undefined) {
   return n % 1 === 0 ? String(n) : n.toFixed(1);
 }
 
-// Career teams (in order of first appearance)
+// Career teams (in order of first appearance, all teams including mid-season)
 function careerTeams(d: any) {
   const seen = new Set<string>();
   const result: { id: string; name: string }[] = [];
-  for (const s of Object.values(d.career ?? {})) {
-    const id = (s as any).primaryTeamId;
-    const name = (s as any).primaryTeam;
-    if (id && !seen.has(id)) { seen.add(id); result.push({ id, name }); }
+  for (const s of (d.career ?? []) as any[]) {
+    for (const t of (s.teams ?? []) as any[]) {
+      if (t.constructorId && !seen.has(t.constructorId)) {
+        seen.add(t.constructorId);
+        result.push({ id: t.constructorId, name: t.constructor });
+      }
+    }
   }
   return result;
 }
