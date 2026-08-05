@@ -19,6 +19,7 @@ function navKey(p: string): string {
   if (p.startsWith("/records")) return "records";
   if (p.startsWith("/fantasy")) return "fantasy";
   if (p.startsWith("/compare")) return "compare";
+  if (p.startsWith("/trivia")) return "trivia";
   return "";
 }
 const current = navKey(pathname);
@@ -96,6 +97,7 @@ const current = navKey(pathname);
           <a href="/records" aria-current={current === "records" ? "page" : undefined}>Records</a>
           <a href="/compare" aria-current={current === "compare" ? "page" : undefined}>Compare</a>
           <a href="/fantasy" aria-current={current === "fantasy" ? "page" : undefined}>Fantasy</a>
+          <a href="/trivia" aria-current={current === "trivia" ? "page" : undefined}>Quiz</a>
         </div>
         <a class="donate-btn" href="https://ko-fi.com/f1delta" target="_blank" rel="noopener noreferrer">♥ Donate</a>
         <button class="nav-srch-btn" id="nav-srch-btn" aria-label="Search" aria-expanded="false">

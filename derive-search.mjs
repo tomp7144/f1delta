@@ -117,6 +117,14 @@ entries.push({
   terms: ["compare", "comparison", "versus", "vs"],
 });
 
+// Trivia game
+entries.push({
+  type: "tool",
+  label: "Guess the Driver — Career Chain Quiz",
+  url: "/trivia",
+  terms: ["trivia", "game", "guess", "quiz", "career", "chain", "team"],
+});
+
 // Static pages
 entries.push({
   type: "tool",
