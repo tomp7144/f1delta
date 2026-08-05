@@ -148,7 +148,7 @@ async function main() {
       points: round1(s.totalPoints ?? 0),
       wdcFinish: s.positionNumber ?? null,   // championship finishing position (gap closed)
       wdcPoints: round1(s.totalPoints ?? 0), // championship points
-      _teamRaces: new Map(),                 // constructorId -> races (filled from race-results)
+      _teamStats: new Map(),                 // constructorId -> {races,entries,wins,podiums,poles,points}
     });
   }
 
@@ -170,7 +170,17 @@ async function main() {
     get(resultsByRace, r.raceId, () => []).push(r);
     get(resultsByDriver, r.driverId, () => []).push(r);
     const cs = careerByDriver.get(r.driverId)?.get(r.year);
-    if (cs) cs._teamRaces.set(r.constructorId, (cs._teamRaces.get(r.constructorId) ?? 0) + 1);
+    if (cs) {
+      const ts = cs._teamStats.get(r.constructorId) ?? { races: 0, entries: 0, wins: 0, podiums: 0, poles: 0, points: 0 };
+      ts.entries++;
+      if (!NOT_START.has(r.positionText)) {
+        ts.races++;
+        if (r.positionNumber === 1) ts.wins++;
+        if (r.positionNumber != null && r.positionNumber <= 3) ts.podiums++;
+        ts.points += r.points ?? 0;
+      }
+      cs._teamStats.set(r.constructorId, ts);
+    }
     // reliability: only count entries where the driver actually took to the grid
     if (!NOT_START.has(r.positionText)) {
       const relC = get(careerRel, r.driverId, mkRel);
@@ -189,6 +199,15 @@ async function main() {
         if (r.gridPositionNumber < relS.bestGrid) relS.bestGrid = r.gridPositionNumber;
       }
     }
+  }
+
+  // per-team pole positions from qualifying results
+  for (const q of qualiRes) {
+    if (q.positionNumber !== 1) continue;
+    const cs = careerByDriver.get(q.driverId)?.get(q.year);
+    if (!cs) continue;
+    const ts = cs._teamStats.get(q.constructorId);
+    if (ts) ts.poles++;
   }
 
   // teammate H2H: driverId -> Map(mateId -> Map(year -> h2h))
@@ -264,14 +283,19 @@ async function main() {
       .filter((cs) => (cs.races ?? 0) > 0) // only seasons where the driver actually started a race
       .sort((a, b) => a.season - b.season)
       .map((cs) => {
-        const teams = [...cs._teamRaces.entries()]
-          .map(([constructorId, races]) => ({
+        const teams = [...cs._teamStats.entries()]
+          .map(([constructorId, stats]) => ({
             constructorId,
             constructor: teamName.get(constructorId) ?? constructorId,
-            races,
+            entries: stats.entries,
+            races: stats.races,
+            wins: stats.wins,
+            podiums: stats.podiums,
+            poles: stats.poles,
+            points: round1(stats.points),
           }))
           .sort((a, b) => b.races - a.races);
-        const { _teamRaces, ...row } = cs;
+        const { _teamStats, ...row } = cs;
         const sRel = sRelMap?.get(cs.season);
         return {
           ...row,

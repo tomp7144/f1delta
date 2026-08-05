@@ -140,43 +140,51 @@ const descStr = `Career stats for ${d.name}: ${d.totals.races ?? 0} races, ${d.t
               {career.map((s: any) => {
                 const champ = s.wdcFinish === 1;
                 const teams: any[] = s.teams ?? [{ constructorId: s.primaryTeamId, constructor: s.primaryTeam, races: s.races }];
-                const multiTeam = teams.length > 1;
-                return (
-                  <tr
-                    data-season={s.season}
-                    data-ent={s.entries ?? 0}
-                    data-races={s.races ?? 0}
-                    data-wins={s.wins ?? 0}
-                    data-podiums={s.podiums ?? 0}
-                    data-poles={s.poles ?? 0}
-                    data-points={s.points ?? 0}
-                    data-wdc={s.wdcFinish ?? 999}
-                    class={champ ? "champ" : ""}
-                  >
-                    <td class="yr">
-                      <a href={`/standings/${s.season}`}>{s.season}</a>
-                    </td>
-                    <td class:list={["tm", { multi: multiTeam }]}>
-                      {teams.map((t: any, i: number) => (
-                        <>
-                          {i > 0 && <span class="tm-sep"> · </span>}
-                          <span class="dot" style={`background:${ac(t.constructorId)}`}></span>
-                          <a href={`/teams/${t.constructorId}`}>{t.constructor}</a>
-                          {multiTeam && <span class="tm-ct"> ({t.races})</span>}
-                        </>
-                      ))}
-                    </td>
-                    <td class="n ent">{s.entries ?? ""}</td>
-                    <td class="n">{s.races ?? ""}</td>
-                    <td class:list={["n", { hot: (s.wins ?? 0) > 0 }]}>{s.wins ?? 0}</td>
-                    <td class="n">{s.podiums ?? 0}</td>
-                    <td class="n">{s.poles ?? 0}</td>
-                    <td class="n strong">{fmt(s.points)}</td>
-                    <td class:list={["wdc", { t: champ }]}>
-                      {s.wdcFinish != null ? `P${s.wdcFinish}` : "—"}
-                    </td>
-                  </tr>
-                );
+                const n = teams.length;
+                return teams.map((t: any, i: number) => {
+                  const isFirst = i === 0;
+                  const isMulti = n > 1;
+                  const ent = isMulti ? (t.entries ?? "") : (s.entries ?? "");
+                  const rc  = isMulti ? (t.races    ?? "") : (s.races    ?? "");
+                  const win = isMulti ? (t.wins     ?? 0)  : (s.wins     ?? 0);
+                  const pod = isMulti ? (t.podiums  ?? 0)  : (s.podiums  ?? 0);
+                  const pol = isMulti ? (t.poles    ?? 0)  : (s.poles    ?? 0);
+                  const pts = isMulti ? (t.points   ?? 0)  : (s.points   ?? 0);
+                  return (
+                    <tr
+                      data-season={s.season}
+                      data-ent={s.entries ?? 0}
+                      data-races={s.races ?? 0}
+                      data-wins={s.wins ?? 0}
+                      data-podiums={s.podiums ?? 0}
+                      data-poles={s.poles ?? 0}
+                      data-points={s.points ?? 0}
+                      data-wdc={s.wdcFinish ?? 999}
+                      class:list={[{ champ, "spl-row": isMulti && !isFirst }]}
+                    >
+                      {isFirst && (
+                        <td class="yr" rowspan={isMulti ? n : undefined}>
+                          <a href={`/standings/${s.season}`}>{s.season}</a>
+                        </td>
+                      )}
+                      <td class="tm">
+                        <span class="dot" style={`background:${ac(t.constructorId)}`}></span>
+                        <a href={`/teams/${t.constructorId}`}>{t.constructor}</a>
+                      </td>
+                      <td class="n ent">{ent}</td>
+                      <td class="n">{rc}</td>
+                      <td class:list={["n", { hot: win > 0 }]}>{win}</td>
+                      <td class="n">{pod}</td>
+                      <td class="n">{pol}</td>
+                      <td class="n strong">{fmt(pts)}</td>
+                      {isFirst && (
+                        <td class:list={["wdc", { t: champ }]} rowspan={isMulti ? n : undefined}>
+                          {s.wdcFinish != null ? `P${s.wdcFinish}` : "—"}
+                        </td>
+                      )}
+                    </tr>
+                  );
+                });
               })}
             </tbody>
           </table>
@@ -637,12 +645,12 @@ const descStr = `Career stats for ${d.name}: ${d.totals.races ?? 0} races, ${d.t
   td.yr a:hover { color: var(--red); }
 
   td.tm { text-align: left; font-family: var(--body); font-size: 13px; color: var(--ink); overflow: hidden; text-overflow: ellipsis; white-space: nowrap; max-width: 0; }
-  td.tm.multi { white-space: normal; overflow: visible; text-overflow: clip; }
   td.tm a { color: inherit; text-decoration: none; }
   td.tm a:hover { color: var(--red); }
   td.tm .dot { display: inline-block; width: 8px; height: 8px; border-radius: 2px; margin-right: 7px; vertical-align: middle; }
-  td.tm .tm-sep { color: var(--faint); }
-  td.tm .tm-ct  { color: var(--faint); font-size: 11px; }
+  td[rowspan] { vertical-align: middle; }
+  tr.spl-row td:first-child { position: static; background: transparent; z-index: auto; box-shadow: none; }
+  tr.champ.spl-row td:first-child { box-shadow: none; }
 
   td.n { text-align: right; font-family: var(--mono); font-size: 12.5px; color: var(--dim); white-space: nowrap; }
   td.n.hot    { color: var(--ink); font-weight: 600; }
