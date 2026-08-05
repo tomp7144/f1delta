@@ -1,6 +1,6 @@
 {
   "session": {
-    "name": "Hungary GP",
+    "name": "Hungarian Grand Prix",
     "country": "Hungary",
     "round": 11,
     "date": "2026-07-26",
@@ -273,6 +273,5 @@
       "leader": false,
       "dnf": true
     }
-  ],
-  "baked": "2026-07-28T19:24:47.792Z"
+  ]
 }
