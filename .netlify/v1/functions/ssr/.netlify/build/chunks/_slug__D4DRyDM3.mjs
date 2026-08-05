@@ -1,6 +1,6 @@
-import { c as createComponent } from './astro-component_kbBwi03j.mjs';
+import { c as createComponent } from './astro-component_DLZJqP7p.mjs';
 import 'piccolore';
-import { r as renderTemplate, i as renderSlot, f as addAttribute, j as renderHead, m as maybeRenderHead, k as renderComponent, l as Fragment } from './ssr-function_CmtuOxUX.mjs';
+import { r as renderTemplate, i as renderSlot, f as addAttribute, j as renderHead, m as maybeRenderHead, k as renderComponent, l as Fragment } from './ssr-function_AnWxD0au.mjs';
 import fs from 'node:fs';
 import path from 'node:path';
 import 'clsx';
@@ -120,14 +120,23 @@ const $$BaseLayout = createComponent(async ($$result, $$props, $$slots) => {
       .slice(0, 7);
   }
 
+  var TYPE_META = { h2h:"H2H", team:"Team", person:"Person" };
+
   function renderRes(matches) {
     if (!srchRes) return;
     if (!matches.length) { srchRes.hidden = true; return; }
     srchRes.innerHTML = matches.map(function(e) {
-      var meta = e.fy ? (e.fy === e.ly ? e.fy : e.fy + "–" + e.ly) : (e.type || "");
+      var meta = e.fy != null
+        ? (e.fy === e.ly ? String(e.fy) : e.fy + "–" + e.ly)
+        : (e.type === "record" ? (e.scope || "Record")
+           : e.type === "circuit" ? (e.country || "Circuit")
+           : e.type === "gp"      ? (e.country || "Grand Prix")
+           : e.type === "season"  ? String(e.year || "")
+           : e.type === "race"    ? String(e.year || "")
+           : (TYPE_META[e.type] || ""));
       return '<a class="srch-opt" href="' + e.url + '">'
         + '<span class="srch-opt-label">' + e.label + '</span>'
-        + '<span class="srch-opt-meta">' + meta + '</span>'
+        + (meta ? '<span class="srch-opt-meta">' + meta + '</span>' : '')
         + '</a>';
     }).join("");
     srchRes.hidden = false;
@@ -138,7 +147,10 @@ const $$BaseLayout = createComponent(async ($$result, $$props, $$slots) => {
       await ensureIdx();
       renderRes(matchIdx(srchIn.value));
     });
-    srchIn.addEventListener("keydown", function(e) {
+  }
+
+  if (srchWrap) {
+    srchWrap.addEventListener("keydown", function(e) {
       var opts = srchRes ? Array.from(srchRes.querySelectorAll(".srch-opt")) : [];
       var fi = opts.indexOf(document.activeElement);
       if (e.key === "ArrowDown") {
@@ -148,12 +160,12 @@ const $$BaseLayout = createComponent(async ($$result, $$props, $$slots) => {
       } else if (e.key === "ArrowUp") {
         e.preventDefault();
         if (fi > 0) opts[fi-1].focus();
-        else srchIn.focus();
+        else if (srchIn) srchIn.focus();
       } else if (e.key === "Escape") {
         if (srchRes) srchRes.hidden = true;
-        srchIn.blur();
+        if (srchIn) srchIn.focus();
       } else if (e.key === "Enter" && fi < 0 && opts.length) {
-        opts[0].click();
+        e.preventDefault(); opts[0].click();
       }
     });
   }
@@ -256,14 +268,23 @@ const $$BaseLayout = createComponent(async ($$result, $$props, $$slots) => {
       .slice(0, 7);
   }
 
+  var TYPE_META = { h2h:"H2H", team:"Team", person:"Person" };
+
   function renderRes(matches) {
     if (!srchRes) return;
     if (!matches.length) { srchRes.hidden = true; return; }
     srchRes.innerHTML = matches.map(function(e) {
-      var meta = e.fy ? (e.fy === e.ly ? e.fy : e.fy + "–" + e.ly) : (e.type || "");
+      var meta = e.fy != null
+        ? (e.fy === e.ly ? String(e.fy) : e.fy + "–" + e.ly)
+        : (e.type === "record" ? (e.scope || "Record")
+           : e.type === "circuit" ? (e.country || "Circuit")
+           : e.type === "gp"      ? (e.country || "Grand Prix")
+           : e.type === "season"  ? String(e.year || "")
+           : e.type === "race"    ? String(e.year || "")
+           : (TYPE_META[e.type] || ""));
       return '<a class="srch-opt" href="' + e.url + '">'
         + '<span class="srch-opt-label">' + e.label + '</span>'
-        + '<span class="srch-opt-meta">' + meta + '</span>'
+        + (meta ? '<span class="srch-opt-meta">' + meta + '</span>' : '')
         + '</a>';
     }).join("");
     srchRes.hidden = false;
@@ -274,7 +295,10 @@ const $$BaseLayout = createComponent(async ($$result, $$props, $$slots) => {
       await ensureIdx();
       renderRes(matchIdx(srchIn.value));
     });
-    srchIn.addEventListener("keydown", function(e) {
+  }
+
+  if (srchWrap) {
+    srchWrap.addEventListener("keydown", function(e) {
       var opts = srchRes ? Array.from(srchRes.querySelectorAll(".srch-opt")) : [];
       var fi = opts.indexOf(document.activeElement);
       if (e.key === "ArrowDown") {
@@ -284,12 +308,12 @@ const $$BaseLayout = createComponent(async ($$result, $$props, $$slots) => {
       } else if (e.key === "ArrowUp") {
         e.preventDefault();
         if (fi > 0) opts[fi-1].focus();
-        else srchIn.focus();
+        else if (srchIn) srchIn.focus();
       } else if (e.key === "Escape") {
         if (srchRes) srchRes.hidden = true;
-        srchIn.blur();
+        if (srchIn) srchIn.focus();
       } else if (e.key === "Enter" && fi < 0 && opts.length) {
-        opts[0].click();
+        e.preventDefault(); opts[0].click();
       }
     });
   }
