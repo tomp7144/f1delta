@@ -206,15 +206,16 @@ const current = navKey(pathname);
     border: 1px solid var(--line); border-radius: 6px;
     box-shadow: 0 4px 12px rgba(0,0,0,.08); z-index: 300; overflow: hidden;
   }
-  .srch-opt {
+  /* :global — these elements are injected via innerHTML at runtime and don't carry the Astro CID */
+  :global(.srch-opt) {
     display: flex; align-items: baseline; justify-content: space-between; gap: 8px;
     padding: 8px 12px; color: var(--ink); text-decoration: none;
     border-bottom: 1px solid var(--line);
   }
-  .srch-opt:last-child { border-bottom: none; }
-  .srch-opt:hover, .srch-opt:focus { background: var(--bg); outline: none; }
-  .srch-opt-label { font-size: 13px; font-weight: 500; }
-  .srch-opt-meta  { font-family: var(--mono); font-size: 10px; color: var(--faint); flex-shrink: 0; white-space: nowrap; }
+  :global(.srch-opt:last-child) { border-bottom: none; }
+  :global(.srch-opt:hover), :global(.srch-opt:focus) { background: var(--bg); outline: none; }
+  :global(.srch-opt-label) { font-size: 13px; font-weight: 500; }
+  :global(.srch-opt-meta)  { font-family: var(--mono); font-size: 10px; color: var(--faint); flex-shrink: 0; white-space: nowrap; }
 
   /* Donate button */
   .donate-btn {
@@ -374,14 +375,23 @@ const current = navKey(pathname);
       .slice(0, 7);
   }
 
+  var TYPE_META = { h2h:"H2H", team:"Team", person:"Person" };
+
   function renderRes(matches) {
     if (!srchRes) return;
     if (!matches.length) { srchRes.hidden = true; return; }
     srchRes.innerHTML = matches.map(function(e) {
-      var meta = e.fy ? (e.fy === e.ly ? e.fy : e.fy + "–" + e.ly) : (e.type || "");
+      var meta = e.fy != null
+        ? (e.fy === e.ly ? String(e.fy) : e.fy + "–" + e.ly)
+        : (e.type === "record" ? (e.scope || "Record")
+           : e.type === "circuit" ? (e.country || "Circuit")
+           : e.type === "gp"      ? (e.country || "Grand Prix")
+           : e.type === "season"  ? String(e.year || "")
+           : e.type === "race"    ? String(e.year || "")
+           : (TYPE_META[e.type] || ""));
       return '<a class="srch-opt" href="' + e.url + '">'
         + '<span class="srch-opt-label">' + e.label + '</span>'
-        + '<span class="srch-opt-meta">' + meta + '</span>'
+        + (meta ? '<span class="srch-opt-meta">' + meta + '</span>' : '')
         + '</a>';
     }).join("");
     srchRes.hidden = false;
@@ -392,7 +402,10 @@ const current = navKey(pathname);
       await ensureIdx();
       renderRes(matchIdx(srchIn.value));
     });
-    srchIn.addEventListener("keydown", function(e) {
+  }
+
+  if (srchWrap) {
+    srchWrap.addEventListener("keydown", function(e) {
       var opts = srchRes ? Array.from(srchRes.querySelectorAll(".srch-opt")) : [];
       var fi = opts.indexOf(document.activeElement);
       if (e.key === "ArrowDown") {
@@ -402,12 +415,12 @@ const current = navKey(pathname);
       } else if (e.key === "ArrowUp") {
         e.preventDefault();
         if (fi > 0) opts[fi-1].focus();
-        else srchIn.focus();
+        else if (srchIn) srchIn.focus();
       } else if (e.key === "Escape") {
         if (srchRes) srchRes.hidden = true;
-        srchIn.blur();
+        if (srchIn) srchIn.focus();
       } else if (e.key === "Enter" && fi < 0 && opts.length) {
-        opts[0].click();
+        e.preventDefault(); opts[0].click();
       }
     });
   }
