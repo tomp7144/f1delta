@@ -840,14 +840,15 @@ const descStr = `Career stats for ${d.name}: ${d.totals.races ?? 0} races, ${d.t
     background: var(--surface); border: 1px solid var(--line); border-radius: 6px;
     overflow: hidden; box-shadow: 0 8px 24px -8px rgba(0,0,0,.18);
   }
-  .drv-cmp-opt {
+  /* :global — injected via results.innerHTML at runtime, never carry the Astro CID */
+  :global(.drv-cmp-opt) {
     display: flex; align-items: center; justify-content: space-between;
     width: 100%; padding: 8px 12px; border: none; border-bottom: 1px solid var(--line);
     background: none; cursor: pointer; text-align: left; gap: 8px;
   }
-  .drv-cmp-opt:last-child { border-bottom: none; }
-  .drv-cmp-opt:hover, .drv-cmp-opt:focus { background: var(--bg); outline: none; }
-  .drv-cmp-opt-name { font-size: 13px; font-weight: 500; color: var(--ink); }
-  .drv-cmp-opt-yr { font-family: var(--mono); font-size: 10px; color: var(--faint); flex-shrink: 0; }
+  :global(.drv-cmp-opt:last-child) { border-bottom: none; }
+  :global(.drv-cmp-opt:hover), :global(.drv-cmp-opt:focus) { background: var(--bg); outline: none; }
+  :global(.drv-cmp-opt-name) { font-size: 13px; font-weight: 500; color: var(--ink); }
+  :global(.drv-cmp-opt-yr) { font-family: var(--mono); font-size: 10px; color: var(--faint); flex-shrink: 0; }
   .drv-cmp-note { font-size: 11px; color: var(--faint); margin: 0; line-height: 1.5; }
 </style>
