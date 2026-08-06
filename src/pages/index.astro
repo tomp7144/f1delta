@@ -579,7 +579,7 @@ try {
   .hgrid {
     display: grid;
     grid-template-columns: repeat(6, 1fr);
-    grid-template-rows: auto;
+    grid-template-rows: auto auto auto;   /* 3 explicit rows; -1 = line 4 */
     gap: 10px;
     margin-bottom: 24px;
   }
@@ -591,12 +591,14 @@ try {
     min-width: 0;
     overflow: hidden;
   }
-  .tile-hero    { grid-column: span 4; }
-  .tile-results { grid-column: span 2; padding: 0; overflow: hidden; }
-  .tile-trivia  { grid-column: span 2; }
-  .tile-cmp     { grid-column: span 2; }
-  .tile-ldr     { grid-column: span 2; }
-  .tile-ed      { grid-column: span 6; }
+  /* Results pins to right 2 cols, spans all 3 rows (grid-row 1/-1).
+     The other tiles fill the left 4 cols row-by-row — no gap beside results. */
+  .tile-hero    { grid-column: 1 / 5; grid-row: 1; }
+  .tile-results { grid-column: 5 / 7; grid-row: 1 / -1; padding: 0; overflow: hidden; }
+  .tile-trivia  { grid-column: 1 / 3; grid-row: 2; }
+  .tile-cmp     { grid-column: 3 / 5; grid-row: 2; }
+  .tile-ldr     { grid-column: 1 / 3; grid-row: 3; }
+  .tile-ed      { grid-column: 3 / 5; grid-row: 3; }
 
   /* ── Tile header ──────────────────────────────────────────────────────
      :global — tile-hd/tile-label are re-created inside heroTile.innerHTML
@@ -725,9 +727,27 @@ try {
   .nt-desc  { font-size: 12px; color: var(--dim); }
 
   /* ── Responsive ─────────────────────────────────────────────────────── */
+  /* Medium (~481-640px): results stays pinned right, left compresses to 2 cols */
   @media (max-width: 640px) {
+    .hgrid {
+      grid-template-columns: 1fr 1fr 180px;
+      grid-template-rows: auto auto auto;
+    }
+    .tile-hero    { grid-column: 1 / 3; grid-row: 1; }
+    .tile-results { grid-column: 3;     grid-row: 1 / -1; }
+    .tile-trivia  { grid-column: 1;     grid-row: 2; }
+    .tile-cmp     { grid-column: 2;     grid-row: 2; }
+    .tile-ldr     { grid-column: 1;     grid-row: 3; }
+    .tile-ed      { grid-column: 2;     grid-row: 3; }
+  }
+  /* Mobile (~≤480px): single column, tiles stack hero → results → trivia → … */
+  @media (max-width: 480px) {
+    .hgrid {
+      grid-template-columns: 1fr;
+      grid-template-rows: auto;
+    }
     .tile-hero, .tile-results, .tile-trivia, .tile-cmp, .tile-ldr, .tile-ed {
-      grid-column: span 6;
+      grid-column: 1; grid-row: auto;
     }
     .tile-ed { flex-direction: column; align-items: flex-start; gap: 6px; }
   }
