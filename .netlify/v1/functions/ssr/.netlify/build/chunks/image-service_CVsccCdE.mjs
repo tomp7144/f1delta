@@ -1,7 +1,7 @@
 import '@astrojs/internal-helpers/path';
 import '@astrojs/internal-helpers/remote';
-import { o as AstroUserError } from './ssr-function_D8nCXlOz.mjs';
-import { b as baseService, v as verifyOptions, i as isESMImportedImage } from './generic_Cl6Ax3Cd.mjs';
+import { o as AstroUserError } from './ssr-function_CPwIjS5U.mjs';
+import { b as baseService, v as verifyOptions, i as isESMImportedImage } from './generic_C6GG8OM4.mjs';
 
 const SUPPORTED_FORMATS = ["avif", "jpg", "png", "webp"];
 const QUALITY_NAMES = { low: 25, mid: 50, high: 90, max: 100 };
