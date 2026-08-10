@@ -1,6 +1,6 @@
-import { c as createComponent } from './astro-component_DGg7WbGz.mjs';
+import { c as createComponent } from './astro-component_B5uEhR06.mjs';
 import 'piccolore';
-import { r as renderTemplate, i as renderSlot, f as addAttribute, j as renderHead, m as maybeRenderHead, k as renderComponent, l as Fragment } from './ssr-function_C7EJCBvh.mjs';
+import { r as renderTemplate, i as renderSlot, f as addAttribute, j as renderHead, m as maybeRenderHead, k as renderComponent, l as Fragment } from './ssr-function_B1SSR6O6.mjs';
 import fs from 'node:fs';
 import path from 'node:path';
 import 'clsx';
