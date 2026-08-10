@@ -4,37 +4,28 @@ import fs from "node:fs";
 import path from "node:path";
 import BaseLayout from "../layouts/BaseLayout.astro";
 
-// ── Fantasy data ──────────────────────────────────────────────────────
-let players: any   = null;
-let raceSummaries: any   = {};
-let races2026: any[]     = [];
-let gpNames: Map<string, string> = new Map();
-
-try { players = JSON.parse(fs.readFileSync(path.resolve("./data/fantasy/players.json"), "utf8")); } catch {}
-try { raceSummaries = JSON.parse(fs.readFileSync(path.resolve("./public/fantasy/race-summaries.json"), "utf8")); } catch {}
+// ── Real f1δ: top 5 all-time career scores ────────────────────────────
+type F1dEntry = { driverId: string; name: string; career: number };
+let f1dTop5: F1dEntry[] = [];
 try {
-  const allRaces = JSON.parse(fs.readFileSync(path.resolve("./data/f1db/f1db-races.json"), "utf8"));
-  races2026 = allRaces.filter((r: any) => r.year === 2026);
-  const gps = JSON.parse(fs.readFileSync(path.resolve("./data/f1db/f1db-grands-prix.json"), "utf8"));
-  for (const g of gps) gpNames.set(g.id, g.shortName ?? g.name);
+  const { drivers: allF1d } = JSON.parse(
+    fs.readFileSync(path.resolve("./data/f1delta/index.json"), "utf8")
+  ) as { drivers: any[] };
+  f1dTop5 = allF1d
+    .sort((a, b) => b.career - a.career)
+    .slice(0, 5)
+    .map(d => ({ driverId: d.driverId, name: d.name, career: d.career }));
 } catch {}
 
-// ── f1δ leaderboard: top 5 drivers by cumulative points ──────────────
-const ldrTop5: { name: string; pageId: string; points: number }[] = players
-  ? (players.assets as any[])
-      .filter((a: any) => a.type === "driver" && (a.points ?? 0) > 0)
-      .sort((a: any, b: any) => b.points - a.points)
-      .slice(0, 5)
-      .map((a: any) => ({ name: a.name, pageId: a.pageId, points: a.points }))
-  : [];
-
-const race2026Ids = new Set(races2026.map((r: any) => r.id));
-const latestF1dRaceId = Object.keys(raceSummaries)
-  .map(Number)
-  .filter(id => race2026Ids.has(id))
-  .sort((a, b) => b - a)[0] ?? null;
-const latestF1dRace = latestF1dRaceId ? races2026.find((r: any) => r.id === latestF1dRaceId) : null;
-const latestF1dGpName = latestF1dRace ? (gpNames.get(latestF1dRace.grandPrixId) ?? latestF1dRace.grandPrixId) : null;
+// ── Championship standings (current season) ───────────────────────────
+type StndEntry = { pos: number; code: string; points: number; team: string };
+let standings2026: StndEntry[] = [];
+let standingsSeason = "";
+try {
+  const sd = JSON.parse(fs.readFileSync(path.resolve("./public/standings.json"), "utf8"));
+  standings2026 = (sd.standings as StndEntry[]).slice(0, 8);
+  standingsSeason = sd.season ?? "";
+} catch {}
 
 // ── Hero pool: all 100+ race drivers with connection threads ──────────
 type Thread = { rel: string; label: string; url: string; meta: string };
@@ -226,36 +217,57 @@ try {
         <div id="cmp-tile-inner"></div>
       </div>
 
-      <!-- f1δ leaderboard tile: static from fantasy data -->
+      <!-- f1δ tile: real career scores from data/f1delta/ -->
       <div class="tile tile-ldr">
         <div class="tile-hd">
-          <span class="tile-label">f1δ 2026</span>
-          <a class="tile-more" href="/fantasy">Full →</a>
+          <span class="tile-label">f1δ All-Time</span>
+          <a class="tile-more" href="/f1delta">Leaderboard →</a>
         </div>
-        {ldrTop5.length > 0 ? (
+        <p class="ldr-note">Era-fair career rating — each season vs its own maximum, summed.</p>
+        {f1dTop5.length > 0 ? (
           <ol class="ldr-list">
-            {ldrTop5.map((d, i) => (
+            {f1dTop5.map((d: F1dEntry, i: number) => (
               <li class="ldr-row">
                 <span class="ldr-pos">{i + 1}</span>
-                <a class="ldr-name" href={`/drivers/${d.pageId}`}>{d.name}</a>
-                <span class="ldr-pts">{d.points}</span>
+                <a class="ldr-name" href={`/drivers/${d.driverId}`}>{d.name}</a>
+                <span class="ldr-pts">{d.career.toFixed(1)}</span>
               </li>
             ))}
           </ol>
         ) : (
           <p class="ldr-empty">No data yet.</p>
         )}
-        {latestF1dGpName && (
-          <p class="ldr-note">Latest: {latestF1dGpName}</p>
+        <a class="ldr-method" href="/methodology">What is f1δ? →</a>
+      </div>
+
+      <!-- Standings tile: current season WDC from public/standings.json -->
+      <div class="tile tile-stnd">
+        <div class="tile-hd">
+          <span class="tile-label">WDC {standingsSeason}</span>
+          <a class="tile-more" href="/standings">Full →</a>
+        </div>
+        {standings2026.length > 0 ? (
+          <ol class="stnd-list">
+            {standings2026.map((s: StndEntry) => (
+              <li class="stnd-row">
+                <span class="stnd-pos">{s.pos}</span>
+                <span class="stnd-code">{s.code}</span>
+                <span class="stnd-team">{s.team}</span>
+                <span class="stnd-pts">{s.points}</span>
+              </li>
+            ))}
+          </ol>
+        ) : (
+          <p class="ldr-empty">No standings yet.</p>
         )}
       </div>
 
-      <!-- Editorial slot: reserved for future /stories content -->
+      <!-- Editorial slot: coming soon -->
       <div class="tile tile-ed">
         <div class="tile-hd">
           <span class="tile-label">Stories</span>
         </div>
-        <p class="ed-coming">In-depth features and analysis coming soon.</p>
+        <p class="ed-coming">In-depth features and analysis — coming soon.</p>
         <a class="ed-link" href="/about">About f1delta →</a>
       </div>
 
@@ -570,7 +582,8 @@ try {
 
 <style>
   .home {
-    max-width: 760px; margin: 0 auto; padding: 0 20px 56px;
+    max-width: 1400px; margin: 0 auto;
+    padding: 0 clamp(20px, 8vw, 100px) 56px;
     font-family: system-ui, -apple-system, "Segoe UI", Roboto, sans-serif;
     color: var(--ink);
   }
@@ -579,7 +592,7 @@ try {
   .hgrid {
     display: grid;
     grid-template-columns: repeat(6, 1fr);
-    grid-template-rows: auto auto auto;   /* 3 explicit rows; -1 = line 4 */
+    grid-template-rows: auto auto auto auto;  /* 4 explicit rows; -1 = line 5 */
     gap: 10px;
     margin-bottom: 24px;
   }
@@ -598,7 +611,8 @@ try {
   .tile-trivia  { grid-column: 1 / 3; grid-row: 2; }
   .tile-cmp     { grid-column: 3 / 5; grid-row: 2; }
   .tile-ldr     { grid-column: 1 / 3; grid-row: 3; }
-  .tile-ed      { grid-column: 3 / 5; grid-row: 3; }
+  .tile-stnd    { grid-column: 3 / 5; grid-row: 3; }
+  .tile-ed      { grid-column: 1 / 5; grid-row: 4; }
 
   /* ── Tile header ──────────────────────────────────────────────────────
      :global — tile-hd/tile-label are re-created inside heroTile.innerHTML
@@ -609,7 +623,7 @@ try {
   }
   :global(.tile-label) {
     font-size: 10px; font-weight: 700; text-transform: uppercase;
-    letter-spacing: .08em; color: var(--faint);
+    letter-spacing: .08em; color: var(--ink);
   }
   .tile-more {
     font-size: 11px; color: var(--dim); text-decoration: none;
@@ -700,14 +714,27 @@ try {
   .ldr-name { color: var(--ink); text-decoration: none; font-weight: 500; }
   .ldr-name:hover { text-decoration: underline; }
   .ldr-pts  { font-family: var(--mono); font-size: 12px; color: var(--dim); font-variant-numeric: tabular-nums; }
-  .ldr-empty { font-size: 13px; color: var(--faint); margin: 0; }
-  .ldr-note  { font-size: 11px; color: var(--faint); margin: 10px 0 0; font-style: italic; }
+  .ldr-empty  { font-size: 13px; color: var(--faint); margin: 0; }
+  .ldr-note   { font-size: 11px; color: var(--dim); margin: 0 0 8px; line-height: 1.4; }
+  .ldr-method { display: inline-block; margin-top: 8px; font-size: 11px; color: var(--dim); text-decoration: none; }
+  .ldr-method:hover { color: var(--ink); text-decoration: underline; }
+
+  /* ── Standings tile ─────────────────────────────────────────────────── */
+  .stnd-list { list-style: none; margin: 0; padding: 0; display: flex; flex-direction: column; }
+  .stnd-row  {
+    display: grid; grid-template-columns: 18px 36px 1fr auto;
+    gap: 6px; align-items: baseline;
+    padding: 5px 0; border-bottom: 1px solid var(--line); font-size: 12px;
+  }
+  .stnd-row:last-child { border-bottom: none; }
+  .stnd-pos  { font-size: 10px; color: var(--faint); font-family: var(--mono); text-align: right; }
+  .stnd-code { font-family: var(--disp); font-weight: 700; font-size: 12px; color: var(--ink); }
+  .stnd-team { font-size: 11px; color: var(--dim); overflow: hidden; text-overflow: ellipsis; white-space: nowrap; }
+  .stnd-pts  { font-family: var(--mono); font-size: 12px; color: var(--dim); font-variant-numeric: tabular-nums; }
 
   /* ── Editorial slot ─────────────────────────────────────────────────── */
-  .tile-ed { display: flex; align-items: center; gap: 16px; }
-  .tile-ed .tile-hd { margin-bottom: 0; flex-shrink: 0; }
-  .ed-coming { font-size: 13px; color: var(--dim); margin: 0; flex: 1; }
-  .ed-link   { font-size: 12px; color: var(--dim); text-decoration: none; flex-shrink: 0; white-space: nowrap; }
+  .ed-coming { font-size: 13px; color: var(--dim); margin: 0 0 8px; }
+  .ed-link   { font-size: 12px; color: var(--dim); text-decoration: none; }
   .ed-link:hover { color: var(--ink); text-decoration: underline; }
 
   /* ── Nav grid ───────────────────────────────────────────────────────── */
@@ -731,25 +758,25 @@ try {
   @media (max-width: 640px) {
     .hgrid {
       grid-template-columns: 1fr 1fr 180px;
-      grid-template-rows: auto auto auto;
+      grid-template-rows: auto auto auto auto;
     }
     .tile-hero    { grid-column: 1 / 3; grid-row: 1; }
     .tile-results { grid-column: 3;     grid-row: 1 / -1; }
     .tile-trivia  { grid-column: 1;     grid-row: 2; }
     .tile-cmp     { grid-column: 2;     grid-row: 2; }
     .tile-ldr     { grid-column: 1;     grid-row: 3; }
-    .tile-ed      { grid-column: 2;     grid-row: 3; }
+    .tile-stnd    { grid-column: 2;     grid-row: 3; }
+    .tile-ed      { grid-column: 1 / 3; grid-row: 4; }
   }
-  /* Mobile (~≤480px): single column, tiles stack hero → results → trivia → … */
+  /* Mobile (~≤480px): single column, tiles stack in reading order */
   @media (max-width: 480px) {
     .hgrid {
       grid-template-columns: 1fr;
       grid-template-rows: auto;
     }
-    .tile-hero, .tile-results, .tile-trivia, .tile-cmp, .tile-ldr, .tile-ed {
+    .tile-hero, .tile-results, .tile-trivia, .tile-cmp, .tile-ldr, .tile-stnd, .tile-ed {
       grid-column: 1; grid-row: auto;
     }
-    .tile-ed { flex-direction: column; align-items: flex-start; gap: 6px; }
   }
   @media (max-width: 500px) {
     .home { padding-left: 12px; padding-right: 12px; }
