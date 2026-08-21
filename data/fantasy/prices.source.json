@@ -8433,26 +8433,15 @@
       "round": 12,
       "tla": "LAW",
       "name": "Liam Lawson",
-      "team": "Racing Bulls",
+      "team": "Red Bull Racing",
       "positionType": "DRIVER",
-      "price": 10.3,
-      "prevPrice": 9.7,
-      "ownership": 32,
+      "price": 14.5,
+      "prevPrice": 14.5,
+      "ownership": 0,
       "captainPct": 0,
       "gamedayPoints": null,
-      "overallPoints": 128,
-      "stats": {
-        "fastest_lap_pts": 0,
-        "dotd_pts": 0,
-        "overtaking_pts": 60,
-        "q3_finishes_pts": 10,
-        "top10_race_position_pts": 40,
-        "top8_sprint_position_pts": 3,
-        "total_position_pts": 53,
-        "total_position_gained_lost": 35,
-        "total_dnf_dq_pts": -20,
-        "value_for_money": 1.13
-      }
+      "overallPoints": 0,
+      "stats": null
     }
   },
   "ARVLIN01": {
@@ -9343,7 +9332,7 @@
       "positionType": "DRIVER",
       "price": 14.5,
       "prevPrice": 13.9,
-      "ownership": 32,
+      "ownership": 31,
       "captainPct": 3,
       "gamedayPoints": null,
       "overallPoints": 138,
@@ -9963,6 +9952,22 @@
         "total_dnf_dq_pts": -80,
         "value_for_money": 0.09
       }
+    }
+  },
+  "YUKTSU01": {
+    "12": {
+      "round": 12,
+      "tla": "TSU",
+      "name": "Yuki Tsunoda",
+      "team": "Racing Bulls",
+      "positionType": "DRIVER",
+      "price": 10.3,
+      "prevPrice": 10.3,
+      "ownership": 0,
+      "captainPct": 0,
+      "gamedayPoints": null,
+      "overallPoints": 0,
+      "stats": null
     }
   }
 }
