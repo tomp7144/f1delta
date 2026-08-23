@@ -143,8 +143,8 @@
       "name": "Jarno Trulli",
       "code": "TRU",
       "points": 3,
-      "teamId": "minardi",
-      "team": "Minardi"
+      "teamId": "prost",
+      "team": "Prost"
     },
     {
       "position": 16,
@@ -377,5 +377,5 @@
     }
   ],
   "notes": null,
-  "updated": "2026-07-26"
+  "updated": "2026-08-23"
 }

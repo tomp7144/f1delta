@@ -134,8 +134,8 @@
       "name": "Olivier Gendebien",
       "code": "GEN",
       "points": 3,
-      "teamId": "emeryson",
-      "team": "Emeryson"
+      "teamId": "ferrari",
+      "team": "Ferrari"
     },
     {
       "position": 15,
@@ -261,5 +261,5 @@
     }
   ],
   "notes": null,
-  "updated": "2026-07-26"
+  "updated": "2026-08-23"
 }

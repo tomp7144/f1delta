@@ -52,7 +52,7 @@
       "totals": {
         "seasons": 2,
         "drivers": 1,
-        "races": 35,
+        "races": 36,
         "wins": 0,
         "podiums": 0,
         "poles": 0,
@@ -71,7 +71,7 @@
       "totals": {
         "seasons": 3,
         "drivers": 1,
-        "races": 59,
+        "races": 60,
         "wins": 4,
         "podiums": 24,
         "poles": 4,
@@ -90,7 +90,7 @@
       "totals": {
         "seasons": 1,
         "drivers": 1,
-        "races": 11,
+        "races": 12,
         "wins": 0,
         "podiums": 0,
         "poles": 0,
@@ -109,7 +109,7 @@
       "totals": {
         "seasons": 1,
         "drivers": 1,
-        "races": 11,
+        "races": 12,
         "wins": 1,
         "podiums": 5,
         "poles": 0,
@@ -128,7 +128,7 @@
       "totals": {
         "seasons": 1,
         "drivers": 1,
-        "races": 11,
+        "races": 12,
         "wins": 0,
         "podiums": 0,
         "poles": 0,
@@ -147,7 +147,7 @@
       "totals": {
         "seasons": 7,
         "drivers": 1,
-        "races": 125,
+        "races": 126,
         "wins": 0,
         "podiums": 0,
         "poles": 0,
@@ -166,7 +166,7 @@
       "totals": {
         "seasons": 19,
         "drivers": 6,
-        "races": 366,
+        "races": 367,
         "wins": 71,
         "podiums": 134,
         "poles": 49,
@@ -185,7 +185,7 @@
       "totals": {
         "seasons": 5,
         "drivers": 1,
-        "races": 102,
+        "races": 103,
         "wins": 0,
         "podiums": 0,
         "poles": 0,
@@ -223,7 +223,7 @@
       "totals": {
         "seasons": 1,
         "drivers": 1,
-        "races": 11,
+        "races": 12,
         "wins": 0,
         "podiums": 0,
         "poles": 0,
@@ -242,7 +242,7 @@
       "totals": {
         "seasons": 1,
         "drivers": 1,
-        "races": 11,
+        "races": 12,
         "wins": 0,
         "podiums": 0,
         "poles": 0,
@@ -261,7 +261,7 @@
       "totals": {
         "seasons": 1,
         "drivers": 1,
-        "races": 11,
+        "races": 12,
         "wins": 0,
         "podiums": 1,
         "poles": 0,
@@ -280,7 +280,7 @@
       "totals": {
         "seasons": 2,
         "drivers": 1,
-        "races": 35,
+        "races": 36,
         "wins": 0,
         "podiums": 0,
         "poles": 0,
@@ -299,9 +299,9 @@
       "totals": {
         "seasons": 4,
         "drivers": 1,
-        "races": 81,
+        "races": 82,
         "wins": 6,
-        "podiums": 20,
+        "podiums": 21,
         "poles": 10,
         "championships": 0
       }
@@ -318,9 +318,9 @@
       "totals": {
         "seasons": 16,
         "drivers": 3,
-        "races": 320,
+        "races": 321,
         "wins": 90,
-        "podiums": 166,
+        "podiums": 167,
         "poles": 84,
         "championships": 6
       }
@@ -337,7 +337,7 @@
       "totals": {
         "seasons": 1,
         "drivers": 1,
-        "races": 11,
+        "races": 12,
         "wins": 0,
         "podiums": 0,
         "poles": 0,
@@ -394,7 +394,7 @@
       "totals": {
         "seasons": 1,
         "drivers": 1,
-        "races": 11,
+        "races": 12,
         "wins": 0,
         "podiums": 0,
         "poles": 0,
@@ -413,7 +413,7 @@
       "totals": {
         "seasons": 1,
         "drivers": 1,
-        "races": 11,
+        "races": 12,
         "wins": 0,
         "podiums": 0,
         "poles": 0,
@@ -432,7 +432,7 @@
       "totals": {
         "seasons": 2,
         "drivers": 1,
-        "races": 29,
+        "races": 30,
         "wins": 0,
         "podiums": 0,
         "poles": 0,
@@ -451,7 +451,7 @@
       "totals": {
         "seasons": 13,
         "drivers": 5,
-        "races": 263,
+        "races": 264,
         "wins": 10,
         "podiums": 32,
         "poles": 6,
@@ -470,10 +470,10 @@
       "totals": {
         "seasons": 8,
         "drivers": 1,
-        "races": 163,
-        "wins": 12,
-        "podiums": 47,
-        "poles": 17,
+        "races": 164,
+        "wins": 13,
+        "podiums": 48,
+        "poles": 18,
         "championships": 1
       }
     }

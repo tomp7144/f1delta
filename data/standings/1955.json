@@ -59,8 +59,8 @@
       "name": "Piero Taruffi",
       "code": "TAR",
       "points": 9,
-      "teamId": "ferrari",
-      "team": "Ferrari"
+      "teamId": "mercedes",
+      "team": "Mercedes"
     },
     {
       "position": 7,
@@ -287,5 +287,5 @@
     }
   ],
   "notes": null,
-  "updated": "2026-07-26"
+  "updated": "2026-08-23"
 }

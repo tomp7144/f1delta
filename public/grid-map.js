@@ -22,5 +22,6 @@ window.F1_GRID = {
   "PIA": "oscar-piastri",
   "GAS": "pierre-gasly",
   "PER": "sergio-perez",
-  "BOT": "valtteri-bottas"
+  "BOT": "valtteri-bottas",
+  "TSU": "yuki-tsunoda"
 };

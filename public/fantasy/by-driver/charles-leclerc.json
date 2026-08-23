@@ -2,8 +2,8 @@
   "driverId": "charles-leclerc",
   "name": "Charles Leclerc",
   "career": {
-    "score": 2716,
-    "races": 184,
+    "score": 2738,
+    "races": 185,
     "partial": 0
   },
   "seasons": [
@@ -57,8 +57,8 @@
     },
     {
       "year": 2026,
-      "score": 176,
-      "races": 11,
+      "score": 198,
+      "races": 12,
       "partial": 0
     }
   ]

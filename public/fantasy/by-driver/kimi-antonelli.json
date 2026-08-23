@@ -2,8 +2,8 @@
   "driverId": "kimi-antonelli",
   "name": "Kimi Antonelli",
   "career": {
-    "score": 492,
-    "races": 35,
+    "score": 520,
+    "races": 36,
     "partial": 0
   },
   "seasons": [
@@ -15,8 +15,8 @@
     },
     {
       "year": 2026,
-      "score": 301,
-      "races": 11,
+      "score": 329,
+      "races": 12,
       "partial": 0
     }
   ]

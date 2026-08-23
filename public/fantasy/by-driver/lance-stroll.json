@@ -2,8 +2,8 @@
   "driverId": "lance-stroll",
   "name": "Lance Stroll",
   "career": {
-    "score": 706,
-    "races": 203,
+    "score": 686,
+    "races": 204,
     "partial": 6
   },
   "seasons": [
@@ -63,8 +63,8 @@
     },
     {
       "year": 2026,
-      "score": -118,
-      "races": 11,
+      "score": -138,
+      "races": 12,
       "partial": 1
     }
   ]

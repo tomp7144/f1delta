@@ -116,8 +116,8 @@
       "name": "Michele Alboreto",
       "code": "ALB",
       "points": 6,
-      "teamId": "lola",
-      "team": "Lola"
+      "teamId": "tyrrell",
+      "team": "Tyrrell"
     },
     {
       "position": 11,
@@ -502,5 +502,5 @@
     }
   ],
   "notes": null,
-  "updated": "2026-07-26"
+  "updated": "2026-08-23"
 }

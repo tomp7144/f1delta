@@ -11,7 +11,7 @@
   "totals": {
     "seasons": 2,
     "drivers": 1,
-    "races": 35,
+    "races": 36,
     "wins": 0,
     "podiums": 0,
     "poles": 0,
@@ -28,7 +28,7 @@
       "driverId": "fernando-alonso",
       "driverName": "Fernando Alonso",
       "stats": {
-        "races": 35,
+        "races": 36,
         "wins": 0,
         "podiums": 0,
         "poles": 0,
@@ -36,5 +36,5 @@
       }
     }
   ],
-  "updated": "2026-07-26"
+  "updated": "2026-08-23"
 }
