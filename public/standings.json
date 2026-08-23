@@ -4,32 +4,32 @@
     {
       "pos": 1,
       "code": "ANT",
-      "points": 224,
+      "points": 242,
       "team": "Mercedes"
     },
     {
       "pos": 2,
-      "code": "HAM",
-      "points": 171,
-      "team": "Ferrari"
-    },
-    {
-      "pos": 3,
       "code": "RUS",
-      "points": 168,
+      "points": 183,
       "team": "Mercedes"
     },
     {
-      "pos": 4,
-      "code": "LEC",
-      "points": 145,
+      "pos": 3,
+      "code": "HAM",
+      "points": 183,
       "team": "Ferrari"
     },
     {
-      "pos": 5,
+      "pos": 4,
       "code": "NOR",
-      "points": 134,
+      "points": 159,
       "team": "McLaren"
+    },
+    {
+      "pos": 5,
+      "code": "LEC",
+      "points": 155,
+      "team": "Ferrari"
     },
     {
       "pos": 6,
@@ -40,7 +40,7 @@
     {
       "pos": 7,
       "code": "PIA",
-      "points": 96,
+      "points": 104,
       "team": "McLaren"
     },
     {
@@ -51,15 +51,15 @@
     },
     {
       "pos": 9,
-      "code": "GAS",
-      "points": 43,
-      "team": "Alpine F1 Team"
+      "code": "LAW",
+      "points": 49,
+      "team": "RB F1 Team"
     },
     {
       "pos": 10,
-      "code": "LAW",
-      "points": 43,
-      "team": "RB F1 Team"
+      "code": "GAS",
+      "points": 44,
+      "team": "Alpine F1 Team"
     },
     {
       "pos": 11,
@@ -87,57 +87,57 @@
     },
     {
       "pos": 15,
+      "code": "HUL",
+      "points": 6,
+      "team": "Audi"
+    },
+    {
+      "pos": 16,
       "code": "SAI",
       "points": 6,
       "team": "Williams"
     },
     {
-      "pos": 16,
+      "pos": 17,
       "code": "ALB",
       "points": 5,
       "team": "Williams"
     },
     {
-      "pos": 17,
+      "pos": 18,
       "code": "OCO",
       "points": 3,
       "team": "Haas F1 Team"
     },
     {
-      "pos": 18,
-      "code": "HUL",
-      "points": 2,
-      "team": "Audi"
-    },
-    {
       "pos": 19,
       "code": "ALO",
-      "points": 1,
+      "points": 3,
       "team": "Aston Martin"
     },
     {
       "pos": 20,
+      "code": "TSU",
+      "points": 0,
+      "team": "RB F1 Team"
+    },
+    {
+      "pos": 21,
       "code": "STR",
       "points": 0,
       "team": "Aston Martin"
     },
     {
-      "pos": 21,
+      "pos": 22,
       "code": "BOT",
       "points": 0,
       "team": "Cadillac F1 Team"
     },
     {
-      "pos": 22,
+      "pos": 23,
       "code": "PER",
       "points": 0,
       "team": "Cadillac F1 Team"
-    },
-    {
-      "pos": 23,
-      "code": "TSU",
-      "points": 0,
-      "team": "RB F1 Team"
     }
   ]
 }
