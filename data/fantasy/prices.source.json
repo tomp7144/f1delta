@@ -3905,7 +3905,7 @@
       "positionType": "DRIVER",
       "price": 12.4,
       "prevPrice": 13,
-      "ownership": 19,
+      "ownership": 20,
       "captainPct": 1,
       "gamedayPoints": null,
       "overallPoints": 143,
@@ -7830,7 +7830,7 @@
       "price": 26.4,
       "prevPrice": 26.1,
       "ownership": 10,
-      "captainPct": 7,
+      "captainPct": 6,
       "gamedayPoints": null,
       "overallPoints": 284,
       "stats": {
