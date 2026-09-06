@@ -2,8 +2,8 @@
   "driverId": "max-verstappen",
   "name": "Max Verstappen",
   "career": {
-    "score": 5474,
-    "races": 245,
+    "score": 5498,
+    "races": 246,
     "partial": 5
   },
   "seasons": [
@@ -75,8 +75,8 @@
     },
     {
       "year": 2026,
-      "score": 140,
-      "races": 12,
+      "score": 164,
+      "races": 13,
       "partial": 1
     }
   ]

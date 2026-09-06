@@ -11,10 +11,10 @@
   "totals": {
     "seasons": 1,
     "drivers": 1,
-    "races": 12,
+    "races": 13,
     "wins": 0,
-    "podiums": 1,
-    "poles": 0,
+    "podiums": 0,
+    "poles": 1,
     "championships": 0
   },
   "roles": [
@@ -28,13 +28,13 @@
       "driverId": "pierre-gasly",
       "driverName": "Pierre Gasly",
       "stats": {
-        "races": 12,
+        "races": 13,
         "wins": 0,
-        "podiums": 1,
-        "poles": 0,
+        "podiums": 0,
+        "poles": 1,
         "championships": 0
       }
     }
   ],
-  "updated": "2026-08-23"
+  "updated": "2026-09-06"
 }

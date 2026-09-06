@@ -11,7 +11,7 @@
   "totals": {
     "seasons": 13,
     "drivers": 5,
-    "races": 264,
+    "races": 265,
     "wins": 10,
     "podiums": 32,
     "poles": 6,
@@ -92,7 +92,7 @@
       "driverId": "oscar-piastri",
       "driverName": "Oscar Piastri",
       "stats": {
-        "races": 82,
+        "races": 83,
         "wins": 9,
         "podiums": 28,
         "poles": 6,
@@ -100,5 +100,5 @@
       }
     }
   ],
-  "updated": "2026-08-23"
+  "updated": "2026-09-06"
 }

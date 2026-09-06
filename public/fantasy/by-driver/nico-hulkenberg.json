@@ -2,8 +2,8 @@
   "driverId": "nico-hulkenberg",
   "name": "Nico Hülkenberg",
   "career": {
-    "score": 782,
-    "races": 266,
+    "score": 785,
+    "races": 267,
     "partial": 2
   },
   "seasons": [
@@ -93,8 +93,8 @@
     },
     {
       "year": 2026,
-      "score": -3,
-      "races": 12,
+      "score": 0,
+      "races": 13,
       "partial": 0
     }
   ]

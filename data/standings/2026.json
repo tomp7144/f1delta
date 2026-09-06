@@ -9,7 +9,7 @@
       "driverId": "kimi-antonelli",
       "name": "Kimi Antonelli",
       "code": "ANT",
-      "points": 242,
+      "points": 267,
       "teamId": "mercedes",
       "team": "Mercedes"
     },
@@ -18,7 +18,7 @@
       "driverId": "george-russell",
       "name": "George Russell",
       "code": "RUS",
-      "points": 183,
+      "points": 201,
       "teamId": "mercedes",
       "team": "Mercedes"
     },
@@ -27,7 +27,7 @@
       "driverId": "lewis-hamilton",
       "name": "Lewis Hamilton",
       "code": "HAM",
-      "points": 183,
+      "points": 191,
       "teamId": "ferrari",
       "team": "Ferrari"
     },
@@ -36,7 +36,7 @@
       "driverId": "lando-norris",
       "name": "Lando Norris",
       "code": "NOR",
-      "points": 159,
+      "points": 171,
       "teamId": "mclaren",
       "team": "McLaren"
     },
@@ -54,7 +54,7 @@
       "driverId": "max-verstappen",
       "name": "Max Verstappen",
       "code": "VER",
-      "points": 112,
+      "points": 127,
       "teamId": "red-bull",
       "team": "Red Bull"
     },
@@ -63,7 +63,7 @@
       "driverId": "oscar-piastri",
       "name": "Oscar Piastri",
       "code": "PIA",
-      "points": 104,
+      "points": 116,
       "teamId": "mclaren",
       "team": "McLaren"
     },
@@ -72,7 +72,7 @@
       "driverId": "isack-hadjar",
       "name": "Isack Hadjar",
       "code": "HAD",
-      "points": 68,
+      "points": 71,
       "teamId": "red-bull",
       "team": "Red Bull"
     },
@@ -81,7 +81,7 @@
       "driverId": "liam-lawson",
       "name": "Liam Lawson",
       "code": "LAW",
-      "points": 49,
+      "points": 51,
       "teamId": "racing-bulls",
       "team": "Racing Bulls"
     },
@@ -90,7 +90,7 @@
       "driverId": "pierre-gasly",
       "name": "Pierre Gasly",
       "code": "GAS",
-      "points": 44,
+      "points": 41,
       "teamId": "alpine",
       "team": "Alpine"
     },
@@ -99,7 +99,7 @@
       "driverId": "arvid-lindblad",
       "name": "Arvid Lindblad",
       "code": "LIN",
-      "points": 23,
+      "points": 29,
       "teamId": "racing-bulls",
       "team": "Racing Bulls"
     },
@@ -108,7 +108,7 @@
       "driverId": "franco-colapinto",
       "name": "Franco Colapinto",
       "code": "COL",
-      "points": 19,
+      "points": 21,
       "teamId": "alpine",
       "team": "Alpine"
     },
@@ -180,7 +180,7 @@
       "driverId": "yuki-tsunoda",
       "name": "Yuki Tsunoda",
       "code": "TSU",
-      "points": 0,
+      "points": 1,
       "teamId": "racing-bulls",
       "team": "Racing Bulls"
     },
@@ -217,42 +217,42 @@
       "position": 1,
       "constructorId": "mercedes",
       "name": "Mercedes",
-      "points": 425,
+      "points": 468,
       "championshipWon": false
     },
     {
       "position": 2,
       "constructorId": "ferrari",
       "name": "Ferrari",
-      "points": 338,
+      "points": 346,
       "championshipWon": false
     },
     {
       "position": 3,
       "constructorId": "mclaren",
       "name": "McLaren",
-      "points": 263,
+      "points": 287,
       "championshipWon": false
     },
     {
       "position": 4,
       "constructorId": "red-bull",
       "name": "Red Bull",
-      "points": 186,
+      "points": 204,
       "championshipWon": false
     },
     {
       "position": 5,
       "constructorId": "racing-bulls",
       "name": "Racing Bulls",
-      "points": 66,
+      "points": 75,
       "championshipWon": false
     },
     {
       "position": 6,
       "constructorId": "alpine",
       "name": "Alpine",
-      "points": 63,
+      "points": 62,
       "championshipWon": false
     },
     {
@@ -380,8 +380,8 @@
       "round": 13,
       "grandPrixId": "italy",
       "name": "Italian GP",
-      "winnerId": null,
-      "winner": null
+      "winnerId": "kimi-antonelli",
+      "winner": "Kimi Antonelli"
     },
     {
       "round": 14,
@@ -455,5 +455,5 @@
     }
   ],
   "notes": null,
-  "updated": "2026-08-23"
+  "updated": "2026-09-06"
 }

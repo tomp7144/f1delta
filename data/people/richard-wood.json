@@ -13,7 +13,7 @@
     "drivers": 1,
     "races": 11,
     "wins": 0,
-    "podiums": 0,
+    "podiums": 1,
     "poles": 0,
     "championships": 0
   },
@@ -30,11 +30,11 @@
       "stats": {
         "races": 11,
         "wins": 0,
-        "podiums": 0,
+        "podiums": 1,
         "poles": 0,
         "championships": 0
       }
     }
   ],
-  "updated": "2026-08-23"
+  "updated": "2026-09-06"
 }

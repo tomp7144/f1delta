@@ -6964,5 +6964,11 @@
     "topDriverName": "Lando Norris",
     "topScore": 45,
     "partial": false
+  },
+  "1162": {
+    "topDriverId": "kimi-antonelli",
+    "topDriverName": "Kimi Antonelli",
+    "topScore": 80,
+    "partial": false
   }
 }
