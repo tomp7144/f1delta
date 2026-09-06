@@ -4,25 +4,25 @@
     {
       "pos": 1,
       "code": "ANT",
-      "points": 242,
+      "points": 267,
       "team": "Mercedes"
     },
     {
       "pos": 2,
       "code": "RUS",
-      "points": 183,
+      "points": 201,
       "team": "Mercedes"
     },
     {
       "pos": 3,
       "code": "HAM",
-      "points": 183,
+      "points": 191,
       "team": "Ferrari"
     },
     {
       "pos": 4,
       "code": "NOR",
-      "points": 159,
+      "points": 171,
       "team": "McLaren"
     },
     {
@@ -34,43 +34,43 @@
     {
       "pos": 6,
       "code": "VER",
-      "points": 112,
+      "points": 127,
       "team": "Red Bull"
     },
     {
       "pos": 7,
       "code": "PIA",
-      "points": 104,
+      "points": 116,
       "team": "McLaren"
     },
     {
       "pos": 8,
       "code": "HAD",
-      "points": 68,
+      "points": 71,
       "team": "Red Bull"
     },
     {
       "pos": 9,
       "code": "LAW",
-      "points": 49,
+      "points": 51,
       "team": "RB F1 Team"
     },
     {
       "pos": 10,
       "code": "GAS",
-      "points": 44,
+      "points": 41,
       "team": "Alpine F1 Team"
     },
     {
       "pos": 11,
       "code": "LIN",
-      "points": 23,
+      "points": 29,
       "team": "RB F1 Team"
     },
     {
       "pos": 12,
       "code": "COL",
-      "points": 19,
+      "points": 21,
       "team": "Alpine F1 Team"
     },
     {
@@ -118,7 +118,7 @@
     {
       "pos": 20,
       "code": "TSU",
-      "points": 0,
+      "points": 1,
       "team": "RB F1 Team"
     },
     {
