@@ -52,7 +52,7 @@
       "totals": {
         "seasons": 2,
         "drivers": 1,
-        "races": 37,
+        "races": 38,
         "wins": 0,
         "podiums": 0,
         "poles": 0,
@@ -71,7 +71,7 @@
       "totals": {
         "seasons": 3,
         "drivers": 1,
-        "races": 61,
+        "races": 62,
         "wins": 4,
         "podiums": 24,
         "poles": 4,
@@ -90,7 +90,7 @@
       "totals": {
         "seasons": 1,
         "drivers": 1,
-        "races": 13,
+        "races": 14,
         "wins": 0,
         "podiums": 0,
         "poles": 0,
@@ -109,7 +109,7 @@
       "totals": {
         "seasons": 1,
         "drivers": 1,
-        "races": 13,
+        "races": 14,
         "wins": 1,
         "podiums": 5,
         "poles": 0,
@@ -128,7 +128,7 @@
       "totals": {
         "seasons": 1,
         "drivers": 1,
-        "races": 13,
+        "races": 14,
         "wins": 0,
         "podiums": 0,
         "poles": 0,
@@ -147,7 +147,7 @@
       "totals": {
         "seasons": 7,
         "drivers": 1,
-        "races": 127,
+        "races": 128,
         "wins": 0,
         "podiums": 0,
         "poles": 0,
@@ -166,9 +166,9 @@
       "totals": {
         "seasons": 19,
         "drivers": 6,
-        "races": 368,
+        "races": 369,
         "wins": 71,
-        "podiums": 135,
+        "podiums": 136,
         "poles": 49,
         "championships": 4
       }
@@ -185,7 +185,7 @@
       "totals": {
         "seasons": 5,
         "drivers": 1,
-        "races": 104,
+        "races": 105,
         "wins": 0,
         "podiums": 0,
         "poles": 0,
@@ -223,7 +223,7 @@
       "totals": {
         "seasons": 1,
         "drivers": 1,
-        "races": 13,
+        "races": 14,
         "wins": 0,
         "podiums": 0,
         "poles": 0,
@@ -242,7 +242,7 @@
       "totals": {
         "seasons": 1,
         "drivers": 1,
-        "races": 13,
+        "races": 14,
         "wins": 0,
         "podiums": 0,
         "poles": 0,
@@ -261,7 +261,7 @@
       "totals": {
         "seasons": 1,
         "drivers": 1,
-        "races": 13,
+        "races": 14,
         "wins": 0,
         "podiums": 0,
         "poles": 1,
@@ -280,7 +280,7 @@
       "totals": {
         "seasons": 2,
         "drivers": 1,
-        "races": 37,
+        "races": 38,
         "wins": 0,
         "podiums": 0,
         "poles": 0,
@@ -299,7 +299,7 @@
       "totals": {
         "seasons": 4,
         "drivers": 1,
-        "races": 83,
+        "races": 84,
         "wins": 6,
         "podiums": 22,
         "poles": 10,
@@ -318,9 +318,9 @@
       "totals": {
         "seasons": 16,
         "drivers": 3,
-        "races": 322,
-        "wins": 91,
-        "podiums": 168,
+        "races": 323,
+        "wins": 92,
+        "podiums": 169,
         "poles": 84,
         "championships": 6
       }
@@ -337,7 +337,7 @@
       "totals": {
         "seasons": 1,
         "drivers": 1,
-        "races": 13,
+        "races": 14,
         "wins": 0,
         "podiums": 0,
         "poles": 0,
@@ -394,7 +394,7 @@
       "totals": {
         "seasons": 1,
         "drivers": 1,
-        "races": 13,
+        "races": 14,
         "wins": 0,
         "podiums": 0,
         "poles": 0,
@@ -413,7 +413,7 @@
       "totals": {
         "seasons": 1,
         "drivers": 1,
-        "races": 13,
+        "races": 14,
         "wins": 0,
         "podiums": 0,
         "poles": 0,
@@ -432,7 +432,7 @@
       "totals": {
         "seasons": 2,
         "drivers": 1,
-        "races": 31,
+        "races": 32,
         "wins": 0,
         "podiums": 0,
         "poles": 0,
@@ -451,7 +451,7 @@
       "totals": {
         "seasons": 13,
         "drivers": 5,
-        "races": 265,
+        "races": 266,
         "wins": 10,
         "podiums": 32,
         "poles": 6,
@@ -470,10 +470,10 @@
       "totals": {
         "seasons": 8,
         "drivers": 1,
-        "races": 165,
+        "races": 166,
         "wins": 13,
-        "podiums": 48,
-        "poles": 18,
+        "podiums": 49,
+        "poles": 19,
         "championships": 1
       }
     }

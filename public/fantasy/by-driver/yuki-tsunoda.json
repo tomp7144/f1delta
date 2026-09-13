@@ -2,8 +2,8 @@
   "driverId": "yuki-tsunoda",
   "name": "Yuki Tsunoda",
   "career": {
-    "score": 112,
-    "races": 116,
+    "score": 115,
+    "races": 117,
     "partial": 4
   },
   "seasons": [
@@ -39,8 +39,8 @@
     },
     {
       "year": 2026,
-      "score": 17,
-      "races": 2,
+      "score": 20,
+      "races": 3,
       "partial": 0
     }
   ]

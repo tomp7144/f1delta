@@ -9,7 +9,7 @@
       "driverId": "kimi-antonelli",
       "name": "Kimi Antonelli",
       "code": "ANT",
-      "points": 267,
+      "points": 292,
       "teamId": "mercedes",
       "team": "Mercedes"
     },
@@ -18,7 +18,7 @@
       "driverId": "george-russell",
       "name": "George Russell",
       "code": "RUS",
-      "points": 201,
+      "points": 211,
       "teamId": "mercedes",
       "team": "Mercedes"
     },
@@ -36,7 +36,7 @@
       "driverId": "lando-norris",
       "name": "Lando Norris",
       "code": "NOR",
-      "points": 171,
+      "points": 186,
       "teamId": "mclaren",
       "team": "McLaren"
     },
@@ -45,7 +45,7 @@
       "driverId": "charles-leclerc",
       "name": "Charles Leclerc",
       "code": "LEC",
-      "points": 155,
+      "points": 167,
       "teamId": "ferrari",
       "team": "Ferrari"
     },
@@ -54,7 +54,7 @@
       "driverId": "max-verstappen",
       "name": "Max Verstappen",
       "code": "VER",
-      "points": 127,
+      "points": 145,
       "teamId": "red-bull",
       "team": "Red Bull"
     },
@@ -63,7 +63,7 @@
       "driverId": "oscar-piastri",
       "name": "Oscar Piastri",
       "code": "PIA",
-      "points": 116,
+      "points": 120,
       "teamId": "mclaren",
       "team": "McLaren"
     },
@@ -81,7 +81,7 @@
       "driverId": "liam-lawson",
       "name": "Liam Lawson",
       "code": "LAW",
-      "points": 51,
+      "points": 59,
       "teamId": "racing-bulls",
       "team": "Racing Bulls"
     },
@@ -99,7 +99,7 @@
       "driverId": "arvid-lindblad",
       "name": "Arvid Lindblad",
       "code": "LIN",
-      "points": 29,
+      "points": 31,
       "teamId": "racing-bulls",
       "team": "Racing Bulls"
     },
@@ -108,7 +108,7 @@
       "driverId": "franco-colapinto",
       "name": "Franco Colapinto",
       "code": "COL",
-      "points": 21,
+      "points": 27,
       "teamId": "alpine",
       "team": "Alpine"
     },
@@ -135,7 +135,7 @@
       "driverId": "nico-hulkenberg",
       "name": "Nico Hülkenberg",
       "code": "HUL",
-      "points": 6,
+      "points": 7,
       "teamId": "audi",
       "team": "Audi"
     },
@@ -387,8 +387,8 @@
       "round": 14,
       "grandPrixId": "spain",
       "name": "Spanish GP",
-      "winnerId": null,
-      "winner": null
+      "winnerId": "kimi-antonelli",
+      "winner": "Kimi Antonelli"
     },
     {
       "round": 15,
@@ -455,5 +455,5 @@
     }
   ],
   "notes": null,
-  "updated": "2026-09-06"
+  "updated": "2026-09-13"
 }

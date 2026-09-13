@@ -11,9 +11,9 @@
   "totals": {
     "seasons": 19,
     "drivers": 6,
-    "races": 368,
+    "races": 369,
     "wins": 71,
-    "podiums": 135,
+    "podiums": 136,
     "poles": 49,
     "championships": 4
   },
@@ -108,13 +108,13 @@
       "driverId": "max-verstappen",
       "driverName": "Max Verstappen",
       "stats": {
-        "races": 223,
+        "races": 224,
         "wins": 71,
-        "podiums": 132,
+        "podiums": 133,
         "poles": 48,
         "championships": 4
       }
     }
   ],
-  "updated": "2026-09-06"
+  "updated": "2026-09-13"
 }

@@ -3,8 +3,8 @@
   "name": "Oliver Bearman",
   "career": {
     "score": 173,
-    "races": 40,
-    "partial": 1
+    "races": 41,
+    "partial": 2
   },
   "seasons": [
     {
@@ -22,8 +22,8 @@
     {
       "year": 2026,
       "score": -6,
-      "races": 13,
-      "partial": 0
+      "races": 14,
+      "partial": 1
     }
   ]
 }
