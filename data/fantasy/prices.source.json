@@ -349,6 +349,31 @@
         "total_dnf_dq_pts": -20,
         "value_for_money": 1.53
       }
+    },
+    "15": {
+      "round": 15,
+      "tla": "ALP",
+      "name": "Alpine",
+      "team": null,
+      "positionType": "CONSTRUCTOR",
+      "price": 19.5,
+      "prevPrice": 19.2,
+      "ownership": null,
+      "captainPct": null,
+      "gamedayPoints": null,
+      "overallPoints": 407,
+      "stats": {
+        "fastest_lap_pts": 0,
+        "dotd_pts": 0,
+        "overtaking_pts": 180,
+        "q3_finishes_pts": 31,
+        "top10_race_position_pts": 75,
+        "top8_sprint_position_pts": 2,
+        "total_position_pts": 108,
+        "total_position_gained_lost": 49,
+        "total_dnf_dq_pts": -20,
+        "value_for_money": 1.49
+      }
     }
   },
   "24": {
@@ -700,6 +725,31 @@
         "total_position_gained_lost": 71,
         "total_dnf_dq_pts": -295,
         "value_for_money": -0.68
+      }
+    },
+    "15": {
+      "round": 15,
+      "tla": "AST",
+      "name": "Aston Martin",
+      "team": null,
+      "positionType": "CONSTRUCTOR",
+      "price": 6.3,
+      "prevPrice": 6.9,
+      "ownership": null,
+      "captainPct": null,
+      "gamedayPoints": null,
+      "overallPoints": -78,
+      "stats": {
+        "fastest_lap_pts": 0,
+        "dotd_pts": 0,
+        "overtaking_pts": 147,
+        "q3_finishes_pts": 0,
+        "top10_race_position_pts": 3,
+        "top8_sprint_position_pts": 0,
+        "total_position_pts": 3,
+        "total_position_gained_lost": 71,
+        "total_dnf_dq_pts": -320,
+        "value_for_money": -0.88
       }
     }
   },
@@ -1053,6 +1103,31 @@
         "total_dnf_dq_pts": -40,
         "value_for_money": 2.44
       }
+    },
+    "15": {
+      "round": 15,
+      "tla": "FER",
+      "name": "Ferrari",
+      "team": null,
+      "positionType": "CONSTRUCTOR",
+      "price": 27.5,
+      "prevPrice": 27.2,
+      "ownership": null,
+      "captainPct": null,
+      "gamedayPoints": null,
+      "overallPoints": 882,
+      "stats": {
+        "fastest_lap_pts": 35,
+        "dotd_pts": 0,
+        "overtaking_pts": 150,
+        "q3_finishes_pts": 184,
+        "top10_race_position_pts": 310,
+        "top8_sprint_position_pts": 48,
+        "total_position_pts": 542,
+        "total_position_gained_lost": 4,
+        "total_dnf_dq_pts": -60,
+        "value_for_money": 2.29
+      }
     }
   },
   "26": {
@@ -1404,6 +1479,31 @@
         "total_position_gained_lost": 44,
         "total_dnf_dq_pts": -80,
         "value_for_money": 1.52
+      }
+    },
+    "15": {
+      "round": 15,
+      "tla": "HAA",
+      "name": "Haas F1 Team",
+      "team": null,
+      "positionType": "CONSTRUCTOR",
+      "price": 10.2,
+      "prevPrice": 10.8,
+      "ownership": null,
+      "captainPct": null,
+      "gamedayPoints": null,
+      "overallPoints": 224,
+      "stats": {
+        "fastest_lap_pts": 0,
+        "dotd_pts": 0,
+        "overtaking_pts": 199,
+        "q3_finishes_pts": 1,
+        "top10_race_position_pts": 20,
+        "top8_sprint_position_pts": 1,
+        "total_position_pts": 22,
+        "total_position_gained_lost": 52,
+        "total_dnf_dq_pts": -85,
+        "value_for_money": 1.57
       }
     }
   },
@@ -1757,6 +1857,31 @@
         "total_dnf_dq_pts": -120,
         "value_for_money": 1.69
       }
+    },
+    "15": {
+      "round": 15,
+      "tla": "MCL",
+      "name": "McLaren",
+      "team": null,
+      "positionType": "CONSTRUCTOR",
+      "price": 31.9,
+      "prevPrice": 31.6,
+      "ownership": null,
+      "captainPct": null,
+      "gamedayPoints": null,
+      "overallPoints": 739,
+      "stats": {
+        "fastest_lap_pts": 30,
+        "dotd_pts": 0,
+        "overtaking_pts": 149,
+        "q3_finishes_pts": 166,
+        "top10_race_position_pts": 251,
+        "top8_sprint_position_pts": 53,
+        "total_position_pts": 470,
+        "total_position_gained_lost": 15,
+        "total_dnf_dq_pts": -120,
+        "value_for_money": 1.65
+      }
     }
   },
   "28": {
@@ -2108,6 +2233,31 @@
         "total_position_gained_lost": -13,
         "total_dnf_dq_pts": -40,
         "value_for_money": 2.53
+      }
+    },
+    "15": {
+      "round": 15,
+      "tla": "MER",
+      "name": "Mercedes",
+      "team": null,
+      "positionType": "CONSTRUCTOR",
+      "price": 33.5,
+      "prevPrice": 33.2,
+      "ownership": null,
+      "captainPct": null,
+      "gamedayPoints": null,
+      "overallPoints": 1181,
+      "stats": {
+        "fastest_lap_pts": 90,
+        "dotd_pts": 0,
+        "overtaking_pts": 159,
+        "q3_finishes_pts": 231,
+        "top10_race_position_pts": 443,
+        "top8_sprint_position_pts": 60,
+        "total_position_pts": 734,
+        "total_position_gained_lost": -11,
+        "total_dnf_dq_pts": -40,
+        "value_for_money": 2.52
       }
     }
   },
@@ -2461,6 +2611,31 @@
         "total_dnf_dq_pts": -115,
         "value_for_money": 1.42
       }
+    },
+    "15": {
+      "round": 15,
+      "tla": "RBR",
+      "name": "Red Bull Racing",
+      "team": null,
+      "positionType": "CONSTRUCTOR",
+      "price": 31.8,
+      "prevPrice": 31.5,
+      "ownership": null,
+      "captainPct": null,
+      "gamedayPoints": null,
+      "overallPoints": 641,
+      "stats": {
+        "fastest_lap_pts": 10,
+        "dotd_pts": 0,
+        "overtaking_pts": 205,
+        "q3_finishes_pts": 120,
+        "top10_race_position_pts": 215,
+        "top8_sprint_position_pts": 12,
+        "total_position_pts": 347,
+        "total_position_gained_lost": 22,
+        "total_dnf_dq_pts": -115,
+        "value_for_money": 1.44
+      }
     }
   },
   "210": {
@@ -2812,6 +2987,31 @@
         "total_position_gained_lost": 57,
         "total_dnf_dq_pts": -105,
         "value_for_money": 1.01
+      }
+    },
+    "15": {
+      "round": 15,
+      "tla": "WIL",
+      "name": "Williams",
+      "team": null,
+      "positionType": "CONSTRUCTOR",
+      "price": 14,
+      "prevPrice": 13.8,
+      "ownership": null,
+      "captainPct": null,
+      "gamedayPoints": null,
+      "overallPoints": 170,
+      "stats": {
+        "fastest_lap_pts": 0,
+        "dotd_pts": 0,
+        "overtaking_pts": 170,
+        "q3_finishes_pts": 0,
+        "top10_race_position_pts": 11,
+        "top8_sprint_position_pts": 0,
+        "total_position_pts": 11,
+        "total_position_gained_lost": 58,
+        "total_dnf_dq_pts": -125,
+        "value_for_money": 0.87
       }
     }
   },
@@ -3165,6 +3365,31 @@
         "total_dnf_dq_pts": -60,
         "value_for_money": 2.18
       }
+    },
+    "15": {
+      "round": 15,
+      "tla": "RBS",
+      "name": "Racing Bulls",
+      "team": null,
+      "positionType": "CONSTRUCTOR",
+      "price": 14.7,
+      "prevPrice": 14.1,
+      "ownership": null,
+      "captainPct": null,
+      "gamedayPoints": null,
+      "overallPoints": 412,
+      "stats": {
+        "fastest_lap_pts": 0,
+        "dotd_pts": 0,
+        "overtaking_pts": 146,
+        "q3_finishes_pts": 26,
+        "top10_race_position_pts": 69,
+        "top8_sprint_position_pts": 4,
+        "total_position_pts": 99,
+        "total_position_gained_lost": 53,
+        "total_dnf_dq_pts": -60,
+        "value_for_money": 2
+      }
     }
   },
   "2640": {
@@ -3516,6 +3741,31 @@
         "total_position_gained_lost": 16,
         "total_dnf_dq_pts": -150,
         "value_for_money": 1.65
+      }
+    },
+    "15": {
+      "round": 15,
+      "tla": "AUD",
+      "name": "Audi",
+      "team": null,
+      "positionType": "CONSTRUCTOR",
+      "price": 8.6,
+      "prevPrice": 8,
+      "ownership": null,
+      "captainPct": null,
+      "gamedayPoints": null,
+      "overallPoints": 182,
+      "stats": {
+        "fastest_lap_pts": 0,
+        "dotd_pts": 0,
+        "overtaking_pts": 169,
+        "q3_finishes_pts": 11,
+        "top10_race_position_pts": 17,
+        "top8_sprint_position_pts": 0,
+        "total_position_pts": 28,
+        "total_position_gained_lost": 16,
+        "total_dnf_dq_pts": -150,
+        "value_for_money": 1.51
       }
     }
   },
@@ -3869,6 +4119,31 @@
         "total_dnf_dq_pts": -210,
         "value_for_money": -1.31
       }
+    },
+    "15": {
+      "round": 15,
+      "tla": "CAD",
+      "name": "Cadillac",
+      "team": null,
+      "positionType": "CONSTRUCTOR",
+      "price": 3,
+      "prevPrice": 3,
+      "ownership": null,
+      "captainPct": null,
+      "gamedayPoints": null,
+      "overallPoints": -67,
+      "stats": {
+        "fastest_lap_pts": 0,
+        "dotd_pts": 0,
+        "overtaking_pts": 115,
+        "q3_finishes_pts": 0,
+        "top10_race_position_pts": 0,
+        "top8_sprint_position_pts": 0,
+        "total_position_pts": 0,
+        "total_position_gained_lost": 50,
+        "total_dnf_dq_pts": -230,
+        "value_for_money": -1.6
+      }
     }
   },
   "PIEGAS01": {
@@ -4220,6 +4495,31 @@
         "total_position_gained_lost": 19,
         "total_dnf_dq_pts": -20,
         "value_for_money": 0.99
+      }
+    },
+    "15": {
+      "round": 15,
+      "tla": "GAS",
+      "name": "Pierre Gasly",
+      "team": "Alpine",
+      "positionType": "DRIVER",
+      "price": 12,
+      "prevPrice": 12.2,
+      "ownership": null,
+      "captainPct": null,
+      "gamedayPoints": null,
+      "overallPoints": 161,
+      "stats": {
+        "fastest_lap_pts": 0,
+        "dotd_pts": 0,
+        "overtaking_pts": 88,
+        "q3_finishes_pts": 22,
+        "top10_race_position_pts": 48,
+        "top8_sprint_position_pts": 2,
+        "total_position_pts": 72,
+        "total_position_gained_lost": 21,
+        "total_dnf_dq_pts": -20,
+        "value_for_money": 0.96
       }
     }
   },
@@ -4573,6 +4873,31 @@
         "total_dnf_dq_pts": 0,
         "value_for_money": 1.06
       }
+    },
+    "15": {
+      "round": 15,
+      "tla": "COL",
+      "name": "Franco Colapinto",
+      "team": "Alpine",
+      "positionType": "DRIVER",
+      "price": 10.6,
+      "prevPrice": 10.4,
+      "ownership": null,
+      "captainPct": null,
+      "gamedayPoints": null,
+      "overallPoints": 156,
+      "stats": {
+        "fastest_lap_pts": 0,
+        "dotd_pts": 0,
+        "overtaking_pts": 92,
+        "q3_finishes_pts": 9,
+        "top10_race_position_pts": 27,
+        "top8_sprint_position_pts": 0,
+        "total_position_pts": 36,
+        "total_position_gained_lost": 28,
+        "total_dnf_dq_pts": 0,
+        "value_for_money": 1.05
+      }
     }
   },
   "FERALO01": {
@@ -4924,6 +5249,31 @@
         "total_position_gained_lost": 46,
         "total_dnf_dq_pts": -110,
         "value_for_money": 0.21
+      }
+    },
+    "15": {
+      "round": 15,
+      "tla": "ALO",
+      "name": "Fernando Alonso",
+      "team": "Aston Martin",
+      "positionType": "DRIVER",
+      "price": 6.8,
+      "prevPrice": 7,
+      "ownership": null,
+      "captainPct": null,
+      "gamedayPoints": null,
+      "overallPoints": 23,
+      "stats": {
+        "fastest_lap_pts": 0,
+        "dotd_pts": 0,
+        "overtaking_pts": 84,
+        "q3_finishes_pts": 0,
+        "top10_race_position_pts": 3,
+        "top8_sprint_position_pts": 0,
+        "total_position_pts": 3,
+        "total_position_gained_lost": 46,
+        "total_dnf_dq_pts": -110,
+        "value_for_money": 0.24
       }
     }
   },
@@ -5277,6 +5627,31 @@
         "total_dnf_dq_pts": -185,
         "value_for_money": -2.56
       }
+    },
+    "15": {
+      "round": 15,
+      "tla": "STR",
+      "name": "Lance Stroll",
+      "team": "Aston Martin",
+      "positionType": "DRIVER",
+      "price": 3,
+      "prevPrice": 3,
+      "ownership": null,
+      "captainPct": null,
+      "gamedayPoints": null,
+      "overallPoints": -122,
+      "stats": {
+        "fastest_lap_pts": 0,
+        "dotd_pts": 0,
+        "overtaking_pts": 63,
+        "q3_finishes_pts": 0,
+        "top10_race_position_pts": 0,
+        "top8_sprint_position_pts": 0,
+        "total_position_pts": 0,
+        "total_position_gained_lost": 25,
+        "total_dnf_dq_pts": -210,
+        "value_for_money": -2.9
+      }
     }
   },
   "NICHUL01": {
@@ -5628,6 +6003,31 @@
         "total_position_gained_lost": 2,
         "total_dnf_dq_pts": -110,
         "value_for_money": -0.24
+      }
+    },
+    "15": {
+      "round": 15,
+      "tla": "HUL",
+      "name": "Nico Hulkenberg",
+      "team": "Audi",
+      "positionType": "DRIVER",
+      "price": 4.8,
+      "prevPrice": 4.2,
+      "ownership": null,
+      "captainPct": null,
+      "gamedayPoints": null,
+      "overallPoints": -11,
+      "stats": {
+        "fastest_lap_pts": 0,
+        "dotd_pts": 0,
+        "overtaking_pts": 85,
+        "q3_finishes_pts": 4,
+        "top10_race_position_pts": 7,
+        "top8_sprint_position_pts": 0,
+        "total_position_pts": 11,
+        "total_position_gained_lost": 3,
+        "total_dnf_dq_pts": -110,
+        "value_for_money": -0.16
       }
     }
   },
@@ -5981,6 +6381,31 @@
         "total_dnf_dq_pts": -30,
         "value_for_money": 0.75
       }
+    },
+    "15": {
+      "round": 15,
+      "tla": "BOR",
+      "name": "Gabriel Bortoleto",
+      "team": "Audi",
+      "positionType": "DRIVER",
+      "price": 8.4,
+      "prevPrice": 8.6,
+      "ownership": null,
+      "captainPct": null,
+      "gamedayPoints": null,
+      "overallPoints": 84,
+      "stats": {
+        "fastest_lap_pts": 0,
+        "dotd_pts": 0,
+        "overtaking_pts": 84,
+        "q3_finishes_pts": 7,
+        "top10_race_position_pts": 10,
+        "top8_sprint_position_pts": 0,
+        "total_position_pts": 17,
+        "total_position_gained_lost": 13,
+        "total_dnf_dq_pts": -30,
+        "value_for_money": 0.71
+      }
     }
   },
   "SERPER01": {
@@ -6332,6 +6757,31 @@
         "total_position_gained_lost": 34,
         "total_dnf_dq_pts": -80,
         "value_for_money": 0.67
+      }
+    },
+    "15": {
+      "round": 15,
+      "tla": "PER",
+      "name": "Sergio Perez",
+      "team": "Cadillac",
+      "positionType": "DRIVER",
+      "price": 3,
+      "prevPrice": 3,
+      "ownership": null,
+      "captainPct": null,
+      "gamedayPoints": null,
+      "overallPoints": 8,
+      "stats": {
+        "fastest_lap_pts": 0,
+        "dotd_pts": 0,
+        "overtaking_pts": 74,
+        "q3_finishes_pts": 0,
+        "top10_race_position_pts": 0,
+        "top8_sprint_position_pts": 0,
+        "total_position_pts": 0,
+        "total_position_gained_lost": 34,
+        "total_dnf_dq_pts": -100,
+        "value_for_money": 0.19
       }
     }
   },
@@ -6685,6 +7135,31 @@
         "total_dnf_dq_pts": -130,
         "value_for_money": -1.9
       }
+    },
+    "15": {
+      "round": 15,
+      "tla": "BOT",
+      "name": "Valtteri Bottas",
+      "team": "Cadillac",
+      "positionType": "DRIVER",
+      "price": 3,
+      "prevPrice": 3,
+      "ownership": null,
+      "captainPct": null,
+      "gamedayPoints": null,
+      "overallPoints": -73,
+      "stats": {
+        "fastest_lap_pts": 0,
+        "dotd_pts": 0,
+        "overtaking_pts": 41,
+        "q3_finishes_pts": 0,
+        "top10_race_position_pts": 0,
+        "top8_sprint_position_pts": 0,
+        "total_position_pts": 0,
+        "total_position_gained_lost": 16,
+        "total_dnf_dq_pts": -130,
+        "value_for_money": -1.74
+      }
     }
   },
   "CHALEC01": {
@@ -7036,6 +7511,31 @@
         "total_position_gained_lost": -2,
         "total_dnf_dq_pts": -40,
         "value_for_money": 1
+      }
+    },
+    "15": {
+      "round": 15,
+      "tla": "LEC",
+      "name": "Charles Leclerc",
+      "team": "Ferrari",
+      "positionType": "DRIVER",
+      "price": 24,
+      "prevPrice": 24.1,
+      "ownership": null,
+      "captainPct": null,
+      "gamedayPoints": null,
+      "overallPoints": 331,
+      "stats": {
+        "fastest_lap_pts": 25,
+        "dotd_pts": 20,
+        "overtaking_pts": 70,
+        "q3_finishes_pts": 90,
+        "top10_race_position_pts": 139,
+        "top8_sprint_position_pts": 28,
+        "total_position_pts": 257,
+        "total_position_gained_lost": -1,
+        "total_dnf_dq_pts": -40,
+        "value_for_money": 0.99
       }
     }
   },
@@ -7389,6 +7889,31 @@
         "total_dnf_dq_pts": 0,
         "value_for_money": 1.2
       }
+    },
+    "15": {
+      "round": 15,
+      "tla": "HAM",
+      "name": "Lewis Hamilton",
+      "team": "Ferrari",
+      "positionType": "DRIVER",
+      "price": 24.9,
+      "prevPrice": 25.2,
+      "ownership": null,
+      "captainPct": null,
+      "gamedayPoints": null,
+      "overallPoints": 380,
+      "stats": {
+        "fastest_lap_pts": 10,
+        "dotd_pts": 20,
+        "overtaking_pts": 80,
+        "q3_finishes_pts": 94,
+        "top10_race_position_pts": 171,
+        "top8_sprint_position_pts": 20,
+        "total_position_pts": 285,
+        "total_position_gained_lost": 5,
+        "total_dnf_dq_pts": -20,
+        "value_for_money": 1.09
+      }
     }
   },
   "OLIBEA01": {
@@ -7740,6 +8265,31 @@
         "total_position_gained_lost": 16,
         "total_dnf_dq_pts": -60,
         "value_for_money": 0.72
+      }
+    },
+    "15": {
+      "round": 15,
+      "tla": "BEA",
+      "name": "Oliver Bearman",
+      "team": "Haas F1 Team",
+      "positionType": "DRIVER",
+      "price": 5.8,
+      "prevPrice": 6.4,
+      "ownership": null,
+      "captainPct": null,
+      "gamedayPoints": null,
+      "overallPoints": 63,
+      "stats": {
+        "fastest_lap_pts": 0,
+        "dotd_pts": 0,
+        "overtaking_pts": 87,
+        "q3_finishes_pts": 1,
+        "top10_race_position_pts": 17,
+        "top8_sprint_position_pts": 1,
+        "total_position_pts": 19,
+        "total_position_gained_lost": 22,
+        "total_dnf_dq_pts": -65,
+        "value_for_money": 0.78
       }
     }
   },
@@ -8093,6 +8643,31 @@
         "total_dnf_dq_pts": -20,
         "value_for_money": 0.97
       }
+    },
+    "15": {
+      "round": 15,
+      "tla": "OCO",
+      "name": "Esteban Ocon",
+      "team": "Haas F1 Team",
+      "positionType": "DRIVER",
+      "price": 8.9,
+      "prevPrice": 9.5,
+      "ownership": null,
+      "captainPct": null,
+      "gamedayPoints": null,
+      "overallPoints": 125,
+      "stats": {
+        "fastest_lap_pts": 0,
+        "dotd_pts": 0,
+        "overtaking_pts": 112,
+        "q3_finishes_pts": 0,
+        "top10_race_position_pts": 3,
+        "top8_sprint_position_pts": 0,
+        "total_position_pts": 3,
+        "total_position_gained_lost": 30,
+        "total_dnf_dq_pts": -20,
+        "value_for_money": 1
+      }
     }
   },
   "LANNOR01": {
@@ -8444,6 +9019,31 @@
         "total_position_gained_lost": 17,
         "total_dnf_dq_pts": -60,
         "value_for_money": 0.91
+      }
+    },
+    "15": {
+      "round": 15,
+      "tla": "NOR",
+      "name": "Lando Norris",
+      "team": "McLaren",
+      "positionType": "DRIVER",
+      "price": 27,
+      "prevPrice": 26.7,
+      "ownership": null,
+      "captainPct": null,
+      "gamedayPoints": null,
+      "overallPoints": 339,
+      "stats": {
+        "fastest_lap_pts": 30,
+        "dotd_pts": 10,
+        "overtaking_pts": 67,
+        "q3_finishes_pts": 91,
+        "top10_race_position_pts": 154,
+        "top8_sprint_position_pts": 32,
+        "total_position_pts": 277,
+        "total_position_gained_lost": 15,
+        "total_dnf_dq_pts": -60,
+        "value_for_money": 0.9
       }
     }
   },
@@ -8797,6 +9397,31 @@
         "total_dnf_dq_pts": -60,
         "value_for_money": 0.69
       }
+    },
+    "15": {
+      "round": 15,
+      "tla": "PIA",
+      "name": "Oscar Piastri",
+      "team": "McLaren",
+      "positionType": "DRIVER",
+      "price": 24.1,
+      "prevPrice": 24,
+      "ownership": null,
+      "captainPct": null,
+      "gamedayPoints": null,
+      "overallPoints": 225,
+      "stats": {
+        "fastest_lap_pts": 0,
+        "dotd_pts": 10,
+        "overtaking_pts": 82,
+        "q3_finishes_pts": 75,
+        "top10_race_position_pts": 97,
+        "top8_sprint_position_pts": 21,
+        "total_position_pts": 193,
+        "total_position_gained_lost": 0,
+        "total_dnf_dq_pts": -60,
+        "value_for_money": 0.67
+      }
     }
   },
   "GEORUS01": {
@@ -9146,6 +9771,31 @@
         "top8_sprint_position_pts": 34,
         "total_position_pts": 306,
         "total_position_gained_lost": -5,
+        "total_dnf_dq_pts": -40,
+        "value_for_money": 0.95
+      }
+    },
+    "15": {
+      "round": 15,
+      "tla": "RUS",
+      "name": "George Russell",
+      "team": "Mercedes",
+      "positionType": "DRIVER",
+      "price": 27.8,
+      "prevPrice": 27.7,
+      "ownership": null,
+      "captainPct": null,
+      "gamedayPoints": null,
+      "overallPoints": 368,
+      "stats": {
+        "fastest_lap_pts": 10,
+        "dotd_pts": 0,
+        "overtaking_pts": 81,
+        "q3_finishes_pts": 110,
+        "top10_race_position_pts": 177,
+        "top8_sprint_position_pts": 34,
+        "total_position_pts": 321,
+        "total_position_gained_lost": -4,
         "total_dnf_dq_pts": -40,
         "value_for_money": 0.95
       }
@@ -9501,6 +10151,31 @@
         "total_dnf_dq_pts": 0,
         "value_for_money": 1.63
       }
+    },
+    "15": {
+      "round": 15,
+      "tla": "ANT",
+      "name": "Kimi Antonelli",
+      "team": "Mercedes",
+      "positionType": "DRIVER",
+      "price": 26.6,
+      "prevPrice": 26.3,
+      "ownership": null,
+      "captainPct": null,
+      "gamedayPoints": null,
+      "overallPoints": 594,
+      "stats": {
+        "fastest_lap_pts": 80,
+        "dotd_pts": 30,
+        "overtaking_pts": 78,
+        "q3_finishes_pts": 121,
+        "top10_race_position_pts": 266,
+        "top8_sprint_position_pts": 26,
+        "total_position_pts": 413,
+        "total_position_gained_lost": -7,
+        "total_dnf_dq_pts": 0,
+        "value_for_money": 1.6
+      }
     }
   },
   "LIALAW01": {
@@ -9841,6 +10516,31 @@
         "total_position_gained_lost": 9,
         "total_dnf_dq_pts": 0,
         "value_for_money": 1.24
+      }
+    },
+    "15": {
+      "round": 15,
+      "tla": "LAW",
+      "name": "Liam Lawson",
+      "team": "Red Bull Racing",
+      "positionType": "DRIVER",
+      "price": 15.1,
+      "prevPrice": 14.9,
+      "ownership": null,
+      "captainPct": null,
+      "gamedayPoints": null,
+      "overallPoints": 53,
+      "stats": {
+        "fastest_lap_pts": 0,
+        "dotd_pts": 0,
+        "overtaking_pts": 22,
+        "q3_finishes_pts": 6,
+        "top10_race_position_pts": 14,
+        "top8_sprint_position_pts": 0,
+        "total_position_pts": 20,
+        "total_position_gained_lost": 11,
+        "total_dnf_dq_pts": 0,
+        "value_for_money": 1.17
       }
     }
   },
@@ -10194,6 +10894,31 @@
         "total_dnf_dq_pts": -40,
         "value_for_money": 0.79
       }
+    },
+    "15": {
+      "round": 15,
+      "tla": "LIN",
+      "name": "Arvid Lindblad",
+      "team": "Racing Bulls",
+      "positionType": "DRIVER",
+      "price": 8.2,
+      "prevPrice": 8,
+      "ownership": null,
+      "captainPct": null,
+      "gamedayPoints": null,
+      "overallPoints": 87,
+      "stats": {
+        "fastest_lap_pts": 0,
+        "dotd_pts": 0,
+        "overtaking_pts": 70,
+        "q3_finishes_pts": 16,
+        "top10_race_position_pts": 28,
+        "top8_sprint_position_pts": 1,
+        "total_position_pts": 45,
+        "total_position_gained_lost": 12,
+        "total_dnf_dq_pts": -40,
+        "value_for_money": 0.76
+      }
     }
   },
   "MAXVER01": {
@@ -10546,6 +11271,31 @@
         "total_dnf_dq_pts": -65,
         "value_for_money": 0.83
       }
+    },
+    "15": {
+      "round": 15,
+      "tla": "VER",
+      "name": "Max Verstappen",
+      "team": "Red Bull Racing",
+      "positionType": "DRIVER",
+      "price": 27.3,
+      "prevPrice": 27.4,
+      "ownership": null,
+      "captainPct": null,
+      "gamedayPoints": null,
+      "overallPoints": 333,
+      "stats": {
+        "fastest_lap_pts": 10,
+        "dotd_pts": 50,
+        "overtaking_pts": 112,
+        "q3_finishes_pts": 73,
+        "top10_race_position_pts": 133,
+        "top8_sprint_position_pts": 12,
+        "total_position_pts": 218,
+        "total_position_gained_lost": 8,
+        "total_dnf_dq_pts": -65,
+        "value_for_money": 0.87
+      }
     }
   },
   "ISAHAD01": {
@@ -10885,6 +11635,31 @@
       "ownership": 26,
       "captainPct": 2,
       "gamedayPoints": 0,
+      "overallPoints": 138,
+      "stats": {
+        "fastest_lap_pts": 0,
+        "dotd_pts": 0,
+        "overtaking_pts": 71,
+        "q3_finishes_pts": 41,
+        "top10_race_position_pts": 68,
+        "top8_sprint_position_pts": 0,
+        "total_position_pts": 109,
+        "total_position_gained_lost": 3,
+        "total_dnf_dq_pts": -45,
+        "value_for_money": 0.87
+      }
+    },
+    "15": {
+      "round": 15,
+      "tla": "HAD",
+      "name": "Isack Hadjar",
+      "team": "Red Bull Racing",
+      "positionType": "DRIVER",
+      "price": 14.5,
+      "prevPrice": 14.5,
+      "ownership": null,
+      "captainPct": null,
+      "gamedayPoints": null,
       "overallPoints": 138,
       "stats": {
         "fastest_lap_pts": 0,
@@ -11250,6 +12025,31 @@
         "total_dnf_dq_pts": -25,
         "value_for_money": 0.83
       }
+    },
+    "15": {
+      "round": 15,
+      "tla": "SAI",
+      "name": "Carlos Sainz",
+      "team": "Williams",
+      "positionType": "DRIVER",
+      "price": 9,
+      "prevPrice": 9.6,
+      "ownership": null,
+      "captainPct": null,
+      "gamedayPoints": null,
+      "overallPoints": 85,
+      "stats": {
+        "fastest_lap_pts": 0,
+        "dotd_pts": 0,
+        "overtaking_pts": 93,
+        "q3_finishes_pts": 0,
+        "top10_race_position_pts": 6,
+        "top8_sprint_position_pts": 0,
+        "total_position_pts": 6,
+        "total_position_gained_lost": 31,
+        "total_dnf_dq_pts": -45,
+        "value_for_money": 0.67
+      }
     }
   },
   "ALEALB01": {
@@ -11602,6 +12402,31 @@
         "total_dnf_dq_pts": -80,
         "value_for_money": 0.33
       }
+    },
+    "15": {
+      "round": 15,
+      "tla": "ALB",
+      "name": "Alexander Albon",
+      "team": "Williams",
+      "positionType": "DRIVER",
+      "price": 6.4,
+      "prevPrice": 5.8,
+      "ownership": null,
+      "captainPct": null,
+      "gamedayPoints": null,
+      "overallPoints": 29,
+      "stats": {
+        "fastest_lap_pts": 0,
+        "dotd_pts": 0,
+        "overtaking_pts": 77,
+        "q3_finishes_pts": 0,
+        "top10_race_position_pts": 5,
+        "top8_sprint_position_pts": 0,
+        "total_position_pts": 5,
+        "total_position_gained_lost": 27,
+        "total_dnf_dq_pts": -80,
+        "value_for_money": 0.32
+      }
     }
   },
   "YUKTSU01": {
@@ -11667,6 +12492,31 @@
         "total_position_gained_lost": 5,
         "total_dnf_dq_pts": 0,
         "value_for_money": 1.11
+      }
+    },
+    "15": {
+      "round": 15,
+      "tla": "TSU",
+      "name": "Yuki Tsunoda",
+      "team": "Racing Bulls",
+      "positionType": "DRIVER",
+      "price": 9.7,
+      "prevPrice": 9.9,
+      "ownership": null,
+      "captainPct": null,
+      "gamedayPoints": null,
+      "overallPoints": 23,
+      "stats": {
+        "fastest_lap_pts": 0,
+        "dotd_pts": 0,
+        "overtaking_pts": 16,
+        "q3_finishes_pts": 0,
+        "top10_race_position_pts": 1,
+        "top8_sprint_position_pts": 0,
+        "total_position_pts": 1,
+        "total_position_gained_lost": 6,
+        "total_dnf_dq_pts": 0,
+        "value_for_money": 0.79
       }
     }
   }
