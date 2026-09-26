@@ -9,7 +9,7 @@
       "driverId": "kimi-antonelli",
       "name": "Kimi Antonelli",
       "code": "ANT",
-      "points": 292,
+      "points": 302,
       "teamId": "mercedes",
       "team": "Mercedes"
     },
@@ -18,7 +18,7 @@
       "driverId": "george-russell",
       "name": "George Russell",
       "code": "RUS",
-      "points": 211,
+      "points": 236,
       "teamId": "mercedes",
       "team": "Mercedes"
     },
@@ -27,7 +27,7 @@
       "driverId": "lewis-hamilton",
       "name": "Lewis Hamilton",
       "code": "HAM",
-      "points": 191,
+      "points": 199,
       "teamId": "ferrari",
       "team": "Ferrari"
     },
@@ -45,7 +45,7 @@
       "driverId": "charles-leclerc",
       "name": "Charles Leclerc",
       "code": "LEC",
-      "points": 167,
+      "points": 179,
       "teamId": "ferrari",
       "team": "Ferrari"
     },
@@ -54,7 +54,7 @@
       "driverId": "max-verstappen",
       "name": "Max Verstappen",
       "code": "VER",
-      "points": 145,
+      "points": 163,
       "teamId": "red-bull",
       "team": "Red Bull"
     },
@@ -72,7 +72,7 @@
       "driverId": "isack-hadjar",
       "name": "Isack Hadjar",
       "code": "HAD",
-      "points": 71,
+      "points": 86,
       "teamId": "red-bull",
       "team": "Red Bull"
     },
@@ -99,7 +99,7 @@
       "driverId": "arvid-lindblad",
       "name": "Arvid Lindblad",
       "code": "LIN",
-      "points": 31,
+      "points": 37,
       "teamId": "racing-bulls",
       "team": "Racing Bulls"
     },
@@ -117,7 +117,7 @@
       "driverId": "oliver-bearman",
       "name": "Oliver Bearman",
       "code": "BEA",
-      "points": 18,
+      "points": 20,
       "teamId": "haas",
       "team": "Haas"
     },
@@ -141,30 +141,30 @@
     },
     {
       "position": 16,
+      "driverId": "esteban-ocon",
+      "name": "Esteban Ocon",
+      "code": "OCO",
+      "points": 7,
+      "teamId": "haas",
+      "team": "Haas"
+    },
+    {
+      "position": 17,
       "driverId": "carlos-sainz-jr",
       "name": "Carlos Sainz Jr.",
       "code": "SAI",
-      "points": 6,
+      "points": 7,
       "teamId": "williams",
       "team": "Williams"
     },
     {
-      "position": 17,
+      "position": 18,
       "driverId": "alexander-albon",
       "name": "Alexander Albon",
       "code": "ALB",
       "points": 5,
       "teamId": "williams",
       "team": "Williams"
-    },
-    {
-      "position": 18,
-      "driverId": "esteban-ocon",
-      "name": "Esteban Ocon",
-      "code": "OCO",
-      "points": 3,
-      "teamId": "haas",
-      "team": "Haas"
     },
     {
       "position": 19,
@@ -217,14 +217,14 @@
       "position": 1,
       "constructorId": "mercedes",
       "name": "Mercedes",
-      "points": 503,
+      "points": 538,
       "championshipWon": false
     },
     {
       "position": 2,
       "constructorId": "ferrari",
       "name": "Ferrari",
-      "points": 358,
+      "points": 378,
       "championshipWon": false
     },
     {
@@ -238,14 +238,14 @@
       "position": 4,
       "constructorId": "red-bull",
       "name": "Red Bull",
-      "points": 230,
+      "points": 263,
       "championshipWon": false
     },
     {
       "position": 5,
       "constructorId": "racing-bulls",
       "name": "Racing Bulls",
-      "points": 77,
+      "points": 83,
       "championshipWon": false
     },
     {
@@ -259,7 +259,7 @@
       "position": 7,
       "constructorId": "haas",
       "name": "Haas",
-      "points": 21,
+      "points": 27,
       "championshipWon": false
     },
     {
@@ -273,7 +273,7 @@
       "position": 9,
       "constructorId": "williams",
       "name": "Williams",
-      "points": 11,
+      "points": 12,
       "championshipWon": false
     },
     {
@@ -394,8 +394,8 @@
       "round": 15,
       "grandPrixId": "azerbaijan",
       "name": "Azerbaijan GP",
-      "winnerId": null,
-      "winner": null
+      "winnerId": "george-russell",
+      "winner": "George Russell"
     },
     {
       "round": 16,
@@ -455,5 +455,5 @@
     }
   ],
   "notes": null,
-  "updated": "2026-09-23"
+  "updated": "2026-09-26"
 }

@@ -2,8 +2,8 @@
   "driverId": "lando-norris",
   "name": "Lando Norris",
   "career": {
-    "score": 2426,
-    "races": 166,
+    "score": 2412,
+    "races": 167,
     "partial": 0
   },
   "seasons": [
@@ -51,8 +51,8 @@
     },
     {
       "year": 2026,
-      "score": 251,
-      "races": 14,
+      "score": 237,
+      "races": 15,
       "partial": 0
     }
   ]
