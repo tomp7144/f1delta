@@ -1,6 +1,6 @@
 {
   "session": {
-    "name": "Spanish Grand Prix",
+    "name": "Azerbaijan Grand Prix",
     "country": "Azerbaijan",
     "round": 15,
     "date": "2026-09-26",
@@ -143,17 +143,6 @@
     },
     {
       "position": 13,
-      "code": "BOR",
-      "driverNumber": 5,
-      "teamName": "Audi",
-      "teamColour": "#F50537",
-      "points": 0,
-      "gap": "+34.230",
-      "leader": false,
-      "dnf": false
-    },
-    {
-      "position": 14,
       "code": "PIA",
       "driverNumber": 81,
       "teamName": "McLaren",
@@ -164,13 +153,24 @@
       "dnf": false
     },
     {
-      "position": 15,
+      "position": 14,
       "code": "PER",
       "driverNumber": 11,
       "teamName": "Cadillac",
       "teamColour": "#909090",
       "points": 0,
       "gap": "+41.400",
+      "leader": false,
+      "dnf": false
+    },
+    {
+      "position": 15,
+      "code": "BOR",
+      "driverNumber": 5,
+      "teamName": "Audi",
+      "teamColour": "#F50537",
+      "points": 0,
+      "gap": "+44.230",
       "leader": false,
       "dnf": false
     },
