@@ -2,7 +2,7 @@
   "driverId": "sergio-perez",
   "name": "Sergio Pérez",
   "career": {
-    "score": 2954,
+    "score": 2956,
     "races": 298,
     "partial": 2
   },
@@ -93,7 +93,7 @@
     },
     {
       "year": 2026,
-      "score": -36,
+      "score": -34,
       "races": 15,
       "partial": 0
     }
