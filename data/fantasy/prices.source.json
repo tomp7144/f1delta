@@ -386,18 +386,18 @@
       "ownership": 8,
       "captainPct": 0,
       "gamedayPoints": null,
-      "overallPoints": 376,
+      "overallPoints": 383,
       "stats": {
         "fastest_lap_pts": 0,
         "dotd_pts": 0,
         "overtaking_pts": 182,
-        "q3_finishes_pts": 36,
+        "q3_finishes_pts": 38,
         "top10_race_position_pts": 66,
         "top8_sprint_position_pts": 2,
-        "total_position_pts": 104,
+        "total_position_pts": 106,
         "total_position_gained_lost": 45,
         "total_dnf_dq_pts": -60,
-        "value_for_money": 1.29
+        "value_for_money": 1.23
       }
     }
   },
@@ -788,7 +788,7 @@
       "ownership": 3,
       "captainPct": 0,
       "gamedayPoints": null,
-      "overallPoints": -113,
+      "overallPoints": -110,
       "stats": {
         "fastest_lap_pts": 0,
         "dotd_pts": 0,
@@ -799,7 +799,7 @@
         "total_position_pts": 3,
         "total_position_gained_lost": 71,
         "total_dnf_dq_pts": -360,
-        "value_for_money": -1.32
+        "value_for_money": -1.21
       }
     }
   },
@@ -1187,21 +1187,21 @@
       "positionType": "CONSTRUCTOR",
       "price": 27.6,
       "prevPrice": 27.5,
-      "ownership": 41,
+      "ownership": 40,
       "captainPct": 0,
       "gamedayPoints": null,
-      "overallPoints": 927,
+      "overallPoints": 952,
       "stats": {
         "fastest_lap_pts": 35,
         "dotd_pts": 0,
         "overtaking_pts": 153,
-        "q3_finishes_pts": 198,
+        "q3_finishes_pts": 213,
         "top10_race_position_pts": 330,
         "top8_sprint_position_pts": 48,
-        "total_position_pts": 576,
+        "total_position_pts": 591,
         "total_position_gained_lost": 2,
         "total_dnf_dq_pts": -60,
-        "value_for_money": 2.24
+        "value_for_money": 2.16
       }
     }
   },
@@ -1592,7 +1592,7 @@
       "ownership": 24,
       "captainPct": 0,
       "gamedayPoints": null,
-      "overallPoints": 245,
+      "overallPoints": 244,
       "stats": {
         "fastest_lap_pts": 0,
         "dotd_pts": 0,
@@ -1603,7 +1603,7 @@
         "total_position_pts": 28,
         "total_position_gained_lost": 58,
         "total_dnf_dq_pts": -85,
-        "value_for_money": 1.51
+        "value_for_money": 1.41
       }
     }
   },
@@ -1994,18 +1994,18 @@
       "ownership": 10,
       "captainPct": 0,
       "gamedayPoints": null,
-      "overallPoints": 743,
+      "overallPoints": 762,
       "stats": {
         "fastest_lap_pts": 30,
         "dotd_pts": 0,
         "overtaking_pts": 154,
-        "q3_finishes_pts": 180,
+        "q3_finishes_pts": 189,
         "top10_race_position_pts": 253,
         "top8_sprint_position_pts": 53,
-        "total_position_pts": 486,
+        "total_position_pts": 495,
         "total_position_gained_lost": 6,
         "total_dnf_dq_pts": -140,
-        "value_for_money": 1.54
+        "value_for_money": 1.48
       }
     }
   },
@@ -2396,18 +2396,18 @@
       "ownership": 36,
       "captainPct": 0,
       "gamedayPoints": null,
-      "overallPoints": 1269,
+      "overallPoints": 1289,
       "stats": {
         "fastest_lap_pts": 100,
         "dotd_pts": 0,
         "overtaking_pts": 166,
-        "q3_finishes_pts": 241,
+        "q3_finishes_pts": 251,
         "top10_race_position_pts": 478,
         "top8_sprint_position_pts": 60,
-        "total_position_pts": 779,
+        "total_position_pts": 789,
         "total_position_gained_lost": 0,
         "total_dnf_dq_pts": -40,
-        "value_for_money": 2.5
+        "value_for_money": 2.38
       }
     }
   },
@@ -2795,21 +2795,21 @@
       "positionType": "CONSTRUCTOR",
       "price": 32.1,
       "prevPrice": 31.8,
-      "ownership": 7,
+      "ownership": 8,
       "captainPct": 0,
       "gamedayPoints": null,
-      "overallPoints": 716,
+      "overallPoints": 744,
       "stats": {
         "fastest_lap_pts": 10,
         "dotd_pts": 0,
         "overtaking_pts": 214,
-        "q3_finishes_pts": 130,
+        "q3_finishes_pts": 148,
         "top10_race_position_pts": 251,
         "top8_sprint_position_pts": 12,
-        "total_position_pts": 393,
+        "total_position_pts": 411,
         "total_position_gained_lost": 30,
         "total_dnf_dq_pts": -115,
-        "value_for_money": 1.49
+        "value_for_money": 1.45
       }
     }
   },
@@ -3200,7 +3200,7 @@
       "ownership": 9,
       "captainPct": 0,
       "gamedayPoints": null,
-      "overallPoints": 176,
+      "overallPoints": 177,
       "stats": {
         "fastest_lap_pts": 0,
         "dotd_pts": 0,
@@ -3211,7 +3211,7 @@
         "total_position_pts": 14,
         "total_position_gained_lost": 62,
         "total_dnf_dq_pts": -145,
-        "value_for_money": 0.85
+        "value_for_money": 0.8
       }
     }
   },
@@ -3602,7 +3602,7 @@
       "ownership": 33,
       "captainPct": 0,
       "gamedayPoints": null,
-      "overallPoints": 441,
+      "overallPoints": 444,
       "stats": {
         "fastest_lap_pts": 0,
         "dotd_pts": 0,
@@ -3613,7 +3613,7 @@
         "total_position_pts": 109,
         "total_position_gained_lost": 62,
         "total_dnf_dq_pts": -60,
-        "value_for_money": 1.92
+        "value_for_money": 1.81
       }
     }
   },
@@ -4004,18 +4004,18 @@
       "ownership": 21,
       "captainPct": 0,
       "gamedayPoints": null,
-      "overallPoints": 209,
+      "overallPoints": 215,
       "stats": {
         "fastest_lap_pts": 0,
         "dotd_pts": 0,
         "overtaking_pts": 183,
-        "q3_finishes_pts": 11,
+        "q3_finishes_pts": 12,
         "top10_race_position_pts": 17,
         "top8_sprint_position_pts": 0,
-        "total_position_pts": 28,
+        "total_position_pts": 29,
         "total_position_gained_lost": 25,
         "total_dnf_dq_pts": -150,
-        "value_for_money": 1.51
+        "value_for_money": 1.46
       }
     }
   },
@@ -4406,7 +4406,7 @@
       "ownership": 8,
       "captainPct": 0,
       "gamedayPoints": null,
-      "overallPoints": -51,
+      "overallPoints": -52,
       "stats": {
         "fastest_lap_pts": 0,
         "dotd_pts": 0,
@@ -4417,7 +4417,7 @@
         "total_position_pts": 0,
         "total_position_gained_lost": 59,
         "total_dnf_dq_pts": -230,
-        "value_for_money": -0.94
+        "value_for_money": -0.9
       }
     }
   },
@@ -4808,18 +4808,18 @@
       "ownership": 20,
       "captainPct": 1,
       "gamedayPoints": null,
-      "overallPoints": 133,
+      "overallPoints": 135,
       "stats": {
         "fastest_lap_pts": 0,
         "dotd_pts": 0,
         "overtaking_pts": 89,
-        "q3_finishes_pts": 26,
+        "q3_finishes_pts": 28,
         "top10_race_position_pts": 39,
         "top8_sprint_position_pts": 2,
-        "total_position_pts": 67,
+        "total_position_pts": 69,
         "total_position_gained_lost": 17,
         "total_dnf_dq_pts": -40,
-        "value_for_money": 0.78
+        "value_for_money": 0.74
       }
     }
   },
@@ -5221,7 +5221,7 @@
         "total_position_pts": 37,
         "total_position_gained_lost": 28,
         "total_dnf_dq_pts": -20,
-        "value_for_money": 0.92
+        "value_for_money": 0.86
       }
     }
   },
@@ -5623,7 +5623,7 @@
         "total_position_pts": 3,
         "total_position_gained_lost": 46,
         "total_dnf_dq_pts": -130,
-        "value_for_money": 0.1
+        "value_for_money": 0.09
       }
     }
   },
@@ -6025,7 +6025,7 @@
         "total_position_pts": 0,
         "total_position_gained_lost": 25,
         "total_dnf_dq_pts": -230,
-        "value_for_money": -3.16
+        "value_for_money": -2.96
       }
     }
   },
@@ -6413,7 +6413,7 @@
       "positionType": "DRIVER",
       "price": 5.4,
       "prevPrice": 4.8,
-      "ownership": 37,
+      "ownership": 36,
       "captainPct": 0,
       "gamedayPoints": null,
       "overallPoints": 4,
@@ -6818,18 +6818,18 @@
       "ownership": 32,
       "captainPct": 0,
       "gamedayPoints": null,
-      "overallPoints": 92,
+      "overallPoints": 93,
       "stats": {
         "fastest_lap_pts": 0,
         "dotd_pts": 0,
         "overtaking_pts": 90,
-        "q3_finishes_pts": 7,
+        "q3_finishes_pts": 8,
         "top10_race_position_pts": 10,
         "top8_sprint_position_pts": 0,
-        "total_position_pts": 17,
+        "total_position_pts": 18,
         "total_position_gained_lost": 15,
         "total_dnf_dq_pts": -30,
-        "value_for_money": 0.75
+        "value_for_money": 0.71
       }
     }
   },
@@ -7217,7 +7217,7 @@
       "positionType": "DRIVER",
       "price": 3,
       "prevPrice": 3,
-      "ownership": 20,
+      "ownership": 21,
       "captainPct": 0,
       "gamedayPoints": null,
       "overallPoints": 19,
@@ -7231,7 +7231,7 @@
         "total_position_pts": 0,
         "total_position_gained_lost": 40,
         "total_dnf_dq_pts": -100,
-        "value_for_money": 0.42
+        "value_for_money": 0.4
       }
     }
   },
@@ -7633,7 +7633,7 @@
         "total_position_pts": 0,
         "total_position_gained_lost": 19,
         "total_dnf_dq_pts": -130,
-        "value_for_money": -1.24
+        "value_for_money": -1.16
       }
     }
   },
@@ -8024,18 +8024,18 @@
       "ownership": 26,
       "captainPct": 14,
       "gamedayPoints": null,
-      "overallPoints": 351,
+      "overallPoints": 357,
       "stats": {
         "fastest_lap_pts": 25,
         "dotd_pts": 20,
         "overtaking_pts": 71,
-        "q3_finishes_pts": 99,
+        "q3_finishes_pts": 105,
         "top10_race_position_pts": 151,
         "top8_sprint_position_pts": 28,
-        "total_position_pts": 278,
+        "total_position_pts": 284,
         "total_position_gained_lost": -3,
         "total_dnf_dq_pts": -40,
-        "value_for_money": 0.99
+        "value_for_money": 0.94
       }
     }
   },
@@ -8426,18 +8426,18 @@
       "ownership": 18,
       "captainPct": 8,
       "gamedayPoints": null,
-      "overallPoints": 395,
+      "overallPoints": 404,
       "stats": {
         "fastest_lap_pts": 10,
         "dotd_pts": 20,
         "overtaking_pts": 82,
-        "q3_finishes_pts": 99,
+        "q3_finishes_pts": 108,
         "top10_race_position_pts": 179,
         "top8_sprint_position_pts": 20,
-        "total_position_pts": 298,
+        "total_position_pts": 307,
         "total_position_gained_lost": 5,
         "total_dnf_dq_pts": -20,
-        "value_for_money": 1.07
+        "value_for_money": 1.03
       }
     }
   },
@@ -8839,7 +8839,7 @@
         "total_position_pts": 21,
         "total_position_gained_lost": 23,
         "total_dnf_dq_pts": -65,
-        "value_for_money": 0.82
+        "value_for_money": 0.77
       }
     }
   },
@@ -9241,7 +9241,7 @@
         "total_position_pts": 7,
         "total_position_gained_lost": 35,
         "total_dnf_dq_pts": -20,
-        "value_for_money": 1
+        "value_for_money": 0.94
       }
     }
   },
@@ -9632,18 +9632,18 @@
       "ownership": 9,
       "captainPct": 6,
       "gamedayPoints": null,
-      "overallPoints": 328,
+      "overallPoints": 333,
       "stats": {
         "fastest_lap_pts": 30,
         "dotd_pts": 10,
         "overtaking_pts": 70,
-        "q3_finishes_pts": 97,
+        "q3_finishes_pts": 102,
         "top10_race_position_pts": 154,
         "top8_sprint_position_pts": 32,
-        "total_position_pts": 283,
+        "total_position_pts": 288,
         "total_position_gained_lost": 15,
         "total_dnf_dq_pts": -80,
-        "value_for_money": 0.82
+        "value_for_money": 0.78
       }
     }
   },
@@ -10034,18 +10034,18 @@
       "ownership": 9,
       "captainPct": 5,
       "gamedayPoints": null,
-      "overallPoints": 228,
+      "overallPoints": 232,
       "stats": {
         "fastest_lap_pts": 0,
         "dotd_pts": 10,
         "overtaking_pts": 84,
-        "q3_finishes_pts": 83,
+        "q3_finishes_pts": 87,
         "top10_race_position_pts": 99,
         "top8_sprint_position_pts": 21,
-        "total_position_pts": 203,
+        "total_position_pts": 207,
         "total_position_gained_lost": -9,
         "total_dnf_dq_pts": -60,
-        "value_for_money": 0.63
+        "value_for_money": 0.6
       }
     }
   },
@@ -10436,18 +10436,18 @@
       "ownership": 22,
       "captainPct": 16,
       "gamedayPoints": null,
-      "overallPoints": 413,
+      "overallPoints": 416,
       "stats": {
         "fastest_lap_pts": 20,
         "dotd_pts": 0,
         "overtaking_pts": 81,
-        "q3_finishes_pts": 120,
+        "q3_finishes_pts": 123,
         "top10_race_position_pts": 202,
         "top8_sprint_position_pts": 34,
-        "total_position_pts": 356,
+        "total_position_pts": 359,
         "total_position_gained_lost": -4,
         "total_dnf_dq_pts": -40,
-        "value_for_money": 0.98
+        "value_for_money": 0.93
       }
     }
   },
@@ -10838,18 +10838,18 @@
       "ownership": 38,
       "captainPct": 27,
       "gamedayPoints": null,
-      "overallPoints": 622,
+      "overallPoints": 629,
       "stats": {
         "fastest_lap_pts": 80,
         "dotd_pts": 30,
         "overtaking_pts": 85,
-        "q3_finishes_pts": 121,
+        "q3_finishes_pts": 128,
         "top10_race_position_pts": 276,
         "top8_sprint_position_pts": 26,
-        "total_position_pts": 423,
+        "total_position_pts": 430,
         "total_position_gained_lost": 4,
         "total_dnf_dq_pts": 0,
-        "value_for_money": 1.54
+        "value_for_money": 1.46
       }
     }
   },
@@ -11642,7 +11642,7 @@
         "total_position_pts": 53,
         "total_position_gained_lost": 21,
         "total_dnf_dq_pts": -40,
-        "value_for_money": 0.81
+        "value_for_money": 0.76
       }
     }
   },
@@ -12030,21 +12030,21 @@
       "positionType": "DRIVER",
       "price": 27.6,
       "prevPrice": 27.3,
-      "ownership": 18,
-      "captainPct": 13,
+      "ownership": 19,
+      "captainPct": 14,
       "gamedayPoints": null,
-      "overallPoints": 376,
+      "overallPoints": 386,
       "stats": {
         "fastest_lap_pts": 10,
         "dotd_pts": 60,
         "overtaking_pts": 118,
-        "q3_finishes_pts": 76,
+        "q3_finishes_pts": 86,
         "top10_race_position_pts": 151,
         "top8_sprint_position_pts": 12,
-        "total_position_pts": 239,
+        "total_position_pts": 249,
         "total_position_gained_lost": 14,
         "total_dnf_dq_pts": -65,
-        "value_for_money": 0.91
+        "value_for_money": 0.87
       }
     }
   },
@@ -12432,21 +12432,21 @@
       "positionType": "DRIVER",
       "price": 15.1,
       "prevPrice": 14.5,
-      "ownership": 28,
-      "captainPct": 2,
+      "ownership": 29,
+      "captainPct": 3,
       "gamedayPoints": null,
-      "overallPoints": 168,
+      "overallPoints": 176,
       "stats": {
         "fastest_lap_pts": 0,
         "dotd_pts": 0,
         "overtaking_pts": 74,
-        "q3_finishes_pts": 48,
+        "q3_finishes_pts": 56,
         "top10_race_position_pts": 86,
         "top8_sprint_position_pts": 0,
-        "total_position_pts": 134,
+        "total_position_pts": 142,
         "total_position_gained_lost": 5,
         "total_dnf_dq_pts": -45,
-        "value_for_money": 0.93
+        "value_for_money": 0.9
       }
     }
   },
@@ -12848,7 +12848,7 @@
         "total_position_pts": 9,
         "total_position_gained_lost": 35,
         "total_dnf_dq_pts": -45,
-        "value_for_money": 0.79
+        "value_for_money": 0.74
       }
     }
   },
@@ -13250,7 +13250,7 @@
         "total_position_pts": 5,
         "total_position_gained_lost": 27,
         "total_dnf_dq_pts": -100,
-        "value_for_money": 0.15
+        "value_for_money": 0.14
       }
     }
   },
