@@ -4,7 +4,7 @@
     {
       "pos": 1,
       "code": "ANT",
-      "points": 302,
+      "points": 320,
       "team": "Mercedes"
     },
     {
@@ -16,43 +16,43 @@
     {
       "pos": 3,
       "code": "HAM",
-      "points": 199,
+      "points": 214,
       "team": "Ferrari"
     },
     {
       "pos": 4,
-      "code": "NOR",
-      "points": 186,
-      "team": "McLaren"
+      "code": "LEC",
+      "points": 191,
+      "team": "Ferrari"
     },
     {
       "pos": 5,
-      "code": "LEC",
-      "points": 179,
-      "team": "Ferrari"
+      "code": "NOR",
+      "points": 188,
+      "team": "McLaren"
     },
     {
       "pos": 6,
       "code": "VER",
-      "points": 163,
+      "points": 188,
       "team": "Red Bull"
     },
     {
       "pos": 7,
       "code": "PIA",
-      "points": 120,
+      "points": 128,
       "team": "McLaren"
     },
     {
       "pos": 8,
       "code": "HAD",
-      "points": 86,
+      "points": 96,
       "team": "Red Bull"
     },
     {
       "pos": 9,
       "code": "LAW",
-      "points": 59,
+      "points": 65,
       "team": "RB F1 Team"
     },
     {
@@ -64,7 +64,7 @@
     {
       "pos": 11,
       "code": "LIN",
-      "points": 37,
+      "points": 38,
       "team": "RB F1 Team"
     },
     {
@@ -99,21 +99,21 @@
     },
     {
       "pos": 17,
+      "code": "ALO",
+      "points": 7,
+      "team": "Aston Martin"
+    },
+    {
+      "pos": 18,
       "code": "SAI",
       "points": 7,
       "team": "Williams"
     },
     {
-      "pos": 18,
+      "pos": 19,
       "code": "ALB",
       "points": 5,
       "team": "Williams"
-    },
-    {
-      "pos": 19,
-      "code": "ALO",
-      "points": 3,
-      "team": "Aston Martin"
     },
     {
       "pos": 20,
