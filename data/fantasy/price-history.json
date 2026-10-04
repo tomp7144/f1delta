@@ -9980,5 +9980,360 @@
         "priceDelta": 0
       }
     ]
+  },
+  {
+    "syncedAt": "2026-10-04T11:44:30.864Z",
+    "assets": [
+      {
+        "id": "11161",
+        "name": "Kimi Antonelli",
+        "type": "driver",
+        "team": "Mercedes",
+        "price": 26.9,
+        "points": 648,
+        "pageId": "kimi-antonelli",
+        "priceDelta": 0
+      },
+      {
+        "id": "131",
+        "name": "Max Verstappen",
+        "type": "driver",
+        "team": "Red Bull Racing",
+        "price": 27.6,
+        "points": 431,
+        "pageId": "max-verstappen",
+        "priceDelta": 0
+      },
+      {
+        "id": "110",
+        "name": "Lewis Hamilton",
+        "type": "driver",
+        "team": "Ferrari",
+        "price": 24.6,
+        "points": 418,
+        "pageId": "lewis-hamilton",
+        "priceDelta": 0
+      },
+      {
+        "id": "124",
+        "name": "George Russell",
+        "type": "driver",
+        "team": "Mercedes",
+        "price": 28.1,
+        "points": 403,
+        "pageId": "george-russell",
+        "priceDelta": 0
+      },
+      {
+        "id": "115",
+        "name": "Charles Leclerc",
+        "type": "driver",
+        "team": "Ferrari",
+        "price": 23.7,
+        "points": 369,
+        "pageId": "charles-leclerc",
+        "priceDelta": 0
+      },
+      {
+        "id": "117",
+        "name": "Lando Norris",
+        "type": "driver",
+        "team": "McLaren",
+        "price": 26.7,
+        "points": 331,
+        "pageId": "lando-norris",
+        "priceDelta": 0
+      },
+      {
+        "id": "1982",
+        "name": "Oscar Piastri",
+        "type": "driver",
+        "team": "McLaren",
+        "price": 24,
+        "points": 240,
+        "pageId": "oscar-piastri",
+        "priceDelta": 0
+      },
+      {
+        "id": "11032",
+        "name": "Isack Hadjar",
+        "type": "driver",
+        "team": "Red Bull Racing",
+        "price": 15.1,
+        "points": 189,
+        "pageId": "isack-hadjar",
+        "priceDelta": 0
+      },
+      {
+        "id": "11059",
+        "name": "Franco Colapinto",
+        "type": "driver",
+        "team": "Alpine",
+        "price": 10,
+        "points": 146,
+        "pageId": "franco-colapinto",
+        "priceDelta": 0
+      },
+      {
+        "id": "114",
+        "name": "Liam Lawson",
+        "type": "driver",
+        "team": "Racing Bulls",
+        "price": 9.1,
+        "points": 144,
+        "pageId": "liam-lawson",
+        "priceDelta": 0
+      },
+      {
+        "id": "118",
+        "name": "Esteban Ocon",
+        "type": "driver",
+        "team": "Haas F1 Team",
+        "price": 9.1,
+        "points": 139,
+        "pageId": "esteban-ocon",
+        "priceDelta": 0
+      },
+      {
+        "id": "18",
+        "name": "Pierre Gasly",
+        "type": "driver",
+        "team": "Alpine",
+        "price": 11.4,
+        "points": 128,
+        "pageId": "pierre-gasly",
+        "priceDelta": 0
+      },
+      {
+        "id": "11149",
+        "name": "Arvid Lindblad",
+        "type": "driver",
+        "team": "Racing Bulls",
+        "price": 8.8,
+        "points": 120,
+        "pageId": "arvid-lindblad",
+        "priceDelta": 0
+      },
+      {
+        "id": "125",
+        "name": "Carlos Sainz",
+        "type": "driver",
+        "team": "Williams",
+        "price": 8.4,
+        "points": 96,
+        "pageId": "carlos-sainz-jr",
+        "priceDelta": 0
+      },
+      {
+        "id": "11051",
+        "name": "Gabriel Bortoleto",
+        "type": "driver",
+        "team": "Audi",
+        "price": 8.2,
+        "points": 85,
+        "pageId": "gabriel-bortoleto",
+        "priceDelta": 0
+      },
+      {
+        "id": "11031",
+        "name": "Oliver Bearman",
+        "type": "driver",
+        "team": "Haas F1 Team",
+        "price": 5.6,
+        "points": 71,
+        "pageId": "oliver-bearman",
+        "priceDelta": 0
+      },
+      {
+        "id": "116",
+        "name": "Liam Lawson",
+        "type": "driver",
+        "team": "Red Bull Racing",
+        "price": 15.1,
+        "points": 53,
+        "pageId": "liam-lawson",
+        "priceDelta": 0
+      },
+      {
+        "id": "130",
+        "name": "Yuki Tsunoda",
+        "type": "driver",
+        "team": "Racing Bulls",
+        "price": 9.7,
+        "points": 23,
+        "pageId": "yuki-tsunoda",
+        "priceDelta": 0
+      },
+      {
+        "id": "121",
+        "name": "Sergio Perez",
+        "type": "driver",
+        "team": "Cadillac",
+        "price": 3,
+        "points": 20,
+        "pageId": "sergio-perez",
+        "priceDelta": 0
+      },
+      {
+        "id": "12",
+        "name": "Fernando Alonso",
+        "type": "driver",
+        "team": "Aston Martin",
+        "price": 6.2,
+        "points": 17,
+        "pageId": "fernando-alonso",
+        "priceDelta": 0
+      },
+      {
+        "id": "111",
+        "name": "Nico Hulkenberg",
+        "type": "driver",
+        "team": "Audi",
+        "price": 5.4,
+        "points": 8,
+        "pageId": "nico-hulkenberg",
+        "priceDelta": 0
+      },
+      {
+        "id": "11",
+        "name": "Alexander Albon",
+        "type": "driver",
+        "team": "Williams",
+        "price": 5.8,
+        "points": -7,
+        "pageId": "alexander-albon",
+        "priceDelta": 0
+      },
+      {
+        "id": "13",
+        "name": "Valtteri Bottas",
+        "type": "driver",
+        "team": "Cadillac",
+        "price": 3.6,
+        "points": -87,
+        "pageId": "valtteri-bottas",
+        "priceDelta": 0
+      },
+      {
+        "id": "129",
+        "name": "Lance Stroll",
+        "type": "driver",
+        "team": "Aston Martin",
+        "price": 3,
+        "points": -140,
+        "pageId": "lance-stroll",
+        "priceDelta": 0
+      },
+      {
+        "id": "28",
+        "name": "Mercedes",
+        "type": "constructor",
+        "team": "Mercedes",
+        "price": 33.8,
+        "points": 1295,
+        "pageId": "mercedes",
+        "priceDelta": 0
+      },
+      {
+        "id": "25",
+        "name": "Ferrari",
+        "type": "constructor",
+        "team": "Ferrari",
+        "price": 27.6,
+        "points": 978,
+        "pageId": "ferrari",
+        "priceDelta": 0
+      },
+      {
+        "id": "29",
+        "name": "Red Bull Racing",
+        "type": "constructor",
+        "team": "Red Bull Racing",
+        "price": 32.1,
+        "points": 792,
+        "pageId": "red-bull",
+        "priceDelta": 0
+      },
+      {
+        "id": "27",
+        "name": "McLaren",
+        "type": "constructor",
+        "team": "McLaren",
+        "price": 32.2,
+        "points": 768,
+        "pageId": "mclaren",
+        "priceDelta": 0
+      },
+      {
+        "id": "2636",
+        "name": "Racing Bulls",
+        "type": "constructor",
+        "team": "Racing Bulls",
+        "price": 15.3,
+        "points": 467,
+        "pageId": "racing-bulls",
+        "priceDelta": 0
+      },
+      {
+        "id": "23",
+        "name": "Alpine",
+        "type": "constructor",
+        "team": "Alpine",
+        "price": 19.4,
+        "points": 384,
+        "pageId": "alpine",
+        "priceDelta": 0
+      },
+      {
+        "id": "26",
+        "name": "Haas F1 Team",
+        "type": "constructor",
+        "team": "Haas F1 Team",
+        "price": 10.8,
+        "points": 248,
+        "pageId": "haas",
+        "priceDelta": 0
+      },
+      {
+        "id": "2640",
+        "name": "Audi",
+        "type": "constructor",
+        "team": "Audi",
+        "price": 9.2,
+        "points": 211,
+        "pageId": "audi",
+        "priceDelta": 0
+      },
+      {
+        "id": "210",
+        "name": "Williams",
+        "type": "constructor",
+        "team": "Williams",
+        "price": 13.8,
+        "points": 153,
+        "pageId": "williams",
+        "priceDelta": 0
+      },
+      {
+        "id": "2641",
+        "name": "Cadillac",
+        "type": "constructor",
+        "team": "Cadillac",
+        "price": 3.6,
+        "points": -71,
+        "pageId": "cadillac",
+        "priceDelta": 0
+      },
+      {
+        "id": "24",
+        "name": "Aston Martin",
+        "type": "constructor",
+        "team": "Aston Martin",
+        "price": 5.7,
+        "points": -100,
+        "pageId": "aston-martin",
+        "priceDelta": 0
+      }
+    ]
   }
 ]
