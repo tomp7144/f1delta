@@ -11,7 +11,7 @@
   "totals": {
     "seasons": 4,
     "drivers": 1,
-    "races": 85,
+    "races": 86,
     "wins": 7,
     "podiums": 23,
     "poles": 11,
@@ -28,7 +28,7 @@
       "driverId": "george-russell",
       "driverName": "George Russell",
       "stats": {
-        "races": 85,
+        "races": 86,
         "wins": 7,
         "podiums": 23,
         "poles": 11,
@@ -36,5 +36,5 @@
       }
     }
   ],
-  "updated": "2026-09-27"
+  "updated": "2026-10-04"
 }

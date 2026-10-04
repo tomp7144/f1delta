@@ -2,8 +2,8 @@
   "driverId": "fernando-alonso",
   "name": "Fernando Alonso",
   "career": {
-    "score": 4645,
-    "races": 443,
+    "score": 4661,
+    "races": 444,
     "partial": 5
   },
   "seasons": [
@@ -141,8 +141,8 @@
     },
     {
       "year": 2026,
-      "score": -51,
-      "races": 15,
+      "score": -35,
+      "races": 16,
       "partial": 0
     }
   ]

@@ -2,8 +2,8 @@
   "driverId": "lewis-hamilton",
   "name": "Lewis Hamilton",
   "career": {
-    "score": 8550,
-    "races": 395,
+    "score": 8572,
+    "races": 396,
     "partial": 4
   },
   "seasons": [
@@ -123,8 +123,8 @@
     },
     {
       "year": 2026,
-      "score": 295,
-      "races": 15,
+      "score": 317,
+      "races": 16,
       "partial": 0
     }
   ]

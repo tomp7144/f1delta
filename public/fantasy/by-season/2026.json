@@ -2,113 +2,113 @@
   "year": 2026,
   "drivers": {
     "george-russell": {
-      "score": 278,
-      "races": 15,
+      "score": 255,
+      "races": 16,
       "partial": 0
     },
     "kimi-antonelli": {
-      "score": 477,
-      "races": 15,
+      "score": 504,
+      "races": 16,
       "partial": 0
     },
     "charles-leclerc": {
-      "score": 222,
-      "races": 15,
+      "score": 240,
+      "races": 16,
       "partial": 0
     },
     "lewis-hamilton": {
-      "score": 295,
-      "races": 15,
+      "score": 317,
+      "races": 16,
       "partial": 0
     },
     "lando-norris": {
-      "score": 237,
-      "races": 15,
+      "score": 236,
+      "races": 16,
       "partial": 0
     },
     "max-verstappen": {
-      "score": 245,
-      "races": 15,
+      "score": 295,
+      "races": 16,
       "partial": 1
     },
     "oliver-bearman": {
-      "score": 3,
-      "races": 15,
+      "score": 7,
+      "races": 16,
       "partial": 1
     },
     "arvid-lindblad": {
-      "score": 100,
-      "races": 15,
+      "score": 125,
+      "races": 16,
       "partial": 0
     },
     "gabriel-bortoleto": {
-      "score": 64,
-      "races": 15,
+      "score": 49,
+      "races": 16,
       "partial": 0
     },
     "pierre-gasly": {
-      "score": 93,
-      "races": 15,
+      "score": 81,
+      "races": 16,
       "partial": 0
     },
     "esteban-ocon": {
-      "score": 57,
-      "races": 15,
+      "score": 61,
+      "races": 16,
       "partial": 0
     },
     "alexander-albon": {
-      "score": -37,
-      "races": 15,
+      "score": -57,
+      "races": 16,
       "partial": 0
     },
     "liam-lawson": {
-      "score": 127,
-      "races": 15,
+      "score": 146,
+      "races": 16,
       "partial": 0
     },
     "franco-colapinto": {
-      "score": 77,
-      "races": 15,
+      "score": 94,
+      "races": 16,
       "partial": 0
     },
     "carlos-sainz-jr": {
-      "score": 28,
-      "races": 15,
+      "score": 23,
+      "races": 16,
       "partial": 1
     },
     "sergio-perez": {
-      "score": -34,
-      "races": 15,
+      "score": -32,
+      "races": 16,
       "partial": 0
     },
     "lance-stroll": {
-      "score": -198,
-      "races": 15,
+      "score": -192,
+      "races": 16,
       "partial": 2
     },
     "fernando-alonso": {
-      "score": -51,
-      "races": 15,
+      "score": -35,
+      "races": 16,
       "partial": 0
     },
     "valtteri-bottas": {
-      "score": -90,
-      "races": 15,
+      "score": -110,
+      "races": 16,
       "partial": 0
     },
     "isack-hadjar": {
-      "score": 136,
-      "races": 12,
+      "score": 160,
+      "races": 13,
       "partial": 1
     },
     "oscar-piastri": {
-      "score": 156,
-      "races": 15,
+      "score": 168,
+      "races": 16,
       "partial": 0
     },
     "nico-hulkenberg": {
-      "score": 22,
-      "races": 15,
+      "score": 30,
+      "races": 16,
       "partial": 0
     },
     "yuki-tsunoda": {
@@ -266,6 +266,16 @@
       "topId": "max-verstappen",
       "topName": "Max Verstappen",
       "topScore": 43,
+      "partial": false
+    },
+    {
+      "round": 16,
+      "raceId": 1165,
+      "gpId": "bahrain",
+      "name": "Bahrain GP",
+      "topId": "max-verstappen",
+      "topName": "Max Verstappen",
+      "topScore": 50,
       "partial": false
     }
   ]

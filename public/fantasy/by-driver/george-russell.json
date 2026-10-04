@@ -2,8 +2,8 @@
   "driverId": "george-russell",
   "name": "George Russell",
   "career": {
-    "score": 1724,
-    "races": 167,
+    "score": 1701,
+    "races": 168,
     "partial": 0
   },
   "seasons": [
@@ -51,8 +51,8 @@
     },
     {
       "year": 2026,
-      "score": 278,
-      "races": 15,
+      "score": 255,
+      "races": 16,
       "partial": 0
     }
   ]

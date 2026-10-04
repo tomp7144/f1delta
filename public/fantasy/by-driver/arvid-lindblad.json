@@ -2,15 +2,15 @@
   "driverId": "arvid-lindblad",
   "name": "Arvid Lindblad",
   "career": {
-    "score": 100,
-    "races": 15,
+    "score": 125,
+    "races": 16,
     "partial": 0
   },
   "seasons": [
     {
       "year": 2026,
-      "score": 100,
-      "races": 15,
+      "score": 125,
+      "races": 16,
       "partial": 0
     }
   ]
