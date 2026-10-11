@@ -2,8 +2,8 @@
   "driverId": "esteban-ocon",
   "name": "Esteban Ocon",
   "career": {
-    "score": 984,
-    "races": 196,
+    "score": 985,
+    "races": 197,
     "partial": 3
   },
   "seasons": [
@@ -63,8 +63,8 @@
     },
     {
       "year": 2026,
-      "score": 61,
-      "races": 16,
+      "score": 62,
+      "races": 17,
       "partial": 0
     }
   ]

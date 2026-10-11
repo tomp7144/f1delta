@@ -11,9 +11,9 @@
   "totals": {
     "seasons": 16,
     "drivers": 3,
-    "races": 325,
+    "races": 326,
     "wins": 92,
-    "podiums": 170,
+    "podiums": 171,
     "poles": 84,
     "championships": 6
   },
@@ -61,13 +61,13 @@
       "driverId": "kimi-antonelli",
       "driverName": "Kimi Antonelli",
       "stats": {
-        "races": 40,
+        "races": 41,
         "wins": 8,
-        "podiums": 16,
+        "podiums": 17,
         "poles": 6,
         "championships": 0
       }
     }
   ],
-  "updated": "2026-10-09"
+  "updated": "2026-10-11"
 }

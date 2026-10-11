@@ -6988,5 +6988,11 @@
     "topDriverName": "Max Verstappen",
     "topScore": 50,
     "partial": false
+  },
+  "1166": {
+    "topDriverId": "max-verstappen",
+    "topDriverName": "Max Verstappen",
+    "topScore": 45,
+    "partial": true
   }
 }

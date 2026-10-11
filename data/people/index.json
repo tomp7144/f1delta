@@ -1,6 +1,6 @@
 {
   "count": 75,
-  "updated": "2026-10-09",
+  "updated": "2026-10-11",
   "people": [
     {
       "id": "adrian-newey",
@@ -52,7 +52,7 @@
       "totals": {
         "seasons": 1,
         "drivers": 1,
-        "races": 13,
+        "races": 14,
         "wins": 0,
         "podiums": 0,
         "poles": 0,
@@ -129,7 +129,7 @@
       "totals": {
         "seasons": 2,
         "drivers": 1,
-        "races": 40,
+        "races": 41,
         "wins": 0,
         "podiums": 0,
         "poles": 0,
@@ -186,9 +186,9 @@
       "totals": {
         "seasons": 3,
         "drivers": 1,
-        "races": 64,
+        "races": 65,
         "wins": 4,
-        "podiums": 24,
+        "podiums": 25,
         "poles": 4,
         "championships": 0
       }
@@ -205,7 +205,7 @@
       "totals": {
         "seasons": 1,
         "drivers": 1,
-        "races": 16,
+        "races": 17,
         "wins": 0,
         "podiums": 0,
         "poles": 0,
@@ -224,7 +224,7 @@
       "totals": {
         "seasons": 1,
         "drivers": 1,
-        "races": 16,
+        "races": 17,
         "wins": 1,
         "podiums": 6,
         "poles": 0,
@@ -376,7 +376,7 @@
       "totals": {
         "seasons": 1,
         "drivers": 1,
-        "races": 16,
+        "races": 17,
         "wins": 0,
         "podiums": 0,
         "poles": 0,
@@ -395,7 +395,7 @@
       "totals": {
         "seasons": 7,
         "drivers": 1,
-        "races": 130,
+        "races": 131,
         "wins": 0,
         "podiums": 0,
         "poles": 0,
@@ -414,10 +414,10 @@
       "totals": {
         "seasons": 19,
         "drivers": 6,
-        "races": 371,
-        "wins": 72,
-        "podiums": 138,
-        "poles": 50,
+        "races": 372,
+        "wins": 73,
+        "podiums": 139,
+        "poles": 51,
         "championships": 4
       }
     },
@@ -528,7 +528,7 @@
       "totals": {
         "seasons": 5,
         "drivers": 1,
-        "races": 107,
+        "races": 108,
         "wins": 0,
         "podiums": 0,
         "poles": 0,
@@ -623,7 +623,7 @@
       "totals": {
         "seasons": 1,
         "drivers": 1,
-        "races": 16,
+        "races": 17,
         "wins": 0,
         "podiums": 0,
         "poles": 0,
@@ -642,7 +642,7 @@
       "totals": {
         "seasons": 1,
         "drivers": 1,
-        "races": 16,
+        "races": 17,
         "wins": 0,
         "podiums": 0,
         "poles": 0,
@@ -661,7 +661,7 @@
       "totals": {
         "seasons": 1,
         "drivers": 1,
-        "races": 16,
+        "races": 17,
         "wins": 0,
         "podiums": 0,
         "poles": 1,
@@ -699,7 +699,7 @@
       "totals": {
         "seasons": 2,
         "drivers": 1,
-        "races": 40,
+        "races": 41,
         "wins": 0,
         "podiums": 0,
         "poles": 0,
@@ -813,7 +813,7 @@
       "totals": {
         "seasons": 4,
         "drivers": 1,
-        "races": 86,
+        "races": 87,
         "wins": 7,
         "podiums": 23,
         "poles": 11,
@@ -1042,9 +1042,9 @@
       "totals": {
         "seasons": 16,
         "drivers": 3,
-        "races": 325,
+        "races": 326,
         "wins": 92,
-        "podiums": 170,
+        "podiums": 171,
         "poles": 84,
         "championships": 6
       }
@@ -1080,7 +1080,7 @@
       "totals": {
         "seasons": 1,
         "drivers": 1,
-        "races": 16,
+        "races": 17,
         "wins": 0,
         "podiums": 0,
         "poles": 0,
@@ -1137,7 +1137,7 @@
       "totals": {
         "seasons": 1,
         "drivers": 1,
-        "races": 13,
+        "races": 14,
         "wins": 0,
         "podiums": 2,
         "poles": 0,
@@ -1194,7 +1194,7 @@
       "totals": {
         "seasons": 1,
         "drivers": 1,
-        "races": 16,
+        "races": 17,
         "wins": 0,
         "podiums": 0,
         "poles": 0,
@@ -1309,7 +1309,7 @@
       "totals": {
         "seasons": 1,
         "drivers": 1,
-        "races": 16,
+        "races": 17,
         "wins": 0,
         "podiums": 0,
         "poles": 0,
@@ -1328,7 +1328,7 @@
       "totals": {
         "seasons": 2,
         "drivers": 1,
-        "races": 34,
+        "races": 35,
         "wins": 0,
         "podiums": 0,
         "poles": 0,
@@ -1385,7 +1385,7 @@
       "totals": {
         "seasons": 13,
         "drivers": 5,
-        "races": 268,
+        "races": 269,
         "wins": 10,
         "podiums": 32,
         "poles": 6,
@@ -1423,7 +1423,7 @@
       "totals": {
         "seasons": 8,
         "drivers": 1,
-        "races": 168,
+        "races": 169,
         "wins": 13,
         "podiums": 49,
         "poles": 19,

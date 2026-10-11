@@ -3,7 +3,7 @@
   "name": "Fernando Alonso",
   "career": {
     "score": 4661,
-    "races": 444,
+    "races": 445,
     "partial": 5
   },
   "seasons": [
@@ -142,7 +142,7 @@
     {
       "year": 2026,
       "score": -35,
-      "races": 16,
+      "races": 17,
       "partial": 0
     }
   ]

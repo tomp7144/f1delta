@@ -4,55 +4,55 @@
     {
       "pos": 1,
       "code": "ANT",
-      "points": 325,
+      "points": 340,
       "team": "Mercedes"
     },
     {
       "pos": 2,
       "code": "RUS",
-      "points": 236,
+      "points": 238,
       "team": "Mercedes"
     },
     {
       "pos": 3,
       "code": "HAM",
-      "points": 221,
+      "points": 229,
       "team": "Ferrari"
     },
     {
       "pos": 4,
-      "code": "LEC",
-      "points": 197,
-      "team": "Ferrari"
+      "code": "VER",
+      "points": 221,
+      "team": "Red Bull"
     },
     {
       "pos": 5,
-      "code": "VER",
-      "points": 196,
-      "team": "Red Bull"
+      "code": "LEC",
+      "points": 215,
+      "team": "Ferrari"
     },
     {
       "pos": 6,
       "code": "NOR",
-      "points": 189,
+      "points": 201,
       "team": "McLaren"
     },
     {
       "pos": 7,
       "code": "PIA",
-      "points": 128,
+      "points": 138,
       "team": "McLaren"
     },
     {
       "pos": 8,
       "code": "HAD",
-      "points": 96,
+      "points": 97,
       "team": "Red Bull"
     },
     {
       "pos": 9,
       "code": "LAW",
-      "points": 69,
+      "points": 75,
       "team": "RB F1 Team"
     },
     {
@@ -81,14 +81,14 @@
     },
     {
       "pos": 14,
-      "code": "BOR",
-      "points": 10,
+      "code": "HUL",
+      "points": 13,
       "team": "Audi"
     },
     {
       "pos": 15,
-      "code": "HUL",
-      "points": 9,
+      "code": "BOR",
+      "points": 10,
       "team": "Audi"
     },
     {
