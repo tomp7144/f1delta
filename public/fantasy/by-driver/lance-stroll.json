@@ -3,7 +3,7 @@
   "name": "Lance Stroll",
   "career": {
     "score": 612,
-    "races": 209,
+    "races": 210,
     "partial": 7
   },
   "seasons": [
@@ -64,7 +64,7 @@
     {
       "year": 2026,
       "score": -212,
-      "races": 17,
+      "races": 18,
       "partial": 2
     }
   ]

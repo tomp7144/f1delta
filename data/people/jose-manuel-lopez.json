@@ -11,7 +11,7 @@
   "totals": {
     "seasons": 1,
     "drivers": 1,
-    "races": 17,
+    "races": 18,
     "wins": 0,
     "podiums": 0,
     "poles": 0,
@@ -27,7 +27,7 @@
       "driverId": "gabriel-bortoleto",
       "driverName": "Gabriel Bortoleto",
       "stats": {
-        "races": 17,
+        "races": 18,
         "wins": 0,
         "podiums": 0,
         "poles": 0,
@@ -35,5 +35,5 @@
       }
     }
   ],
-  "updated": "2026-10-11"
+  "updated": "2026-10-28"
 }

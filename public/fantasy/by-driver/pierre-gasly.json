@@ -2,8 +2,8 @@
   "driverId": "pierre-gasly",
   "name": "Pierre Gasly",
   "career": {
-    "score": 757,
-    "races": 195,
+    "score": 763,
+    "races": 196,
     "partial": 3
   },
   "seasons": [
@@ -63,8 +63,8 @@
     },
     {
       "year": 2026,
-      "score": 76,
-      "races": 17,
+      "score": 82,
+      "races": 18,
       "partial": 0
     }
   ]

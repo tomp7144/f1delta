@@ -11,9 +11,9 @@
   "totals": {
     "seasons": 3,
     "drivers": 1,
-    "races": 65,
+    "races": 66,
     "wins": 4,
-    "podiums": 25,
+    "podiums": 26,
     "poles": 4,
     "championships": 0
   },
@@ -28,14 +28,14 @@
       "driverId": "charles-leclerc",
       "driverName": "Charles Leclerc",
       "stats": {
-        "races": 65,
+        "races": 66,
         "wins": 4,
-        "podiums": 25,
+        "podiums": 26,
         "poles": 4,
         "championships": 0,
         "dataWarning": "Role may not have been exclusively race engineer — see notes."
       }
     }
   ],
-  "updated": "2026-10-11"
+  "updated": "2026-10-28"
 }
