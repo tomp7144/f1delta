@@ -5246,6 +5246,22 @@
       }
     }
   },
+  "11167": {
+    "19": {
+      "round": 19,
+      "tla": "HIR",
+      "name": "Ryo Hirakawa",
+      "team": "Haas F1 Team",
+      "positionType": "DRIVER",
+      "price": 6,
+      "prevPrice": 0,
+      "ownership": null,
+      "captainPct": null,
+      "gamedayPoints": null,
+      "overallPoints": 0,
+      "stats": null
+    }
+  },
   "PIEGAS01": {
     "1": {
       "round": 1,
