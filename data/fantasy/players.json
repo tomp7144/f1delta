@@ -1,5 +1,5 @@
 {
-  "syncedAt": "2026-11-01T00:39:53.875Z",
+  "syncedAt": "2026-11-01T12:37:51.054Z",
   "season": 2026,
   "assets": [
     {
@@ -88,7 +88,7 @@
       "type": "driver",
       "team": "Racing Bulls",
       "price": 10.5,
-      "points": 177,
+      "points": 169,
       "pageId": "liam-lawson",
       "priceDelta": 0
     },
@@ -108,7 +108,7 @@
       "type": "driver",
       "team": "Racing Bulls",
       "price": 10.6,
-      "points": 149,
+      "points": 150,
       "pageId": "arvid-lindblad",
       "priceDelta": 0
     },
@@ -118,7 +118,7 @@
       "type": "driver",
       "team": "Alpine",
       "price": 9.6,
-      "points": 140,
+      "points": 141,
       "pageId": "pierre-gasly",
       "priceDelta": 0
     },
@@ -178,7 +178,7 @@
       "type": "driver",
       "team": "Audi",
       "price": 7.2,
-      "points": 47,
+      "points": 48,
       "pageId": "nico-hulkenberg",
       "priceDelta": 0
     },
@@ -298,7 +298,7 @@
       "type": "constructor",
       "team": "Racing Bulls",
       "price": 17.1,
-      "points": 574,
+      "points": 557,
       "pageId": "racing-bulls",
       "priceDelta": 0
     },
@@ -308,7 +308,7 @@
       "type": "constructor",
       "team": "Alpine",
       "price": 18.5,
-      "points": 378,
+      "points": 379,
       "pageId": "alpine",
       "priceDelta": 0
     },
@@ -328,7 +328,7 @@
       "type": "constructor",
       "team": "Audi",
       "price": 11,
-      "points": 270,
+      "points": 273,
       "pageId": "audi",
       "priceDelta": 0
     },
@@ -338,7 +338,7 @@
       "type": "constructor",
       "team": "Williams",
       "price": 12,
-      "points": 199,
+      "points": 201,
       "pageId": "williams",
       "priceDelta": 0
     },
