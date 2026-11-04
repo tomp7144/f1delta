@@ -2,8 +2,8 @@
   "driverId": "carlos-sainz-jr",
   "name": "Carlos Sainz Jr.",
   "career": {
-    "score": 1817,
-    "races": 250,
+    "score": 1824,
+    "races": 251,
     "partial": 5
   },
   "seasons": [
@@ -75,8 +75,8 @@
     },
     {
       "year": 2026,
-      "score": 19,
-      "races": 18,
+      "score": 26,
+      "races": 19,
       "partial": 1
     }
   ]

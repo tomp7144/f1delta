@@ -21,6 +21,7 @@ window.F1_GRID = {
   "BEA": "oliver-bearman",
   "PIA": "oscar-piastri",
   "GAS": "pierre-gasly",
+  "HIR": "ryo-hirakawa",
   "PER": "sergio-perez",
   "BOT": "valtteri-bottas",
   "TSU": "yuki-tsunoda"

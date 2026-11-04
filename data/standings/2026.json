@@ -9,43 +9,43 @@
       "driverId": "kimi-antonelli",
       "name": "Kimi Antonelli",
       "code": "ANT",
-      "points": 365,
+      "points": 380,
       "teamId": "mercedes",
       "team": "Mercedes"
     },
     {
       "position": 2,
-      "driverId": "george-russell",
-      "name": "George Russell",
-      "code": "RUS",
-      "points": 242,
-      "teamId": "mercedes",
-      "team": "Mercedes"
+      "driverId": "max-verstappen",
+      "name": "Max Verstappen",
+      "code": "VER",
+      "points": 261,
+      "teamId": "red-bull",
+      "team": "Red Bull"
     },
     {
       "position": 3,
       "driverId": "lewis-hamilton",
       "name": "Lewis Hamilton",
       "code": "HAM",
-      "points": 241,
+      "points": 259,
       "teamId": "ferrari",
       "team": "Ferrari"
     },
     {
       "position": 4,
-      "driverId": "max-verstappen",
-      "name": "Max Verstappen",
-      "code": "VER",
-      "points": 236,
-      "teamId": "red-bull",
-      "team": "Red Bull"
+      "driverId": "george-russell",
+      "name": "George Russell",
+      "code": "RUS",
+      "points": 250,
+      "teamId": "mercedes",
+      "team": "Mercedes"
     },
     {
       "position": 5,
       "driverId": "charles-leclerc",
       "name": "Charles Leclerc",
       "code": "LEC",
-      "points": 233,
+      "points": 245,
       "teamId": "ferrari",
       "team": "Ferrari"
     },
@@ -54,7 +54,7 @@
       "driverId": "lando-norris",
       "name": "Lando Norris",
       "code": "NOR",
-      "points": 211,
+      "points": 221,
       "teamId": "mclaren",
       "team": "McLaren"
     },
@@ -72,7 +72,7 @@
       "driverId": "isack-hadjar",
       "name": "Isack Hadjar",
       "code": "HAD",
-      "points": 105,
+      "points": 107,
       "teamId": "red-bull",
       "team": "Red Bull"
     },
@@ -81,7 +81,7 @@
       "driverId": "liam-lawson",
       "name": "Liam Lawson",
       "code": "LAW",
-      "points": 77,
+      "points": 83,
       "teamId": "racing-bulls",
       "team": "Racing Bulls"
     },
@@ -123,19 +123,19 @@
     },
     {
       "position": 14,
-      "driverId": "nico-hulkenberg",
-      "name": "Nico Hülkenberg",
-      "code": "HUL",
-      "points": 13,
+      "driverId": "gabriel-bortoleto",
+      "name": "Gabriel Bortoleto",
+      "code": "BOR",
+      "points": 14,
       "teamId": "audi",
       "team": "Audi"
     },
     {
       "position": 15,
-      "driverId": "gabriel-bortoleto",
-      "name": "Gabriel Bortoleto",
-      "code": "BOR",
-      "points": 10,
+      "driverId": "nico-hulkenberg",
+      "name": "Nico Hülkenberg",
+      "code": "HUL",
+      "points": 13,
       "teamId": "audi",
       "team": "Audi"
     },
@@ -186,6 +186,15 @@
     },
     {
       "position": 21,
+      "driverId": "ryo-hirakawa",
+      "name": "Ryō Hirakawa",
+      "code": "HIR",
+      "points": 1,
+      "teamId": "haas",
+      "team": "Haas"
+    },
+    {
+      "position": 22,
       "driverId": "lance-stroll",
       "name": "Lance Stroll",
       "code": "STR",
@@ -194,7 +203,7 @@
       "team": "Aston Martin"
     },
     {
-      "position": 22,
+      "position": 23,
       "driverId": "valtteri-bottas",
       "name": "Valtteri Bottas",
       "code": "BOT",
@@ -203,7 +212,7 @@
       "team": "Cadillac"
     },
     {
-      "position": 23,
+      "position": 24,
       "driverId": "sergio-perez",
       "name": "Sergio Pérez",
       "code": "PER",
@@ -217,35 +226,35 @@
       "position": 1,
       "constructorId": "mercedes",
       "name": "Mercedes",
-      "points": 607,
+      "points": 630,
       "championshipWon": false
     },
     {
       "position": 2,
       "constructorId": "ferrari",
       "name": "Ferrari",
-      "points": 474,
+      "points": 504,
       "championshipWon": false
     },
     {
       "position": 3,
       "constructorId": "red-bull",
       "name": "Red Bull",
-      "points": 355,
+      "points": 382,
       "championshipWon": false
     },
     {
       "position": 4,
       "constructorId": "mclaren",
       "name": "McLaren",
-      "points": 355,
+      "points": 365,
       "championshipWon": false
     },
     {
       "position": 5,
       "constructorId": "racing-bulls",
       "name": "Racing Bulls",
-      "points": 102,
+      "points": 108,
       "championshipWon": false
     },
     {
@@ -259,14 +268,14 @@
       "position": 7,
       "constructorId": "haas",
       "name": "Haas",
-      "points": 30,
+      "points": 31,
       "championshipWon": false
     },
     {
       "position": 8,
       "constructorId": "audi",
       "name": "Audi",
-      "points": 23,
+      "points": 27,
       "championshipWon": false
     },
     {
@@ -422,8 +431,8 @@
       "round": 19,
       "grandPrixId": "mexico",
       "name": "Mexican GP",
-      "winnerId": null,
-      "winner": null
+      "winnerId": "max-verstappen",
+      "winner": "Max Verstappen"
     },
     {
       "round": 20,
@@ -455,5 +464,5 @@
     }
   ],
   "notes": null,
-  "updated": "2026-10-28"
+  "updated": "2026-11-04"
 }

@@ -4,37 +4,37 @@
     {
       "pos": 1,
       "code": "ANT",
-      "points": 365,
+      "points": 380,
       "team": "Mercedes"
     },
     {
       "pos": 2,
-      "code": "RUS",
-      "points": 242,
-      "team": "Mercedes"
+      "code": "VER",
+      "points": 261,
+      "team": "Red Bull"
     },
     {
       "pos": 3,
       "code": "HAM",
-      "points": 241,
+      "points": 259,
       "team": "Ferrari"
     },
     {
       "pos": 4,
-      "code": "VER",
-      "points": 236,
-      "team": "Red Bull"
+      "code": "RUS",
+      "points": 250,
+      "team": "Mercedes"
     },
     {
       "pos": 5,
       "code": "LEC",
-      "points": 233,
+      "points": 245,
       "team": "Ferrari"
     },
     {
       "pos": 6,
       "code": "NOR",
-      "points": 211,
+      "points": 221,
       "team": "McLaren"
     },
     {
@@ -46,13 +46,13 @@
     {
       "pos": 8,
       "code": "HAD",
-      "points": 105,
+      "points": 107,
       "team": "Red Bull"
     },
     {
       "pos": 9,
       "code": "LAW",
-      "points": 77,
+      "points": 83,
       "team": "RB F1 Team"
     },
     {
@@ -81,14 +81,14 @@
     },
     {
       "pos": 14,
-      "code": "HUL",
-      "points": 13,
+      "code": "BOR",
+      "points": 14,
       "team": "Audi"
     },
     {
       "pos": 15,
-      "code": "BOR",
-      "points": 10,
+      "code": "HUL",
+      "points": 13,
       "team": "Audi"
     },
     {
@@ -123,27 +123,27 @@
     },
     {
       "pos": 21,
+      "code": "HIR",
+      "points": 1,
+      "team": "Haas F1 Team"
+    },
+    {
+      "pos": 22,
       "code": "STR",
       "points": 0,
       "team": "Aston Martin"
     },
     {
-      "pos": 22,
+      "pos": 23,
       "code": "BOT",
       "points": 0,
       "team": "Cadillac F1 Team"
     },
     {
-      "pos": 23,
+      "pos": 24,
       "code": "PER",
       "points": 0,
       "team": "Cadillac F1 Team"
-    },
-    {
-      "pos": 24,
-      "code": "HIR",
-      "points": 0,
-      "team": "Haas F1 Team"
     }
   ]
 }

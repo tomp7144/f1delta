@@ -11,10 +11,10 @@
   "totals": {
     "seasons": 1,
     "drivers": 1,
-    "races": 18,
+    "races": 19,
     "wins": 1,
-    "podiums": 6,
-    "poles": 0,
+    "podiums": 7,
+    "poles": 1,
     "championships": 0
   },
   "roles": [
@@ -28,13 +28,13 @@
       "driverId": "lewis-hamilton",
       "driverName": "Lewis Hamilton",
       "stats": {
-        "races": 18,
+        "races": 19,
         "wins": 1,
-        "podiums": 6,
-        "poles": 0,
+        "podiums": 7,
+        "poles": 1,
         "championships": 0
       }
     }
   ],
-  "updated": "2026-10-28"
+  "updated": "2026-11-04"
 }
