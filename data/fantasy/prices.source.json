@@ -5573,6 +5573,22 @@
       }
     }
   },
+  "11205": {
+    "20": {
+      "round": 20,
+      "tla": "CAM",
+      "name": "Rafael Câmara",
+      "team": "Haas F1 Team",
+      "positionType": "DRIVER",
+      "price": 6,
+      "prevPrice": 0,
+      "ownership": 0,
+      "captainPct": 0,
+      "gamedayPoints": null,
+      "overallPoints": 0,
+      "stats": null
+    }
+  },
   "PIEGAS01": {
     "1": {
       "round": 1,
