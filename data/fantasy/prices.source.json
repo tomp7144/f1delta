@@ -485,7 +485,7 @@
       "prevPrice": 18.5,
       "ownership": 7,
       "captainPct": 0,
-      "gamedayPoints": null,
+      "gamedayPoints": 0,
       "overallPoints": 382,
       "stats": {
         "fastest_lap_pts": 0,
@@ -987,7 +987,7 @@
       "prevPrice": 5.1,
       "ownership": 3,
       "captainPct": 0,
-      "gamedayPoints": null,
+      "gamedayPoints": 0,
       "overallPoints": -111,
       "stats": {
         "fastest_lap_pts": 0,
@@ -1489,8 +1489,8 @@
       "prevPrice": 28.5,
       "ownership": 41,
       "captainPct": 0,
-      "gamedayPoints": null,
-      "overallPoints": 1252,
+      "gamedayPoints": 6,
+      "overallPoints": 1258,
       "stats": {
         "fastest_lap_pts": 70,
         "dotd_pts": 0,
@@ -1991,7 +1991,7 @@
       "prevPrice": 12.6,
       "ownership": 24,
       "captainPct": 0,
-      "gamedayPoints": null,
+      "gamedayPoints": 0,
       "overallPoints": 301,
       "stats": {
         "fastest_lap_pts": 0,
@@ -2493,8 +2493,8 @@
       "prevPrice": 32.7,
       "ownership": 10,
       "captainPct": 0,
-      "gamedayPoints": null,
-      "overallPoints": 926,
+      "gamedayPoints": 13,
+      "overallPoints": 939,
       "stats": {
         "fastest_lap_pts": 30,
         "dotd_pts": 0,
@@ -2995,8 +2995,8 @@
       "prevPrice": 34,
       "ownership": 35,
       "captainPct": 0,
-      "gamedayPoints": null,
-      "overallPoints": 1482,
+      "gamedayPoints": 16,
+      "overallPoints": 1498,
       "stats": {
         "fastest_lap_pts": 100,
         "dotd_pts": 0,
@@ -3497,8 +3497,8 @@
       "prevPrice": 33,
       "ownership": 8,
       "captainPct": 0,
-      "gamedayPoints": null,
-      "overallPoints": 1012,
+      "gamedayPoints": 12,
+      "overallPoints": 1024,
       "stats": {
         "fastest_lap_pts": 20,
         "dotd_pts": 0,
@@ -3999,7 +3999,7 @@
       "prevPrice": 12,
       "ownership": 9,
       "captainPct": 0,
-      "gamedayPoints": null,
+      "gamedayPoints": 0,
       "overallPoints": 234,
       "stats": {
         "fastest_lap_pts": 0,
@@ -4501,8 +4501,8 @@
       "prevPrice": 17.1,
       "ownership": 33,
       "captainPct": 0,
-      "gamedayPoints": null,
-      "overallPoints": 582,
+      "gamedayPoints": 7,
+      "overallPoints": 589,
       "stats": {
         "fastest_lap_pts": 0,
         "dotd_pts": 0,
@@ -5003,8 +5003,8 @@
       "prevPrice": 11,
       "ownership": 21,
       "captainPct": 0,
-      "gamedayPoints": null,
-      "overallPoints": 290,
+      "gamedayPoints": 1,
+      "overallPoints": 291,
       "stats": {
         "fastest_lap_pts": 0,
         "dotd_pts": 0,
@@ -5505,7 +5505,7 @@
       "prevPrice": 3,
       "ownership": 9,
       "captainPct": 0,
-      "gamedayPoints": null,
+      "gamedayPoints": 0,
       "overallPoints": -102,
       "stats": {
         "fastest_lap_pts": 0,
@@ -5557,7 +5557,7 @@
       "prevPrice": 6,
       "ownership": 0,
       "captainPct": 0,
-      "gamedayPoints": null,
+      "gamedayPoints": 0,
       "overallPoints": 16,
       "stats": {
         "fastest_lap_pts": 0,
@@ -5584,7 +5584,7 @@
       "prevPrice": 0,
       "ownership": 0,
       "captainPct": 0,
-      "gamedayPoints": null,
+      "gamedayPoints": 0,
       "overallPoints": 0,
       "stats": null
     }
@@ -6075,7 +6075,7 @@
       "prevPrice": 9.6,
       "ownership": 20,
       "captainPct": 1,
-      "gamedayPoints": null,
+      "gamedayPoints": 0,
       "overallPoints": 138,
       "stats": {
         "fastest_lap_pts": 0,
@@ -6577,7 +6577,7 @@
       "prevPrice": 8.2,
       "ownership": 19,
       "captainPct": 1,
-      "gamedayPoints": null,
+      "gamedayPoints": 0,
       "overallPoints": 106,
       "stats": {
         "fastest_lap_pts": 0,
@@ -7079,7 +7079,7 @@
       "prevPrice": 6,
       "ownership": 10,
       "captainPct": 0,
-      "gamedayPoints": null,
+      "gamedayPoints": 0,
       "overallPoints": 20,
       "stats": {
         "fastest_lap_pts": 0,
@@ -7581,7 +7581,7 @@
       "prevPrice": 3,
       "ownership": 4,
       "captainPct": 0,
-      "gamedayPoints": null,
+      "gamedayPoints": 0,
       "overallPoints": -167,
       "stats": {
         "fastest_lap_pts": 0,
@@ -8083,7 +8083,7 @@
       "prevPrice": 7.2,
       "ownership": 35,
       "captainPct": 0,
-      "gamedayPoints": null,
+      "gamedayPoints": 0,
       "overallPoints": 49,
       "stats": {
         "fastest_lap_pts": 0,
@@ -8585,8 +8585,8 @@
       "prevPrice": 6.4,
       "ownership": 32,
       "captainPct": 0,
-      "gamedayPoints": null,
-      "overallPoints": 95,
+      "gamedayPoints": 1,
+      "overallPoints": 96,
       "stats": {
         "fastest_lap_pts": 0,
         "dotd_pts": 0,
@@ -9087,7 +9087,7 @@
       "prevPrice": 3,
       "ownership": 21,
       "captainPct": 0,
-      "gamedayPoints": null,
+      "gamedayPoints": 0,
       "overallPoints": 36,
       "stats": {
         "fastest_lap_pts": 0,
@@ -9589,7 +9589,7 @@
       "prevPrice": 3,
       "ownership": 19,
       "captainPct": 0,
-      "gamedayPoints": null,
+      "gamedayPoints": 0,
       "overallPoints": -133,
       "stats": {
         "fastest_lap_pts": 0,
@@ -10091,8 +10091,8 @@
       "prevPrice": 24.4,
       "ownership": 27,
       "captainPct": 15,
-      "gamedayPoints": null,
-      "overallPoints": 500,
+      "gamedayPoints": 6,
+      "overallPoints": 506,
       "stats": {
         "fastest_lap_pts": 45,
         "dotd_pts": 30,
@@ -10593,7 +10593,7 @@
       "prevPrice": 24.7,
       "ownership": 18,
       "captainPct": 9,
-      "gamedayPoints": null,
+      "gamedayPoints": 0,
       "overallPoints": 521,
       "stats": {
         "fastest_lap_pts": 25,
@@ -11095,7 +11095,7 @@
       "prevPrice": 6.2,
       "ownership": 51,
       "captainPct": 2,
-      "gamedayPoints": null,
+      "gamedayPoints": 0,
       "overallPoints": 66,
       "stats": {
         "fastest_lap_pts": 0,
@@ -11597,7 +11597,7 @@
       "prevPrice": 10.1,
       "ownership": 12,
       "captainPct": 0,
-      "gamedayPoints": null,
+      "gamedayPoints": 0,
       "overallPoints": 168,
       "stats": {
         "fastest_lap_pts": 0,
@@ -12099,8 +12099,8 @@
       "prevPrice": 26,
       "ownership": 9,
       "captainPct": 6,
-      "gamedayPoints": null,
-      "overallPoints": 398,
+      "gamedayPoints": 8,
+      "overallPoints": 406,
       "stats": {
         "fastest_lap_pts": 30,
         "dotd_pts": 10,
@@ -12601,8 +12601,8 @@
       "prevPrice": 23.3,
       "ownership": 9,
       "captainPct": 5,
-      "gamedayPoints": null,
-      "overallPoints": 285,
+      "gamedayPoints": 5,
+      "overallPoints": 290,
       "stats": {
         "fastest_lap_pts": 0,
         "dotd_pts": 10,
@@ -13103,8 +13103,8 @@
       "prevPrice": 27.6,
       "ownership": 20,
       "captainPct": 15,
-      "gamedayPoints": null,
-      "overallPoints": 447,
+      "gamedayPoints": 7,
+      "overallPoints": 454,
       "stats": {
         "fastest_lap_pts": 20,
         "dotd_pts": 0,
@@ -13605,8 +13605,8 @@
       "prevPrice": 27.4,
       "ownership": 37,
       "captainPct": 25,
-      "gamedayPoints": null,
-      "overallPoints": 744,
+      "gamedayPoints": 9,
+      "overallPoints": 753,
       "stats": {
         "fastest_lap_pts": 80,
         "dotd_pts": 30,
@@ -14096,7 +14096,7 @@
       "prevPrice": 15.1,
       "ownership": 1,
       "captainPct": 0,
-      "gamedayPoints": null,
+      "gamedayPoints": 0,
       "overallPoints": 53,
       "stats": {
         "fastest_lap_pts": 0,
@@ -14598,8 +14598,8 @@
       "prevPrice": 10.6,
       "ownership": 43,
       "captainPct": 1,
-      "gamedayPoints": null,
-      "overallPoints": 133,
+      "gamedayPoints": 4,
+      "overallPoints": 137,
       "stats": {
         "fastest_lap_pts": 0,
         "dotd_pts": 0,
@@ -15100,8 +15100,8 @@
       "prevPrice": 28.5,
       "ownership": 20,
       "captainPct": 15,
-      "gamedayPoints": null,
-      "overallPoints": 562,
+      "gamedayPoints": 10,
+      "overallPoints": 572,
       "stats": {
         "fastest_lap_pts": 20,
         "dotd_pts": 90,
@@ -15602,8 +15602,8 @@
       "prevPrice": 16.5,
       "ownership": 28,
       "captainPct": 3,
-      "gamedayPoints": null,
-      "overallPoints": 233,
+      "gamedayPoints": 2,
+      "overallPoints": 235,
       "stats": {
         "fastest_lap_pts": 0,
         "dotd_pts": 0,
@@ -16104,7 +16104,7 @@
       "prevPrice": 8.2,
       "ownership": 22,
       "captainPct": 1,
-      "gamedayPoints": null,
+      "gamedayPoints": 0,
       "overallPoints": 127,
       "stats": {
         "fastest_lap_pts": 0,
@@ -16606,7 +16606,7 @@
       "prevPrice": 4,
       "ownership": 10,
       "captainPct": 0,
-      "gamedayPoints": null,
+      "gamedayPoints": 0,
       "overallPoints": 11,
       "stats": {
         "fastest_lap_pts": 0,
@@ -16822,7 +16822,7 @@
       "prevPrice": 9.7,
       "ownership": 0,
       "captainPct": 0,
-      "gamedayPoints": null,
+      "gamedayPoints": 0,
       "overallPoints": 23,
       "stats": {
         "fastest_lap_pts": 0,
