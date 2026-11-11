@@ -11,9 +11,9 @@
   "totals": {
     "seasons": 1,
     "drivers": 1,
-    "races": 16,
+    "races": 17,
     "wins": 0,
-    "podiums": 2,
+    "podiums": 3,
     "poles": 0,
     "championships": 0
   },
@@ -28,13 +28,13 @@
       "driverId": "isack-hadjar",
       "driverName": "Isack Hadjar",
       "stats": {
-        "races": 16,
+        "races": 17,
         "wins": 0,
-        "podiums": 2,
+        "podiums": 3,
         "poles": 0,
         "championships": 0
       }
     }
   ],
-  "updated": "2026-11-04"
+  "updated": "2026-11-11"
 }

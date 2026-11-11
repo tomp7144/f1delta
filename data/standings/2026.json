@@ -1,15 +1,22 @@
 {
   "year": 2026,
   "wccExists": true,
-  "wdcChampion": null,
-  "wccChampion": null,
+  "wdcChampion": {
+    "driverId": "kimi-antonelli",
+    "name": "Kimi Antonelli",
+    "code": "ANT"
+  },
+  "wccChampion": {
+    "constructorId": "mercedes",
+    "name": "Mercedes"
+  },
   "wdc": [
     {
       "position": 1,
       "driverId": "kimi-antonelli",
       "name": "Kimi Antonelli",
       "code": "ANT",
-      "points": 380,
+      "points": 390,
       "teamId": "mercedes",
       "team": "Mercedes"
     },
@@ -18,34 +25,34 @@
       "driverId": "max-verstappen",
       "name": "Max Verstappen",
       "code": "VER",
-      "points": 261,
+      "points": 279,
       "teamId": "red-bull",
       "team": "Red Bull"
     },
     {
       "position": 3,
-      "driverId": "lewis-hamilton",
-      "name": "Lewis Hamilton",
-      "code": "HAM",
-      "points": 259,
-      "teamId": "ferrari",
-      "team": "Ferrari"
-    },
-    {
-      "position": 4,
       "driverId": "george-russell",
       "name": "George Russell",
       "code": "RUS",
-      "points": 250,
+      "points": 262,
       "teamId": "mercedes",
       "team": "Mercedes"
+    },
+    {
+      "position": 4,
+      "driverId": "lewis-hamilton",
+      "name": "Lewis Hamilton",
+      "code": "HAM",
+      "points": 261,
+      "teamId": "ferrari",
+      "team": "Ferrari"
     },
     {
       "position": 5,
       "driverId": "charles-leclerc",
       "name": "Charles Leclerc",
       "code": "LEC",
-      "points": 245,
+      "points": 249,
       "teamId": "ferrari",
       "team": "Ferrari"
     },
@@ -54,7 +61,7 @@
       "driverId": "lando-norris",
       "name": "Lando Norris",
       "code": "NOR",
-      "points": 221,
+      "points": 246,
       "teamId": "mclaren",
       "team": "McLaren"
     },
@@ -63,7 +70,7 @@
       "driverId": "oscar-piastri",
       "name": "Oscar Piastri",
       "code": "PIA",
-      "points": 144,
+      "points": 152,
       "teamId": "mclaren",
       "team": "McLaren"
     },
@@ -72,7 +79,7 @@
       "driverId": "isack-hadjar",
       "name": "Isack Hadjar",
       "code": "HAD",
-      "points": 107,
+      "points": 122,
       "teamId": "red-bull",
       "team": "Red Bull"
     },
@@ -81,7 +88,7 @@
       "driverId": "liam-lawson",
       "name": "Liam Lawson",
       "code": "LAW",
-      "points": 83,
+      "points": 89,
       "teamId": "racing-bulls",
       "team": "Racing Bulls"
     },
@@ -135,7 +142,7 @@
       "driverId": "nico-hulkenberg",
       "name": "Nico Hülkenberg",
       "code": "HUL",
-      "points": 13,
+      "points": 14,
       "teamId": "audi",
       "team": "Audi"
     },
@@ -219,6 +226,15 @@
       "points": 0,
       "teamId": "cadillac",
       "team": "Cadillac"
+    },
+    {
+      "position": 25,
+      "driverId": "rafael-camara",
+      "name": "Rafael Câmara",
+      "code": "CAM",
+      "points": 0,
+      "teamId": "haas",
+      "team": "Haas"
     }
   ],
   "wcc": [
@@ -226,35 +242,35 @@
       "position": 1,
       "constructorId": "mercedes",
       "name": "Mercedes",
-      "points": 630,
-      "championshipWon": false
+      "points": 652,
+      "championshipWon": true
     },
     {
       "position": 2,
       "constructorId": "ferrari",
       "name": "Ferrari",
-      "points": 504,
+      "points": 510,
       "championshipWon": false
     },
     {
       "position": 3,
       "constructorId": "red-bull",
       "name": "Red Bull",
-      "points": 382,
+      "points": 415,
       "championshipWon": false
     },
     {
       "position": 4,
       "constructorId": "mclaren",
       "name": "McLaren",
-      "points": 365,
+      "points": 398,
       "championshipWon": false
     },
     {
       "position": 5,
       "constructorId": "racing-bulls",
       "name": "Racing Bulls",
-      "points": 108,
+      "points": 114,
       "championshipWon": false
     },
     {
@@ -275,7 +291,7 @@
       "position": 8,
       "constructorId": "audi",
       "name": "Audi",
-      "points": 27,
+      "points": 28,
       "championshipWon": false
     },
     {
@@ -438,8 +454,8 @@
       "round": 20,
       "grandPrixId": "sao-paulo",
       "name": "São Paulo GP",
-      "winnerId": null,
-      "winner": null
+      "winnerId": "lando-norris",
+      "winner": "Lando Norris"
     },
     {
       "round": 21,
@@ -464,5 +480,5 @@
     }
   ],
   "notes": null,
-  "updated": "2026-11-04"
+  "updated": "2026-11-11"
 }

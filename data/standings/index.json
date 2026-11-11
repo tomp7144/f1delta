@@ -1,12 +1,19 @@
 {
   "count": 77,
-  "updated": "2026-11-04",
+  "updated": "2026-11-11",
   "seasons": [
     {
       "year": 2026,
-      "wdcChampion": null,
-      "wccChampion": null,
-      "driverCount": 24,
+      "wdcChampion": {
+        "driverId": "kimi-antonelli",
+        "name": "Kimi Antonelli",
+        "code": "ANT"
+      },
+      "wccChampion": {
+        "constructorId": "mercedes",
+        "name": "Mercedes"
+      },
+      "driverCount": 25,
       "hasNotes": false
     },
     {

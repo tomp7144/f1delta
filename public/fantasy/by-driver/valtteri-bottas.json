@@ -3,7 +3,7 @@
   "name": "Valtteri Bottas",
   "career": {
     "score": 2472,
-    "races": 266,
+    "races": 267,
     "partial": 1
   },
   "seasons": [
@@ -82,7 +82,7 @@
     {
       "year": 2026,
       "score": -152,
-      "races": 19,
+      "races": 20,
       "partial": 0
     }
   ]
