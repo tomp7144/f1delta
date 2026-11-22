@@ -1917,7 +1917,7 @@
     "topDriverId": "clay-regazzoni",
     "topDriverName": "Clay Regazzoni",
     "topScore": 46,
-    "partial": false
+    "partial": true
   },
   "321": {
     "topDriverId": "jean-pierre-jabouille",
@@ -7012,5 +7012,11 @@
     "topDriverName": "Max Verstappen",
     "topScore": 66,
     "partial": false
+  },
+  "1170": {
+    "topDriverId": "oscar-piastri",
+    "topDriverName": "Oscar Piastri",
+    "topScore": 47,
+    "partial": true
   }
 }

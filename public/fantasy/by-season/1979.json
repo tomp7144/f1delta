@@ -134,7 +134,7 @@
     "gianfranco-brancatelli": {
       "score": 0,
       "races": 3,
-      "partial": 0
+      "partial": 1
     },
     "bruno-giacomelli": {
       "score": -60,
@@ -251,7 +251,7 @@
       "topId": "clay-regazzoni",
       "topName": "Clay Regazzoni",
       "topScore": 46,
-      "partial": false
+      "partial": true
     },
     {
       "round": 8,

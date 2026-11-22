@@ -4,14 +4,14 @@
   "career": {
     "score": 0,
     "races": 3,
-    "partial": 0
+    "partial": 1
   },
   "seasons": [
     {
       "year": 1979,
       "score": 0,
       "races": 3,
-      "partial": 0
+      "partial": 1
     }
   ]
 }

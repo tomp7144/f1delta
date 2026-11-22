@@ -11,9 +11,9 @@
   "totals": {
     "seasons": 8,
     "drivers": 1,
-    "races": 172,
+    "races": 173,
     "wins": 14,
-    "podiums": 50,
+    "podiums": 51,
     "poles": 20,
     "championships": 1
   },
@@ -28,13 +28,13 @@
       "driverId": "lando-norris",
       "driverName": "Lando Norris",
       "stats": {
-        "races": 172,
+        "races": 173,
         "wins": 14,
-        "podiums": 50,
+        "podiums": 51,
         "poles": 20,
         "championships": 1
       }
     }
   ],
-  "updated": "2026-11-11"
+  "updated": "2026-11-22"
 }

@@ -2,8 +2,8 @@
   "driverId": "liam-lawson",
   "name": "Liam Lawson",
   "career": {
-    "score": 186,
-    "races": 55,
+    "score": 189,
+    "races": 56,
     "partial": 1
   },
   "seasons": [
@@ -27,8 +27,8 @@
     },
     {
       "year": 2026,
-      "score": 169,
-      "races": 20,
+      "score": 172,
+      "races": 21,
       "partial": 1
     }
   ]
